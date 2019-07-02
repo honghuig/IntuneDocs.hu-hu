@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ba7bb3a12e0e634df44bb832f8f35aa166095415
-ms.sourcegitcommit: 34ff5ebe6efaa5b3a2a1db274de0a07c14944a6b
+ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463896"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494292"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>SCEP-tanúsítványok konfigurálása és használata az Intune-nal
 
@@ -30,10 +30,10 @@ Ez a cikk bemutatja az infrastruktúra konfigurálását, majd az Egyszerű tan�
 
 - **Active Directory-tartomány**: A jelen szakaszban felsorolt összes kiszolgálónak (a webalkalmazás-proxykiszolgáló kivételével) csatlakoznia kell a szervezet Active Directory-tartományához.
 
-- **Hitelesítésszolgáltató** (CA): A Microsoft vállalati hitelesítésszolgáltató (CA), amely a Windows Server 2008 R2 vagy újabb rendszer Enterprise kiadása fut kell lennie. Az önálló hitelesítésszolgáltató nem támogatott. További útmutatás a [Hitelesítésszolgáltató telepítése](http://technet.microsoft.com/library/jj125375.aspx) témakörben található.
+- **Hitelesítésszolgáltató** (CA): A Microsoft vállalati hitelesítésszolgáltató (CA), amely a Windows Server 2008 R2 vagy újabb rendszer Enterprise kiadása fut kell lennie. Az önálló hitelesítésszolgáltató nem támogatott. További útmutatás a [Hitelesítésszolgáltató telepítése](https://technet.microsoft.com/library/jj125375.aspx) témakörben található.
     Ha a hitelesítésszolgáltatója Windows Server 2008 R2 rendszeren fut, [telepítenie kell a KB2483564 jelű gyorsjavítást](http://support.microsoft.com/kb/2483564/).
 
-- **NDES-kiszolgáló**: A Windows Server 2012 R2 vagy újabb állítsa be a hálózati eszközök tanúsítványigénylési szolgáltatás (NDES) kiszolgálói szerepkör. Az Intune nem támogatja az NDES használatát olyan kiszolgálón, amelyen az Enterprise CA is fut. Az [Útmutató a hálózati eszközök tanúsítványigénylési szolgáltatásához](http://technet.microsoft.com/library/hh831498.aspx) című cikkből tájékozódhat arról, hogyan kell konfigurálnia a Windows Server 2012 R2 rendszert az NDES futtatására.
+- **NDES-kiszolgáló**: A Windows Server 2012 R2 vagy újabb állítsa be a hálózati eszközök tanúsítványigénylési szolgáltatás (NDES) kiszolgálói szerepkör. Az Intune nem támogatja az NDES használatát olyan kiszolgálón, amelyen az Enterprise CA is fut. Az [Útmutató a hálózati eszközök tanúsítványigénylési szolgáltatásához](https://technet.microsoft.com/library/hh831498.aspx) című cikkből tájékozódhat arról, hogyan kell konfigurálnia a Windows Server 2012 R2 rendszert az NDES futtatására.
 Az NDES-kiszolgálónak egy olyan tartományhoz kell csatlakoznia, amely a vállalati CA-val egy erdőben található. További információ az NDES-kiszolgáló különálló erdőben, elszigetelt hálózaton vagy belső tartományon való telepítéséről: [Házirendmodul használata a Hálózati eszközök tanúsítványigénylési szolgáltatásával](https://technet.microsoft.com/library/dn473016.aspx). Már nem NDES-kiszolgálóra, amely már használatban van egy másik MDM-használata
 
 - **A Microsoft Intune tanúsítvány-összekötő**: Az Intune-portálon lépjen a **eszközkonfiguráció** > **tanúsítvány-összekötőt** > **Hozzáadás**, és kövesse a *lépések SCEP-összekötő telepítésének*. A portálon a letöltési hivatkozás segítségével indítsa el a tanúsítvány-összekötő telepítő letöltési **NDESConnectorSetup.exe**.  Ezt a telepítőt kell futtatnia az NDES-szerepkörrel rendelkező kiszolgálón.  
@@ -225,7 +225,7 @@ Ebben a lépésben a következőket fogja elvégezni:
 3. Az NDES-kiszolgálóra rendkívül hosszú URL-címek (lekérdezések) érkeznek, melyekhez két beállításjegyzékbeli bejegyzést kell felvennie:
 
 
-   |                        Location                        |      Value      | Type  |      Data       |
+   |                        Location                        |      Érték      | Type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (decimális) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (decimális) |

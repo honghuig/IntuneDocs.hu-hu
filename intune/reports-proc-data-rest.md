@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 733ac8eee551a3ddba7a5219827c09357659a06e
-ms.sourcegitcommit: 063177c6c365fef3642edd7c455790958469aad9
+ms.openlocfilehash: d8445c20b658cc7a41ed5b53df16274dbbeda629
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66412722"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494617"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Adatok beolvasása az Intune-adattárház API-ból REST-ügyféllel
 
@@ -155,7 +155,7 @@ Az alábbi minta egy egyszerű REST-ügyfelet tartalmaz. A kód a .Net-kódtár 
 
 1. Indítsa el a **Microsoft Visual Studiót**.
 2. Válassza a **Fájl** > **Új projekt** lehetőséget. Bontsa ki a **Visual C#** lehetőséget, és válassza a **Console App (.Net Framework)** (Konzolalkalmazás (.Net-keretrendszer)) lehetőséget.
-3. A projektnek adja az ` IntuneDataWarehouseSamples` nevet, és tallózással válassza ki, hova szeretné azt menteni, majd kattintson az **OK** gombra.
+3. A projektnek adja az `IntuneDataWarehouseSamples` nevet, és tallózással válassza ki, hova szeretné azt menteni, majd kattintson az **OK** gombra.
 4. Kattintson a jobb gombbal a megoldás nevére a Megoldáskezelőben, majd válassza a **Manage NuGet Packages for Solution** (Megoldás NuGet-csomagjainak kezelése) lehetőséget. Válassza a **Tallózás** elemet, majd írja a `Microsoft.IdentityModel.Clients.ActiveDirectory` szöveget a keresőmezőbe.
 5. Válassza ki a csomagot, jelölje ki a **IntuneDataWarehouseSamples** projektet a Manage Packages for Your Solution (Megoldás csomagjainak kezelése) szakaszban, majd válassza a **Telepítés** lehetőséget.
 6. Az **Elfogadom** elemet választva fogadja el a NuGet-csomag licencfeltételeit.

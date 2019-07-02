@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 633bf52084ad261f768cb4e59aaf4ce0ab5cd5bc
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
+ms.openlocfilehash: f7dd6f62cb53dd0cc373fb3f2ffa7d9434b135cd
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468715"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494245"
 ---
 # <a name="in-development-for-microsoft-intune---july-2019"></a>A Microsoft Intune-hoz – július 2019 fejlesztés alatt
 
@@ -58,8 +58,6 @@ Segítség a készültségi és tervezési, ezen a lapon listák Intune felhaszn
 <!-- ***********************************************-->
 ## <a name="app-management"></a>Alkalmazáskezelés
 
-### <a name="device-users-can-view-all-managed-apps-theyve-installed-or-tried-to-install----2352913---"></a>Eszköz felhasználók megtekinthetik a már telepített vagy telepíteni próbált minden felügyelt alkalmazás <!-- 2352913 -->
-A Windows céges portál felsorolja az összes felügyelt alkalmazások (kötelező és elérhető), amely a felhasználó eszközén telepítve vannak. Felhasználók tudják próbált nézet és a függőben lévő alkalmazások telepítésére, és azok aktuális állapotát. Ha a szervezet nem, hogy az alkalmazások, kötelező vagy elérhető legyen, a felhasználók látják egy üzenet tájékoztatja, hogy nem vállalati alkalmazások telepítve vannak-e. Felhasználók is elérhetik a rendezését vagy szűrését alkalmazások telepítési állapot szerint.
 
 ### <a name="customized-notifications-for-users-and-groups-------16766574-----"></a>Felhasználók és csoportok számára személyre szabott értesítések    <!-- 16766574   -->
 Hamarosan fogja egyéni ad hoc leküldéses értesítéseket küldhessen a felhasználók számára az iOS- és Android-eszközök Intune-nal felügyelt vállalati portál alkalmazásból. Ezek az egyéni értesítések nem kötődnek, speciális Intune-funkciókat, és bármilyen célra van szüksége, beleértve az általános értesítést is szeretne küldeni bizonyos használható, vagy minden alkalmazott.  

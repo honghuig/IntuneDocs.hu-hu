@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cb9d1f52ccb147dc9a412f3cb7b601e3b18f214a
-ms.sourcegitcommit: a63b9eaa59867ab2b0a6aa415c19d9fff4fda874
+ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67389323"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494535"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Üzembe helyezése hibrid Azure AD-hez csatlakoztatott eszközök Intune-nal és a Windows Autopilot használatával
 Hibrid Azure Active Directory (Azure AD) beállításához használhatja az Intune és a Windows Autopilot-hez csatlakoztatott eszközök. Ehhez kövesse a cikkben.
@@ -163,7 +163,7 @@ Ha az eszközök még nincsenek beléptetve, regisztrációjukat saját kezűleg
 
 ### <a name="register-devices-from-an-oem"></a>OEM-eszközök regisztrálása
 
-Új eszközök vásárlásakor egyes számítógépgyártók (OEM) regisztrálhatják az eszközöket az Ön számára. További információkat a [Windows Autopilot oldala](http://aka.ms/WindowsAutopilot) tartalmaz.
+Új eszközök vásárlásakor egyes számítógépgyártók (OEM) regisztrálhatják az eszközöket az Ön számára. További információkat a [Windows Autopilot oldala](https://aka.ms/WindowsAutopilot) tartalmaz.
 
 Ha az Autopilot-eszközök vannak *regisztrált*, mielőtt az Intune-ban regisztrált, jelennek meg három helyen (állítsa be a sorozatszámokhoz nevű):
 - A **Autopilot-eszközök** panel az Azure Portalon az Intune-ban. Válassza ki **eszközregisztráció** > **Windows regisztrációs** > **eszközök**.

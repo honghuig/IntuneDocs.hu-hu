@@ -16,17 +16,17 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 73cdd0f802ce3b52a566bbdddd7cf5cca2e2bef2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: d207d1ac51da5b34f48aeffd83791bdbb40bf971
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044601"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494558"
 ---
 # <a name="plan-communications"></a>A kommunikáció tervezése 
 A kommunikációs terv kulcseleme az Intune-migráció. A következő eszközök és sablonok segítséget nyújt a felhasználók képzése biztosítják. Az Intune bevezetési Kit e-mail-sablonok, egy Intune-regisztrációs útmutató és a végfelhasználói beléptetési Oktatóvideók mutató hivatkozásokat tartalmaz.  
 
-Letöltés:  [Az Intune bevezetési csomag](http://aka.ms/IntuneAdoptionKit)
+Letöltés:  [Az Intune bevezetési csomag](https://aka.ms/IntuneAdoptionKit)
 
 ## <a name="email-templates"></a>E-mail-sablonok 
 A következő e-mail-kommunikációs terv követését javasoljuk. A mellékelt sablonokat saját kommunikációs tervéhez igazíthatja:

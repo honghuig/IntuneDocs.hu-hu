@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 703fafec3799b1552ec275c7c88b24b42d2259b9
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044009"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494057"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Alkalmazáskonfigurációs szabályzatok a Microsoft Intune-hoz
 
@@ -64,7 +64,7 @@ Mindezek mellett az alkalmazáskonfigurációs feladatok elvégzéséhez a Graph
 
 ### <a name="managed-devices"></a>Felügyelt eszközök
 
- - Megtudhatja, hogyan használhatja az alkalmazáskonfigurációt az iOS-eszközeivel.  Lásd: [Alkalmazáskonfigurációs szabályzatok hozzáadása kezelt iOS-eszközökhöz](app-configuration-policies-use-ios.md).
+ - Megtudhatja, hogyan használhatja az alkalmazáskonfigurációt az iOS-eszközeivel.  Lásd: [felügyelt iOS-eszközökhöz készült konfigurációs szabályzatok hozzáadása](app-configuration-policies-use-ios.md).
  - Megtudhatja, hogyan használhatja az alkalmazáskonfigurációt az Android-eszközeivel.  Lásd: [Alkalmazáskonfigurációs szabályzatok hozzáadása kezelt Android-eszközökhöz](app-configuration-policies-use-android.md).
 
 ### <a name="managed-apps"></a>Felügyelt alkalmazások

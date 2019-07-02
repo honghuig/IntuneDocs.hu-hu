@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b6a20ccec2ef0cbaba87637b3c44c2cc2be094ab
-ms.sourcegitcommit: b3a1c5b0b24f0e52cf318defe10f3d27a2770009
+ms.openlocfilehash: 21f62ad44d992d1f4adbb1945bdba02e526d9138
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67322874"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500645"
 ---
 # <a name="find-the-primary-user-of-an-intune-device"></a>Keresse meg a elsődleges felhasználót egy Intune-eszköz
 
@@ -60,15 +60,15 @@ Intune során vagy hamarosan a regisztrálás után automatikusan hozzáadja els
 | Windows | Az Azure AD join (OOBE) tartományon kívül | Felhasználó beléptetése | Regisztráció során | 
 | Windows | Az Azure AD join (Autopilot kezdőélmény) | Felhasználó beléptetése | Regisztráció során | 
 | Windows | MDM-ben csak regisztrálása | Felhasználó beléptetése | Regisztráció során | 
-| Windows | Hibrid AADJ + automatikus regisztráció csoportházirend-objektum | Jelentkezzen be az első felhasználó | Ha az első felhasználó bejelentkezik | 
-| Windows | Közös felügyelet | Jelentkezzen be az első felhasználó | Ha az első felhasználó bejelentkezik | 
+| Windows | Hibrid AADJ + automatikus regisztráció csoportházirend-objektum | Jelentkezzen be a Windows első felhasználót | Amikor a felhasználó először jelentkezik be Windows| 
+| Windows | Közös felügyelet | Jelentkezzen be a Windows első felhasználót | Amikor a felhasználó először jelentkezik be Windows | 
 | Windows | Az Azure AD join (tömeges regisztrációs jogkivonat) | Nincsenek | Nem alkalmazható | 
 | Windows | Az Azure AD join (Autopilot helyi üzembe helyezése mód) | Nincsenek | Nem alkalmazható | 
 | Cross-platform | Felhasználó modellvezérelt beléptetése a vállalati portál alkalmazással | Felhasználó beléptetése | Regisztráció során |
 | Cross-platform | Eszközregisztráció-kezelő (DEM) | DEM-felhasználó beléptetése | Regisztráció során |
 | iOS, macOS | Az Apple Eszközregisztrációs (felhasználói affinitással rendelkező DEP automatikus | Felhasználó beléptetése | Regisztráció során |
-| iOS, macOS | Az automatikus Eszközregisztráció (a felhasználói affinitás nélküli DEP) Apple | Nincsenek | Nem alkalmazható |
-| Android | Vállalat által birtokolt, dedikált Android-eszközök | Nincsenek | Nem alkalmazható |
+| iOS, macOS | Az automatikus Eszközregisztráció (a felhasználói affinitás nélküli DEP) Apple | None | Nem alkalmazható |
+| Android | Vállalat által birtokolt, dedikált Android-eszközök | None | Nem alkalmazható |
 
 ## <a name="primary-user-and-azure-ad-device-owner"></a>Elsődleges felhasználó és eszköz tulajdonosa Azure ad-ben
 Bizonyos esetekben az Azure AD eszköztől eltérő lehet az elsődleges Intune-felhasználó **tulajdonosa** tulajdonság (megtekinthető alatt **eszközök** > **Azure AD-eszközök**). Az Azure AD-eszköz tulajdonosa az Azure Active Directoryba kerül egy eszközregisztráció során.

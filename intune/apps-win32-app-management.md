@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8c4813d94a269ed6b8f944585814b54f36fef8c
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: e458558d488c9bbca2c2ed78255be103a5ac79f0
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804701"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494385"
 ---
 # <a name="intune-standalone---win32-app-management"></a>Önálló Intune - Win32-Alkalmazáskezelés
 
@@ -65,7 +65,7 @@ Ha `IntuneWinAppUtil.exe` paraméterek nélkül a parancsablakból, az eszköz v
 |:------------------------------:|:----------------------------------------------------------:|
 |    `-h`     |    Súgó    |
 |    `-c <setup_folder>`     |    A mappa összes telepítési fájljai számára. Ebben a mappában lévő összes fájl tömörítése be *.intunewin* fájlt.    |
-|   ` -s <setup_file>`     |    Telepítőfájl (például *setup.exe* vagy *setup.msi*).    |
+|    `-s <setup_file>`     |    Telepítőfájl (például *setup.exe* vagy *setup.msi*).    |
 |    `-o <output_folder>`     |    Kimeneti mappa a létrehozott *.intunewin* fájl számára.    |
 |    `-q`       |    Csendes mód    |
 
@@ -95,7 +95,7 @@ Az üzletági (LOB) alkalmazásokhoz hasonlóan Win32-alkalmazást is hozzáadha
 
 Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz való hozzáadásához.
 
-### <a name="step-1-specify-the-software-setup-file"></a>1. lépés: A szoftvertelepítő fájl megadása
+### <a name="step-1-specify-the-software-setup-file"></a>1\. lépés: A szoftvertelepítő fájl megadása
 
 1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3.  Az **Intune** panelen válassza az **Ügyfélalkalmazások** > **Alkalmazások** > **Hozzáadás** elemet.
@@ -103,7 +103,7 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
 
     ![Az hozzáadása panelen – Hozzáadás típusa legördülő menü képernyőképe](./media/apps-win32-app-01.png)
 
-### <a name="step-2-upload-the-app-package-file"></a>2. lépés: Az alkalmazáscsomag-fájl feltöltése
+### <a name="step-2-upload-the-app-package-file"></a>2\. lépés: Az alkalmazáscsomag-fájl feltöltése
 
 1.  Az **Alkalmazás felvétele** panelen válassza az **Alkalmazáscsomag-fájl** lehetőséget egy fájl kiválasztásához. Megjelenik az Alkalmazáscsomag-fájl panel.
 
@@ -116,7 +116,7 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
 
 3.  Amikor végzett, válassza az **OK** gombot.
 
-### <a name="step-3-configure-app-information"></a>3. lépés: Az alkalmazásadatok konfigurálása
+### <a name="step-3-configure-app-information"></a>3\. lépés: Az alkalmazásadatok konfigurálása
 
 1.  Az alkalmazás konfigurálásához az **Alkalmazás hozzáadása** panelen válassza az **Alkalmazás adatai** elemet.
 2.  Az **Alkalmazás adatai** panelen konfigurálja az alábbi információkat. Lehetséges, hogy ezen a panelen néhány érték automatikusan ki lesz töltve.
@@ -133,7 +133,7 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
     - **Embléma**: Töltse fel az alkalmazáshoz társított ikont. Ez az ikon jelenik meg az alkalmazásnál a Céges portálon böngésző felhasználók számára.
 3.  Amikor végzett, válassza az **OK** gombot.
 
-### <a name="step-4-configure-app-installation-details"></a>4. lépés: Konfigurálja az alkalmazás telepítésének részletei
+### <a name="step-4-configure-app-installation-details"></a>4\. lépés: Konfigurálja az alkalmazás telepítésének részletei
 1.  Az alkalmazás telepítési és eltávolítási parancsának konfigurálásához az **Alkalmazás felvétele** panelen válassza a **Program** elemet.
 2.  Adja meg az alkalmazás telepítéséhez szükséges teljes telepítési parancssort. 
 
@@ -156,7 +156,7 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
 
 4.  Amikor végzett, válassza az **OK** gombot.
 
-### <a name="step-5-configure-app-requirements"></a>5. lépés: Alkalmazáskövetelmények konfigurálása
+### <a name="step-5-configure-app-requirements"></a>5\. lépés: Alkalmazáskövetelmények konfigurálása
 
 1.  Az alkalmazás telepítéséhez szükséges rendszerkövetelmények beállításához az **Alkalmazás felvétele** panelen válassza a **Követelmények** elemet.
 2.  Az a **adjon hozzá egy olyan követelményszabályt** panelen konfigurálja az alábbi adatokat. Lehetséges, hogy ezen a panelen néhány érték automatikusan ki lesz töltve.
@@ -186,7 +186,7 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
         - **Válassza ki a kimeneti adatok típusát**: Válassza ki az követelmény szabály egyezést meghatározása során használt.
 4.  Amikor végzett, válassza az **OK** gombot.
 
-### <a name="step-6-configure-app-detection-rules"></a>6. lépés: Alkalmazás észlelési szabályok konfigurálása
+### <a name="step-6-configure-app-detection-rules"></a>6\. lépés: Alkalmazás észlelési szabályok konfigurálása
 
 1.  Az alkalmazás meglétének észleléséhez szükséges szabályok konfigurálásához az **Alkalmazás felvétele** panelen válassza az **Észlelési szabályok** elemet.
 2.  A **Szabályok formátuma** mezőben adja meg, hogyan fogja észlelni a rendszer az alkalmazás meglétét. Választhatja az észlelési szabályok manuális konfigurálását, illetve egyéni szkriptet is használhat az alkalmazás meglétének észleléséhez. Legalább egy észlelési szabályt ki kell választani. 
@@ -247,7 +247,7 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
 
         4.  Miután hozzáadta a szabály(ok)at, válassza ki a **Hozzáadás** > **OK** lehetőséget.
 
-### <a name="step-7-configure-app-return-codes"></a>7. lépés: Visszatérési kódok alkalmazás konfigurálása
+### <a name="step-7-configure-app-return-codes"></a>7\. lépés: Visszatérési kódok alkalmazás konfigurálása
 
 1.  Az **Alkalmazás felvétele** panelen válassza a **Visszatérési kódok** lehetőséget az alkalmazástelepítés újrapróbálkozási viselkedését vagy a telepítés utáni viselkedést meghatározó visszatérési kódok hozzáadásához. A visszatérési kód bejegyzéseit a rendszer alapértelmezés szerint hozzáadja az alkalmazás létrehozása során. További visszatérési kódokat is megadhat, és a meglévőket is módosíthatja. 
 2.  A **Visszatérési kódok** panelen adjon hozzá további visszatérési kódokat, vagy módosítsa a meglévőket.
@@ -258,12 +258,12 @@ Az alábbi lépések útmutatást nyújtanak a Windows-alkalmazások Intune-hoz 
     - **Sikeres** – Ez a visszaadott érték azt jelzi, hogy az alkalmazás telepítése sikeresen megtörtént.
 3.  Válassza ki az **OK** lehetőséget, miután bővítette vagy módosította a visszatérési kódok listáját.
 
-### <a name="step-8-add-the-app"></a>8. lépés: Az alkalmazás hozzáadása
+### <a name="step-8-add-the-app"></a>8\. lépés: Az alkalmazás hozzáadása
 
 1.  Az **Alkalmazás hozzáadása** panelen ellenőrizze, hogy helyesen konfigurálta-e az alkalmazásadatokat.
 2.  Az alkalmazást a **Hozzáadás** elem kiválasztásával töltheti fel az Intune-ba.
 
-### <a name="step-9-assign-the-app"></a>9. lépés: Az alkalmazás a hozzárendelése
+### <a name="step-9-assign-the-app"></a>9\. lépés: Az alkalmazás a hozzárendelése
 
 1.  Az alkalmazás panelen válassza a **Hozzárendelések** elemet.
 2.  Válassza a **Csoport hozzáadása** lehetőséget az alkalmazáshoz kapcsolódó **Csoport hozzáadása** ablaktábla megnyitásához.

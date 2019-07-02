@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3b9f69e745baffd21b55274e173bb75e8581525
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: 56e1a1e07a403afa4db405d276c55be1ef8ddfd8
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67417870"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494567"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Mobileszköz-kezelési biztonsági Alapterv beállítások az Intune-hoz  
 
@@ -32,7 +32,7 @@ A legújabb alapkonfigurációt van **MDM biztonsági alapterv Spring 2019 friss
 Ez a alapvető legújabb verziója megváltozott a korábbi verzióról kapcsolatos további információkért lásd: [változások az új sablon](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> A 2019. június, az előzetes verzió MDM biztonsági alapkonfiguráció megjelenésével értéke le lett cserélve a *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* sablon, amely generaly (nem előzetes verzióban érhető el). Elérhetősége előtt létrehozott profilok a *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* alapkonfiguráció nem fog frissíteni, hogy a beállításokat és értékeket, amelyek a mobileszköz-kezelési biztonsági alapterv a Spring 2019 frissítés () 19 órával 1) verziója.  Bár az előzetes verzió sablon alapján új profilt nem hozható létre, szerkesztheti, és továbbra is használhatja a korábban létrehozott profilok –, amelyek az előzetes verzió sablon alapján.   
+> A 2019. június, az előzetes verzió MDM biztonsági alapkonfiguráció megjelenésével értéke le lett cserélve a *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* sablon, amely generaly (nem előzetes verzióban érhető el). Elérhetősége előtt létrehozott profilok a *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* alapkonfiguráció megfelelően a beállításokat és a mobileszköz-kezelési biztonsági alapterv Spring 2019 frissítés (19 órával 1 szereplő értékek nem frissítése ) verziója.  Bár az előzetes verzió sablon alapján új profilt nem hozható létre, szerkesztheti, és továbbra is használhatja a korábban létrehozott profilok –, amelyek az előzetes verzió sablon alapján.   
   
 Biztonsági alapterv használatával az Intune-nal kapcsolatos további információkért lásd: [használja a biztonsági előírások](security-baselines.md).  
 
@@ -120,7 +120,7 @@ További információkért lásd: [házirend CSP - Bitlocker](https://docs.micro
       **Alapértelmezett**: Igen  
   
 
-## <a name="browser"></a>Böngésző  
+## <a name="browser"></a>Browser  
 További információkért lásd: [házirend CSP - böngésző](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) a Windows dokumentációjában.  
 
 - **A Microsoft Edge SmartScreen megkövetelése**  
@@ -893,7 +893,7 @@ További információkért lásd: [házirend CSP - InternetExplorer](https://doc
   **Alapértelmezett**: Letiltás  
   
 - **Az Internet Explorer internetes zóna bejelentkezési beállítások**  
-  A házirend-beállítás lehetővé teszi, hogy a bejelentkezési lehetőségek beállításainak kezelése. Ha ez a szabályzatbeállítás engedélyezi, a következő bejelentkezési lehetőségek közül választhat. Tiltsa le a HTTP-hitelesítést és -felhasználási névtelen bejelentkezés a Vendég fiók csak a Common Internet File System (CIFS) protokollhoz. Felhasználónév és jelszó kérése tartozó felhasználói azonosítók és jelszavak. Miután egy felhasználó kérdeznek le, ezeket az értékeket használható csendes a munkamenet hátralévő részére. Automatikus bejelentkezés csak az Intranet zónába tartozó felhasználói azonosítók és jelszavak a más zónákban lekérdezés felhasználóinak. Után a felhasználó lekérdezése követi, ezeket az értékeket a a munkamenet hátralevő beavatkozás nélkül is használni. Automatikus bejelentkezés aktuális felhasználónevet és jelszót megpróbálja bejelentkezés Windows NT kérdés-válasz (más néven az NTLM-hitelesítés) használatával. Ha a kiszolgáló támogatja a Windows NT kérdés-válasz, a bejelentkezést a felhasználói hálózati felhasználónevet és jelszót a bejelentkezéshez használ. Ha a kiszolgáló nem támogatja a Windows NT kérdés-válasz, ha a felhasználó van kérdezi le a adja meg a felhasználónevet és jelszót. Ha letiltja ezt a beállítást, bejelentkezési értéke napló automatikus a csak az Intranet zónában. Ha nem konfigurálja ezt a beállítást, jelentkezzen be az automatikus bejelentkezési értéke csak az Intranet zóna.  
+  A házirend-beállítás lehetővé teszi, hogy a bejelentkezési lehetőségek beállításainak kezelése. Ha ez a szabályzatbeállítás engedélyezi, a következő bejelentkezési lehetőségek közül választhat. Tiltsa le a HTTP-hitelesítést és -felhasználási névtelen bejelentkezés a Vendég fiók csak a Common Internet File System (CIFS) protokollhoz. Felhasználónév és jelszó kérése tartozó felhasználói azonosítók és jelszavak. Miután egy felhasználó kérdeznek le, ezeket az értékeket használható csendes a munkamenet hátralévő részére. Automatikus bejelentkezés csak az Intranet zónába tartozó felhasználói azonosítók és jelszavak a más zónákban lekérdezés felhasználóinak. Után a felhasználó lekérdezése követi, ezeket az értékeket a a munkamenet hátralevő beavatkozás nélkül is használni. Automatikus bejelentkezés aktuális felhasználónevet és jelszót megpróbálja bejelentkezés Windows NT kérdés-válasz (más néven az NTLM-hitelesítés) használatával. Ha a kiszolgáló támogatja a Windows NT kérdés-válasz, a bejelentkezést a felhasználói hálózati felhasználónevet és jelszót a bejelentkezéshez használ. Ha a kiszolgáló nem támogatja a Windows NT kérdés-válasz, a felhasználó lekérdezése követi, a felhasználónév és a jelszót. Ha letiltja ezt a beállítást, bejelentkezési értéke napló automatikus a csak az Intranet zónában. Ha nem konfigurálja ezt a beállítást, jelentkezzen be az automatikus bejelentkezési értéke csak az Intranet zóna.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067194)  
   
   **Alapértelmezett**: Kérdés  
@@ -2602,7 +2602,7 @@ For more information, see [Policy CSP - InternetExplorer](https://docs.microsoft
   **Default**: Disable  
   
 - **Internet Explorer internet zone logon options**  
-  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
+  This policy setting allows you to manage settings for sign in options. If you enable this policy setting, you can choose from the following sign in options. Anonymous log on to disable HTTP authentication and use the guest account only for the Common Internet File System (CIFS) protocol. Prompt for user name and password to query users for user IDs and passwords. After a user is queried, these values can be used silently for the remainder of the session. Automatic log on only in Intranet zone to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session. Automatic sign in with current user name and password to attempt log on using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for log on. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password. If you disable this policy setting, sign in is set to Automatic log on only in Intranet zone. If you don't configure this policy setting, sign in is set to Automatic sign in only in Intranet zone.
   
   **Default**: Prompt  
   

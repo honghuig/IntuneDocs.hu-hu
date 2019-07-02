@@ -5,7 +5,7 @@ keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/24/2018
+ms.date: 07/01/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,20 +16,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b5f1b4c0fd0c9d8cfdc443b2af3c6f90a6f32756
-ms.sourcegitcommit: 78ae22b1a7cb221648fc7346db751269d9c898b1
+ms.openlocfilehash: 7d1aa7cffd91049527df25436c083e97b849c229
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66373642"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500672"
 ---
 # <a name="use-custom-settings-for-android-enterprise-devices-in-microsoft-intune"></a>Egyéni beállítások használata Android Enterprise-eszközökhöz a Microsoft Intune-ban
 
-A Microsoft Intune-nal egyéni beállításokat adhat hozzá vagy hozhat létre az Android Enterprise-eszközökhöz „egyéni profilok” használatával. Az egyéni profilok az Intune részét képezik. Akkor hasznosak, ha olyan eszközbeállításokat és funkciókat szeretne használni, amelyek nem érhetők el beépítetten az Intune-ban.
+A Microsoft Intune-nal, hozzáadása, vagy hozzon létre egyéni beállítások az Android Enterprise munkahelyi profil eszközökhöz profillal "egyéni". Az egyéni profilok az Intune részét képezik. Akkor hasznosak, ha olyan eszközbeállításokat és funkciókat szeretne használni, amelyek nem érhetők el beépítetten az Intune-ban.
 
 Az Android Enterprise rendszer egyéni profiljai az Open Mobile Alliance Uniform Resource Identifier (OMA-URI) beállításokat használják a különböző funkciók vezérléséhez Android Enterprise-eszközökön. Ezekkel a beállításokkal általában a mobileszközgyártók vezérlik ezeket a funkciókat.
 
-Az Intune korlátozott számú androidos egyéni profilt támogat.
+Az Intune Android Enterprise egyéni profilok, beleértve a korlátozott számú támogatja:
+
+- ./Vendor/MSFT/WiFi/Profile/SSID/Settings: [Wi-Fi profil létrehozása előmegosztott kulccsal ellátott](wi-fi-profile-shared-key.md) rendelkezik néhány példa.
+- ./Vendor/MSFT/VPN/Profile/Name/PackageList: [Alkalmazásonkénti VPN-profil létrehozása](android-pulse-secure-per-app-vpn.md) rendelkezik néhány példa.
+- ./Vendor/MSFT/WorkProfile/DisallowCrossProfileCopyPaste: Tekintse meg a [példa](#example) (a jelen cikkben).
+
+Ha további beállításokat van szüksége, tekintse meg [Android Enterprise OEMConfig](android-oem-configuration-overview.md).
 
 Ebből a cikkből megtudhatja, hogyan hozhat létre egyéni profilt az Android Enterprise-eszközök számára. Emellett egy olyan egyéni profilra is mutat példát, amely nem engedélyezi a másolást és a beillesztést.
 

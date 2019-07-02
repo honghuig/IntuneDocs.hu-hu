@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1ad8a3298a801b07e021b84bd5eea9c91f01f1a2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: c9a225fbffda25b8d077c3b2be271e86d3e6c85e
+ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044883"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500595"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Webhely-hozzáférés kezelése a Microsoft Edge Microsoft Intune-nal
 
@@ -146,15 +146,15 @@ Néhány példa a forgatókönyveket, AD-alkalmazásproxy engedélyezése az al�
 > [!NOTE]
 > Az Alkalmazásproxy frissített átirányítási adatainak érvénybe lépése a Managed Browserben és a Microsoft Edge-ben akár 24 órát is igénybe vehet.
 
-#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>1. lépés: Automatikus átirányítás engedélyezése az Outlookból egy védett böngészőhöz
+#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>1\. lépés: Automatikus átirányítás engedélyezése az Outlookból egy védett böngészőhöz
 Az Outlook kell konfigurálni egy alkalmazásvédelmi szabályzatot, amely lehetővé teszi, hogy a beállítás **megosztás webes tartalom házirenddel felügyelt böngészők**.
 
 ![Alkalmazásvédelmi szabályzat - megosztás webes tartalom házirenddel felügyelt böngészőket](./media/manage-microsoft-edge/manage-microsoft-edge-03.png)
 
-#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>2. lépés: Állítsa be az alkalmazás a konfigurációs beállítás alkalmazásproxy engedélyezése
+#### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>2\. lépés: Állítsa be az alkalmazás a konfigurációs beállítás alkalmazásproxy engedélyezése
 A Microsoft Edge-cél az alábbi kulcs-érték pár, a Microsoft Edge-alkalmazásproxy engedélyezése:
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
@@ -182,15 +182,15 @@ A könnyű hozzáférést konfigurálhatja úgy, hogy szeretné a felhasználók
 
 Felügyelt könyvjelzők konfigurálásához kövesse az alábbi kulcs-érték párt:
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Ez a konfiguráció értéke egy könyvjelzőlista. Minden könyvjelző címből, és a könyvjelző URL-cím áll. Külön, a címet és az URL-CÍMÉT a `|` karakter.      **Példa:**<br>`Microsoft Bing|https://www.bing.com`<p>Több könyvjelző megadásakor külön minden párból az karakterpárt `||`.<p>**Példa:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Ez a konfiguráció értéke egy könyvjelzőlista. Minden könyvjelző címből, és a könyvjelző URL-cím áll. Külön, a címet és az URL-CÍMÉT a `|` karakter.      **Példa:**<br>`Microsoft Bing|https://www.bing.com`<br>Több könyvjelző megadásakor külön minden párból az karakterpárt `||`.<p>**Példa:**<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
 ## <a name="how-to-display-myapps-within-microsoft-edge-bookmarks"></a>A Microsoft Edge-könyvjelzők belül MyApps megjelenítése
 
 Alapértelmezés szerint a felhasználók számára megjelenik a MyApps helyek konfigurált őket a Microsoft Edge-könyvjelzők belül egy adott mappában. A mappa neve a szervezet nevét.
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Igaz** MyApps bemutatja a Microsoft Edge-könyvjelzők belül.<p>**FALSE (hamis)** elrejti a MyApps Microsoft Edge belül.    |
 
@@ -199,18 +199,19 @@ Alkalmazáskonfiguráció segítségével megadhatja a felhasználók férhetnek
 
 Használhatja az alábbi kulcs-érték párok konfigurálása a Microsoft Edge vagy az engedélyezett vagy tiltott helyek listája. Érvényes URL-formátumok kapcsolatos további információért olvassa tovább. 
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    A következő lehetőségek közül választhat:<p>1. Engedélyezett URL-címek megadása (csak ezek az URL-címek engedélyezettek, más webhelyek nem érhetők el):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Tiltott URL-címek megadása (minden más webhely elérhető lesz):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    A kulcs megfelelő értéke egy URL-címlista. A kívánt engedélyezheti vagy letilthatja a egyetlen értékként, a függőleges vonallal elválasztott URL-címeket `|` karakter.<p>**Példák:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
+|    A következő lehetőségek közül választhat:<p>1. Engedélyezett URL-címek megadása (csak ezek az URL-címek engedélyezettek, más webhelyek nem érhetők el):<br>`com.microsoft.intune.mam.managedbrowser.AllowListURLs`<p>2. Tiltott URL-címek megadása (minden más webhely elérhető lesz):<br>`com.microsoft.intune.mam.managedbrowser.BlockListURLs`    |    A kulcs megfelelő értéke egy URL-címlista. A kívánt engedélyezheti vagy letilthatja a egyetlen értékként, a függőleges vonallal elválasztott URL-címeket `|` karakter.<br>**Példák:**<br>`URL1|URL2|URL3`<br>`http://.contoso.com/|https://.bing.com/|https://expenses.contoso.com`  |
 
 ### <a name="url-formats-for-allowed-and-blocked-site-list"></a>Az URL-formátumok engedélyezett, és a Tiltott helyek listája 
 Különböző URL-formátumok használatával hozhat létre az engedélyezett/letiltott webhelyek listája. Az alábbi táblázat részletezi ezeket a mintákat. Néhány megjegyzés a Kezdés előtt: 
 - Az URL-címek listába történő bevitelekor ellenőrizze, hogy az URL-címet a **http** vagy a **https** előtaggal adta-e meg.
-- A megengedett minták alábbi listájának helyettesítő karakter és szimbólum (*) szabályai szerint használható.
+- Használható helyettesítő karakter és szimbólum (\*) a megengedett minták alábbi listájának szabályai szerint.
+- Helyettesítő karakter csak meg tudja egy teljes compoment állomásnév (elválasztott) vagy az elérési út (a perjelet elválasztva) teljes részei. Ha például `http://*contoso.com` van **nem** támogatott.
 - A címben portszámokat is megadhat. Ha nem ad meg portszámot, a rendszer a következő értékeket használja:
     - HTTP – 80-as port
     - HTTPS – 443-as port
-- A portszám helyettesítő karakterek használatával **nem** támogatott. Például a `http://www.contoso.com:*` és a `http://www.contoso.com:*/` nem támogatottak.
+- A portszám helyettesítő karakterek használatával **nem** támogatott. Például a `http://www.contoso.com:*` és a `http://www.contoso.com:*/` nem támogatottak. 
 
     |    URL    |    Részletek    |    Egyezik    |    Nem egyezik    |
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
@@ -232,6 +233,7 @@ Különböző URL-formátumok használatával hozhat létre az engedélyezett/le
     - IP-címek
     - `https://*`
     - `http://*`
+    - `https://*contoso.com`
     - `http://www.contoso.com:*`
     - `http://www.contoso.com: /*`
   
@@ -247,13 +249,13 @@ Használja az alábbi kulcs-érték pár konfigurálása, ha az enyhe átmenetek
 
 ## <a name="directing-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>Irányítja a felhasználókat a Microsoft Edge helyett az Intune Managed Browser 
 
-Az Intune Managed Browser és a Microsoft Edge most is a házirend által védett böngészők is használható. Győződjön meg arról, hogy a felhasználók vannak irányítja a megfelelő browser alkalmazás használatához, jelölje ki az Intune által felügyelt alkalmazások (pl. az Outlook és a OneDrive) az alábbi konfigurációs beállítás az összes:
+Az Intune Managed Browser és a Microsoft Edge most is a házirend által védett böngészők is használható. Győződjön meg arról, hogy a felhasználók vannak irányítja a megfelelő browser alkalmazás használatához, jelölje ki az Intune által felügyelt alkalmazások (pl. az Outlook, OneDrive és SharePoint) az alábbi konfigurációs beállítás az összes:
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    Az érték `true` átirányítja a felhasználókat, hogy a Microsoft Edge használni.<p>Az érték `false` átirányítja a felhasználókat az Intune Managed Browser használatára.    |
+|    `com.microsoft.intune.useEdge`    |    Az érték `true` átirányítja a felhasználókat, hogy töltse le és használja a Microsoft Edge.<br>Az érték `false` lehetővé teszi a felhasználók az Intune Managed Browser használatára.    |
 
-Nincs beállítva az alkalmazás konfigurációs érték, ha az alábbi logikával határozza meg, melyik böngésző használható vállalati hivatkozások megnyitásához.
+Ha az alkalmazás konfigurációs érték **nem** állítja, az alábbi logikával határozza meg böngésző használható vállalati hivatkozások megnyitásához.
 
 Androidon:
 - Az Intune Managed Browser fog elindulni, ha egy felhasználó az Intune Managed Browser és a Microsoft Edge az eszköz letöltése. 
@@ -283,7 +285,7 @@ A Microsoft Edge további biztonsági és adatvédelmi szempontjai:
 - Microsoft Edge nincs szükség beállításokat, amelyeket a felhasználók saját eszközeiken, a natív böngészőben meg, mert a Microsoft Edge férhetnek hozzá ezekhez a beállításokhoz.
 - Ha a beállítás **egyszerű PIN-kód megkövetelése a hozzáféréshez** vagy **vállalati hitelesítő adatok megkövetelése a hozzáféréshez** az alkalmazás a Microsoft Edge hozzárendelt alkalmazásvédelmi szabályzatban, és egy felhasználó a Súgó hivatkozásra lehetőséget választja a hitelesítés lap, bármely internetes webhelyet, függetlenül attól, hogy azok lettek adva a szabályzat blokklistájához megnyithassák.
 - A Microsoft Edge képes blokkolni a hozzáférést a webhelyekhez, csak akkor, ha azokat közvetlenül érik el. Nem blokkolja a hozzáférést, ha a felhasználó köztes szolgáltatások (például egy fordítási szolgáltatás) használatával éri el a webhelyet.
-- Hitelesítés engedélyezése, és elérheti az Intune-dokumentáció ***. microsoft.com** mentesül az engedélyezési és blokkolási beállítások. És mindig engedélyezve van.
+- Hitelesítés engedélyezése, és elérheti az Intune-dokumentáció * **. microsoft.com** mentesül az engedélyezési és blokkolási beállítások. És mindig engedélyezve van.
 Kapcsolja ki a Microsoft használati adatokat automatikusan névtelen adatokat gyűjt a teljesítmény és a Managed Browser számára a Microsoft termék-és használatáról. A felhasználók kikapcsolhatják az adatgyűjtést az eszköz **Használati adatok** beállításával. Nem tudja befolyásolni ezen adatok gyűjtését. Az iOS-eszközökön nem nyithatók meg azok a felhasználók által felkeresett webhelyek, amelyek lejárt vagy nem megbízható tanúsítvánnyal rendelkeznek.
 
 ## <a name="next-steps"></a>További lépések

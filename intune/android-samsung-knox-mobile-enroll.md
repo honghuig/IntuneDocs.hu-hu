@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 63226ba18ac42ef2dd2a37608d58f8ba4918f75b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d07d9466cda86270898d0e54e8d50b358bcb1b84
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049807"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494103"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Eszközök automatikus regisztrációja a Samsung Knox Mobile Enrollmenttel
 
@@ -74,7 +74,7 @@ Miután sikeresen regisztrálta a cégét, az alábbi adatokkal létrehozhat egy
 
 ### <a name="for-android"></a>Android rendszerhez
 
-Lépésenkénti útmutatásért tekintse meg a [ Samsung Knox-profil telepítővarázslójának](https://docs.samsungknox.com/KME-Getting-Started/Content/getting-started-wizard.htm) utasításait.
+Lépésenkénti útmutatásért tekintse meg a [Samsung Knox profil beállítása varázsló](https://docs.samsungknox.com/KME-Getting-Started/Content/getting-started-wizard.htm) utasításokat.
 
 | MDM-profil – mezők| Kötelező? | értékek |
 |-------------------|-----------|-------|

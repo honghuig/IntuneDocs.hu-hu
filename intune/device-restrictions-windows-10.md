@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 30e869cbb0311e1855dd4dc09978505ad539970e
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: fe155c5b2a18b1931894b05694b53bbc2c497e0b
+ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403094"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67494479"
 ---
 # <a name="windows-10-and-newer-device-settings-to-allow-or-restrict-features-using-intune"></a>A Windows 10 (és újabb) eszközbeállítások engedélyezett vagy korlátozott funkciók az Intune-nal
 
@@ -142,7 +142,7 @@ Ezeket a beállításokat használja a [EnterpriseCloudPrint házirend CSP](http
 - **Nyomtató hozzáférés szolgáltató URL-címe**: Adja meg a hitelesítési végpont URL-címe, az OAuth-jogkivonatok beolvasásához. Például írja be a következőt: `https://azuretenant.contoso.com/adfs`.
 - **Azure-beli natív ügyfélalkalmazás GUID**: Adja meg a szolgáltatótól OAuth-jogkivonatok kérhető ügyfélalkalmazás GUID-ja. Például írja be a következőt: `E1CF1107-FF90-4228-93BF-26052DD2C714`.
 - **Nyomtatási szolgáltatás erőforrás-URI**: Adja meg a nyomtatási szolgáltatás az Azure Portal webhelyen konfigurált OAuth erőforrás URI azonosítója. Például írja be a következőt: `http://MicrosoftEnterpriseCloudPrint/CloudPrint`.
-- **Lekérdezendő nyomtatók maximális száma**: Adja meg a lekérdezni kívánt nyomtatók maximális száma. Az alapértelmezett érték: `20`.
+- **Lekérdezendő nyomtatók maximális száma**: Adja meg a lekérdezni kívánt nyomtatók maximális száma. Az alapértelmezett érték `20`.
 - **Nyomtatófelderítési szolgáltatás erőforrás URI**: Adja meg az OAuth-erőforrás URI-nyomtató discovery szolgáltatás beállítása az Azure Portalon. Például írja be a következőt: `http://MopriaDiscoveryService/CloudPrint`.
 
 > [!TIP]
@@ -525,7 +525,7 @@ Válassza ki **OK** a módosítások mentéséhez.
 
 Ezeket a beállításokat használja a [adatvédelmi szabályzat CSP](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-privacy), amely felsorolja a támogatott Windows-kiadások.
 
-- **Bemenet személyre szabása**: **Blokk** megakadályozza, hogy megakadályozza a szóbeli Diktálás és felvegye a Cortana és egyéb, a Microsoft felhőalapú beszédfelismerés használó alkalmazás használatával. Le van tiltva, és a felhasználók online beszédfelismerés beállításokkal nem lehet engedélyezni. **Nincs konfigurálva** (alapértelmezett) lehetővé teszi, hogy a felhasználóknak. Engedélyezi ezeket a szolgáltatásokat, ha a Microsoft a szolgáltatás javítására hangadatokat gyűjthet.
+- **Bemenet személyre szabása**: **Blokk** megakadályozza, hogy a szóbeli Diktálás és felvegye a Cortana és egyéb, a Microsoft felhőalapú beszédfelismerés használó alkalmazás használatával. Le van tiltva, és a felhasználók online beszédfelismerés beállításokkal nem lehet engedélyezni. **Nincs konfigurálva** (alapértelmezett) lehetővé teszi, hogy a felhasználóknak. Engedélyezi ezeket a szolgáltatásokat, ha a Microsoft a szolgáltatás javítására hangadatokat gyűjthet.
 - **A társításra és adatvédelemre vonatkozó felhasználói beleegyezést kérő automatikus elfogadása**: Válasszon **engedélyezése** , a Windows képes automatikusan elfogadja a társítási és adatvédelmi beleegyezést kérő üzeneteket az alkalmazások futtatása közben. **Nincs konfigurálva** (alapértelmezett) megakadályozza, hogy a párosítási és adatvédelmi felhasználói jóváhagyás ablakának automatikus elfogadás alkalmazások megnyitásakor.
 - **Felhasználói tevékenységek közzététele**: **Blokk** megakadályozza, hogy a megosztott élmények és a tevékenységi hírcsatorna a legutóbb használt erőforrások. **Nincs konfigurálva** (alapértelmezett) Ez a funkció lehetővé teszi, így az alkalmazások felhasználói tevékenységek teheti közzé.
 - **Csak a helyi tevékenységek**: **Blokk** megakadályozza, hogy a megosztott élmények és a legutóbb használt erőforrások a feladatváltóban, csak a helyi tevékenység alapján. **Nincs konfigurálva** (alapértelmezett) lehetővé teszi, hogy ez a funkció.
