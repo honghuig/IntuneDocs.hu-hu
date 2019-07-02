@@ -12,7 +12,7 @@ requestInfoReplyComment: >
 requestInfoLabelToAdd: request-more-info
 
 newPRWelcomeComment: >
-  Thanks so much for opening your first PR here!
+  Thanks so much for opening your first PR to [Microsoft DOCS](https://docs.microsoft.com/)
 
 firstPRMergeComment: >
   Congrats on merging your first pull request here! :tada: How awesome!
