@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dd8934d3318459ecc7587a9c51bba9b6f744dbc7
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8d4f957af4c05a66de4ce4ae7c233eda297153f8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505505"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527609"
 ---
 # <a name="you-need-to-install-sandblast-mobile-protect-on-your-ios-device"></a>Telepítenie kell a SandBlast Mobile Protect alkalmazást iOS-eszközén
 
@@ -29,7 +29,7 @@ A cég informatikai támogató szolgálata csak a SandBlast Mobile Protect alkal
 
 **A következőket kell tennie:**
 
-1.  Ha a következő üzenet jelenik meg, akkor a **Telepítés** gombra koppintással engedélyezheti a SandBlast Mobile Protect telepítését az eszközön.
+1. Ha a következő üzenet jelenik meg, akkor a **Telepítés** gombra koppintással engedélyezheti a SandBlast Mobile Protect telepítését az eszközön.
 
 2. Ha a következő üzenetet látja, koppintson a **Beállítások** gombra, kapcsolja be a **Helyalapú szolgáltatásokat**, majd koppintson a **Folytatás** gombra.
 

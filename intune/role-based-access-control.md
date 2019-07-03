@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ee0e6ad7e46abe8da4c1b03e836eb9ba2f5991d0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: eaefcc904d9969c7f356e3eceb924e8d153f912d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044162"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528240"
 ---
 # <a name="role-based-access-control-rbac-with-microsoft-intune"></a>Szerepköralapú hozzáférés-vezérlés (RBAC) a Microsoft Intune-nal
 
@@ -38,9 +38,9 @@ A szerepkör határozza meg, az adott szerepkörhöz rendelt felhasználók szá
 A beépített és egyéni szerepkörök is használhatja. Beépített szerepköröket bizonyos gyakori Intune forgatókönyvek terjed ki. Is [hozhat létre saját egyéni szerepköröket](create-custom-role.md) az pontos szükséges engedélyekkel együtt. Több Azure Active Directory-szerepkör rendelkezik engedélyekkel az Intune-hoz.
 Egy szerepkör megtekintéséhez válassza ki **Intune** > **szerepkörök** > **minden szerepkör** > Válassza ki a szerepkört. Ekkor megjelenik a következő lapokon:
 
--   **Tulajdonságok**: A nevét, leírását, típus, hozzárendelések és a szerepkör hatókörcímkék. 
--   **Engedélyek**: Számos olyan hosszú újraengedélyezi a kapcsolókat, milyen engedélyekkel rendelkezik a szerepkör meghatározása.
--   **Hozzárendelések**: Listáját [szerepkör-hozzárendelések]( assign-role.md) meghatározása, hogy mely felhasználók férhetnek hozzá mely felhasználókra vagy eszközökre. A szerepkör lehet több hozzárendeléseket, és egy felhasználó több hozzárendelések is lehet.
+- **Tulajdonságok**: A nevét, leírását, típus, hozzárendelések és a szerepkör hatókörcímkék. 
+- **Engedélyek**: Számos olyan hosszú újraengedélyezi a kapcsolókat, milyen engedélyekkel rendelkezik a szerepkör meghatározása.
+- **Hozzárendelések**: Listáját [szerepkör-hozzárendelések]( assign-role.md) meghatározása, hogy mely felhasználók férhetnek hozzá mely felhasználókra vagy eszközökre. A szerepkör lehet több hozzárendeléseket, és egy felhasználó több hozzárendelések is lehet.
 
 ### <a name="built-in-roles"></a>Beépített szerepkörök
 Beépített szerepkörök további konfiguráció nélkül csoportokhoz is hozzárendelhet. Nem lehet törölni, vagy szerkesztheti a név, leírás, típus vagy egy beépített szerepkör engedélyei. Az engedélyek minden beépített szerepkör teljes listáját lásd: a [Intune RBAC-táblázat](https://gallery.technet.microsoft.com/Intune-RBAC-table-2e3c9a1a).
@@ -60,7 +60,7 @@ Saját szerepköröket is létrehozhat egyéni engedélyekkel. Egyéni szerepkö
 | --- | :---: | :---: |
 | Globális rendszergazda | Olvasási/írási | Olvasási/írási |
 | Intune szolgáltatás rendszergazdája | Olvasási/írási | Olvasási/írási |
-| Feltételes hozzáférésű rendszergazda | None | Nincsenek |
+| Feltételes hozzáférésű rendszergazda | Nincsenek | Nincsenek |
 | Biztonsági rendszergazda | Csak olvasható | Csak olvasható |
 | Biztonsági operátor | Csak olvasható | Csak olvasható |
 | Biztonsági olvasó | Csak olvasható | Csak olvasható |
@@ -84,10 +84,10 @@ Szerepkör-hozzárendelés meghatározása:
 Egyéni és a beépített szerepkörök hozzárendelheti a felhasználókhoz. Az Intune-szerepkörhöz hozzárendelni, a felhasználó Intune-licenccel kell rendelkeznie.
 Szerepkör-hozzárendelés megtekintéséhez válassza ki **Intune** > **szerepkörök** > **minden szerepkör** > Válassza ki a szerepkört > Válassza ki a hozzárendelést. Ekkor megjelenik a következő lapokon:
 
--   **Tulajdonságok**: A neve, leírása, szerepkör, a tagok, hatókörök és címkék a hozzárendelés.
--   **A tagok**: A listán szereplő csoportok minden felhasználó rendelkezik a hatókör (csoportok) szereplő felhasználók és eszközök kezelésére jogosult.
--   **Hatókör (csoportok)**: Összes felhasználók és eszközök a megadott csoportokban szereplő felhasználók tagok által kezelhetők.
--   **[Hatókör (címkék)](scope-tags.md)**: A tagok felhasználója láthatja az erőforrásokat, amelyek az ugyanazon hatókörcímkék.
+- **Tulajdonságok**: A neve, leírása, szerepkör, a tagok, hatókörök és címkék a hozzárendelés.
+- **A tagok**: A listán szereplő csoportok minden felhasználó rendelkezik a hatókör (csoportok) szereplő felhasználók és eszközök kezelésére jogosult.
+- **Hatókör (csoportok)** : Összes felhasználók és eszközök a megadott csoportokban szereplő felhasználók tagok által kezelhetők.
+- **[Hatókör (címkék)](scope-tags.md)** : A tagok felhasználója láthatja az erőforrásokat, amelyek az ugyanazon hatókörcímkék.
 
 ### <a name="multiple-role-assignments"></a>Több szerepkör-hozzárendelések
 Ha egy felhasználó több szerepkör-hozzárendeléseket, azokat a szerepkör-hozzárendeléseket az engedélyek kiterjesztése a különböző objektumokat a következő:

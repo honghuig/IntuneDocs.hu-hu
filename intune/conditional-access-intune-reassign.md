@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4fa42a52e104ef1c9cf13c8490159f3dbb2efed
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045325"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530675"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Feltételes hozzáférési szabályzatokat az Intune klasszikus portáljáról az Azure Portalra való újbóli hozzárendelése
 
@@ -81,7 +81,7 @@ Az Azure Portal **Intune App Protection** paneljén a rendszergazdák alkalmazá
 3. Adja meg a szabályzat nevét.
 
 4. Alatt a **hozzárendelések**, válassza a **felhasználók és csoportok** lehetőséget az új feltételes hozzáférési szabályzat.
-    
+
     ![Kép, hogy összehasonlítja felhasználói csoport felhasználói felület az Intune és az Azure Portalon](./media/reassign-ca-1.png)
 
     > [!IMPORTANT] 

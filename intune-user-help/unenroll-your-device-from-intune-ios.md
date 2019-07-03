@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2d52ef6f2cf995031c25bc9065212e39235041b2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 9ce28c73ba6f63e90dcaf93d8d21d32dcc4c0dcf
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501477"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529493"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>IOS-eszköz eltávolítása az Intune-ból
 
@@ -68,11 +68,11 @@ Ha az eszközt el szeretné távolítani az Intune-ból, kövesse az alábbi lé
 
 A Céges portál az eszközön három helyen tárolja a helyi adatokat.
 
--   **Információs naplók**: a Microsoft által gyűjtött szabványos alkalmazástevékenység-adatok, például az alkalmazás megnyitási időtartama vagy az összeomlási adatok automatikusan törlődnek az eszköz a Céges portálból való eltávolításakor.
+- **Információs naplók**: a Microsoft által gyűjtött szabványos alkalmazástevékenység-adatok, például az alkalmazás megnyitási időtartama vagy az összeomlási adatok automatikusan törlődnek az eszköz a Céges portálból való eltávolításakor.
 
--   **Apple-elemzések**: az Apple által gyűjtött szabványos alkalmazás-összeomlási adatok. Ezek az adatok csak az eszköz gyári alaphelyzetbe való visszaállításával távolíthatók el. Ez a művelet minden személyes adatot töröl az eszközről. Ehhez válassza a **Beállítások** > **Általános** > **Alaphelyzetbe állítás** > **Összes tartalom, beállítás törlése** lehetőséget.
+- **Apple-elemzések**: az Apple által gyűjtött szabványos alkalmazás-összeomlási adatok. Ezek az adatok csak az eszköz gyári alaphelyzetbe való visszaállításával távolíthatók el. Ez a művelet minden személyes adatot töröl az eszközről. Ehhez válassza a **Beállítások** > **Általános** > **Alaphelyzetbe állítás** > **Összes tartalom, beállítás törlése** lehetőséget.
 
--   **Kulcskarika**: az eszköz a kulcskarikán tárolja a jelszavakat és egyéb bejelentkezéshez szükséges adatokat. A Microsoft-alkalmazások megosztják az eszközön található más Microsoft-alkalmazásokkal a bejelentkezési adatait, így például a Microsoft Outlookkal és a Microsoft Authenticatorrel. Az Apple-elemzésekhez hasonlóan ezeket az adatokat csak az eszköz gyári alaphelyzetbe való visszaállításával távolíthatja el. Ez a művelet minden személyes adatot töröl az eszközről. Ehhez válassza a **Beállítások** > **Általános** > **Alaphelyzetbe állítás** > **Összes tartalom, beállítás törlése** lehetőséget.
+- **Kulcskarika**: az eszköz a kulcskarikán tárolja a jelszavakat és egyéb bejelentkezéshez szükséges adatokat. A Microsoft-alkalmazások megosztják az eszközön található más Microsoft-alkalmazásokkal a bejelentkezési adatait, így például a Microsoft Outlookkal és a Microsoft Authenticatorrel. Az Apple-elemzésekhez hasonlóan ezeket az adatokat csak az eszköz gyári alaphelyzetbe való visszaállításával távolíthatja el. Ez a művelet minden személyes adatot töröl az eszközről. Ehhez válassza a **Beállítások** > **Általános** > **Alaphelyzetbe állítás** > **Összes tartalom, beállítás törlése** lehetőséget.
 
 
 További segítségre van szüksége? Forduljon a cég informatikai támogatásához. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).

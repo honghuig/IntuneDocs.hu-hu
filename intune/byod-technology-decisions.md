@@ -14,12 +14,12 @@ ms.assetid: ''
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3400169aab9598624216fcbc9ef7694e1d5441cc
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: c2e8c475cd52e199519db7a3d7ea83e6dbfef1a3
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045783"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530653"
 ---
 # <a name="technology-decisions-for-enabling-byod-with-microsoft-enterprise-mobility--security-ems"></a>Technológiai döntések a hozott eszközök Microsoft Enterprise Mobility + Security (EMS) általi felügyeletével kapcsolatban.
 
@@ -56,7 +56,7 @@ Mint már említettük, feltételes hozzáféréssel ösztönözheti a a felhasz
 
 * Melyik felhasználó kísérli meg a hozzáférést
 * Megbízható-e a tartózkodási hely vagy sem
-*   Bejelentkezés kockázati szintje
+* Bejelentkezés kockázati szintje
 * Eszközplatform
 
 Sok cégnek megvannak azonban a saját, specifikus kockázataik.  Az alábbi táblázatban áttekintheti a gyakori problémákat, és hogy az MDM, illetve a MAM milyen választ ad az adott problémára.

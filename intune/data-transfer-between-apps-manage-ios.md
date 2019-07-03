@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9be961908920420dbb4111c2c3ba108b7e11c09f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f97b3365036271a7f41e7c3274e8a3bd966407f3
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66042791"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512152"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>iOS-alkalmazások közti adatátvitel felügyelete a Microsoft Intune-ban
 
@@ -34,7 +34,7 @@ A vállalati adatok védelme érdekében korlátozza a fájlátvitelek csak a fe
 
 Az iOS-eszközök **Megnyitási engedélyek felügyelete** szolgáltatásával a fájlátvitel az **MDM-csatornával** telepített alkalmazásokra korlátozható. Állítsa be *megnyitási engedélyek felügyelete* korlátozások a konfigurációs beállításokat, illetve telepítheti őket az MDM-megoldás használatával.  Amikor egy felhasználó telepíti az telepített alkalmazást, a rendszer alkalmazza a beállított korlátozásokat.
 
-##  <a name="use-app-protection-with-ios-apps"></a>Alkalmazásvédelem használata iOS-alkalmazások
+## <a name="use-app-protection-with-ios-apps"></a>Alkalmazásvédelem használata iOS-alkalmazások
 Az alkalmazásvédelmi szabályzatok használata az IOS-es **megnyitási engedélyek felügyelete** funkció a vállalati adatok védelme érdekében a következő módon:
 
 -   **Alkalmazottak tulajdonában lévő, mobileszköz-kezelési megoldás által nem kezelt eszközök:** Az alkalmazásvédelmi szabályzat beállításait beállíthatja **///az alkalmazás átadhat adatokat csak a szabályzattal felügyelt alkalmazások**. A *Megnyitás a következőben* viselkedését egy házirend által kezelt alkalmazás megosztási lehetőségek, csak más szabályzattal felügyelt alkalmazások mutat be. Ha egy felhasználó próbál küldeni egy szabályzat által védett fájlt mellékletként a onedrive-ról a natív levelezőalkalmazást, a fájl nem olvasható.
@@ -64,7 +64,7 @@ Az egyszerű felhasználónév beállítását **kötelező** megadni olyan eszk
 4.  Telepítse a regisztrált eszközökre a **Megnyitási engedélyek felügyelete** szabályzatot a az Intune vagy külső MDM-szolgáltató segítségével.
 
 
-### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>1. példa: A rendszergazda teendői az Intune vagy harmadik fél mobileszköz-kezelési konzolon
+### <a name="example-1-admin-experience-in-intune-or-third-party-mdm-console"></a>1\. példa: A rendszergazda teendői az Intune vagy harmadik fél mobileszköz-kezelési konzolon
 
 1. Nyissa meg az Intune vagy a külső MDM-szolgáltató felügyeleti konzolját. Nyissa meg a konzolnak azt a szakaszát, ahol a regisztrált iOS-eszközökre érvényes alkalmazáskonfigurációs beállításokat adja meg.
 
@@ -83,7 +83,7 @@ Az egyszerű felhasználónév beállítását **kötelező** megadni olyan eszk
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Sztring | %upn% |
 
 
-### <a name="example-2-end-user-experience"></a>2. példa: Végfelhasználói élmény
+### <a name="example-2-end-user-experience"></a>2\. példa: Végfelhasználói élmény
 
 1.  A felhasználó telepíti a Microsoft Word alkalmazást az eszközön.
 

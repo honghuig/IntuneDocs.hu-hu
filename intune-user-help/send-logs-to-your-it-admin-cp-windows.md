@@ -18,12 +18,12 @@ ms.reviewer: scottduf
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9ecf976ea973fdb1a9b8025fec0bf49d7f87d0c
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5df4fce5c07f416d5fa53ef653d62d9166fb1a11
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61491178"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528771"
 ---
 # <a name="email-your-company-support-about-problem-from-company-portal-for-windows"></a>E-mailt a cég informatikai támogatási szolgálata a vállalati portál Windows problémáról
 
@@ -32,7 +32,7 @@ A vállalati portál alkalmazásban kapcsolatos problémák elhárítása a Wind
 Ha segítséget kérni, egy előfeltöltött e-mail nyílik meg, leírhatja a probléma részletei. Ezenkívül tartalmazza a diagnosztikai napló azonosítója. Ha a támogatási csapat sikerül megoldani a problémát, a leírás alapján, azok a Microsoft fogja forduljon segítségért. A Microsoft való hivatkozáshoz az alkalmazásnaplókat a diagnosztikai Azonosítóval kell rendelkeznie.   
 
 
-> [!Note]       
+> [!Note]
 > Miután rákattintott **segítség**, a vállalati portál automatikusan elküldi a naplók a Microsoft támogatási csapatának. Ez a lépés nem megkönnyíti hibaelhárításához és megoldásához eszkalálva vannak problémák proaktív egy Microsoft támogatási szolgálatához. Amint már említettük, a Microsoft támogatási csapatával a naplók az e-mailben a diagnosztikai azonosító használatával kérheti le.  
 
 ## <a name="what-is-a-diagnostic-log"></a>Mi az a diagnosztikai naplót?

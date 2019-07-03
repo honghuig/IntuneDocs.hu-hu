@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e0b61771385923af05c656f04e4257176b72ee35
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 6bfd8496061b4b3aba2589b73c3e98bce94a5011
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504060"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528649"
 ---
 # <a name="sign-in-to-company-portal"></a>Jelentkezzen be céges portál  
 
@@ -57,13 +57,13 @@ A következő lépések bemutatják a képernyőképek a vállalati portál iOS-
 
 ## <a name="sign-in-with-certificate-based-authentication"></a>Jelentkezzen be a Tanúsítványalapú hitelesítés
 
-1.  Nyissa meg az eszközén a Céges portál alkalmazást.  
+1. Nyissa meg az eszközén a Céges portál alkalmazást.  
 
-2.  Adja meg a **munkahelyi vagy iskolai fiókját**.  
+2. Adja meg a **munkahelyi vagy iskolai fiókját**.  
 
-3.  Koppintson a **Bejelentkezés tanúsítvánnyal** lehetőségre.  
+3. Koppintson a **Bejelentkezés tanúsítvánnyal** lehetőségre.  
 
-4.  A tanúsítvány használatához koppintson a **Folytatás** lehetőségre.  
+4. A tanúsítvány használatához koppintson a **Folytatás** lehetőségre.  
 
 ## <a name="sign-in-from-another-device"></a>Bejelentkezés másik eszközről
 

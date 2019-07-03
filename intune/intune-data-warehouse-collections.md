@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8581d047e76ac1734b2d6c7816facf601e397957
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 816ac1d97e7be485717905fe9d5d62b812408446
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041714"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512217"
 ---
-#  <a name="intune-data-warehouse-collections"></a>Intune adattárház-gyűjtemények
+# <a name="intune-data-warehouse-collections"></a>Intune adattárház-gyűjtemények
 
 Az alábbi Intune adattárház-gyűjteményekkel a Data Warehouse API 1.0-ás verziójú gyűjteményeihez kínálnak tulajdonságokat, leírásokat és példákat. 
 
@@ -34,7 +34,7 @@ Az **AppRevision** entitás listázza az alkalmazások összes verzióját.
 |          Tulajdonság          |                                      Leírás                                      |                Példa               |
 |:--------------------------:|:-------------------------------------------------------------------------------------:|:------------------------------------:|
 | AppKey                     | Az alkalmazás egyedi azonosítója.                                                         | 123                                  |
-| Alkalmazásazonosító              | Az alkalmazás egyedi azonosítója – Az AppKey-hez hasonlít, de természetes kulcs.        | b66bc706-ffff-7437-0340-032819502773 |
+| ApplicationId              | Az alkalmazás egyedi azonosítója – Az AppKey-hez hasonlít, de természetes kulcs.        | b66bc706-ffff-7437-0340-032819502773 |
 | Változat                   | A bináris feltöltése során a rendszergazda által említett verzió.                   | 2                                    |
 | Cím                      | Az alkalmazás címe.                                                                     | Excel                                |
 | Kiadó                  | Az alkalmazás kiadója.                                                                 | Microsoft                            |
@@ -43,7 +43,7 @@ Az **AppRevision** entitás listázza az alkalmazások összes verzióját.
 | VppProgramTypeKey          | A következő szakaszban leírt VppProgramType érték hivatkozása.                                        | 30876                                |
 | CreationTime               | A jelen változat létrehozásának ideje.                                            | 2016. 11. 23. 0:00                      |
 | ModifiedTime               | A legutóbbi, jelen változattal kapcsolatos bármilyen módosítás ideje.                            | 2016. 11. 23. 0:00                      |
-| Méret                       | A bináris mérete bájtokban.                                                          | 120.392.000                          |
+| Size                       | A bináris mérete bájtokban.                                                          | 120.392.000                          |
 | StartDateInclusiveUTC      | A jelen változat adattárházban történő létrehozásának dátuma és időpontja (UTC).      | 2016. 11. 23. 0:00                      |
 | EndDateExclusiveUTC        | A jelen változat elavulásának dátuma és időpontja (UTC).                        | 2016. 11. 23. 0:00                      |
 | IsCurrent                  | Jelzi, hogy az alkalmazásverzió aktuális-e az adattárházban.         | Igaz/hamis                           |
@@ -359,7 +359,7 @@ A **EnrollmentFailureCategory** entitás azt jelzi, hogy miért-eszközök regis
 | Nem érhető el                   | A regisztráció sikertelen kategória nem érhető el.                                                             |
 | Ismeretlen                         | Ismeretlen hiba.                                                                                                |
 | Authentication                  | A hitelesítés sikertelen.                                                                                        |
-| Engedélyezés                   | Hívás történt hitelesítése, de nem jogosult a regisztrációra.                                                         |
+| Authorization                   | Hívás történt hitelesítése, de nem jogosult a regisztrációra.                                                         |
 | AccountValidation               | Nem sikerült érvényesíteni a fiókot a regisztrációhoz. (Blokkolva, fiók regisztrációs nincs engedélyezve)                      |
 | UserValidation                  | Felhasználó nem érvényesíthető. (Felhasználó nem létezik, licenc hiányzik)                                           |
 | DeviceNotSupported              | Eszköz mobileszköz-kezelés nem támogatott.                                                         |

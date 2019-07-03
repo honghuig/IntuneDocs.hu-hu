@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f286ec4928ad4bb026c95d10562d9b339b2ca5f3
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e8ebc708f76ed1f55f512edda75206d3ed5890a0
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67043917"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530730"
 ---
 # <a name="troubleshoot-conditional-access"></a>A feltételes hozzáférés hibaelhárítása
 
@@ -35,8 +35,8 @@ Az alábbi követelményeknek kell teljesülniük a feltételes hozzáférés m�
 - Az eszközt regisztrálni kell az Intune-ban, és annak kell felügyelnie.
 - A felhasználónak és az eszköznek is meg kell felelnie az Intune-ban hozzájuk rendelt megfelelőségi szabályzatoknak.
 - Alapértelmezés szerint lennie kell egy, a felhasználóhoz hozzárendelt eszközmegfelelőségi szabályzatnak. Ez attól függhet, hogyan van konfigurálva **A hozzárendelt megfelelőségi szabályzat nélküli eszközök megjelölése a következőként** beállítás az Intune rendszergazdai portáljának **Eszközmegfelelőség** > **Megfelelőségi szabályzat beállításai** szakaszában.
--   Az eszközön aktiválni kell az Exchange ActiveSync protokollt, ha a felhasználó nem az Outlookot, hanem az eszköz natív levelezőprogramját használja. iOS-, Windows Phone- és Android-eszközök esetében ez automatikusan történik.
--   Az Intune Exchange Connectort megfelelően konfigurálni kell. További információkért lásd az [Az Exchange Connector hibaelhárítása a Microsoft Intune-ban](troubleshoot-exchange-connector.md) című ismertetőt.
+- Az eszközön aktiválni kell az Exchange ActiveSync protokollt, ha a felhasználó nem az Outlookot, hanem az eszköz natív levelezőprogramját használja. iOS-, Windows Phone- és Android-eszközök esetében ez automatikusan történik.
+- Az Intune Exchange Connectort megfelelően konfigurálni kell. További információkért lásd az [Az Exchange Connector hibaelhárítása a Microsoft Intune-ban](troubleshoot-exchange-connector.md) című ismertetőt.
 
 Az egyes eszközökre vonatkozó feltételek megtekinthetők az Azure Portalon, valamint a Mobileszközkészlet-jelentésben.
 

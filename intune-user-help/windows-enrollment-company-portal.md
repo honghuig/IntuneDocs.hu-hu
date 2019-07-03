@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d9f29e2d737dfd7bef709f239d6c8506c3bb746c
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: fcc493258d148e65a0dbc08a9499a79e1d31bb95
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196882"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529387"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Windows-eszközök regisztrálása az Intune vállalati portál  
 
@@ -64,11 +64,11 @@ Regisztráció lépései a Windows 10-es eszközök különböző verziói eset�
     *  __1607-es vagy újabb__: Úton-eszköz regisztrálása a [ **beállítások** > **fiók** > **hozzáférés munkahelyi vagy iskolai** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511-es vagy korábbi__: Úton-eszköz regisztrálása a [ **beállítások** > **fiók** > **a fiókok** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-### <a name="windows-10-mobile-devices"></a>Windows 10 Mobile rendszerű eszközök       
+### <a name="windows-10-mobile-devices"></a>Windows 10 Mobile rendszerű eszközök
 
-1.  Lépjen a __minden alkalmazás__ , és válassza ki a __beállítások__ alkalmazást.  
-2.  Válassza a __Rendszer__ > __Névjegy__ lehetőséget.      
-3.  A __eszközadatokat__, keresse meg a __verzió__.  
+1. Lépjen a __minden alkalmazás__ , és válassza ki a __beállítások__ alkalmazást.
+2. Válassza a __Rendszer__ > __Névjegy__ lehetőséget.
+3. A __eszközadatokat__, keresse meg a __verzió__.  
 4. Ha a verzió  
 
     *  __1607-es vagy újabb__: Az eszköz segítségével regisztrálja a [ **beállítások** > **hozzáférés munkahelyi vagy iskolai** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   

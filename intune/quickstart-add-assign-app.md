@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 17db2227303fe3937156ad6afa610dce48bd1992
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041349"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528310"
 ---
 # <a name="quickstart-add-and-assign-a-client-app"></a>Gyors útmutató: Egy ügyfél alkalmazások felvételét és hozzárendelését
 
@@ -69,7 +69,7 @@ Miután hozzáadott egy alkalmazást a Microsoft Intune-hoz, azt felhasználói 
 
 Egy alkalmazás egy csoporthoz rendeléséhez használja a következő lépéseket:
 1. Az [Intune-ban](https://aka.ms/intuneportal) válassza az **Ügyfélalkalmazások** > **Alkalmazások** elemet. 
-2. Válassza ki a hozzárendelni kívánt alkalmazást.   
+2. Válassza ki a hozzárendelni kívánt alkalmazást.
 3. Kattintson a **Hozzárendelések** > **Csoport hozzáadása** lehetőségre a **Csoport hozzáadása** panel megjelenítéséhez.
 4. Válassza a **Regisztrált eszközökhöz elérhető** lehetőséget a **Hozzárendelés típusa** legördülő menüben. 
 5. Kattintson a **Tartalmazott csoportok** > **Befoglalandó csoportok kijelölése** > **Contoso tesztelők** lehetőséget.

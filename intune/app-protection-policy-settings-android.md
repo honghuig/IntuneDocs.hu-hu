@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4a380cc514272d10a6cfa1e9f20adeb171303523
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 524c4aebe6cdde0b0bc45f76a4675bbed8172d67
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403292"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67511693"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Android-eszközök alkalmazásvédelmi szabályzatainak beállításai a Microsoft Intune-ban
 Ez a cikk az alkalmazásvédelmi szabályzatok Android-eszközökre vonatkozó beállításait ismerteti. Az ismertetett szabályzatbeállításokat az Azure Portal **Beállítások** paneljén lehet [konfigurálni](app-protection-policies.md) az alkalmazásvédelmi szabályzatokhoz.
@@ -31,7 +31,7 @@ Házirend-beállítások három kategóriába sorolhatók: adatvédelmi beállí
 > [!IMPORTANT]
 > Az Intune céges portál fogadásához az alkalmazásvédelmi szabályzatok Androidos eszközökre vonatkozó szükséges az eszközön. További információkért lásd: a [Intune vállalati portál hozzáférés alkalmazásokkal kapcsolatos követelmények](end-user-mam-apps-android.md).
 
-##  <a name="data-protection"></a>Adatvédelem 
+## <a name="data-protection"></a>Adatvédelem 
 ### <a name="data-transfer"></a>Adatátvitel
 | Beállítás | Használat | Alapértelmezett érték |
 |------|------|------|
@@ -63,11 +63,11 @@ Házirend-beállítások három kategóriába sorolhatók: adatvédelmi beállí
 |<ul><ui>**Nem felügyelt böngésző neve** | Adja meg az alkalmazás nevét, a böngésző társított a **nem felügyelt böngésző azonosító**. Ez a név jelenik meg a felhasználók számára, ha a megadott böngésző nincs telepítve.  | **Üres** |
 
 
-  ## <a name="data-transfer-exemptions"></a>Adatátviteli kivételek
+## <a name="data-transfer-exemptions"></a>Adatátviteli kivételek
 
   Egyes alkalmazások és platformszolgáltatások kivételt képeznek, és az Intune alkalmazásvédelmi szabályzata engedélyezheti számukra, hogy adatokat küldjenek és fogadjanak. Például az összes Intune által kezelt Androidos alkalmazásnak képesnek kell lennie a Google Szövegfelolvasóval történő adatforgalmazásra, hogy a rendszer fel tudja olvasni a mobileszköz képernyőjén látható szöveget. Ez a lista idővel változhat. Azok a szolgáltatások és alkalmazások szerepelnek rajta, amelyek megítélésünk szerint biztonságosan segítik a hatékony munkát.
 
-  ### <a name="full-exemptions"></a>Teljes kivételek
+### <a name="full-exemptions"></a>Teljes kivételek
 
   Ezek az alkalmazások teljes mértékben jogosultak arra, hogy adatokat küldjenek az Intune által felügyelt alkalmazásoknak, és adatokat fogadjanak tőlük.
 
@@ -84,7 +84,7 @@ Házirend-beállítások három kategóriába sorolhatók: adatvédelmi beállí
   | com.azure.authenticator | Azure Authenticator alkalmazás (sokféle helyzetben szükséges a sikeres hitelesítéshez) |
   | com.microsoft.windowsintune.companyportal | Intune Vállalati portál|
 
-  ### <a name="conditional-exemptions"></a>Feltételes kivételek
+### <a name="conditional-exemptions"></a>Feltételes kivételek
   Ezek az alkalmazások csak bizonyos feltételek teljesülése esetén kapnak engedélyt arra, hogy adatokat küldjenek az Intune által felügyelt alkalmazásoknak, és adatokat fogadjanak tőlük.
 
   |Alkalmazás/szolgáltatás neve | Leírás | A kivétel feltétele|
@@ -96,7 +96,7 @@ Házirend-beállítások három kategóriába sorolhatók: adatvédelmi beállí
 
 További információt [Az adatátviteli szabályzat kivételei alkalmazások esetén](app-protection-policies-exception.md) című témakörben találhat.
 
-##  <a name="access-requirements"></a>A hozzáférési követelmények
+## <a name="access-requirements"></a>A hozzáférési követelmények
 
 | Beállítás | Használat |  
 |------|------| 

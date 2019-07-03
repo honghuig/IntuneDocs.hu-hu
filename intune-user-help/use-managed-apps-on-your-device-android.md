@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3a477f24f2678b5b4c8830819d1410eb8525220
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: bf53266449911967ae8fb89d240274b04164fe96
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505488"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67511754"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Felügyelt alkalmazások használata Android-eszközön
 A felügyelt alkalmazások úgy vannak konfigurálva, hogy megfeleljenek a szervezet biztonsági követelményeinek, és a védelmet biztosítsanak a munkahelyi és iskolai adatok számára. Ezek az alkalmazások telepíthetők vagy automatikusan használhatók az eszközén. 
@@ -57,12 +57,12 @@ Felügyelt alkalmazások három módja van.
 * Telepíthet alkalmazásokat a Google Play Áruházból, majd bejelentkezhet az alkalmazásba munkahelyi vagy iskolai fiókjával.    
 * A szervezet elérhetővé teszi a felügyelt alkalmazásokat a Céges portálon. Nyissa meg a céges portál alkalmazásban vagy webhelyen keresse, megtekintése és kereshessék az alkalmazásokat. Ezek az alkalmazások kapcsolatos további információkért lásd: a következő szakaszban [rendelkezésre álló alkalmazások](#available-apps).  
 
- ### <a name="available-apps"></a>Nem kötelező alkalmazások   
+### <a name="available-apps"></a>Nem kötelező alkalmazások   
  A szervezet kiválaszthatja a megfelelő és hasznos az Ön számára a munkahelyi vagy iskolai rendszerhez, és elérhetővé tétele, hogy a céges portál alkalmazás.  
 
  Alkalmazások is elérhető lesz az eszköz típusa alapján. Például ha a vállalati portál alkalmazás androidos használ, hozzáférhet az Android-alkalmazások, de nem az iOS-alkalmazások.   
 
- ## <a name="request-an-app-for-work-or-school"></a>A kérelem egy alkalmazást a munkahelyi vagy iskolai fiók   
+## <a name="request-an-app-for-work-or-school"></a>A kérelem egy alkalmazást a munkahelyi vagy iskolai fiók   
  Ha szükséges, de nem látható a vállalati portál alkalmazás, kérheti. Keresse meg a kapcsolattartási adatait a **segélyszolgálat** vagy alkalmazás **IT-csoport elérhetősége** fülre. Ugyanazokat az adatokat a látni fogja a [céges portál webhelyen](https://go.microsoft.com/fwlink/?linkid=2010980).   
 
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Mit felügyelhet a cég informatikai támogatási szolgálata az alkalmazásokban?  

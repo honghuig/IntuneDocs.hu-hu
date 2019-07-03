@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3d3e36dbeb1fb7c90dfc5cc4c18fb30140c761db
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 9a5f28f01d0c8be6692deaf27391e52619fcdcab
+ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046500"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512272"
 ---
 # <a name="configure-device-compliance-and-app-management-policies-when-migrating-to-microsoft-intune"></a>Eszközmegfelelőségi és alkalmazásfelügyeleti szabályzatok konfigurálása Microsoft Intune-migráció során
 
@@ -43,7 +43,7 @@ Lehet, hogy minden eszközplatform más beállítási lehetőségeket kínál, d
 
 ## <a name="task-list-for-device-compliance-policies"></a>Feladatlista az eszközmegfelelőségi szabályzatokhoz
 
-### <a name="task-1-add-device-groups-optional"></a>1. feladat: Eszközcsoportok létrehozása (nem kötelező)
+### <a name="task-1-add-device-groups-optional"></a>1\. feladat: Eszközcsoportok létrehozása (nem kötelező)
 
 Létrehozhat eszközcsoportokat, ha bizonyos felügyeleti feladatokat eszközidentitás, nem pedig felhasználói identitás alapján kell elvégeznie.
 
@@ -51,15 +51,15 @@ Az eszközcsoportok elsősorban kioszkok, adott helyszínre telepített vagy mű
 
 Ha az eszközök regisztrálása előtt eszközcsoportokat konfigurál, az eszközkategóriák alapján a regisztrációnál automatikusan csoportosíthatja is az eszközöket. Ezután automatikusan megkapják a csoportjukra érvényes eszközszabályzatokat. [Csoportok – első lépések](groups-get-started.md).
 
-### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>2. feladat: Erőforrás-hozzáférési profilok (Wi-Fi, VPN és e-mail-tanúsítványok) használata
+### <a name="task-2-use-resource-access-profiles-wi-fi-vpn-and-email-certificates"></a>2\. feladat: Erőforrás-hozzáférési profilok (Wi-Fi, VPN és e-mail-tanúsítványok) használata
 
 Az erőforrás-hozzáférési profilok tanúsítványokat és hozzáférési konfigurációkat bocsátanak rendelkezésre a regisztrált eszközökhöz. Ha tanúsítványalapú hitelesítést használ, [konfigurálja a tanúsítványokat](certificates-configure.md).
 
-### <a name="task-3-create-and-deploy-device-configuration-profiles"></a>3. feladat: Létrehozása és üzembe helyezése az eszközkonfigurációs profilok
+### <a name="task-3-create-and-deploy-device-configuration-profiles"></a>3\. feladat: Létrehozása és üzembe helyezése az eszközkonfigurációs profilok
 
 Az eszközszintű beállítások (például kamera letiltása, alkalmazás-áruház, egyalkalmazásos mód, kezdőképernyő stb.) betartatásához eszközkonfigurációs profilt kell létrehozni. További információ az [eszközprofilokról](device-profiles.md).
 
-####  <a name="directly-import-ios-configuration-profiles-optional"></a>iOS-es konfigurációs profilok közvetlen importálása (nem kötelező)
+#### <a name="directly-import-ios-configuration-profiles-optional"></a>iOS-es konfigurációs profilok közvetlen importálása (nem kötelező)
 
 -   **Az Apple Configurator iOS-profilok (iOS 7.1 és újabb verziók):** Ha a meglévő MDM-megoldás Apple Configurator-profilokat (.mobileconfig-fájlokat) használ, az Intune ezeket közvetlenül tudja importálni egyéni konfigurációs szabályzat.
 
@@ -67,7 +67,7 @@ Az eszközszintű beállítások (például kamera letiltása, alkalmazás-áruh
 
 - Útmutató egyéni szabályzat felvételéhez [iOS-en](custom-settings-ios.md).
 
-### <a name="task-4-create-and-deploy-device-compliance-policies-optional"></a>4. feladat: (Nem kötelező) eszköz megfelelőségi szabályzatok létrehozása és telepítése
+### <a name="task-4-create-and-deploy-device-compliance-policies-optional"></a>4\. feladat: (Nem kötelező) eszköz megfelelőségi szabályzatok létrehozása és telepítése
 
 Az eszközmegfelelőségi szabályzatok biztonsági jellegű beállítások értékét vizsgálják, és jelentik, hogy mely eszközök felelnek meg a vállalati előírásoknak, és melyek nem. A beállítások a következők:
 
@@ -83,7 +83,7 @@ További források az eszközmegfelelőségi szabályzatokkal kapcsolatban:
 
 -   Útmutató [eszközmegfelelőségi szabályzat létrehozásához](device-compliance-get-started.md)
 
-### <a name="task-5-publish-and-deploy-apps"></a>5. feladat: Alkalmazások közzététele és telepítése
+### <a name="task-5-publish-and-deploy-apps"></a>5\. feladat: Alkalmazások közzététele és telepítése
 
 Az Intune MDM használata esetén alkalmazásokat telepíthet automatikus telepítésük megkövetelésével vagy a Céges portálon való közzétételükkel.
 
@@ -91,7 +91,7 @@ Az Intune MDM használata esetén alkalmazásokat telepíthet automatikus telep�
 
 -   [Alkalmazások üzembe helyezése](apps-deploy.md).
 
-### <a name="task-6-enable-device-enrollment"></a>6. feladat: Eszközök regisztrálásának lehetővé tétele
+### <a name="task-6-enable-device-enrollment"></a>6\. feladat: Eszközök regisztrálásának lehetővé tétele
 
 Az eszköz regisztrálása az eszköz kezeléséhez szükséges. Útmutató [a vállalati és a személyes tulajdonú eszközök regisztrációra való felkészítéséhez](device-enrollment.md)
 

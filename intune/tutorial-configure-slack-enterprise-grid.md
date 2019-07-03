@@ -17,12 +17,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0829a2b3f9aff5f30a971d176591bf838510a606
-ms.sourcegitcommit: 43ba5a05b2e1dc1997126d3574884f65cde449c7
+ms.openlocfilehash: da6c9b544d86c9c4b09c061c0f1500ed8612a047
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67197635"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530705"
 ---
 # <a name="tutorial-configure-slack-to-use-intune-for-emm-and-app-configuration"></a>Oktatóanyag: Az Intune-nal EMM és az alkalmazás konfigurációjának Slack konfigurálása
 
@@ -54,44 +54,44 @@ Az iOS-alkalmazás Slack for EMM hozzáadása az Intune-bérlőhöz, és ahhoz, 
 
 ### <a name="add-slack-for-emm-to-intune"></a>EMM Slack hozzáadása az Intune-hoz
 Slack for EMM hozzáadása egy felügyelt iOS-alkalmazás az Intune-ban, és rendelje hozzá a Slack felhasználók. Alkalmazások platformfüggőek, így Önnek kell egy különálló Intune-alkalmazást a Slack-felhasználók hozzáadása az Android-eszközökön.
-1.  Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazások** > **Hozzáadás**.
-2.  Alkalmazás típusa területen, válassza a **Store-alkalmazás – iOS**.
-3.  Válassza a **Keresés az App Store-ban** lehetőséget. Adja meg a keresési kifejezés "Slack for EMM", és válassza ki az alkalmazást.
-4.  Válassza ki **alkalmazásadatok** és tetszés szerint állítsa be a módosításokat.
-5.  Válassza a **Hozzáadás** lehetőséget.
-6.  A keresősávba írja be a "Slack for EMM", és válassza ki az imént hozzáadott alkalmazás.
-7.  A kezelés, válassza ki a **hozzárendelések**.
-8.  Válassza ki **csoport hozzáadása**. Attól függően, akik úgy döntött, hogy hatással lesz, ha be van kapcsolva a Slack, EMM alatt **hozzárendelés-típus** érdemes kiválasztása:
+1. Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazások** > **Hozzáadás**.
+2. Alkalmazás típusa területen, válassza a **Store-alkalmazás – iOS**.
+3. Válassza a **Keresés az App Store-ban** lehetőséget. Adja meg a keresési kifejezés "Slack for EMM", és válassza ki az alkalmazást.
+4. Válassza ki **alkalmazásadatok** és tetszés szerint állítsa be a módosításokat.
+5. Válassza a **Hozzáadás** lehetőséget.
+6. A keresősávba írja be a "Slack for EMM", és válassza ki az imént hozzáadott alkalmazás.
+7. A kezelés, válassza ki a **hozzárendelések**.
+8. Válassza ki **csoport hozzáadása**. Attól függően, akik úgy döntött, hogy hatással lesz, ha be van kapcsolva a Slack, EMM alatt **hozzárendelés-típus** érdemes kiválasztása:
     -  **Regisztrált eszközök esetében elérhető** választotta, ha az "Összes tag (beleértve a vendégeket)" vagy a
     -  **Elérhető regisztrációval és anélkül** választotta, ha az "Összes tagok (a vendégeket kivéve)" vagy "nem kötelező megadni".
-9.  Válassza ki **belefoglalt csoportok** , és ellenőrizze az alkalmazás minden felhasználó számára elérhető válassza **Igen**.
+9. Válassza ki **belefoglalt csoportok** , és ellenőrizze az alkalmazás minden felhasználó számára elérhető válassza **Igen**.
 10. Kattintson a **OK**, és kattintson a **OK** újra.
 11. Kattintson a **Save** (Mentés) gombra.
 
 ### <a name="add-an-app-configuration-policy-for-slack-for-emm"></a>A Slack-alkalmazáskonfigurációs szabályzat felvételéhez for EMM-Megoldáshoz
 A Slack EMM iOS-es alkalmazáskonfigurációs szabályzat hozzáadása Alkalmazáskonfigurációs szabályzatok felügyelt eszközökön a platform-specifikus, így az Android-eszközökön a Slack-felhasználók számára külön szabályzatot hozzá kell.
-1.  Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazáskonfigurációs szabályzatok** > **Hozzáadás**.
-2.  A név adja meg a Slack alkalmazást konfigurációs házirend tesztelése.
-3.  Eszközregisztráció típusa, válassza a **felügyelt eszközök**.
-4.  Válassza a Platform, **iOS**.
-5.  Válassza ki **társított alkalmazás**.
-6.  A keresősávba írja be a "Slack for EMM", és válassza ki az alkalmazást.
-7.  Kattintson a **OK**, majd válassza ki **konfigurációs beállítások**. 
+1. Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazáskonfigurációs szabályzatok** > **Hozzáadás**.
+2. A név adja meg a Slack alkalmazást konfigurációs házirend tesztelése.
+3. Eszközregisztráció típusa, válassza a **felügyelt eszközök**.
+4. Válassza a Platform, **iOS**.
+5. Válassza ki **társított alkalmazás**.
+6. A keresősávba írja be a "Slack for EMM", és válassza ki az alkalmazást.
+7. Kattintson a **OK**, majd válassza ki **konfigurációs beállítások**. 
     -   Információ konfigurációs kulcsokat és azok értékeit, tekintse át a dokumentációt, a "Műszaki" lapján [Slack az AppConfig weblap](https://www.appconfig.org/company/slack/).
-8.  Válassza ki **OK**, majd válassza ki **Hozzáadás**.
-9.  A keresősávba írja be a "test a Slack alkalmazást konfigurációs házirend", és válassza ki az imént hozzáadott házirend.
+8. Válassza ki **OK**, majd válassza ki **Hozzáadás**.
+9. A keresősávba írja be a "test a Slack alkalmazást konfigurációs házirend", és válassza ki az imént hozzáadott házirend.
 10. A kezelés, válassza ki a **hozzárendelések**.
 11. Hozzárendelés a, válassza ki a **minden felhasználó és minden eszköz**.
 12. Kattintson a **Save** (Mentés) gombra.
 
 ### <a name="optional-create-an-ios-device-compliance-policy"></a>(Nem kötelező) IOS-eszközmegfelelőségi szabályzat létrehozása
 Hozzon létre egy Intune eszközmegfelelőségi szabályzatot, ahol megadja, hogy milyen feltételeknek kell teljesülnie ahhoz, hogy az eszköz megfelelő legyen. Ebben az oktatóanyagban iOS-eszközökhöz hozunk létre eszközmegfelelőségi szabályzatot. A megfelelőségi szabályzatok olyan platformspecifikus, így Önnek kell a Slack-felhasználók számára külön szabályzat létrehozása Android-eszközökön.
-1.  Az Intune-ban válassza az **Eszközmegfelelőség** > **Szabályzatok** > **Szabályzat létrehozása** lehetőséget.
-2.  A név adja meg az "IOS-es megfelelőségi szabályzat test".
-3.  A leírás adja meg az "IOS-es megfelelőségi szabályzat test".
-4.  Válassza a Platform, **iOS**.
-5.  Válassza az **Eszközállapot** lehetőséget. Jailbreakelt eszközök mellett jelölje ki **blokk**, majd válassza ki **OK**.
-6.  Válassza ki **rendszerbiztonság** , és adja meg a jelszó-beállításokat. Az oktatóanyag végrehajtásához válassza a következő ajánlott beállításokat:
+1. Az Intune-ban válassza az **Eszközmegfelelőség** > **Szabályzatok** > **Szabályzat létrehozása** lehetőséget.
+2. A név adja meg az "IOS-es megfelelőségi szabályzat test".
+3. A leírás adja meg az "IOS-es megfelelőségi szabályzat test".
+4. Válassza a Platform, **iOS**.
+5. Válassza az **Eszközállapot** lehetőséget. Jailbreakelt eszközök mellett jelölje ki **blokk**, majd válassza ki **OK**.
+6. Válassza ki **rendszerbiztonság** , és adja meg a jelszó-beállításokat. Az oktatóanyag végrehajtásához válassza a következő ajánlott beállításokat:
     -   Válassza ki a mobileszközök zárolásának feloldásához jelszó szükséges a **megkövetelése**.
     -   Egyszerű jelszavak, válasszon **blokk**.
     -   Jelszó minimális hossza adja meg a 4.
@@ -99,60 +99,60 @@ Hozzon létre egy Intune eszközmegfelelőségi szabályzatot, ahol megadja, hog
     -   A képernyőzárolás után perc jelszó kérése ennyi, válassza **azonnal**.
     -   A jelszó lejárata (nap), adja meg a 41-es.
     -   Hány korábbi jelszó ne legyen újra felhasználhatja, adja meg az 5.
-7.  Kattintson a **OK**, majd válassza ki **OK** újra.
-8.  Kattintson a **Create** (Létrehozás) gombra.
+7. Kattintson a **OK**, majd válassza ki **OK** újra.
+8. Kattintson a **Create** (Létrehozás) gombra.
 
 ## <a name="set-up-slack-on-android-work-profile-devices"></a>Állítsa be a Slack, az Android munkahelyi profilos eszközök
 A Slack felügyelt Google Play alkalmazás hozzáadása az Intune-bérlőhöz, és hozzon létre egy konfigurációs szabályzatot ahhoz, hogy a szervezetek számára Androidos felhasználók férhetnek hozzá a Slack-EMM-szolgáltatóként az Intune-nal.
 
 ### <a name="add-slack-to-intune"></a>Slack hozzáadása az Intune-hoz
 Adja hozzá a Slack, a felügyelt Google play alkalmazás az Intune-ban, és a Slack felhasználók hozzárendelése. Alkalmazások platformfüggőek, így kell hozzáadnia a különálló Intune-alkalmazást a Slack-felhasználók számára az iOS-eszközökön.
-1.  Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazások** > **Hozzáadás**.
-2.  Alkalmazás típusa területen, válassza a **Store alkalmazás – felügyelt Google Play**.
-3.  Válassza ki **jóváhagyása a felügyelt Google Play -** . Adja meg a keresési kifejezés "Slack for EMM", és válassza ki az alkalmazást.
-4.  Válassza ki **jóváhagyása**.
-5.  A keresősávba írja be a "Slack", és válassza ki az imént hozzáadott alkalmazás.
-6.  A kezelés, válassza ki a **hozzárendelések**.
-7.  Válassza ki **csoport hozzáadása**. Attól függően, akik úgy döntött, hogy hatással lesz, ha be van kapcsolva a Slack, EMM alatt **hozzárendelés-típus** érdemes kiválasztása:
+1. Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazások** > **Hozzáadás**.
+2. Alkalmazás típusa területen, válassza a **Store alkalmazás – felügyelt Google Play**.
+3. Válassza ki **jóváhagyása a felügyelt Google Play -** . Adja meg a keresési kifejezés "Slack for EMM", és válassza ki az alkalmazást.
+4. Válassza ki **jóváhagyása**.
+5. A keresősávba írja be a "Slack", és válassza ki az imént hozzáadott alkalmazás.
+6. A kezelés, válassza ki a **hozzárendelések**.
+7. Válassza ki **csoport hozzáadása**. Attól függően, akik úgy döntött, hogy hatással lesz, ha be van kapcsolva a Slack, EMM alatt **hozzárendelés-típus** érdemes kiválasztása:
     -   **Regisztrált eszközök esetében elérhető** választotta, ha az "Összes tag (beleértve a vendégeket)" vagy a
     -   **Elérhető regisztrációval és anélkül** választotta, ha az "Összes tagok (a vendégeket kivéve)" vagy "nem kötelező megadni".
-8.  Válassza ki a belefoglalt csoportok és a az alkalmazás legyen elérhető minden felhasználó válassza **Igen**.
-9.  Kattintson a **OK**, és kattintson a **OK** újra.
+8. Válassza ki a belefoglalt csoportok és a az alkalmazás legyen elérhető minden felhasználó válassza **Igen**.
+9. Kattintson a **OK**, és kattintson a **OK** újra.
 10. Kattintson a **Save** (Mentés) gombra.
 
 ### <a name="add-an-app-configuration-policy-for-slack"></a>A Slack-alkalmazáskonfigurációs szabályzat felvételéhez
 A Slack-alkalmazáskonfigurációs szabályzat felvételéhez. Alkalmazáskonfigurációs szabályzatok felügyelt eszközökön a platform-specifikus, így az iOS-eszközökön a Slack-felhasználók számára külön szabályzatot hozzá kell.
-1.  Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazáskonfigurációs szabályzatok** > **Hozzáadás**.
-2.  A név adja meg a Slack alkalmazást konfigurációs házirend tesztelése.
-3.  Eszközregisztráció típusa, válassza a **felügyelt eszközök**.
-4.  Válassza a Platform, **Android**.
-5.  Válassza ki **társított alkalmazás**.
-6.  A keresősávba írja be a "Slack", és válassza ki az alkalmazást.
-7.  Válassza ki **OK**, majd válassza ki **konfigurációs beállítások**.
+1. Válassza ki az Intune-ban **ügyfélalkalmazás** > **alkalmazáskonfigurációs szabályzatok** > **Hozzáadás**.
+2. A név adja meg a Slack alkalmazást konfigurációs házirend tesztelése.
+3. Eszközregisztráció típusa, válassza a **felügyelt eszközök**.
+4. Válassza a Platform, **Android**.
+5. Válassza ki **társított alkalmazás**.
+6. A keresősávba írja be a "Slack", és válassza ki az alkalmazást.
+7. Válassza ki **OK**, majd válassza ki **konfigurációs beállítások**.
     -   Információ konfigurációs kulcsokat és azok értékeit, tekintse át a dokumentációt, a "Műszaki" lapján [Slack az AppConfig weblap](https://www.appconfig.org/company/slack/).
-8.  Kattintson a **OK**, majd válassza ki **Hozzáadás**.
-9.  A keresősávba írja be a "test a Slack alkalmazást konfigurációs házirend", és válassza ki az imént hozzáadott házirend.
+8. Kattintson a **OK**, majd válassza ki **Hozzáadás**.
+9. A keresősávba írja be a "test a Slack alkalmazást konfigurációs házirend", és válassza ki az imént hozzáadott házirend.
 10. A kezelés, válassza ki a **hozzárendelések**.
 11. Hozzárendelés a, válassza ki a **minden felhasználó és minden eszköz**.
 12. Kattintson a **Save** (Mentés) gombra.
 
 ### <a name="optional-create-an-android-device-compliance-policy"></a>(Nem kötelező) Egy Android-eszközök eszközmegfelelőségi szabályzatának létrehozása
 Hozzon létre egy Intune eszközmegfelelőségi szabályzatot, ahol megadja, hogy milyen feltételeknek kell teljesülnie ahhoz, hogy az eszköz megfelelő legyen. Ebben az oktatóanyagban létrehozunk egy Android-eszközök eszközmegfelelőségi szabályzatának. A megfelelőségi szabályzatok olyan platformspecifikus, így Önnek kell hozzon létre külön szabályzatot a Slack-felhasználók számára az iOS-eszközökön.
-1.  Az Intune-ban válassza az **Eszközmegfelelőség** > **Szabályzatok** > **Szabályzat létrehozása** lehetőséget.
-2.  A nevet írja be a "Androidos megfelelőségi szabályzat test".
-3.  A leírás adja meg a "Androidos megfelelőségi szabályzat test".
-4.  Válassza a Platform, **Android Enterprise**.
-5.  Profil típusa alatt válassza ki a **munkahelyi profil**.
-6.  Válassza az **Eszközállapot** lehetőséget. A Rootolt eszközök mellett válassza ki a **blokk**, majd válassza ki **OK**.
-7.  Válassza ki **rendszerbiztonság** , és adja meg **jelszóbeállítások**. Az oktatóanyag végrehajtásához válassza a következő ajánlott beállításokat:
+1. Az Intune-ban válassza az **Eszközmegfelelőség** > **Szabályzatok** > **Szabályzat létrehozása** lehetőséget.
+2. A nevet írja be a "Androidos megfelelőségi szabályzat test".
+3. A leírás adja meg a "Androidos megfelelőségi szabályzat test".
+4. Válassza a Platform, **Android Enterprise**.
+5. Profil típusa alatt válassza ki a **munkahelyi profil**.
+6. Válassza az **Eszközállapot** lehetőséget. A Rootolt eszközök mellett válassza ki a **blokk**, majd válassza ki **OK**.
+7. Válassza ki **rendszerbiztonság** , és adja meg **jelszóbeállítások**. Az oktatóanyag végrehajtásához válassza a következő ajánlott beállításokat:
     -   Válassza ki a mobileszközök zárolásának feloldásához jelszó szükséges a **megkövetelése**.
     -   Kötelező jelszótípus kiválasztása **legalább alfanumerikus karakterek**.
     -   Jelszó minimális hossza adja meg a 4.
     -   A képernyőzárolás után perc jelszó kérése ennyi, válassza **15 perc**.
     -   A jelszó lejárata (nap), adja meg a 41-es.
     -   Hány korábbi jelszó ne legyen újra felhasználhatja, adja meg az 5.
-8.  Kattintson a **OK**, és kattintson a **OK** újra.
-9.  Kattintson a **Create** (Létrehozás) gombra.
+8. Kattintson a **OK**, és kattintson a **OK** újra.
+9. Kattintson a **Create** (Létrehozás) gombra.
 
 ## <a name="launch-slack"></a>Indítsa el a Slack
 

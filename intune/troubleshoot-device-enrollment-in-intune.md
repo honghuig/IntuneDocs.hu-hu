@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 063a288c99f3f773b63bd6fe0040e200a754c888
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046297"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528753"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>A Microsoft Intune-ban eszközök regisztrálásával kapcsolatos problémák elhárítása
 
@@ -34,10 +34,10 @@ Ez a cikk ismerteti a javaslatok az [eszközregisztráció](device-enrollment.md
 
 A hibaelhárítás megkezdése előtt ellenőrizze, hogy az Intune megfelelően van-e konfigurálva a regisztráláshoz. Ezekről a konfigurációs követelményekről itt olvashat:
 
--   [Felkészülés az eszközök regisztrálására a Microsoft Intune-ban](setup-steps.md)
--   [iOS- és Mac-eszközök kezelésének beállítása](ios-enroll.md)
--   [Windowsos eszközök kezelésének beállítása](windows-enroll.md)
--   [Android-eszközök kezelésének beállítása](android-enroll.md) – nincs szükség további lépésekre
+- [Felkészülés az eszközök regisztrálására a Microsoft Intune-ban](setup-steps.md)
+- [iOS- és Mac-eszközök kezelésének beállítása](ios-enroll.md)
+- [Windowsos eszközök kezelésének beállítása](windows-enroll.md)
+- [Android-eszközök kezelésének beállítása](android-enroll.md) – nincs szükség további lépésekre
 
 Azt is biztosíthatja, hogy a felhasználó eszközén megfelelően legyen beállítva a dátum és az idő:
 
@@ -236,15 +236,15 @@ A tanúsítványhiba azért fordul elő, mert az androidos eszközöknek közben
 
 A probléma megoldásához importálja a tanúsítványt az AD FS-kiszolgálón vagy a proxykon található személyes számítógép-tanúsítványok tárába a következő módon:
 
-1.  Az ADFS és proxykiszolgálók szakaszban kattintson a jobb gombbal a **Start** > **Futtatás** > **certlm.msc** elemre a Helyi gép tanúsítványkezelő konzoljának indításához.
-2.  Bontsa ki a **Személyes** elemet, majd válassza a **Tanúsítványok** lehetőséget.
-3.  Keresse meg az AD FS szolgáltatással való kommunikációhoz szükséges tanúsítványt (ez egy nyilvános aláírású tanúsítvány), és kattintson rá duplán a tulajdonságok megjelenítéséhez.
-4.  Válassza a **Tanúsítványlánc** lapot a tanúsítvány szülőtanúsítványának vagy -tanúsítványainak megjelenítéséhez.
-5.  Az összes szülőtanúsítványnál válassza a **Tanúsítvány megtekintése** lehetőséget.
-6.  Válassza a **Részletek** > **Másolás fájlba...**  lehetőséget.
-7.  A varázsló utasításait követve exportálja vagy mentse a szülőtanúsítvány nyilvános kulcsát a fájl kívánt helyére.
-8.  Kattintson a jobb gombbal a **Tanúsítványok** > **Minden feladat** > **Importálás** lehetőségre.
-9.  A varázsló utasításait követve importálja a szülőtanúsítvány(oka)t a **Helyi számítógép\Személyes\Tanúsítványok** helyre.
+1. Az ADFS és proxykiszolgálók szakaszban kattintson a jobb gombbal a **Start** > **Futtatás** > **certlm.msc** elemre a Helyi gép tanúsítványkezelő konzoljának indításához.
+2. Bontsa ki a **Személyes** elemet, majd válassza a **Tanúsítványok** lehetőséget.
+3. Keresse meg az AD FS szolgáltatással való kommunikációhoz szükséges tanúsítványt (ez egy nyilvános aláírású tanúsítvány), és kattintson rá duplán a tulajdonságok megjelenítéséhez.
+4. Válassza a **Tanúsítványlánc** lapot a tanúsítvány szülőtanúsítványának vagy -tanúsítványainak megjelenítéséhez.
+5. Az összes szülőtanúsítványnál válassza a **Tanúsítvány megtekintése** lehetőséget.
+6. Válassza a **Részletek** > **Másolás fájlba...**  lehetőséget.
+7. A varázsló utasításait követve exportálja vagy mentse a szülőtanúsítvány nyilvános kulcsát a fájl kívánt helyére.
+8. Kattintson a jobb gombbal a **Tanúsítványok** > **Minden feladat** > **Importálás** lehetőségre.
+9. A varázsló utasításait követve importálja a szülőtanúsítvány(oka)t a **Helyi számítógép\Személyes\Tanúsítványok** helyre.
 10. Indítsa újra az AD FS-kiszolgálókat.
 11. Ismételje meg a fenti lépéseket az összes AD FS- és proxykiszolgálón.
 

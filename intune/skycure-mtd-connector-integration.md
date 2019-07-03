@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2f5eb5c6e8e454f6558aff7247f8ac10b7a5393
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 1cab7957a0de1b26a6e172fc696cf887d5fe3916
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040561"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528395"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>A Symantec Endpoint Protection Mobile és az Intune közötti integráció beállítása
 
@@ -87,7 +87,7 @@ Hozzá kell adnia egy olyan biztonsági csoportot, amelynek tagja az összes SEP
 
 -  Adja meg, és az eszközök, amely a SEP Mobile alkalmazás fut, majd mentse a módosításokat az összes biztonsági csoportok kiválasztásához.
 
-    ![Kép a SEP Mobile felhasználói csoportjairól](./media/symantec-portal-basic-groups.png)   
+    ![Kép a SEP Mobile felhasználói csoportjairól](./media/symantec-portal-basic-groups.png)
 
 A SEP Mobile a Mobile Threat Defense szolgáltatást futtató eszközöket az Azure AD biztonsági csoportjaival szinkronizálja.
 
@@ -126,25 +126,25 @@ A SEP Mobile a Mobile Threat Defense szolgáltatást futtató eszközöket az Az
 
 4. A **címtár-azonosító** mezőbe illessze be az előző szakaszban az Azure Active Directoryból kimásolt címtár-azonosítót, majd mentse a beállításokat.
 
-    ![Kép a címtár-azonosítóról a SEP Mobile portálon](./media/symantec-portal-directory-ID.png)     
+    ![Kép a címtár-azonosítóról a SEP Mobile portálon](./media/symantec-portal-directory-ID.png)
 
 5. Lépjen a **Beállítások** > **Integrációk** > **Intune** > **Alapszintű beállítás** szakaszra.
 
 6. A **iOS-alkalmazás** elem mellett válassza a **Hozzáadás az Active Directoryhoz** lehetőséget.
 
-    ![Kép az iOS-alkalmazás az Active Directoryhoz való hozzáadásáról](./media/symantec-portal-basic-add.png)   
+    ![Kép az iOS-alkalmazás az Active Directoryhoz való hozzáadásáról](./media/symantec-portal-basic-add.png)
 
-7.  Jelentkezzen be a címtárat kezelő Office 365-fiók Azure Active Directory-hitelesítő adataival.
+7. Jelentkezzen be a címtárat kezelő Office 365-fiók Azure Active Directory-hitelesítő adataival.
 
-8.  Válassza az **Elfogadás** gombot a SEP Mobile iOS-alkalmazás az Azure Active Directoryhoz való hozzáadásához.
+8. Válassza az **Elfogadás** gombot a SEP Mobile iOS-alkalmazás az Azure Active Directoryhoz való hozzáadásához.
 
-    ![Kép az Elfogadás gombról](./media/symantec-portal-basic-accept.png)     
+    ![Kép az Elfogadás gombról](./media/symantec-portal-basic-accept.png)
 
-9.  Végezze el ugyanezt az eljárást az **Androidos alkalmazással** és a **Felügyeleti alkalmazással** is.
+9. Végezze el ugyanezt az eljárást az **Androidos alkalmazással** és a **Felügyeleti alkalmazással** is.
 
 10. Válassza ki az összes olyan felhasználói csoportot, amely SEP Mobile-alkalmazásokat szeretne futtatni, például a korábban létrehozott biztonsági csoportot.
 
-    ![Kép a SEP Mobile felhasználói csoportjairól](./media/symantec-portal-basic-groups.png)   
+    ![Kép a SEP Mobile felhasználói csoportjairól](./media/symantec-portal-basic-groups.png)
 
 11.  A SEP Mobile szinkronizálja a kijelölt csoportok eszközeit, és megkezdi az adatok jelentését az Intune felé. Ezeket az adatokat a Teljes integráció szakaszban tekintheti meg. Lépjen a **Beállítások** > **Integrációk** > **Intune** > **Teljes integráció** szakaszra.
 

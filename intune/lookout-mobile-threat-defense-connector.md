@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3566d144abad563ead64c124e128c221e725a25c
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: a6dfce050726cfddadc493f73c91701021dc21ea
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045700"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529816"
 ---
 # <a name="lookout-mobile-endpoint-security-connector-with-intune"></a>Lookout Mobile Endpoint Security-összekötő az Intune-nal
 
@@ -98,7 +98,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 ## <a name="next-steps"></a>További lépések
 A legfontosabb lépések a megoldás megvalósítása érdekében:
-1.  [A Lookout-integráció beállítása](lookout-mtd-connector-integration.md)
-2.  [Az Intune-ban Mobile Endpoint Securityhez engedélyezése](mtd-connector-enable.md)
-3.  [A Lookout for Work felvétele és hozzárendelése](mtd-apps-ios-app-configuration-policy-add-assign.md)
-4.  [A Lookout eszközmegfelelőségi szabályzatának konfigurálása](mtd-device-compliance-policy-create.md)
+1. [A Lookout-integráció beállítása](lookout-mtd-connector-integration.md)
+2. [Az Intune-ban Mobile Endpoint Securityhez engedélyezése](mtd-connector-enable.md)
+3. [A Lookout for Work felvétele és hozzárendelése](mtd-apps-ios-app-configuration-policy-add-assign.md)
+4. [A Lookout eszközmegfelelőségi szabályzatának konfigurálása](mtd-device-compliance-policy-create.md)

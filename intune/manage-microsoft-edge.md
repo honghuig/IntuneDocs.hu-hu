@@ -17,21 +17,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c9a225fbffda25b8d077c3b2be271e86d3e6c85e
-ms.sourcegitcommit: 2db7dc2baea0c159f70338e6a0529acc89580773
+ms.openlocfilehash: 50574a2d3dc4ba5731b1a90f563ddd1a08e7f833
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500595"
+ms.locfileid: "67529635"
 ---
 # <a name="manage-web-access-using-microsoft-edge-with-microsoft-intune"></a>Webhely-hozzáférés kezelése a Microsoft Edge Microsoft Intune-nal
 
 Az Intune alkalmazásvédelmi szabályzatokat használó alkalmazásokat a Microsoft Edge biztosíthatja a vállalati webhelyek mindig érhetők el a védelmi szolgáltatás helyen. A következő Microsoft Edge az Intune szabályzatai által engedélyezett vállalati funkciók érhetők el. Ezek a vállalati szolgáltatások a következők:
 
-1.  **Kettős-Identity** -felhasználók hozzáadhatnak, mind a munkahelyi fiókot, valamint egy személyes fiók, történő tallózásának tartalombeállításait. Nincs teljes elválasztását, amely hasonló az architektúra és a felhasználói felület az Office 365 és az Outlook két identitások között. Intune-rendszergazdák a munkahelyi fiók belül védett böngészési élményt a kívánt házirendeket állíthat be lesz.
-2.  **Az Intune app protection házirend-integráció** – mivel a Microsoft Edge integrálva van az Intune SDK-val, alkalmazásvédelmi szabályzatok adatvesztés ellen biztosítása érdekében célba. Ezek közé tartozik a kivágási, másolási, irányítását és beillesztési műveleteket, megakadályozhatja a képernyő rögzíti, és annak biztosítása, hogy a felhasználó által kiválasztott hivatkozások csak nyissa meg a felügyelt alkalmazások.
-3.  **Az Azure Application Proxy-integráció** – szabályozhatja a hozzáférést az SaaS-alkalmazásokhoz és a web apps szolgáltatásban, így biztosítja, hogy csak a böngészőalapú alkalmazások futtatása a biztonságos Microsoft Edge böngészőben a végfelhasználók számára a vállalati hálózathoz való csatlakozáshoz, vagy az internetről kapcsolódnak-e .
-4.  **Alkalmazás konfigurációja** – erősítse meg a szervezet biztonsági állapotát, és a könnyű használat szolgáltatások konfigurálása a végfelhasználók számára az alkalmazás-konfigurációs beállítások is élvezheti. Megadhatja például a könyvjelzők, a kezdőlap helyi, engedélyezett/letiltott webhelyek, Azure Application Proxy és több.
+1. **Kettős-Identity** -felhasználók hozzáadhatnak, mind a munkahelyi fiókot, valamint egy személyes fiók, történő tallózásának tartalombeállításait. Nincs teljes elválasztását, amely hasonló az architektúra és a felhasználói felület az Office 365 és az Outlook két identitások között. Intune-rendszergazdák a munkahelyi fiók belül védett böngészési élményt a kívánt házirendeket állíthat be lesz.
+2. **Az Intune app protection házirend-integráció** – mivel a Microsoft Edge integrálva van az Intune SDK-val, alkalmazásvédelmi szabályzatok adatvesztés ellen biztosítása érdekében célba. Ezek közé tartozik a kivágási, másolási, irányítását és beillesztési műveleteket, megakadályozhatja a képernyő rögzíti, és annak biztosítása, hogy a felhasználó által kiválasztott hivatkozások csak nyissa meg a felügyelt alkalmazások.
+3. **Az Azure Application Proxy-integráció** – szabályozhatja a hozzáférést az SaaS-alkalmazásokhoz és a web apps szolgáltatásban, így biztosítja, hogy csak a böngészőalapú alkalmazások futtatása a biztonságos Microsoft Edge böngészőben a végfelhasználók számára a vállalati hálózathoz való csatlakozáshoz, vagy az internetről kapcsolódnak-e .
+4. **Alkalmazás konfigurációja** – erősítse meg a szervezet biztonsági állapotát, és a könnyű használat szolgáltatások konfigurálása a végfelhasználók számára az alkalmazás-konfigurációs beállítások is élvezheti. Megadhatja például a könyvjelzők, a kezdőlap helyi, engedélyezett/letiltott webhelyek, Azure Application Proxy és több.
 A Microsoft Intune alkalmazásvédelmi szabályzatokat a Microsoft Edge segítenek a szervezet adatok és erőforrások védelmét. Ezek a házirendek használatával a Microsoft Edge biztosítja, hogy a vállalati erőforrások védelme nem csak a natív módon telepített alkalmazások belül is a webböngészőn keresztül elérhető.
 
 ## <a name="getting-started"></a>Első lépések
@@ -115,8 +115,8 @@ A következő lépések segítségével hozzon létre egy védett browser alkalm
     > [!NOTE]
     > A Microsoft Edge ugyanazokat a kulcs-érték párokat használja, mint a Managed Browser. 
 
-8.  Amikor elkészült, kattintson az **OK**gombra.
-9.  A **Konfigurációs szabályzat hozzáadása** panelen válassza a **Hozzáadás** lehetőséget.<br>
+8. Amikor elkészült, kattintson az **OK**gombra.
+9. A **Konfigurációs szabályzat hozzáadása** panelen válassza a **Hozzáadás** lehetőséget.<br>
     Az új konfiguráció létrehozása és jelenik meg a **Alkalmazáskonfiguráció** panelen.
 
 ## <a name="assign-the-configuration-settings-you-created"></a>A létrehozott konfigurációs beállítások hozzárendelése 
@@ -154,7 +154,7 @@ Az Outlook kell konfigurálni egy alkalmazásvédelmi szabályzatot, amely lehet
 #### <a name="step-2-set-the-app-configuration-setting-to-enable-app-proxy"></a>2\. lépés: Állítsa be az alkalmazás a konfigurációs beállítás alkalmazásproxy engedélyezése
 A Microsoft Edge-cél az alábbi kulcs-érték pár, a Microsoft Edge-alkalmazásproxy engedélyezése:
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    true    |
 
@@ -166,7 +166,7 @@ Ezzel a beállítással konfigurálhatja a kezdőlap parancsikont a Microsoft Ed
 
 Használja az alábbi kulcs-érték pár kezdőlap parancsikon konfigurálása:
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Adjon meg egy érvényes URL-címet. A helytelen URL-címek biztonsági intézkedésként le vannak tiltva.<br>**Példa:** `<https://www.bing.com`>
     |
@@ -190,7 +190,7 @@ Felügyelt könyvjelzők konfigurálásához kövesse az alábbi kulcs-érték p
 
 Alapértelmezés szerint a felhasználók számára megjelenik a MyApps helyek konfigurált őket a Microsoft Edge-könyvjelzők belül egy adott mappában. A mappa neve a szervezet nevét.
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Igaz** MyApps bemutatja a Microsoft Edge-könyvjelzők belül.<p>**FALSE (hamis)** elrejti a MyApps Microsoft Edge belül.    |
 
@@ -243,7 +243,7 @@ A kettős-identity-modell beépítve a Microsoft Edge egy olyan rugalmasabb élm
 
 Használja az alábbi kulcs-érték pár konfigurálása, ha az enyhe átmenetek engedélyezettek:
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **Igaz** lehetővé teszi, hogy a Microsoft Edge átmenet felhasználók számára a személyes környezet, nyissa meg a letiltott webhelyek<p>**Blokk** megakadályozza, hogy a Microsoft Edge transitioning felhasználókat, és a felhasználók egyszerűen megjelenik egy üzenet arról, hogy az elérni kívánt webhely le van tiltva.    |
 
@@ -251,7 +251,7 @@ Használja az alábbi kulcs-érték pár konfigurálása, ha az enyhe átmenetek
 
 Az Intune Managed Browser és a Microsoft Edge most is a házirend által védett böngészők is használható. Győződjön meg arról, hogy a felhasználók vannak irányítja a megfelelő browser alkalmazás használatához, jelölje ki az Intune által felügyelt alkalmazások (pl. az Outlook, OneDrive és SharePoint) az alábbi konfigurációs beállítás az összes:
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.useEdge`    |    Az érték `true` átirányítja a felhasználókat, hogy töltse le és használja a Microsoft Edge.<br>Az érték `false` lehetővé teszi a felhasználók az Intune Managed Browser használatára.    |
 

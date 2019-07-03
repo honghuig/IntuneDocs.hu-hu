@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d8445c20b658cc7a41ed5b53df16274dbbeda629
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 2f638a8b3816e775c043077a7ac31b3320496744
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494617"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528373"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Adatok beolvasása az Intune-adattárház API-ból REST-ügyféllel
 
@@ -110,19 +110,19 @@ Ahhoz, hogy beszerezzen egy új hozzáférési jogkivonatot a Postman számára,
 
 #### <a name="add-the-information-used-to-request-the-token"></a>A jogkivonat kéréséhez szükséges információk
 
-1.  Ha még nincs telepítve, töltse le a Postman alkalmazást. A Postman alkalmazást a [www.getpostman](https://www.getpostman.com) címről töltheti le.
-2.  Nyissa meg a Postmant. Válassza ki a **GET** HTTP-műveletet.
-3.  Illessze be a végpont URL-címét a címbe. Valahogy így kell kinéznie:  
+1. Ha még nincs telepítve, töltse le a Postman alkalmazást. A Postman alkalmazást a [www.getpostman](https://www.getpostman.com) címről töltheti le.
+2. Nyissa meg a Postmant. Válassza ki a **GET** HTTP-műveletet.
+3. Illessze be a végpont URL-címét a címbe. Valahogy így kell kinéznie:  
 
     `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
-4.  Válassza az **Authorization** (Engedélyezés) lapot, és a **Type** (Típus) listában válassza ki az **OAuth 2.0** lehetőséget.
-5.  Válassza az **Get New Access Token** (Új hozzáférési jogkivonat beszerzése) lehetőséget.
-6.  Ellenőrizze, hogy hozzáadta-e már a visszahívási URL-címet (Callback URL) az Azure-beli alkalmazáshoz. A Callback URL (Visszahívási URL-cím) a következő: `https://www.getpostman.com/oauth2/callback`.
-7.  A **Token Name** (Jogkivonat neve) mezőbe írja be a Bearer értéket.
-8.  Adja meg az **Auth URL** (Hitelesítési URL-cím) értékét. Valahogy így kell kinéznie:  
+4. Válassza az **Authorization** (Engedélyezés) lapot, és a **Type** (Típus) listában válassza ki az **OAuth 2.0** lehetőséget.
+5. Válassza az **Get New Access Token** (Új hozzáférési jogkivonat beszerzése) lehetőséget.
+6. Ellenőrizze, hogy hozzáadta-e már a visszahívási URL-címet (Callback URL) az Azure-beli alkalmazáshoz. A Callback URL (Visszahívási URL-cím) a következő: `https://www.getpostman.com/oauth2/callback`.
+7. A **Token Name** (Jogkivonat neve) mezőbe írja be a Bearer értéket.
+8. Adja meg az **Auth URL** (Hitelesítési URL-cím) értékét. Valahogy így kell kinéznie:  
 
     `https://login.microsoftonline.com/common/oauth2/authorize?resource=https://api.manage.microsoft.com/`
-9.  Adja meg az **Access Token URL** (Hozzáférési jogkivonat URL-címe) értékét. Valahogy így kell kinéznie:  
+9. Adja meg az **Access Token URL** (Hozzáférési jogkivonat URL-címe) értékét. Valahogy így kell kinéznie:  
 
      `https://login.microsoftonline.com/common/oauth2/token`
 
@@ -141,8 +141,8 @@ Ahhoz, hogy beszerezzen egy új hozzáférési jogkivonatot a Postman számára,
 
 #### <a name="send-the-call-to-the-endpoint-using-postman"></a>Küldje el a hívást a végpontra a Postman alkalmazással.
 
-1.  Kattintson a **Küldés** gombra.
-2.  A visszaadott adatok a Postman-válasz törzsében jelennek meg.
+1. Kattintson a **Küldés** gombra.
+2. A visszaadott adatok a Postman-válasz törzsében jelennek meg.
 
     ![Postman ügyfélállapot egyenlő 200-as rendben](./media/reports-postman_200OK.png)
 

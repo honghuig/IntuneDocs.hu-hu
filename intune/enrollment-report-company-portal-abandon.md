@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546694409e6f87d85c5ef934b5d084b0955e0bf7
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c15bd301b60481f4d8b15617512851e2cc29034a
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041851"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529759"
 ---
 # <a name="incomplete-user-enrollments-report"></a>Hiányos felhasználói regisztrációk jelentése
 
@@ -35,9 +35,9 @@ Ezen információk alapján frissítheti a bevezetési dokumentumok, amely a fel
 
 Hiányos regisztrációnak az, amikor a felhasználó végrehajtja a következőket:
 
--   Explicit módon a regisztrációt leállító műveletet választ
--   Bezárja a Céges portált a regisztráció során
--   Több mint 30 percet tölt el egy regisztrációs szakasszal, mielőtt a következővel folytatná
+- Explicit módon a regisztrációt leállító műveletet választ
+- Bezárja a Céges portált a regisztráció során
+- Több mint 30 percet tölt el egy regisztrációs szakasszal, mielőtt a következővel folytatná
 
 Ha egy felhasználó úgy dönt, hogy a regisztráció és az újraindítások többször, az megjelenik tett kísérletet, és több befejezetlen regisztrációk. Ha egy felhasználó különböző regisztrációs képernyők között, 30 percig várakozik, több befejezetlen regisztrációk tekintendő.
 
@@ -53,18 +53,18 @@ Szűrhet a dátumtartomány, az operációs rendszer és a regisztrációs szaka
 
 A jelentés tetején látható száma és az összes regisztrációk viszonyítva hiányos regisztrációk aránya.
 
--   Kezdeményezett regisztrációk: A megkísérelt regisztrációk száma.
--   Hiányos regisztrációk: A megkísérelt regisztrációk, amelyek nem egy teljes körűen regisztrált és megfelelő eszközök száma.
--   Hiányos sebesség: A beléptetési kísérletek, amely lettek hagyva (regisztrációk elhagyott / kezdeményezett regisztrációk) százaléka.
+- Kezdeményezett regisztrációk: A megkísérelt regisztrációk száma.
+- Hiányos regisztrációk: A megkísérelt regisztrációk, amelyek nem egy teljes körűen regisztrált és megfelelő eszközök száma.
+- Hiányos sebesség: A beléptetési kísérletek, amely lettek hagyva (regisztrációk elhagyott / kezdeményezett regisztrációk) százaléka.
 
 ### <a name="line-graph"></a>Vonaldiagram
 
 Vonaldiagramon jelenít meg a napi hiányos regisztrációk az egyes négy alapvető regisztrációs szakaszait:
 
--   Beállítási ellenőrzőlista
--   Platformképernyők
--   Használati feltételek
--   Megfelelőség/aktiválás
+- Beállítási ellenőrzőlista
+- Platformképernyők
+- Használati feltételek
+- Megfelelőség/aktiválás
 
 ### <a name="user-abandonment-actions"></a>Felhasználói megszakítási műveletek
 

@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b59dc8599ce2dd5c99875a0032ccce5326c376cd
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8290ccbb61308fb7f001b1a7d331fd366e13d902
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505386"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527732"
 ---
 # <a name="install-lookout-for-work-on-your-ios-device"></a>A Lookout for Work alkalmazás telepítése az iOS-eszközön
 
@@ -31,7 +31,7 @@ A cég informatikai támogatási szolgálata csak a Lookout for Work alkalmazás
 
 ## <a name="what-you-need-to-do"></a>A következőket kell tennie:
 
-1.  Ha a következő üzenet jelenik meg, akkor a **Telepítés** gombra koppintással engedélyezheti a Lookout for Work telepítését az eszközön.
+1. Ha a következő üzenet jelenik meg, akkor a **Telepítés** gombra koppintással engedélyezheti a Lookout for Work telepítését az eszközön.
 
       ![Képernyőkép az alkalmazástelepítés üzenetről egy Mégse és egy Telepítés gombbal.](/intune-user-help/media/ios-mts-install-app-request-after-1804.png)
 

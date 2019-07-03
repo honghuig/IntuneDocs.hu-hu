@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46f2193a3a13183d41b10f03b6efe7100f0d9f9d
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 68cec5d8594d832a405daa1228e77a51283a7c92
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501318"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529512"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows-eszköz eltávolítása a felügyelet alól
 
@@ -92,8 +92,8 @@ Az alábbi lépésekkel eltávolíthat egy Windows 8.1-es eszközt az Intune-bó
 
 A Céges portál kétféle adatot tárol az Ön windowsos eszközén:
 
--   **Diagnosztikai naplók**: Microsoft által gyűjtött szabványos alkalmazás tevékenységadatok. Automatikusan törlődnek a Céges portál alkalmazás eltávolításakor. Az alkalmazástevékenységi adatok például az alkalmazás használatának időtartama vagy az összeomlási adatok.
--   **Alkalmazás-gyorsítótár**: Az alkalmazás működéséhez, például ikonok és beállítások a szükséges fájlokat támogatja.
+- **Diagnosztikai naplók**: Microsoft által gyűjtött szabványos alkalmazás tevékenységadatok. Automatikusan törlődnek a Céges portál alkalmazás eltávolításakor. Az alkalmazástevékenységi adatok például az alkalmazás használatának időtartama vagy az összeomlási adatok.
+- **Alkalmazás-gyorsítótár**: Az alkalmazás működéséhez, például ikonok és beállítások a szükséges fájlokat támogatja.
 
 A tárolt naplók és gyorsítótár törléséhez kövesse az alábbi lépéseket:
 

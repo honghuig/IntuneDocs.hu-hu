@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0d146b211c42c20b1381b238311db6a10295ef4a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: be2e9371288961d0afdf7ad6e8cfec8f734087f6
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044933"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529833"
 ---
 # <a name="set-up-lookout-mobile-endpoint-security-integration-with-intune"></a>Intune Lookout Mobility Endpoint Security-integráció beállítása
 Egy olyan környezetben, amely megfelel a [Előfeltételek](lookout-mobile-threat-defense-connector.md#prerequisites), az Intune-nal integrálható a Lookout Mobile Endpoint Securityhez. Ebben a cikkben található információk végigvezeti az integráció beállításával és a fontos beállítások konfigurálása a Lookout Intune-ban való használatra.  
@@ -40,7 +40,7 @@ A Lookout Mobile Endpoint Securityhez előfizetés integrációjának engedélye
 - **Az Azure AD-csoport Objektumazonosító** csoport **teljes** hozzáféréséhez a konzolhoz a Lookout Mobile Endpoint Security (MES).  
   A felhasználói csoportot hoz létre az Azure AD-felhasználókkal rendelkező *teljes hozzáférés* való bejelentkezéshez a **Lookout-konzolon**. Felhasználók tagjai ennek a csoportnak, vagy a választható csak akkor *korlátozott hozzáférés* csoport, a Lookout konzolra való bejelentkezéshez. 
 
-- **Az Azure AD-csoport Objektumazonosító** csoport **korlátozott** Lookout MES konzolhozzáférés *(nem kötelező csoport)*. 
+- **Az Azure AD-csoport Objektumazonosító** csoport **korlátozott** Lookout MES konzolhozzáférés *(nem kötelező csoport)* . 
   Az Azure AD-hozzáférés több konfigurációs és regisztrációval kapcsolatos moduljához a Lookout-konzolon nem rendelkező felhasználókat tartalmazzák, ez nem kötelező felhasználói csoportot hoz létre. Ehelyett ezeket a felhasználók csak olvasási hozzáféréssel rendelkeznek a **biztonsági házirend** modul a Lookout konzolra. Felhasználók csak akkor nem kötelező ehhez a csoporthoz, vagy a szükséges tagjai *teljes hozzáférés* csoport, a Lookout konzolra való bejelentkezéshez.
 
  > [!TIP] 

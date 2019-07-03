@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32dfb275e96ecf1d8c60f115881d7ceb0593a3b2
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0c59646045f895df11bd465269ff5df13142d5ab
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505913"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67529415"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Mi történik, ha törli egy Android-eszköz regisztrációját az Intune-ból?
 

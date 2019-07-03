@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 624cc72ad9539659e1ce2c8b70f6a6698d5e7ba2
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046283"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528682"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Oktatóanyag: Nem felügyelt eszközökön az Exchange Online e-mailek védelme
 
@@ -74,7 +74,7 @@ Ebben az oktatóanyagban állítunk be az Outlook alkalmazás az alkalmazási sz
 
     Válassza ki **OK** térjen vissza a beállítások panel.  
 
-7.  A beállítások panelen válassza ki a **OK**, majd a szabályzat létrehozás panelen válassza ki **létrehozás**.
+7. A beállítások panelen válassza ki a **OK**, majd a szabályzat létrehozás panelen válassza ki **létrehozás**.
 
 Az Outlook az alkalmazásvédelmi szabályzat jön létre. Ezt követően kell beállítani a feltételes hozzáférés az eszközök használata az Outlook alkalmazás megkövetelése.
 
@@ -188,5 +188,5 @@ Ha már nincs szükség a tesztszabályzatokra, eltávolíthatja őket.
 4. Válassza a **Feltételes hozzáférés** > **Szabályzatok** elemet.  
 5. Az a **házirendnév** listájához, válassza ki a helyi menüt ( **...** ) a tesztszabályzattal, és válassza ki az egyes **törlése**. Válassza az **Igen** lehetőséget a megerősítéshez.  
 
- ## <a name="next-steps"></a>További lépések  
+## <a name="next-steps"></a>További lépések  
 Ebben az oktatóanyagban létrehozott alkalmazásvédelmi szabályzatok korlátozni, mi a felhasználó visszaállíthatja-e az Outlook alkalmazással, és az Outlook alkalmazás megkövetelése és a többtényezős hitelesítés megkövetelése a Modern hitelesítési ügyfelek feltételes hozzáférési szabályzatok létrehozott. Feltételes hozzáférés az Intune használatát más alkalmazások és szolgáltatások védelmét kapcsolatos további információkért lásd: [feltételes hozzáférés beállítása](conditional-access.md).

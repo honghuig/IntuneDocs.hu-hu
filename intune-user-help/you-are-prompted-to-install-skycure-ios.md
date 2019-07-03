@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6daeaaac7fb554e2c29f6ac150eaff8308d670b0
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 13a12da72577edfee1d6ba23c2cd5e56d1fe397e
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504944"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527580"
 ---
 # <a name="install-symantec-endpoint-protection-mobile-on-your-ios-device"></a>A Symantec Endpoint Protection Mobile alkalmazás telepítése iOS-eszközön
 
@@ -29,7 +29,7 @@ A cég informatikai támogató szolgálata csak a Symantec Endpoint Protection (
 
 ## <a name="what-you-need-to-do"></a>A következőket kell tennie:
 
-1.  Ha a következő üzenet jelenik meg, akkor a **Telepítés** gombra koppintással engedélyezheti a SEP Mobile telepítését az eszközön.
+1. Ha a következő üzenet jelenik meg, akkor a **Telepítés** gombra koppintással engedélyezheti a SEP Mobile telepítését az eszközön.
 
 2. Ha a következő üzenetet látja, koppintson a **Beállítások** gombra, kapcsolja be a **Helyalapú szolgáltatásokat**, majd koppintson a **Folytatás** gombra.
 

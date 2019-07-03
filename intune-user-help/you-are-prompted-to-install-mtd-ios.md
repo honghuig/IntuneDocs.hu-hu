@@ -16,12 +16,12 @@ searchScope:
 ROBOTS: ''
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 582b4615941dae8c2fc696ce5dfc87e2bbe4b98b
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 0c72fb6e7ace6c603410ff0ffc9a96e4a0ff528d
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505029"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527637"
 ---
 # <a name="install-mobile-threat-defense-on-your-ios-device"></a>Mobile Threat Defense telepítése iOS-eszközön
 
@@ -38,12 +38,12 @@ A cég informatikai támogatási szolgálata csak a Mobile Threat Defense alkalm
 
 A Mobile Threat Defense használatával a vállalatok gondoskodhatnak eszközeik biztonságáról olyan alkalmazások ellen, amelyek céges adatokat próbálnak megszerezni. Ennek a védelemnek a használatához arra van szükség, hogy az eszközön telepített alkalmazásokról további információt lehessen továbbítani a vállalat által használt Mobile Threat Defense szolgáltatáshoz. A vállalat nem fér hozzá az Ön személyes alkalmazásainak adataihoz. Ha Mobile Threat Defense szolgáltatást használ, az eszközön található összes alkalmazás hozzá lesz adva a [mit láthat a vállalat](what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) listához. Az alábbiakban látható, hogy az alkalmazásnak mely részeit láthatja a vállalat:
 
-*   App neve
+* App neve
 * Alkalmazásazonosító: egyedi név, amely az App Store-ban azonosítja az alkalmazást
-*   Alkalmazásverzió és rövid verziószám: az alkalmazáshoz tartozó kiadási számok
+* Alkalmazásverzió és rövid verziószám: az alkalmazáshoz tartozó kiadási számok
 * Alkalmazásköteg és dinamikus méret: az alkalmazás által az eszközön elfoglalt tárterület
 * Alkalmazás érvényessége: azt jelzi, hogy az alkalmazás használatra jóvá van-e hagyva
-*   Alkalmazáskezelési állapot: azt jelzi, hogy az alkalmazást a vállalat kezeli-e, vagy pedig személyes alkalmazás
+* Alkalmazáskezelési állapot: azt jelzi, hogy az alkalmazást a vállalat kezeli-e, vagy pedig személyes alkalmazás
 
 ## <a name="if-the-installation-doesnt-work"></a>Ha sikertelen a telepítés
 

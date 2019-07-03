@@ -16,12 +16,12 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 06dcc730406af3ae2d715cbe7f0795253e2629f0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ed6259c996772817ceaa8ec827c8ac506adfd399
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045098"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530467"
 ---
 # <a name="create-a-device-based-conditional-access-policy"></a>Eszközalapú feltételes hozzáférési szabályzat létrehozása
 
@@ -34,12 +34,12 @@ Feltételes hozzáférési szabályzat meghatározza az alkalmazás vagy védeni
 
 ## <a name="create-conditional-access-policy"></a>Feltételes hozzáférési szabályzat létrehozása
 
-1.  Az Intune-portálon válassza **feltételes hozzáférési** > **házirendek** > **új szabályzat**.
+1. Az Intune-portálon válassza **feltételes hozzáférési** > **házirendek** > **új szabályzat**.
    
     ![Új feltételes hozzáférési szabályzat létrehozása](media/create-conditional-access-intune/create-ca.png)
  
-2.  A **Hozzárendelések** alatt válassza a **Felhasználók és csoportok** lehetőséget. 
-3.  Az a **Belefoglalás** lapra, és keresse meg a felhasználókat és csoportokat, akiknek a feltételes hozzáférési szabályzatot a alkalmazni kíván. Miután kiválasztotta, akinek tartalmazza, a **kizárása** lapon, ha minden olyan felhasználók, szerepkörök vagy csoportok ki szeretné zárni a szabályzatból.  
+2. A **Hozzárendelések** alatt válassza a **Felhasználók és csoportok** lehetőséget. 
+3. Az a **Belefoglalás** lapra, és keresse meg a felhasználókat és csoportokat, akiknek a feltételes hozzáférési szabályzatot a alkalmazni kíván. Miután kiválasztotta, akinek tartalmazza, a **kizárása** lapon, ha minden olyan felhasználók, szerepkörök vagy csoportok ki szeretné zárni a szabályzatból.  
     - **Minden felhasználó**: Válassza ki ezt a beállítást, a alkalmazni a szabályzatot minden felhasználó és csoport, beleértve a belső és vendégfelhasználókat.
   
     - **Válassza ki a felhasználók és csoportok**: Válassza ezt a lehetőséget, és adja meg a következő lehetőségek közül:
@@ -52,9 +52,9 @@ Feltételes hozzáférési szabályzat meghatározza az alkalmazás vagy védeni
      
        > [!TIP]  
        > Tesztelje a szabályzatot egy kisebb csoporton ellenőrizze, hogy a várt módon működik a felhasználók.
-4.  Válassza a **Done** (Kész) lehetőséget.
-5.  A **Hozzárendelések** alatt válassza a **Felhőalkalmazások** lehetőséget. 
-6.  Az a **Belefoglalás lapjáról**, az alkalmazások és szolgáltatások, a feltételes hozzáférési szabályzattal védeni kívánt azonosításához. Ezt követően használhatja a **kizárása** lapon, ha vannak azokhoz az alkalmazásokhoz és szolgáltatásokhoz szeretne zárni a szabályzatból.
+4. Válassza a **Done** (Kész) lehetőséget.
+5. A **Hozzárendelések** alatt válassza a **Felhőalkalmazások** lehetőséget. 
+6. Az a **Belefoglalás lapjáról**, az alkalmazások és szolgáltatások, a feltételes hozzáférési szabályzattal védeni kívánt azonosításához. Ezt követően használhatja a **kizárása** lapon, ha vannak azokhoz az alkalmazásokhoz és szolgáltatásokhoz szeretne zárni a szabályzatból.
     - **Az összes felhőalapú alkalmazások**: Válassza ki ezt a beállítást, a házirend vonatkozik minden alkalmazásra.
       > [!IMPORTANT]  
       > Ez a lista tartalmazza az Azure portal eléréséhez a Microsoft Azure Management app. Ügyeljen arra, hogy a **kizárása** lap vagy az ide vagy a a **felhasználók és csoportok** lehetőségek, hogy Ön (vagy a felhasználókat vagy csoportokat úgy) fog tudni bejelentkezni az Azure Portalon. 
@@ -63,8 +63,8 @@ Feltételes hozzáférési szabályzat meghatározza az alkalmazás vagy védeni
     
       ![Új feltételes hozzáférési szabályzat létrehozása](media/create-conditional-access-intune/create-ca-select-apps.png)
 
-7.  Válassza a **Done** (Kész) lehetőséget.
-8.  A **hozzárendelések**válassza **feltételek**.
+7. Válassza a **Done** (Kész) lehetőséget.
+8. A **hozzárendelések**válassza **feltételek**.
     - **Bejelentkezési kockázati**: Ez a szabályzat az Azure AD Identity Protection bejelentkezési kockázat észlelési használata az Igen gombra, és válassza a alkalmazni kell a szabályzatot bejelentkezési kockázati szintek.
     - **Eszközplatformok**: Az a **Belefoglalás** lapra, és keresse meg azokat az eszközplatformokat, a alkalmazni szeretné a feltételes hozzáférési szabályzat. Használja a **kizárása** platformok kizárását a szabályzat lapján.
     - **Helyek**: Az a **Belefoglalás** lapra, adja meg, hogy a szabályzat minden olyan hely, a megbízható hálózati helyek, az informatikai részleg felügyelete alatt álló vagy a megfelelő hálózati helyeket az érvényes. Használja a **kizárása** szabályzatból kizárandó hálózati helyek lapon. 
@@ -76,7 +76,7 @@ Feltételes hozzáférési szabályzat meghatározza az alkalmazás vagy védeni
       > [!TIP]  
       > Ha mind a védeni kívánt **Modern hitelesítést** ügyfelek és **Exchange ActiveSync-ügyfelek**, hozzon létre két külön feltételes hozzáférési házirendeket, egyet az egyes ügyfél. Bár a modern hitelesítést támogatja az Exchange ActiveSync, az csak az Exchange ActiveSync által támogatott feltétele platform. Egyéb feltételek, beleértve a multi-factor authentication használata nem támogatott. Hatékony hozzáférés védelme az Exchange online-hoz az Exchange ActiveSync, hozzon létre egy feltételes hozzáférési szabályzatot, amely meghatározza az Office 365 Exchange online-hoz felhőalapú alkalmazás és az ügyfélalkalmazás az Exchange ActiveSync alkalmaz szabályzat csak a kiválasztott támogatott platformokkal.
 
-9.  Válassza a **Done** (Kész) lehetőséget.
+9. Válassza a **Done** (Kész) lehetőséget.
 10. A **Hozzáférés-vezérlés** alatt válassza ki az **Engedélyezés** elemet. Mi történik, megfelelően beállította feltételek megadása  Az alábbi lehetőségek közül választhat:
     - **Hozzáférés letiltása**: Az ebben a házirendben megadott felhasználónak sem lesz a megadott feltételek alapján az alkalmazásokhoz való hozzáférés.
     - **Hozzáférés biztosítása**: Az ebben a szabályzatban meghatározott felhasználók kapnak hozzáférést, de megkövetelheti a következő további műveletek:

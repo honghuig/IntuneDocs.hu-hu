@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 56e1a1e07a403afa4db405d276c55be1ef8ddfd8
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 9b0d069d6a65be0b51dd02858470780299690425
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494567"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528671"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Mobileszköz-kezelési biztonsági Alapterv beállítások az Intune-hoz  
 
@@ -57,7 +57,7 @@ További információkért lásd: [házirend CSP - AppRuntime](https://docs.micr
 
 - **Windows Store apps esetén nem kötelező Microsoft-fiókok**  
   Ez a házirend-beállítással szabályozhatja, hogy Microsoft-fiókok megadása nem kötelező, jelentkezzen be a fiók szükséges Windows Store-alkalmazások. Ez a szabályzat csak az azt támogató Windows Store apps van hatással. Ha ez a szabályzatbeállítás engedélyezi, amely általában egy Microsoft-fiókkal való bejelentkezéshez szükséges Windows Store apps segítségével a felhasználók ehelyett jelentkezzen be vállalati fiók. Ha letiltja vagy nem konfigurálja ezt a beállítást, felhasználók Microsoft-fiókkal kell bejelentkeznie.  
-    [További információ](https://go.microsoft.com/fwlink/?linkid=2067104)  
+  [További információ](https://go.microsoft.com/fwlink/?linkid=2067104)  
   
   **Alapértelmezett**: Enabled  
 
@@ -68,7 +68,7 @@ További információkért lásd: [házirend CSP - ApplicationManagement](https:
   A házirend-beállítás lehetővé teszi a felhasználók számára, amely jellemzően az csak a rendszergazdák számára érhető el a telepítés beállításainak módosításához. Ha ez a szabályzatbeállítás engedélyezi, a Windows Installer biztonsági funkcióit is telepítővarázslója kihagyja. Lehetővé teszi a telepítés befejezéséhez, ellenkező esetben kellene lennie le biztonság megsértése miatt. Ha letiltja vagy nem konfigurálja ezt a beállítást, a biztonsági funkciók a Windows Installer módosításának megakadályozása például adja meg a könyvtárat, amelyhez a fájlok települnek a rendszergazdák számára fenntartott telepítési beállításait. Windows Installer azt észleli, hogy egy csomag lehetővé teszi a felhasználó egy védett beállítást módosíthatja, ha leállítja a telepítést, és megjelenít egy üzenetet. Ezek a biztonsági funkciók csak ha a telepítési program fut a biztonsági környezet, amelyben a felhasználó nem jogosult könyvtárak hozzáféréssel rendelkezik. A házirend-beállítás kevésbé korlátozó környezetekhez lett kialakítva. A telepítőprogram, amely megakadályozza, hogy a szoftver telepítése folyamatban hibák megkerülésére használható.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
-    **Alapértelmezett**: Igen
+  **Alapértelmezett**: Igen
 
 - **Emelt szintű jogosultságokkal letiltása az MSI-alkalmazások telepítésére**  
   A házirend-beállítás a Windows Installer emelt jogosultsági szintű használata, amikor telepíti a rendszer minden program irányítja.  
@@ -828,7 +828,7 @@ További információkért lásd: [házirend CSP - InternetExplorer](https://doc
   
 - **Az Internet Explorer megbízható zóna java-engedélyek**   
   A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, az engedély értéke alacsony biztonsági.  
-    [További információ](https://go.microsoft.com/fwlink/?linkid=2067200)  
+  [További információ](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
   **Alapértelmezett**: Magas biztonsági  
   

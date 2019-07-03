@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ed4319c5d6cda035d690d9ffa55e74e8dc55a45d
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 328a35b314a7372d2e4cee950496e9bcd6b4fe34
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67493820"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528103"
 ---
 ## <a name="april-2017"></a>2017. április
 
@@ -37,9 +37,9 @@ Az iOS-es Céges portál alkalmazásban mostantól új, konkrétabb hibaüzenete
 #### <a name="improved-app-install-status-for-the-windows-10-company-portal-app---676495--"></a>Telepítésiállapot a Windows 10-es céges portál alkalmazás <!--676495-->
 
 A Windows 10-es Céges portál alkalmazásban elindított alkalmazástelepítések új fejlesztései az alábbiakat tartalmazzák:
--   Gyorsabb jelentéskészítés az MSI-csomagok folyamatban lévő telepítéséhez
--   Gyorsabb jelentéskészítés a Windows 10 évfordulós frissítését és újabb kiadásait futtató eszközök modern alkalmazásainak folyamatban lévő telepítéséhez
--   Új folyamatjelző sáv a Windows 10 évfordulós frissítését és újabb kiadásait futtató eszközök modern alkalmazásainak telepítéséhez
+- Gyorsabb jelentéskészítés az MSI-csomagok folyamatban lévő telepítéséhez
+- Gyorsabb jelentéskészítés a Windows 10 évfordulós frissítését és újabb kiadásait futtató eszközök modern alkalmazásainak folyamatban lévő telepítéséhez
+- Új folyamatjelző sáv a Windows 10 évfordulós frissítését és újabb kiadásait futtató eszközök modern alkalmazásainak telepítéséhez
 
 Az új folyamatjelző sávot megnézheti az [Újdonságok az Intune-alkalmazás felhasználói felületén](/intune/whats-new-app-ui) oldalon.
 

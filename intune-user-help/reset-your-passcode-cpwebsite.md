@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd05c600553ec23085b03eb560e0e736c9d7a764
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 945e597556c7d0c43000ccf659b7b6e088661cff
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504519"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67528959"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Az eszköz jelszavának alaphelyzetbe állítása a Vállalati portál webhelyén
 
@@ -42,7 +42,7 @@ Vállalat által birtokolt eszköz használata esetén lehet, hogy nem jelenik m
 
     ![Képernyőkép az Eszközök oldalról, amelyen két csempén azonosítatlan, általános nevű eszközök láthatók. Közvetlenül az eszközök alatt egy szürke szalagcím helyezkedik el, amely arra kéri a felhasználót, hogy azonosítsa a használt eszközt, vagy adjon hozzá egy újat.](./media/rename-reset-device-step2-1808.png) 
 
-3. Válassza a **Jelszó alaphelyzetbe állítása** lehetőséget. Ha a jelszó lehetőség nem jelenik meg az oldal tetején, válassza az **Egyéb (…)** > **Jelszó alaphelyzetbe állítása** lehetőséget.   
+3. Válassza a **Jelszó alaphelyzetbe állítása** lehetőséget. Ha a jelszó lehetőség nem jelenik meg az oldal tetején, válassza az **Egyéb (…)**  > **Jelszó alaphelyzetbe állítása** lehetőséget.   
 
    ![A kiválasztott eszköz adatai a Céges portál webhelyén, felül az Átnevezés, az Eltávolítás, az Eszköz alaphelyzetbe állítása, a Jelszó alaphelyzetbe állítása és a Távoli zárolás lehetőségekre mutató hivatkozásokkal. ](./media/rename-reset-device-1808.png)   
 
@@ -79,7 +79,7 @@ Ez a szakasz a jelszó alaphelyzetbe állítását és az ideiglenes jelszó vis
 **iOS**: Eltávolítja a meglévő jelszót, és nem hoz létre ideiglenes jelszót. Ha a Touch ID ujjlenyomat-leolvasóval megnyitja az eszközt vagy vásárol, a jelszót ismét be kell állítania.  
 
 **Windows 10 Mobile**: Eltávolítja a meglévő jelszót, és egy betűkből és számokból álló ideiglenes jelszót hoz létre. A beállítás után a Windows Hello arcfelismerő rendszer továbbra is működni fog az eszközön.
-    
+
 **Windows Phone 8.1**: Eltávolítja a meglévő jelszót, és egy számokból álló ideiglenes jelszót hoz létre.  
 
 További segítségre van szüksége? Forduljon a cég informatikai támogatásához. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).  

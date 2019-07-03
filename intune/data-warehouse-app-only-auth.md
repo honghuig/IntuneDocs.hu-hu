@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b9d3cd7dfb28d26451da95861fe9a3011c2556b1
-ms.sourcegitcommit: f90cba0b2c2672ea733052269bcc372a80772945
+ms.openlocfilehash: f87256580ce3a0e31ef86f15244f49046d9dd35e
+ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454034"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67530244"
 ---
 # <a name="intune-data-warehouse-application-only-authentication"></a>Alkalmazásalapú hitelesítés az Intune-adattárházban
 
 Beállíthat alkalmazásokat az Azure Active Directory (Azure AD) segítségével úgy, hogy hitelesítsék magukat az Intune-adattárházban. Ez a folyamat olyan webhelyeknél, alkalmazásoknál és háttérfolyamatoknál lehet hasznos, amelyek esetében az alkalmazásnak nem szabad felhasználói hitelesítő adatokkal rendelkeznie. Az alábbi lépésekkel hitelesítheti az alkalmazást az Azure AD-val az OAuth 2.0 protokoll használatával.
 
-## <a name="authorization"></a>Engedélyezés
+## <a name="authorization"></a>Authorization
 
 Az Azure Active Directory (Azure AD) az OAuth 2.0 használatával teszi lehetővé a webalkalmazásokhoz és webes API-khez való hozzáférés engedélyezését az Azure AD-bérlőben. Ebből az útmutatóból megtudhatja, hogy hogyan hitelesítheti az alkalmazását a C# programnyelv használatával. Az OAuth 2.0 engedélyezési kódjának folyamatáról bővebben az OAuth 2.0 ismertetőjének 4.1-es szakaszában olvashat. További információt az [Hozzáférés engedélyezése webes alkalmazásokhoz az OAuth 2.0 és az Azure Active Directory használatával](https://docs.microsoft.com/azure/active-directory/develop/active-directory-protocols-oauth-code) című témakörben talál.
 
@@ -41,18 +41,18 @@ Az alábbi eljárás egy privát metódus segítségével dolgoz fel és konvert
 
 Ebben a szakaszban az Intune-ra irányítani kívánt webalkalmazás adatait fogja megadni. A webalkalmazások ügyfél-kiszolgáló alkalmazások. A kiszolgáló szolgáltatja a webalkalmazást, amely tartalmazza a felhasználói felületet, a tartalmat és a funkciókat. Az ilyen típusú alkalmazásokat külön, a weben kezelik. Az Intune segítségével tud hozzáférést adni a webalkalmazásnak az Intune-hoz. Az adatforgalmat a webalkalmazás kezdeményezi. 
 
-1.  Jelentkezzen be az [Azure Portalra](https://portal.azure.com).
-2.  Az Azure Portal tetején lévő **Erőforrások, szolgáltatások és dokumentumok** mezőben keressen az **Azure Active Directory** kifejezésre.
-3.  A legördülő listában válassza a **Szolgáltatások** csoportban látható **Azure Active Directory** lehetőséget.
-4.  Válassza az **Alkalmazásregisztrációk** lehetőséget.
-5.  Kattintson az **Új alkalmazás regisztrálása** elemre a **Létrehozás** panel megnyitásához.
-6.  A **Létrehozás** panelen adja meg az alkalmazás adatait:
+1. Jelentkezzen be az [Azure Portalra](https://portal.azure.com).
+2. Az Azure Portal tetején lévő **Erőforrások, szolgáltatások és dokumentumok** mezőben keressen az **Azure Active Directory** kifejezésre.
+3. A legördülő listában válassza a **Szolgáltatások** csoportban látható **Azure Active Directory** lehetőséget.
+4. Válassza az **Alkalmazásregisztrációk** lehetőséget.
+5. Kattintson az **Új alkalmazás regisztrálása** elemre a **Létrehozás** panel megnyitásához.
+6. A **Létrehozás** panelen adja meg az alkalmazás adatait:
 
     - Az alkalmazás nevét (például *Alkalmazásalapú hitelesítés az Intune-ban*).
     - Az **Alkalmazástípust**. Válassza a **Webalkalmazás / API** lehetőséget egy olyan alkalmazás hozzáadásához, amely egy webalkalmazásnak, egy webes API-nak vagy ezek kombinációjának felel meg.
     - Az alkalmazás **Bejelentkezési URL-címét**. Ez az a hely, ahová az alkalmazás automatikusan átirányítja a felhasználókat a hitelesítési folyamat során. A felhasználóknak itt igazolniuk kell az identitásukat. További információt a [Mi az az alkalmazás-hozzáférés és egyszeri bejelentkezés az Azure Active Directoryban?](https://docs.microsoft.com/azure/active-directory/active-directory-appssoaccess-whatis) című témakörben találhat.
 
-7.  Kattintson a **Létrehozás** gombra a **Létrehozás** panel alján.
+7. Kattintson a **Létrehozás** gombra a **Létrehozás** panel alján.
 
     >[!NOTE] 
     > Másolja a vágólapra az **Alkalmazásazonosító** értéket a **Regisztrált alkalmazás** panelről későbbi használat céljából.
@@ -61,12 +61,12 @@ Ebben a szakaszban az Intune-ra irányítani kívánt webalkalmazás adatait fog
 
 Ebben a szakaszban létre fog hozni egy kulcsértéket az alkalmazáshoz az Azure AD segítségével.
 
-1.  Az **Alkalmazásregisztrációk** panelen válassza az újonnan létrehozott alkalmazást az alkalmazás paneljének megjelenítéséhez.
-2.  Válassza a panel tetejénél lévő **Beállítások** lehetőséget a **Beállítások** panel megjelenítéséhez.
-3.  A **Beállítások** panelen válassza a **Kulcsok** lehetőséget.
-4.  Adja meg a kulcs **Leírását**, **Lejárat** időtartamát és **Értékét**.
-5.  Kattintson a **Mentés** gombra az alkalmazás kulcsainak mentéséhez és frissítéséhez.
-6.  Fontos, hogy másolja a vágólapra a generált (Base64 kódolású) kulcsértéket.
+1. Az **Alkalmazásregisztrációk** panelen válassza az újonnan létrehozott alkalmazást az alkalmazás paneljének megjelenítéséhez.
+2. Válassza a panel tetejénél lévő **Beállítások** lehetőséget a **Beállítások** panel megjelenítéséhez.
+3. A **Beállítások** panelen válassza a **Kulcsok** lehetőséget.
+4. Adja meg a kulcs **Leírását**, **Lejárat** időtartamát és **Értékét**.
+5. Kattintson a **Mentés** gombra az alkalmazás kulcsainak mentéséhez és frissítéséhez.
+6. Fontos, hogy másolja a vágólapra a generált (Base64 kódolású) kulcsértéket.
 
     >[!NOTE] 
     > A kulcsérték eltűnik a **Kulcsok** panel elhagyása után, és a kulcs nem lesz többé elérhető ezen a panelen. Másolja a vágólapra későbbi használat céljából.
@@ -75,28 +75,28 @@ Ebben a szakaszban létre fog hozni egy kulcsértéket az alkalmazáshoz az Azur
 
 Ebben a szakaszban az alkalmazás engedélyeit fogja megadni.
 
-1.  Válassza a **Szükséges engedélyek** lehetőséget a **Beállítások** panelen.
-2.  Kattintson a **Hozzáadás**lehetőségre.
-3.  Válassza az **API hozzáadása** lehetőséget az **API kiválasztása** panel megjelenítéséhez.
-4.  Válassza a **Microsoft Intune API (MicrosoftIntuneAPI)** lehetőséget, majd a **Kiválasztás** lehetőséget az **API kiválasztása** panelen. Ekkor az **Engedélyek kiválasztása** lépés lesz kijelölve, és megjelenik a **Hozzáférés engedélyezése** panel.
-5.  Válassza a **Get data warehouse information from Microsoft Intune** (Adattárház-információk beolvasása a Microsoft Intune-ból) lehetőséget az **Alkalmazásengedélyek** szakaszban.
-6.  Válassza a **Kiválasztás** lehetőséget a **Hozzáférés engedélyezése** panelen.
-7.  Válassza a **Kész** lehetőséget az **API-hozzáférés hozzáadása** panelen.
-8.  Válassza az **Engedélyek megadása** lehetőséget a **Szükséges engedélyek** panelen, majd válassza az **Igen** lehetőséget, amikor a rendszer az alkalmazás meglévő engedélyeinek frissítését kéri.
+1. Válassza a **Szükséges engedélyek** lehetőséget a **Beállítások** panelen.
+2. Kattintson a **Hozzáadás**lehetőségre.
+3. Válassza az **API hozzáadása** lehetőséget az **API kiválasztása** panel megjelenítéséhez.
+4. Válassza a **Microsoft Intune API (MicrosoftIntuneAPI)** lehetőséget, majd a **Kiválasztás** lehetőséget az **API kiválasztása** panelen. Ekkor az **Engedélyek kiválasztása** lépés lesz kijelölve, és megjelenik a **Hozzáférés engedélyezése** panel.
+5. Válassza a **Get data warehouse information from Microsoft Intune** (Adattárház-információk beolvasása a Microsoft Intune-ból) lehetőséget az **Alkalmazásengedélyek** szakaszban.
+6. Válassza a **Kiválasztás** lehetőséget a **Hozzáférés engedélyezése** panelen.
+7. Válassza a **Kész** lehetőséget az **API-hozzáférés hozzáadása** panelen.
+8. Válassza az **Engedélyek megadása** lehetőséget a **Szükséges engedélyek** panelen, majd válassza az **Igen** lehetőséget, amikor a rendszer az alkalmazás meglévő engedélyeinek frissítését kéri.
 
 ## <a name="generate-token"></a>Token létrehozása
 
 Hozzon létre a Visual Studióban egy .NET-keretrendszerre épülő, C# nyelvű „Console App (.NET Framework)” típusú projektet.
 
-1.  Válassza a **File (Fájl)**  > **New (Új)**  > **Project (Projekt)** lehetőséget a **New Project** (Új projekt) párbeszédpanel megjelenítéséhez.
-2.  A bal oldali listában válassza a **Visual C#** lehetőséget a .NET-keretrendszerre épülő összes projekttípus megjelenítéséhez.
-3.  Válassza a **Console App (.NET Framework)** lehetőséget, adja meg az alkalmazás nevét, majd kattintson az **OK** gombra az alkalmazás létrehozásához.
-4.  A **Solution Explorer** (Megoldáskezelő) panelen válassza a **Program.cs** fájlt a kód megjelenítéséhez.
-5.  A Megoldáskezelőben, fel kell vennie egy hivatkozást a szerelvény `System.Configuration`.
-6.  Válassza a helyi menüben az **Add (Hozzáadás)**  > **New item (Új elem)** lehetőséget. Ekkor megjelenik az **Add New Item** (Új elem hozzáadása) párbeszédpanel.
-7.  Válassza a bal oldali listában a **Visual C#** > **Code** (Kód) lehetőséget.
-8.  Válassza a **Class** (Osztály) lehetőséget, módosítsa az osztály nevét az *IntuneDataWarehouseClass.cs* névre, és kattintson az **Add** (Hozzáadás) gombra.
-9.  Adja hozzá az alábbi kódot a <code>Main</code> metódushoz:
+1. Válassza a **File (Fájl)**  > **New (Új)**  > **Project (Projekt)** lehetőséget a **New Project** (Új projekt) párbeszédpanel megjelenítéséhez.
+2. A bal oldali listában válassza a **Visual C#** lehetőséget a .NET-keretrendszerre épülő összes projekttípus megjelenítéséhez.
+3. Válassza a **Console App (.NET Framework)** lehetőséget, adja meg az alkalmazás nevét, majd kattintson az **OK** gombra az alkalmazás létrehozásához.
+4. A **Solution Explorer** (Megoldáskezelő) panelen válassza a **Program.cs** fájlt a kód megjelenítéséhez.
+5. A Megoldáskezelőben, fel kell vennie egy hivatkozást a szerelvény `System.Configuration`.
+6. Válassza a helyi menüben az **Add (Hozzáadás)**  > **New item (Új elem)** lehetőséget. Ekkor megjelenik az **Add New Item** (Új elem hozzáadása) párbeszédpanel.
+7. Válassza a bal oldali listában a **Visual C#** > **Code** (Kód) lehetőséget.
+8. Válassza a **Class** (Osztály) lehetőséget, módosítsa az osztály nevét az *IntuneDataWarehouseClass.cs* névre, és kattintson az **Add** (Hozzáadás) gombra.
+9. Adja hozzá az alábbi kódot a <code>Main</code> metódushoz:
 
     ``` csharp
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
