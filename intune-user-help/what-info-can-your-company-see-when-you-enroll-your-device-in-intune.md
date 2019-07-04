@@ -17,12 +17,12 @@ ROBOTS: ''
 ms.reviewer: esmich
 ms.suite: ems
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2b67a356a58dcbca6b396b6cd01f4d53d228134
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 1afdaa1bb21e3a13932202524eed9322d95479bb
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529361"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545641"
 ---
 # <a name="what-information-can-my-organization-see-when-i-enroll-my-device"></a>Milyen adatok láthatók a szervezet számára, ha regisztrálom az eszközömet?
 
@@ -51,8 +51,8 @@ A szervezete számára nem láthatók az Ön személyes adatai, amikor eszközt 
 
 **A szervezet számára esetlegesen látható adatok:**
 
--  Telefonszám: A **vállalati**-tulajdonú eszközök esetében a teljes telefonszám látható. A **személyes** tulajdonú eszközök esetében csak a telefonszám utolsó négy számjegye látható a szervezet számára. Minden egyes eszköz **Tulajdonjogtípusát** megtekintheti az adott eszköz **Eszköz részletei** lapjának megnyitásával.
+- Telefonszám: A **vállalati**-tulajdonú eszközök esetében a teljes telefonszám látható. A **személyes** tulajdonú eszközök esetében csak a telefonszám utolsó négy számjegye látható a szervezet számára. Minden egyes eszköz **Tulajdonjogtípusát** megtekintheti az adott eszköz **Eszköz részletei** lapjának megnyitásával.
 - Eszköz tárterület: Ha kötelező alkalmazást nem lehet telepíteni, a szervezet előfordulhat, hogy tekintse meg az eszköz tárolóhelyet döntse el, ha a terület értéke túl alacsony.  
--  Hely: A szervezet számára soha nem látható az eszköz helye, kivéve, ha kell állítani egy elveszett, a felügyelt iOS-eszközt. Látogasson el a [Apple iOS dokumentációjában](https://go.microsoft.com/fwlink/?linkid=853816) tájékozódhat felügyelt eszközökön.  
+- Hely: A szervezet számára soha nem látható az eszköz helye, kivéve, ha kell állítani egy elveszett, a felügyelt iOS-eszközt. Látogasson el a [Apple iOS dokumentációjában](https://go.microsoft.com/fwlink/?linkid=853816) tájékozódhat felügyelt eszközökön.  
 - Alkalmazás-készlet részletei: Ha a szervezet használja a Mobile Threat Defense, lesz, amely az iOS-eszközön elérhető alkalmazásokról részleteinek megtekintéséhez. További információk: [Mobile Threat Defense](you-are-prompted-to-install-mtd-ios.md).
 - Hálózati információkat: Android-eszközök hálózati kapcsolatairól bizonyos információkat lehet a cég informatikai támogatási szolgálata számára elérhető. Például ha a szervezet egyes eszközeinek egy bizonyos épületen belül kell maradniuk, az eszköz azonosítja a hálózatot, amelyhez csatlakozik. 

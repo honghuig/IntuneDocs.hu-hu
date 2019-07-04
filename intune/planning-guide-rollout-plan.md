@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 09e2f88168acd1bc77051df924f756a326a02b21
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7a369b3bde7967db04a76ae1794d7b8fb86c21e4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041508"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548418"
 ---
 # <a name="develop-a-rollout-plan"></a>Bevezetési terv kidolgozása
 
@@ -53,11 +53,11 @@ Foglalja bele a [kommunikációs](planning-guide-communication-plan.md) tervet, 
 ### <a name="production-rollout"></a>Éles bevezetés
 A sikeres próbaüzemet követően készen áll az éles bevezetésre a cég többi csoportjánál. Néhány példa a különböző bevezetési csoportokra és fázisokra:
 
--   **Részlegek** <br/>Bármelyik részleg lehet bevezetési fázis. Egyszerre lehet célcsoport az egész részleg. Ebben a bevezetési típusban a felhasználók minden részlegben általában ugyanolyan módon használják a mobileszközöket, és ugyanazokhoz az alkalmazásokhoz férnek hozzá. A felhasználók valószínűleg ugyanolyan szabályzattípusokkal rendelkeznek.
+- **Részlegek** <br/>Bármelyik részleg lehet bevezetési fázis. Egyszerre lehet célcsoport az egész részleg. Ebben a bevezetési típusban a felhasználók minden részlegben általában ugyanolyan módon használják a mobileszközöket, és ugyanazokhoz az alkalmazásokhoz férnek hozzá. A felhasználók valószínűleg ugyanolyan szabályzattípusokkal rendelkeznek.
 
--   **Földrajzi hely** <br/>Ezzel a megközelítéssel az üzembe helyezést egy meghatározott földrajzi hely, például egyazon kontinens, ország, régió vagy vállalati épület összes felhasználója számára végzi el. A több fázisú bevezetésnek ez a típusa lehetővé teszi, hogy a felhasználók meghatározott helye legyen a középpontban. Ez lehetővé teszi [körültekintőbb](#user-assisted-enrollment) megközelítési mód alkalmazását, mert az egyidejűleg üzembe helyezett Intune-helyek száma kevesebb. Mivel esély van arra, hogy különböző részlegek vagy használati esetek ugyanazon a helyen legyenek, ezért a különböző használati esetek egyidejűleg is telepíthetők.
+- **Földrajzi hely** <br/>Ezzel a megközelítéssel az üzembe helyezést egy meghatározott földrajzi hely, például egyazon kontinens, ország, régió vagy vállalati épület összes felhasználója számára végzi el. A több fázisú bevezetésnek ez a típusa lehetővé teszi, hogy a felhasználók meghatározott helye legyen a középpontban. Ez lehetővé teszi [körültekintőbb](#user-assisted-enrollment) megközelítési mód alkalmazását, mert az egyidejűleg üzembe helyezett Intune-helyek száma kevesebb. Mivel esély van arra, hogy különböző részlegek vagy használati esetek ugyanazon a helyen legyenek, ezért a különböző használati esetek egyidejűleg is telepíthetők.
 
--   **Platform** <br/>Ez a típusú telepítés hasonló platformok egyidejű telepítését jelenti. Erre jó példa lehet az, hogy az első hónapban az összes iOS-eszköz, majd az összes Android-, végül az összes Windows-eszköz kerül sorra. A több fázisú üzembe helyezésnek ez a típusa leegyszerűsíti a segélyszolgálati támogatást, mert egyszerre csak egyetlen platformot kell támogatnia.
+- **Platform** <br/>Ez a típusú telepítés hasonló platformok egyidejű telepítését jelenti. Erre jó példa lehet az, hogy az első hónapban az összes iOS-eszköz, majd az összes Android-, végül az összes Windows-eszköz kerül sorra. A több fázisú üzembe helyezésnek ez a típusa leegyszerűsíti a segélyszolgálati támogatást, mert egyszerre csak egyetlen platformot kell támogatnia.
 
 Itt egy olyan Intune bevezetési tervre található példa, amely magába foglalja a célcsoportokat és az ütemterveket:
 

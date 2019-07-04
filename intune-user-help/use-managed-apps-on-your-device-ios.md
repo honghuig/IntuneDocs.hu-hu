@@ -18,12 +18,12 @@ ms.reviewer: maxles
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 35d77c9aa739096f36f4dbf4b75a4186e55a3381
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5ae4e454a0ca41858cb670790fd5acd4d6bf998a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501603"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546621"
 ---
 # <a name="use-managed-apps-on-your-ios-device"></a>Felügyelt alkalmazások használata iOS-eszközön
 
@@ -38,9 +38,9 @@ Amikor felügyelt alkalmazásban fér hozzá vállalati adatokhoz, az alábbihoz
 ## <a name="how-do-i-get-managed-apps"></a>Hogyan szerezhetők be a felügyelt alkalmazások?  
 Különböző módokon szerezhet be felügyelt alkalmazásokat:
 
--   Ha az eszköze regisztrálva van a Microsoft Intune-nal, akkor telepítheti az alkalmazást a Céges portál alkalmazásból vagy a Céges portál webhelyről, illetve a cég informatikai támogatási szolgálata is telepítheti azt az eszközére. A regisztrálással kapcsolatban lásd: [iOS-eszköz regisztrálása az Intune-ban](enroll-your-device-in-intune-ios.md), illetve [MacOS-eszköz regisztrálása az Intune-ban](enroll-your-device-in-intune-macos.md).
+- Ha az eszköze regisztrálva van a Microsoft Intune-nal, akkor telepítheti az alkalmazást a Céges portál alkalmazásból vagy a Céges portál webhelyről, illetve a cég informatikai támogatási szolgálata is telepítheti azt az eszközére. A regisztrálással kapcsolatban lásd: [iOS-eszköz regisztrálása az Intune-ban](enroll-your-device-in-intune-ios.md), illetve [MacOS-eszköz regisztrálása az Intune-ban](enroll-your-device-in-intune-macos.md).
 
--   Alkalmazást telepíthet az App Store-ból is, majd bejelentkezhet az Intune által felügyelt vállalati felhasználói fiókjával.
+- Alkalmazást telepíthet az App Store-ból is, majd bejelentkezhet az Intune által felügyelt vállalati felhasználói fiókjával.
 
 Egyes esetekben előfordulhat, hogy a cég informatikai támogatási szolgálata egy telepített alkalmazáshoz több licencet is vásárol. Ha egy olyan üzenet jelenik meg, amely arra kéri, hogy fogadja el az Apple Volume Purchase Program szerződését, ez teljesen normális, és elfogadhatja. Ha nem fogadja el, nem fogja tudni telepíteni az alkalmazást.
 
@@ -56,22 +56,22 @@ Egyes esetekben előfordulhat, hogy a cég informatikai támogatási szolgálata
 ## <a name="what-can-my-company-support-manage-in-an-app"></a>Mit felügyelhet a cég informatikai támogatási szolgálata az alkalmazásokban?  
 Itt talál néhány példát arra, hogy melyek lehetnek azok a cég informatikai támogatási szolgálata által az alkalmazásokban felügyelt elemek, amelyek hatással lehetnek a vállalati adatok használatára az eszközön:
 
--   Adott webhelyek hozzáférése
+- Adott webhelyek hozzáférése
 
--   Adatátvitel alkalmazások között
+- Adatátvitel alkalmazások között
 
--   Fájlok mentése
+- Fájlok mentése
 
--   Másolási és beillesztési műveletek
+- Másolási és beillesztési műveletek
 
--   PIN-hozzáférési követelmények
+- PIN-hozzáférési követelmények
 
--   Vállalati hitelesítő adatokkal végzett bejelentkezés
+- Vállalati hitelesítő adatokkal végzett bejelentkezés
 
--   Biztonsági mentés létrehozásának lehetősége a felhőben
+- Biztonsági mentés létrehozásának lehetősége a felhőben
 
--   Képernyőfelvételek készítésének lehetősége
+- Képernyőfelvételek készítésének lehetősége
 
--   Adattitkosítási követelmények
+- Adattitkosítási követelmények
 
 Az eszközén lévő felügyelt alkalmazásokról további információért lépjen kapcsolatba a cég informatikai támogatási szolgálatával. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).

@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 Customer intent: As an Intune admin, I want to set up the Apple's corporate device enrollment features so that corporate devices can automatically enroll in Intune.
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: faceee883194dbbdcec83f282806035ffc0432d1
-ms.sourcegitcommit: 0f771585d3556c0af14500428d5c4c13c89b9b05
+ms.openlocfilehash: 1fda4268e66703c8bd2132c9af22fed52f1791b1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174177"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548961"
 ---
 # <a name="tutorial-use-apples-corporate-device-enrollment-features-in-apple-business-manager-abm-to-enroll-ios-devices-in-intune"></a>Oktatóanyag: Az Intune-ban iOS-eszközök regisztrálása az Apple üzleti Manager (ABM) az Apple munkahelyi eszközök regisztrációja funkciók használata
 Az Eszközregisztrációs szolgáltatás az Apple üzleti Managerben egyszerűbbé teszi az eszközök regisztrálását. Az Intune is támogatja a régebbi az Apple Készülékregisztrációs Program (DEP), portál, de javasoljuk, hogy kezdhet tiszta lappal Apple üzleti vezető. A Microsoft Intune és a vállalati Apple-eszközök regisztrálása az eszközök automatikusan biztonságosan lesz regisztrálva az első alkalommal a felhasználó bekapcsolja az eszközt. Ezért el olyan eszközöket, számos felhasználó számára anélkül, hogy minden egyes eszköz beállításához külön-külön kellene. 
@@ -53,7 +53,7 @@ A ABM vagy DEP portal segítségével egy Eszközregisztráció-token létrehoz�
 
 4. A **Token létrehozása az Apple Készülékregisztrációs programjában** elemre kattintva nyissa meg az Apple Központi Telepítési Program portálját, és jelentkezzen be a cége Apple-azonosítójával. A későbbiekben ezt az Apple ID-t használhatja a DEP-token megújításához.
 
-5.  Az Apple [Központi Telepítési Program portálján ](https://deploy.apple.com) válassza a**Készülékregisztrációs program** **Első lépések** elemét. Lehet, hogy a folyamat kissé eltérő, mint az alábbi lépések [Apple üzleti vezető](https://business.apple.com).
+5. Az Apple [Központi Telepítési Program portálján ](https://deploy.apple.com) válassza a**Készülékregisztrációs program** **Első lépések** elemét. Lehet, hogy a folyamat kissé eltérő, mint az alábbi lépések [Apple üzleti vezető](https://business.apple.com).
 
 4. A **Kiszolgálók kezelése** lapon válassza az **MDM-kiszolgáló hozzáadása** lehetőséget.
 

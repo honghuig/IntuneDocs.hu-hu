@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf94574bd86b0e0ce7455988781250b97d87a2c2
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: fb4ac87bef7c822111e95c18f149fa8d0598c36e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529058"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546635"
 ---
 # <a name="remove-your-device-from-management-if-you-declined-terms-of-use"></a>Az eszköz kivonása a felügyelet alól, ha nem fogadta el a használati feltételeket
 
@@ -37,11 +37,11 @@ A Vállalati portál alkalmazás eltávolítása előtt az **Eszközadminisztrá
 
 Az eszköz eltávolítása az Intune-ból és a Vállalati portál alkalmazás eltávolítása:
 
-1.  Lépjen a **Settings** (Beállítások)&gt;**Security (Biztonság) &amp; Screen Lock (Képernyőzár)** &gt;**Device administrators** (Eszközadminisztrátorok) elemhez.
+1. Lépjen a **Settings** (Beállítások)&gt;**Security (Biztonság) &amp; Screen Lock (Képernyőzár)** &gt;**Device administrators** (Eszközadminisztrátorok) elemhez.
 
     A lépés elvégzésével azonnal törli az eszköz regisztrációját.
 
-2.  Törölje a **Vállalati portál** melletti jelölőnégyzet jelölését a kikapcsoláshoz.
+2. Törölje a **Vállalati portál** melletti jelölőnégyzet jelölését a kikapcsoláshoz.
 
     Most már eltávolíthatja a Vállalati portál alkalmazást.
 

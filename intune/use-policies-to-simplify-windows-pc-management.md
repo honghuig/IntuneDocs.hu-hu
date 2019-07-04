@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 97e9042b6c7c1890cd1829f803c05fbab7ae9b44
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040212"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548824"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>A Windows rendszerű számítógép kezelésének leegyszerűsítése szabályzatok használatával
 
@@ -35,19 +35,19 @@ Ha a Windows rendszerű számítógépeket a rájuk telepített Intune szoftver�
 ### <a name="manage-the-microsoft-intune-center"></a>A Microsoft Intune Center felügyelete
 A felhasználók számára az Intune-szoftverügyfél az **Microsoft Intune Center** formájában jelenik meg. A Microsoft Intune Center a következőket teszi lehetővé a felhasználók számára:
 
--   alkalmazások beszerzése a vállalati portálról;
+- alkalmazások beszerzése a vállalati portálról;
 
--   frissítések keresése;
+- frissítések keresése;
 
--   A Microsoft Intune Endpoint Protection felügyelete
+- A Microsoft Intune Endpoint Protection felügyelete
 
--  távsegítség kérése.
+- távsegítség kérése.
 
 A Microsoft Intune Center minden felügyelt számítógépre telepítve van. Az alábbi beállításokat konfigurálhatja egy Intune-szabályzatban, és ezek jelennek meg a felhasználóknak a Microsoft Intune Centerben:
 
 |Házirend-beállítás|Részletek|
 |------------------|--------------------|
-|**Name (Név)**|A számítógépet felügyelő rendszergazda neve.<br />Maximális hossz: 40 karakter|
+|**Name**|A számítógépet felügyelő rendszergazda neve.<br />Maximális hossz: 40 karakter|
 |**Telefonszám**|A számítógépet felügyelő rendszergazda telefonszáma.<br />Maximális hossz: 20 karakter|
 |**E-mail cím**|A számítógépet felügyelő rendszergazda e-mail címe.<br />Maximális hossz: 40 karakter|
 |**Webhely neve**|A felhasználói támogatási webhely neve.<br />> maximális hossz: 40 karakter|

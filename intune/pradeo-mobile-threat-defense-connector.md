@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 980138015cdbe063d6d4b05eb6dd8ab70be4b601
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 2f0a4b9a957948c9bda0b0ad2d9829ff9560f217
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67512256"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548482"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>A Pradeo Mobile Threat Defense-összekötő működése az Intune-nal
 
@@ -41,11 +41,11 @@ Néhány gyakori helyzet:
 
 Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel a rendszer, a probléma megoldásáig az eszközön letilthatók az alábbi műveletek:
 
--   Hozzáférés a vállalati e-mailekhez
+- Hozzáférés a vállalati e-mailekhez
 
--   A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
+- A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
 
--   Hozzáférés vállalati alkalmazásokhoz
+- Hozzáférés vállalati alkalmazásokhoz
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
@@ -81,19 +81,19 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 ## <a name="supported-platforms"></a>Támogatott platformok
 
--   **Android 4.0.3 és újabb verziók**
+- **Android 4.0.3 és újabb verziók**
 
--   **iOS 7 és újabb verziók**
+- **iOS 7 és újabb verziók**
 
 ## <a name="prerequisites"></a>Előfeltételek
 
--   Prémium szintű Azure Active Directory
+- Prémium szintű Azure Active Directory
 
--   Microsoft Intune-előfizetés
+- Microsoft Intune-előfizetés
 
--   Pradeo Security for Mobile Threat Defense-előfizetés
+- Pradeo Security for Mobile Threat Defense-előfizetés
 
-    -   További információt a [Pradeo webhelyén](https://www.pradeo.com/en-US/mobile-threat-protection) találhat.
+    - További információt a [Pradeo webhelyén](https://www.pradeo.com/en-US/mobile-threat-protection) találhat.
 
 ## <a name="next-steps"></a>További lépések
 

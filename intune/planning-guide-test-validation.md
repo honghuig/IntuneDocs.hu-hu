@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2820007f167b2f79b8dd98ca31d7e50968ac1969
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7aaeb94aad7e31c3346b088239024c14f9e190da
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046056"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549353"
 ---
 # <a name="intune-testing-and-validation"></a>Az Intune tesztelése és ellenőrzése
 
@@ -33,17 +33,17 @@ A tesztelési folyamatba ajánlatos bevonni az informatikai és a támogatási m
 
 Ajánlott dokumentálni a következőket:
 
--   **Tesztkritériumok:** Azonosítsa a referenciaalapok elleni mért.
+- **Tesztkritériumok:** Azonosítsa a referenciaalapok elleni mért.
 
--   **Szerkezeti összetevők:** Léteznie kell legalább egy tesztkritériumban.
+- **Szerkezeti összetevők:** Léteznie kell legalább egy tesztkritériumban.
 
 Ha egy adott szerkezeti összetevő nem szerepel legalább egy olyan tesztkritériumban, amely követelményhez vagy forgatókönyvhöz társul, érdemes megfontolni, valóban szükség van-e rá. Az alábbiak ugyancsak szükségesek:
 
--   **Fiókok:** Az EMS és az összes használatieset-forgatókönyvek teszteléséhez Office 365-licencek tesztelni.
+- **Fiókok:** Az EMS és az összes használatieset-forgatókönyvek teszteléséhez Office 365-licencek tesztelni.
 
--   **Eszközök:** Tesztelési célú eszközöket gyári beállítások visszaállítása vagy tartalmának végleges törléséig.
+- **Eszközök:** Tesztelési célú eszközöket gyári beállítások visszaállítása vagy tartalmának végleges törléséig.
 
--   **Integrációs összetevők:** Integrálási összetevőket (tanúsítvány-összekötőt, és a helyszíni Intune Exchange connector) kell telepíteni, és szükség esetén konfigurálva.
+- **Integrációs összetevők:** Integrálási összetevőket (tanúsítvány-összekötőt, és a helyszíni Intune Exchange connector) kell telepíteni, és szükség esetén konfigurálva.
 
 Az előre nem látható problémák elhárításához szerkezetátalakításokra lehet szükség. Minden szerkezeti változást teljes körűen dokumentálni kell a változás okának feltüntetésével. Az alábbi példa azt mutatja meg, mi indokolhat ilyen változást:
 
@@ -51,15 +51,15 @@ Az előre nem látható problémák elhárításához szerkezetátalakításokra
 
 Előfordulhat, hogy a tesztelés és ellenőrzés során olyan problémák vagy kérdések merülnek fel, amelyek műszaki útmutatást vagy speciális hibaelhárítást tesznek szükségessé. Javasoljuk, hogy forduljon segítségért a Microsofthoz valamely támogatási csatornáján keresztül.
 
--   [Útmutató Intune-támogatás kéréséhez](get-support.md)
+- [Útmutató Intune-támogatás kéréséhez](get-support.md)
 
--   [Kapcsolatfelvétel a Microsoft Intune telefonos tanácsadással](get-support.md)
+- [Kapcsolatfelvétel a Microsoft Intune telefonos tanácsadással](get-support.md)
 
 ## <a name="functional-validation-testing"></a>Funkcionális ellenőrzési tesztelés
 
 A funkcionális ellenőrzési tesztelés során minden egyes összetevő és konfiguráció tesztelésre kerül, melynek során megállapítható, hogy azok megfelelően működnek-e. Az alábbi táblázatban a funkcionális ellenőrzési tesztelésre látható példa.
 
-![9. szakasz, 1. táblázat](./media/section-9-image-1-table.PNG)
+![9\. szakasz, 1. táblázat](./media/section-9-image-1-table.PNG)
 
 ## <a name="use-case-validation-testing"></a>Használatieset-ellenőrzési tesztelés
 
@@ -69,13 +69,13 @@ A használatieset-ellenőrzési tesztelés a használati forgatókönyvek teljes
 
 A rendszergazdai ellenőrzési tesztelés célja annak ellenőrzése, hogy az eszközökre és a felhasználókra irányuló rendszergazdai tevékenységek megfelelően működnek-e. Az alábbiakban egy teljes körű rendszergazdai ellenőrzésre talál példát.
 
-![9. szakasz, 2. táblázat](./media/section-9-image-2-table.PNG)
+![9\. szakasz, 2. táblázat](./media/section-9-image-2-table.PNG)
 
 ### <a name="end-user"></a>Végfelhasználó
 
 A végfelhasználói ellenőrzési tesztelés célja annak ellenőrzése, hogy a végfelhasználói élmény az elvárásoknak megfelelő-e, és hogy megfelelően jelenik-e meg minden felhasználói kommunikáció során. Fontos ellenőrizni, hogy megfelelő-e a végfelhasználói élmény. Ennek elmaradása a bevezetési szakasz sikerét csökkentheti, és a támogatási segítségkérések számának megnövekedéséhez vezethet.
 
-![9. szakasz, 3. táblázat](./media/section-9-image-3-table.PNG)
+![9\. szakasz, 3. táblázat](./media/section-9-image-3-table.PNG)
 
 ## <a name="next-steps"></a>További lépések
 

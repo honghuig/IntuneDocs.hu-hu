@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 76e6e3186ae0e8bf1d05698d28539994d33486e8
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 1c716f48a46e4fd2dc24d203426c364dd4cd88c0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804425"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545231"
 ---
 ## <a name="microsoft-open-source-code-of-conduct"></a>A Microsoft nyílt forráskódra vonatkozó viselkedési szabályzata
 
@@ -30,7 +30,7 @@ Hogy **szeretné és a hozzájárulások ösztönzése** az közösségi (felhas
     5. A lekéréses kérelem létrehozása.
     
     **2. lehetőség: Keresse meg a cikket a tárházban, és frissítése**  
-    1.  A legtöbb témakörök szerepelnek `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. Ebben a mappában, keresse meg a témakör nevét, például `troubleshoot-policies-in-microsoft-intune`. 
+    1. A legtöbb témakörök szerepelnek `https://github.com/MicrosoftDocs/IntuneDocs/tree/master/intune`. Ebben a mappában, keresse meg a témakör nevét, például `troubleshoot-policies-in-microsoft-intune`. 
     2. Válassza ki a hivatkozást, és kattintson a ceruza ikonra. Ha a ceruza ikon fölé viszi, látni fogja a **szerkessze a fájlt** elemleírást. 
     3. Hajtsa végre a módosításokat, majd **véglegesítési** a módosításokat. 
     4. A lekéréses kérelem létrehozása. 

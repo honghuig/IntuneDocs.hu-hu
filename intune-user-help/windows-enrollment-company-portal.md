@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fcc493258d148e65a0dbc08a9499a79e1d31bb95
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: df0afecb006ef8837f888b3b9209d5892d90a228
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529387"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546376"
 ---
 # <a name="windows-device-enrollment-in-intune-company-portal"></a>Windows-eszközök regisztrálása az Intune vállalati portál  
 
@@ -61,7 +61,7 @@ Regisztráció lépései a Windows 10-es eszközök különböző verziói eset�
 
 4. Ha a verzió  
 
-    *  __1607-es vagy újabb__: Úton-eszköz regisztrálása a [ **beállítások** > **fiók** > **hozzáférés munkahelyi vagy iskolai** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1607-es vagy újabb__: Úton-eszköz regisztrálása a [ **beállítások** > **fiók** > **hozzáférés munkahelyi vagy iskolai** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511-es vagy korábbi__: Úton-eszköz regisztrálása a [ **beállítások** > **fiók** > **a fiókok** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ### <a name="windows-10-mobile-devices"></a>Windows 10 Mobile rendszerű eszközök
@@ -71,7 +71,7 @@ Regisztráció lépései a Windows 10-es eszközök különböző verziói eset�
 3. A __eszközadatokat__, keresse meg a __verzió__.  
 4. Ha a verzió  
 
-    *  __1607-es vagy újabb__: Az eszköz segítségével regisztrálja a [ **beállítások** > **hozzáférés munkahelyi vagy iskolai** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
+    * __1607-es vagy újabb__: Az eszköz segítségével regisztrálja a [ **beállítások** > **hozzáférés munkahelyi vagy iskolai** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1607-and-later-device).   
     * __1511-es vagy korábbi__: Az eszköz segítségével regisztrálja a [ **beállítások** > **fiókok** útvonal](enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
 ## <a name="enroll-non-windows-10-devices"></a>Nem Windows 10-eszközök regisztrálása  

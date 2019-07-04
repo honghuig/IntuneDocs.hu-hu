@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 477aa18ebb1e079573e7962429d33a8ca4afabed
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 7e4fa124d1b3fdb765ac3da964d57ade5c1c4c65
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61494949"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545625"
 ---
 # <a name="how-to-encrypt-your-windows-device"></a>Windows-eszköz titkosítása
 
@@ -31,8 +31,8 @@ Előfordulhat, hogy a cég informatikai támgatási szolgálata a munkahelyi vag
 
 Asztali eszköz esetén kövesse az alábbi utasításokat a titkosításhoz.
 
-1.  Keresse meg, majd indítsa el a **BitLocker kezelése** alkalmazást.
+1. Keresse meg, majd indítsa el a **BitLocker kezelése** alkalmazást.
 
-2.  Kattintson a **BitLocker szolgáltatás bekapcsolása** hivatkozásra, és kövesse az utasításokat az összes meghajtó titkosításához.
+2. Kattintson a **BitLocker szolgáltatás bekapcsolása** hivatkozásra, és kövesse az utasításokat az összes meghajtó titkosításához.
 
 További segítségre van szüksége? Forduljon a cég informatikai támogatásához. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).

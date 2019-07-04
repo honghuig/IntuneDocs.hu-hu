@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1907ebf3d9233ca2324a4759b4f22a4c62e143c2
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045800"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549246"
 ---
 # <a name="integrate-pradeo-with-intune"></a>A Pradeo integrálása az Intune-nal
 
@@ -32,47 +32,47 @@ A Pradeo Mobile Threat Defense megoldás Intune-beli integrálásához kövesse 
 
 Mielőtt elkezdené a Pradeo integrálását az Intune-nal, ellenőrizze, hogy rendelkezik-e az alábbiakkal:
 
--   Microsoft Intune-előfizetés
+- Microsoft Intune-előfizetés
 
--   Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
+- Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
 
-    -   Bejelentkezés és felhasználói profil olvasása
+    - Bejelentkezés és felhasználói profil olvasása
 
-    -   A címtár elérése a bejelentkezett felhasználó nevében
+    - A címtár elérése a bejelentkezett felhasználó nevében
 
-    -   Címtáradatok olvasása
+    - Címtáradatok olvasása
 
-    -   Eszközadatok küldése az Intune-ba
+    - Eszközadatok küldése az Intune-ba
 
--   Rendszergazdai hitelesítő adatok a Pradeo bztonsági konzol eléréséhez.
+- Rendszergazdai hitelesítő adatok a Pradeo bztonsági konzol eléréséhez.
 
 ### <a name="pradeo-app-authorization"></a>A Pradeo alkalmazás engedélyezése
 
 A Pradeo alkalmazás engedélyezési folyamata a következő:
 
--   Engedélyezze a Pradeo szolgáltatásnak, hogy az eszközállapottal kapcsolatos információt küldhessen az Intune-ba.
+- Engedélyezze a Pradeo szolgáltatásnak, hogy az eszközállapottal kapcsolatos információt küldhessen az Intune-ba.
 
--   A Pradeo szinkronizálást végez az Azure AD regisztrációs csoporttagsággal az eszköz adatbázisának feltöltéséhez.
+- A Pradeo szinkronizálást végez az Azure AD regisztrációs csoporttagsággal az eszköz adatbázisának feltöltéséhez.
 
--   Engedélyezze a Pradeo felügyeleti konzolja számára az Azure AD-alapú egyszeri bejelentkezést (SSO-t).
+- Engedélyezze a Pradeo felügyeleti konzolja számára az Azure AD-alapú egyszeri bejelentkezést (SSO-t).
 
--   Engedélyezze a Pradeo alkalmazás számára az Azure AD SSO használatát a bejelentkezéshez.
+- Engedélyezze a Pradeo alkalmazás számára az Azure AD SSO használatát a bejelentkezéshez.
 
 ## <a name="to-set-up-pradeo-integration"></a>A Pradeo-integráció beállítása
 
-1.  Nyissa meg a [Pradeo biztonsági konzolt](https://www.apps-security.com), és jelentkezzen be a hitelesítő adataival.
+1. Nyissa meg a [Pradeo biztonsági konzolt](https://www.apps-security.com), és jelentkezzen be a hitelesítő adataival.
 
-2.  Válassza az **Administration - Enterprise Mobility Management** (Felügyelet – Nagyvállalati mobileszköz-felügyelet) lehetőséget a menüben.
+2. Válassza az **Administration - Enterprise Mobility Management** (Felügyelet – Nagyvállalati mobileszköz-felügyelet) lehetőséget a menüben.
 
-3.  Kattintson az **Intune emblémára**.
+3. Kattintson az **Intune emblémára**.
 
-4.  Az **EMM (Enterprise mobility management - Intune** ablak **1. lépésében** kattintson a **Pradeo-összekötő** gombra. 
+4. Az **EMM (Enterprise mobility management - Intune** ablak **1. lépésében** kattintson a **Pradeo-összekötő** gombra. 
 
     ![Az Intune-ban EMM Pradeo ablak képernyőképe](./media/pradeo_setup.png)
 
 5. A Microsoft Intune kapcsolati ablakában adja meg az Intune-hoz használt hitelesítő adatait.
 
-5.  Ekkor megnyílik a Pradeo weboldala. A **2. lépésben** kattintson a **Pradeo Device Health** (Pradeo-eszközállapot) gombra.
+5. Ekkor megnyílik a Pradeo weboldala. A **2. lépésben** kattintson a **Pradeo Device Health** (Pradeo-eszközállapot) gombra.
 
 7. A Pradeo–Intune-összekötő ablakban válassza az **Elfogadás** lehetőséget. 
 
@@ -86,4 +86,4 @@ A Pradeo alkalmazás engedélyezési folyamata a következő:
 
 ## <a name="next-steps"></a>További lépések
 
--   [Pradeo-alkalmazások beállítása](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Pradeo-alkalmazások beállítása](mtd-apps-ios-app-configuration-policy-add-assign.md)

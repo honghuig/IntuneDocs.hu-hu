@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb4b90f434af9313cc567193159e94a496f86000
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: c5b903cfa9a6700b8931ccedea0f44a9de0d8011
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511848"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549206"
 ---
 # <a name="microsoft-intune-data-warehouse-api"></a>A Microsoft Intune-adattárház API
 
 Az Intune-adattárház API géppel olvasható formában nyújt hozzáférést az Intune-beli adatokhoz, hogy kedvenc elemző eszközével feldolgozhassa azokat. Az API használatával összeállíthatja a cége mobilkörnyezetéről szóló jelentéseket. Az API az OData protokollt használja, amely a szabványos minták szerint kezeli az alábbiakat:
 
-  -   Kérés- és válaszfejlécek
-  -   Állapotkódok
-  -   HTTP-metódusok
-  -   URL-címre vonatkozó konvenciók
-  -   Adathordozó-típusok
-  -   Adattartalom-formátumok
-  -   Lekérdezési lehetőségek
+  - Kérés- és válaszfejlécek
+  - Állapotkódok
+  - HTTP-metódusok
+  - URL-címre vonatkozó konvenciók
+  - Adathordozó-típusok
+  - Adattartalom-formátumok
+  - Lekérdezési lehetőségek
 
 Az OData (Open Data Protocol – nyílt adatprotokoll) az OASIS (Szervezet a strukturált információs szabványok fejlesztéséért) szabványa, amely ajánlott eljárásokat határoz meg a RESTful API-k kialakításához és használatához. Az Intune-adattárház az OData 4.0-s verzióját használja.
 
@@ -56,8 +56,8 @@ További információért lásd az [Adatok beolvasása az adattárház API-ból 
 
 Az API használatához Azure AD-hitelesítésre van szükség. Az Azure AD az OAuth 2.0-s verzióját használja. A hitelesítés után egy HTTP GET művelet végrehajtásával és a közzétett entitásgyűjteményekhez kapcsolódva hozzáférhet az API adataihoz. További részletek:
 
- -  [Hitelesítés](reports-api-url.md)
- -  [Az API URL-címének szerkezete](reports-api-url.md)
+ - [Hitelesítés](reports-api-url.md)
+ - [Az API URL-címének szerkezete](reports-api-url.md)
 
 ## <a name="intune-data-warehouse-data-model"></a>Az Intune-adattárház adatmodellje
 

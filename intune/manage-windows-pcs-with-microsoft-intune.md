@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96ace484d0c4e832470ae9a6e4ffc69290c7d657
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: ac8de734927ca139b78f57dbb486cc19ea1e27c0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044949"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548797"
 ---
 # <a name="manage-windows-pcs-as-computers-via-intune-software-client"></a>Windows rendszerű számítógépek kezelése az Intune-szoftverügyfélen keresztül számítógépként
 
@@ -70,16 +70,16 @@ Intune-rendszergazdaként több módon is elérhetővé teheti az Intune-szoftve
 ## <a name="computer-management-capabilities-with-the-intune-client-software"></a>Számítógép-felügyeleti képességek az Intune-os ügyfélszoftverrel
 A legtöbb esetben célszerű regisztrálni az eszközöket az Intune-ban, mivel ez több funkciót biztosít. Ugyanakkor az Intune-szoftverügyféllel is felügyelheti a számítógépeket. Ekkor a következő funkciókat érheti el:
 
--   **[Szoftverfrissítések kezelése](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** - Naprakészen tarthatja a számítógépeit, és beállíthatja, hogy a rendszer mikor telepítse a frissítéseket.
+- **[Szoftverfrissítések kezelése](keep-windows-pcs-up-to-date-with-software-updates-in-microsoft-intune.md)** - Naprakészen tarthatja a számítógépeit, és beállíthatja, hogy a rendszer mikor telepítse a frissítéseket.
 
--   **[Windows tűzfalházirend](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** - Ezzel biztosíthatja, hogy a vállalatnál használt számítógépeken ne legyen inaktív vagy nem megfelelően beállított Windows tűzfal.
+- **[Windows tűzfalházirend](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md)** - Ezzel biztosíthatja, hogy a vállalatnál használt számítógépeken ne legyen inaktív vagy nem megfelelően beállított Windows tűzfal.
 
--   **[Kártevők elleni védelem](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** - Az Intune Endpoint Protection védelmet használja, amely segít a számítógépes kártevők elleni védelmében.
+- **[Kártevők elleni védelem](help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune.md)** - Az Intune Endpoint Protection védelmet használja, amely segít a számítógépes kártevők elleni védelmében.
 
--   **[Távsegítség](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** - Az Intune lehetővé teszi a felhasználóknak, hogy az Intune beépített távoli asztali funkciója segítségével kapcsolatba lépjenek az informatikai támogatási csapattal (ehhez a TeamViewer szoftver szükséges).
+- **[Távsegítség](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)** - Az Intune lehetővé teszi a felhasználóknak, hogy az Intune beépített távoli asztali funkciója segítségével kapcsolatba lépjenek az informatikai támogatási csapattal (ehhez a TeamViewer szoftver szükséges).
 
--   **[Szoftverlicenc-gazdálkodás](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** - Nyomon követheti az elérhető és a használatban lévő szoftverlicencek számát.
--   **[Alkalmazások központi telepítése](add-apps-for-windows-pcs-in-microsoft-intune.md)** - Szoftvereket telepíthet a felügyelt számítógépekre. Ha a szoftverügyféllel felügyeli a számítógépeket, akkor bizonyos alkalmazásfelügyeleti funkciók nem érhetők el.
+- **[Szoftverlicenc-gazdálkodás](manage-license-agreements-for-windows-pc-software-in-microsoft-intune.md)** - Nyomon követheti az elérhető és a használatban lévő szoftverlicencek számát.
+- **[Alkalmazások központi telepítése](add-apps-for-windows-pcs-in-microsoft-intune.md)** - Szoftvereket telepíthet a felügyelt számítógépekre. Ha a szoftverügyféllel felügyeli a számítógépeket, akkor bizonyos alkalmazásfelügyeleti funkciók nem érhetők el.
 
 <!-- - **Compliance settings reporting** -->
 
@@ -113,8 +113,8 @@ A fenti feladatokról az [általános számítógép-felügyeleti feladatokat](c
 
 Az Intune-ügyfélszoftverrel felügyelt PC-knél nem használhat bizonyos olyan felügyeleti lehetőségeket, amelyek segítségével PC-ként kezelheti a mobileszközöket:
 
--   Teljes törlés (a szelektív törlés elérhető)
--   Feltételes hozzáférés
+- Teljes törlés (a szelektív törlés elérhető)
+- Feltételes hozzáférés
 
 Azt is vegye figyelembe, hogy az Intune felügyeleti konzoljának bizonyos részei, mint például az **Updates** (Frissítések), a **Protection** (Védelem) és a **Licenses** (Licencek) csak akkor jelennek meg, ha vannak az Intune-ügyfélszoftverrel regisztrált eszközök.
 

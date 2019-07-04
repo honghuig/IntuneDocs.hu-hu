@@ -18,30 +18,30 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f2bcae8e48fd9c6558d77aced73d12b15e54b2f7
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: fe6cd46f6a85204d5859993a69ac5bf5b253e048
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040942"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546341"
 ---
 # <a name="install-the-company-portal-app-for-android"></a>A Céges portál alkalmazás telepítése Androidhoz
 
 A Céges portál alkalmazás hozzáférést biztosít a munkahelyi és az iskolai alkalmazásokhoz, valamint a levelezéshez és az internetkapcsolatokhoz. Ez az alkalmazás az ön eszköze biztonságának garantálásával munkahelye információinak is védelmet nyújt − például naprakészen tarja a vállalati alkalmazásait vagy gondoskodik róla, hogy az eszköze egy bizonyos idő elteltével lezárja magát. A céges portál és a kezelés része szolgáltatásaival kapcsolatos további tudnivalókért lásd: [miért érdemes regisztrálni az Androidos eszköz](why-enroll-android-device.md).  
 
-1.  Kattintson a **Home** (Kezdőképernyő) > **Play Store** (Play Áruház) elemre.
+1. Kattintson a **Home** (Kezdőképernyő) > **Play Store** (Play Áruház) elemre.
 
-2.  Az a **keresési** mezőbe írja be **Intune vállalati portál**.  
+2. Az a **keresési** mezőbe írja be **Intune vállalati portál**.  
 
-3.  Koppintson az **Intune Céges portál** elemre.
+3. Koppintson az **Intune Céges portál** elemre.
 
     ![android-search-company-portal](./media/and-cpinstall-1-search-cp.png)
 
-4.  Koppintson a **TELEPÍTÉS** elemre.
+4. Koppintson a **TELEPÍTÉS** elemre.
 
     ![android-install-company-portal](./media/and-cpinstall-2-install.png)
 
-5.  Koppintson az **ELFOGADÁS** gombra.
+5. Koppintson az **ELFOGADÁS** gombra.
 
     ![android-accept-company-portal-terms](./media/and-cpinstall-3-cp-accept.png)
 

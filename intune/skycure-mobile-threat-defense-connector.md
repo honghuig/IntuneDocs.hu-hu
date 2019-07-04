@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f04879e88cb85eaacdb75f5645a486e3539cb13a
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 6480c6fb412c12e228b8bc3647045cf15da531e1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044078"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548017"
 ---
 # <a name="symantec-endpoint-protection-mobile-connector"></a>Symantec Endpoint Protection Mobile-összekötő
 
 Szabályozhatja, hogy a Symantec Endpoint Protection Mobile (a SEP Mobile), a Microsoft Intune-nal integrálható mobil veszélyforrások elleni védelmi megoldás kockázatfelmérése alapján feltételes hozzáféréssel a vállalati erőforrások mobil elérése. A kockázatfelmérés a SEP Mobile által az eszközökről gyűjtött telemetriai adatokon alapul, például:
 
--   Fizikai védelem
+- Fizikai védelem
 
--   Hálózatvédelem
+- Hálózatvédelem
 
--   Alkalmazásvédelem
+- Alkalmazásvédelem
 
--   Biztonsági rések elleni védelem
+- Biztonsági rések elleni védelem
 
 Engedélyezze a SEP Mobile-kockázatfelmérés Intune eszközmegfelelőségi szabályzatai által, és ezután a feltételes hozzáférési szabályzatok használatával engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz, észlelt fenyegetések alapján.
 
@@ -48,9 +48,9 @@ Amennyiben az eszköz nem megfelelőnek minősül, akkor megszűnik a hozzáfér
 
 Az Intune kétféleképpen integrálható a SEP Mobile-lal:
 
--   Az **alapszintű beállítás** írásvédett mód, amely révén a SEP Mobile vizsgálhatja az Intune-beli eszközöket.
+- Az **alapszintű beállítás** írásvédett mód, amely révén a SEP Mobile vizsgálhatja az Intune-beli eszközöket.
 
--   A **teljes integráció** lehetővé teszi, hogy a SEP Mobile jelentse az eszközökkel kapcsolatos kockázatokat és a biztonsági incidensek részleteit az Intune-nak.
+- A **teljes integráció** lehetővé teszi, hogy a SEP Mobile jelentse az eszközökkel kapcsolatos kockázatokat és a biztonsági incidensek részleteit az Intune-nak.
 
 ## <a name="sample-scenarios"></a>Mintaforgatókönyvek
 
@@ -60,11 +60,11 @@ Néhány gyakori helyzet:
 
 Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a rendszer, a probléma megoldásáig az eszközön letilthatók az alábbiak:
 
--   Hozzáférés a vállalati e-mailekhez
+- Hozzáférés a vállalati e-mailekhez
 
--   A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
+- A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
 
--   Hozzáférés vállalati alkalmazásokhoz
+- Hozzáférés vállalati alkalmazásokhoz
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
@@ -100,17 +100,17 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 ## <a name="supported-platforms"></a>Támogatott platformok
 
--   **Android 4.1 és újabb verziók**
+- **Android 4.1 és újabb verziók**
 
--   **iOS 8 és újabb verziók**
+- **iOS 8 és újabb verziók**
 
 ## <a name="pre-requisites"></a>Előfeltételek
 
--   Prémium szintű Azure Active Directory
+- Prémium szintű Azure Active Directory
 
--   Microsoft Intune-előfizetés
+- Microsoft Intune-előfizetés
 
--   Symantec Endpoint Protection Mobile-előfizetés
+- Symantec Endpoint Protection Mobile-előfizetés
 
 További tájékoztatást a [Symantec webhelyén](https://www.skycure.com/skycure-microsoft-integration/) talál.
 

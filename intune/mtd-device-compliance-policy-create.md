@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b58ee82e44e8aa8d68c0fb00c4497cc0455ed21d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2315136fe277f06f6dbb11c13139a9dc193ce6f7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528640"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549369"
 ---
 # <a name="create-mobile-threat-defense-mtd-device-compliance-policy-with-intune"></a>A Mobile Threat Defense (MTD) eszközmegfelelőségi szabályzatának létrehozása az Intune-nal
 
@@ -37,23 +37,23 @@ Az MTD beállítása során az MTD-partnerkonzolon már létrehozott egy szabál
 
 Az MTD-eszközmegfelelési szabályzat előfeltételei:
 
--   Az MTD és az Intune közötti integráció beállítása
+- Az MTD és az Intune közötti integráció beállítása
 
 ## <a name="to-create-an-mtd-device-compliance-policy"></a>MTD-eszközmegfelelési szabályzat létrehozása
 
-1.  Az [Azure Portalon](https://portal.azure.com/) jelentkezzen be az Intune-os hitelesítő adataival.
+1. Az [Azure Portalon](https://portal.azure.com/) jelentkezzen be az Intune-os hitelesítő adataival.
 
-2.  Az **Azure-irányítópulton** válassza a bal oldali menü **Minden szolgáltatás** pontját, majd írja be a szűrő szövegmezőbe az **Intune** nevet.
+2. Az **Azure-irányítópulton** válassza a bal oldali menü **Minden szolgáltatás** pontját, majd írja be a szűrő szövegmezőbe az **Intune** nevet.
 
-3.  Ha az **Intune** elemre kattint, megnyílik az **Intune irányítópultja**.
+3. Ha az **Intune** elemre kattint, megnyílik az **Intune irányítópultja**.
 
 4. Az **Intune-irányítópulton** a **Kezelés** szakaszban kattintson az **Eszköz megfelelősége**, majd a **Szabályzatok** elemre.
 
-5.  Kattintson a **Szabályzat létrehozása** elemre, írja be az eszközmegfelelés **Név** és **Leírás** adatait, kattintson a **Platform** elemre, majd a**Beállítás** szakaszban kattintson a **Konfigurálás** elemre.
+5. Kattintson a **Szabályzat létrehozása** elemre, írja be az eszközmegfelelés **Név** és **Leírás** adatait, kattintson a **Platform** elemre, majd a**Beállítás** szakaszban kattintson a **Konfigurálás** elemre.
 
-6.  A **Megfelelőségi szabályzat** panelen kattintson az **Eszközállapot** lehetőségre.
+6. A **Megfelelőségi szabályzat** panelen kattintson az **Eszközállapot** lehetőségre.
 
-7.  Az **Eszközállapot** panelen a **Maximálisan elérhető eszközfenyegetettségi szint használata** alatti legördülő menüből válassza ki a mobilfenyegetés védelmi szintjét.
+7. Az **Eszközállapot** panelen a **Maximálisan elérhető eszközfenyegetettségi szint használata** alatti legördülő menüből válassza ki a mobilfenyegetés védelmi szintjét.
 
     a.  **Védett**: Ez a szint a legbiztonságosabb lehetőség. Az eszköz csak akkor fér hozzá a céges erőforrásokhoz, ha semmilyen veszélyforrás nincs rajta. Ha bármilyen veszélyforrás észlelhető, az eszköz nem megfelelőnek minősül.
 
@@ -63,7 +63,7 @@ Az MTD-eszközmegfelelési szabályzat előfeltételei:
 
     d.  **Magas**: Ez a szint a legkevésbé biztonságos beállítás. Megadása esetén a rendszer semelyik fenyegetettségi szint mellett nem korlátozza az eszközt, a Mobile Threat Defense szolgáltatást csak jelentéskészítésre használja. Ennek a beállításnak a megadása esetén az eszközökön aktiválni kell az MTD alkalmazást.
 
-8.  Kattintson kétszer az **OK** elemre, majd válassza a **Létrehozás** lehetőséget.
+8. Kattintson kétszer az **OK** elemre, majd válassza a **Létrehozás** lehetőséget.
 
 > [!IMPORTANT]
 > Office 365 vagy más szolgáltatások számára feltételes hozzáférési szabályzatokat hoz létre, ha az eszköz megfelelőségi értékelésnek, és nem megfelelő eszközök hozzáférése a vállalati erőforrások eléréséhez az eszközön a fenyegetés megszüntetéséig.

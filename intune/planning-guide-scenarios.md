@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ce8d87a653e87a2b9ba91552f6857fdab6bee12
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 28e48d64ba220f75f412ef117a08b07dfd477d06
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045988"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549286"
 ---
 # <a name="identify-mobile-device-management-use-case-scenarios"></a>Mobileszköz-kezelési használati esetek azonosítása
 
@@ -33,9 +33,9 @@ Ebben a témakörben néhány példán keresztül segítünk abban, hogy cége k
 ## <a name="device-ownership"></a>Az eszközök tulajdonjoga
 Első lépésként tekintse át a cégnél az Intune telepítésével elérni kívánt célokat, így könnyebben azonosíthatja a telepítés fő használati eseteit. Az Intune telepítési tervének hatókörén belül válaszoljon az alábbi kérdésekre:
 
--   Tervezi a céges tulajdonú eszközök támogatását?
+- Tervezi a céges tulajdonú eszközök támogatását?
 
--   Tervezi a magántulajdonban lévő eszközök (BYOD) támogatását?
+- Tervezi a magántulajdonban lévő eszközök (BYOD) támogatását?
 
 Ezek nem egymást kizáró lehetőségek. A cég céljainak eléréséhez lehet, hogy az eszköztulajdon mindkét formáját támogatnia kell. Az alárendelt használati esetek segítenek tisztázni, hol kell alkalmazni a különböző eszközkezelési szabályzatokat.
 
@@ -43,11 +43,11 @@ Ezek nem egymást kizáró lehetőségek. A cég céljainak eléréséhez lehet,
 
 Határozza meg, hogy az egyes használati esetek tartalmaznak-e alárendelt használati eseteket is. Például a cég megállapíthatja, hogy igény van egy vállalati használati eset támogatására, amely tartalmaz további, felhasználói típuson vagy eszközszerepkörön alapuló, aleseteket, például:
 
--   Infomunkás
+- Infomunkás
 
--   Vezető
+- Vezető
 
--   Kioszkmód
+- Kioszkmód
 
 Íme néhány példa a használati esetekre és alesetekre:
 

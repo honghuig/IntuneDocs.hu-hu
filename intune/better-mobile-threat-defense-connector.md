@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b8134b9db0e478efa69391edeb570b39c91a41c9
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511770"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547294"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Better Mobile Threat Defense-összekötő az Intune-hoz
 
@@ -41,11 +41,11 @@ Néhány gyakori helyzet:
 
 Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel a rendszer, a probléma megoldásáig az eszközön letilthatók az alábbi műveletek:
 
--   Hozzáférés a vállalati e-mailekhez
+- Hozzáférés a vállalati e-mailekhez
 
--   A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
+- A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
 
--   Hozzáférés vállalati alkalmazásokhoz
+- Hozzáférés vállalati alkalmazásokhoz
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
@@ -81,19 +81,19 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 ## <a name="supported-platforms"></a>Támogatott platformok
 
--   **Android 4.1 és újabb verziók**
+- **Android 4.1 és újabb verziók**
 
--   **iOS 8.0 vagy újabb**
+- **iOS 8.0 vagy újabb**
 
 ## <a name="prerequisites"></a>Előfeltételek
 
--   Prémium szintű Azure Active Directory
+- Prémium szintű Azure Active Directory
 
--   Microsoft Intune-előfizetés
+- Microsoft Intune-előfizetés
 
--   Better Mobile Threat Defense-előfizetés
+- Better Mobile Threat Defense-előfizetés
 
-    -   További információkért lásd a [Better Mobile webhelyét](https://www.better.mobi/).
+    - További információkért lásd a [Better Mobile webhelyét](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>További lépések
 

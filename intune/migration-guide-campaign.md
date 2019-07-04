@@ -16,14 +16,14 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5e409683c294b9d0321458f40c9b7f66bc3660ac
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046516"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549425"
 ---
-# <a name="phase-2-migration-campaign"></a>2. fázis: Áttelepítési kampány
+# <a name="phase-2-migration-campaign"></a>2\. fázis: Áttelepítési kampány
 
 Válassza ki a cége igényeiknek leginkább megfelelő migrációs megközelítést, és igazítsa az adott követelményekhez a bevezetési taktikát. A jelen útmutató fennmaradó részében ismertetjük azon eszközöket, amelyekre szüksége lesz a felhasználók eszközeinek az Intune-ban való sikeres regisztrálásához.
 
@@ -31,39 +31,39 @@ Válassza ki a cége igényeiknek leginkább megfelelő migrációs megközelít
 
 A külső MDM-szolgáltatóktól az Intune-ba való migrálás sikerességéhez kulcsfontosságúak a következők:
 
--   Folytasson érthető és segítőkész kommunikációt, minimálisra csökkentve a végfelhasználói üzemszünetet és elégedetlenséget.
+- Folytasson érthető és segítőkész kommunikációt, minimálisra csökkentve a végfelhasználói üzemszünetet és elégedetlenséget.
 
--   Győződjön meg róla, hogy rendelkezik az adott helyzetre vonatkozó és konkrét migrálási utasításokkal.
+- Győződjön meg róla, hogy rendelkezik az adott helyzetre vonatkozó és konkrét migrálási utasításokkal.
 
--   Az összes felügyelt eszköz regisztrációjának megszüntetése a meglévő MDM-szolgáltatónál annak Intune-ban való regisztrálása előtt.
+- Az összes felügyelt eszköz regisztrációjának megszüntetése a meglévő MDM-szolgáltatónál annak Intune-ban való regisztrálása előtt.
 
--   Útmutatás kérése a meglévő MDM-szolgáltatótól a végfelhasználók számára arra vonatkozóan, hogy miként szüntethetik meg eszközeik regisztrációját.
+- Útmutatás kérése a meglévő MDM-szolgáltatótól a végfelhasználók számára arra vonatkozóan, hogy miként szüntethetik meg eszközeik regisztrációját.
 
--   Alkalmazzon fázisos megközelítést. Kezdje a próbafelhasználók kis csoportjával, és növekményesen vegye fel a felhasználók további csoportjait, amíg el nem éri a teljes körű bevezetést.
+- Alkalmazzon fázisos megközelítést. Kezdje a próbafelhasználók kis csoportjával, és növekményesen vegye fel a felhasználók további csoportjait, amíg el nem éri a teljes körű bevezetést.
 
--   Figyelje az ügyfélszolgálat terhelését és a regisztráció sikerességét az egyes ciklusokban. Hagyjon időt a sikerességi feltételek értékelésére az egyes csoportok esetében a következő csoport migrálása előtt. A próbabevezetés során ellenőrizni kell a következőket:
+- Figyelje az ügyfélszolgálat terhelését és a regisztráció sikerességét az egyes ciklusokban. Hagyjon időt a sikerességi feltételek értékelésére az egyes csoportok esetében a következő csoport migrálása előtt. A próbabevezetés során ellenőrizni kell a következőket:
 
-    -   A sikeres és sikertelen regisztrációk aránya az elvárásokon belül van-e.
+    - A sikeres és sikertelen regisztrációk aránya az elvárásokon belül van-e.
 
-    -   A felhasználók termelékenységét:
+    - A felhasználók termelékenységét:
 
-        -   A vállalati erőforrások, például a VPN, a Wi-Fi, a levelezés és a tanúsítványok működését.
+        - A vállalati erőforrások, például a VPN, a Wi-Fi, a levelezés és a tanúsítványok működését.
 
-        -   A telepített alkalmazások elérhetőségét.
+        - A telepített alkalmazások elérhetőségét.
 
-    -   Az adatbiztonságot:
+    - Az adatbiztonságot:
 
-        -   A megfelelőségi jelentések készítését.
+        - A megfelelőségi jelentések készítését.
 
-        -   A mobilalkalmazás-védelmi funkciók betartatását.
+        - A mobilalkalmazás-védelmi funkciók betartatását.
 
 Ha elégedett a migrálás első fázisával, ismételje meg a [migrációs ciklust](migration-guide-cycle.md) a következő fázis esetében.
 
--   Ismételje a fázisos ciklusokat mindaddig, amíg az összes felhasználót migrálta az Intune-ba.
+- Ismételje a fázisos ciklusokat mindaddig, amíg az összes felhasználót migrálta az Intune-ba.
 
--   Győződjön meg arról, hogy az ügyfélszolgálat készen áll a végfelhasználók támogatására a teljes migrációs kampány során. Végezzen önkéntes migrálást, amíg meg tudja becsülni a támogatási hívások jelentette munkaterhelést.
+- Győződjön meg arról, hogy az ügyfélszolgálat készen áll a végfelhasználók támogatására a teljes migrációs kampány során. Végezzen önkéntes migrálást, amíg meg tudja becsülni a támogatási hívások jelentette munkaterhelést.
 
--   Ne szabjon meg a regisztrációra vonatkozó határidőket, amíg az ügyfélszolgálata nem tudja kezelni a fennmaradó felhasználómennyiséget
+- Ne szabjon meg a regisztrációra vonatkozó határidőket, amíg az ügyfélszolgálata nem tudja kezelni a fennmaradó felhasználómennyiséget
 
 > [!IMPORTANT]
 > Ne állítsa be az Intune-ban és a meglévő külső MDM-megoldásban egyaránt a hozzáférés-vezérlés alkalmazását az erőforrásokhoz, például az Exchange-hez vagy a SharePoint online-hoz. Emellett az eszközök egyszerre csak az egyik megoldásban regisztrálhatók.

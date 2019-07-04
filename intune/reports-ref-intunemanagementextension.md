@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ebece46bac8ebee5cb3c6a573f0b09c4b308abe3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 571080f3d25753fdc423c45100b06377ecd426b5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040990"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549195"
 ---
 # <a name="reference-for-intune-management-extension"></a>Az Intune felügyeleti bővítmény referenciája
 
 Az **IntuneManagementExtension** kategória mobileszközökhöz készült entitásokat tartalmaz, amelyek többek között az alábbi információkat követik nyomon:
 
-  -  Egy IntuneManagementExtension verziói
-  -  Egy IntuneManagementExtension telepítési állapota
+  - Egy IntuneManagementExtension verziói
+  - Egy IntuneManagementExtension telepítési állapota
 
 ## <a name="intunemanagementextensionversion"></a>IntuneManagementExtensionVersion
 

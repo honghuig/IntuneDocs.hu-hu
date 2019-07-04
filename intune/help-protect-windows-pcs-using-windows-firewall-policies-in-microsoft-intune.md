@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f3b552c42a7a84ad8099a406bfff2db575785915
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: bc338b30996d0ca31b2dd59a6c934f680f57c0d1
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403016"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547543"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>A Windows rendszerű számítógépek védelme Windows tűzfalházirendek használatával a Microsoft Intune-ban
 
@@ -48,14 +48,14 @@ A Windows tűzfalházirenddel a kezelt számítógépeken lévő Windows tűzfal
 > [!IMPORTANT]
 > A Windows tűzfalnak az Intune szolgáltatással való kezeléséhez a következő két szolgáltatást be kell kapcsolnia a kezelni kívánt számítógépeken:
 >
-> -   Windows tűzfal
-> -   IPsec-házirendügynök
+> - Windows tűzfal
+> - IPsec-házirendügynök
 
 ## <a name="configure-a-windows-firewall-policy"></a>Windows tűzfalházirend konfigurálása
 
-1.  A [Microsoft Intune felügyeleti konzolon](https://manage.microsoft.com/) válassza a **Házirend** &gt; **Házirend hozzáadása** elemet.
+1. A [Microsoft Intune felügyeleti konzolon](https://manage.microsoft.com/) válassza a **Házirend** &gt; **Házirend hozzáadása** elemet.
 
-2.  Konfigurálja és alkalmazza a **Windows tűzfal beállításai** házirendet. Használhatja az ajánlott beállításokat, vagy testre is szabhatja azokat. Ha a házirendek létrehozásával és alkalmazásával kapcsolatban további tájékoztatásra van szüksége, [A Windows rendszerű számítógépek a Microsoft Intune számítógépügyféllel való felügyeletének általános feladatai](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md) című témakörben olvashat erről bővebben.
+2. Konfigurálja és alkalmazza a **Windows tűzfal beállításai** házirendet. Használhatja az ajánlott beállításokat, vagy testre is szabhatja azokat. Ha a házirendek létrehozásával és alkalmazásával kapcsolatban további tájékoztatásra van szüksége, [A Windows rendszerű számítógépek a Microsoft Intune számítógépügyféllel való felügyeletének általános feladatai](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md) című témakörben olvashat erről bővebben.
 
     A következő szakaszban azok az értékek találhatók, amelyek beállíthatók a házirendben, továbbá az alapértelmezett értékek, amelyek alkalmazva lesznek, ha nem szabja testre azt.
 

@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 945e597556c7d0c43000ccf659b7b6e088661cff
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f2cd69725ad10c08f7c137f4444cce831160dd88
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528959"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546807"
 ---
 # <a name="how-to-reset-your-device-passcode-from-the-company-portal-website"></a>Az eszköz jelszavának alaphelyzetbe állítása a Vállalati portál webhelyén
 
@@ -36,7 +36,7 @@ Vállalat által birtokolt eszköz használata esetén lehet, hogy nem jelenik m
 
 ## <a name="reset-your-passcode"></a>A jelszó alaphelyzetbe állítása
 
-1.  Nyissa meg a [Céges portál webhelyét](https://portal.manage.microsoft.com), és válassza a __Menü__ gomb >__Eszközök__ lehetőséget.  
+1. Nyissa meg a [Céges portál webhelyét](https://portal.manage.microsoft.com), és válassza a __Menü__ gomb >__Eszközök__ lehetőséget.  
 
 2. Válassza ki azt az eszközt, amelynek a jelszavát alaphelyzetbe kell állítani.  
 

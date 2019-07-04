@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0001175b84c2548c1fb93090f9ce6fd3193f21a3
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 20bdfcce6574d31c37442a7bad58582aa7ea2fb6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528927"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546139"
 ---
 # <a name="send-logs-to-the-company-portal-developers-for-android-devices"></a>Naplók küldése a Céges portál fejlesztőinek androidos eszközök esetén
 
@@ -34,16 +34,16 @@ Egyes esetekben a Céges portál alkalmazás váratlanul kiléphet. A nem várt 
 
 Naplók küldése a Microsoftnak:
 
-1.  Nyissa meg a Vállalati portál alkalmazást.
+1. Nyissa meg a Vállalati portál alkalmazást.
 
-2.  Koppintson a **Menü** > **Súgó** > **E-mail küldése a támogatásnak** lehetőségre.
+2. Koppintson a **Menü** > **Súgó** > **E-mail küldése a támogatásnak** lehetőségre.
 
     > [!NOTE]
     > A felhasználó androidos eszközétől függően a **Menü** elem szoftveres vagy hardveres gomb is lehet.
 
-3.  koppintson a **Csak naplók feltöltése** lehetőségre.
+3. koppintson a **Csak naplók feltöltése** lehetőségre.
 
-4.  A feltöltés végén kapni fog egy incidens-azonosítót. Ezt az azonosítót őrizze meg.
+4. A feltöltés végén kapni fog egy incidens-azonosítót. Ezt az azonosítót őrizze meg.
 
 Közvetlenül küldhet e-mailt a Céges portál andoridos csapatának a következő címen: <a href="mailto:wintunedroidfbk@microsoft.com?subject=Send logs to Microsoft&body=Describe the issue you are having.">wintunedroidfbk@microsoft.com</a>. 
 

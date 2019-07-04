@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b39cc879c9e1232335c38e8d95c0861a12662c6a
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 4784bcb706dd8eef395763729e04503682197f78
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497957"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545262"
 ---
 # <a name="how-to-protect-your-windows-device-using-encryption"></a>A Windows-eszközök védelme titkosítással
 
@@ -37,8 +37,8 @@ Ha Windows Phone rendszerű eszközzel rendelkezik, és az regisztrálva van, k�
 
 Asztali eszközt az alábbi utasításokat követve titkosíthat.
 
-1.  Keresse meg, majd indítsa el a **BitLocker kezelése** alkalmazást.
+1. Keresse meg, majd indítsa el a **BitLocker kezelése** alkalmazást.
 
-2.  Kattintson a **BitLocker szolgáltatás bekapcsolása** hivatkozásra, és kövesse az utasításokat az összes meghajtó titkosításához.
+2. Kattintson a **BitLocker szolgáltatás bekapcsolása** hivatkozásra, és kövesse az utasításokat az összes meghajtó titkosításához.
 
 További segítségre van szüksége? Forduljon a cég informatikai támogatásához. Az elérhetőségét keresse meg a [Munkahelyi portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).

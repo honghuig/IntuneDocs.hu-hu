@@ -18,12 +18,12 @@ ms.reviewer: elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fea76693fe929338b29d110c299277e753134cc6
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: ee17e963964b6d2e4aa9d3e05c7a562f3c61bbf5
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196782"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545734"
 ---
 # <a name="enroll-your-macos-device-in-intune-with-the-company-portal-app"></a>A macOS-eszköz Céges portál alkalmazással való regisztrálása az Intune-ban
 
@@ -63,7 +63,7 @@ OS X El Capitan 10.11 és újabb verziójú macOS-eszközöket a következő lé
     * Ha nem rendelkezik minden olyan eszközt, a transzparens olvassa be: **Nem kell minden olyan felügyelt eszközökön. Ezt az eszközt ide koppintva adhatja meg.** Az eszköz hozzáadásához kattintson a szalagcímre.  
 
      ![Képernyőkép az Eszközök oldalról, a kattintás helyét kiemelő piros téglalappal bekeretezett szalagcímmel.](./media/CP-enroll-MACOS-1808.png)  
-5.  Hajtsa végre az alábbi lépések közül a Céges portálon éppen megjelenő üzenetnek megfelelőt.  
+5. Hajtsa végre az alábbi lépések közül a Céges portálon éppen megjelenő üzenetnek megfelelőt.  
     * Ha először ad hozzá egy eszközt, akkor a rendszer felkéri, hogy töltse le a Céges portál alkalmazást az eszközére. A folytatásához kattintson a **Letöltés** lehetőségre.  
 
          ![Példa képernyőkép a macOS-es Céges portál alkalmazás letöltését kérő képernyőről. A felhasználó választhat, hogy a bal alsó, kék Letöltés gombra, vagy a jobb alsó, szürke Mégse gombra kattint a párbeszédablakban.](./media/CP-enroll-download-macOS-1808.png)  

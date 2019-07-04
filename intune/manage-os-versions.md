@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b490d5ff083d344a1b39d27a2298503bdfa1f130
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: bc785e7f714320d410d20e254125858f44131677
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044917"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548757"
 ---
 # <a name="manage-operating-system-versions-with-intune"></a>Operációsrendszer-verziók kezelése az Intune-nal
 A korszerű mobil- és asztali platformokon gyors ütemben követik egymást az operációs rendszerek főbb részeit érintő frissítések, javítások és új kiadások. A Windows platform frissítéseinek és javításainak bevezetése teljes mértékben kezelhető központilag. Más platformok, például az iOS és a Android esetében azonban a végfelhasználóknak is részt kell vennie a folyamatban.  A Microsoft Intune-nal könnyedén kialakíthatja a különböző platformokon futó operációsrendszer-verziók felügyeleti rendszerét.
@@ -77,9 +77,9 @@ Az ebben a cikkben bemutatott Intune-funkciók segítséget nyújtanak ahhoz, ho
 - **1. lépés**: Regisztrációs korlátozások használatával az operációs rendszer v2 szükséges minimális verzióként, hogy regisztrálja az eszközt. Így gondoskodhat arról, hogy az újonnan regisztrált végfelhasználói eszközök megfeleljenek a szabályozásoknak.
 - **2/a. lépés**: Használja az Intune alkalmazásvédelmi szabályzatok figyelmeztesse a végfelhasználókat, ha az alkalmazás megnyitásakor illetve újraindításakor az adott operációs rendszer v2-es megadása kötelező.
 - **2/b. lépés**. Az eszközmegfelelőségi szabályzatoknál adja meg, hogy az eszközök megfelelőségéhez legalább az operációs rendszer v2-es verziója szükséges. A **Meg nem felelés esetén végrehajtandó műveletek** lehetőségnél adjon meg 7 napos türelmi időszakot, és határozza meg olyan e-mail-értesítés küldését, amely tartalmazza a határidőt és a követelményeket.
-  -  Ezeknek a szabályzatoknak a megadása esetén a rendszer e-mailben, az Intune céges portálon keresztül, alkalmazásvédelmi szabályzattal védett alkalmazás esetén pedig az alkalmazás megnyitásakor tájékoztatja a végfelhasználókat arról, hogy frissíteniük kell az eszköz operációs rendszerét.
+  - Ezeknek a szabályzatoknak a megadása esetén a rendszer e-mailben, az Intune céges portálon keresztül, alkalmazásvédelmi szabályzattal védett alkalmazás esetén pedig az alkalmazás megnyitásakor tájékoztatja a végfelhasználókat arról, hogy frissíteniük kell az eszköz operációs rendszerét.
   - A nem megfelelő felhasználók azonosításához kérheti egy megfelelőségi jelentés készítését a rendszertől. 
-- **3a. lépés:**: Használja az Intune alkalmazásvédelmi szabályzatokat felhasználók blokkolása, ha az alkalmazás megnyílik, vagy folytatódik, ha az eszköz nem fut az operációs rendszer v2-es.
+- **3a. lépés:** : Használja az Intune alkalmazásvédelmi szabályzatokat felhasználók blokkolása, ha az alkalmazás megnyílik, vagy folytatódik, ha az eszköz nem fut az operációs rendszer v2-es.
 - **3/b. lépés**: Az eszközmegfelelőségi szabályzatoknál adja meg, hogy az eszközök megfelelőségéhez legalább az operációs rendszer v2-es verziója szükséges.
   - Ezeknek a szabályzatoknak a meghatározása esetén az eszközöket frissíteni kell ahhoz, hogy továbbra is el lehessen róluk érni a szervezeti adatokat. Védett szolgáltatások le vannak tiltva, az eszköz a feltételes hozzáférés használatakor. Az alkalmazásvédelmi szabályzatokkal védett alkalmazások használatát a rendszer megnyitásukkor vagy akkor tiltja le, amikor azok megpróbálják elérni a szervezeti adatokat.
 

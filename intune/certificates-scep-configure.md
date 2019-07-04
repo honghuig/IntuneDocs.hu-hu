@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a952a5aa3de20159247f022d91d3e4302262290
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 22ce9ace7848ea1535b04ab6f0c0249c970e8c34
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494292"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547354"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>SCEP-tanúsítványok konfigurálása és használata az Intune-nal
 
@@ -225,7 +225,7 @@ Ebben a lépésben a következőket fogja elvégezni:
 3. Az NDES-kiszolgálóra rendkívül hosszú URL-címek (lekérdezések) érkeznek, melyekhez két beállításjegyzékbeli bejegyzést kell felvennie:
 
 
-   |                        Location                        |      Érték      | Type  |      Data       |
+   |                        Location                        |      Value      | Type  |      Data       |
    |--------------------------------------------------------|-----------------|-------|-----------------|
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxFieldLength  | DWORD | 65534 (decimális) |
    | HKLM\SYSTEM\CurrentControlSet\Services\HTTP\Parameters | MaxRequestBytes | DWORD | 65534 (decimális) |
@@ -429,7 +429,7 @@ A szolgáltatás futásának ellenőrzéséhez nyisson meg egy böngészőt, és
         >  - A tulajdonosnév statikus szövegében hibát okoznak a kapcsos zárójelek **{ }** , ha nem egy változót fognak közre. 
         >  - Az eszköztanúsítvány-változók használatakor a változót tegye kapcsos zárójelek **{ }** közé.
         >  - A `{{FullyQualifiedDomainName}}` csak a Windows rendszerű és tartományhoz csatlakoztatott eszközök esetén működik. 
-        >  -  Ha a tulajdonosnévben megad olyan eszköztulajdonságokat, mint az IMEI, a sorozatszám vagy a teljes tartománynév, vagy az eszköztanúsítványban megadja a SAN-azonosítót, vegye figyelembe, hogy ezeket a tulajdonságokat az eszközhöz hozzáféréssel rendelkező személyek meghamisíthatják.
+        >  - Ha a tulajdonosnévben megad olyan eszköztulajdonságokat, mint az IMEI, a sorozatszám vagy a teljes tartománynév, vagy az eszköztanúsítványban megadja a SAN-azonosítót, vegye figyelembe, hogy ezeket a tulajdonságokat az eszközhöz hozzáféréssel rendelkező személyek meghamisíthatják.
         >  - A profil nem lesz telepítve az eszközön, ha az eszköz megadott változói nem támogatottak. Például ha megad egy {{IMEI}} változót egy IMEI-számmal nem rendelkező eszközhöz rendelt SCEP profil tulajdonosnevében, a profil telepítése sikertelen lesz. 
 
 
@@ -472,7 +472,7 @@ A szolgáltatás futásának ellenőrzéséhez nyisson meg egy böngészőt, és
         >  - A tulajdonosnév statikus szövegében nem használhatók kapcsos zárójelek **{ }** , függőleges vonalak **|** és pontosvesszők **;** . 
         >  - Az eszköztanúsítvány-változók használatakor a változót tegye kapcsos zárójelek **{ }** közé.
         >  - A `{{FullyQualifiedDomainName}}` csak a Windows rendszerű és tartományhoz csatlakoztatott eszközök esetén működik. 
-        >  -  Ha a tulajdonosnévben megad olyan eszköztulajdonságokat, mint az IMEI, a sorozatszám vagy a teljes tartománynév, vagy az eszköztanúsítványban megadja a SAN-azonosítót, vegye figyelembe, hogy ezeket a tulajdonságokat az eszközhöz hozzáféréssel rendelkező személyek meghamisíthatják.
+        >  - Ha a tulajdonosnévben megad olyan eszköztulajdonságokat, mint az IMEI, a sorozatszám vagy a teljes tartománynév, vagy az eszköztanúsítványban megadja a SAN-azonosítót, vegye figyelembe, hogy ezeket a tulajdonságokat az eszközhöz hozzáféréssel rendelkező személyek meghamisíthatják.
         >  - A profil nem lesz telepítve az eszközön, ha az eszköz megadott változói nem támogatottak. Például ha megad egy {{IMEI}} változót egy IMEI-számmal nem rendelkező eszközhöz rendelt SCEP profil alternatív tulajdonosnevében, a profil telepítése sikertelen lesz.  
 
    - **Tanúsítvány érvényességi időtartama**: Ha futtatta a `certutil - setreg Policy\EditFlags +EDITF_ATTRIBUTEENDDATE` parancsot a kiállító hitelesítésszolgáltató, amely lehetővé teszi az egyéni érvényességi időtartamot, megadhatja a tanúsítvány lejáratáig hátralévő időt mennyisége.<br>A tanúsítványsablonban megadott érvényességi időtartamnál rövidebb értéket is beállíthat, hosszabbat azonban nem. Ha például a tanúsítványsablonban két év van meghatározva a tanúsítvány érvényességi idejeként, akkor egy évet állíthat be értékként, öt évet azonban nem. Az értéknek emellett a kiállító hitelesítésszolgáltató tanúsítványának hátralévő érvényességi időszakánál is kevesebbnek kell lennie. 

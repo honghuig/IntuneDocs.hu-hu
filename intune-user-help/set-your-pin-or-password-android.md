@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 95862c006baef40bfb219e5cff50d5622c8c00b4
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 767788d702db45686d686e21018cbf0c5b038412
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505811"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546660"
 ---
 # <a name="set-your-pin-or-password"></a>PIN kód vagy jelszó beállítása
 
@@ -31,9 +31,9 @@ Ha az Intune-t használva fér hozzá munkahelyi vagy iskolai adataihoz, a cég 
 
 Az alábbi lépéseket követve állíthatja be a PIN-kódot vagy a jelszót.
 
-1.  Koppintson a **Beállítások** > **Biztonság** > **Képernyőzár** > **Jelszó** elemre.
+1. Koppintson a **Beállítások** > **Biztonság** > **Képernyőzár** > **Jelszó** elemre.
 
-2.  Állítsa be és erősítse meg az új jelszót.
+2. Állítsa be és erősítse meg az új jelszót.
 
 Egyes eszközöknél előfordulhat, hogy a jelszava mellett egy indítási PIN-kódot is be kell állítania. Lehetséges, hogy ezt a problémát megoldhatja, ha a megkeresi ezt a beállítási lehetőséget a beállításokat végző alkalmazásban. A Samsung Galaxy S7 eszközökön például a biztonságos indítást a **Beállítások** > **Képernyőzár és biztonság** > **Biztonságos indítás** területen engedélyezheti. További információkért kattintson [ide ](/intune-user-help/your-device-appears-encrypted-but-cp-says-otherwise-android). 
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4bd03075e6088b4cf06237429a723e93e87029fd
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494592"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548360"
 ---
 # <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>1\. fázis: A Microsoft Intune előkészítése a mobileszköz-felügyelet (MDM)
 
@@ -31,30 +31,30 @@ Mielőtt részletesen rátérnénk az Intune beállítására, tekintsük át a 
 
 ### <a name="what-kinds-of-devices-do-you-need-to-manage"></a>Milyen típusú eszközök felügyeletére van szükség?
 
--   Mely [platformokat](supported-devices-browsers.md) kell támogatni?
+- Mely [platformokat](supported-devices-browsers.md) kell támogatni?
 
--   A támogatandó eszközök vállalati vagy személyes tulajdonban vannak?
+- A támogatandó eszközök vállalati vagy személyes tulajdonban vannak?
 
--   Milyen a hálózati kapcsolat? Wi-Fi, mobil, VPN?
+- Milyen a hálózati kapcsolat? Wi-Fi, mobil, VPN?
 
 ### <a name="what-do-your-users-need-to-do-on-managed-devices"></a>Mire van szükségük a felügyelt eszközök felhasználóinak?
 
--   Kell-e alkalmazásokat telepíteni a végfelhasználók számára?
+- Kell-e alkalmazásokat telepíteni a végfelhasználók számára?
 
--   Használnak-e egyéni üzletági alkalmazásokat? Vagy csak a nyilvános áruházakban elérhetőket?
+- Használnak-e egyéni üzletági alkalmazásokat? Vagy csak a nyilvános áruházakban elérhetőket?
 
--   Szükség van-e email-fiókok beállítására?
+- Szükség van-e email-fiókok beállítására?
 
 ### <a name="what-kinds-of-users"></a>Milyen típusú felhasználói vannak?
 
--   Hány felhasználó használ majd egy eszközt?
+- Hány felhasználó használ majd egy eszközt?
 
--   Milyen használati feltételekre van szükség?
+- Milyen használati feltételekre van szükség?
 
-    -   Ebben a kérdésben mindenképp időben kérje a jogi osztály segítségét.
-    -   Milyen honosításra van szükség?
+    - Ebben a kérdésben mindenképp időben kérje a jogi osztály segítségét.
+    - Milyen honosításra van szükség?
 
--   Jártasak-e a felhasználók a technológia és általában a számítástechnika terén?
+- Jártasak-e a felhasználók a technológia és általában a számítástechnika terén?
 
 ### <a name="what-is-your-device-security-policy"></a>Milyen eszközbiztonsági szabályzat van érvényben?
 
@@ -68,11 +68,11 @@ Mielőtt részletesen rátérnénk az Intune beállítására, tekintsük át a 
 
 - Milyen hitelesítés támogatása szükséges? Ha tanúsítványalapú hitelesítésre van szükség, milyen fajta tanúsítványokat kell létrehozni?
   - Az Intune-nal erőforrás-hozzáférési szabályzatokban használható tanúsítványokat hozhat létre a regisztrált eszközökhöz.
-  -   Milyen típusú nyilvános kulcsú infrastruktúra (PKI) támogatása szükséges?
+  - Milyen típusú nyilvános kulcsú infrastruktúra (PKI) támogatása szükséges?
   <br></br>
 - Van-e szükség virtuális magánhálózat (VPN) támogatására eszköz- vagy alkalmazásszinten?
 
-  -   Az Intune-nal külső VPN-szolgáltatókhoz is lehet VPN-konfigurációkat létrehozni.
+  - Az Intune-nal külső VPN-szolgáltatókhoz is lehet VPN-konfigurációkat létrehozni.
   <br/><br/>
 - Lehet-e átmeneti kivételeket tenni bizonyos követelmények alól az üzemszünet elkerülése érdekében? Vagy a hozzáférést kapó eszközöknek mindig meg kell felelniük az összes biztonsági követelménynek?
 

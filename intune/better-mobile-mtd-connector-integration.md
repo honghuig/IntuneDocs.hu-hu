@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2e803eb3d47d44c8c8f3cd1b699b5ca220aeb91f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049115"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546977"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>A Better Mobile és az Intune integrálása
 
@@ -32,31 +32,31 @@ A Better Mobile Threat Defense megoldás és az Intune integrálásához kövess
 
 Mielőtt elkezdené a Better Mobile és az Intune integrálását, ellenőrizze, hogy rendelkezik-e az alábbiakkal:
 
--   Microsoft Intune-előfizetés
+- Microsoft Intune-előfizetés
 
--   Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
+- Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
 
-    -   Bejelentkezés és felhasználói profil olvasása
+    - Bejelentkezés és felhasználói profil olvasása
 
-    -   A címtár elérése a bejelentkezett felhasználó nevében
+    - A címtár elérése a bejelentkezett felhasználó nevében
 
-    -   Címtáradatok olvasása
+    - Címtáradatok olvasása
 
-    -   Eszközadatok küldése az Intune-ba
+    - Eszközadatok küldése az Intune-ba
 
--   Rendszergazdai azonosító adatok a Better Mobile rendszergazdai konzoljának hozzáféréséhez
+- Rendszergazdai azonosító adatok a Better Mobile rendszergazdai konzoljának hozzáféréséhez
 
 ### <a name="better-mobile-app-authorization"></a>A Better Mobile alkalmazás hitelesítése
 
 A Better Mobile alkalmazás hitelesítésének folyamata a következő:
 
--   Engedélyezze a Better Mobile szolgáltatásnak, hogy az eszközállapottal kapcsolatos információt küldhessen az Intune-ba.
+- Engedélyezze a Better Mobile szolgáltatásnak, hogy az eszközállapottal kapcsolatos információt küldhessen az Intune-ba.
 
--   A Better Mobile szinkronizálja magát az Azure AD regisztrációs csoport tagjaival az eszköz adatbázisának adatokkal való feltöltéséhez.
+- A Better Mobile szinkronizálja magát az Azure AD regisztrációs csoport tagjaival az eszköz adatbázisának adatokkal való feltöltéséhez.
 
--   Engedélyezze a Better Mobile rendszergazdai konzoljának az Azure AD egyszeri bejelentkezés (Single Sign On, SSO) használatát.
+- Engedélyezze a Better Mobile rendszergazdai konzoljának az Azure AD egyszeri bejelentkezés (Single Sign On, SSO) használatát.
 
--   Engedélyezze a Better Mobile alkalmazásnak az Azure AD SSO-val való bejelentkezést.
+- Engedélyezze a Better Mobile alkalmazásnak az Azure AD SSO-val való bejelentkezést.
 
 ## <a name="to-set-up-better-mobile-integration"></a>A Better Mobile-integráció beállítása
 
@@ -75,4 +75,4 @@ A Better Mobile alkalmazás hitelesítésének folyamata a következő:
 
 ## <a name="next-steps"></a>További lépések
 
--   [Jobb ügyfélalkalmazások összeállítása](mtd-apps-ios-app-configuration-policy-add-assign.md)
+- [Jobb ügyfélalkalmazások összeállítása](mtd-apps-ios-app-configuration-policy-add-assign.md)

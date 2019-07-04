@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4d838d0cd0d0f92cb344592d18d9e04e18d7e456
-ms.sourcegitcommit: cc5d757018d05fc03ac9ea3d30f563df9bfd61ed
+ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66819744"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548907"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Az Azure AD használata az Intune API-k elérésére a Microsoft Graphban
 
@@ -61,23 +61,23 @@ További tudnivalókért lásd:
 
 Ha alkalmazásokat szeretne regisztrálni a Microsoft Graph API használatához:
 
-1.  Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) rendszergazdai hitelesítő adatok használatával.
+1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) rendszergazdai hitelesítő adatok használatával.
 
     Igény szerint az alábbiak közül bármelyiket használhatja:
     - A bérlői rendszergazdafiókot.
     - Olyan bérlői felhasználói fiókot, amelyen engedélyezve van **A felhasználók regisztrálhatnak alkalmazásokat** beállítás.
 
-2.  A menüben válassza az **Azure Active Directory** &gt; **Alkalmazásregisztrációk** elemet.
+2. A menüben válassza az **Azure Active Directory** &gt; **Alkalmazásregisztrációk** elemet.
 
     <img src="./media/azure-ad-app-reg.png" width="157" height="170" alt="The App registrations menu command" />
 
-3.  Hozzon létre új alkalmazást az **Új alkalmazás regisztrálása** elemre kattintva, vagy válasszon egy meglévő alkalmazást.  (Ha meglévő alkalmazást választott, hagyja ki a következő lépést.)
+3. Hozzon létre új alkalmazást az **Új alkalmazás regisztrálása** elemre kattintva, vagy válasszon egy meglévő alkalmazást.  (Ha meglévő alkalmazást választott, hagyja ki a következő lépést.)
 
-4.  A **Létrehozás** panelen adja meg a következőket:
+4. A **Létrehozás** panelen adja meg a következőket:
 
-    1.  A **Név** mezőben adja meg az alkalmazás nevét (amely megjelenik a felhasználók bejelentkezésekor).
+    1. A **Név** mezőben adja meg az alkalmazás nevét (amely megjelenik a felhasználók bejelentkezésekor).
 
-    2.  Az **Alkalmazás típusa** és az **Átirányítási URI** mező értékét.
+    2. Az **Alkalmazás típusa** és az **Átirányítási URI** mező értékét.
 
         Ezek az igényektől függően változhatnak. Például ha Azure AD-alapú [hitelesítési tárat](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-libraries) (ADAL) használ, az **Alkalmazás típusa** legyen `Native` az **Átirányítási URI** pedig legyen `urn:ietf:wg:oauth:2.0:oob`.
 
@@ -85,19 +85,19 @@ Ha alkalmazásokat szeretne regisztrálni a Microsoft Graph API használatához:
 
         További tudnivalókért lásd: [Hitelesítési forgatókönyvek az Azure AD-ban](https://docs.microsoft.com/azure/active-directory/develop/active-directory-authentication-scenarios).
 
-5.  Az alkalmazás paneljén:
+5. Az alkalmazás paneljén:
 
-    1.  Jegyezze fel az **Alkalmazás azonosítója** mező értékét.
+    1. Jegyezze fel az **Alkalmazás azonosítója** mező értékét.
 
-    2.  Válassza a **Beállítások** &gt; **API-hozzáférés** &gt; **Szükséges engedélyek** lehetőséget.
+    2. Válassza a **Beállítások** &gt; **API-hozzáférés** &gt; **Szükséges engedélyek** lehetőséget.
 
     <img src="media/azure-ad-req-perm.png" width="483" height="186" alt="The Required permissions setting" />
 
-6.  A **Szükséges engedélyek** panelen válassza a **Hozzáadás** &gt; **API-hozzáférés hozzáadása** &gt; **API kiválasztása** lehetőséget.
+6. A **Szükséges engedélyek** panelen válassza a **Hozzáadás** &gt; **API-hozzáférés hozzáadása** &gt; **API kiválasztása** lehetőséget.
 
     <img src="media/azure-ad-add-graph.png" width="436" height="140" alt="The Microsoft Graph setting" />
 
-7.  Az **API kiválasztása** panelen válassza a **Microsoft Graph** &gt; **Kiválasztás** lehetőséget.  Ekkor megnyílik a **Hozzáférés engedélyezése** panel, amelyen látható az alkalmazás számára elérhető engedélyhatókörök listája.
+7. Az **API kiválasztása** panelen válassza a **Microsoft Graph** &gt; **Kiválasztás** lehetőséget.  Ekkor megnyílik a **Hozzáférés engedélyezése** panel, amelyen látható az alkalmazás számára elérhető engedélyhatókörök listája.
 
     <img src="media/azure-ad-perm-scopes.png" width="489" height="248" alt="Intune Graph API permission scopes" />
 
@@ -334,28 +334,28 @@ Ilyenkor ellenőrizze a következőket:
 
 Az alábbi példa az Intune-fiókhoz társított eszközök C#-kód használatával való beolvasását mutatja be.
 
-1.  Indítsa el a Visual Studiót, majd hozzon létre egy új Visual C#-alapú konzolalkalmazás-projektet (.NET-keretrendszer).
+1. Indítsa el a Visual Studiót, majd hozzon létre egy új Visual C#-alapú konzolalkalmazás-projektet (.NET-keretrendszer).
 
-2.  Adja meg a projekt nevét, és igény szerint a további adatokat.
+2. Adja meg a projekt nevét, és igény szerint a további adatokat.
 
     <img src="media/aad-auth-cpp-new-console.png" width="624" height="433" alt="Creating a C# console app project in Visual Studio"  />
 
-3.  Adja hozzá a projekthez a Microsoft ADAL NuGet-csomagot a Megoldáskezelő segítségével.
+3. Adja hozzá a projekthez a Microsoft ADAL NuGet-csomagot a Megoldáskezelő segítségével.
 
-    1.  Kattintson a jobb gombbal a Megoldáskezelőre.
-    2.  Válassza a **Manage NuGet-Packages…** (NuGet-csomagok kezelése) &gt; **Browse** (Tallózás) lehetőséget.
-    3.  Válassza ki a `Microsoft.IdentityModel.Clients.ActiveDirectory` elemet, majd kattintson az **Install** (Telepítés) elemre.
+    1. Kattintson a jobb gombbal a Megoldáskezelőre.
+    2. Válassza a **Manage NuGet-Packages…** (NuGet-csomagok kezelése) &gt; **Browse** (Tallózás) lehetőséget.
+    3. Válassza ki a `Microsoft.IdentityModel.Clients.ActiveDirectory` elemet, majd kattintson az **Install** (Telepítés) elemre.
 
     <img src="media/aad-auth-cpp-install-package.png" width="624" height="458" alt="Selecting the Azure AD identity model module" />
 
-4.  A **Program.cs** fájl elejére illessze be a következő utasításokat:
+4. A **Program.cs** fájl elejére illessze be a következő utasításokat:
 
     ``` csharp
     using Microsoft.IdentityModel.Clients.ActiveDirectory;</p>
     using System.Net.Http;
     ```
 
-5.  Adjon meg egy metódust az engedélyezési fejléc létrehozásához:
+5. Adjon meg egy metódust az engedélyezési fejléc létrehozásához:
 
     ``` csharp
     private static async Task<string> GetAuthorizationHeader()
@@ -386,14 +386,14 @@ Az alábbi példa az Intune-fiókhoz társított eszközök C#-kód használatá
     }
     ```
 
-7.  Módosítsa a **Main** elemet úgy, hogy meghívja **GetMyManagedDevices** metódust:
+7. Módosítsa a **Main** elemet úgy, hogy meghívja **GetMyManagedDevices** metódust:
 
     ``` csharp
     string devices = GetMyManagedDevices().GetAwaiter().GetResult();
     Console.WriteLine(devices);
     ```
 
-8.  Fordítsa és futtassa a programot.  
+8. Fordítsa és futtassa a programot.  
 
 A program első futtatásánál két kérést kell kapnia.  Az első a hitelesítő adatokat kéri, a másodikkal pedig megadhatja az engedélyeket a `managedDevices` kérelemre.  
 
@@ -553,11 +553,11 @@ Ha a cége saját Azure AD-bérlővel rendelkező cégeket támogat, igény szer
 
 Ehhez tegye a következőket:
 
-1.  Ellenőrizze, hogy az ügyfélfiók létezik az céloldali Azure AD-bérlőn.
+1. Ellenőrizze, hogy az ügyfélfiók létezik az céloldali Azure AD-bérlőn.
 
-2.  Gondoskodjon róla, hogy az ügyfélfiók engedélyezze a felhasználóknak az alkalmazásregisztrációt (lásd: **Felhasználói beállítások**).
+2. Gondoskodjon róla, hogy az ügyfélfiók engedélyezze a felhasználóknak az alkalmazásregisztrációt (lásd: **Felhasználói beállítások**).
 
-3.  Létesítsen kapcsolatot az egyes bérlők között.  
+3. Létesítsen kapcsolatot az egyes bérlők között.  
 
     Ehhez tegye a következők egyikét:
 
@@ -567,15 +567,15 @@ Ehhez tegye a következőket:
 
 Így vehet fel vendégfelhasználót a bérlőre:
 
-1.  A **Gyors feladatok** panelen válassza a **Vendégfelhasználó felvétele** lehetőséget.
+1. A **Gyors feladatok** panelen válassza a **Vendégfelhasználó felvétele** lehetőséget.
 
     <img src="media/azure-ad-add-guest.png" width="448" height="138" alt="Use Quick Tasks to add a guest user" />
 
-2.  Adja meg az ügyfél e-mail-címét, és (igény szerint) írja be a személyes meghívó szövegét.
+2. Adja meg az ügyfél e-mail-címét, és (igény szerint) írja be a személyes meghívó szövegét.
 
     <img src="media/azure-ad-guest-invite.png" width="203" height="106" alt="Inviting an external user as a guest" />
 
-3.  Kattintson a **Meghívás** elemre.
+3. Kattintson a **Meghívás** elemre.
 
 Ezzel elküldi a meghívót a felhasználónak.
 

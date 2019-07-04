@@ -18,26 +18,26 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0c59646045f895df11bd465269ff5df13142d5ab
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 73e9c42f69517d145c797b13ae9fa5aa779ebc5d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529415"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546508"
 ---
 # <a name="what-happens-if-you-unenroll-your-android-device-from-intune"></a>Mi történik, ha törli egy Android-eszköz regisztrációját az Intune-ból?
 
 Miután törli az androidos eszköz regisztrációját az Intune-ból:
 
--   A cég informatikai támogatási szolgálata többé nem felügyeli az eszközt.
+- A cég informatikai támogatási szolgálata többé nem felügyeli az eszközt.
 
--   A továbbiakban nem fogja tudni elérni a vállalati adatokat és erőforrásokat.
+- A továbbiakban nem fogja tudni elérni a vállalati adatokat és erőforrásokat.
 
--   Az eszköz többé nem jelenik meg a vállalati portálon.
+- Az eszköz többé nem jelenik meg a vállalati portálon.
 
--   Többé nem telepíthet alkalmazásokat a vállalati portálról.
+- Többé nem telepíthet alkalmazásokat a vállalati portálról.
 
--   Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
+- Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
 
 Ha az eszköz csak vállalati e-mailek fogadására van beállítva, és törli az eszköz regisztrációját, az eszköz többé nem jelenik meg a Vállalati portálon.
 

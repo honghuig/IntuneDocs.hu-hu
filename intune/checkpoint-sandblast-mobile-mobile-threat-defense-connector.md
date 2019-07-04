@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ef0c4f5fd3f8c92d1d78ed37946663a127df440f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 7953fece6edad8a7fb3a0b46b1056c798c76c31e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530697"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547097"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense-összekötő az Intune-nal
 
@@ -45,11 +45,11 @@ Néhány gyakori helyzet:
 
 Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a rendszer, a probléma megoldásáig az eszközön letilthatók az alábbiak:
 
--   Hozzáférés a vállalati e-mailekhez
+- Hozzáférés a vállalati e-mailekhez
 
--   A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
+- A vállalati fájlok szinkronizálása a OneDrive for Work alkalmazással
 
--   Hozzáférés vállalati alkalmazásokhoz
+- Hozzáférés vállalati alkalmazásokhoz
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
@@ -85,18 +85,18 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 ## <a name="supported-platforms"></a>Támogatott platformok
 
--   **Android 4.1 és újabb verziók**
+- **Android 4.1 és újabb verziók**
 
--   **iOS 8 és újabb verziók**
+- **iOS 8 és újabb verziók**
 
 ## <a name="pre-requisites"></a>Előfeltételek
 
--   Prémium szintű Azure Active Directory
+- Prémium szintű Azure Active Directory
 
--   Microsoft Intune-előfizetés
+- Microsoft Intune-előfizetés
 
--   Check Point SandBlast Mobile Threat Defense-előfizetés
-    -   További információt a [CheckPoint SandBlast webhelyén](https://www.checkpoint.com/) találhat.
+- Check Point SandBlast Mobile Threat Defense-előfizetés
+    - További információt a [CheckPoint SandBlast webhelyén](https://www.checkpoint.com/) találhat.
 
 ## <a name="next-steps"></a>További lépések
 

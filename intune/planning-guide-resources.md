@@ -16,12 +16,12 @@ ms.reviewer: jeffbu, cgerth
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8e8e0f440377f40937145d78d3959318c21e6e5
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: e3ed61f556cadf3ba04f7c33fbede2102c94b18f
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046316"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549313"
 ---
 # <a name="additional-resources-for-planning-your-intune-deployment"></a>További erőforrások az Intune üzembe helyezésének megtervezéséhez
 
@@ -50,12 +50,12 @@ Az egyes szakaszokhoz használható táblázatsablonok listája:
 
 Itt további, az Intune üzembe helyezésének megtervezése, kialakítása és megvalósítása során hasznos információkat tartalmazó forrásokat találhat.
 
--   [A Microsoft Intune dokumentációja](/intune/) – A teljes Intune-dokumentáció.
+- [A Microsoft Intune dokumentációja](/intune/) – A teljes Intune-dokumentáció.
 
--   [Intune-blog](https://blogs.technet.microsoft.com/enterprisemobility/) – Blogbejegyzések arról, hogyan illeszkedik az Intune az nagyvállalati mobilitás egészébe.
+- [Intune-blog](https://blogs.technet.microsoft.com/enterprisemobility/) – Blogbejegyzések arról, hogyan illeszkedik az Intune az nagyvállalati mobilitás egészébe.
 
--   [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – Tájékozódhat arról, milyen módon közelíti meg a Microsoft a biztonságot, az adatvédelmet, a megfelelőséget és az átláthatóságot a Microsoft összes felhőalapú termékében és szolgáltatásában.
+- [Microsoft Trust Center](http://www.microsoft.com/TrustCenter) – Tájékozódhat arról, milyen módon közelíti meg a Microsoft a biztonságot, az adatvédelmet, a megfelelőséget és az átláthatóságot a Microsoft összes felhőalapú termékében és szolgáltatásában.
 
--   [Intune User Voice](http://microsoftintune.uservoice.com/) – Új funkciókat szeretne, vagy más ügyfelekkel együtt szavazna az egyes funkciókra? Az Intune-nal kapcsolatos visszajelzéseit elküldheti a User Voice-on keresztül. Figyelünk a véleményére.
+- [Intune User Voice](http://microsoftintune.uservoice.com/) – Új funkciókat szeretne, vagy más ügyfelekkel együtt szavazna az egyes funkciókra? Az Intune-nal kapcsolatos visszajelzéseit elküldheti a User Voice-on keresztül. Figyelünk a véleményére.
 
--   [Regisztrálási útmutató](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) – Módosítható, de változtatás nélkül is felhasználható dokumentumok, amelyeket végfelhasználóknak szóló kommunikációban használhat. A dokumentumok azt ismertetik, mit jelent az, ha a felhasználó személyes eszközeit az Intune-ban regisztrálja.
+- [Regisztrálási útmutató](https://gallery.technet.microsoft.com/Intune-End-User-Enrollment-3a0c9b0c?WT.mc_id=Blog_Intune_General_PCIT) – Módosítható, de változtatás nélkül is felhasználható dokumentumok, amelyeket végfelhasználóknak szóló kommunikációban használhat. A dokumentumok azt ismertetik, mit jelent az, ha a felhasználó személyes eszközeit az Intune-ban regisztrálja.

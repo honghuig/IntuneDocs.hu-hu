@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dc83a5dbcf4d4c8bfd2c9714da4e3a213c7752e3
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 328ec3111aae5f8363f2743d423a56eafc47d765
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528941"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546252"
 ---
 # <a name="sync-your-windows-device-manually"></a>Windows-eszköz manuális szinkronizálása
 
@@ -41,9 +41,9 @@ Minden Windows-eszköz szinkronizálható az eszköz Beállítások alkalmazás�
 ## <a name="sync-directly-from-company-portal-app-for-windows"></a>Szinkronizálás közvetlenül a windowsos Céges portál alkalmazásból
 Az alkotói frissítést (1703) vagy újabb verziót futtató Windows 10-es eszközök manuális szinkronizálásához kövesse az alábbi lépéseket.
 
-1.  Nyissa meg az eszközén a Céges portál alkalmazást.
+1. Nyissa meg az eszközén a Céges portál alkalmazást.
 
-2.  Válassza a **Beállítások** > **Szinkronizálás** lehetőséget.
+2. Válassza a **Beállítások** > **Szinkronizálás** lehetőséget.
 
     ![Képernyőkép a Céges portál alkalmazásról, kiemelt Beállítások elemmel](./media/RS1_homePage_settings_04.png)  
     
@@ -96,7 +96,7 @@ A Microsoft HoloLenses, Windows 10 asztali verziós, Windows 10 Mobile-os vagy W
 
 #### <a name="work-access-steps"></a>Munkahelyi hozzáférés – lépések
 
-1.  Kattintson a **Munkahelyi hozzáférés** elemre.
+1. Kattintson a **Munkahelyi hozzáférés** elemre.
 
     ![Munkahelyi hozzáférés kiválasztása a fiók típusaként](./media/win10pc-sync-3-work-access.png)
 
@@ -128,12 +128,12 @@ A Microsoft HoloLenses, Windows 10 asztali verziós, Windows 10 Mobile-os vagy W
        ![Kattintás a Szinkronizálás ikonra](./media/win10m-sync-4-tap-sync.png)  
 ### <a name="microsoft-hololens"></a>Microsoft HoloLens  
 Ezek az utasítások a Windows 10 évforduló frissítés (más néven RS1-et) futtató HoloLens-eszközökre vonatkoznak. 
-1.  Nyissa meg a Beállítások alkalmazást az eszközön.  
+1. Nyissa meg a Beállítások alkalmazást az eszközön.  
 
-2.  Kattintson a **Fiókok** > **Munkahelyi hozzáférés** elemre.  
+2. Kattintson a **Fiókok** > **Munkahelyi hozzáférés** elemre.  
     ![Képernyőkép a HoloLens beállítások alkalmazásáról, kiemelt Fiókok hivatkozással](./media/RS1_holoLens_SettingsRS1_Accounts_06.png)  
 
-3.  Válassza ki a csatlakoztatott fiókot, majd válassza a **Szinkronizálás** lehetőséget. ![Képernyőkép a HoloLens beállítások alkalmazásáról, kiemelt szinkronizálás gombbal](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
+3. Válassza ki a csatlakoztatott fiókot, majd válassza a **Szinkronizálás** lehetőséget.  ![Képernyőkép a HoloLens beállítások alkalmazásáról, kiemelt szinkronizálás gombbal](./media/RS1_holoLens_SyncRS1_Sync_08.png)  
 
 ### <a name="windows-phone-81"></a>Windows Phone 8.1
 

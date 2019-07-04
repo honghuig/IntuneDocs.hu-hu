@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c279e21abf47d6ec067f3c75b36ecc7b58681e7e
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 007c84e3bfeac79d2223ea211cbb9f9c97e80475
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044397"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548378"
 ---
 # <a name="create-a-design"></a>Terv létrehozása
 
 Az Intune-terv [az útmutató más szakaszainak](planning-guide.md) követése közben gyűjtött adatokon és meghozott döntéseken alapul. Az alábbiak összefogásában nyújt segítséget:
 
--   Aktuális környezet
+- Aktuális környezet
 
--   Intune-telepítési lehetőségek
+- Intune-telepítési lehetőségek
 
--   Külső függőségek identitáskövetelményei
+- Külső függőségek identitáskövetelményei
 
--   Eszközplatformmal kapcsolatos szempontok
+- Eszközplatformmal kapcsolatos szempontok
 
--   Teljesítendő követelmények  
+- Teljesítendő követelmények  
 
 Bár a helyszíni infrastruktúrával kapcsolatban csak minimális mennyiségű követelményt támasztunk, egy terv készítése mégis segíthet abban, hogy biztosan a saját céljainak és követelményeinek megfelelő mobileszköz-felügyeleti megoldás legyen a végeredmény.
 
@@ -47,49 +47,49 @@ Ezenfelül gyakorta előfordul, hogy az implementálási vagy a tesztelési fáz
 
 A környezet ugyanis befolyásolhatja a tervezési döntéseket, ezért azt dokumentálni kell, és figyelembe kell venni a többi Intune-tervezési döntés meghozatalakor. Alább néhány, az aktuális környezet dokumentálásával kapcsolatos példát olvashat:
 
--   **Felhőbeli identitás**
+- **Felhőbeli identitás**
 
-    -   Használják-e a DirSync vagy az Azure Active Directory (Azure AD) Connect szoftvert?
+    - Használják-e a DirSync vagy az Azure Active Directory (Azure AD) Connect szoftvert?
 
-    -   Összevont-e a környezet?
+    - Összevont-e a környezet?
 
-    -   Engedélyezve van-e a többtényezős hitelesítés (MFA)?
+    - Engedélyezve van-e a többtényezős hitelesítés (MFA)?
 
--   **E-mail-környezet**
+- **E-mail-környezet**
 
-    -   Használnak Exchange-et? Helyszíni vagy felhőbeli megoldásban?
+    - Használnak Exchange-et? Helyszíni vagy felhőbeli megoldásban?
 
-    -   Folyamatban van-e az Exchange felhőbe való migrálása?
+    - Folyamatban van-e az Exchange felhőbe való migrálása?
 
--   **Az aktuális mobileszköz-felügyeleti (MDM) megoldás**
+- **Az aktuális mobileszköz-felügyeleti (MDM) megoldás**
 
-    -   Használnak-e jelenleg más MDM-megoldásokat?
+    - Használnak-e jelenleg más MDM-megoldásokat?
 
-    -   Milyen MDM-megoldást használnak a vállalati, illetve a személyes tulajdonú eszközök esetében?
+    - Milyen MDM-megoldást használnak a vállalati, illetve a személyes tulajdonú eszközök esetében?
 
-    -   Milyen képességeket használnak (például alkalmazások eszközbeállításai, Wi-Fi konfigurációk)?
+    - Milyen képességeket használnak (például alkalmazások eszközbeállításai, Wi-Fi konfigurációk)?
 
-    -   Milyen eszközplatformokat támogatnak?
+    - Milyen eszközplatformokat támogatnak?
 
-    -   Hány felhasználó használja az MDM-megoldást, és milyen csoportokra vannak tagolva?
+    - Hány felhasználó használja az MDM-megoldást, és milyen csoportokra vannak tagolva?
 
--   **Tanúsítványmegoldás**
+- **Tanúsítványmegoldás**
 
-    -   Van-e használatban tanúsítványmegoldás?
+    - Van-e használatban tanúsítványmegoldás?
 
-    -   Milyen típusú tanúsítványokat használnak?
+    - Milyen típusú tanúsítványokat használnak?
 
--   **Rendszerfelügyelet**
+- **Rendszerfelügyelet**
 
-    -   Hogyan felügyelik a PC-s és a kiszolgálói környezetet?
+    - Hogyan felügyelik a PC-s és a kiszolgálói környezetet?
 
-    -   Használják-e a System Center Configuration Managert? Használnak-e külső gyártótól származó rendszerfelügyeleti platformot?
+    - Használják-e a System Center Configuration Managert? Használnak-e külső gyártótól származó rendszerfelügyeleti platformot?
 
--   **VPN-megoldás**
+- **VPN-megoldás**
 
-    -   Milyen VPN-megoldást használnak?
+    - Milyen VPN-megoldást használnak?
 
-    -   Használják-e a vállalati, illetve a személyes tulajdonú eszközök esetében is?
+    - Használják-e a vállalati, illetve a személyes tulajdonú eszközök esetében is?
 
 Az aktuális MDM-környezet dokumentálásakor mindenképpen jegyezze fel azokat a projekteket és más érvényben lévő terveket, amelyek hatással lehetnek a környezetre. Alább egy példával szemléltetjük, hogyan lehet dokumentálni az aktuális környezetet az Intune-terv elkészítéséhez:
 
@@ -118,11 +118,11 @@ Az Intune kétféle telepítési lehetőséget kínál, ezek az önálló és a 
 
 A globálisan jelen lévő vállalatoknak a szolgáltatásra való előfizetéskor célszerű megtervezniük, hogy hol tartják a bérlőjüket. Az ország az első Intune-előfizetésre való regisztráláskor lesz definiálva, és az alább felsorolt régiókban helyezkedhet el:
 
--   Észak-Amerika
+- Észak-Amerika
 
--   Európa, Közel-Kelet és Afrika
+- Európa, Közel-Kelet és Afrika
 
--   Ázsia és a Csendes-óceáni térség
+- Ázsia és a Csendes-óceáni térség
 
 >[!IMPORTANT]
 > Az országot és a bérlő helyét később nem lehet módosítani.
@@ -131,11 +131,11 @@ A globálisan jelen lévő vállalatoknak a szolgáltatásra való előfizetésk
 
 A külső függőségek olyan szolgáltatások és termékek, amelyek ugyan nem részei az Intune-nak, de vagy követelményei, vagy integrálódhatnak vele. Fontos feltérképezni az esetleges külső függőségekkel kapcsolatos követelményeket és azok konfigurációs sajátságait is. Néhány példa a gyakoribb külső függőségekre:
 
--   Identitás
+- Identitás
 
--   Felhasználói és eszközcsoportok
+- Felhasználói és eszközcsoportok
 
--   Nyilvános kulcsú infrastruktúra (PKI)
+- Nyilvános kulcsú infrastruktúra (PKI)
 
 Az alábbiakban a gyakoribb külső függőségekre részletesebben tárgyaljuk.
 
@@ -157,9 +157,9 @@ A felhasználói és eszközcsoportok határozzák meg a telepített környezet 
 
 A helyszíni Active Directoryban célszerű létrehoznia az összes csoportot, majd szinkronizálnia azokat az Azure Active Directoryba. További tudnivalók a felhasználói és eszközcsoportok megtervezéséről és létrehozásáról:
 
--   [A felhasználói és eszközcsoportok megtervezése](users-add.md).
+- [A felhasználói és eszközcsoportok megtervezése](users-add.md).
 
--   [A felhasználói és eszközcsoportok létrehozása](groups-add.md).
+- [A felhasználói és eszközcsoportok létrehozása](groups-add.md).
 
 ### <a name="public-key-infrastructure-pki"></a>Nyilvános kulcsú infrastruktúra (PKI)
 A nyilvános kulcsú infrastruktúra tanúsítványokat szolgáltat, amelyekkel az eszközök vagy a felhasználók biztonságosan hitelesíthetik magukat egy szolgáltatásban. Az Intune a Microsoft PKI-infrastruktúráit támogatja. A mobileszközökhöz a tanúsítványalapú hitelesítés követelményeinek való megfelelés érdekében felhasználói és eszköztanúsítványokat is ki lehet állítani. A tanúsítványok használata előtt meg kell állapítani, hogy szüksége van-e tanúsítványokra, a hálózati infrastruktúra támogatja-e a tanúsítványalapú hitelesítést, és hogy a jelenlegi környezetben használnak-e tanúsítványokat.
@@ -170,11 +170,11 @@ Emellett SCEP-tanúsítványok kiállítása esetén azt is el kell dönteni, ho
 
 További információk az alábbiakról:
 
--   [Intune-tanúsítványprofilok konfigurálása](certificates-configure.md)
+- [Intune-tanúsítványprofilok konfigurálása](certificates-configure.md)
 
--   [SCEP-tanúsítványinfrastruktúra konfigurálása](certificates-scep-configure.md)
+- [SCEP-tanúsítványinfrastruktúra konfigurálása](certificates-scep-configure.md)
 
--   [PFX-tanúsítványinfrastruktúra konfigurálása](certficates-pfx-configure.md)
+- [PFX-tanúsítványinfrastruktúra konfigurálása](certficates-pfx-configure.md)
 
 
 
@@ -183,13 +183,13 @@ További információk az alábbiakról:
 
 Csak az eszközökkel kapcsolatos alábbi szempontok alaposabb ismeretében lehet jól megérteni a helyes konfigurálásuk mikéntjét.
 
--   Támogatott eszközplatformok
+- Támogatott eszközplatformok
 
--   Eszközök
+- Eszközök
 
--   Az eszközök tulajdonjoga
+- Az eszközök tulajdonjoga
 
--   Tömeges regisztrálás
+- Tömeges regisztrálás
 
 Vizsgáljuk meg ezeket a területeket részletesebben.
 
@@ -226,17 +226,17 @@ Tekintse meg [3. szakasz: Használatieset-forgatókönyvek követelményeinek me
 
 Ezekben a szakaszokban a következő, a használatieset-forgatókönyvek követelményeihez kapcsolódó funkciókat és képességeket vizsgáljuk meg:
 
--   Használati feltételekkel kapcsolatos szabályzatok
+- Használati feltételekkel kapcsolatos szabályzatok
 
--   Konfigurációs szabályzatok
+- Konfigurációs szabályzatok
 
--   Erőforrás-profilok
+- Erőforrás-profilok
 
--   Alkalmazások
+- Alkalmazások
 
--   Megfelelőségi szabályzat
+- Megfelelőségi szabályzat
 
--   Feltételes hozzáférés
+- Feltételes hozzáférés
 
 Vizsgáljuk meg ezeket a területeket részletesebben.
 
@@ -274,13 +274,13 @@ A saját konfigurációs szabályzatainak meghatározásához [letöltheti a fen
 
 A végfelhasználók profilok segítségével kapcsolódnak a vállalati adatokhoz. Az Intune számos profiltípust támogat. A profilok konfigurálásával kapcsolatos döntéseket a használati esetek és követelményeik alapján hozza meg. Az eszközprofilok platformtípusok szerint vannak kategóriákba sorolva, és célszerű belefoglalni őket a tervdokumentációba.
 
--   Tanúsítványprofilok
+- Tanúsítványprofilok
 
--   Wi-Fi profil
+- Wi-Fi profil
 
--   VPN-profil
+- VPN-profil
 
--   E-mail-profil
+- E-mail-profil
 
 Vizsgáljuk meg ezeket a profiltípusokat részletesebben.
 
@@ -288,11 +288,11 @@ Vizsgáljuk meg ezeket a profiltípusokat részletesebben.
 
 Az Intune a tanúsítványprofilok alapján bocsát ki tanúsítványokat a felhasználók és eszközök számára. Az Intune a következő típusokat támogatja:
 
--   SCEP protokoll
+- SCEP protokoll
 
--   Megbízható főtanúsítvány
+- Megbízható főtanúsítvány
 
--   PFX-tanúsítvány
+- PFX-tanúsítvány
 
 Ajánlott dokumentálnia, hogy mely felhasználói csoportoknak van szüksége tanúsítványra, hány tanúsítványprofilra lesz szükség, és mely felhasználói csoportokhoz kell őket telepíteni.
 
@@ -353,27 +353,27 @@ A saját e-mail-profiljainak meghatározásához [letöltheti a fenti táblázat
 
 Az Intune-nal többféleképpen is eljuttathat alkalmazásokat a felhasználókhoz vagy az eszközökre. Az alkalmazás többek között szoftvertelepítő, nyilvános alkalmazás-áruházból származó vagy külső hivatkozással elérhető alkalmazás, illetve felügyelt iOS-alkalmazás lehet. Az egyesével történő alkalmazástelepítésen felül a mennyiségi licencelésű alkalmazásokat az iOS és a Windows mennyiségi licencelési programjai keretében is felügyelheti és telepítheti. További információk:
 
--   [Az eljuttatható alkalmazások típusai](app-management.md)
+- [Az eljuttatható alkalmazások típusai](app-management.md)
 
--   [iOS Volume Purchase Program for Business (VPP)](vpp-apps-ios.md)
+- [iOS Volume Purchase Program for Business (VPP)](vpp-apps-ios.md)
 
--   [Vállalati Microsoft Áruházbeli alkalmazások](windows-store-for-business.md)
+- [Vállalati Microsoft Áruházbeli alkalmazások](windows-store-for-business.md)
 
 #### <a name="app-type-requirements"></a>Alkalmazástípusok követelményei
 
 Mivel az alkalmazásokat felhasználók és eszközök számára is lehet telepíteni, célszerű eldöntenie, hogy mely alkalmazásokat felügyelje az Intune. A lista összeállításakor igyekezzen megválaszolni a következő kérdéseket:
 
--   Igényelnek-e az alkalmazások integrációt a felhőszolgáltatásokkal?
+- Igényelnek-e az alkalmazások integrációt a felhőszolgáltatásokkal?
 
--   Minden alkalmazás elérhető lesz a BYOD-felhasználók számára?
+- Minden alkalmazás elérhető lesz a BYOD-felhasználók számára?
 
--   Milyen telepítési lehetőségek állnak rendelkezésre az alkalmazásokhoz?
+- Milyen telepítési lehetőségek állnak rendelkezésre az alkalmazásokhoz?
 
--   Kell-e a vállalatnak szolgáltatottszoftver-adatokhoz hozzáférést biztosítania a partnerek számára?
+- Kell-e a vállalatnak szolgáltatottszoftver-adatokhoz hozzáférést biztosítania a partnerek számára?
 
--   Igényelnek-e az alkalmazások internet-hozzáférést a felhasználói eszközökön?
+- Igényelnek-e az alkalmazások internet-hozzáférést a felhasználói eszközökön?
 
--   Elérhetők-e az alkalmazások nyilvánosan valamilyen alkalmazás-áruházban, vagy egyedi üzletági (LOB-) alkalmazások?
+- Elérhetők-e az alkalmazások nyilvánosan valamilyen alkalmazás-áruházban, vagy egyedi üzletági (LOB-) alkalmazások?
 
 
 #### <a name="app-protection-policies"></a>Alkalmazásvédelmi szabályzatok
@@ -407,7 +407,7 @@ Feltételes hozzáférés segítségével csak megfelelő eszközök férhessene
 
 Online elérés döntse el, mely platformok és felhasználói csoportokra fog céljaként feltételes hozzáférési szabályzatok. Emellett határozza meg, hogy kell telepíteni vagy konfigurálni az Intune-összekötő a helyszíni Exchange: 
 
--   [Helyszíni Exchange](exchange-connector-install.md)
+- [Helyszíni Exchange](exchange-connector-install.md)
 
 A következő példa bemutatja, hogyan dokumentum feltételes hozzáférési szabályzatok:
 

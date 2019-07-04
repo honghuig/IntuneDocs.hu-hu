@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 64349d2e4c681bf0fac8cf231085cc63e42ffc62
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: c654b8e05cabf132324e8dafe70e5991a67bd516
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041465"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548332"
 ---
 # <a name="develop-a-support-plan"></a>Támogatási terv kidolgozása
 
 Ha rendelkezik Intune-támogatási tervvel, akkor hatékonyabban tudja azonosítani és megoldani az Intune-nal kapcsolatos problémákat. Ennek hatására javul a felhasználók Intune-nal kapcsolatos általános élménye. Az Intune támogatási terv kidolgozásakor az alábbi kérdéseket érdemes figyelembe venni:
 
--   Mely csoportoknak lesz a feladata Intune-támogatást nyújtani?
+- Mely csoportoknak lesz a feladata Intune-támogatást nyújtani?
 
--   Milyen lesz az Intune-támogatás folyamata?
+- Milyen lesz az Intune-támogatás folyamata?
 
--   Hogyan valósulnak meg az Intune-támogatási képzések?
+- Hogyan valósulnak meg az Intune-támogatási képzések?
 
--   Mennyire vonható be a támogatási csoport az Intune üzembe helyezési folyamatának korai szakaszában?
+- Mennyire vonható be a támogatási csoport az Intune üzembe helyezési folyamatának korai szakaszában?
 
 Az alábbiakban mindegyik kérdést részletesen is megvizsgáljuk.
 
@@ -50,23 +50,23 @@ További információk az [Intune-támogatásról](/intune/get-support).
 
 A bevezetési fázis kezdetén mindhárom szintet bevonhatja egy konferencia- vagy Skype-beszélgetés során. Az alábbi példa azt mutatja be, miképpen szervezhető meg egy vállalatnál az informatikai támogatás vagy segélyszolgálat munkafolyamata:
 
-1.  A végfelhasználó regisztrálási problémával fordul az informatikai támogatás vagy segélyszolgálat 1. szintjéhez.
+1. A végfelhasználó regisztrálási problémával fordul az informatikai támogatás vagy segélyszolgálat 1. szintjéhez.
 
-2.  Az informatikai támogatás vagy segélyszolgálat 1. szintje nem tudja megállapítani a hiba okát, és a problémát a 2. szintre küldi.
+2. Az informatikai támogatás vagy segélyszolgálat 1. szintje nem tudja megállapítani a hiba okát, és a problémát a 2. szintre küldi.
 
-3.  Az informatikai támogatás vagy segélyszolgálat 2. szintje megvizsgálja a problémát, de nem talál megoldást, így a 3. szintre küldi azt, miközben további információkat nyújt a probléma kivizsgálásához.
+3. Az informatikai támogatás vagy segélyszolgálat 2. szintje megvizsgálja a problémát, de nem talál megoldást, így a 3. szintre küldi azt, miközben további információkat nyújt a probléma kivizsgálásához.
 
-4.  Az informatikai támogatás vagy segélyszolgálat 3. szintje további vizsgálatot folytat, megállapítja a probléma okát, és tájékoztatja a 2. és az 1. szintet a megoldásról.
+4. Az informatikai támogatás vagy segélyszolgálat 3. szintje további vizsgálatot folytat, megállapítja a probléma okát, és tájékoztatja a 2. és az 1. szintet a megoldásról.
 
-5.  Az informatikai támogatás vagy segélyszolgálat 1. szintje kapcsolatba lép az ügyféllel, és megoldja a problémát.
+5. Az informatikai támogatás vagy segélyszolgálat 1. szintje kapcsolatba lép az ügyféllel, és megoldja a problémát.
 
 Az ilyen megközelítés – különösen az Intune bevezetésének korai fázisában – számos előnnyel jár, többek között ezekkel:
 
--   A technológiai tanulás és tudásszint-emelés elősegítése.
+- A technológiai tanulás és tudásszint-emelés elősegítése.
 
--   A problémák és megoldásaik gyors azonosítása.
+- A problémák és megoldásaik gyors azonosítása.
 
--   Az általános felhasználói élmény javítása.
+- Az általános felhasználói élmény javítása.
 
 ## <a name="how-you-plan-to-provide-intune-support-training"></a>Hogyan valósulnak meg az Intune-támogatási képzések?
 
@@ -74,15 +74,15 @@ Fontos, hogy az informatikai támogatás vagy segélyszolgálat tagjai az Intune
 
 Alább bemutatunk egy példát egy Intune-támogatási képzés programtervére.
 
--   Az Intune-támogatási terv áttekintése
+- Az Intune-támogatási terv áttekintése
 
--   Az Intune áttekintése
+- Az Intune áttekintése
 
--   Gyakori problémák elhárítása
+- Gyakori problémák elhárítása
 
--   Eszközök és források
+- Eszközök és források
 
--   Kérdések és válaszok
+- Kérdések és válaszok
 
 Az [Intune dokumentációja](https://docs.microsoft.com/intune/) áttekintést nyújt az Intune-ról, részletes funkcióleírást és néhány hibaelhárítási információt tartalmaz. Az [Intune-fórum](https://social.technet.microsoft.com/Forums/home) egy közösségen alapuló erőforrás az Intune dokumentációjában nem szereplő kérdések és témakörök megbeszéléséhez.
 

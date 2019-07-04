@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 23476383abfddabffc411afa286c97b30ef04439
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: dc7b7cdc4388051761eafac322171e4c30075923
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040976"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549178"
 ---
 # <a name="reference-for-policy-entities"></a>Szabályzat típusú entitások referenciája
 
 A **Szabályzat**kategória mobileszközökhöz tartozó entitásokat tartalmaz, amelyek információt gyűjtenek, például:
 
-  -  Az eszköz- és alkalmazáskonfigurációs profilok, valamint a megfelelőségi szabályzatok készlete  
-  -  A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma naponta  
-  -  A sikeres, függő, sikertelen vagy hibás állapotú felhasználók száma naponta  
-  -  A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma összesen  
+  - Az eszköz- és alkalmazáskonfigurációs profilok, valamint a megfelelőségi szabályzatok készlete  
+  - A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma naponta  
+  - A sikeres, függő, sikertelen vagy hibás állapotú felhasználók száma naponta  
+  - A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma összesen  
 
 ## <a name="policy"></a>Házirend
 

@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c7265eb7b4679d72fa6ab348c17f9f4f7508482e
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: f6e73b784f0e938058dcb9d6001082f86ac800ff
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504995"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545665"
 ---
 # <a name="your-computer-is-already-enrolled"></a>A számítógép már regisztrálva van
 
@@ -31,11 +31,11 @@ Ha arra vonatkozó hibaüzenetet kap, hogy a számítógépét már regisztrált
 
 A számítógép összekapcsolása:
 
-1.  A fiókkal összekapcsolni kívánt számítógépen kattintson a **Start** gombra, majd a **Microsoft Intune Center** lehetőségre.
+1. A fiókkal összekapcsolni kívánt számítógépen kattintson a **Start** gombra, majd a **Microsoft Intune Center** lehetőségre.
 
-2.  Nyissa meg a Céges portált.
+2. Nyissa meg a Céges portált.
 
-3.  A képernyőn megjelenő utasításokat követve kapcsolja össze számítógépét a felhasználói fiókjával.
+3. A képernyőn megjelenő utasításokat követve kapcsolja össze számítógépét a felhasználói fiókjával.
 
 Ha szeretné az eszköz regisztrációját, kövesse az utasításokat a használt eszköz típusának: [Android](unenroll-your-device-from-intune-android.md), [iOS](unenroll-your-device-from-intune-ios.md), vagy [Windows](unenroll-your-device-from-intune-windows.md).
 

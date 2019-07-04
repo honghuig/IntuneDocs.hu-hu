@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: c19c02c8d4c9ece66d03b3510071bb90e7f35ad3
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: e9b32b7b7bc3bfa7735a7e4437e8238630e56884
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047520"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548769"
 ---
 # <a name="help-secure-windows-pcs-with-endpoint-protection-for-microsoft-intune"></a>Windows rendszerű számítógépek biztonságossá tétele a Microsoft Intune-hoz készült Endpoint Protection szolgáltatással
 
@@ -46,15 +46,15 @@ Rendszergazdaként egyik legfontosabb feladata, hogy biztosítsa, hogy az Ön á
 
 Az aktuálisan használt végpontvédelmi alkalmazásról a Microsoft Intune Endpoint Protection szolgáltatásra való áttéréshez tegye a következőket:
 
-1.  Az Intune-ügyfélszoftvernek az ügyfélszámítógépekre való telepítése közben ne állítsa le az aktuálisan használt végpontvédelmi alkalmazást.
+1. Az Intune-ügyfélszoftvernek az ügyfélszámítógépekre való telepítése közben ne állítsa le az aktuálisan használt végpontvédelmi alkalmazást.
 
-2.  Győződjön meg arról, hogy a Microsoft Intune Endpoint Protection telepítve lett, és már védi az ügyfélszámítógépeket.
+2. Győződjön meg arról, hogy a Microsoft Intune Endpoint Protection telepítve lett, és már védi az ügyfélszámítógépeket.
 
-3.  Távolítsa el a külső gyártó végpontvédelmi szoftverét a következőképpen:
+3. Távolítsa el a külső gyártó végpontvédelmi szoftverét a következőképpen:
 
-    -   A külső végpontvédelmi alkalmazás gyártója által biztosított szoftvereltávolító eszköz telepítése az Intune szoftverterjesztés funkciójával. További információk: [Alkalmazások központi telepítése a Microsoft Intune-nal](apps-deploy.md).
+    - A külső végpontvédelmi alkalmazás gyártója által biztosított szoftvereltávolító eszköz telepítése az Intune szoftverterjesztés funkciójával. További információk: [Alkalmazások központi telepítése a Microsoft Intune-nal](apps-deploy.md).
 
-    -   A külső gyártótól származó végpontvédelmi alkalmazás manuális eltávolításával.
+    - A külső gyártótól származó végpontvédelmi alkalmazás manuális eltávolításával.
 
 > [!NOTE]
 > Az Intune nem végzi el automatikusan a külső gyártótól származó végpontvédelmi alkalmazások eltávolítását.
@@ -62,9 +62,9 @@ Az aktuálisan használt végpontvédelmi alkalmazásról a Microsoft Intune End
 ## <a name="configure-microsoft-intune-endpoint-protection"></a>A Microsoft Intune Endpoint Protection konfigurálása
 A Microsoft Intune Endpoint Protection konfigurálásához hajtsa végre a következő lépéseket.
 
-1.  A [Microsoft Intune felügyeleti konzoljában](https://manage.microsoft.com/) válassza a **Házirend** > **Házirend hozzáadása** lehetőséget.
+1. A [Microsoft Intune felügyeleti konzoljában](https://manage.microsoft.com/) válassza a **Házirend** > **Házirend hozzáadása** lehetőséget.
 
-2.  Bontsa ki a **Számítógép-kezelés** elemet, és válassza ki **A Microsoft Intune-ügynök beállításai** elemet. Válassza az **Egyéni házirend létrehozása és központi telepítése** lehetőséget az Endpoint Protection-beállítások házirendjének megadásához. Ezután kattintson a **Házirend létrehozása** gombra.
+2. Bontsa ki a **Számítógép-kezelés** elemet, és válassza ki **A Microsoft Intune-ügynök beállításai** elemet. Válassza az **Egyéni házirend létrehozása és központi telepítése** lehetőséget az Endpoint Protection-beállítások házirendjének megadásához. Ezután kattintson a **Házirend létrehozása** gombra.
 
 Használhatja az ajánlott beállításokat, vagy testre is szabhatja azokat. Ha szeretne többet megtudni a házirendek létrehozásával és alkalmazásával kapcsolatban, olvassa el [A Windows rendszerű számítógépek a Microsoft Intune számítógépügyféllel való felügyeletének általános feladatai](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md) című témakört.
 
@@ -168,7 +168,7 @@ A [Microsoft Intune felügyeleti konzol](https://manage.microsoft.com/) **Védel
   - **Számítógépek követő műveletet igénylő kártevő szoftverrel** – a hivatkozásra kattintva megtekintheti az összes, megoldatlan kártevőproblémával rendelkező számítógépet és a problémák elhárításához szükséges utólagos műveleteket.
   - **Védtelen eszközök** – a hivatkozásra kattintva megtekintheti azokat a számítógépeket, amelyek semmilyen végpontvédelmi szoftverrel nincsenek védve, mert nincs rajtuk telepítve szoftver, vagy mert hiba történt. Egy számítógépet kijelölve megtekintheti annak további részleteit.
   - **Más végpontvédelmi alkalmazást futtató eszközök** – a hivatkozásra kattintva megtekintheti a külső gyártótól származó végpontvédelmi alkalmazást futtató számítógépeket.
-- **Minden kártevő** – A számítógépeken talált összes aktív kártevő listáját jeleníti meg. A lista tovább részletezhető valamely adott kártevő szoftver által érintett összes számítógép listájának megtekintéséhez, vagy választhat az alábbi műveletek közül:
+- **Minden kártevő** – a számítógépeken talált összes aktív kártevő listáját jeleníti meg. A lista tovább részletezhető valamely adott kártevő szoftver által érintett összes számítógép listájának megtekintéséhez, vagy választhat az alábbi műveletek közül:
   - **Tulajdonságok megtekintése** – a kijelölt kártevő további adatait tartalmazó oldal megnyitása.
   - **További tudnivalók erről a kártevő szoftverről** – a Microsoft kártevőkezelési központ a kártevővel kapcsolatos további információkat tartalmazó témakörének megnyitása.
 

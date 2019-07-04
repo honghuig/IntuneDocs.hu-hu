@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 59432baf0e8120cc7280b3486c4c25388a4248b4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 8ebae39c529571c5f926debcf64b46d6399d770f
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67403762"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547939"
 ---
 # <a name="resolve-group-policy-objects-gpo-and-microsoft-intune-policy-conflicts"></a>Csoportházirend-objektumok (GPO) és Microsoft Intune-szabályzatütközések feloldása
 
@@ -38,11 +38,11 @@ Az Intune szabályzatai megkönnyítik a Windows-számítógépek beállításai
 ## <a name="what-to-do-if-you-are-using-group-policy"></a>Mi a teendő a Csoportházirend használata esetén?
 Győződjön meg róla, hogy az Ön által alkalmazott szabályzatok nem állnak-e csoportházirend felügyelete alatt. Az ütközések megelőzése érdekében használjon egyet vagy többet az alábbi módszerek közül:
 
--   Helyezze át a számítógépeket egy olyan Active Directory-beli szervezeti egységbe (OU-ba), amelyre nem lettek alkalmazva csoportházirend-beállítások az Intune ügyfél telepítése előtt. Letilthatja továbbá a csoportházirend-öröklést azon szervezeti egységek esetében, amelyek olyan Intune-ban regisztrált számítógépeket tartalmaznak, amelyeken nem kívánja alkalmazni a csoportházirend-beállításokat.
+- Helyezze át a számítógépeket egy olyan Active Directory-beli szervezeti egységbe (OU-ba), amelyre nem lettek alkalmazva csoportházirend-beállítások az Intune ügyfél telepítése előtt. Letilthatja továbbá a csoportházirend-öröklést azon szervezeti egységek esetében, amelyek olyan Intune-ban regisztrált számítógépeket tartalmaznak, amelyeken nem kívánja alkalmazni a csoportházirend-beállításokat.
 
--   Biztonságicsoport-szűrő használatával korlátozza a csoportházirend-objektumok alkalmazását kizárólag az Intune által nem kezelt számítógépekre.
+- Biztonságicsoport-szűrő használatával korlátozza a csoportházirend-objektumok alkalmazását kizárólag az Intune által nem kezelt számítógépekre.
 
--   Tiltsa le vagy távolítsa el az Intune szabályzataival ütköző csoportházirend-objektumokat.
+- Tiltsa le vagy távolítsa el az Intune szabályzataival ütköző csoportházirend-objektumokat.
 
 Az Active Directoryról és a Windows csoportházirendjéről további információt a Windows Server dokumentációjában talál.
 
@@ -54,7 +54,7 @@ WMI filters selectively apply GPOs to computers that satisfy the conditions of a
 
 #### To apply WMI filters to a GPO
 
-1.  Create a management object file by copying and pasting the following into a text file, and then saving it to a convenient location as **WIT.mof**. The file contains the WMI class instance that you deploy to PCs that you want to enroll in the Intune service.
+1. Create a management object file by copying and pasting the following into a text file, and then saving it to a convenient location as **WIT.mof**. The file contains the WMI class instance that you deploy to PCs that you want to enroll in the Intune service.
 
     ```
     //Beginning of MOF file.
@@ -84,42 +84,42 @@ WMI filters selectively apply GPOs to computers that satisfy the conditions of a
     };
     ```
 
-2.  Use either a startup script or Group Policy to deploy the file. The following is the deployment command for the startup script. The WMI class instance must be deployed before you enroll client PCs in the Intune service.
+2. Use either a startup script or Group Policy to deploy the file. The following is the deployment command for the startup script. The WMI class instance must be deployed before you enroll client PCs in the Intune service.
 
     **C:/Windows/System32/Wbem/MOFCOMP &lt;path to MOF file&gt;\wit.mof**
 
-3.  Run either of the following commands to create the WMI filters, depending on whether the GPO you want to filter applies to PCs that are managed by using Intune or to PCs that are not managed by using Intune.
+3. Run either of the following commands to create the WMI filters, depending on whether the GPO you want to filter applies to PCs that are managed by using Intune or to PCs that are not managed by using Intune.
 
-    -   For GPOs that apply to PCs that are not managed by using Intune, use the following:
+    - For GPOs that apply to PCs that are not managed by using Intune, use the following:
 
         ```
         Namespace:root\WindowsIntune
         Query:  SELECT WindowsIntunePolicyEnabled FROM WindowsIntune_ManagedNode WHERE WindowsIntunePolicyEnabled=0
         ```
 
-    -   For GPOs that apply to PCs that are managed by Intune, use the following:
+    - For GPOs that apply to PCs that are managed by Intune, use the following:
 
         ```
         Namespace:root\WindowsIntune
         Query:  SELECT WindowsIntunePolicyEnabled FROM WindowsIntune_ManagedNode WHERE WindowsIntunePolicyEnabled=1
         ```
 
-4.  Edit the GPO in the Group Policy Management console to apply the WMI filter that you created in the previous step.
+4. Edit the GPO in the Group Policy Management console to apply the WMI filter that you created in the previous step.
 
-    -   For GPOs that should apply only to PCs that you want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=1**.
+    - For GPOs that should apply only to PCs that you want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=1**.
 
-    -   For GPOs that should apply only to PCs that you do not want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=0**.
+    - For GPOs that should apply only to PCs that you do not want to manage by using Intune, apply the filter **WindowsIntunePolicyEnabled=0**.
 
 For more information about how to apply WMI filters in Group Policy, see the blog post [Security Filtering, WMI Filtering, and Item-level Targeting in Group Policy Preferences](http://go.microsoft.com/fwlink/?LinkId=177883). --->
 
 
 A csoportházirend-objektumok alkalmazását korlátozhatja csak azokra a biztonsági csoportokra, amelyek a kijelölt csoportházirend-objektum Csoportházirend kezelése konzoljának **Biztonsági szűrés** területén vannak megadva. Alapértelmezés szerint a csoportházirend-objektumok a *Hitelesített felhasználók* csoportra vonatkoznak.
 
--   Az **Active Directory – felhasználók és számítógépek** beépülő modulban hozzon létre egy új biztonsági csoportot, amely azokat a számítógépeket és felhasználói fiókokat tartalmazza, amelyeket nem kíván az Intune által kezelni. A csoportnak adhatja például a *Nem szerepel a Microsoft Intune-ban* nevet.
+- Az **Active Directory – felhasználók és számítógépek** beépülő modulban hozzon létre egy új biztonsági csoportot, amely azokat a számítógépeket és felhasználói fiókokat tartalmazza, amelyeket nem kíván az Intune által kezelni. A csoportnak adhatja például a *Nem szerepel a Microsoft Intune-ban* nevet.
 
--   A Csoportházirend kezelése konzolban, a kiválasztott GPO **Delegálás** lapján, kattintson a jobb gombbal az új biztonsági csoportra, és delegálja a megfelelő **olvasási** és **csoportházirend-alkalmazási** engedélyeket a biztonsági csoport felhasználóinak és számítógépeinek. A**csoportházirend-alkalmazási** engedélyek a **Speciális** párbeszédpanelen érhetők el.)
+- A Csoportházirend kezelése konzolban, a kiválasztott GPO **Delegálás** lapján, kattintson a jobb gombbal az új biztonsági csoportra, és delegálja a megfelelő **olvasási** és **csoportházirend-alkalmazási** engedélyeket a biztonsági csoport felhasználóinak és számítógépeinek. A**csoportházirend-alkalmazási** engedélyek a **Speciális** párbeszédpanelen érhetők el.)
 
--   Ezután alkalmazza az új biztonságicsoport-szűrőt a kiválasztott GPO-ra, és távolítsa el az alapértelmezett **Hitelesített felhasználók** szűrőt.
+- Ezután alkalmazza az új biztonságicsoport-szűrőt a kiválasztott GPO-ra, és távolítsa el az alapértelmezett **Hitelesített felhasználók** szűrőt.
 
 Az új biztonsági csoportot regisztrációként kell kezelni az Intune szolgáltatásmódosításaiban.
 

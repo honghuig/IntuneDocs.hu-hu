@@ -18,24 +18,24 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc2173e2972e422ac629331110d3b86b787765da
-ms.sourcegitcommit: a2bad7465422b98eb3c10f03dc5a24fd99cee78d
+ms.openlocfilehash: 494269b82840331041ac2607ea853dbfb1d979de
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67040949"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546321"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>A Céges portál alkalmazás telepítése, majd bejelentkezés a portálra
 
 A Céges portál alkalmazás iOS rendszerű eszközére történő telepítésével hozzáférhet munkahelyi és iskolai alkalmazásaihoz, e-mailjeihez és hálózatához. Az alkalmazással regisztrálhatja az eszközét a Microsoft Intune-ba, és biztonságossá teheti a munkahelyi és iskolai erőforrásokhoz való hozzáférését. További információkat a [Mi történik a Vállalati portál alkalmazás telepítésekor és az eszköz Intune-beli regisztrálásakor?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md) című részben talál.
 
-1.  Nyissa meg az **App Store-t**, és keressen rá az **intune céges portál** kifejezésre.
+1. Nyissa meg az **App Store-t**, és keressen rá az **intune céges portál** kifejezésre.
 
-2.  Töltse le a **Intune Vállalati portál** alkalmazást.
+2. Töltse le a **Intune Vállalati portál** alkalmazást.
 
     ![Képernyőkép az Intune Vállalati portál alkalmazás megjelenéséről az App Store-ban.](./media/CP_iosRedesign_after_1803_04.PNG)
 
-3.  Nyissa meg a Vállalati portál alkalmazást, és írja be a munkahelyi vagy az iskolai e-mail címét és jelszavát, majd koppintson a **Bejelentkezés** elemre.
+3. Nyissa meg a Vállalati portál alkalmazást, és írja be a munkahelyi vagy az iskolai e-mail címét és jelszavát, majd koppintson a **Bejelentkezés** elemre.
 
     Ha első alkalommal jelentkezik be a vállalati portálra, és a munkahelye vagy az iskolája Intune-t használ, az alkalmazás kérni fogja, hogy regisztrálja az eszközt az Intune-ban. A regisztrációhoz kövesse az [iOS-eszköz regisztrálása az Intune-ban](enroll-your-device-in-intune-ios.md) című cikkben található lépéseket. További lehetőség: [Bejelentkezés más eszköz használatával](https://docs.microsoft.com/intune-user-help/sign-in-to-the-company-portal#sign-in-from-another-device).
 

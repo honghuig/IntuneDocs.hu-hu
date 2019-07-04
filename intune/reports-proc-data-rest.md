@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f638a8b3816e775c043077a7ac31b3320496744
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 9fd99c0b42316a4425828cfa875f12d75dd86489
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528373"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558540"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Adatok beolvasása az Intune-adattárház API-ból REST-ügyféllel
 
@@ -43,10 +43,10 @@ Hozzon létre egy natív alkalmazást az Azure-ben. Ez a natív alkalmazás az �
 1. Jelentkezzen be a bérlőhöz tartozó Azure Portalra. Válassza az **Azure Active Directory** > **Alkalmazásregisztrációk** lehetőséget az **Alkalmazásregisztrációk** panel megnyitásához.
 2. Válassza az **Új alkalmazásregisztráció** lehetőséget.
 3. Gépelje be az alkalmazás adatait.
-    1.  A **Név** mezőben adjon meg egy felhasználóbarát nevet, például azt, hogy „Intune-adattárházügyfél”.
-    2.  Az **Alkalmazástípus** mezőben válassza a **Natív** lehetőséget.
-    3.  Írjon be egy URL-címet a **Bejelentkezési URL-cím** mezőbe. A bejelentkezési URL-cím az adott forgatókönyvtől is függ, azonban ha a Postman alkalmazást tervezi használni, a következő címet írja be: `https://www.getpostman.com/oauth2/callback`. A visszahívásra az ügyfél-hitelesítési lépésben lesz szükség a Microsoft Azure AD-beli hitelesítéshez.
-4.  Kattintson a **Létrehozás** gombra.
+    1. A **Név** mezőben adjon meg egy felhasználóbarát nevet, például azt, hogy „Intune-adattárházügyfél”.
+    2. Az **Alkalmazástípus** mezőben válassza a **Natív** lehetőséget.
+    3. Írjon be egy URL-címet a **Bejelentkezési URL-cím** mezőbe. A bejelentkezési URL-cím az adott forgatókönyvtől is függ, azonban ha a Postman alkalmazást tervezi használni, a következő címet írja be: `https://www.getpostman.com/oauth2/callback`. A visszahívásra az ügyfél-hitelesítési lépésben lesz szükség a Microsoft Azure AD-beli hitelesítéshez.
+4. Kattintson a **Létrehozás** gombra.
 
      ![Intune-adattárház ügyfélalkalmazás](./media/reports-get_rest_data_client_overview.png)
 
@@ -56,21 +56,21 @@ Hozzon létre egy natív alkalmazást az Azure-ben. Ez a natív alkalmazás az �
 
 Most már rendelkezik egy Azure-ban definiált alkalmazással. Gondoskodjon arról, hogy a natív alkalmazásból hozzá lehessen férni a Microsoft Intune API-hoz.
 
-1.  Válassza ki a natív alkalmazást. Az alkalmazásnak Ön az **Intune-adattárházügyfél**, vagy ehhez hasonló nevet adott.
-2.  A **Beállítások** panelen válassza a **Szükséges engedélyek** lehetőséget
-3.  A **Szükséges engedélyek** panelen válassza a **Hozzáadás** lehetőséget.
-4.  Válassza az **API kiválasztása** lehetőséget.
-5.  Keressen rá a webalkalmazás nevére. Az alkalmazás neve **Microsoft Intune API**.
-6.  Jelölje ki az alkalmazást a listában.
-7.  Válassza a **Kiválasztás** lehetőséget.
-8.  Jelölje be a **Delegált engedélyek** jelölőnégyzetet a **Get data warehouse information from Microsoft Intune** (Adattárház-információk beolvasása a Microsoft Intune-ból) lehetőség felvételéhez.
+1. Válassza ki a natív alkalmazást. Az alkalmazásnak Ön az **Intune-adattárházügyfél**, vagy ehhez hasonló nevet adott.
+2. A **Beállítások** panelen válassza a **Szükséges engedélyek** lehetőséget
+3. A **Szükséges engedélyek** panelen válassza a **Hozzáadás** lehetőséget.
+4. Válassza az **API kiválasztása** lehetőséget.
+5. Keressen rá a webalkalmazás nevére. Az alkalmazás neve **Microsoft Intune API**.
+6. Jelölje ki az alkalmazást a listában.
+7. Válassza a **Kiválasztás** lehetőséget.
+8. Jelölje be a **Delegált engedélyek** jelölőnégyzetet a **Get data warehouse information from Microsoft Intune** (Adattárház-információk beolvasása a Microsoft Intune-ból) lehetőség felvételéhez.
 
     ![Hozzáférés engedélyezése – Microsoft Intune API](./media/reports-get_rest_data_client_access.png)
 
-9.  Válassza a **Kiválasztás** lehetőséget.
-10.  Válassza a **Done** (Kész) lehetőséget.
-11.  A Szükséges engedélyek panelen választhatja az **Engedélyek megadása** lehetőséget. Így az aktuális címtár minden fiókjának adható hozzáférés. Ezáltal elkerülhető, hogy a hozzájárulási párbeszédpanel a bérlő összes felhasználójánál megjelenjen. További információt az [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) (Alkalmazások integrációja az Azure Active Directory-val) című témakörben találhat.
-12.  Válassza az **Igen** lehetőséget.
+9. Válassza a **Kiválasztás** lehetőséget.
+10. Válassza a **Done** (Kész) lehetőséget.
+11. A Szükséges engedélyek panelen választhatja az **Engedélyek megadása** lehetőséget. Így az aktuális címtár minden fiókjának adható hozzáférés. Ezáltal elkerülhető, hogy a hozzájárulási párbeszédpanel a bérlő összes felhasználójánál megjelenjen. További információt az [Integrating applications with Azure Active Directory](https://docs.microsoft.com/azure/active-directory/develop/active-directory-integrating-applications) (Alkalmazások integrációja az Azure Active Directory-val) című témakörben találhat.
+12. Válassza az **Igen** lehetőséget.
 
 ## <a name="get-data-from-the-microsoft-intune-api-with-postman"></a>Adatok beolvasása a Microsoft Intune API-ból a Postman alkalmazással
 

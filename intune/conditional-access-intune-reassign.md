@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: dbebcb495298f3e8b17007d1fb00f0362ead4ab8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 8bcc9aa527ed27ef35db901117ceb8f4c8d10c97
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530675"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546883"
 ---
 # <a name="reassign-conditional-access-policies-from-intune-classic-portal-to-the-azure-portal"></a>Feltételes hozzáférési szabályzatokat az Intune klasszikus portáljáról az Azure Portalra való újbóli hozzárendelése
 
@@ -51,13 +51,13 @@ Ha készen áll az Azure Portalra, kövesse az ebben a témakörben a az Intune 
 
 ### <a name="to-verify-your-device-based-conditional-access-policies-in-the-intune-classic-portal"></a>Ellenőrizze a eszközalapú feltételes hozzáférési szabályzatokat az Intune klasszikus portálján
 
-1.  Jelentkezzen be hitelesítő adataival az [Intune klasszikus portálon](https://manage.microsoft.com).
+1. Jelentkezzen be hitelesítő adataival az [Intune klasszikus portálon](https://manage.microsoft.com).
 
-2.  Válassza a bal oldali menü **Szabályzat** pontját.
+2. Válassza a bal oldali menü **Szabályzat** pontját.
 
-3.  Válasszon **feltételes hozzáférési**, majd válassza ki a Microsoft felhőszolgáltatást (például az Exchange Online vagy SharePoint Online), a feltételes hozzáférési szabályzatot hozott létre, és.
+3. Válasszon **feltételes hozzáférési**, majd válassza ki a Microsoft felhőszolgáltatást (például az Exchange Online vagy SharePoint Online), a feltételes hozzáférési szabályzatot hozott létre, és.
 
-4.  Jegyezze fel a feltételes hozzáférés beállításait, és tekintse át ezeket, amikor az Azure Portalon ugyanezeket a feltételes hozzáférési szabályzatokat hoz létre.
+4. Jegyezze fel a feltételes hozzáférés beállításait, és tekintse át ezeket, amikor az Azure Portalon ugyanezeket a feltételes hozzáférési szabályzatokat hoz létre.
 
 ### <a name="app-and-device-based-conditional-access-policies-working-together"></a>Alkalmazás- és eszközalapú feltételes hozzáférési szabályzatok együttműködése
 
@@ -194,13 +194,13 @@ Miután újra hozzárendelte a feltételes hozzáférési szabályzatokat az Azu
 
 ### <a name="to-disable-the-conditional-access-policies"></a>A feltételes hozzáférési szabályzatok letiltása
 
-1.  Jelentkezzen be hitelesítő adataival az [Intune klasszikus portálon](https://manage.microsoft.com).
+1. Jelentkezzen be hitelesítő adataival az [Intune klasszikus portálon](https://manage.microsoft.com).
 
-2.  Válassza a bal oldali menü **Szabályzat** pontját.
+2. Válassza a bal oldali menü **Szabályzat** pontját.
 
-3.  Válasszon **feltételes hozzáférési**, majd válassza ki a Microsoft felhőszolgáltatást (például Exchange Online vagy SharePoint online-hoz), létrehozott egy feltételes hozzáférési szabályzatot.
+3. Válasszon **feltételes hozzáférési**, majd válassza ki a Microsoft felhőszolgáltatást (például Exchange Online vagy SharePoint online-hoz), létrehozott egy feltételes hozzáférési szabályzatot.
 
-4.  A jelet **engedélyezése feltételes hozzáférési szabályzat**, és kattintson a **mentése**.
+4. A jelet **engedélyezése feltételes hozzáférési szabályzat**, és kattintson a **mentése**.
 
     ![Tiltsa le a feltételes hozzáférési szabályzatokat az Intune klasszikus portálján képe](./media/reassign-ca-18.png)
 

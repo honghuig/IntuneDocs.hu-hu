@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 45f93416a8fd6190549a958f1b1a7e5f3bdf6df1
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045303"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547923"
 ---
 # <a name="reference-for-devices-entities"></a>Eszközök típusú entitások referenciája
 
 Az **Eszközök** kategória az információkat nyomon követő mobileszközökhöz tartozó entitásokat tartalmazza, egyebek mellett az alábbiakat:
 
-  -  Eszköz típusa
-  -  Eszköz regisztrációja és a regisztráció állapota
-  -  Az eszközök tulajdonjoga
-  -  Eszközkezelés állapota
-  -  Az eszköz Azure AD-tagságának állapota
-  -  Beléptetés állapota
-  -  Előzményadatok az eszközről
-  -  Az eszközön lévő alkalmazások listája
+  - Eszköz típusa
+  - Eszköz regisztrációja és a regisztráció állapota
+  - Az eszközök tulajdonjoga
+  - Eszközkezelés állapota
+  - Az eszköz Azure AD-tagságának állapota
+  - Beléptetés állapota
+  - Előzményadatok az eszközről
+  - Az eszközön lévő alkalmazások listája
 
 ## <a name="devicetypes"></a>DeviceTypes
 
@@ -118,7 +118,7 @@ A **EnrollmentFailureCategory** entitás azt jelzi, hogy miért-eszközök regis
 | Nem érhető el                   | A regisztráció sikertelen kategória nem érhető el.                                                             |
 | Ismeretlen                         | Ismeretlen hiba.                                                                                                |
 | Authentication                  | A hitelesítés sikertelen.                                                                                        |
-| Engedélyezés                   | Hívás történt hitelesítése, de nem jogosult a regisztrációra.                                                         |
+| Authorization                   | Hívás történt hitelesítése, de nem jogosult a regisztrációra.                                                         |
 | AccountValidation               | Nem sikerült érvényesíteni a fiókot a regisztrációhoz. (Blokkolva, fiók regisztrációs nincs engedélyezve)                      |
 | UserValidation                  | Felhasználó nem érvényesíthető. (Felhasználó nem létezik, licenc hiányzik)                                           |
 | DeviceNotSupported              | Eszköz mobileszköz-kezelés nem támogatott.                                                         |
@@ -269,7 +269,7 @@ A **DevicePropertyHistory** entitásban ugyanazon tulajdonságok szerepelnek, mi
 |          Tulajdonság          |                                                                                      Leírás                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DateKey                    | A napot megadó dátumtáblázat-hivatkozás.                                                                                                                                          |
-| DeviceKey                  | Az eszköz egyedi azonosítója az adattárházban – helyettes kulcs. Az Intune-eszközazonosítót tartalmazó eszköztáblára mutató hivatkozás.                               |
+| DeviceKey                  | Egyedi az eszköz azonosítója az adattárházban – helyettes kulcs. Az Intune-eszközazonosítót tartalmazó eszköztáblára mutató hivatkozás.                               |
 | Eszköznév                 | Az eszköz neve az eszközök elnevezését megengedő platformokon. Más platformokon az Intune hoz létre nevet más tulajdonságok alapján. Ez az attribútum nem lehet elérhető az összes eszköz számára. |
 | DeviceRegistrationStateKey | Az eszközhöz tartozó eszközregisztrációs állapot attribútum kulcsa.                                                                                                                    |
 | OwnerTypeKey               | Az eszközhöz tartozó tulajdonostípus attribútum kulcsa: corporate (vállalati), personal (személyes), vagy unknown (ismeretlen).                                                                                                  |

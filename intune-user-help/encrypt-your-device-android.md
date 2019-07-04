@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 58217b6088669a7387ed7452f0ec81ae4a04b60c
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: cfc17c60412a1cfe90693216caa69ada3d2d2c9a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497175"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545255"
 ---
 # <a name="encrypting-your-android-device"></a>Az Android-eszköz titkosítása
 
@@ -38,7 +38,7 @@ Ha a vállalati portál vagy a Microsoft Intune app kéri, hogy titkosítsa az e
 > [!Note]
 > A Huawei, a Vivo és az OPPO bizonyos Android-eszközökön nem lehet titkosítani. További információért [kattintson ide](your-device-appears-encrypted-but-cp-says-otherwise-android.md).  
 
-1.  Egy eszköz képernyőzár beállítása.  
+1. Egy eszköz képernyőzár beállítása.  
     a. Lépjen a **beállítások** > **zárolási képernyő és biztonság** > **képernyő-zárolási típus**.  
     b. Ezek közül bármelyikre **PIN-kód**, **jelszó**, vagy **minta**.  
     c. Kövesse a képernyőn megjelenő utasításokat, a képernyőzárat konfigurálásához.  
@@ -50,7 +50,7 @@ Ha a vállalati portál vagy a Microsoft Intune app kéri, hogy titkosítsa az e
     * A céges portál felhasználóinak: Válassza ki az eszközt, és koppintson **eszközbeállítások ellenőrzése**. 
     * A Microsoft Intune-felhasználók: Várja meg, amíg a lap frissítéseket kell, de ha igen, a titkosítás állapotra kell módosulnia megfelelő.  
 
-4.4-es és régebbi Android rendszerű eszközök nem feltétlenül a **biztonságos indítás** lehetőséget. Ebben az esetben a következő lépéseket az eszköz titkosítását.
+4\.4-es és régebbi Android rendszerű eszközök nem feltétlenül a **biztonságos indítás** lehetőséget. Ebben az esetben a következő lépéseket az eszköz titkosítását.
 
 1. Lépjen a **beállítások** > **biztonsági** > **eszköz titkosítása**. Képernyőn címkék Android-eszközök között változhat. Ha nem látja a **eszköz titkosítása** lehetőség választásakor ellenőrizze:
     * **Tárolási** > **tárolás titkosítása**

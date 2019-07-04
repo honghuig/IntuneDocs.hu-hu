@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d07d9466cda86270898d0e54e8d50b358bcb1b84
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 0c962085ce61f01613bfc04ef0c80699e6f5a3e8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494103"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547431"
 ---
 # <a name="automatically-enroll-android-devices-by-using-samsungs-knox-mobile-enrollment"></a>Eszközök automatikus regisztrációja a Samsung Knox Mobile Enrollmenttel
 
@@ -44,15 +44,15 @@ A rendszer automatikusan hozzáadja az eszközazonosítókat (a sorozatszámokat
 ## <a name="prerequisites"></a>Előfeltételek
 
 Ha regisztrálni szeretne eszközöket az Intune-ban a KME-vel, először a cégét kell regisztrálnia a Samsung Knox portálon. Ehhez kövesse az alábbi lépéseket:
-1.  [Ellenőrizze, hogy az Ön régiójában érhető el KME](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME több mint 55 országban érhető el. Győződjön meg róla, hogy az üzembe helyezés országa támogatott.
+1. [Ellenőrizze, hogy az Ön régiójában érhető el KME](https://www.samsungknox.com/en/solutions/it-solutions/knox-configure/available-countries): KME több mint 55 országban érhető el. Győződjön meg róla, hogy az üzembe helyezés országa támogatott.
 
-2.  [Támogatott eszközök](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): Az összes Samsung-eszközök az Android-eszközök regisztrálási Knox 2.4 legalább és az Android vállalati regisztrációjának Knox 2.8 legalább KME érhető el.
+2. [Támogatott eszközök](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+): Az összes Samsung-eszközök az Android-eszközök regisztrálási Knox 2.4 legalább és az Android vállalati regisztrációjának Knox 2.8 legalább KME érhető el.
 
-3.  [Hálózati követelmények](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Győződjön meg arról, hogy a szükséges tűzfal és a hálózatelérési szabályok használata engedélyezett a hálózaton.
+3. [Hálózati követelmények](https://docs.samsungknox.com/KME-Getting-Started/Content/firewall_exceptions.htm): Győződjön meg arról, hogy a szükséges tűzfal és a hálózatelérési szabályok használata engedélyezett a hálózaton.
 
-4.  [Samsung-fiók regisztrálása](https://www2.samsungknox.com/en/user/register): Egy Samsung-fiók regisztrálása és KME engedélyezése és kezelése egyetlen helyen történő összes Knox vállalati jogosultságok van szükség.
+4. [Samsung-fiók regisztrálása](https://www2.samsungknox.com/en/user/register): Egy Samsung-fiók regisztrálása és KME engedélyezése és kezelése egyetlen helyen történő összes Knox vállalati jogosultságok van szükség.
 
-5.  Regisztráció áttekintése: Után profilját befejeződött, és elküldeni, Samsung áttekinti az alkalmazást, és akár azonnal engedélyezi, vagy állapotba állítja azt egy folyamatban lévő felülvizsgálati további nyomon követés céljából. A fiók jóváhagyása után továbbhaladhat a következő lépésekre.
+5. Regisztráció áttekintése: Után profilját befejeződött, és elküldeni, Samsung áttekinti az alkalmazást, és akár azonnal engedélyezi, vagy állapotba állítja azt egy folyamatban lévő felülvizsgálati további nyomon követés céljából. A fiók jóváhagyása után továbbhaladhat a következő lépésekre.
 
 ## <a name="create-mdm-profile"></a>MDM-profil létrehozása
 

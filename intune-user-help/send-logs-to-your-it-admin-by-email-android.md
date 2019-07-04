@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f1aac6c472cda5d0d9d9c12c98f792374065da49
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: c03d83e6f1bfbffdc7a43d0b80d0568a44555e32
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528781"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546017"
 ---
 # <a name="upload-and-email-logs"></a>Fel- és e-mail-naplók  
 
@@ -36,29 +36,29 @@ A tényleges hiba részletei az eszközön tárolt nevű speciális dokumentumba
 
 ## <a name="upload-and-email-logs-from-company-portal"></a>Fel- és e-mailek naplókat a céges portálról  
 
-1.  A céges portál alkalmazásban kétféleképpen kezdeményezni az e-mailes támogatást.
+1. A céges portál alkalmazásban kétféleképpen kezdeményezni az e-mailes támogatást.
     * A kezdőképernyőn: Koppintson a **Menü** > **Súgó** > **E-mail küldése a támogatásnak** lehetőségre.  
     * A hibaüzenet: Koppintson a **SÚGÓ** vagy **adatok KÜLDÉSE**, ha elérhető.  
 
     > [!NOTE]
     > A felhasználó androidos eszközétől függően a **Menü** elem szoftveres vagy hardveres gomb is lehet.  
 
-3.  Koppintson az **E-mail küldése és naplók feltöltése** lehetőségre.  
-4.  Miután a feltöltés befejeződött, koppintson a levelező alkalmazásra. 
+3. Koppintson az **E-mail küldése és naplók feltöltése** lehetőségre.  
+4. Miután a feltöltés befejeződött, koppintson a levelező alkalmazásra. 
 5. Megjelenik egy e-mail-üzenet, amelynek tárgya már ki van töltve az incidensazonosítóval. Az e-mail törzsét a probléma különböző tartalomcsomagokból ismerteti.    
 
 
 ## <a name="upload-and-email-logs-from-microsoft-intune-app"></a>A Microsoft Intune-alkalmazás feltöltése és e-mailek naplóinak   
 
-1.  A Microsoft Intune alkalmazás kétféleképpen kezdeményezni az e-mailes támogatást.  
+1. A Microsoft Intune alkalmazás kétféleképpen kezdeményezni az e-mailes támogatást.  
     * A kezdőképernyőn: Koppintson a **menü** > **súgó** > **támogatás**.  
     * A hibaüzenet: Koppintson a **SÚGÓ** vagy **adatok KÜLDÉSE**, ha elérhető.  
 
     > [!NOTE]
     > A felhasználó androidos eszközétől függően a **Menü** elem szoftveres vagy hardveres gomb is lehet.
 
-3.  Koppintson a **naplók FELTÖLTÉSE**.  
-4.  A feltöltés befejeződése után koppintson **E-mail** válassza ki az e-mail alkalmazást.  
+3. Koppintson a **naplók FELTÖLTÉSE**.  
+4. A feltöltés befejeződése után koppintson **E-mail** válassza ki az e-mail alkalmazást.  
 5. Megjelenik egy e-mail-üzenet, amelynek tárgya már ki van töltve az incidensazonosítóval. Az e-mail törzsét a probléma különböző tartalomcsomagokból ismerteti.  
 
 ## <a name="next-steps"></a>További lépések  

@@ -18,12 +18,12 @@ ms.reviewer: chrisgre
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a02a7b69245b9b6e7b8f62fdb9be8acb83d42981
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 8326693717ac96a0e9d32617e7d7080d50206ac6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61494931"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545418"
 ---
 # <a name="an-existing-company-email-account-was-found"></a>Meglévő vállalati e-mail-fiók található
 
@@ -34,7 +34,7 @@ Előfordulhat, hogy rendelkezik kellett mobileszköz hozzáférést a munkahelyi
 
 Ezeket a lépéseket biztosítja, hogy az eszköz megfelel-e a vállalat biztonsági követelményeinek, és, hogy az e-mailek biztonságáról.
 
-1.  Az eszközén, nyissa meg **beállítások** , és keresse meg a csatlakoztatott fiókokhoz. Az iOS 11 +-eszközökön, jelölje be például **jelszó & fiókok**.
+1. Az eszközén, nyissa meg **beállítások** , és keresse meg a csatlakoztatott fiókokhoz. Az iOS 11 +-eszközökön, jelölje be például **jelszó & fiókok**.
  
 2. Válassza ki, és távolítsa el a munkahelyi e-mail-fiókját.
 

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87e5ac06e93027b577d42b27e7d15b9b18e11020
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 30e104d82580a5a0b6b01edb0eaade0673b33d83
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046364"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548402"
 ---
 # <a name="typical-migration-cycle"></a>A szokásos migrációs ciklus
 
@@ -33,8 +33,8 @@ Az itt található példa a célcsoportok ütemezésének módját szemlélteti:
 |:---:|:---:|:---:|:---:|:---:|:---:|
 | Korlátozott próbaüzemi IT-részleg (50 felhasználó) | Terv bejelentése | Utasítás a regisztrálásra | Határidő megadása | Feltételes hozzáférés kényszerítésére |  |                                                        
 | Bővített próbaüzemi IT-részleg (200 felhasználó) |  | Terv bejelentése | Utasítás a regisztrálásra | Határidő megadása | Feltételes hozzáférés kényszerítésére |
-| 1. migrációs fázis – hozzáértő felhasználókkal (2000) |  |  | Terv bejelentése | Utasítás a regisztrálásra | Határidő megadása |
-| 2. migrációs fázis – kelet-USA |  |  |  | Terv bejelentése | Utasítás a regisztrálásra |
+| 1\. migrációs fázis – hozzáértő felhasználókkal (2000) |  |  | Terv bejelentése | Utasítás a regisztrálásra | Határidő megadása |
+| 2\. migrációs fázis – kelet-USA |  |  |  | Terv bejelentése | Utasítás a regisztrálásra |
 | Összes régió |  |  |  |  | Terv bejelentése |
 
 ## <a name="customer-migration-case-study"></a>Ügyfélmigrációs esettanulmány
@@ -55,9 +55,9 @@ Az Intune számos módot biztosít a migrálás figyelésére:
 
 Kövesse nyomon, hogy hány felhasználó regisztrálta eszközeit az egyes fázisok után:
 
--   Értékelje a kommunikációs terv hatékonyságát.
+- Értékelje a kommunikációs terv hatékonyságát.
 
--   Becsülje meg a feltételes hozzáférés kényszerítésének hatását.
+- Becsülje meg a feltételes hozzáférés kényszerítésének hatását.
 
 
 ## <a name="post-migration"></a>Áttelepítés után

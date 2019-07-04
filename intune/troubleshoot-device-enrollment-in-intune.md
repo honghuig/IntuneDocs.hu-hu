@@ -18,12 +18,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9c304cafa03d9a88831048a271fa4d74b17a944f
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 03b3b38819ea6bd0a34eff5b7eb8decfc2b9eb49
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528753"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548091"
 ---
 # <a name="troubleshoot-device-enrollment-in-microsoft-intune"></a>A Microsoft Intune-ban eszközök regisztrálásával kapcsolatos problémák elhárítása
 
@@ -84,47 +84,47 @@ Az eszközszámkorlát elérésének elkerüléséhez mindig távolítsa el a m�
 
 **Megoldás:**
 
-1.  Távolítsa el az eszközről az Intune Vállalati portál alkalmazást.
+1. Távolítsa el az eszközről az Intune Vállalati portál alkalmazást.
 
-2.  Nyissa meg a böngészőt az eszközön, keresse meg a [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) oldalt, és tegyen kísérletet egy felhasználói bejelentkezésre.
+2. Nyissa meg a böngészőt az eszközön, keresse meg a [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) oldalt, és tegyen kísérletet egy felhasználói bejelentkezésre.
 
-3.  Ha a felhasználó nem tud bejelentkezni, egy másik hálózattal kell próbálkoznia.
+3. Ha a felhasználó nem tud bejelentkezni, egy másik hálózattal kell próbálkoznia.
 
-4.  Ha nem sikerül, ellenőrizze, hogy a felhasználói hitelesítő adatokat megfelelően szinkronizálta-e a rendszer az Azure Active Directoryval.
+4. Ha nem sikerül, ellenőrizze, hogy a felhasználói hitelesítő adatokat megfelelően szinkronizálta-e a rendszer az Azure Active Directoryval.
 
-5.  Ha a felhasználó bejelentkezése sikerül, egy iOS-eszköz kérni fogja, hogy telepítse az Intune Vállalati portál alkalmazást, és regisztráljon. Az Android-eszközökön manuálisan kell telepítenie az Intune Vállalati portál alkalmazást, amelyet követően újból megpróbálkozhat a regisztrációval.
+5. Ha a felhasználó bejelentkezése sikerül, egy iOS-eszköz kérni fogja, hogy telepítse az Intune Vállalati portál alkalmazást, és regisztráljon. Az Android-eszközökön manuálisan kell telepítenie az Intune Vállalati portál alkalmazást, amelyet követően újból megpróbálkozhat a regisztrációval.
 
 ### <a name="mdm-authority-not-defined"></a>Nincs megadva mobileszköz-kezelési szolgáltató
 **Probléma:** A felhasználó kap egy **nincs megadva mobileszköz-kezelési szolgáltató** hiba.
 
 **Megoldás:**
 
-1.  Győződjön meg arról, hogy a Mobileszköz-felügyeleti szolgáltató [megfelelően be van állítva](mdm-authority-set.md).
+1. Győződjön meg arról, hogy a Mobileszköz-felügyeleti szolgáltató [megfelelően be van állítva](mdm-authority-set.md).
     
-2.  Ellenőrizze, hogy a felhasználói hitelesítő adatokat megfelelően szinkronizálta-e a rendszer az Azure Active Directoryval. Ellenőrizheti, hogy a felhasználó egyszerű felhasználónév megegyezik-e az Active Directory adataival a Microsoft 365 felügyeleti központban.
+2. Ellenőrizze, hogy a felhasználói hitelesítő adatokat megfelelően szinkronizálta-e a rendszer az Azure Active Directoryval. Ellenőrizheti, hogy a felhasználó egyszerű felhasználónév megegyezik-e az Active Directory adataival a Microsoft 365 felügyeleti központban.
     Ha a felhasználónév nem egyezik meg az Active Directory adataival:
 
-    1.  Kapcsolja ki a DirSync eszközt a helyi kiszolgálón.
+    1. Kapcsolja ki a DirSync eszközt a helyi kiszolgálón.
 
-    2.  Törölje a nem egyező felhasználót az **Intune-fiókportál** felhasználói listáról.
+    2. Törölje a nem egyező felhasználót az **Intune-fiókportál** felhasználói listáról.
 
-    3.  Várjon körülbelül egy óráig, amíg az Azure szolgáltatás eltávolítja a helytelen adatokat.
+    3. Várjon körülbelül egy óráig, amíg az Azure szolgáltatás eltávolítja a helytelen adatokat.
 
-    4.  Kapcsolja be újból a DirSync eszközt, és ellenőrizze, hogy most már megfelelően van-e szinkronizálva a felhasználó.
+    4. Kapcsolja be újból a DirSync eszközt, és ellenőrizze, hogy most már megfelelően van-e szinkronizálva a felhasználó.
 
-3.  A System Center Configuration Managerbe integrált Intune használata esetén ellenőrizze, hogy a felhasználó érvényes felhőbeli felhasználói azonosítóval rendelkezik-e:
+3. A System Center Configuration Managerbe integrált Intune használata esetén ellenőrizze, hogy a felhasználó érvényes felhőbeli felhasználói azonosítóval rendelkezik-e:
 
-    1.  Nyissa meg az SQL Management Studiót.
+    1. Nyissa meg az SQL Management Studiót.
 
-    2.  Csatlakozzon a megfelelő adatbázishoz.
+    2. Csatlakozzon a megfelelő adatbázishoz.
 
-    3.  Nyissa meg az adatbázismappát, és keresse meg, majd nyissa meg a **CM_DBName** mappát, ahol a DBName az ügyféladatbázis neve.
+    3. Nyissa meg az adatbázismappát, és keresse meg, majd nyissa meg a **CM_DBName** mappát, ahol a DBName az ügyféladatbázis neve.
 
-    4.  A lap tetején kattintson az **Új lekérdezés** elemre, majd hajtsa végre az alábbi lekérdezéseket:
+    4. A lap tetején kattintson az **Új lekérdezés** elemre, majd hajtsa végre az alábbi lekérdezéseket:
 
-        -   Az összes felhasználó megjelenítése: `select * from [CM_ DBName].[dbo].[User_DISC]`.
+        - Az összes felhasználó megjelenítése:   `select * from [CM_ DBName].[dbo].[User_DISC]`
 
-        -   Adott felhasználók megjelenítéséhez használja a következő lekérdezést, ahol a %testuser1% a megkeresni kívánt felhasználóhoz tartozó username@domain.com helyőrzője: `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
+        - Adott felhasználók megjelenítéséhez használja a következő lekérdezést, ahol a % testuser1 % egy helyőrző username@domain.com szeretne, keresse ki a felhasználó számára:   `select * from [CM_ DBName].[dbo].[User_DISC] where User_Principal_Name0 like '%testuser1%'`
 
         A lekérdezés megírása után válassza az **!Execute** lehetőséget.
         Az eredmények visszaadása után keresse meg a felhő felhasználójának azonosítóját.  Ha nem található azonosító, a felhasználó nem rendelkezik Intune-licenccel.
@@ -212,13 +212,13 @@ Ha a 2. megoldás nem működik, kérje a felhasználókat a következő lépés
 
 **Megoldás:**
 
-1.  Ellenőrizze, hogy az Ön által használt Intune szolgáltatás verziójának megfelelő licenc van-e hozzárendelve a felhasználóhoz.
+1. Ellenőrizze, hogy az Ön által használt Intune szolgáltatás verziójának megfelelő licenc van-e hozzárendelve a felhasználóhoz.
 
-2.  Ellenőrizze, hogy az eszköz nincs-e egy másik mobileszköz-kezelő szolgáltatónál regisztrálva.
+2. Ellenőrizze, hogy az eszköz nincs-e egy másik mobileszköz-kezelő szolgáltatónál regisztrálva.
 
 3. Ellenőrizze, hogy az eszköz nem rendelkezik-e már egy kezelési profillal.
 
-4.  Ellenőrizze, hogy az Androidhoz készült Chrome az alapértelmezett böngésző-e, és a cookie-k engedélyezettek-e.
+4. Ellenőrizze, hogy az Androidhoz készült Chrome az alapértelmezett böngésző-e, és a cookie-k engedélyezettek-e.
 
 ### <a name="android-certificate-issues"></a>Android-tanúsítványokkal kapcsolatos problémák
 
@@ -321,15 +321,15 @@ További információt az [Ajánlott eljárások az Active Directory összevoná
 
 ### <a name="troubleshooting-steps-for-failed-profile-installation"></a>Sikertelen profiltelepítés hibaelhárításának lépései
 
-1.  Ellenőrizze, hogy az Ön által használt Intune szolgáltatás verziójának megfelelő licenc van-e hozzárendelve a felhasználóhoz.
+1. Ellenőrizze, hogy az Ön által használt Intune szolgáltatás verziójának megfelelő licenc van-e hozzárendelve a felhasználóhoz.
 
-2.  Ellenőrizze, hogy az eszköz nincs-e egy másik mobileszköz-kezelő szolgáltatónál regisztrálva.
+2. Ellenőrizze, hogy az eszköz nincs-e egy másik mobileszköz-kezelő szolgáltatónál regisztrálva.
 
 3. Ellenőrizze, hogy az eszköz nem rendelkezik-e már egy kezelési profillal.
 
-4.  Navigáljon a [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) oldalra, és telepítse a profilt a rendszer kérésekor.
+4. Navigáljon a [https://portal.manage.microsoft.com](https://portal.manage.microsoft.com) oldalra, és telepítse a profilt a rendszer kérésekor.
 
-5.  Ellenőrizze, hogy az iOS-hez készült Safari az alapértelmezett böngésző-e, és a cookie-k engedélyezettek-e.
+5. Ellenőrizze, hogy az iOS-hez készült Safari az alapértelmezett böngésző-e, és a cookie-k engedélyezettek-e.
 
 ### <a name="enrolled-ios-device-doesnt-appear-in-console-when-using-system-center-configuration-manager-with-intune"></a>A regisztrált iOS-eszköz nem jelenik meg a konzolon a System Center Configuration Managerbe integrált Intune használata esetén
 **Probléma:** Felhasználó regisztrálja az iOS-eszközön, de nem jelenik meg a Configuration Manager felügyeleti konzolban. Az eszköz nem jelzi, hogy már regisztrálva van. Lehetséges okok:
@@ -428,17 +428,17 @@ Ha meg szeretné állapítani, hogy melyik eljárás vagy felhasználói fiók t
 
 #### <a name="check-how-device-was-removed"></a>Az eszköz eltávolításának ellenőrzése
 
-1.  A Configuration Manager felügyeleti konzolban válassza a **Figyelés** &gt; **Rendszer állapota** &gt; **Állapotüzenet-lekérdezések** elemet.
+1. A Configuration Manager felügyeleti konzolban válassza a **Figyelés** &gt; **Rendszer állapota** &gt; **Állapotüzenet-lekérdezések** elemet.
 
-2.  Kattintson a jobb gombbal a **Manuálisan törölt gyűjtemény tagerőforrások** elemre, és válassza az **Üzenetek megjelenítése** parancsot.
+2. Kattintson a jobb gombbal a **Manuálisan törölt gyűjtemény tagerőforrások** elemre, és válassza az **Üzenetek megjelenítése** parancsot.
 
-3.  Válasszon ki egy megfelelő időpontot vagy dátumot, illetve az elmúlt 12 órát.
+3. Válasszon ki egy megfelelő időpontot vagy dátumot, illetve az elmúlt 12 órát.
 
-4.  Keresse meg a kérdéses eszközt, és ellenőrizze, hogy miként történt az eltávolítása. Az alábbi példában látható, hogy az SCCMInstall fiók törölte az eszközt egy ismeretlen alkalmazáson keresztül.
+4. Keresse meg a kérdéses eszközt, és ellenőrizze, hogy miként történt az eltávolítása. Az alábbi példában látható, hogy az SCCMInstall fiók törölte az eszközt egy ismeretlen alkalmazáson keresztül.
 
     ![Képernyőfelvétel az eszköztörlési diagnózisról](./media/troubleshoot-device-enrollment-in-intune/CM_With_Intune_Unknown_App_Deleted_Device.jpg)
 
-5.  Ellenőrizze, hogy a Configuration Manager nem rendelkezik-e ütemezett feladattal, parancsfájllal vagy egyéb folyamattal, amely automatikusan kiürítheti a tartományhoz nem csatlakozó, a mobil- vagy a kapcsolódó eszközöket.
+5. Ellenőrizze, hogy a Configuration Manager nem rendelkezik-e ütemezett feladattal, parancsfájllal vagy egyéb folyamattal, amely automatikusan kiürítheti a tartományhoz nem csatlakozó, a mobil- vagy a kapcsolódó eszközöket.
 
 ### <a name="other-ios-enrollment-errors"></a>Egyéb iOS-beléptetési hibák
 Az iOS-regisztrálási hibák listáját a dokumentációban, az [iOS-eszközregisztrációs problémák hibaelhárítása a Microsoft Intune-ban](https://support.microsoft.com/help/4039809/troubleshooting-ios-device-enrollment-in-intune) című cikkben találhatja.

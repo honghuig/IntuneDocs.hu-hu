@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6f59ff42f7707ace92442bf37ddac9679e36448f
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1649c6256e4df61b538e2adee87512617b677bb4
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045884"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547493"
 ---
 # <a name="manage-android-work-profile-devices-with-intune"></a>Androidos munkahelyi profilos eszközök kezelése az Intune-nal
 
@@ -68,9 +68,9 @@ Az érvényben lévő alkalmazásvédelmi szabályzatokat a munkahelyi és a sze
 
 A VPN-támogatás az Android VPN-profilokhoz hasonlít. Az ugyanazon VPN-szolgáltatók és alapbeállítások érhetők el az Android Enterprise management két eltéréssel:
 
--  **Munkahelyi profil hatókörű VPN** – A VPN-kapcsolatok a munkahelyi profilban üzembe helyezett alkalmazásokra vannak korlátozva. Csak az Android Enterprise által felügyelt alkalmazások használhatja a VPN-kapcsolatot. Az eszközön lévő saját alkalmazások nem használhatnak felügyelt VPN-kapcsolatot. További információkért lásd: [Android Enterprise VPN-beállítások](vpn-settings-android.md#android-enterprise-vpn-settings).
+- **Munkahelyi profil hatókörű VPN** – A VPN-kapcsolatok a munkahelyi profilban üzembe helyezett alkalmazásokra vannak korlátozva. Csak az Android Enterprise által felügyelt alkalmazások használhatja a VPN-kapcsolatot. Az eszközön lévő saját alkalmazások nem használhatnak felügyelt VPN-kapcsolatot. További információkért lásd: [Android Enterprise VPN-beállítások](vpn-settings-android.md#android-enterprise-vpn-settings).
 
--  **Alkalmazásspecifikus VPN** – Az alkalmazásspecifikus VPN akkor konfigurálható az Intune-ban, ha a VPN-szolgáltató támogatja:
+- **Alkalmazásspecifikus VPN** – Az alkalmazásspecifikus VPN akkor konfigurálható az Intune-ban, ha a VPN-szolgáltató támogatja:
     - alkalmazásspecifikus VPN konfigurációja
     - a funkció konfigurálásához az alkalmazásonkénti VPN az Android Enterprise alkalmazáskonfigurációs profilján keresztül.
     További információt az [Alkalmazásonkénti VPN-profil létrehozása androidos eszközökhöz egyéni Microsoft Intune-profillal](android-pulse-secure-per-app-vpn.md) című témakörben talál.
@@ -79,9 +79,9 @@ A VPN-támogatás az Android VPN-profilokhoz hasonlít. Az ugyanazon VPN-szolgá
 
 Az azonos tanúsítvány profil konfigurációs beállításai Android-kezelés számára elérhető a vállalati Android munkahelyi profilos eszközök érhetők el. Android Enterprise kibővített tanúsítványkezelési API-kat biztosít. A kibővített tanúsítványkezelés a következő funkciókat tartalmazza:
 
--  Biztosítja, hogy a tanúsítványok telepítése csendes módban és a felhasználó számára zökkenőmentesen történjen.
--  Biztosítja a telepített tanúsítványok eltávolítását, amikor az eszközöket kivonják az Intune-ból, és törlik a munkahelyi profilt.
--  Továbbfejlesztett üzenetküldést biztosít, amely tájékoztatja a felhasználókat arról, hogy az informatikai részleg telepítette és konfigurálta a tanúsítványt a felügyeleti szolgáltatáson keresztül.
+- Biztosítja, hogy a tanúsítványok telepítése csendes módban és a felhasználó számára zökkenőmentesen történjen.
+- Biztosítja a telepített tanúsítványok eltávolítását, amikor az eszközöket kivonják az Intune-ból, és törlik a munkahelyi profilt.
+- Továbbfejlesztett üzenetküldést biztosít, amely tájékoztatja a felhasználókat arról, hogy az informatikai részleg telepítette és konfigurálta a tanúsítványt a felügyeleti szolgáltatáson keresztül.
 
 További információt az [Eszközök tanúsítványprofiljainak konfigurálása a Microsoft Intune-ban](certificates-configure.md) című témakörben talál.
 

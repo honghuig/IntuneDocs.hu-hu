@@ -18,32 +18,32 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1119c9602d2577f8041ad528d012adf9652dc641
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 5ebf8d43bd18629d38be24929b3df5c12a7e244b
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61505896"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546530"
 ---
 # <a name="using-the-intune-company-portal-website"></a>Az Intune vállalati portál webhelyének használata
 A [Céges portál webhely](https://portal.manage.microsoft.com) használatával megtekinthet, szerkeszthet, hozzáadhat és eltávolíthat felügyelt eszközöket.
 
 A Céges portál webhelyéről a következő műveletek bármelyikét végrehajthatja:
 
--   [Átnevezheti az eszközét](rename-your-device-cpwebsite.md)
+- [Átnevezheti az eszközét](rename-your-device-cpwebsite.md)
 
--   [Eltávolíthatja az eszközét](remove-your-device-cpwebsite.md)
+- [Eltávolíthatja az eszközét](remove-your-device-cpwebsite.md)
 
--   [Alaphelyzetbe állíthatja az eszközét](reset-erase-your-device-cpwebsite.md)
+- [Alaphelyzetbe állíthatja az eszközét](reset-erase-your-device-cpwebsite.md)
 
--   [Kezdeményezheti az eszköz PIN-kódjának alaphelyzetbe állítását](reset-your-passcode-cpwebsite.md)
+- [Kezdeményezheti az eszköz PIN-kódjának alaphelyzetbe állítását](reset-your-passcode-cpwebsite.md)
 
--   [Távolról zárolhatja az eszközét](remote-lock-your-device-cpwebsite.md)
+- [Távolról zárolhatja az eszközét](remote-lock-your-device-cpwebsite.md)
 
--   Megkeresheti a cég informatikai támogatási szolgálatának elérhetőségét, ha be vannak állítva ezek az adatok
+- Megkeresheti a cég informatikai támogatási szolgálatának elérhetőségét, ha be vannak állítva ezek az adatok
 
--   Megfelelőségi állapot ellenőrzése
+- Megfelelőségi állapot ellenőrzése
 
--   Számítógép távfelügyelete
+- Számítógép távfelügyelete
 
 További segítségre van szüksége? Forduljon a cég informatikai támogatásához. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).

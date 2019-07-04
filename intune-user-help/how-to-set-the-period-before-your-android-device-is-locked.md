@@ -18,12 +18,12 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 913e157e8b2f16376eccf8fc93af137792015eb9
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: ef8dbcda214e2c7cd260fe237e4b9cfd0b7ff326
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497243"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546265"
 ---
 # <a name="how-to-set-the-amount-of-time-before-your-android-device-locks-its-screen"></a>Az Android-eszköz képernyőjének zárolása előtt eltelő idő beállítása
 
@@ -31,18 +31,18 @@ Ha újra csatlakozni szeretne a munkájához, meg kell adnia a jelszó időkorl�
 
 ## <a name="native-non-samsung-knox-device"></a>Natív (nem Samsung Knox-) eszköz
 
-1.  Eszköze **beállításai** között koppintson a **Biztonság** &gt; **Automatikus zárolás** (egyes eszközökön a **Telefon zárolása ezt követően:**) elemre.
+1. Eszköze **beállításai** között koppintson a **Biztonság** &gt; **Automatikus zárolás** (egyes eszközökön a **Telefon zárolása ezt követően:** ) elemre.
 
-    Ha az **Automatically Lock (Automatikus lezárás**) (egyes eszközökön **Lock phone after (Telefon zárolása ezt követően:**) menüpont nem látható, ellenőrizze, hogy érvényes jelszót adott-e meg a **Settings (Beállítások)** &gt; **Screen Lock** (Képernyőzárolás) &gt; **Password** (Jelszó) beállításban.
+    Ha az **Automatically Lock (Automatikus lezárás**) (egyes eszközökön **Lock phone after (Telefon zárolása ezt követően:** ) menüpont nem látható, ellenőrizze, hogy érvényes jelszót adott-e meg a **Settings (Beállítások)** &gt; **Screen Lock** (Képernyőzárolás) &gt; **Password** (Jelszó) beállításban.
 
-2.  Válassza ki a jelszó lejárati értékét.
+2. Válassza ki a jelszó lejárati értékét.
 
 ## <a name="samsung-knox-device"></a>Samsung Knox-eszköz
 
-1.  Az eszköz **Settings** (Beállítások) alkalmazásában koppintson a **Lock screen and security** (Zárolási képernyő és biztonság) &gt; **Lock automatically** (Automatikus zárolás) elemre.
+1. Az eszköz **Settings** (Beállítások) alkalmazásában koppintson a **Lock screen and security** (Zárolási képernyő és biztonság) &gt; **Lock automatically** (Automatikus zárolás) elemre.
 
-    Ha a **Lock automatically (Automatikus lezárás**) (egyes eszközökön **Lock phone after (Telefon zárolása ezt követően:**)) menüpont nem látható, ellenőrizze, hogy érvényes jelszót adott-e meg a **Settings (Beállítások)** &gt; **Screen Lock** (Képernyőzárolás) &gt; **Password** (Jelszó) beállításban.
+    Ha a **Lock automatically (Automatikus lezárás**) (egyes eszközökön **Lock phone after (Telefon zárolása ezt követően:** )) menüpont nem látható, ellenőrizze, hogy érvényes jelszót adott-e meg a **Settings (Beállítások)** &gt; **Screen Lock** (Képernyőzárolás) &gt; **Password** (Jelszó) beállításban.
 
-2.  Válassza ki a jelszó lejárati értékét.
+2. Válassza ki a jelszó lejárati értékét.
 
 További segítségre van szüksége? Forduljon a cég informatikai támogatásához. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).

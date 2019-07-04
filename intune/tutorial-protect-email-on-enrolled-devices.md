@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7ab0ecd2802e68dbac32b757e472a74e697da13
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 91c2ab71cb393bdf885c947c8f3cd93a5bb196c3
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530744"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548047"
 ---
 # <a name="tutorial-protect-exchange-online-email-on-managed-devices"></a>Oktatóanyag: A felügyelt eszközökön az Exchange Online e-mailek védelme
 Ismerje meg az eszközmegfelelőségi szabályzatok használata a feltételes hozzáférés, győződjön meg arról, hogy az iOS-eszközök hozzáférhet az Exchange Online e-mailek, csak akkor, ha az Intune felügyeli őket, és a egy jóváhagyó e-mail alkalmazás használatával. 
@@ -53,7 +53,7 @@ Hozzon létre egy Intune eszközmegfelelőségi szabályzatot, ahol megadja, hog
 4. A **Platform** beállításnál adja meg az **iOS** értéket. 
 5. Kattintson a **Beállítások** > **E-mail** elemre. 
      
-    1.  **A mobileszközöktől felügyelt e-mail-profilt megkövetelő beállítás** mellett válassza a **Kötelező** lehetőséget.
+    1. **A mobileszközöktől felügyelt e-mail-profilt megkövetelő beállítás** mellett válassza a **Kötelező** lehetőséget.
     2. Kattintson az **OK** gombra.
 
     ![A felügyelt e-mail-profil megkövetelése az e-mail-megfelelőségi szabályzatban](media/tutorial-protect-email-on-enrolled-devices/ios-compliance-policy-email.png)
@@ -77,7 +77,7 @@ Hozzon létre egy Intune eszközmegfelelőségi szabályzatot, ahol megadja, hog
 ## <a name="create-the-conditional-access-policy"></a>A feltételes hozzáférési szabályzat létrehozása
 Most hozunk létre egy feltételes hozzáférési szabályzatot, amely az összes eszközplatformot regisztrálása az Intune-ban és megfelelnek az Intune eszközmegfelelőségi szabályzat Exchange Online eléréséhez szükséges. Ezenkívül az Outlook alkalmazásra is szükség lesz az e-mailek eléréséhez. Feltételes hozzáférési szabályzatokat is az Azure AD portálon vagy az Intune-portálon konfigurálható. Mivel már az Intune portálon vagyunk, itt fogjuk létrehozni a szabályzatot.
 1. Válassza ki az Intune-ban **feltételes hozzáférési** > **házirendek** > **új szabályzat**.
-1.  A **Név** mezőnél adja meg a **Tesztszabályzat az Office 365 e-mailjeihez** nevet. 
+1. A **Név** mezőnél adja meg a **Tesztszabályzat az Office 365 e-mailjeihez** nevet. 
 3. A **Hozzárendelések** alatt válassza a **Felhasználók és csoportok** lehetőséget. A **Belefoglalás** lapon válassza a **Minden felhasználó** lehetőséget, majd a **Kész** elemet.
 
 4. A **Hozzárendelések** alatt válassza a **Felhőalkalmazások** lehetőséget. Mivel az Office 365 Exchange Online e-mailjeit szeretnénk megvédeni, a következő lépések segítségével választhatjuk ki:

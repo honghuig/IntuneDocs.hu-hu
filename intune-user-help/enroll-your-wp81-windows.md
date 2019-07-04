@@ -18,12 +18,12 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 16a610050a7c4ce094005617304249acdb961878
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: dd15e960b3c2802930981271cb6cd9ffea841cee
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61497518"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545491"
 ---
 # <a name="enroll-your-windows-phone-81-device-in-intune"></a>Windows Phone 8.1-eszköz regisztrálása az Intune-ban  
 
@@ -34,45 +34,45 @@ Regisztrálni az eszközöket a munkahelyi vagy iskolai e-mailek, fájlok és eg
 ## <a name="enroll-through-company-portal"></a>Vállalati portálon keresztül léptethetik be  
 Ha a Microsoft Store áruházából telepíthető a vállalati portál alkalmazást, kövesse az alábbi lépéseket. 
 
-1.  Koppintson a **Start** > **Store**.  
+1. Koppintson a **Start** > **Store**.  
 
-2.  Koppintson a **Keresés** elemre, majd írja be a **vállalati portál** kifejezést.  
+2. Koppintson a **Keresés** elemre, majd írja be a **vállalati portál** kifejezést.  
 
-3.  Az eredmények listájában koppintson a **Vállalati portál** elemre.  
+3. Az eredmények listájában koppintson a **Vállalati portál** elemre.  
 
 
     ![A Vállalati portál keresési eredményei](./media/WP81-1-CP-search-store-v2.png)  
 
-4.  Koppintson a **Vállalati portál**  &gt; **Telepítés** elemre.  
+4. Koppintson a **Vállalati portál**  &gt; **Telepítés** elemre.  
 
 
     ![A Vállalati portál telepítése](./media/WP81-2-CP-install-v2.png)  
 
 Regisztrálja az eszközt:  
 
-1.  Nyissa meg az eszközön a **Microsoft Intune Vállalati portál** alkalmazást.  
+1. Nyissa meg az eszközön a **Microsoft Intune Vállalati portál** alkalmazást.  
 
 
-2.  Adja meg a hitelesítő adatait. Előfordulhat, hogy az alkalmazás megkéri vállalata esetleges használati feltételeinek elfogadására.  
+2. Adja meg a hitelesítő adatait. Előfordulhat, hogy az alkalmazás megkéri vállalata esetleges használati feltételeinek elfogadására.  
 
-3.  Pöccintéssel lépjen az **Eszközök** területre.  
+3. Pöccintéssel lépjen az **Eszközök** területre.  
 
-4.  Válassza ki **koppintva regisztrálhatja vagy azonosíthatja az eszközt**.  
+4. Válassza ki **koppintva regisztrálhatja vagy azonosíthatja az eszközt**.  
 
 
     ![A Koppintson ide az eszköz regisztrálásához vagy azonosításához képernyő](./media/WP81-enroll-1-swipe-my-devices.png)  
 
-5.  Koppintson **Az eszköz regisztrálása** elemre.  
+5. Koppintson **Az eszköz regisztrálása** elemre.  
 
 
     ![Az eszköz regisztrálása képernyő](./media/WP81-enroll-2-enroll-this-device.png)  
 
-6.  Koppintson a **Fiók hozzáadása** elemre.  
+6. Koppintson a **Fiók hozzáadása** elemre.  
 
 
     ![A Munkahelyi beállítások képernyő](./media/WP81-enroll-3-workplace-add-acct.png)  
 
-7.  Adja meg a kért további információkat, majd fejezze be a regisztrációt a **bejelentkezés** elemre koppintva. Most látnia kell a munkahelyi fiókját a **Beállítások** &gt; **Munkahely** lap listájában.  
+7. Adja meg a kért további információkat, majd fejezze be a regisztrációt a **bejelentkezés** elemre koppintva. Most látnia kell a munkahelyi fiókját a **Beállítások** &gt; **Munkahely** lap listájában.  
 
 
     ![A Fiók hozzáadva képernyő](./media/WP81-enroll-4-account-added.png)  
@@ -80,13 +80,13 @@ Regisztrálja az eszközt:
 ## <a name="enroll-through-settings-app"></a>Gépház alkalmazás keresztül léptethetik be  
 Ha nem fér hozzá a Microsoft Store a Windows Phone-eszközön, vagy ha nem rendelkezik Microsoft-Account, kövesse az alábbi lépéseket.
 
-1.  Koppintson a  **Beállítások** &gt; **Munkahely** elemre.  
+1. Koppintson a  **Beállítások** &gt; **Munkahely** elemre.  
 
-2.  Koppintson a **fiók hozzáadása** elemre, majd jelentkezzen be a munkahelyi fiókjával.  
+2. Koppintson a **fiók hozzáadása** elemre, majd jelentkezzen be a munkahelyi fiókjával.  
 
-3.  Adja meg a kért további információkat, majd fejezze be a regisztrációt a **bejelentkezés** elemre koppintva.  
+3. Adja meg a kért további információkat, majd fejezze be a regisztrációt a **bejelentkezés** elemre koppintva.  
 
-4.  Ha a rendszer kéri a vállalati alkalmazás vagy központ telepítését, jelölje be a megfelelő jelölőnégyzetet, majd koppintson a **kész** gombra.  
+4. Ha a rendszer kéri a vállalati alkalmazás vagy központ telepítését, jelölje be a megfelelő jelölőnégyzetet, majd koppintson a **kész** gombra.  
 
 Ha a cég informatikai támogatási szolgálata úgy állította be a Céges portál alkalmazást, hogy az a regisztráció során települjön, a Céges portál megjelenik az alkalmazáslistában.  
 

@@ -1,7 +1,7 @@
 ---
-title: Alkalmazás alkalmazásvédelmi szabályzat hozzáférési műveletek használatával adatok törlése
+title: Alkalmazás alkalmazásvédelmi szabályzat feltételes indítási műveletekről használatával adatok törlése
 titleSuffix: Microsoft Intune
-description: Útmutató az alkalmazásvédelmi szabályzatok hozzáférési műveleteivel végzett szelektív adattörléshez a Microsoft Intune-ban.
+description: Ismerje meg, hogy a Microsoft Intune app protection szabályzat feltételes indítási műveletekről használata az adatok szelektív törlése.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd323fce7f7bdbf17697c82935a9d2d5f47bb7ee
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 65115f6520122cd4b3429411db67052481984617
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804682"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558444"
 ---
-# <a name="selectively-wipe-data-using-app-protection-policy-access-actions-in-intune"></a>Szelektív adattörlés alkalmazásvédelmi szabályzatok hozzáférési műveleteivel az Intune-ban
+# <a name="selectively-wipe-data-using-app-protection-policy-conditional-launch-actions-in-intune"></a>Az Intune app protection szabályzat feltételes indítási műveletekről használata az adatok szelektív törlése
 
 Az Intune alkalmazásvédelmi szabályzatainak használatával olyan beállításokat konfigurálhat, amelyek megakadályozzák, hogy a felhasználók hozzáférjenek egy vállalati alkalmazáshoz vagy fiókhoz. Ezek a vállalat által meghatározott adatáttelepítési és hozzáférési követelményekre vonatkozó beállítások például a feltört eszközök vagy a minimális operációsrendszer-verzió kezelésére.
  
 Ezekkel a beállításokkal egyértelműen megadható az összes vállalati adat törlése a felhasználó eszközéről mint a nem megfelelőség esetén végrehajtandó művelet. Bizonyos beállításokhoz több művelet is konfigurálható, például a hozzáférés tiltása és az adatok törlése bizonyos megadott értékek alapján.
 
-## <a name="create-an-app-protection-policy-using-access-actions"></a>Hozzáférési műveleteket használó alkalmazásvédelmi szabályzat létrehozása
+## <a name="create-an-app-protection-policy-using-conditional-launch-actions"></a>Hozzon létre egy alkalmazásvédelmi szabályzatot használja a feltételes indítási műveletekről
 
 1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 3. Az **Intune** panelen válassza az **Ügyfélalkalmazások** > **Alkalmazásvédelmi szabályzatok** lehetőséget.
 4. Kattintson a **Szabályzat hozzáadása** lehetőségre (a meglévő szabályzatok is módosíthatók). 
 5. Kattintson a **Kötelező beállítások konfigurálása** lehetőségre a szabályzathoz konfigurálható beállítások listájának megjelenítéséhez. 
-6. A Beállítások ablaktáblán lefelé görgetve láthatóvá válik a **Hozzáférési műveletek** szakasz egy szerkeszthető táblázattal.
+6. A Görgetés lefelé a beállítások ablaktáblában, látni fogja a szakaszig **feltételes indítási** egy szerkeszthető táblával.
 
     ![Képernyőkép az Intune alkalmazásvédelmi hozzáférési műveleteiről](./media/apps-selective-wipe-access-actions01.png)
 
@@ -52,13 +52,13 @@ Az alkalmazásvédelmi szabályzatbeállítások táblázata a **Beállítás**,
 
 ### <a name="ios-policy-settings"></a>iOS-es szabályzatbeállítások
 iOS rendszeren a következő beállításokhoz konfigurálhat műveleteket a **Beállítások** legördülő lista használatával:
--  PIN-kód-megadási kísérletek maximális száma
--  Offline türelmi időszak
--  Függetlenített/feltört eszközök
--  Operációs rendszer minimális verziója
--  Alkalmazás minimális verziója
--  SDK minimális verziója
--  Eszközmodell(ek)
+- PIN-kód-megadási kísérletek maximális száma
+- Offline türelmi időszak
+- Függetlenített/feltört eszközök
+- Operációs rendszer minimális verziója
+- Alkalmazás minimális verziója
+- SDK minimális verziója
+- Eszközmodell(ek)
 
 Az **Eszközmodell(ek)** beállítás használatához adjon meg egy iOS-modellazonosítókat tartalmazó, pontosvesszővel tagolt listát. Az iOS-modellazonosítót a [HockeyApp támogatási dokumentációjának](https://support.hockeyapp.net/kb/client-integration-ios-mac-os-x-tvos/ios-device-types) Eszköztípus oszlopában találja.<br>
 Példabemenet: *iPhone5,2; iPhone5,3*
@@ -74,15 +74,15 @@ Ha két alkalmazásvédelmi szabályzat konfigurált értékei között ütköz�
 ### <a name="android-policy-settings"></a>Android-szabályzat beállításai
 
 Android rendszeren a következő beállításokhoz konfigurálhat műveleteket a **Beállítások** legördülő lista használatával:
--  PIN-kód-megadási kísérletek maximális száma
--  Offline türelmi időszak
--  Függetlenített/feltört eszközök
--  Operációs rendszer minimális verziója
--  Alkalmazás minimális verziója
--  Minimális javításverzió
--  Eszközgyártó(k)
--  SafetyNet eszközigazolás
--  Alkalmazások fenyegetettségvizsgálata
+- PIN-kód-megadási kísérletek maximális száma
+- Offline türelmi időszak
+- Függetlenített/feltört eszközök
+- Operációs rendszer minimális verziója
+- Alkalmazás minimális verziója
+- Minimális javításverzió
+- Eszközgyártó(k)
+- SafetyNet eszközigazolás
+- Alkalmazások fenyegetettségvizsgálata
 
 Az **Eszközgyártó(k)** beállítás használatához gépelje be az Android-gyártók pontosvesszővel tagolt felsorolását. Az eszköz Android-gyártóját az eszközbeállításokban találja meg.<br>
 Példabemenet: *Gyártó A; B gyártója* 
@@ -105,9 +105,9 @@ A táblázat néhány sora alapértelmezés szerint ki lesz töltve az **Offline
 A beállítások konfigurálásához válasszon egy beállítást a **Beállítás** oszlop alatti legördülő listából. A beállítás kiválasztása után szerkeszthetővé válik az **Érték** oszlop alatti szövegmező, ha kötelező megadni egy értéket. Használhatóvá válik a **Művelet** oszlop alatti legördülő lista is, amely a beállításhoz tartozó feltételesen végrehajtható műveleteket tartalmazza. 
 
 A következő lista a leggyakoribb műveleteket sorolja fel:
--  **Hozzáférés letiltása** – Letiltja a végfelhasználó hozzáférését a vállalati alkalmazáshoz.
--  **Összes adat törlése** – Az összes vállalati adat törlése a végfelhasználó eszközéről.
--  **Figyelmeztetés** – Figyelmeztető üzenetet jelenít meg a végfelhasználó számára.
+- **Hozzáférés letiltása** – Letiltja a végfelhasználó hozzáférését a vállalati alkalmazáshoz.
+- **Összes adat törlése** – Az összes vállalati adat törlése a végfelhasználó eszközéről.
+- **Figyelmeztetés** – Figyelmeztető üzenetet jelenít meg a végfelhasználó számára.
 
 Bizonyos beállítások, például az **Operációs rendszer minimális verziója**, a különféle verziószámok alapján minden lehetséges műveletet végrehajtásához konfigurálhatók. 
 

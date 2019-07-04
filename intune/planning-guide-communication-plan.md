@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 57ec922d76ca08639139a7d130fb14c5e8bfa413
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7e69236f7babc974bca0db32245de2323627e494
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046228"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67548351"
 ---
 # <a name="develop-a-rollout-communication-plan"></a>Bevezetési kommunikációs terv kidolgozása
 
 A jó változáskezelés a közelgő változások világos és hasznos kommunikációján alapul. Az Intune zökkenőmentes bevezetése érdekében a bevezetési kommunikációs tervnek négy területet kell tartalmaznia:
 
--   Milyen információt kell kommunikálni?
+- Milyen információt kell kommunikálni?
 
--   Az információ átadásának módszere
+- Az információ átadásának módszere
 
--   Ki kapja meg az információkat?
+- Ki kapja meg az információkat?
 
--   A kommunikáció ütemterve
+- A kommunikáció ütemterve
 
 Az alábbiakban mindegyik kérdést részletesen is megvizsgáljuk.
 
@@ -56,13 +56,13 @@ Ez a [végfelhasználói regisztrációs útmutató](https://gallery.technet.mic
 
 Az Intune bevezetéséről többféle módszerrel tájékoztathatók a releváns szervezeti egységek és felhasználók. Az alábbi listában néhány példát talál arra, hogy egyes kommunikációs módszereket mely szakaszban használhat:
 
--   Szervezeti kiterjedő személyes vagy a Microsoft Teams-megbeszélések használata a kezdeti szakaszban javasolt
+- Szervezeti kiterjedő személyes vagy a Microsoft Teams-megbeszélések használata a kezdeti szakaszban javasolt
 
--   E-mail használata a regisztrálást megelőző, a regisztrálási és az azt követő szakaszokban ajánlott
+- E-mail használata a regisztrálást megelőző, a regisztrálási és az azt követő szakaszokban ajánlott
 
--   Az összes szakaszhoz használt céges webhelyek
+- Az összes szakaszhoz használt céges webhelyek
 
--   A Yammer és poszterek vagy tájékoztató brosúrák használata a kezdeti és a regisztrálást megelőző szakaszban tanácsos
+- A Yammer és poszterek vagy tájékoztató brosúrák használata a kezdeti és a regisztrálást megelőző szakaszban tanácsos
 
 ## <a name="communications-timeline"></a>Kommunikációs ütemterv
 
@@ -72,15 +72,15 @@ Az Intune-projekt kezdeti szakaszában például a kommunikáció kiterjedhet a 
 
   | **Kommunikációs terv** | **Július** | **Augusztus** | **Szeptember** | **Október** |
 |:---:|:---:|:---:|:---:|:---:|
-| 1. hét  | Összes |  |  |  |                                                         
+| 1\. hét  | Összes |  |  |  |                                                         
 | Kezdeti értekezlet | Első hét |  |  |  |                                                         
-| 2. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
+| 2\. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
 | Bevezetés előtti 1. e-mail | Első hét | Első hét | Első hét | Első hét |
-| 3. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
+| 3\. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
 | Bevezetés előtti 2. e-mail | Második hét | Második hét | Második hét | Második hét |
-| 4. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
+| 4\. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
 | Regisztrálási e-mail | Harmadik hét | Harmadik hét | Harmadik hét | Harmadik hét |
-| 5. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
+| 5\. szakasz | Informatikai részleg | Értékesítés és marketing | Kereskedelem | HR, pénzügy és vezetők |
 | Regisztrálás utáni e-mail | Negyedik hét | Negyedik hét | Negyedik hét | Negyedik hét |
 
 A saját kommunikációs tervének kidolgozásához [letöltheti a fenti táblázat sablonját](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).

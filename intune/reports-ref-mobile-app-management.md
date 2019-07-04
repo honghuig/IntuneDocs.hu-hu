@@ -17,24 +17,24 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 059f39a52b1dbc6e5f7a014741c0657a2ba8bc10
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5a8d16e058afbedfd1a343560b3727d33776da45
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045360"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547876"
 ---
 # <a name="reference-for-mobile-app-management-mam-entities"></a>Mobilalkalmazás-felügyelet (MAM) típusú entitások referenciája
 
 A **Mobilalkalmazás-felügyelet** kategória a következő mobilalkalmazásokkal kapcsolatos entitásokat tartalmazza:
 
-  -  Alkalmazások
-  -  példányszám
-  -  Bejelentkezési állapot
-  -  Állapotadatok
-  -  Szabályzat állapota
-  -  Beléptetés állapota
-  -  Platformtípusok
+  - Alkalmazások
+  - példányszám
+  - Bejelentkezési állapot
+  - Állapotadatok
+  - Szabályzat állapota
+  - Beléptetés állapota
+  - Platformtípusok
 
 ## <a name="mamapplication"></a>MAMApplication
 
@@ -124,7 +124,7 @@ A **MamGlobalApplication** entitás azokat az áruházbeli alkalmazásokat sorol
 |          Tulajdonság          |                                               Leírás                                               |           Példa            |
 |----------------------------|---------------------------------------------------------------------------------------------------------|------------------------------|
 |       ApplicationKey       |          Az áruházbeli alkalmazás egyedi azonosítója az adattárházban, más néven a helyettes kulcs.          |             123              |
-|       Alkalmazásazonosító        | Az áruházbeli alkalmazás egyedi azonosítója. Az azonosító hasonló az ApplicationKey-hez, de természetes kulcs.  | com.microsoft.skydrive.<ios> |
+|       ApplicationId        | Az áruházbeli alkalmazás egyedi azonosítója. Az azonosító hasonló az ApplicationKey-hez, de természetes kulcs.  | com.microsoft.skydrive.<ios> |
 |      ApplicationName       |                                      A MAM-beli globális alkalmazásnév.                                       |           SkyDrive           |
 | RowLastModifiedDateTimeUTC | Az adott MAM globális alkalmazás adattárházban történt utolsó módosításának dátuma és időpontja (UTC). |    2016.11.23. 12:00:00    |
 

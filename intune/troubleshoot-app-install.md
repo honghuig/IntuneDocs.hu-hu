@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.reviewer: mghadial
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4180c6d803edc8cd9d9f3948466a5ceed22ae36
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: f7a4be4deddae2f2983996a6880232463924c948
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530790"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558509"
 ---
 # <a name="troubleshoot-app-installation-issues"></a>Alkalmazások telepítésével kapcsolatos problémák elhárítása
 
@@ -50,6 +50,18 @@ Az alkalmazástelepítési hiba információi ismertetik a problémát. Ezen ada
 
 > [!Note]  
 > A **Hibaelhárítás** panel a böngészőben a [https://aka.ms/intunetroubleshooting](https://aka.ms/intunetroubleshooting) címen is elérhető.
+
+## <a name="user-group-targeted-app-installation-does-not-reach-device"></a>Célzott felhasználói csoportra alkalmazás telepítése nem éri el az eszközt
+Alkalmazások telepítése során problémákat tapasztal a következőket érdemes figyelembe venni:
+- Ha az alkalmazás nem jelenik meg a vállalati portálon, győződjön meg arról, az alkalmazás telepítve van **elérhető** szándékot és, hogy a felhasználó fér hozzá a céges portál és az eszköz típusától, az alkalmazás által támogatott.
+- Windows BYOD-eszközök esetén a felhasználónak kell vegyen fel egy munkahelyi fiókot az eszközön.
+- Ellenőrizze, hogy van-e a felhasználót az AAD eszközszámkorlát keresztül:
+  1. Navigáljon a [az Azure Active Directory-eszközbeállítások](https://portal.azure.com/#blade/Microsoft_AAD_IAM/DevicesMenuBlade/DeviceSettings/menuId).
+  2. Jegyezze fel a beállított értéke **maximális eszközök felhasználónkénti**.
+  3. Navigáljon a [az Azure Active Directory-felhasználók](https://portal.azure.com/#blade/Microsoft_AAD_IAM/UsersManagementMenuBlade/AllUsers).
+  4. Válassza ki az érintett felhasználót, és kattintson a **eszközök**.
+  5. Ha a felhasználó túllépte a beállított korlátot törölje minden elavult rekordok, amelyek már nincs rá szükség.
+- IOS DEP-eszközök, győződjön meg arról, hogy a felhasználó szerepel **felhasználó regisztrálta** az Intune eszköz áttekintő paneljén. NA jelenik meg, ha telepítheti egy konfigurációs szabályzatot az Intune céges portálon. További információkért lásd: [a céges portál alkalmazás konfigurálása](https://docs.microsoft.com/intune/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-dep-devices).
 
 ## <a name="win32-app-installation-troubleshooting"></a>A Win32 alkalmazás telepítési hibák elhárítása
 

@@ -1,11 +1,11 @@
 ---
 title: Külső hitelesítésszolgáltatók (CA) használata SCEP-beli Microsoft Intune - ban |} A Microsoft Docs
-description: A Microsoft Intune-ban hozzáadhat egy szállítót vagy külső hitelesítésszolgáltatót (CA), amely tanúsítványokat ad ki mobileszközökre az SCEP protokoll használatával. Ebben az áttekintő cikkben egy Azure Active Directory (Azure AD) alkalmazás ad engedélyeket a Microsoft Intune-nak tanúsítványok hitelesítésére. Ezután az SCEP-kiszolgáló beállítása következik a tanúsítványok kiadásához, az alkalmazás azonosítója, a hitelesítési kulcs és az AAD-alkalmazás bérlőazonosítója alapján.
+description: A Microsoft Intune a gyártó vagy külső hitelesítésszolgáltató (CA) segítségével kiadhatók tanúsítványok az SCEP protokollt használó mobileszközök is hozzáadhat. Ebben az áttekintő cikkben egy Azure Active Directory (Azure AD) alkalmazás ad engedélyeket a Microsoft Intune-nak tanúsítványok hitelesítésére. Ezután az SCEP-kiszolgáló beállítása következik a tanúsítványok kiadásához, az alkalmazás azonosítója, a hitelesítési kulcs és az AAD-alkalmazás bérlőazonosítója alapján.
 keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -15,28 +15,28 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5124796166f27823b7a13b0f3dd239446f778850
-ms.sourcegitcommit: 337b554f9becc40cdea2f5f47a4a129ac491f64c
+ms.openlocfilehash: 058ebc90cc5086aea21e135fc9944c31cf912105
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66713860"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547244"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Partner hitelesítésszolgáltató hozzáadása az Intune-ban SCEP protokollal
 
-A Microsoft Intune-ban hozzáadhat külső hitelesítésszolgáltatókat (CA). Ezek a hitelesítésszolgáltatók az Egyszerű tanúsítványigénylési protokoll (SCEP) használatával telepíthetnek tanúsítványokat mobileszközökre. Ez a funkció kiadhat új tanúsítványokat, és meg is újíthat tanúsítványokat Windows, iOS, Android és macOS rendszerű eszközökön.
+Az Intune használatához a külső hitelesítésszolgáltatók (CA). Külső hitelesítésszolgáltatók is hozzon létre új vagy megújított tanúsítványokat a mobileszközök az egyszerű tanúsítványigénylési protokoll (SCEP) használatával, és a Windows, iOS, Android és macOS-eszközt támogathat.
 
 A funkció használata két részből áll: a nyílt forráskódú API-val kapcsolatos és az Intune-rendszergazdai feladatokból.
 
 **1. rész – Nyílt forráskódú API használata**  
-A Microsoft létrehozott egy API-t, amely az Intune-nal integráltan hitelesíti a tanúsítványokat, küld értesítéseket a sikeres vagy sikertelen végrehajtásról, és SSL-t, pontosabban SSL-szoftvercsatornát használva kommunikál az Intune-nal.
+A Microsoft hozott létre API-t integrálja az Intune-nal. Ellenőrizheti az API-t, ha a tanúsítványok, sikeres vagy sikertelen az értesítéseket küldeni, és SSL, kifejezetten SSL szoftvercsatorna gyári segítségével kommunikál az Intune-ban.
 
-Az API az [Intune SCEP API nyilvános GitHub-tárházban](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) érhető el, ahonnan letöltheti és felhasználhatja saját megoldásaiban. Ezt az API-t külső SCEP-kiszolgálókkal használva egyéni ellenőrző kérdéssel ellenőrizhető a tanúsítvány az Intune-ban az eszközre való telepítés előtt.
+Az API az [Intune SCEP API nyilvános GitHub-tárházban](http://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/CsrValidation) érhető el, ahonnan letöltheti és felhasználhatja saját megoldásaiban. Ez az API használata külső SCEP-kiszolgálók egyéni leellenőrizni futtatásához Intune-ban, mielőtt SCEP építi ki egy tanúsítványt az eszközökre.
 
 Az [Intune-integráció SCEP-felügyeleti megoldásról](scep-libraries-apis.md) szóló témakör részletesebben is leírja az API használatát, metódusait és az elkészített megoldások tesztelését.
 
 **2. rész – Az alkalmazás és profil létrehozása**  
-Azure Active Directory-alkalmazás használatakor az eszközökről érkező SCEP-kérelmek kezelésének jogosultságai az Intune-nak delegálhatók. Az Azure AD-alkalmazás a fejlesztő által létrehozott API-megoldásban használt alkalmazásazonosítót és hitelesítési kulcsot is tartalmazza. A rendszergazdák így SCEP-tanúsítványprofilokat hozhatnak létre és telepíthetnek az Intune használatával. Az eszközök telepítési állapotáról szóló jelentéseket is megtekintheti.
+Azure Active Directory-alkalmazás használatakor az eszközökről érkező SCEP-kérelmek kezelésének jogosultságai az Intune-nak delegálhatók. Az Azure AD-alkalmazás a fejlesztő által létrehozott API-megoldásban használt alkalmazásazonosítót és hitelesítési kulcsot is tartalmazza. A rendszergazdák majd létrehozása és üzembe helyezése a SCEP-tanúsítványok profilokat az Intune-nal, és jelentéseket tekintheti meg az eszközön a telepítés állapota.
 
 Ez a cikk rendszergazdai szempontból tekinti át ezt a funkciót, beleértve az Azure AD-alkalmazás létrehozását is.
 
@@ -117,7 +117,7 @@ Ha törli az eszköz regisztrációját vagy teljes tartalmát, a tanúsítvány
 ## <a name="third-party-certification-authority-partners"></a>Külső hitelesítésszolgáltató partnerek
 Az alábbi külső hitelesítésszolgáltatók támogatják az Intune-t:
 
-- [Entrust Datacard](http://www.entrustdatacard.com/resource-center/documents/documentation)
+- [Entrust Datacard](https://info.entrustdatacard.com/pki-eval-tool)
 - [EJBCA GitHub nyílt forráskódú verzió](https://github.com/agerbergt/intune-ejbca-connector)
 - [EverTrust](https://evertrust.fr/en/products/)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)

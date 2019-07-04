@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ffaf29d34c7f6a08d48717f7560926d53cfa8ba2
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 9d8cd91d55c90fd4b4f26ee0e6b1b99d37bcce08
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529777"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547601"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Állítsa be az Intune helyszíni Exchange-összekötő a Microsoft Intune-ban
 Ebben a cikkben található információk segítséget telepítse, és figyelje az Exchange Active Sync helyszíni összekötőt az Intune-hoz.  Az Intune helyszíni Exchange connector használata az [engedélyezi vagy letiltja a hozzáférést az Exchange feltételes hozzáférési szabályzatok a helyszíni postaládák](conditional-access-exchange-create.md). 
@@ -58,18 +58,18 @@ A következő táblázat a helyszíni Exchange-összekötő számítógépre von
 Hozzon létre egy Active Directory a helyszíni Exchange-összekötő által használt felhasználói fiók. A fióknak engedéllyel kell rendelkeznie az alábbi szükséges Windows PowerShell Exchange-parancsmagok futtatásához:
 
 
- -   Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
- -   Get-CasMailbox, Set-CasMailbox
- -   Get-ActiveSyncMailboxPolicy, Set-ActiveSyncMailboxPolicy, New-ActiveSyncMailboxPolicy, Remove-ActiveSyncMailboxPolicy
- -   Get-ActiveSyncDeviceAccessRule, Set-ActiveSyncDeviceAccessRule, New-ActiveSyncDeviceAccessRule, Remove-ActiveSyncDeviceAccessRule
- -   Get-ActiveSyncDeviceStatistics
- -   Get-ActiveSyncDevice
- -   Get-ExchangeServer
- -   Get-ActiveSyncDeviceClass
- -   Get-Recipient
- -   Clear-ActiveSyncDevice, Remove-ActiveSyncDevice
- -   Set-ADServerSettings
- -   Get-Command
+ - Get-ActiveSyncOrganizationSettings, Set-ActiveSyncOrganizationSettings
+ - Get-CasMailbox, Set-CasMailbox
+ - Get-ActiveSyncMailboxPolicy, Set-ActiveSyncMailboxPolicy, New-ActiveSyncMailboxPolicy, Remove-ActiveSyncMailboxPolicy
+ - Get-ActiveSyncDeviceAccessRule, Set-ActiveSyncDeviceAccessRule, New-ActiveSyncDeviceAccessRule, Remove-ActiveSyncDeviceAccessRule
+ - Get-ActiveSyncDeviceStatistics
+ - Get-ActiveSyncDevice
+ - Get-ExchangeServer
+ - Get-ActiveSyncDeviceClass
+ - Get-Recipient
+ - Clear-ActiveSyncDevice, Remove-ActiveSyncDevice
+ - Set-ADServerSettings
+ - Get-Command
 
 ## <a name="download-the-on-premises-exchange-connector-software-installation-package"></a>A helyszíni Exchange-összekötő szoftver telepítőcsomagjának letöltése
 

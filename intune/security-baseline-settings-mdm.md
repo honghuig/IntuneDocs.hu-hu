@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9b0d069d6a65be0b51dd02858470780299690425
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528671"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67549064"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>Mobileszköz-kezelési biztonsági Alapterv beállítások az Intune-hoz  
 
@@ -1829,7 +1829,7 @@ A következő beállításokat a következők egyikét:
 - *Módosítás dátuma* valamilyen módon, hogyan a korábbi verzióban jelent meg a beállításokat. 
 
 *[Új]*  [ **Fent zárolási**](#above-lock):
--  **Hangvezérelt alkalmazások zárolt képernyőn aktiválása**    
+- **Hangvezérelt alkalmazások zárolt képernyőn aktiválása**    
 
 *[Új]*  [ **Alkalmazáskezelés**](#application-management): 
 - **Telepítések letiltása felhasználói vezérlése**  

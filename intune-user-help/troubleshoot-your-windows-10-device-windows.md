@@ -18,17 +18,17 @@ ms.reviewer: priyar
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cbf3f053146d7243a397d0fb802718d48300ef20
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: bbd4f8f0925aac5aada44277c4d21a71b412e0e7
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528715"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546683"
 ---
 # <a name="troubleshoot-your-windows-10-device-enrollment"></a>Windows 10-es eszközök regisztrálásával kapcsolatos problémák elhárítása
 Ha már regisztrálta az eszközt, de továbbra sem tud hozzáférni a munkahelyi vagy iskolai e-mailjeihez és fájljaihoz, próbálja ki ezeket a hibaelhárítási lépéseket.  
 
-1.  A következő két képernyő közül válassza ki azt, amelyen ugyanaz látszik, mint az eszközön. Hajtsa végre a kiválasztott képernyőhöz tartozó lépéseket.
+1. A következő két képernyő közül válassza ki azt, amelyen ugyanaz látszik, mint az eszközön. Hajtsa végre a kiválasztott képernyőhöz tartozó lépéseket.
 
     Ha ezt a képernyőt látja, hajtsa végre a [Hibaelhárítási lépések, ha ezt látja: Hozzáférés munkahelyi vagy iskolai rendszerhez](#troubleshooting-steps-to-follow-if-you-see-access-work-or-school) című részben leírt lépéseket.
 

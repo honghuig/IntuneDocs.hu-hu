@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f404fb63f64f216c3732a4378fce383591d95565
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 7081bc04cc0a6de0a0a6e8214ac0a6edea459378
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529038"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558398"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin Bindings
 
@@ -88,7 +88,6 @@ Ha az alkalmazás már adal-t vagy az MSAL használatára van konfigurálva, és
 > iOS rendszerre nincs remapper. A Xamarin.Forms-alkalmazásokba való integrálásnak ugyanúgy kell történnie, mint általában a Xamarin.iOS-projektek esetén. 
 
 ## <a name="enabling-intune-app-protection-policies-in-your-android-mobile-app"></a>Az Intune alkalmazásvédelmi szabályzatainak engedélyezése Androidos mobilalkalmazásban
-
 1. Adja hozzá Xamarin.Android-projektjéhez a [Microsoft.Intune.MAM.Xamarin.Android NuGet-csomagot](https://www.nuget.org/packages/Microsoft.Intune.MAM.Xamarin.Android).
     1. Xamarin.Forms-alkalmazás hozzáadása a [Microsoft.Intune.MAM.Remapper.Tasks NuGet-csomag](https://www.nuget.org/packages/Microsoft.Intune.MAM.Remapper.Tasks) a Xamarin.Android projekthez is. 
 2. Hajtsa végre a szükséges általános lépéseket [integrálása az Intune App SDK](app-sdk-android.md) az Android rendszerhez készült mobilalkalmazás további részleteket a jelen dokumentum hivatkozó közben.
@@ -172,6 +171,14 @@ Ez elvárható, hiszen a Remapper Xamarin osztályok az öröklési módosítja,
 
 > [!NOTE]
 > A Remapper újra ír egy függőség használ a Visual Studio IntelliSense automatikus kiegészítését. Ezért szükségessé töltse be újra, és a projekt újraépítéséhez, az IntelliSense helyesen ismeri fel a módosítások a Remapper hozzáadásakor.
+
+### <a name="company-portal-app"></a>Vállalati portál alkalmazás
+Az Intune SDK Xamarin Bindings használják jelenléte a [céges portál](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal) Android-alkalmazás az alkalmazásvédelmi szabályzatok engedélyezése az eszközön. A Céges portál az Intune szolgáltatástól kéri le az alkalmazásvédelmi szabályzatokat. Az alkalmazás az inicializáláskor betölti a Céges portálról a szabályzatot és a betartatásához szükséges kódot. A felhasználónak nem kell jelentkeznie.
+
+> [!NOTE]
+> Amikor a vállalati portál alkalmazás-e kapcsolva a **Android** eszköz, az Intune által felügyelt alkalmazások ugyanúgy működik, mint a szokásos alkalmazások Intune alkalmazásvédelmi szabályzatait nem támogató.
+
+Az eszközregisztráció nélküli alkalmazásvédelem esetében a felhasználónak _**nem**_ kell regisztrálnia az eszközt a Céges portál alkalmazással.
 
 ## <a name="support"></a>Támogatás
 Ha vállalata már Intune-ügyfél, együttműködve nyisson egy támogatási jegyet, és probléma létrehozása a Microsoft támogató szolgálat képviselőjével [a GitHub hibabejelentő oldalán](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) , mi pedig segítünk, amint tudunk. 

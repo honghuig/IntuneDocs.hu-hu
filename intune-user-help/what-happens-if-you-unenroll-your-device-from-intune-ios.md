@@ -18,30 +18,30 @@ ms.reviewer: esmich, elocholi
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85f6ae657361bea0ab89b8afa73976273fa000f4
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 4ba5705fa04d9eb28e74128228ca8a862f1cb772
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61501204"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545680"
 ---
 # <a name="what-happens-if-you-unenroll-your-ios-or-macos-device-from-intune"></a>Mi történik, ha törli iOS- vagy macOS-eszközének regisztrációját az Intune-ból?
 
 Ha törli iOS- vagy macOS-eszközének regisztrációját az Intune-ból:
 
--   Az eszköz többé nem jelenik meg a vállalati portálon.
+- Az eszköz többé nem jelenik meg a vállalati portálon.
 
--   Többé nem telepíthet alkalmazásokat a vállalati portálról.
+- Többé nem telepíthet alkalmazásokat a vállalati portálról.
 
--   Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
+- Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
 
--   Előfordulhat, hogy az eszközről többé nem lehet elérni egyes vállalati erőforrásokat, például fájlmegosztásokat és belső webhelyeket.
+- Előfordulhat, hogy az eszközről többé nem lehet elérni egyes vállalati erőforrásokat, például fájlmegosztásokat és belső webhelyeket.
 
--   Az eszközön többé nem használhatók a vállalati alkalmazások és adatok.
+- Az eszközön többé nem használhatók a vállalati alkalmazások és adatok.
 
--   Előfordulhat, hogy Wi-Fi- vagy virtuális magánhálózati (VPN-) kapcsolaton keresztül nem tud többé a vállalati hálózathoz csatlakozni.
+- Előfordulhat, hogy Wi-Fi- vagy virtuális magánhálózati (VPN-) kapcsolaton keresztül nem tud többé a vállalati hálózathoz csatlakozni.
 
--   A rendszer eltávolítja a vállalati e-mail profilokat az eszközről.
+- A rendszer eltávolítja a vállalati e-mail profilokat az eszközről.
 
 A regisztráció törlését ismertető útmutatást lásd: [Az eszköz regisztrációjának törlése az Intune-ból](unenroll-your-device-from-intune-ios.md).
 

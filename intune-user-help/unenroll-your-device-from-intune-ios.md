@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9ce28c73ba6f63e90dcaf93d8d21d32dcc4c0dcf
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529493"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546601"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>IOS-eszköz eltávolítása az Intune-ból
 
@@ -35,9 +35,9 @@ Amikor eltávolít egy iOS-eszközt az Intune-ból, az nem fog tudni többé hoz
 Ha az eszközt el szeretné távolítani az Intune-ból, kövesse az alábbi lépéseket, vagy tekintse meg ezt a videót:
 
 
-1.  A Céges portál alkalmazásban koppintson az **Eszközök** elemre, majd válassza ki azt az eszközt, amelynek regisztrációját törölni szeretné. Ha csak egy eszközzel rendelkezik, az **Eszközök** elemre koppintáskor követlenül az eszközadatok képernyőjére lép.
+1. A Céges portál alkalmazásban koppintson az **Eszközök** elemre, majd válassza ki azt az eszközt, amelynek regisztrációját törölni szeretné. Ha csak egy eszközzel rendelkezik, az **Eszközök** elemre koppintáskor követlenül az eszközadatok képernyőjére lép.
 
-2.  Az **ÁTNEVEZÉS** lehetőség mellet kattintson a három pontra, majd az **Eszköz eltávolítása** > **Eltávolítás** lehetőségre.  
+2. Az **ÁTNEVEZÉS** lehetőség mellet kattintson a három pontra, majd az **Eszköz eltávolítása** > **Eltávolítás** lehetőségre.  
 
     |![Képernyőkép a Céges portál alkalmazás Eszközök képernyőjéről, az Eltávolítás gombra kattintás után megjelenő lehetőségekkel. Megjelenített gombok: „Eszköz eltávolítása”, „Gyári beállítások visszaállítása”, valamint „Mégse”.](/intune-user-help/media/cp_ios_unenroll_after_1804_001.png)|
 
@@ -46,23 +46,23 @@ Ha az eszközt el szeretné távolítani az Intune-ból, kövesse az alábbi lé
 
   Az eszköz regisztrációjának Intune-ból való törlésekor a következők történnek:
 
-  -   Az eszköz többé nem jelenik meg a vállalati portálon.
+  - Az eszköz többé nem jelenik meg a vállalati portálon.
 
-  -   Többé nem telepíthet alkalmazásokat a vállalati portálról.
+  - Többé nem telepíthet alkalmazásokat a vállalati portálról.
 
-  -   Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
+  - Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
 
-  -   Előfordulhat, hogy az eszközről többé nem lehet elérni egyes vállalati erőforrásokat, például fájlmegosztásokat és belső webhelyeket.
+  - Előfordulhat, hogy az eszközről többé nem lehet elérni egyes vállalati erőforrásokat, például fájlmegosztásokat és belső webhelyeket.
 
-  -   Az eszközön többé nem használhatók a vállalati alkalmazások és adatok.
+  - Az eszközön többé nem használhatók a vállalati alkalmazások és adatok.
 
-  -   Előfordulhat, hogy Wi-Fi- vagy virtuális magánhálózati (VPN-) kapcsolaton keresztül nem tud többé a vállalati hálózathoz csatlakozni.
+  - Előfordulhat, hogy Wi-Fi- vagy virtuális magánhálózati (VPN-) kapcsolaton keresztül nem tud többé a vállalati hálózathoz csatlakozni.
 
-  -   A rendszer eltávolítja a vállalati e-mail profilokat az eszközről.
+  - A rendszer eltávolítja a vállalati e-mail profilokat az eszközről.
 
-  -   A csak levelezéshez konfigurált eszközök nem fognak megjelenni a Vállalati portál alkalmazásban és a vállalati portál webhelyén.
+  - A csak levelezéshez konfigurált eszközök nem fognak megjelenni a Vállalati portál alkalmazásban és a vállalati portál webhelyén.
   
-  -   Törlődnek az alkalmazások. Törlődnek a vállalati alkalmazásadatok.
+  - Törlődnek az alkalmazások. Törlődnek a vállalati alkalmazásadatok.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>A Céges portál alkalmazás által gyűjtött adatok eltávolítása
 

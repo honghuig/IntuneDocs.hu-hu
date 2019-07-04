@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 798ea14529c0cbf44a0530f1a9a16507b14d7397
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 2c0d3484311d044842daf6718b306d45fc93edf2
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527835"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545931"
 ---
 # <a name="enroll-device-for-access-to-work-or-school-resources"></a>Munkahelyi vagy iskolai erőforrások eléréséhez az eszköz regisztrálása
 Regisztrálja az eszközt, és hozzáférhet a levelezéshez és alkalmazásokhoz, kell telepíteni az Intune vállalati portál alkalmazás vagy a Microsoft Intune app. Ha regisztrál, az alapszintű felügyeleti házirendek, amelyek a szervezet konfigurált, például a jelszó, a PIN-kód és a titkosítás, az eszköz lépnek. Az Eszközbeállítások megfelelnek a szervezeti követelmények mindegyikének, miután gyakorlatilag bárhonnan biztonságosan elérheti a munkahelyi információkhoz.  
@@ -53,13 +53,13 @@ A vállalati portál alkalmazás Windows 10, iOS, macOS és Android-eszközökö
 A Microsoft Intune alkalmazás az Android-eszközök a vállalat által birtokolt.  
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-company-portal"></a>Milyen típusú eszközöket, regisztrálhat a vállalati portál?
--   iOS (például iPhone és iPad) és macOS (például MacBook és iMac) rendszerű Apple-eszközök
--   Androidos eszközök
--   Windows-eszközök
-    -   Windows 10 mobil verzió
-    -   Windows 10 asztali verzió
-    -   Windows Phone 8.1
-    -   Windows 8.1
+- iOS (például iPhone és iPad) és macOS (például MacBook és iMac) rendszerű Apple-eszközök
+- Androidos eszközök
+- Windows-eszközök
+    - Windows 10 mobil verzió
+    - Windows 10 asztali verzió
+    - Windows Phone 8.1
+    - Windows 8.1
 
 ## <a name="what-kind-of-devices-can-you-enroll-with-the-microsoft-intune-app"></a>Milyen típusú eszközökről is regisztrál a Microsoft Intune alkalmazással?  
 Vállalati tulajdonú Android-eszközök az alkalmazással szeretné használni a munkahelye beállította regisztrálásával. Az alkalmazás támogatja az Android 6.0-s és újabb verziók. 

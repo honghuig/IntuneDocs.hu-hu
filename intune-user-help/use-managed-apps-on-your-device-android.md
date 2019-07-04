@@ -18,12 +18,12 @@ ms.reviewer: chrisbal
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bf53266449911967ae8fb89d240274b04164fe96
-ms.sourcegitcommit: 84c79ceea27f7411528defc5ee8ba35ae2bf473c
+ms.openlocfilehash: efcb622681e4f3b3fba7b686551cca7db6bb4c3a
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67511754"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546034"
 ---
 # <a name="use-managed-apps-on-your-android-device"></a>Felügyelt alkalmazások használata Android-eszközön
 A felügyelt alkalmazások úgy vannak konfigurálva, hogy megfeleljenek a szervezet biztonsági követelményeinek, és a védelmet biztosítsanak a munkahelyi és iskolai adatok számára. Ezek az alkalmazások telepíthetők vagy automatikusan használhatók az eszközén. 
@@ -45,11 +45,11 @@ Amikor először fér hozzá munkahelyi vagy iskolai adatokhoz egy felügyelt al
 ## <a name="commonly-managed-apps"></a>Gyakori felügyelt alkalmazások  
 Példák gyakran szükséges vagy elérhető felügyelt alkalmazásokra az iskolában vagy a munkahelyen:
 
--   Microsoft Edge
+- Microsoft Edge
 
--   Microsoft Outlook
+- Microsoft Outlook
 
--   Microsoft Word, Excel és PowerPoint
+- Microsoft Word, Excel és PowerPoint
 
 ## <a name="how-do-i-get-managed-apps"></a>Hogyan szerezhetők be a felügyelt alkalmazások?
 Felügyelt alkalmazások három módja van.  

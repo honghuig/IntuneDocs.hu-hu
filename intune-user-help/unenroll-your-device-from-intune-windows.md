@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 68cec5d8594d832a405daa1228e77a51283a7c92
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 50833b33583dcc1b49eb9009995b8ccd6c79e1f0
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529512"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67546646"
 ---
 # <a name="remove-your-windows-device-from-management"></a>Windows-eszköz eltávolítása a felügyelet alól
 
@@ -76,18 +76,18 @@ Az alábbi lépésekkel távolíthat el egy Windows 10-es eszközt a felügyelet
 ## <a name="remove-your-windows-81-computer"></a>Windows 8.1-es számítógép törlése
 Az alábbi lépésekkel eltávolíthat egy Windows 8.1-es számítógépet az Intune-ból.
 
-1.  Lépjen a **Gépház** > **Hálózat** > **Munkahely** lehetőséghez.
-2.  A **Csatlakozás munkahelyhez** területen válassza a **Kilépés** lehetőséget.
-3.  Válassza az **Eszközkezelés bekapcsolása** terület **Kikapcsolás** lehetőségét.
-4.  A megjelenő előugró ablakban válassza a **Kikapcsolás** lehetőséget.
+1. Lépjen a **Gépház** > **Hálózat** > **Munkahely** lehetőséghez.
+2. A **Csatlakozás munkahelyhez** területen válassza a **Kilépés** lehetőséget.
+3. Válassza az **Eszközkezelés bekapcsolása** terület **Kikapcsolás** lehetőségét.
+4. A megjelenő előugró ablakban válassza a **Kikapcsolás** lehetőséget.
 
 ## <a name="remove-your-windows-81-phone"></a>Windows 8.1-es telefon eltávolítása
 Az alábbi lépésekkel eltávolíthat egy Windows 8.1-es eszközt az Intune-ból.
 
-1.  Lépjen a **Beállítások** > **Munkahely** területre.
-2.  Koppintson a törölni kívánt munkahelyi fiókra.
-3.  A képernyő alsó részén koppintson a **Törlés** elemre.
-4.  A **Fiók törlése** párbeszédpanelen koppintson a **Törlés** gombra.  
+1. Lépjen a **Beállítások** > **Munkahely** területre.
+2. Koppintson a törölni kívánt munkahelyi fiókra.
+3. A képernyő alsó részén koppintson a **Törlés** elemre.
+4. A **Fiók törlése** párbeszédpanelen koppintson a **Törlés** gombra.  
 ## <a name="removing-your-personal-information-after-removing-the-company-portal"></a>Személyes információk törlése a Céges portál eltávolítása után  
 
 A Céges portál kétféle adatot tárol az Ön windowsos eszközén:

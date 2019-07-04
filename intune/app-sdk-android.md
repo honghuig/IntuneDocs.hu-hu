@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ae2318d32bebf17544d2c8c31763a6bf6360c4e9
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 4530c1ec573560924b54aa8fd21d39a86cefe97e
+ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529261"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558428"
 ---
 # <a name="microsoft-intune-app-sdk-for-android-developer-guide"></a>A Microsoft Intune App SDK Androidon – útmutató fejlesztőknek
 
@@ -111,10 +111,10 @@ apply plugin: 'com.microsoft.intune.mam'
 
 Alapértelmezés szerint a beépülő modul **csak** a `project` függőségein fog működni.
 A tesztfordítást nem érinti. Megadhat konfigurációt az alábbiak listázásához:
-*  Kizárandó projektek
-*  [Kizárandó külső függőségek](#usage-of-includeexternallibraries) 
-*  Meghatározott osztályok a feldolgozásból való kizáráshoz
-*  Változók a feldolgozásból való kizáráshoz. Ezek vonatkozhatnak a teljes változónévre vagy egyetlen ízre. Példa:
+* Kizárandó projektek
+* [Kizárandó külső függőségek](#usage-of-includeexternallibraries) 
+* Meghatározott osztályok a feldolgozásból való kizáráshoz
+* Változók a feldolgozásból való kizáráshoz. Ezek vonatkozhatnak a teljes változónévre vagy egyetlen ízre. Példa:
      * Ha az alkalmazás rendelkezik `debug` és `release` buildtípussal {`savory`, `sweet`} és {`vanilla` ízekkel, `chocolate`} akkor megadhatja, hogy
      * `savory` az összes sós ízű változó kizárásához, vagy megadhatja a `savoryVanillaRelease` értéket pontosan ennek az változónak a kizárásához.
 
@@ -713,7 +713,7 @@ Lásd emellett alább a [Feltételes hozzáférés](#conditional-access) követe
 
 #### <a name="3-app-integrates-adal-but-does-not-support-brokered-authenticationdevice-wide-sso"></a>3. Az alkalmazás integrálja az adal-t, de nem támogatja a közvetített hitelesítést/eszközszintű SSO
 
-|Szükséges ADAL-paraméter| Érték |
+|Szükséges ADAL-paraméter| Value |
 |--|--|
 | ClientID | Az alkalmazás ClientID azonosítója (az Azure AD állítja elő az alkalmazás regisztrálásakor) |
 | SkipBroker | **True** |
@@ -1187,7 +1187,7 @@ Az adatok biztonsági mentésével kapcsolatos Android-útmutatóban meg van adv
 Az Intune App SDK alapértelmezés szerint az alkalmazás egészére alkalmazza a szabályzatot. A többszörös identitás az Intune-alkalmazásvédelem választható funkciója, amelynek engedélyezése esetén a szabályzatok identitásonként alkalmazhatók. Ez a többi alkalmazásvédelmi funkciónál jelentősen nagyobb mértékű közreműködést igényel az alkalmazástól.
 
 > [!NOTE]
->  Az alkalmazás megfelelő közreműködésének elmulasztása adatszivárgásokat és egyéb biztonsági problémákat okozhat.
+> Az alkalmazás megfelelő közreműködésének elmulasztása adatszivárgásokat és egyéb biztonsági problémákat okozhat.
 
 Ha a felhasználó már beléptette az eszközt vagy az alkalmazást, az SDK regisztrálja ezt az identitást, és ezt tekinti az Intune-ban felügyelt elsődleges identitásnak. Az alkalmazás többi felhasználójával nem felügyeltként bánik, szabályzatbeállításaik korlátlanok.
 
@@ -1317,7 +1317,7 @@ Az alkalmazás identitásbeállítási képessége mellett a szálak és a körn
 
   1. Ha például egy tevékenység egy másik MAM-alkalmazás által küldött `Intent` alapján indul el, akkor a tevékenység identitása a másik alkalmazásban az `Intent` elküldésekor érvényes identitás alapján lesz beállítva.
 
-  2.  A szolgáltatások esetében a szál identitása hasonlóan lesz beállítva az `onStart`- vagy az `onBind`-hívások időtartamára. Átmenetileg a `Binder`-be érkező, az `onBind` által visszaadott hívások is beállítják a szál identitását.
+  2. A szolgáltatások esetében a szál identitása hasonlóan lesz beállítva az `onStart`- vagy az `onBind`-hívások időtartamára. Átmenetileg a `Binder`-be érkező, az `onBind` által visszaadott hívások is beállítják a szál identitását.
 
   3. A beérkező hívások a `ContentProvider` esetében is hasonlóképpen beállítják a szál identitását az időtartamukra vonatkozóan.
 
@@ -1742,8 +1742,8 @@ Az alábbi lépéseket követve az alapértelmezett regisztráció engedélyezé
 
 A [ProGuard](http://proguard.sourceforge.net/) nélkül futó nagyméretű kódbázis esetén a Dalvik végrehajtható fájlformátum korlátozásai problémát jelenthetnek. Konkrétan a következő korlátozások fordulhatnak elő:
 
-1.  A mezőkre vonatkozó 65 KB-os korlát.
-2.  A metódusokra vonatkozó 65 KB-os korlát.
+1. A mezőkre vonatkozó 65 KB-os korlát.
+2. A metódusokra vonatkozó 65 KB-os korlát.
 
 ### <a name="policy-enforcement-limitations"></a>Szabályzatbetartatási korlátozások
 
