@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9d8cd91d55c90fd4b4f26ee0e6b1b99d37bcce08
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: da828b162e008541cb5cb2b5d15092d0fce417c5
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547601"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572536"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>Állítsa be az Intune helyszíni Exchange-összekötő a Microsoft Intune-ban
 Ebben a cikkben található információk segítséget telepítse, és figyelje az Exchange Active Sync helyszíni összekötőt az Intune-hoz.  Az Intune helyszíni Exchange connector használata az [engedélyezi vagy letiltja a hozzáférést az Exchange feltételes hozzáférési szabályzatok a helyszíni postaládák](conditional-access-exchange-create.md). 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0bf75aca7035eb2873f84f76d3c9ee0e00df7fb3
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 3fb85cc2847c235f7f8079715dee6a2d924f0ac8
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494535"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572585"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Üzembe helyezése hibrid Azure AD-hez csatlakoztatott eszközök Intune-nal és a Windows Autopilot használatával
 Hibrid Azure Active Directory (Azure AD) beállításához használhatja az Intune és a Windows Autopilot-hez csatlakoztatott eszközök. Ehhez kövesse a cikkben.
@@ -139,7 +139,7 @@ Ha a webalkalmazás-proxy a hálózati környezetben, győződjön meg arról, h
 
 1. Ha a kiválasztott **dinamikus eszközök** a tagsági típus a a **csoport** ablaktáblán válassza **dinamikus eszköztagság** , majd a **speciális szabály** tegye a következők egyikét:
     - Hozzon létre egy csoportot, amely az Autopilot minden eszközt magában foglal, írja be a következőt `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Az OrderID attribútumot az Azure AD-eszközök az Intune-csoporthoz címke mezőbe képezi le. Ha azt szeretné, hozzon létre egy csoportot, amely tartalmazza az Autopilot-eszközök egy adott csoport Tag(OrderID) kell írnia az összes: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Az OrderID attribútumot az Azure AD-eszközök az Intune-csoporthoz címke mezőbe képezi le. Ha azt szeretné, hozzon létre egy csoportot, amely tartalmazza az Autopilot-eszközök egy adott csoport Tag(OrderID) kell írnia az összes: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
     - Adja meg, amely tartalmazza az összes az Autopilot-eszközök egy adott beszerzési rendelés Azonosítóval rendelkező csoport létrehozásához, `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
     
 1. Kattintson a **Mentés** gombra.

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a6390db854019bd69dbce983ff8ce20abccc8eba
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 4dd9fc00475c8a8eea28bef2150f25639ac38e15
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548877"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572599"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Az Intune-szoftverügyfél telepítése Windows rendszerű számítógépekre
 
@@ -119,9 +119,9 @@ Az Intune-ügyfélszoftver a [Céges portál webhelyen](https://portal.manage.mi
 
 Ha a felhasználókhoz még nem rendeltek Intune-licencet, vagy ha a szervezet MDM-szolgáltatóját még nem állították be az Intune-ra, a felhasználóknak nem jelenik meg regisztrálási lehetőség.
 
-Ha a felhasználókhoz hozzárendeltek Intune-licencet, és a szervezet MDM-szolgáltatóként az Intune-ra van beállítva:
+Ha a felhasználókhoz hozzárendeltek Intune-licencet, és a szervezet MDM-szolgáltatóját beállították az Intune-ra:
 
-- Windows 7 vagy Windows 8 rendszerű számítógépek felhasználó csak letöltésével és a szervezet egyedi számítógép ügyfélszoftverének telepítése az Intune regisztrációs lehetőség megjelenik.
+- A Windows 7 és Windows 8 rendszereket használó felhasználóknak CSAK az a regisztrációs lehetőség jelenik meg, amelyben szervezetükre szabott egyedi ügyfélszoftvert kell letölteniük és telepíteniük.
 
 - A Windows 10 és Windows 8.1 rendszereken két regisztrálási lehetőség jelenik meg:
 
@@ -258,7 +258,7 @@ Ellenőrizze a %ProgramFiles%\Microsoft\OnlineManagement mappát, és győződj�
 
 A regisztrációtörlési folyamat nem távolítja el az OnlineManagement nevű mappát. Várjon 30 percet az eltávolítás után, majd futtassa ezt a parancsot. Ha túl hamar futtatja, az eltávolítás ismeretlen állapotú maradhat. A mappa eltávolításához nyisson meg egy rendszergazdai jogú parancssort, majd futtassa a következő parancsot:
 
-    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
+    "rd /s /q %ProgramFiles%\Microsoft\OnlineManagement".
 
 ### <a name="next-steps"></a>További lépések
 [A Windows rendszerű számítógépek Intune-szoftverügyféllel való felügyeletének általános feladatai](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

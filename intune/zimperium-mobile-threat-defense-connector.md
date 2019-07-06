@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7cd0e6ddba836724f525ab3d21e192214cc43cb4
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 39c3b606033ca8575e079bef9a627b087a3d3318
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547695"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572468"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-összekötő az Intune-nal
 
@@ -60,7 +60,7 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 ### <a name="control-access-based-on-threat-to-network"></a>Hozzáférés vezérlése hálózati fenyegetés alapján
 
-Észlelheti a fenyegetéseket, például **Man-in-the-middle** hálózatban, és az eszközkockázat alapján Wi-Fi-hálózatok elérésének védelmét.
+Észleli a hálózaton a fenyegetéseket, például a **közbeékelődéses (man-in-the-middle)** támadást, és az eszköz jelentette kockázat alapján biztosítja a Wi-Fi-hálózatok elérésének védelmét.
 
 **Wi-Fi-s hálózati elérés letiltása:**
 
@@ -72,7 +72,7 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Hozzáférés vezérlése a SharePoint Online-hoz hálózati fenyegetés alapján
 
-Észlelheti a fenyegetéseket, például **Man-in-the-middle** hálózatban, és megakadályozza a az eszközkockázat alapján a vállalati fájlok szinkronizálását.
+Észleli a hálózaton a fenyegetéseket, például a **közbeékelődéses (man-in-the-middle)** támadást, és az eszköz jelentette kockázat alapján megakadályozza a vállalati fájlok szinkronizálását.
 
 **A SharePoint Online letiltása hálózati fenyegetések észlelése esetén:**
 
@@ -96,7 +96,7 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 - Zimperium Mobile Threat Defense-előfizetés
 
-    - További információkért lásd: [Zimperium webhelyén](https://www.zimperium.com/zips-mobile-ips).
+    - További információkért lásd: [Zimperium webhelyén](https://www.zimperium.com/zips-mobile-ips).
 
 ## <a name="next-steps"></a>További lépések
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 87e3b6bf1acbce88b45c9ebc78c45279d718a44c
-ms.sourcegitcommit: 46f4d3d160e18aeab9de7477eedc8351fbb78c85
+ms.openlocfilehash: c8e87f8df43468428877d93be03e6f2d7316de9a
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67468760"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572621"
 ---
 # <a name="ui-updates-for-intune-end-user-apps"></a>Felhasználói felületi frissítések az Intune végfelhasználói alkalmazásaiban
 Ismerje meg a legújabb frissítéseket a Microsoft Intune-alkalmazások. A Microsoft rendszeresen ad hozzá, és javíthatja a az Intune vállalati portál alkalmazás és webhely. Ha az Intune-rendszergazdák vagy személy támogatja, ez a cikk a szükséges információkat:
@@ -246,7 +246,7 @@ A relevancia megállapításának finomításán még dolgozunk, ezért várjuk 
 ## <a name="week-of-october-16-2017"></a>2017. október 16-i hét
 
 ### <a name="search-improvements-to-the-company-portal-website----1331697---"></a>A céges portál webhely keresési fejlesztései <!-- 1331697 -->
-Továbbfejlesztjük az alkalmazáskeresési lehetőségeket, első lépésben a [Céges portál weboldalról](https://portal.manage.microsoft.com) elérhetőket. A keresések a Név és a Leírás mezőben megadott információkon túl az alkalmazáskategóriák megadásával finomíthatók. Az eredményeket alapértelmezés szerint relevancia alapján állítja sorrendbe a rendszer. 
+Továbbfejlesztjük az alkalmazáskeresési lehetőségeket, első lépésben a [Céges portál weboldalról](https://portal.manage.microsoft.com) elérhetőket. A keresések a Név és a Leírás mezőben megadott információkon túl az alkalmazáskategóriák megadásával finomíthatók. Az eredményeket alapértelmezés szerint relevancia alapján állítja sorrendbe a rendszer. 
 
 Ezeket a változtatásokat az iOS-es felhasználók is észlelni fogják, mert a Céges portál weboldal része az iOS-es Céges portál alkalmazásnak. Az androidos és windowsos Céges portál alkalmazásokba az elkövetkező hónapokban lesznek bevezetve hasonló újítások.
 
@@ -260,7 +260,7 @@ Ebben a kiadásban elhárítottunk egy ismert problémát azzal kapcsolatban, ah
 ## <a name="week-of-october-2-2017"></a>2017. október 2-i hét
 
 ### <a name="improvements-to-device-setup-workflow-in-company-portal----1490692---"></a>Céges portál eszközbeállítási munkafolyamatát fejlesztései <!-- 1490692 -->
-Továbbfejlesztettük az androidos Céges portál alkalmazás eszközbeállítási munkafolyamatát. Nyelvezete felhasználóbarátabb, vállalatra szabottabb. Képernyőit – ahol lehetett – összevontuk. 
+Továbbfejlesztettük az androidos Céges portál alkalmazás eszközbeállítási munkafolyamatát. Nyelvezete felhasználóbarátabb, vállalatra szabottabb. Képernyőit – ahol lehetett – összevontuk. 
 
 |Előtte|Utána|
 |---|---|
@@ -288,7 +288,7 @@ Frissítettük a feltételes hozzáférés e-mail aktiválási képernyőjét.
 
 ## <a name="week-of-september-11-2017"></a>2017. szeptember 11-i hét
 
-### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Egyszerűbb érthető megfogalmazása drasztikusnak a vállalati portál alkalmazás androidhoz <!-- 1396349 -->  
+### <a name="easier-to-understand-phrasing-for-the-company-portal-app-for-android----1396349---"></a>Egyszerűbb érthető megfogalmazása drasztikusnak a vállalati portál alkalmazás androidhoz <!-- 1396349 -->  
 
 Egyszerűsítettük az Androidhoz készült Céges portál alkalmazás regisztrálási folyamatának leírását, hogy a végfelhasználók könnyebben tudják elvégezni a regisztrálást. Ha egyéni regisztrációs dokumentációval rendelkezik, frissítse az új képernyők megjelenítéséhez. Mintaképeket itt találhat:
 
@@ -305,7 +305,7 @@ Egyszerűsítettük az Androidhoz készült Céges portál alkalmazás regisztr�
 
 ### <a name="ios-11-mail-app-will-support-oauth----1196951---"></a>iOS 11 Mail alkalmazás támogatni fogja az OAuth <!-- 1196951 -->
 
-Feltételes hozzáférés Intune-nal az iOS-eszközökön az OAuth biztonságosabb hitelesítést tesz lehetővé. Ennek a lehetőségnek a kihasználása érdekében az iOS-es Céges portál alkalmazásban egy új fajta folyamatot vezetünk be, amely lehetővé teszi a biztonságosabb hitelesítést. Ha a végfelhasználó a Mail alkalmazásban megpróbál bejelentkezni egy új Exchange-fiókba, a rendszer egy rákérdezést jelenít meg a webes nézethez. Az Intune-ban való regisztráláskor a rendszer egy kérdést jelenít meg, amelynél a felhasználó engedélyezheti, hogy a natív Mail alkalmazás hozzáférjen a tanúsítványhoz. A legtöbb végfelhasználó nem kap többé karanténba helyezett e-maileket. A már meglévő postafiókok továbbra is az alapszintű hitelesítési protokollt használják majd, és ilyen esetben a felhasználók továbbra is kaphatnak karanténba helyezett e-maileket. A végfelhasználói bejelentkezési folyamat hasonló az Office-mobilalkalmazásoknál tapasztalhatóhoz.
+Feltételes hozzáférés Intune-nal az iOS-eszközökön az OAuth biztonságosabb hitelesítést tesz lehetővé. Ennek a lehetőségnek a kihasználása érdekében az iOS-es Céges portál alkalmazásban egy új fajta folyamatot vezetünk be, amely lehetővé teszi a biztonságosabb hitelesítést. Ha a végfelhasználó a Mail alkalmazásban megpróbál bejelentkezni egy új Exchange-fiókba, a rendszer egy rákérdezést jelenít meg a webes nézethez. Az Intune-ban való regisztráláskor a rendszer egy kérdést jelenít meg, amelynél a felhasználó engedélyezheti, hogy a natív Mail alkalmazás hozzáférjen a tanúsítványhoz. A legtöbb végfelhasználó nem kap többé karanténba helyezett e-maileket. A már meglévő postafiókok továbbra is az alapszintű hitelesítési protokollt használják majd, és ilyen esetben a felhasználók továbbra is kaphatnak karanténba helyezett e-maileket. A végfelhasználói bejelentkezési folyamat hasonló az Office-mobilalkalmazásoknál tapasztalhatóhoz.
 
 ![A fiók típusának kiválasztása a natív Mail alkalmazásban.](./media/ios-11-ca-email-after-1708-01.png)
 

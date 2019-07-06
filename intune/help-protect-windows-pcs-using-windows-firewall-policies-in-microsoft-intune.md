@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bc338b30996d0ca31b2dd59a6c934f680f57c0d1
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547543"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572522"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>A Windows rendszerű számítógépek védelme Windows tűzfalházirendek használatával a Microsoft Intune-ban
 
@@ -43,7 +43,7 @@ A Windows tűzfalházirenddel a kezelt számítógépeken lévő Windows tűzfal
 > [!NOTE]
 > Ha a Microsoft Intune házirendje és a Csoportházirend is konfigurálva van a számítógép ugyanazon beállításának kezeléséhez, a csoportházirend-beállítások felülbírálják a Microsoft Intune házirendjét. Az Intune-házirend és a Csoportházirend közötti ütközések elkerülésével kapcsolatos további tudnivalókat lásd: [A GPO- és Microsoft Intune-házirendek ütközéseinek feloldása](resolve-gpo-and-microsoft-intune-policy-conflicts.md).
 >
-> Ha szeretné központilag telepíteni a Windows tűzfal beállításait, hogy Windows Vista fut, telepítenie kell a számítógépekre [gyorsjavítás KB971800](http://support2.microsoft.com/kb/971800) ezeken a számítógépeken.
+> Ha Windows Vista rendszerű számítógépekre szeretné alkalmazni a Windows tűzfal beállításait, először telepítenie kell a [KB971800. számú gyorsjavítást](http://support2.microsoft.com/kb/971800) ezeken a számítógépeken.
 
 > [!IMPORTANT]
 > A Windows tűzfalnak az Intune szolgáltatással való kezeléséhez a következő két szolgáltatást be kell kapcsolnia a kezelni kívánt számítógépeken:
@@ -84,7 +84,7 @@ Ezek a házirendbeállítások a Windows Tűzfalat a bejövő hálózati forgalo
 Az egyes beállítások alapértelmezett értéke a legbiztonságosabb **Igen** érték.
 
 > [!IMPORTANT]
-> Ha a környezetben telepített szervizcsomagok nélküli Windows Vista operációs rendszert futtató számítógépeket tartalmaz, vagy telepítenie kell a frissítés, amelyhez társítva van [971800 cikk](http://go.microsoft.com/fwlink/?LinkId=188405) a Microsoft Tudásbázis vagy tiltsa le a **Minden bejövő kapcsolat blokkolása** házirend-beállítások az adott számítógépekre bevezetett házirendekben.
+> Ha a környezet szervizcsomagok nélküli Windows Vista operációs rendszert futtató számítógépeket tartalmaz, telepítse a Microsoft tudásbázis [971800-as számú cikkéhez](http://go.microsoft.com/fwlink/?LinkId=188405) tartozó frissítést, vagy tiltsa le a **Minden bejövő kapcsolat blokkolása** házirend-beállítást az érintett számítógépekre bevezetett házirendekben.
 
 ### <a name="notify-the-user-when-windows-firewall-blocks-a-new-program"></a>A felhasználó értesítése, ha a Windows tűzfal új programot blokkol
 

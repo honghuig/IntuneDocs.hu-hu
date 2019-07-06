@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 400de55e26076a8d612ac31388d5c5daec68d4a0
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 926d31e226bd25890afe5214b9e8c9247f7316a2
+ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044536"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67572186"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Hálózati hozzáférés-vezérlés (NAC) integrálása az Intune-nal
 
@@ -39,7 +39,7 @@ Regisztrált és az Intune-nál megfelelőnek minősülő eszköz számára a NA
 
 Azon eszközök, amelyek aktív szinkronizálást végeznek az Intune-nal, nem léphetnek **Megfelelő** / **Nem megfelelő** állapotból **Nem szinkronizált** (vagy **Ismeretlen**) állapotba. Az **Ismeretlen** állapot megfordul azon újonnan regisztrált eszközök számára, amelyek még nem estek át megfelelőségi ellenőrzésen.
 
-Azon eszközök esetében, melyek erőforrásokhoz való hozzáférése le van tiltva, az ezt letiltó szolgáltatásnak minden felhasználót át kell irányítania a [felügyeleti portálra](https://portal.manage.microsoft.com) annak meghatározása érdekében, hogy az eszköz miért van letiltva.  Ha a felhasználók megnyitják az oldalt, az eszközeik megfelelőségét a rendszer szinkron módon újraértékeli.
+Azon eszközök esetében, melyek erőforrásokhoz való hozzáférése le van tiltva, az ezt letiltó szolgáltatásnak minden felhasználót át kell irányítania a [felügyeleti portálra](https://portal.manage.microsoft.com) annak meghatározása érdekében, hogy az eszköz miért van letiltva.  Ha a felhasználók megnyitják az oldalt, az eszközeik megfelelőségét a rendszer szinkron módon újraértékeli.
 
 ## <a name="nac-and-conditional-access"></a>NAC és feltételes hozzáférés
 
