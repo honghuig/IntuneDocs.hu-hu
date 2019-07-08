@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a8756ad134853bdd19155c3d8f50d1f07960e80f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
+ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045375"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67547891"
 ---
 # <a name="microsoft-intune-data-warehouse-data-model"></a>A Microsoft Intune-adattárház adatmodelljében
 
@@ -32,22 +32,22 @@ Az Intune-adattárház napi adatgyűjtéssel dokumentálja a mobileszközök fol
 
 Az adattárház a következő magas szintű területeken tünteti fel az adatokat:
 
-  -  Alkalmazásvédelem által engedélyezett alkalmazások és használat
-  -  Regisztrált eszközök, tulajdontárgyak és készlet
-  -  Alkalmazások és szoftverleltár
-  -  Eszközkonfigurációs és megfelelőségi szabályzatok
+  - Alkalmazásvédelem által engedélyezett alkalmazások és használat
+  - Regisztrált eszközök, tulajdontárgyak és készlet
+  - Alkalmazások és szoftverleltár
+  - Eszközkonfigurációs és megfelelőségi szabályzatok
 
 Ezek a területek tartalmazzák az Intune-környezet számára jelentős entitásokat. Az entitáscsoportokról a következő témakörökben talál részletes információt:
 
-  -  [Alkalmazás](reports-ref-application.md)
-  -  [Dátum](reports-ref-date.md)
-  -  [Eszközök](reports-ref-devices.md)
-  -  [Intune felügyeleti bővítmény](reports-ref-intunemanagementextension.md)
-  -  [Szabályzat](reports-ref-policy.md)
-  -  [Mobilalkalmazás-felügyelet (MAM)](reports-ref-mobile-app-management.md)
-  -  [Felhasználó](reports-ref-user.md)
-  -  [Jelenlegi felhasználó](reports-ref-current-user.md)
-  -  [Felhasználók és eszközök társítása](reports-ref-user-device.md)
+  - [Alkalmazás](reports-ref-application.md)
+  - [Dátum](reports-ref-date.md)
+  - [Eszközök](reports-ref-devices.md)
+  - [Intune felügyeleti bővítmény](reports-ref-intunemanagementextension.md)
+  - [Szabályzat](reports-ref-policy.md)
+  - [Mobilalkalmazás-felügyelet (MAM)](reports-ref-mobile-app-management.md)
+  - [Felhasználó](reports-ref-user.md)
+  - [Jelenlegi felhasználó](reports-ref-current-user.md)
+  - [Felhasználók és eszközök társítása](reports-ref-user-device.md)
 
 ## <a name="relationships-star-schema-model"></a>Kapcsolatok: A csillagséma modell
 
