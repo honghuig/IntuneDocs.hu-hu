@@ -6,7 +6,7 @@ keywords: ''
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 07/01/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,26 +17,27 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fb85cc2847c235f7f8079715dee6a2d924f0ac8
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 81e50c3f79ffe9a3b9bc8068d49ba966c35dbbfd
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572585"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649090"
 ---
 # <a name="deploy-hybrid-azure-ad-joined-devices-by-using-intune-and-windows-autopilot"></a>Üzembe helyezése hibrid Azure AD-hez csatlakoztatott eszközök Intune-nal és a Windows Autopilot használatával
 Hibrid Azure Active Directory (Azure AD) beállításához használhatja az Intune és a Windows Autopilot-hez csatlakoztatott eszközök. Ehhez kövesse a cikkben.
 
 ## <a name="prerequisites"></a>Előfeltételek
 
-Sikerült beállítani a [hibrid Azure AD-hez csatlakoztatott eszközök](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Ügyeljen arra, hogy [az eszköz regisztrációjának ellenőrzése]( https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) a Get-MsolDevice parancsmag használatával.
+Sikerült beállítani a [hibrid Azure AD-hez csatlakoztatott eszközök](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan). Ügyeljen arra, hogy [az eszköz regisztrációjának ellenőrzése](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-managed-domains#verify-the-registration) a Get-MsolDevice parancsmag használatával.
 
 A regisztrálni kívánt eszközöknek a következő feltételeknek kell megfelelniük:
 - Windows 10-es v1809 fut, vagy nagyobb.
-- Rendelkezniük kell internet-hozzáféréssel.
-- Hozzáférhet az Active Directory (VPN-kapcsolat jelenleg nem támogatott).
-- A beépített élmény (OOBE) mennek keresztül.
+- Internet-hozzáféréssel rendelkezik [a dokumentált Windows Autopilot hálózati követelményeket a következő](https://docs.microsoft.com/windows/deployment/windows-autopilot/windows-autopilot-requirements#networking-requirements).
+- A hozzáférést egy Active Directory tartományvezérlővel rendelkezik, így azt kapcsolódnia kell a vállalati hálózaton (ahol képes feloldani a DNS-rekordjait az AD-tartományt és az AD tartományvezérlőhöz, és hitelesíti a felhasználót, hogy a tartományvezérlő folytatott kommunikációhoz. VPN-kapcsolat jelenleg nem támogatott).
 - Tudni pingelni a tartományvezérlő a tartomány, amelyhez csatlakozni kíván.
+- Ha proxyt használ, WPAD Proxy beállítás kell engedélyezni és konfigurálni.
+- A beépített élmény (OOBE) mennek keresztül.
 
 ## <a name="set-up-windows-10-automatic-enrollment"></a>Windows 10-es eszközök automatikus regisztrációjának beállítása
 

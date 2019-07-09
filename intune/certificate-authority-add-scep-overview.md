@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 058ebc90cc5086aea21e135fc9944c31cf912105
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 0c5ddb32502aa15f6eaf8f5866772ecd32e970d4
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547244"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648455"
 ---
 # <a name="add-partner-certification-authority-in-intune-using-scep"></a>Partner hitelesítésszolgáltató hozzáadása az Intune-ban SCEP protokollal
 
@@ -124,6 +124,7 @@ Az alábbi külső hitelesítésszolgáltatók támogatják az Intune-t:
 - [IDnomic](https://www.idnomic.com/)
 - [Sectigo](https://sectigo.com/products)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
+- [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/gluckkanja.scepman)
 
 Ha Ön a terméke Intune-nal való integrálása iránt érdeklődő külső hitelesítésszolgáltatót képvisel, tekintse át az API-val kapcsolatos útmutatót:
 

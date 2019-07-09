@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eb9c87974cd9d241340718375ab9c530b1b2f136
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: a80dd650304d99df0d2adf636fcc687444adada2
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558491"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648996"
 ---
 # <a name="android-app-protection-policy-settings-in-microsoft-intune"></a>Android-eszközök alkalmazásvédelmi szabályzatainak beállításai a Microsoft Intune-ban
 Ez a cikk az alkalmazásvédelmi szabályzatok Android-eszközökre vonatkozó beállításait ismerteti. Az ismertetett szabályzatbeállításokat az Azure Portal **Beállítások** paneljén lehet [konfigurálni](app-protection-policies.md) az alkalmazásvédelmi szabályzatokhoz.
@@ -49,7 +49,7 @@ Házirend-beállítások három kategóriába sorolhatók: adatvédelmi beállí
 ### <a name="encryption"></a>Encryption
 | Beállítás | Használat | Alapértelmezett érték |
 |------|------|------|
-| **Szervezeti adatok titkosítása** | Válasszon **megkövetelése** engedélyezése az alkalmazásban lévő munkahelyi vagy iskolai adatok titkosítását. Intune-ban 256 bites AES titkosítási sémával az Android Keystore rendszerrel titkosítja biztonságosan az alkalmazásadatokat OpenSSL használja. A rendszer szinkron módon titkosítja az adatokat a fájlok írási és olvasási műveletei során. Az eszköz tárhelyén található tartalom mindig titkosított marad. Az SDK továbbra is támogatja a 128 bites kulcsok tartalmat és a régebbi SDK-t használó alkalmazások kompatibilitását. <br><br> A titkosítási módszer a FIPS 140-2 szabványnak megfelelő.     |  **megkövetelése**|  
+| **Szervezeti adatok titkosítása** | Válasszon **megkövetelése** engedélyezése az alkalmazásban lévő munkahelyi vagy iskolai adatok titkosítását. Intune-ban 256 bites AES titkosítási sémával az Android Keystore rendszerrel titkosítja biztonságosan az alkalmazásadatokat OpenSSL használja. A rendszer szinkron módon titkosítja az adatokat a fájlok írási és olvasási műveletei során. Az eszköz tárhelyén található tartalom mindig titkosított marad. Új fájlok lesznek titkosítva, 256 bites kulcsokkal. Meglévő 128 bites titkosított fájlok halad át a migrálási kísérlet 256 bites kulcsok, de a folyamat nem garantált. 128 bites kulcsok titkosított fájlok olvasható marad. <br><br> A titkosítási módszer a FIPS 140-2 szabványnak megfelelő.     |  **megkövetelése**|  
 | <ul><ui>**A regisztrált eszközökön a szervezeti adatok titkosítása** | Válassza ki **megkövetelése** kényszeríteni a szervezeti adatok az Intune app titkosítás az összes eszközön. Válassza ki **nem szükséges** kényszeríti a szervezeti adatokat az Intune app réteget titkosítással titkosított ki a regisztrált eszközökre.| **megkövetelése** |
 
 

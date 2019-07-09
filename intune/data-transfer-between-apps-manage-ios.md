@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/03/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d4d12f9e04d275e18c5cf36b444bf1e050560765
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 623891ce84e5a413c83ca3400ccb1cc180d859e5
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558368"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648425"
 ---
 # <a name="how-to-manage-data-transfer-between-ios-apps-in-microsoft-intune"></a>iOS-alkalmazások közti adatátvitel felügyelete a Microsoft Intune-ban
 
@@ -54,9 +54,9 @@ Az egyszerű felhasználónév beállítását **kötelező** megadni olyan eszk
 
       Példa: [‘IntuneMAMUPN’, ‘jondoe@microsoft.com’]
       
-       > [!NOTE]
-       > In Intune, the App Configuration policy has to be for enrollment type "Managed Devices".
-       > Addicionally, the App needs to be either installed from the Intune Company Portal if set as available or pushed as required to the device. 
+     > [!NOTE]
+     > Az Intune-ban, az alkalmazás-konfigurációs házirend eszközregisztráció típusa értékre kell állítani **által kezelt eszköz**.
+     > Ezenkívül az alkalmazás kell lennie, vagy az Intune vállalati portálról telepített (ha elérhetőként beállítása), vagy szükség szerint leküldeni az eszközre. 
 
 4. Telepítse a regisztrált eszközökre a **Megnyitási engedélyek felügyelete** szabályzatot a az Intune vagy külső MDM-szolgáltató segítségével.
 
@@ -78,6 +78,9 @@ Az egyszerű felhasználónév beállítását **kötelező** megadni olyan eszk
    |MobileIron | IntuneMAMUPN | Sztring | ${userUPN} **vagy** ${userEmailAddress} |
    |A Citrix végpont kezelése | IntuneMAMUPN | Sztring | ${user.userprincipalname} |
    |ManageEngine Mobile Device Manager | IntuneMAMUPN | Sztring | %upn% |
+
+> [!NOTE]  
+> Az Outlook alkalmazás az IOS-es alkalmazáskonfigurációs szabályzat a "Using configuration designer" beállítással telepít a konfigurációs kulcs IntuneMAMUPN történik meg automatikusan a szabályzat a háttérben. További információt lásd: gyakori kérdések című [új Outlook IOS-es és Androidos konfigurációs házirend Alkalmazásélményről – általános alkalmazás-konfigurációs](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/New-Outlook-for-iOS-and-Android-App-Configuration-Policy/ba-p/370481). 
 
 
 ### <a name="example-2-end-user-experience"></a>2\. példa: Végfelhasználói élmény

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a9a61b89f07bfacf1dc41be1412f79509e1e147d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 50ac3ff27c22bf63b73f2ae10e6909112564180f
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049943"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648730"
 ---
 # <a name="configure-the-microsoft-managed-home-screen-app-for-android-enterprise"></a>Konfigurálja a Microsoft által felügyelt Android Enterprise kezdőképernyő-alkalmazás
 
@@ -63,32 +63,35 @@ A következő táblázat felsorolja a kezdőlap képernyő felügyelt rendelkez�
 | Állapotsor eszköz engedélyezése | bool | IGAZ | Lehetővé teszi a kezdőképernyőn (felső sáv, amely megjeleníti az aktuális kapcsolatot, például Wi-Fi és stb.) lévő állapotsávon található. Ha engedélyezi ezt a konfigurációs kulcsot, a felhasználó felel meg a kapcsolatok és aktív alkalmazások állapotsorok megjelenített ikonokat megtekinthető lesz. |
 | A jelvény értesítések engedélyezése | bool | HAMIS | Lehetővé teszi, hogy az értesítési jelvény az ikonok, amely az alkalmazás az új értesítések száma alapján mutatja. Ha engedélyezi ezt a beállítást, a végfelhasználók számára jelennek-e a értesítési jelvények alkalmazásokat, az olvasatlan értesítések. Ha ez a konfiguráció fő le van tiltva, a végfelhasználó számára nem jelenik meg, előfordulhat, hogy alkalmazásokba jelzéssel értesítést olvasatlan értesítések. |
 | Zárolási kezdőképernyőjén | bool | IGAZ | Eltávolítja a kezdőképernyőn ikonok Navigálás a végfelhasználó képességét. Ha engedélyezi ezt a konfigurációs kulcsot, az ikonok a kezdőképernyőn lesz zárolva, és a végfelhasználó nem tudná, és a kezdőképernyő különböző rács elfoglalt húzza. Ha engedélyezve van `false`, a végfelhasználók tudják alkalmazás és a Webhivatkozás ikonok Navigálás a felügyelt kezdőlap képernyőn.  |
-| Eszköz asztaltulajdonság beállítása | sztring | Alapértelmezett | Lehetővé teszi egy tetszőleges háttérkép beállítása, amely egy háttérképeként beállítja a kép URL-Címének megadásával. |
-| Állítsa be az alkalmazás az ikon mérete | egész szám | 2 | Lehetővé teszi a kezdőképernyőn látható alkalmazások ikon méretének beállítása. Ebben a konfigurációban a különböző méretű - (legkisebb) 0, 1 (kicsi), 2 (rendszeres), kiválaszthatja a következő értékeket (nagy) 3 és 4 (legnagyobb). |
-| Set alkalmazás mappa ikonra | egész szám | 0 | Lehetővé teszi, hogy meghatározza az alkalmazás mappa megjelenése a kezdőképernyőn. A Megjelenés a következő értékek közül választhat: Sötét Square(0);   Sötét Circle(1); Világos Square(2); Világos Circle(3). |
+| Eszköz asztaltulajdonság beállítása | Karakterlánc | Alapértelmezett | Lehetővé teszi egy tetszőleges háttérkép beállítása, amely egy háttérképeként beállítja a kép URL-Címének megadásával. |
+| Állítsa be az alkalmazás az ikon mérete | integer | 2 | Lehetővé teszi a kezdőképernyőn látható alkalmazások ikon méretének beállítása. Ebben a konfigurációban a különböző méretű - (legkisebb) 0, 1 (kicsi), 2 (rendszeres), kiválaszthatja a következő értékeket (nagy) 3 és 4 (legnagyobb). |
+| Set alkalmazás mappa ikonra | integer | 0 | Lehetővé teszi, hogy meghatározza az alkalmazás mappa megjelenése a kezdőképernyőn. A Megjelenés a következő értékek közül választhat: Sötét Square(0);   Sötét Circle(1); Világos Square(2); Világos Circle(3). |
 | Hitelesítési módok engedélyezése | bool | HAMIS | A felhasználó lehetőség műveletek, például pöccintsen felfelé és lefelé pöccintsen különböző hitelesítési módok engedélyezése. Ha letiltja ezt a konfigurációs kulcsot, a végfelhasználók csak akkor tudnak pöccintsen jobbra, ha van egy második oldalára, és térjen vissza a kezdőlapon. |
 | Függőleges görgethető engedélyezése | bool | HAMIS | Lehetővé teszi, hogy a felügyelt kezdőképernyő függőleges görgetést. Ha engedélyezi ezt a konfigurációs kulcsot, a végfelhasználó csak lesz függőleges helyett vízszintesen érintőképernyőn navigálhat különböző oldalakat. |
 | Set-kezdőképernyő téma | sztring | Theme.Light.Blue | Válassza ki a téma a kezdőképernyőn a témákat különböző színű előre meghatározott teszi lehetővé. A következő formátumban írja be a karakterlánc a következő témák választhat.   Theme.Light.Green. Ahol világos lecserélhető sötét for a sötét téma- és zöld kicserélhető kék, sárga, Rózsaszínre, piros, narancssárga és a lila. |
 | Tároló engedélyezése | bool | HAMIS | Lehetővé teszi az alkalmazás dock szakaszában a kezdőképernyőn alján megjelenített állandó alkalmazások és a belépési pont összes telepített alkalmazáshoz. Ha engedélyezi ezt a konfigurációs kulcsot, a végfelhasználó a dockban alkalmazások hozzáférhetnek, és a minden alkalmazás szakaszban felsorolt engedélyezése megtörtént-e az eszközön telepített összes alkalmazás listájára go is elérhető lesz. |
-| Képernyő tájolásának beállítása | egész szám | 1 | Fekvő tájolással, a kezdőképernyőn tájolásának beállítása, vagy Automatikus elforgatás lehetővé teszi lehetővé. A tájolás (a tájolású módban), 1 érték megadásával állíthatja (a fekvő tájolásban) 2, 3 (a Autorotate). |
+| Képernyő tájolásának beállítása | integer | 1 | Fekvő tájolással, a kezdőképernyőn tájolásának beállítása, vagy Automatikus elforgatás lehetővé teszi lehetővé. A tájolás (a tájolású módban), 1 érték megadásával állíthatja (a fekvő tájolásban) 2, 3 (a Autorotate). |
 | Kezdőképernyő hírcsatorna engedélyezése | bool | HAMIS | Lehetővé teszi a kezdőképernyőn, amelynek bal oldalán a kezdőképernyőn érintőképernyőn láthatja a hírcsatornában. Ezzel a hírcsatornával jeleníti meg a különböző típusú tartalom például hírek, naptár, gyakori felhasználói alkalmazásokban és a Cortana beszédfelismerési asszisztens kártya stb. Ha engedélyezi ezt a beállítást, a végfelhasználó a hírcsatornán navigálhat a bal oldalon, a kezdőképernyőn érintőképernyőn lesz. |
 | Áttekintés mód engedélyezése | bool | HAMIS | Lehetővé teszi a végfelhasználók hozzáadása vagy eltávolítása a kezdőképernyőn, közvetlenül az alapértelmezett képernyőnek a érintőképernyőn elérhető különböző oldalakat. Ha engedélyezi ezt a beállítást, a végfelhasználó fogja tudni hozzáadni az alapértelmezett oldal, a kezdőképernyő jobb lapozható is tudják módosítani az alapértelmezett oldalt és is elérhetik a beállítások a felügyelt kezdőképernyőn eléréséhez. |
 | Eszköz telemetria engedélyezése | bool | HAMIS | Lehetővé teszi a számára a felügyelt kezdőképernyő rögzített telemetria. Ha engedélyezi ezt a beállítást, a Microsoft képes rögzíteni az eszköz használatának telemetriai adatait, például egy adott alkalmazás elindítása az eszköz hányszor lesz. |
-| Alkalmazások beállítása | bundleArray | HAMIS | Lehetővé teszi, hogy az alkalmazás az eszközön telepített között a kezdőképernyőn látható alkalmazások megadásához. Az alkalmazásokat, amelyeket szeretné láthatóvá tenni az alkalmazást csomag nevének megadásával meghatározhatja a az alkalmazások, például com.android.settings biztosítja, beállítások elérhető-e a kezdőképernyőn. Az alkalmazásokat, hogy engedélyezi-listán ebben a szakaszban már telepítve kell lennie az eszközön annak érdekében, hogy a kezdőképernyőn látható. |
+| Alkalmazások engedélyezése felsorolt beállítása | bundleArray | HAMIS | Lehetővé teszi, hogy az alkalmazás az eszközön telepített között a kezdőképernyőn látható alkalmazások megadásához. Az alkalmazásokat, amelyeket szeretné láthatóvá tenni az alkalmazást csomag nevének megadásával meghatározhatja a az alkalmazások, például com.microsoft.emmx biztosítja, beállítások elérhető-e a kezdőképernyőn. Az alkalmazásokat, hogy engedélyezi-listán ebben a szakaszban már telepítve kell lennie az eszközön annak érdekében, hogy a kezdőképernyőn látható. |
 | Rögzített beállítása webes hivatkozások | bundleArray | HAMIS | Lehetővé teszi webhelyek rögzítése a kezdőképernyőn Gyorsindítás ikonjai. Ezzel a konfigurációval határozza meg az URL-címet, és adja hozzá a kezdőképernyőn, indítsa el a böngészőben, hogy egyetlen koppintással a végfelhasználó számára. |
 | Keresősáv engedélyezése | bool | HAMIS | Lehetővé teszi a kezdőképernyőn a keresősávba. Ha engedélyezi ezt a beállítást, akkor az eszköz számára a kezdőképernyőn, ahol azok tudná adja meg, függetlenül azok szeretne keresni a weben a keresősávba jelennek meg. |
 | Gépház alkalmazás letiltása | bool | HAMIS | A beállítások lapon letiltja a felügyelt kezdőlap képernyő. Ha letiltja ezt a beállítást, a végfelhasználó számára az eszköz nem lesz képes a beállítások a felügyelt kezdőlap képernyő. |
-| Képernyőkímélő engedélyezése | bool | HAMIS | Képernyőkímélő mód engedélyezéséhez, vagy sem. Ha a beállítása igaz, konfigurálhat **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver**, és **media_detect_ screen_saver**. |
-| Képernyőn a képernyőkímélő kép | Karakterlánc |   | Állítsa be a képernyőkímélő kép URL-CÍMÉT. Ha nincs URL-cím van beállítva, eszközöket jeleníti meg az alapértelmezett képernyőnek a képernyőkímélő aktiválása.  |
-| Képernyőn a képernyőkímélő idő megjelenítése | egész szám | 0 | Lehetővé teszi a beállítással az eszköz beállítása idő másodpercben a képernyőkímélő képernyőkímélő módban jeleníti meg. Ha 0 értékre állítja, a képernyőkímélő jeleníti meg a képernyőkímélő módot határozatlan ideig, amíg az eszköz aktívvá válik.  |
-| Ahhoz, hogy a képernyőkímélő tétlenség ideje | egész szám | 30 | Az eszköz nem aktív a képernyőkímélő aktiválása előtt másodpercek számát. Ha az értéke 0, az eszköz soha nem kerül a képernyőkímélő módba. |
+| Képernyőkímélő engedélyezése | bool | HAMIS | A képernyő takarékos üzemmódban engedélyezéséhez, vagy sem. Ha a beállítása igaz, konfigurálhat **screen_saver_image**, **screen_saver_show_time**, **inactive_time_to_show_screen_saver**, és **media_detect_ screen_saver**. |
+| Képernyőn a képernyőkímélő kép | Karakterlánc |   | Állítsa be a képernyőn a képernyőkímélő kép URL-CÍMÉT. Ha nincs URL-cím van beállítva, eszközöket jeleníti meg az alapértelmezett képernyőn a képernyőkímélő lemezkép képernyőkímélő aktiválása. Alapértelmezett kép a kezdőlap képernyő felügyelt alkalmazás ikonját.  |
+| Képernyőn a képernyőkímélő idő megjelenítése | integer | 0 | Lehetővé teszi a beállítással az eszköz beállítása idő másodpercben a képernyőkímélő képernyő takarékos üzemmódban jelenik meg. Ha 0 értékre állítja, a képernyőkímélő jeleníti meg a képernyő takarékos üzemmódban határozatlan ideig, amíg az eszköz aktívvá válik.  |
+| Ahhoz, hogy a képernyőkímélő tétlenség ideje | integer | 30 | Az eszköz nem aktív a képernyőkímélő aktiválása előtt másodpercek számát. Ha az értéke 0, az eszköz képernyő takarékos üzemmódban soha nem váltanak. |
 | Media észleli a képernyőkímélő megjelenítése előtt | bool | IGAZ | Válassza ki, hogy az eszköz képernyőjén meg kell jelennie a képernyőkímélő ha hang és videó lejátszása az eszközön. Ha igaz értékű, az eszköz nem játszható le a hang/kép, függetlenül az érték a **inactive_time_to_show_scree_saver**. Ha értéke HAMIS, eszköz képernyőjén jeleníti meg megfelelően állítsa be értéket a képernyőkímélő **inactive_time_to_show_screen_saver**.   |
 | Engedélyezze a virtuális kezdőlapjának gombja | bool | HAMIS | Kapcsolja be ezt a beállítást `True` , hogy a végfelhasználó, aki rendelkezik hozzáféréssel, amely visszaadja az aktuális feladathoz vannak a felügyelt kezdőlapjára a felhasználó otthoni felügyelt kezdőképernyő gombra.  |
 | Virtuális otthoni gomb típusa | Karakterlánc | swipe_up | Használat **swipe_up** a kezdőlap gombja hozzáférés és a egy pöccintsen felfelé kézmozdulat. Használat **lebegőpontos** fix kiszolgálású, állandó otthoni gombra, a végfelhasználók által a képernyőn áthelyezhető eléréséhez. |
-| Akkumulátor és jel erőssége mutató sáv | bool | Igaz  | Ez a beállítás bekapcsolásával `True` az akkumulátor és jel erőssége jelző sáv mutatja. |
+| Akkumulátor és jel erőssége mutató sáv | bool | True  | Ez a beállítás bekapcsolásával `True` az akkumulátor és jel erőssége jelző sáv mutatja. |
 | Kilépés zárolási feladat módjának jelszava | Karakterlánc |   | Adjon meg egy 4 – 6 számjegyű kód használatával ideiglenesen dobja el a hibaelhárítási zárolása-tevékenységhez módból. |
 | Wi-Fi-beállítás megjelenítése | bool | HAMIS | Ez a beállítás bekapcsolásával `True` lehetővé teszi, hogy a végfelhasználó kapcsolhatja be és ki a Wi-Fi, vagy másik Wi-Fi hálózathoz való csatlakozáshoz.  |
 | Bluetooth-beállítás megjelenítése | bool | HAMIS | Ez a beállítás bekapcsolásával `True` felhasználó-vagy bekapcsolása a Bluetooth és csatlakozni más Bluetooth-kompatibilis eszközök segítségével.   |
+| Alkalmazások mappa neve szerint vannak rendezve: | bool | IGAZ | Ez a beállítás bekapcsolásával `False` lehetővé teszi, hogy egy olyan mappa, amelyben megadott sorrendben jelennek meg az elemeket. Ellenkező esetben megjelennek a mappa alphbetically.   |
+| Engedélyezett alkalmazás sorrend | bool | HAMIS | Ez a beállítás bekapcsolásával `True` lehetővé teszi, hogy lehetővé teszik a sorrendet, az alkalmazások, weblinks és mappákat a felügyelt kezdőlap képernyőn. Az engedélyezés után a beállítása, a Rendezés **app_order**mobileszközeiket végfelhasználói kapcsolhatja be és ki a Bluetooth és csatlakozni más Bluetooth-kompatibilis eszközökhöz.   |
+| Alkalmazás sorrend | bundleArray | HAMIS | A felügyelt kezdőlap képernyőn alkalmazásokat, weblinks és mappák sorrendjének megadását teszi lehetővé. Ezzel a beállítással a **kezdőlap zárolási képernyő** engedélyezni kell, **rács méretének beállítása** meg kell határozni és **engedélyezett alkalmazás rendelés** értékre kell állítani `True`.   |
 
 ## <a name="enter-json-data"></a>Enter JSON Data
 
@@ -111,10 +114,6 @@ Az alábbi példa tartalmazza az összes elérhető konfigurációs kulccsal ren
     "kind": "androidenterprise#managedConfiguration",
     "productId": "com.microsoft.launcher.enterprise",
     "managedProperty": [
-        {
-            "key": "grid_size",
-            "valueString": "Auto"
-        },
         {
             "key": "keep_page_header",
             "valueBool": true
@@ -236,6 +235,87 @@ Az alábbi példa tartalmazza az összes elérhető konfigurációs kulccsal ren
         {
             "key": "show_bluetooth_setting",
             "valueBool": false
+        },
+        {
+            "key": "grid_size",
+            "valueString": "4;5"
+        },
+        {
+            "key": "app_order_enabled",
+            "valueBool": true
+        },
+        {
+            "key": "apps_in_folder_ordered_by_name",
+            "valueBool": true
+        },
+        {
+            "key": "app_orders",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.Microsoft.emmx"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 1
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "folder_name",
+                            "valueString": "Work"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "managed_folder"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 2
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.launcher.enterprise"
+                        },
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": "com.microsoft.launcher.launcher"
+                        },
+                        {
+                            "key": "container",
+                            "valueInteger": 1
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 3
+                        }
+                    ]
+                }
+            ]
         },
         {
             "key": "managed_folders",

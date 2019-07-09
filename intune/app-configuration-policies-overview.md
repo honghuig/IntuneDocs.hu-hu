@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/16/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec65325592fbddc29e75b1d84c94e67558faab62
-ms.sourcegitcommit: 116ef72b9da4d114782d4b8dd9f57556c9b01511
+ms.openlocfilehash: 10dad24ee41f63dcc304d95e9b733f7de3f1b71a
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67494057"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649027"
 ---
 # <a name="app-configuration-policies-for-microsoft-intune"></a>Alkalmazáskonfigurációs szabályzatok a Microsoft Intune-hoz
 
-iOS- vagy Android-alkalmazáshoz a Microsoft Intune alkalmazáskonfigurációs szabályzatainak használatával adhat meg konfigurációs beállításokat. Ezek a konfigurációs beállítások lehetővé teszik az alkalmazás testre szabását. A konfigurációs házirendek nem rendel közvetlenül a felhasználók vagy eszközök számára. Ehelyett a konfigurációs szabályzatot egy alkalmazáshoz kell társítani, majd az alkalmazást hozzárendelni a felhasználókhoz vagy eszközökhöz. A konfigurációs szabályzatbeállítások akkor használatosak, amikor egy alkalmazás keresi azokat (általában az első futtatáskor).
+iOS- vagy Android-alkalmazáshoz a Microsoft Intune alkalmazáskonfigurációs szabályzatainak használatával adhat meg konfigurációs beállításokat. Ezeket a konfigurációs beállításokat engedélyezése egy alkalmazást, hogy az alkalmazás konfigurálása és felügyelete az iparági szabványos megközelítés használatával szabható testre. A konfigurációs szabályzatbeállítások akkor használatosak, amikor egy alkalmazás keresi azokat (általában az első futtatáskor).
 
 Alkalmazáskonfigurálási szabályzatot rendelhet a felhasználók és eszközök egy csoportjához belefoglalási és kizárási hozzárendelések kombinációjával. Miután hozzáadta az alkalmazáskonfigurálási szabályzatot, beállíthatja az alkalmazáskonfigurálási szabályzat hozzárendeléseit. A szabályzat hozzárendeléseinek beállításakor felvehet vagy kizárhat a szabályzat hatálya alá eső felhasználói csoportokat. Amikor felvesz egy vagy több csoportot, kiválaszthat bizonyos csoportokat, vagy választhat beépített csoportokat. Beépített csoportok a következők: **Minden felhasználó**, **Minden eszköz**, és **Minden felhasználó és minden eszköz**.
 
@@ -52,9 +52,11 @@ Az Intune alkalmazáskonfigurációinak használatára két lehetőség van:
 
 ## <a name="apps-that-support-app-configuration"></a>Az alkalmazáskonfigurációt támogató alkalmazások
 
-Az alkalmazáskonfigurációs szabályzatokat az azokat támogató alkalmazásokhoz használhatja. Az Intune alkalmazáskonfigurációjának támogatásához az alkalmazásoknak támogatniuk kell az alkalmazáskonfigurációk használatát. Részletekért forduljon az alkalmazás forgalmazójához.
+### <a name="managed-devices"></a>Felügyelt eszközök
+Az alkalmazáskonfigurációs szabályzatokat az azokat támogató alkalmazásokhoz használhatja. Támogatja az alkalmazáskonfigurációt az Intune-ban, az alkalmazások kell rendelkeznie minden bizonnyal támogatják az alkalmazáskonfigurációk használatát által meghatározott a [Appconfig közösségi](https://www.appconfig.org/members). Részletekért forduljon az alkalmazás forgalmazójához.
 
-Előkészítheti az üzletági alkalmazásokat az Intune App SDK az alkalmazásba való belefoglalásával, vagy az alkalmazás annak fejlesztése utáni burkolásával. Az Intune App SDK, iOS és Android rendszeren is elérhető lehetővé teszi, hogy az alkalmazás az Intune alkalmazáskonfigurációs szabályzatainak. Arra törekszik, hogy minimálisra csökkentse az alkalmazásfejlesztő által végzendő kódmódosítás mennyiségét. További információ: [Az Intune App SDK áttekintése](app-sdk.md).
+### <a name="managed-apps"></a>Felügyelt alkalmazások
+Előkészítheti az üzletági alkalmazásokat az Intune App SDK az alkalmazásba való belefoglalásával, vagy az alkalmazás annak fejlesztése utáni burkolásával. Az Intune App SDK, iOS és Android rendszeren is elérhető lehetővé teszi, hogy az Intune alkalmazásvédelmi konfigurációs szabályzatok alkalmazását. Arra törekszik, hogy minimálisra csökkentse az alkalmazásfejlesztő által végzendő kódmódosítás mennyiségét. További információ: [Az Intune App SDK áttekintése](app-sdk.md).
 
 ## <a name="graph-api-support-for-app-configuration"></a>Graph API-támogatás az alkalmazáskonfigurációhoz
 

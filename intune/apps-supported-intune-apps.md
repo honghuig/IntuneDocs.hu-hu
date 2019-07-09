@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1a50eb6e58c7b866af32387a85026eb87f825b15
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 89babf2eb60b7959c5c25a02b29135668efc32eb
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67045902"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649072"
 ---
 # <a name="microsoft-intune-protected-apps"></a>A Microsoft Intune által védett alkalmazások  
 
@@ -32,7 +32,7 @@ Az Intune mobilalkalmazás-védelmi szabályzatok széles skáláját engedélye
 - Többszörös identitás, valamint az alkalmazásszintű feltételes hozzáférés engedélyezése
 - Adatveszteség-megelőzési szabályzatok alkalmazása a felhasználói eszköz kezelése nélkül
 - Regisztráció nélkül app protection engedélyezése
-- 3. fél EMM eszközökkel felügyelt eszközökön app protection engedélyezése
+- 3\. fél EMM eszközökkel felügyelt eszközökön app protection engedélyezése
 
 > [!NOTE]
 > Az ügyfél-üzleti alkalmazások beépítheti a mobilalkalmazás-kezelés használatával a [az Intune App Software Development Kitet](app-sdk.md) (SDK), vagy a [App Wrapping Tool for iOS](app-wrapper-prepare-ios.md) és a [alkalmazás Wrapping Tool for Android](app-wrapper-prepare-android.md). 
@@ -46,6 +46,7 @@ Az alábbi táblázat adja meg a támogatott partner, és a Microsoft Intune-ban
 | **A Microsoft Azure Information Protection megjelenítője**<p><img alt="Microsoft app - Microsoft Azure Information Protection Viewer icon" src="./media/apps-supported-intune-apps/icon-m-azure-information-protection-viewer.png" width="100"> | Biztonságosan együttműködhet használata az AIP Viewer alkalmazást. Védett fájlok megtekintése (rights védett e-mail üzeneteket, PDF-fájlok, képek, szövegfájlok) megosztottak Önnel. | [Android áruházbeli hivatkozás](https://play.google.com/store/apps/details?id=com.egress.switchdroid.intune), [iOS store-hivatkozás](https://itunes.apple.com/us/app/rms-sharing/id689516635?mt=8) | 
 | **Microsoft Bookings**<p><img alt="Microsoft app - Microsoft Bookings icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-bookings.png" width="100"> | Microsoft Bookings egy találkozót, alkalmazás, amely segítséget nyújt a foglalások a munkatársak és az ügyfelek nyomon követheti, ütemezés. Fogja ne maradjon le egy találkozót, és kevesebb no-shows kell.<p>A Bookings alkalmazás segítségével:<br><ul><li>Megtekintheti és kezelheti a naptárát</li><li>Foglalások létrehozása vagy a módosítások a már meglévőket a magukkal vivő</li><li>Tekintse meg a munkatársak valós idejű elérhetőségét</li><li>Könnyen és gyorsan válaszolnak az ügyfeleknek</li><li>Gyorsan arra, ahol a következő foglalási irányban</li><li>Az ügyfél listájának kezelése</li></ul> | [Android áruházbeli hivatkozás](https://play.google.com/store/apps/details?id=com.microsoft.exchange.bookings),<br>[iOS store-hivatkozás](https://itunes.apple.com/us/app/microsoft-bookings/id1065657468?mt=8) |  
 | **Microsoft Connections**<p><img alt="Microsoft app - Microsoft Connections icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-connections.png" width="100"> | A Microsoft Connections kisvállalatokat a minden igényt, és adjon meg egy e-mail-marketing-eszközök használata egyszerű rendelkező ügyfelek. Professzionális e-mail marketingkampányok a bejelentések, hírleveleket és az átirányítások előre elkészített sablonokkal könnyedén hozhat létre. | [iOS store-hivatkozás](https://itunes.apple.com/us/app/microsoft-connections/id1172261641?mt=8) |  
+| **Microsoft Cortana**<p><img alt="Microsoft app - Microsoft Cortana icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-cortana.png" width="100"> | Gyors, egyszerű és emlékeim munka & keltheti életre a személyi asszisztenssel Cortana áttekintéséhez. Az intelligens digitális Segéd használata a telefonjára segítségével nyomon követheti, a fontos dolog, bármerre is jár, az eszközök között. | [Android áruházbeli hivatkozás](https://play.google.com/store/apps/details?id=com.microsoft.cortana),<br>[iOS store-hivatkozás](https://apps.apple.com/us/app/cortana/id1054501703) 
 | **Microsoft Dynamics CRM**<p><img alt="Microsoft app - Microsoft Dynamics CRM icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-dynamics-crm.png" width="100"> | Az ügyfelek megszólítása kihívásainak hatékony, a munkahelyi és a Microsoft Dynamics CRM alkalmazással útközben. Minden találkozó előkészített érkezik, és frissítési megjegyzések, feladatok, a névjegyek, a fiókok, a esetben, és vezet, míg a részletek még friss. Lehetővé teszi az értékesítők az értékesítési adatokat, és útközben környezetfüggő üzleti folyamat által irányított kezeléséhez. Lehetővé teszi az ügynökök és a felettesi mozgástér a mobilitási a case management teljes körét. Kérje le a zökkenőmentes felhasználói élmény egyszer konfigurálásához, üzembe helyezése bárhol modell. IOS és Android rendszerhez érhető el. | [Android áruházbeli hivatkozás](https://play.google.com/store/apps/details?id=com.microsoft.crm.crmphone),<br>[iOS store-hivatkozás](https://itunes.apple.com/app/microsoft-dynamics-crm/id678800460?mt=8) |  
 | **Microsoft Edge**<p><img alt="Microsoft app - Microsoft Edge icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-edge.png" width="100"> | A Microsoft Edge egy folyamatos böngészési élménye a Windows 10-es eszközeiket között hoz létre. Tartalom és adatszinkronizálást zökkenőmentesen a háttérben, így a felhasználók tallózhatnak eszközön, a rendszer kihagyja a beat nélkül. Ismerős a Microsoft Edge-funkciók, például a Hub engedélyezése a felhasználók a webes oly módon, hogy darabok keresztül legyen zsúfolt, így könnyebben megtalálja, megtekintése és kezelése a tartalom a magukkal vivő rendszerezéséhez. A Windows 10-felhasználók számára, bárhol is vannak, a folyamat megszakítása nélkül, keresse meg a webes, hogy hogyan kell, a Microsoft Edge tervezték. | [Android áruházbeli hivatkozás](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US),<br>[iOS store-hivatkozás](https://itunes.apple.com/us/app/microsoft-edge/id1288723196?mt=8) |  
 | **Microsoft Excel**<p><img alt="Microsoft app - Microsoft Excel icon" src="./media/apps-supported-intune-apps/icon-m-microsoft-excel.png" width="100"> | Győződjön meg minden eddiginél a táblagép és telefon jobb, mint az Excel-táblázatok. Biztos lehet benne, hogy szerkesztheti vagy táblázatok létrehozására, fog néznek pontosan hogyan történjen a számítógépek, Mac számítógépek, táblagépek és telefonok között. Be kell, és a egy jól ismert Office megjelenését és működését az idő alatt fut, és a egy intuitív touch élmény.<p><p>Ez az alkalmazás a többszörös identitást támogató alkalmazásoknak Android és IOS rendszereken használható. | [Android áruházbeli hivatkozás](https://play.google.com/store/apps/details?id=com.microsoft.office.excel),<br>[iOS store-hivatkozás](https://itunes.apple.com/us/app/microsoft-excel/id586683407?mt=8) |  

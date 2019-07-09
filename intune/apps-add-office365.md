@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seoapril2019
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 095c2ee0aba0680de0c5fc55c1406dba41111b92
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 00712b891790fbf437e9fed024f7610f37fee129
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67527446"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648701"
 ---
 # <a name="assign-office-365-apps-to-windows-10-devices-with-microsoft-intune"></a>Office 365-alkalmazások hozzárendelése Windows 10-es eszközökhöz a Microsoft Intune-nal
 
@@ -42,6 +42,7 @@ Az alkalmazások hozzárendelése, figyelése, konfigurálása és védelme elő
 - Ez a telepítési mód nincs támogatva Windows 10 S, Windows Home, Windows Team, Windows Holographic és Windows Holographic for Business rendszert futtató eszközökön.
 - Az Intune nem támogatja az asztali Office 365-programok (más néven az Office Centennial-alkalmazások) Microsoft Áruházból történő telepítését olyan eszközök esetében, amelyekre korábban már telepítettek valamilyen Office 365-alkalmazást az Intune segítségével. Ha ezt a konfigurációt telepíti, az adatvesztést vagy adatsérülést okozhat.
 - Több kötelező vagy elérhető alkalmazás-hozzárendelés nem adódik össze. A későbbi alkalmazás-hozzárendelés felülírja a már meglévő alkalmazás-hozzárendeléseket. Ha például az első Office-alkalmazáscsomag tartalmazta a Wordöt, de az újabb már nem, akkor a Word el lesz távolítva. Ez a feltétel a Visio- és Project-alkalmazásokra nem vonatkozik.
+- A Mutiple Office 365-telepítések jelenleg nem támogatottak. Az eszköz csak egy üzemelő példánynak lesz elküldve
 - **Office-verzió**: - Itt választhatja ki, hogy az Office 32 bites vagy 64 bites verzióját szeretné hozzárendelni. A 32 bites verziót 32 bites és 64 bites eszközökön is, a 64 bites verziót viszont csak 64 bites eszközökön telepítheti.
 - **MSI eltávolítása a végfelhasználói eszközökről** – Itt választhatja ki, hogy eltávolítja-e a már meglévő Office .MSI-alkalmazásokat a végfelhasználói eszközökről. A telepítés nem lesz sikeres, ha a végfelhasználói eszközökön már meglévő .MSI-alkalmazások vannak. Az eltávolítás nem korlátozódik az **Alkalmazáscsomag konfigurálásánál** telepítésre kiválasztott alkalmazásokra, mert minden Office (MSI) alkalmazást eltávolít a végfelhasználói eszközről. További információkért lásd: [Az Office már meglévő MSI-verzióinak eltávolítása az Office 365 ProPlusra való frissítés esetén](https://docs.microsoft.com/deployoffice/upgrade-from-msi-version). Amikor az Intune újratelepíti a végfelhasználói gépekre az Office-t, a végfelhasználók automatikusan ugyanazokat a nyelvi csomagokat kapják meg, mint az előző .MSI-alapú Office-telepítésnél.
 
@@ -142,7 +143,14 @@ Ha bejelölte a **XML adatok megadása** lehetőség a **szabályzatbeállítás
 
 Amikor elkészült, válassza az **Alkalmazás hozzáadása** ablaktáblán a **Hozzáadás** lehetőséget. A létrehozott alkalmazás megjelenik az alkalmazáslistában.
 
+## <a name="troubleshooting"></a>Hibaelhárítás
+Az Intune használja a [Office-telepítő eszköz](https://docs.microsoft.com/DeployOffice/overview-of-the-office-2016-deployment-tool) letöltéséhez és az ügyfél számítógépekre, az Office 365 ProPlus üzembe helyezése a [Office 365 CDN](https://docs.microsoft.com/office365/enterprise/content-delivery-networks). Hivatkozási leírt ajánlott eljárások [végpontok kezelése az Office 365](https://docs.microsoft.com/office365/enterprise/managing-office-365-endpoints) győződjön meg arról, hogy a hálózati konfiguráció lehetővé teszi a ügyfelek hozzáférhetnek a CDN-t közvetlenül ahelyett, hogy a CDN útválasztási adatforgalom keresztül központi proxyk elkerülése érdekében Bemutatkozik a szükségtelen késés.
+
+Futtassa a [Support és az Office 365-höz Segéd helyreállítási](https://diagnostics.office.com) a céleszközön, ha telepítés vagy a futásidejű hibák.
+
 ## <a name="errors-during-installation-of-the-app-suite"></a>Hiba történt az alkalmazáscsomag telepítésekor
+
+Lásd: [Office 365 ProPlus ULS-naplózás engedélyezése](https://blogs.technet.microsoft.com/odsupport/2018/06/18/how-to-enable-office-365-proplus-uls-logging) információ részletes telepítési naplók megtekintése.
 
 Az alábbi táblázatban az esetlegesen megjelenő gyakori hibakódok és azok jelentése található.
 

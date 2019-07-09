@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7081bc04cc0a6de0a0a6e8214ac0a6edea459378
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 80b6272c6e1f2efc1687fa25216487595a9ddd9f
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558398"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648961"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin Bindings
 
@@ -96,11 +96,21 @@ Ha az alkalmazás már adal-t vagy az MSAL használatára van konfigurálva, és
 
 Az Intune App SDK integrálásához teljes áttekintése található a [Microsoft Intune App SDK Androidon – útmutató fejlesztőknek](app-sdk-android.md). Olvassa végig az útmutató és a Xamarin-alkalmazás az Intune App SDK integrálása a következő szakaszok célja egy natív Android-alkalmazást Java nyelven fejlesztett, és a egy Xamarin-alkalmazás fejlesztett, jelölje ki a megvalósítás közötti különbségek C#. Ezekben a szakaszokban a kiegészítő kell kezelni, és nem jár el ebben az esetben a következő témakör elolvasásával helyett.
 
+#### <a name="remapper"></a>Remapper
+Verziótól kezdve a 1.4428.1 kiadásban a `Microsoft.Intune.MAM.Remapper` csomag adhatók hozzá Xamarin.Android-alkalmazásba, [hozhat létre azokat az eszközöket](app-sdk-android.md#build-tooling) a MAM osztály metódus és rendszerek szolgáltatások cseréjére végrehajtásához. Ha a Remapper részét képezi, az átnevezett metódusok és a MAM-alkalmazás szakaszok MAM egyenértékű helyettesítő részeit automatikusan történik, ha az alkalmazást a létrehozása.
+
+Egy osztály kizárása a MAM-besorolása alapján a következő tulajdonság lehet hozzáadni a projektek a Remapper `.csproj` fájlt.
+```xml
+  <PropertyGroup>
+    <ExcludeClasses>Semicolon separated list of relative class paths to exclude from MAM-ification</ExcludeClasses>
+  </PropertyGroup>
+```
+
 #### <a name="renamed-methodsapp-sdk-androidmdrenamed-methods"></a>[Átnevezett metódusok](app-sdk-android.md#renamed-methods)
 Sok esetben az androidos osztályban rendelkezésre álló metódus végsőként van megjelölve a helyettesítő MAM-osztályban. Ebben az esetben a helyettesítő MAM-osztály egy hasonlóan elnevezett metódust biztosít (a `MAM` utótaggal), amelyet felül kell írni. Így például a `MAMActivity` származtatásakor az `OnCreate()` felülírása, illetve a `base.OnCreate()` metódus hívása helyett az `Activity` tevékenységnek felül kell írnia az `OnMAMCreate()` metódust, és meg kell hívnia a `base.OnMAMCreate()` metódust.
 
 #### <a name="mam-applicationapp-sdk-androidmdmamapplication"></a>[MAM-alkalmazás](app-sdk-android.md#mamapplication)
-Az alkalmazás meg kell határoznia egy `Android.App.Application` osztályból származó `MAMApplication`. Ügyeljen rá, hogy az alosztály megfelelően jelölve legyen a `[Application]` attribútummal, és felülbírálja a `(IntPtr, JniHandleOwnership)` konstruktort.
+Az alkalmazás meg kell határoznia egy `Android.App.Application` osztály. Ha manuálisan integrálása MAM, kell örökölnie `MAMApplication`. Ügyeljen rá, hogy az alosztály megfelelően jelölve legyen a `[Application]` attribútummal, és felülbírálja a `(IntPtr, JniHandleOwnership)` konstruktort.
 ```csharp
     [Application]
     class TaskrApp : MAMApplication
@@ -147,7 +157,7 @@ IMAMEnrollmentManager mgr = MAMComponents.Get<IMAMEnrollmentManager>();
 
 ### <a name="xamarinforms-integration"></a>Xamarin.Forms-integráció
 
-A `Xamarin.Forms` alkalmazásokhoz biztosítunk a `Microsoft.Intune.MAM.Remapper` MAM osztály lecserélését automatikus elvégzéséhez úgy, hogy a csomag `MAM` osztályok az osztály hierarchiává, gyakran használt `Xamarin.Forms` osztályokat. 
+A `Xamarin.Forms` alkalmazások a `Microsoft.Intune.MAM.Remapper` csomag végez MAM osztály lecserélését automatikusan úgy, hogy `MAM` osztályok az osztály hierarchiává, gyakran használt `Xamarin.Forms` osztályokat. 
 
 > [!NOTE]
 > A Xamarin.Forms-integráció, hogy a Xamarin.Android-integrációval lásd fent emellett elvégezni.
@@ -179,6 +189,9 @@ Az Intune SDK Xamarin Bindings használják jelenléte a [céges portál](https:
 > Amikor a vállalati portál alkalmazás-e kapcsolva a **Android** eszköz, az Intune által felügyelt alkalmazások ugyanúgy működik, mint a szokásos alkalmazások Intune alkalmazásvédelmi szabályzatait nem támogató.
 
 Az eszközregisztráció nélküli alkalmazásvédelem esetében a felhasználónak _**nem**_ kell regisztrálnia az eszközt a Céges portál alkalmazással.
+
+### <a name="sample-applications"></a>Mintaalkalmazások
+Mintaalkalmazások, valamint az áttelepítésre alkalmatlan a Xamarin.Android- és Xamarin Forms-alkalmazások mobilalkalmazás-felügyeleti funkciók érhetők el a [GitHub](https://github.com/msintuneappsdk/Taskr-Sample-Intune-Xamarin-Android-Apps).
 
 ## <a name="support"></a>Támogatás
 Ha vállalata már Intune-ügyfél, együttműködve nyisson egy támogatási jegyet, és probléma létrehozása a Microsoft támogató szolgálat képviselőjével [a GitHub hibabejelentő oldalán](https://github.com/msintuneappsdk/intune-app-sdk-xamarin/issues) , mi pedig segítünk, amint tudunk. 

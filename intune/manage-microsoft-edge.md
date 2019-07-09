@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b267e1c59ab59737b58b73054b90b0f8e026e959
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 147547577615c6e74a9c5b3dd8b200ba387bad79
+ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558119"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648469"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Webes hozzáférés felügyelete a Microsoft Edge Microsoft Intune-nal való használatával
 
@@ -99,7 +99,7 @@ Egyszeri bejelentkezés szükséges regisztrálni az iOS-eszközök a Microsoft 
 
 Az alkalmazáskonfigurációk a alkalmazni, a felhasználó a böngésző által védett, vagy egy másik alkalmazást az eszközön már felügyelni kívánja a [az Intune alkalmazásvédelmi szabályzatának](app-protection-policy.md).
 
-Egy védett browser alkalmazás konfigurációjának létrehozása:
+A Microsoft Edge Alkalmazáskonfiguráció létrehozása:
 
 1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
 2. Válassza ki **ügyfélalkalmazás** > **alkalmazáskonfigurációs szabályzatok** > **Hozzáadás**.
@@ -125,7 +125,27 @@ A beállítások felhasználói csoportokhoz rendelhet az Azure ad-ben. Ha az il
 3. A következő panelen válassza ki a **hozzárendelések**.
 4. Az a **hozzárendelések** panelen, és válassza ki azt az Azure AD-csoportot, amelyhez az alkalmazáskonfigurációt hozzárendelni, és válassza ki szeretné **OK**.
 
-## <a name="configure-application-proxy-settings-for-protected-browsers"></a>Védett böngészők az alkalmazásproxy beállításainak konfigurálása
+## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>A Microsoft Edge helyett az Intune Managed Browser közvetlen felhasználók 
+
+Az Intune Managed Browser és a Microsoft Edge böngésző házirend által védett is használható. Győződjön meg arról, hogy a felhasználók vannak irányítja a megfelelő browser alkalmazás használatához, jelölje ki az Intune által felügyelt alkalmazások (például az Outlook, OneDrive és SharePoint) az összes az alábbi konfigurációs beállítás:
+
+|    Kulcs    |    Value    |
+|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+|    `com.microsoft.intune.useEdge`    |    Az érték `true` átirányítja a felhasználókat, hogy töltse le és használja a Microsoft Edge.<br>Az érték `false` lehetővé teszi a felhasználók az Intune Managed Browser használatára.    |
+
+Ha az alkalmazás konfigurációs érték **nem** állítja, az alábbi logikával határozza meg böngésző használható vállalati hivatkozások megnyitásához.
+
+Androidon:
+- Az Intune Managed Browser indít, ha egy felhasználó az Intune Managed Browser és a Microsoft Edge az eszköz letöltése. 
+- A Microsoft Edge indít, ha csak a Microsoft Edge letöltődik az eszközön, és az Intune-szabályzat vonatkozik.
+- Felügyelt böngésző elindítja, ha csak a Managed Browser az eszközön, és az Intune-szabályzat vonatkozik.
+
+Az iOS rendszeren, ha az alkalmazásokban integrálva van az Intune SDK for iOS 9.0.9+ verziója:
+- Az Intune Managed Browser indít, ha a Managed Browser és a Microsoft Edge az eszközön.  
+- A Microsoft Edge indít, ha csak a Microsoft Edge az eszközön, és az Intune-szabályzat vonatkozik.
+- Felügyelt böngésző elindítja, ha csak a Managed Browser az eszközön, és az Intune-szabályzat vonatkozik.
+
+## <a name="configure-application-proxy-settings-for-microsoft-edge"></a>A Microsoft Edge az alkalmazásproxy-beállítások konfigurálása
 
 Használhatja a Microsoft Edge és [Azure AD-alkalmazásproxy](https://docs.microsoft.com/azure/active-directory/active-directory-application-proxy-get-started) együtt való hozzáférést a felhasználóknak az intranetes webhelyekre a mobileszközükön. 
 
@@ -143,7 +163,7 @@ Néhány példa a forgatókönyvek az Azure AD-alkalmazásproxy engedélyezése 
 > [!NOTE]
 > Az Alkalmazásproxy frissített átirányítási adatainak érvénybe lépése a Managed Browserben és a Microsoft Edge-ben akár 24 órát is igénybe vehet.
 
-#### <a name="step-1-enable-automatic-redirection-to-a-protected-browser-from-outlook"></a>1\. lépés: Automatikus átirányítás engedélyezése az Outlookból egy védett böngészőhöz
+#### <a name="step-1-enable-automatic-redirection-to-microsoft-edge-from-outlook"></a>1\. lépés: A Microsoft Edge automatikus átirányítás engedélyezése az Outlookból
 Az Outlook állítson be egy alkalmazásvédelmi szabályzatot, amely lehetővé teszi, hogy a beállítás **megosztás webes tartalom házirenddel felügyelt böngészők**.
 
 ![Képernyőkép az alkalmazásvédelmi szabályzat - megosztás webes tartalom házirenddel felügyelt böngészőket](./media/manage-microsoft-edge/manage-microsoft-edge-03.png)
@@ -163,7 +183,7 @@ Ezzel a beállítással konfigurálhatja a kezdőlap parancsikont a Microsoft Ed
 
 A kezdőlap helyi konfigurálásához kövesse az alábbi kulcs-érték párt:
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Adjon meg egy érvényes URL-címet. A helytelen URL-címek biztonsági intézkedésként le vannak tiltva.<br>**Példa:**  <`https://www.bing.com`>
     |
@@ -181,7 +201,7 @@ Az alábbiakban néhány részletei:
 
 Felügyelt könyvjelzők konfigurálásához kövesse az alábbi kulcs-érték párt:
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.bookmarks    |    Ez a konfiguráció értéke egy könyvjelzőlista. Minden könyvjelző címből és a könyvjelző URL-cím áll. A title és az URL-CÍMÉT a `|` karakter.      Példa:<br>`Microsoft Bing|https://www.bing.com`<br>Több könyvjelző megadásakor külön minden párból az karakterpárt `||`.<p>Példa:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
 
@@ -189,7 +209,7 @@ Felügyelt könyvjelzők konfigurálásához kövesse az alábbi kulcs-érték p
 
 Alapértelmezés szerint a felhasználók számára jelennek meg, hogy a Microsoft Edge-könyvjelzők belül egy adott mappában megtörténik MyApps webhelyeket. A mappa célállapotba a saját szervezetének nevére.
 
-|    Kulcs    |    Érték    |
+|    Kulcs    |    Value    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    **Igaz** MyApps bemutatja a Microsoft Edge-könyvjelzők belül.<p>**FALSE (hamis)** elrejti a MyApps Microsoft Edge belül.    |
 
@@ -245,26 +265,6 @@ Az enyhe átmenetek engedélyezettek-e konfigurálásához kövesse az alábbi k
 |    Kulcs    |    Érték    |
 |----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock`    |    **Igaz** lehetővé teszi, hogy a Microsoft Edge átmenet felhasználók számára a személyes környezet, nyissa meg a letiltott webhelyek.<p>**Blokk** megakadályozza, hogy a Microsoft Edge transitioning felhasználók. Felhasználó egyszerűen megjelenik egy üzenet, amely megállapítja, hogy blokkolva van-e a hely, amelyhez hozzá szeretne férni.    |
-
-## <a name="direct-users-to-microsoft-edge-instead-of-the-intune-managed-browser"></a>A Microsoft Edge helyett az Intune Managed Browser közvetlen felhasználók 
-
-Az Intune Managed Browser és a Microsoft Edge böngésző házirend által védett is használható. Győződjön meg arról, hogy a felhasználók vannak irányítja a megfelelő browser alkalmazás használatához, jelölje ki az Intune által felügyelt alkalmazások (például az Outlook, OneDrive és SharePoint) az összes az alábbi konfigurációs beállítás:
-
-|    Kulcs    |    Érték    |
-|------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    `com.microsoft.intune.useEdge`    |    Az érték `true` átirányítja a felhasználókat, hogy töltse le és használja a Microsoft Edge.<br>Az érték `false` lehetővé teszi a felhasználók az Intune Managed Browser használatára.    |
-
-Ha az alkalmazás konfigurációs érték **nem** állítja, az alábbi logikával határozza meg böngésző használható vállalati hivatkozások megnyitásához.
-
-Androidon:
-- Az Intune Managed Browser indít, ha egy felhasználó az Intune Managed Browser és a Microsoft Edge az eszköz letöltése. 
-- A Microsoft Edge indít, ha csak a Microsoft Edge letöltődik az eszközön, és az Intune-szabályzat vonatkozik.
-- Felügyelt böngésző elindítja, ha csak a Managed Browser az eszközön, és az Intune-szabályzat vonatkozik.
-
-Az iOS rendszeren, ha az alkalmazásokban integrálva van az Intune SDK for iOS 9.0.9+ verziója:
-- Az Intune Managed Browser indít, ha a Managed Browser és a Microsoft Edge az eszközön.  
-- A Microsoft Edge indít, ha csak a Microsoft Edge az eszközön, és az Intune-szabályzat vonatkozik.
-- Felügyelt böngésző elindítja, ha csak a Managed Browser az eszközön, és az Intune-szabályzat vonatkozik.
 
 ## <a name="use-microsoft-edge-on-ios-to-access-managed-app-logs"></a>IOS-es Microsoft Edge használatával felügyelt alkalmazások naplóinak elérése 
 
