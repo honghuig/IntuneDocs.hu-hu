@@ -15,12 +15,12 @@ ms.reviewer: joglocke
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 93e470175829008b72b5b8991188f3c92e38a567
-ms.sourcegitcommit: 690e680e854b7d707421c5e06f134e493f4f4194
+ms.openlocfilehash: 3e4e1040913daef5418f0b4fa1e56f6ef827dd67
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67416845"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713278"
 ---
 # <a name="use-security-baselines-to-configure-windows-10-devices-in-intune"></a>Biztonsági alapterveket segítségével a konfigurálása a Windows 10-eszközök Intune-ban
 
@@ -155,7 +155,7 @@ Mentéskor az átalakítás befejeződése után az eredeti van azonnal áttelep
 3. A a **verzió módosítása** ablaktáblán, használja a **válassza ki a frissíteni egy biztonsági alaptervet** legördülő menüből, és válassza ki a használni kívánt verzió példányt.  
 
    ![verzió kiválasztása](./media/security-baselines/select-instance.png)  
- 
+   
 4. Válassza ki **felülvizsgálati frissítés** profilok jelenlegi példány és az új verzió kiválasztott különbségének tartalmazó CSV-fájl letöltéséhez. Tekintse át ezt a fájlt, hogy megismerte, hogy mely beállítások lettek hozzáadva, eltávolítva, és ezeknek a beállításoknak az alapértelmezett értékeket a frissített profil.  
 
    Ha elkészült, folytassa a következő lépéssel.  

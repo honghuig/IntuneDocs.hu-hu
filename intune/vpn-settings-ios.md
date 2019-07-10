@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d922ecde0159603acbfbc3dc0590592592d72645
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 1eee827ace5dae92b485a250e6e4e0b9b426fbe6
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67046208"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713190"
 ---
 # <a name="configure-vpn-settings-on-ios-devices-in-microsoft-intune"></a>VPN-beállítások konfigurálása iOS-eszközökön a Microsoft Intune-ban
 
@@ -41,7 +41,7 @@ A szállítók az alábbi listából válassza ki a VPN-kapcsolat típusa:
 - **Cisco (IPsec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: Feltételes hozzáférés használata, vagy lehetővé teszik a felhasználók kihagyhatják a Zscaler bejelentkezési képernyő, majd integrálnia kell Zscaler privát hozzáférést (ZPA) az Azure AD-fiókjával. A lépések részletezését a [Zscaler dokumentációja](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad#Azure_UserSSO) tartalmazza. 
+- **Zscaler**: Feltételes hozzáférés használata, vagy lehetővé teszik a felhasználók kihagyhatják a Zscaler bejelentkezési képernyő, majd integrálnia kell Zscaler privát hozzáférést (ZPA) az Azure AD-fiókjával. A lépések részletezését a [Zscaler dokumentációja](https://help.zscaler.com/zpa/configuration-example-microsoft-azure-ad) tartalmazza. 
 - **Egyéni VPN**
 
 > [!NOTE]

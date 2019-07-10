@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2019
+ms.date: 07/09/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 325428f99c50ac4d2eede35d4aaadd858cd8b136
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 2ec03471e4ff3940f09fe4a9bef53b86e32bafa8
+ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047668"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67713347"
 ---
 # <a name="quickstart-try-microsoft-intune-for-free"></a>Gyors útmutató: A Microsoft Intune ingyenes kipróbálása 
 
@@ -61,7 +61,7 @@ Az Intune kipróbálása 30 napig ingyenes. Ha már rendelkezik munkahelyi vagy 
 
 ## <a name="sign-in-to-the-azure-portal"></a>Jelentkezzen be az Azure Portalra
 
-1. Nyisson meg egy böngészőablakot, és írja be a címsorba a következőt: **https://portal.azure.com**. 
+1. Nyisson meg egy böngészőablakot, és írja be a címsorba a következőt: **https://portal.azure.com** . 
 2. A bejelentkezéshez használja a fenti lépésekben megadott hitelesítő adatokat.
 
     ![Az Azure Portal bejelentkezési oldalának képe](./media/azure-portal-signin.png)
@@ -81,7 +81,7 @@ Miután bejelentkezett az Azure Portalra, és kiválasztotta az Intune-t, megjel
 
 Az Intune az alábbi lépésekkel állítható be MDM-szolgáltatóként.
 
-1. Nyisson meg egy böngészőablakot, és írja be a címsorba a következőt: **https://portal.azure.com**. 
+1. Nyisson meg egy böngészőablakot, és írja be a címsorba a következőt: **https://portal.azure.com** . 
 2. Válassza a **Minden szolgáltatás** > **Microsoft Intune** lehetőséget.
 3. Válassza azt a sávot, amely jelzi, hogy nem engedélyezte az eszközkezelést, vagy ha még nem látható a sáv, válassza az **Eszközök beléptetése** lehetőséget. Ha még nem engedélyezte az eszközkezelést meg fog jelenni az **MDM-szolgáltató kiválasztása** panel.
 
