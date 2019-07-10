@@ -1,7 +1,7 @@
 ---
 title: Adatok beolvasása az adattárház API-ból REST-ügyféllel
 titleSuffix: Microsoft Intune
-description: Ez a témakör ismerteti, hogyan lehet adatokat lekérni a Microsoft Intune-adattárház egy RESTful API-val.
+description: Ez a témakör azt ismerteti, hogyan kérhet le információkat a Microsoft Intune adattárházból egy REST API használatával.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9fd99c0b42316a4425828cfa875f12d75dd86489
-ms.sourcegitcommit: cb4e71cd48311ea693001979ee59f621237a6e6f
+ms.openlocfilehash: 8090e9906cc8e3b3da25b21343093dd2f656afa6
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67558540"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735810"
 ---
 # <a name="get-data-from-the-intune-data-warehouse-api-with-a-rest-client"></a>Adatok beolvasása az Intune-adattárház API-ból REST-ügyféllel
 
@@ -48,7 +48,7 @@ Hozzon létre egy natív alkalmazást az Azure-ben. Ez a natív alkalmazás az �
     3. Írjon be egy URL-címet a **Bejelentkezési URL-cím** mezőbe. A bejelentkezési URL-cím az adott forgatókönyvtől is függ, azonban ha a Postman alkalmazást tervezi használni, a következő címet írja be: `https://www.getpostman.com/oauth2/callback`. A visszahívásra az ügyfél-hitelesítési lépésben lesz szükség a Microsoft Azure AD-beli hitelesítéshez.
 4. Kattintson a **Létrehozás** gombra.
 
-     ![Intune-adattárház ügyfélalkalmazás](./media/reports-get_rest_data_client_overview.png)
+     ![Intune-adattárház-ügyfélalkalmazás](./media/reports-get_rest_data_client_overview.png)
 
 5. Jegyezze fel az alkalmazás **Alkalmazásazonosítóját**. Az azonosítóra szükség lesz a következő szakaszban.
 
@@ -94,11 +94,11 @@ A következők szükségesek REST-hívások a Postman alkalmazásból való vég
 
 A végpont is szükséges. Az adattárház-végpont beszerzéséhez szükséges az egyedi hírcsatorna URL-címe. Az OData-végpont az Adattárház panelen érhető el.
 
-1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-3. Nyissa meg a **Intune Data Warehouse** panel alatt Data Warehouse mutató hivatkozás **más feladatok** jobb oldalán található a **a Microsoft Intune - áttekintés** panelen.
+1. Jelentkezzen be az [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)-ba.
+3. Nyissa meg az **Intune** -adattárház panelt az adatraktár hivatkozásának kiválasztásával az **Microsoft Intune – áttekintés** panel jobb oldalán található **egyéb feladatok** területen.
 4. Másolja be az egyedi hírcsatorna URL-címét a **Külső gyártótól származó jelentéskészítési szolgáltatások használata** szakaszba. Az eredménynek a következőhöz hasonlónak kell lennie: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0`
 
-A végpont a következő formátumot követi: `https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
+A végpont a következő formátumot követi:`https://fef.{yourtenant}.manage.microsoft.com/ReportingService/DataWarehouseFEService/{entity}?api-version={verson-number}`
 
 A **dates** entitás megjelenése például a következő: `https://fef.tenant.manage.microsoft.com/ReportingService/DataWarehouseFEService/dates?api-version=v1.0`
 
@@ -144,7 +144,7 @@ Ahhoz, hogy beszerezzen egy új hozzáférési jogkivonatot a Postman számára,
 1. Kattintson a **Küldés** gombra.
 2. A visszaadott adatok a Postman-válasz törzsében jelennek meg.
 
-    ![Postman ügyfélállapot egyenlő 200-as rendben](./media/reports-postman_200OK.png)
+    ![A Poster-ügyfél állapota 200 OK](./media/reports-postman_200OK.png)
 
 ## <a name="create-a-rest-client-c-to-get-data-from-the-intune-data-warehouse"></a>REST-ügyfél (C#) létrehozása az Intune-adattárház adatainak beolvasásához
 
@@ -161,9 +161,10 @@ Az alábbi minta egy egyszerű REST-ügyfelet tartalmaz. A kód a .Net-kódtár 
 6. Az **Elfogadom** elemet választva fogadja el a NuGet-csomag licencfeltételeit.
 7. Nyissa meg a `Program.cs` fájlt a Megoldáskezelőben.
 
-    ![Progam.cs és a Visual Studio Megoldáskezelőjében](./media/reports-get_rest_data_in.png)
+    ![Program.cs és Megoldáskezelő a Visual Studióban](./media/reports-get_rest_data_in.png)
 
-8. Cserélje le a kódot *Program.cs* a következő kóddal:  
+8. Cserélje le a *program.cs* található kódot a következő kódra:  
+
    ```csharp
    namespace IntuneDataWarehouseSamples
    {

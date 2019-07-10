@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fd6d24b5a897c5a6bcd075da111fa579d8d74154
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 5bdb727b542cd66e0b8fcf4a0822eaf0107600ad
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66044549"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735733"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>A helyszíni Intune Exchange Connector hibaelhárítása
 
@@ -32,17 +32,17 @@ Ez a cikk a helyszíni Intune Exchange Connectorral kapcsolatos problémák elh�
 
 A [Helyszíni Intune Exchange Connector beállítása](exchange-connector-install.md) című cikk alapján győződjön meg róla, hogy az összekötő helyesen van konfigurálva. Az alábbiakban néhány gyakori problémát sorolunk fel. A javítások után ellenőrizze, hogy a probléma megoldódott-e.
 
- - Ellenőrizze, hogy a Microsoft Intune Exchange Connector párbeszédablakban megadott felhasználói fiók megfelelő engedélyekkel rendelkezik-e a [szükséges Windows PowerShell Exchange parancsmagok](exchange-connector-install.md#exchange-cmdlet-requirements) végrehajtásához.
+- Ellenőrizze, hogy a Microsoft Intune Exchange Connector párbeszédablakban megadott felhasználói fiók megfelelő engedélyekkel rendelkezik-e a [szükséges Windows PowerShell Exchange parancsmagok](exchange-connector-install.md#exchange-cmdlet-requirements) végrehajtásához.
 - Engedélyezze az értesítéseket, és adjon meg egy értesítési fiókot.
- - Az Exchange Connector konfigurálásakor olyan ügyfélelérési kiszolgálót (CAS-t) adjon meg, amely a lehető legközelebb van az Exchange Connectort futtató kiszolgálóhoz. A CAS és az Exchange Connector közötti kommunikációs késés késleltetheti az eszköz észlelését, különösen az Exchange Online dedikált verziójának használatakor.
- - Az újonnan regisztrált eszközök felhasználói esetleg csak akkor jutnak hozzáféréshez, amikor az Exchange Connector szinkronizál az Exchange CAS-szel. Teljes szinkronizálás naponta egyszer, az eltérések (gyors) szinkronizálása pedig naponta többször történik.  A késés minimalizálása érdekében [manuálisan is kikényszeríthet gyors vagy teljes szinkronizálást](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync).
+- Az Exchange Connector konfigurálásakor olyan ügyfélelérési kiszolgálót (CAS-t) adjon meg, amely a lehető legközelebb van az Exchange Connectort futtató kiszolgálóhoz. A CAS és az Exchange Connector közötti kommunikációs késés késleltetheti az eszköz észlelését, különösen az Exchange Online dedikált verziójának használatakor.
+- Az újonnan regisztrált eszközök felhasználói esetleg csak akkor jutnak hozzáféréshez, amikor az Exchange Connector szinkronizál az Exchange CAS-szel. Teljes szinkronizálás naponta egyszer, az eltérések (gyors) szinkronizálása pedig naponta többször történik.  A késés minimalizálása érdekében [manuálisan is kikényszeríthet gyors vagy teljes szinkronizálást](exchange-connector-install.md#manually-force-a-quick-sync-or-full-sync).
  
 ## <a name="exchange-activesync-device-not-discovered-from-exchange"></a>Az Exchange ActiveSync-eszköz nem deríthető fel az Exchange-ből
 [Az Exchange Connector tevékenységének figyelésével](exchange-connector-install.md#on-premises-exchange-connector-high-availability-support) ellenőrizze, hogy az Exchange Connector szinkronizál-e az Exchange-kiszolgálóval. Ha az eszköz csatlakozása óta sikeresen lezajlott egy teljes vagy gyors szinkronizálás, akkor megvizsgálhatja a további, alább felsorolt hibalehetőségeket. Ha nem került sor a szinkronizálásra, gyűjtse össze a szinkronizálási naplókat, és csatolja őket egy támogatási kérelemhez.
 
- - Ellenőrizze, hogy a felhasználók rendelkeznek-e Intune-licenccel, ellenkező esetben az Exchange Connector nem észleli az eszközeit.
- - Ha egy felhasználó elsődleges SMTP-címe különbözik az Azure Active Directoryban (Azure AD) szereplő egyszerű felhasználónevétől, az Exchange Connector nem észleli az adott felhasználó eszközeit. A probléma megoldásához javítsa ki az elsődleges SMTP-címet.
- - Ha környezetében Exchange 2010 és Exchange 2013 postaláda-kiszolgálói is vannak, akkor ajánlott az Exchange Connectort egy Exchange 2013 CAS-re irányítani. Ellenkező esetben, ha az Exchange Connector az Exchange 2010 CAS-szel való kommunikációra van beállítva, az Exchange Connector nem fogja észlelni az Exchange 2013 felhasználóinak eszközeit. 
+- Ellenőrizze, hogy a felhasználók rendelkeznek-e Intune-licenccel, ellenkező esetben az Exchange Connector nem észleli az eszközeit.
+- Ha egy felhasználó elsődleges SMTP-címe különbözik az Azure Active Directoryban (Azure AD) szereplő egyszerű felhasználónevétől, az Exchange Connector nem észleli az adott felhasználó eszközeit. A probléma megoldásához javítsa ki az elsődleges SMTP-címet.
+- Ha környezetében Exchange 2010 és Exchange 2013 postaláda-kiszolgálói is vannak, akkor ajánlott az Exchange Connectort egy Exchange 2013 CAS-re irányítani. Ellenkező esetben, ha az Exchange Connector az Exchange 2010 CAS-szel való kommunikációra van beállítva, az Exchange Connector nem fogja észlelni az Exchange 2013 felhasználóinak eszközeit. 
 - Az Exchange Online dedikált verzióján alapuló környezetben a kezdeti beállítás során az Exchange Connectornak egy Exchange 2013-as (és nem Exchange 2010-es) CAS felé kell mutatnia, ugyanis a Connector csak ezzel a CAS-szel kommunikál a PowerShell-parancsmagok végrehajtásakor.
 
 

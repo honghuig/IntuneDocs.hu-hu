@@ -1,7 +1,7 @@
 ---
-title: Teljes körűen felügyelt eszközöket az Intune-ban vagy a dedikált vállalati Android-eszköz regisztrálása
+title: Androidos vállalati dedikált eszközök vagy teljes körűen felügyelt eszközök regisztrálása az Intune-ban
 titleSuffix: Microsoft Intune
-description: Ismerje meg, hogy miként regisztrálhatják az Android Enterprise dedikált vagy teljes körűen felügyelt eszközökre az Intune-ban.
+description: Ismerje meg, hogyan regisztrálhat androidos vállalati dedikált eszközöket vagy teljes körűen felügyelt eszközöket az Intune-ban.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,33 +17,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d81f28b03a41bcdc8b6c9f18ef58e6a42346ba7d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 7a4f81f29fea9008c7dd47902812141db8448bc3
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66049975"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735724"
 ---
-# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>A dedikált vállalati Android-eszköz vagy a teljes körűen felügyelt eszközök (előzetes verzió)
+# <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Androidos vállalati dedikált eszközök vagy teljes körűen felügyelt eszközök regisztrálása (előzetes verzió)
 
-Miután beállította a [Android Enterprise dedikált eszközök](android-kiosk-enroll.md) vagy [teljes körűen felügyelt eszközök](android-fully-managed-enroll.md) az Intune-ban, az eszközöket regisztrálni. Az Android Enterprise-eszközök regisztrálásának módja attól függ, hogy az operációs rendszer.
+Miután beállította az androidos [vállalati dedikált eszközöket](android-kiosk-enroll.md) vagy a [teljes körűen felügyelt eszközöket](android-fully-managed-enroll.md) az Intune-ban, regisztrálhat az eszközöket. Az androidos vállalati eszközök regisztrálásának módja az operációs rendszertől függ.
 
-| Regisztráció módszere | Android operációs rendszer minimális verziójának dedikált és teljes körűen felügyelt eszközök |
+| Regisztráció módszere | Az Android operációs rendszer minimális verziója dedikált és teljes mértékben felügyelt eszközökhöz |
 | ----- | ----- |
 | Kis hatótávolságú kommunikáció | 5.1 |
 | Biztonsági jogkivonat | 6.0 |
 | QR-kód | 7.0 |
 | Zero Touch  | 8.0\* |
 
-\* A programban részt vevő gyártókat.
+\*A résztvevő gyártókon.
 
 ### <a name="enroll-by-using-near-field-communication-nfc"></a>Regisztráció kis hatótávolságú kommunikáció (NFC) használatával
 
-Az NFC támogató eszközök regisztrálja az eszközöket egy speciálisan formázott Bizonyos NFC-címke létrehozásával. Használhatja saját alkalmazását vagy bármilyen NFC-címke létrehozására alkalmas eszközt. További információkért lásd: [Android Enterprise C-alapú eszközök regisztrációja a Microsoft Intune-nal](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) és [a Google Android API dokumentációját](https://developers.google.com/android/management/provision-device#nfc_method).
+Az NFC-t támogató eszközökhöz speciálisan formázott NFC-címke létrehozásával hozhatja létre az eszközöket. Használhatja saját alkalmazását vagy bármilyen NFC-címke létrehozására alkalmas eszközt. További információ: [C-alapú Android Enterprise-eszközök regisztrációja Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) és a [Google Android Management API dokumentációjában](https://developers.google.com/android/management/provision-device#nfc_method).
 
 ### <a name="enroll-by-using-a-token"></a>Regisztráció jogkivonat használatával
 
-Android 6 vagy újabb rendszerű eszközök esetén használhatja a jogkivonatot az eszköz regisztrálásához. 6.1-es és újabb verziók is használhatják a QR-kód beolvasásához használatakor a **afw #setup** regisztrációs módszer.
+Android 6 vagy újabb rendszerű eszközök esetén használhatja a jogkivonatot az eszköz regisztrálásához. Az Android 6,1 és újabb verziók a **AFW # Setup** beléptetési módszerének használatakor is HASZNÁLHATJÁK a QR-kódok vizsgálatát.
 
 1. Kapcsolja be a törölt tartalmú eszközt.
 2. Az **Üdvözlőképernyőn** válasszon nyelvet.
@@ -74,23 +74,24 @@ A Google Zero Touch rendszerének használatához az eszköznek támogatnia kell
 2. Az EMM DPC legördülő listából válassza a **Microsoft Intune** lehetőséget.
 3. Másolja és illessze be a következő JSON-kódot a Google Zero Touch-konzoljának Egyéb DPC beállítások mezőjébe. A *YourEnrollmentToken* szöveget írja át a regisztrációs profilja részeként létrehozott regisztrációs jogkivonatra. Ügyeljen rá, hogy a regisztrációs jogkivonat időzőjelek között legyen.
 
-```
-{ 
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver", 
-
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg", 
-
-    "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup", 
-
-    "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": { 
-        "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken" 
+    ```json
+    { 
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver", 
+    
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg", 
+    
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup", 
+    
+        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": { 
+            "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken" 
+        } 
     } 
-} 
-```
+    ```
+
 4. Válassza az **Alkalmaz** lehetőséget.
 
 
 ## <a name="next-steps"></a>További lépések
-- [Android-alkalmazások üzembe helyezése](apps-deploy.md)
-- [Androidos alkalmazáskonfigurációs szabályzatok hozzáadása](device-profiles.md)
+- [Android-alkalmazások telepítése](apps-deploy.md)
+- [Androidos konfigurációs szabályzatok hozzáadása](device-profiles.md)
 

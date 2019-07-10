@@ -1,6 +1,6 @@
 ---
-title: Az Active Directory az Intune-összekötő proxybeállításainak konfigurálása
-description: Ismerteti az Active Directory meglévő helyszíni proxykiszolgálók használata az Intune-összekötő konfigurálása.
+title: Proxybeállítások konfigurálása a Active Directory Intune-összekötőhöz
+description: Ismerteti, hogyan konfigurálható az Intune-összekötő a Active Directory számára a meglévő helyszíni proxykiszolgálók használata esetén.
 keywords: ''
 author: master11218
 ms.author: tanvira
@@ -16,28 +16,28 @@ ms.suite: ems
 search.appverid: ''
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5c47a7413d98467fffc26dee098a64cfeac770e4
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: f91ec3124d8fab067ec32194a68508762c6cef33
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043551"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735255"
 ---
 # <a name="work-with-existing-on-premises-proxy-servers"></a>Meglévő helyszíni proxykiszolgálók használata
 
-Ez a cikk ismerteti az Intune-összekötő kimenő proxy kiszolgálók használata az Active Directory konfigurálása. Az ügyfelek számára hálózati környezetekben, ahol a meglévő proxyk szolgál.
+Ez a cikk azt ismerteti, hogyan konfigurálható az Intune-összekötő a Active Directory számára a kimenő proxykiszolgálók használatához. Olyan hálózati környezetű ügyfelek számára készült, amelyek meglévő proxykkal rendelkeznek.
 
-Összekötők működése kapcsolatos további információkért lásd: [megismerheti az Azure AD-alkalmazásproxy összekötőit](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
+További információ az összekötők működéséről: az [Azure ad Application proxy-összekötők ismertetése](https://docs.microsoft.com/azure/active-directory/manage-apps/application-proxy-connectors).
 
-## <a name="bypass-outbound-proxies"></a>Kimenő Proxy megkerülése
+## <a name="bypass-outbound-proxies"></a>Kimenő proxyk megkerülése
 
-Összekötők alapjául szolgáló operációs rendszer összetevőket kimenő kérelmek rendelkezik. Ezeket az összetevőket automatikusan megpróbálja megkeresni egy proxykiszolgálót a hálózati Proxy automatikus felderítési WPAD (Web) használatával.
+Az összekötők olyan operációsrendszer-összetevőkkel rendelkeznek, amelyek kimenő kérelmeket hajtanak végre. Ezek az összetevők automatikusan megpróbálnak megkeresni egy proxykiszolgálót a hálózaton a webproxy automatikus felderítése (WPAD) használatával.
 
-Az operációs rendszer összetevők megpróbálja megkeresni a proxykiszolgálót egy DNS-címkeresése wpad.domainsuffix elvégzésével. Ha a keresési DNS-ben, egy HTTP-kérelem majd kérés érkezett wpad.dat IP-címét. A kérelem válik a proxy konfigurációs parancsprogramja a környezetben. Az összekötő válassza ki a kívánt kimenő proxykiszolgáló használja ezt a szkriptet. Azonban összekötő forgalom előfordulhat, hogy továbbra is halad át, a proxy szükség további konfigurációs beállítások miatt.
+Az operációs rendszer összetevői a WPAD. domainsuffix DNS-címkeresés végrehajtásával kísérlik meg a proxykiszolgáló megkeresését. Ha a keresés a DNS-ben oldódik fel, akkor a WPAD. dat IP-címére kell HTTP-kérelmet készíteni. Ez a kérelem a proxy konfigurációs parancsfájlja lesz a környezetben. Az összekötő ezt a parancsfájlt használja a kimenő proxykiszolgáló kiválasztásához. Előfordulhat azonban, hogy az összekötői forgalom továbbra sem halad át a proxyn szükséges további konfigurációs beállítások miatt.
 
-Beállíthatja, hogy az összekötő, győződjön meg arról, hogy az Azure-szolgáltatásokhoz való közvetlen kapcsolódás használ a helyszíni proxy megkerülése. Javasoljuk, hogy ez a megközelítés mindaddig, amíg a hálózati házirend lehetővé teszi, hogy, mert azt jelenti, hogy egy kisebb konfigurációs fenntartásához.
+Az összekötőt úgy is beállíthatja, hogy megkerülje a helyszíni proxyt, hogy az az Azure-szolgáltatásokhoz közvetlen kapcsolatot használjon. Ezt a megközelítést javasoljuk, ha a hálózati házirend lehetővé teszi a számára, mert az azt jelenti, hogy egy kisebb konfigurációt kell fenntartania.
 
-Kimenő proxy használatát az összekötő letiltásához módosítsa a: \Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config fájlt, és a proxykiszolgáló címét és a proxy portja a szakasz ebben a kódmintában látható:
+Az összekötőhöz tartozó kimenő proxyk használatának letiltásához szerkessze a: \Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config fájlt, és adja hozzá a proxy címe és a proxy portját a következő példában látható szakaszban:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -64,7 +64,8 @@ Kimenő proxy használatát az összekötő letiltásához módosítsa a: \Progr
     </appSettings>
 </configuration>
 ```
-Győződjön meg arról, hogy az összekötő frissítési szolgáltatást is megkerüli a proxy, egy hasonló módosítást a C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
+
+Annak biztosítása érdekében, hogy a Connector Updater szolgáltatás a proxyt is megkerüljék, hasonló változást kell végeznie a C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorSvc\ODJConnectorSvc.exe.config.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -83,17 +84,17 @@ Győződjön meg arról, hogy az összekötő frissítési szolgáltatást is me
 </configuration>
 ```
 
-Ügyeljen arra, hogy az eredeti fájlok másolatait abban az esetben meg kell visszaállítania az alapértelmezett .config fájl.
+Készítsen másolatot az eredeti fájlokról, ha az alapértelmezett. config fájlokra kell visszaállítania.
 
-Miután a konfigurációs fájlok módosítva lett, szüksége lesz az Intune-összekötő szolgáltatás újraindításához. 
+A konfigurációs fájlok módosítása után újra kell indítania az Intune Connector szolgáltatást. 
 
-1. Nyissa meg **services.msc**.
-2. Keresse meg és válassza a **az Intune-hoz készült Service**.
+1. Nyissa meg a **Services. msc fájlt**.
+2. Keresse meg és válassza ki az **Intune ODJConnector szolgáltatást**.
 3. Válassza ki **indítsa újra a**.
 
-![Képernyőkép a szolgáltatás újraindítása](media/autopilot-hybrid-connector-proxy/service-restart.png)
+![Képernyőfelvétel a szolgáltatás újraindításáról](media/autopilot-hybrid-connector-proxy/service-restart.png)
 
 
 ## <a name="next-steps"></a>További lépések
 
-[Az eszközök kezeléséhez](device-management.md)
+[Az eszközök kezelése](device-management.md)

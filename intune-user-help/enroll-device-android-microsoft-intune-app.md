@@ -1,6 +1,6 @@
 ---
-title: A Microsoft Intune-alkalmazást a céges eszközök regisztrálása |} A Microsoft Docs
-description: Az Intune-ban egy vállalati Android-eszköz regisztrálását mutatja
+title: Vállalati eszköz regisztrálása a Microsoft Intune alkalmazással | Microsoft Docs
+description: Útmutató vállalati Android-eszköz regisztrálásához az Intune-ban
 keywords: ''
 author: lenewsad
 ms.author: lanewsad
@@ -18,117 +18,117 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e68e404a91927192f1006626d1b865acd5eb589
-ms.sourcegitcommit: d258bcf6716c8a2589d3f8dada819905ee80f233
+ms.openlocfilehash: b23323766e91e31c48aec6a51dfae971c3a333e8
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197047"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735757"
 ---
-# <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>A vállalati eszköz, a Microsoft Intune alkalmazás regisztrálása
+# <a name="enroll-your-corporate-device-with-the-microsoft-intune-app"></a>Vállalati eszköz regisztrálása a Microsoft Intune alkalmazással
 
-Vállalati tulajdonú Android-eszköz regisztrálása biztonságos hozzáférhet a vállalati e-maileket, alkalmazásokat és egyéb adatok, amelyeket a szervezet tesz elérhetővé. A Microsoft Intune-alkalmazás támogatja az Android 6.0-s vagy újabb rendszerű, vállalati tulajdonú eszközök. Ez lesz automatikusan új és a gyári-beállítások visszaállítása eszközökön regisztráció során települjön. 
+Regisztrálja vállalati tulajdonú Android-eszközét, hogy biztonságos hozzáférést kapjon a vállalati e-mailekhez, alkalmazásokhoz és egyéb, a szervezet által elérhetővé vált információhoz. A Microsoft Intune alkalmazás az Android 6,0-es vagy újabb verzióját futtató vállalati tulajdonú eszközöket támogatja. A regisztráció során a rendszer automatikusan telepíti az új és a gyári beállítások visszaállítására szolgáló eszközöket. 
 
-Négy módon regisztrálásához. A szervezet kell lehetővé teszik, hogy melyik mód használatára.
+Négyféle módon regisztrálhat. A szervezetnek tudnia kell, hogy melyik lehetőséget kell használni.
  
 * Kis hatótávolságú kommunikáció (NFC)  
 * Jogkivonat  
-* QR-kódot   
+* QR-kód   
 * Google Zero Touch  
 
 ## <a name="enroll-device"></a>Eszköz regisztrálása 
-Hajtsa végre ezeket a lépéseket, és regisztrálja az eszközt.  
+Az eszköz beállításához és regisztrálásához hajtsa végre az alábbi lépéseket.  
 
 > [!NOTE]
-> Az Androidos verziója vagy az eszköz gyártója, hogy további lépéseket, amelyek nem terjed ki az eljárás befejezéséhez szükség lehet. Színek és képernyőképeken látható szöveg is eltérhet az eszközön.  
+> Előfordulhat, hogy az Android-verzió vagy-eszköz gyártója a jelen eljárásban nem szereplő további lépéseket kell végrehajtania. A képernyőképen megjelenő színek és szövegek is eltérőek lehetnek az eszközön.  
 
-1. Kapcsolja be az új vagy a gyári – új eszközt.  
-2. Az **Üdvözlőképernyőn** válasszon nyelvet.   Ha Ön már utasítást kapott regisztrálása a egy QR-kódot vagy egy bizonyos NFC hajtsa végre az alábbi, amely megfelel a metódus.  
-     * NFC: Koppintson az NFC-támogatott eszköz elleni egy programozói eszközt a munkahelyi hálózathoz való csatlakozáshoz. Kövesse a képernyőn megjelenő utasításokat. Ha egyenlege eléri a képernyő a Chrome használati feltételeit, folytassa az 5. lépés.  
+1. Kapcsolja be az új vagy a gyári beállítások visszaállítására szolgáló eszközt.  
+2. Az **Üdvözlőképernyőn** válasszon nyelvet.   Ha arra utasította, hogy egy QR-kóddal vagy NFC-sel regisztrálja magát, kövesse az alábbi lépéseket, amely megfelel a metódusnak.  
+     * NFC: Koppintson az NFC által támogatott eszközre egy programozó eszközön a szervezet hálózatához való kapcsolódáshoz. Kövesse a képernyőn megjelenő utasításokat. Amikor eléri a Chrome szolgáltatási feltételeinek képernyőjét, folytassa az 5. lépéssel.  
 
-      * QR-kódot: Hajtsa végre a [QR-kód regisztrációs](#qr-code-enrollment).  
+     * QR-kód: Hajtsa végre a [QR-kód](#qr-code-enrollment)beléptetésének lépéseit.  
 
-      Ha, hogy kapott utasítást, használjon másik módszert, folytassa a 3. lépés.    
+     Ha arra utasította, hogy használjon egy másik módszert, folytassa a 3. lépéssel.    
 
-1. Csatlakozás Wi-Fi, koppintson a **tovább**. Végezze el a lépést, amely megfelel a regisztrációs módszer. 
+1. Kapcsolódjon a Wi-Fi-hez, és koppintson a **tovább**gombra. Kövesse a beléptetési módszernek megfelelő lépést. 
 
-    * Token: Ha a Google bejelentkezési képernyőt kap, hajtsa végre a [regisztrációs jogkivonat](#token-enrollment).    
-    * Google Zero Touch: Miután csatlakozott a Wi-Fi, akkor az eszköz a szervezet által ismerhető fel. Folytassa a 4. lépés, és kövesse a képernyőn megjelenő utasításokat, mindaddig, amíg a telepítés befejeződött.    
+    * Jogkivonat A Google bejelentkezési képernyőjének beszerzéséhez hajtsa végre a [jogkivonat-regisztráció](#token-enrollment)lépéseit.    
+    * Google Zero Touch: A Wi-Fi-hez való csatlakozás után az eszközt a szervezet felismeri. Folytassa a 4. lépéssel, és kövesse a képernyőn megjelenő utasításokat, amíg a telepítés be nem fejeződik.    
  
-       ![Példa a képe Google feltételek képernyőt fog látni, ha a Google Zero Touch, kiemelés elfogadás és Folytatás gomb használ.](./media/google-zero-touch-intune-app-01.png)   
+       ![Példa a Google-használati feltételek képernyő képére, ha a Google Zero Touch használatát látja, kiemelve az elfogadás & folytatás gombot.](./media/google-zero-touch-intune-app-01.png)   
    
-4. Tekintse át a Google feltételeket. Koppintson a **ELFOGADÁS és FOLYTATÁS**.  
+4. Tekintse át a Google használati feltételeit. Ezután koppintson az **elfogadás &AMP; folytatás**gombra.  
 
-      ![Példa a képe feltételek Google képernyőt, kiemelés elfogadás és Folytatás gombra.](./media/fully-managed-intune-app-04.png)   
+      ![Példa a Google feltételek képernyőre, és válassza ki az elfogadás & folytatás gombot.](./media/fully-managed-intune-app-04.png)   
 
-6. Tekintse át a Chrome-ban a szolgáltatási feltételeket. Koppintson a **ELFOGADÁS és FOLYTATÁS**.  
+6. Tekintse át a Chrome szolgáltatási feltételeit. Ezután koppintson az **elfogadás &AMP; folytatás**gombra.  
 
-   ![Példa a képe Chrome használati feltételeit képernyő, kiemelve az elfogadás és Folytatás gomb.](./media/fully-managed-intune-app-06.png)   
+   ![Példa a Chrome használati feltételeinek képére, és válassza ki az elfogadás & folytatás gombot.](./media/fully-managed-intune-app-06.png)   
 
-7. A bejelentkezési képernyők jelentkezzen be a munkahelyi vagy iskolai fiókjával.   
+7. A bejelentkezési képernyőkön jelentkezzen be munkahelyi vagy iskolai fiókjával.   
 
-    a. Adja meg az e-mail címét és koppintson **tovább**.      
-    b. Adja meg a jelszót, és koppintson **jelentkezzen be a**.  
+    a. Adja meg az e-mail címét, és koppintson a **Tovább gombra**.      
+    b. Adja meg a jelszót, és koppintson **a bejelentkezés**elemre.  
 
-8. A szervezet követelményeitől függően előfordulhat, hogy kéri frissíteni a beállításokat, például képernyőzár vagy titkosításra. Ha ezek a felkérések látja, koppintson **beállítása** , és kövesse a képernyőn megjelenő utasításokat.  
+8. A szervezet követelményeitől függően előfordulhat, hogy a rendszer kérni fogja a beállítások, például a képernyőfelvétel vagy a titkosítás módosítását. Ha ezeket az utasításokat látja, koppintson a **beállítás** elemre, és kövesse a képernyőn megjelenő utasításokat.  
 
-   ![Példa a kiemelés beállítás gombra a munkahelyi telefon képernyőt Set ábrázoló kép.](./media/fully-managed-intune-app-10.png)   
+   ![Példa a munkahelyi telefon beállítása képernyőre, a Set gomb kiemelése gombra.](./media/fully-managed-intune-app-10.png)   
 
-9. Az eszköz a munkahelyi alkalmazások telepítéséhez koppintson **telepítése**. Koppintson a telepítés befejezése után **tovább**.  
+9. Ha munkahelyi alkalmazásokat szeretne telepíteni az eszközére, koppintson a **telepítés**gombra. A telepítés befejezése után koppintson a **Tovább gombra**.  
 
-   ![Példa kép beállítása a munkahelyi telefon képernyőt, kiemelve a telepítés gombra.](./media/fully-managed-intune-app-11.png)   
+   ![Példa a munkahelyi telefon beállítása képernyőre, a telepítés kiemelése gombra.](./media/fully-managed-intune-app-11.png)   
 
-10. Ha az üzenet, hogy az eszköz készen áll, koppintson **kész**. 
+10. Ha az eszköz készen áll az üzenetre, koppintson a **kész**gombra. 
 
-11. Nyissa meg az alkalmazások, és nyissa meg a Microsoft Intune-alkalmazást. Válassza ki **JELENTKEZZEN be a**. 
+11. Lépjen az alkalmazásaihoz, és nyissa meg a Microsoft Intune alkalmazást. Válassza **a bejelentkezés**lehetőséget. 
 
-12. Az a **hozzáférés beállítása** képernyő, a függőben lévő feladatok listáját láthatja. Koppintson a **FOLYTATÁS**.  
+12. A **telepítési hozzáférés** képernyőn megjelenik a függőben lévő feladatok listája. Koppintson a **Folytatás**gombra.  
 
-       ![A Microsoft Intune-alkalmazás, például képe beállítása hozzáférési képernyőkép, függőben lévő feladatokat.](./media/fully-managed-intune-app-14.png)   
+       ![Példa Microsoft Intune alkalmazásra, amely a függőben lévő feladatokat megjelenítő hozzáférési képernyőt jeleníti meg.](./media/fully-managed-intune-app-14.png)   
 
-13. Ha az eszköz regisztrálása befejeződött, koppintson **FOLYTATÁS**. A Microsoft Intune kérheti, hogy további eszközbeállítások frissítése.   
+13. Ha az eszköz regisztrálása befejeződött, koppintson a **Folytatás**gombra. Előfordulhat, hogy a Microsoft Intune további eszközbeállítások frissítését kéri.   
 
-       ![Példa alkalmazás képe látható a Microsoft Intune, frissítési eszköz beállítások képernyő.](./media/fully-managed-intune-app-15-2.png)   
+       ![Példa Microsoft Intune alkalmazás képe, az eszközbeállítások képernyő frissítése.](./media/fully-managed-intune-app-15-2.png)   
 
-14. Telepítés befejeződött, ha a listában szereplő összes zöld körön megjelenítése. Most már elérheti a vállalati erőforrásokhoz.  
+14. A telepítés akkor fejeződik be, ha a lista minden eleme zöld kört mutat. Mostantól hozzáférhet a céges erőforrásokhoz.  
 
-       ![A példában a képe a Microsoft Intune-alkalmazást, állítsa be a hozzáférési képernyőn megjelenítése befejeződött feladatokat.](./media/fully-managed-intune-app-16.png)   
+       ![Példa Microsoft Intune alkalmazás képe, a kitöltött feladatokat megjelenítő hozzáférés képernyő beállítása.](./media/fully-managed-intune-app-16.png)   
 
 
-## <a name="qr-code-enrollment"></a>QR-kód regisztráció  
-Ebben a szakaszban a vállalat által biztosított QR-kódot fog beolvasása.  Ha elkészült, azt fogja visszairányítja, az eszköz regisztrációs lépéseket.     
+## <a name="qr-code-enrollment"></a>QR-kód beléptetése  
+Ebben a szakaszban átvizsgálja a vállalat által megadott QR-kódot.  Ha elkészült, a rendszer visszairányítja Önt az eszközök regisztrálási lépéseire.     
   
-1. Az a **üdvözlő** koppintson a képernyő ötször a QR-kód telepítő indítása.  
+1. Az **üdvözlőképernyőn** koppintson a képernyő ÖTSZÖR a QR-kód telepítésének elindításához.  
 
-   ![A példában a képe eszköz telepítő üdvözlőképernyőjén koppintson a képernyő utasításokat kiemelése.](./media/qr-code-intune-app-01.png)  
+   ![Példa az eszközbeállítások üdvözlő képernyőjének képére, kiemelve a képernyőn megjelenő utasításokat.](./media/qr-code-intune-app-01.png)  
 
-2. Kövesse a képernyőn kapcsolódni a Wi-Fi utasításokat.  
-3. Ha az eszköz nem rendelkezik egy QR-kódolvasót, a telepítési képernyőn jelennek meg a folyamat állapotát a képolvasó telepítve van. Várjon, amíg a telepítés befejeződik.  
-4. Amikor a rendszer kéri, vizsgálja meg a regisztrációs profilt, amely a szervezet kapott QR-kódot.  
-5. Lépjen vissza [beléptetés eszköz](#enroll-device), a telepítés folytatásához a 4. lépés.  
+2. A Wi-Fi-hez való csatlakozáshoz kövesse a képernyőn megjelenő utasításokat.  
+3. Ha az eszköz nem rendelkezik QR-kóddal, a telepítő képernyőjén látható, hogy a képolvasó telepítése folyamatban van. Várjon, amíg a telepítés befejeződik.  
+4. Amikor a rendszer kéri, ellenőrizze a beléptetési profil QR-kódját, amelyet a szervezet adott Önnek.  
+5. Térjen vissza az [eszköz regisztrálásához](#enroll-device), 4. lépés a telepítés folytatásához.  
 
 ## <a name="token-enrollment"></a>Jogkivonat-regisztráció  
-Ebben a szakaszban a vállalat által biztosított jogkivonat kell adnia. Ha elkészült, azt fogja visszairányítja, az eszköz regisztrációs lépéseket.  
+Ebben a szakaszban meg kell adnia a vállalat által biztosított tokent. Ha elkészült, a rendszer visszairányítja Önt az eszközök regisztrálási lépéseire.  
 
-1. A Google bejelentkezési képernyőn az a **E-mail vagy telefonszám** mezőbe írja be **afw #setup**. Koppintson a **Következő** elemre. 
+1. A Google bejelentkezési képernyőjének **e-mail vagy telefon** mezőjébe írja be a következőt: **AFW # Setup**. Koppintson a **Következő** elemre. 
 
-   ![Példa a képe a Google bejelentkezési képernyő, hogy "afw #setup" mezőbe beírt van.](./media/token-intune-app-01.png)   
+   ![Példa a Google bejelentkezési képernyőjének képére, amely azt mutatja, hogy a "AFW # Setup" bekerül a mezőbe.](./media/token-intune-app-01.png)   
 
-2. Válassza a **telepítése** számára a **Android-eszköz házirend** alkalmazás. Folytassa a telepítést. Az eszköztől függően szükség lehet további feltételek elfogadásához.    
+2. Válassza a **telepítés** lehetőséget az **Android-eszköz házirend** alkalmazáshoz. Folytassa a telepítést. Az eszköztől függően előfordulhat, hogy további feltételeket kell áttekintenie és elfogadnia.    
 
-3. Az a **regisztrálja ezt az eszközt** képernyőn válassza ki **tovább**.  
+3. Az **eszköz regisztrálása** képernyőn válassza a **tovább**lehetőséget.  
 
-   ![A példában a képe beléptetés az eszköz képernyőjén. Megjeleníti a QR-kód; ábrája kiemeli a Tovább gombra.](./media/token-intune-app-02.png)  
+   ![Példa az eszköz beléptetése képernyőt ábrázoló képre. Egy QR-kód illusztrációjának megjelenítése; kiemeli a Next (tovább) gombot.](./media/token-intune-app-02.png)  
 
-4. Válassza ki **kódot**.
+4. Válassza a **kód megadása**lehetőséget.
 
-   ![Egy aktív QR-kódolvasót képernyőképet. Kiemeli a Enter kód gombra.](./media/token-intune-app-03.png)  
+   ![Példa egy aktív QR-kód beolvasójának képernyőképére. Kiemeli a kód gomb megadását.](./media/token-intune-app-03.png)  
 
-5. Az a **vizsgálata, vagy adja meg a kódot** képernyőn írja be a kódot, amely a szervezet kapott.  Ezután kattintson a **Next** (Tovább) gombra.  
+5. A **vizsgálat vagy a kód megadása** képernyőn írja be azt a kódot, amelyet a szervezet adott meg.  Ezután kattintson a **Next** (Tovább) gombra.  
 
-   ![A vizsgálat példaképen, vagy adja meg a kódot képernyő, kiemelve a Tovább gombra.](./media/token-intune-app-04.png)  
+   ![Példa a vizsgálatra vagy a kód beírása képernyőre, majd a Tovább gombra.](./media/token-intune-app-04.png)  
 
-6. Lépjen vissza [beléptetés eszköz](#enroll-device), a telepítés folytatásához a 4. lépés.  
+6. Térjen vissza az [eszköz regisztrálásához](#enroll-device), 4. lépés a telepítés folytatásához.  
 
 
 

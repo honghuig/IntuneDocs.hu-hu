@@ -15,19 +15,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4dd9fc00475c8a8eea28bef2150f25639ac38e15
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 62d30d0c404fb8393f5aa2c999cd1fc09b266350
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572599"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735881"
 ---
 # <a name="install-the-intune-software-client-on-windows-pcs"></a>Az Intune-szoftverügyfél telepítése Windows rendszerű számítógépekre
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> A Microsoft Intune-ban kezelheti a Windows-számítógépeket [mobileszközként a mobileszköz-kezelés (MDM),](windows-enroll.md) vagy számítógépként az Intune szoftverügyfél használatával, a lent ismertetett módon. A Microsoft azonban azt javasolja, hogy az ügyfelek [lehetőség szerint az MDM-megoldást válasszák](windows-enroll.md) a felügyelethez. További információ: [Windows rendszerű számítógépek felügyeletét, számítógépek vagy mobileszközök összehasonlítása](pc-management-comparison.md) 
+> A Microsoft Intune-ban kezelheti a Windows-számítógépeket [mobileszközként a mobileszköz-kezelés (MDM),](windows-enroll.md) vagy számítógépként az Intune szoftverügyfél használatával, a lent ismertetett módon. A Microsoft azonban azt javasolja, hogy az ügyfelek [lehetőség szerint az MDM-megoldást válasszák](windows-enroll.md) a felügyelethez. További információ: a [Windows rendszerű számítógépek számítógépként vagy mobileszközökként való kezelésének összehasonlítása](pc-management-comparison.md) 
 
 
 A Windows rendszerű számítógépek az Intune-ügyfélszoftver telepítésével regisztrálhatók. Az Intune-ügyfélszoftver a következő módszerekkel telepíthető:
@@ -90,16 +90,17 @@ Az Intune ügyfélszoftverét az alábbi eljárás alapján egy operációsrends
 
 2. Hozzon létre egy **WindowsIntuneEnrollPending** nevű bejegyzést a beállításjegyzékben a következő parancs hozzáadásával a **SetupComplete.cmd** parancsfájlhoz:
 
-    ```
+    ```cmd
     %windir%\system32\reg.exe add HKEY_LOCAL_MACHINE\Software\Microsoft\Onlinemanagement\Deployment /v
     WindowsIntuneEnrollPending /t REG_DWORD /d 1
     ```
 
 3. A következő parancs a **setupcomplete.cmd** parancsfájlhoz való hozzáadásával futtassa a regisztrációs csomagot a /PrepareEnroll parancssori argumentummal:
 
-    ```
+    ```cmd
     %systemdrive%\temp\Microsoft_Intune_Setup\Microsoft_Intune_Setup.exe /PrepareEnroll
     ```
+
     > [!TIP]
     > A **SetupComplete.cmd** parancsfájl lehetővé teszi, hogy a Windows telepítő módosításokat végezzen a rendszeren egy felhasználó bejelentkezése előtt. A **/PrepareEnroll** parancssori argumentum előkészíti a célzott számítógépet a Windows telepítő befejeződése után az Intune-ban való automatikus regisztráláshoz.
 
@@ -125,8 +126,8 @@ Ha a felhasználókhoz hozzárendeltek Intune-licencet, és a szervezet MDM-szol
 
 - A Windows 10 és Windows 8.1 rendszereken két regisztrálási lehetőség jelenik meg:
 
-  - **A számítógép mobileszközként regisztrálni**: A felhasználók megadhatják a **található menetének ismertetése** gombra, és regisztrálják Számítógépeiket mobileszközként való kerül. Ez a gomb kiemelt módon jelenik meg, mert az MDM-regisztráció az alapbeállítás és a javasolt regisztrációs módszer. Az MDM-regisztráció azonban nem része ennek a témakörnek, mert itt csak az ügyfélszoftver telepítését ismertetjük.
-  - **Az Intune ügyfélszoftverrel Számítógépet regisztrálja**: Kell tudniuk a felhasználóknak, hogy a **. Ide kattintva letöltheti** hivatkozás, amely végigvezeti őket az ügyfélszoftver telepítését.
+  - **Számítógép regisztrálása mobileszközként**: A felhasználók megtudhatják, **Hogyan** regisztrálhatják a beléptetés gombot, és útmutatást kapnak a számítógép mobileszközként való regisztrálásával kapcsolatban. Ez a gomb kiemelt módon jelenik meg, mert az MDM-regisztráció az alapbeállítás és a javasolt regisztrációs módszer. Az MDM-regisztráció azonban nem része ennek a témakörnek, mert itt csak az ügyfélszoftver telepítését ismertetjük.
+  - **Számítógép regisztrálása az Intune-ügyfélszoftver használatával**: Meg kell adnia a felhasználóknak, hogy a **kattintson ide** a letöltéshez hivatkozásra kattintva, amely végigvezeti az ügyfélszoftver telepítésén.
 
 Az alábbi táblázat a különböző lehetőségeket foglalja össze.
 

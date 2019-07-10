@@ -17,33 +17,33 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88c95533630cdb3c96626de13a2c843ed8318671
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d599b2a03985965bd8962bcd9f24bfe7555f131c
+ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66043896"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67735594"
 ---
 # <a name="how-to-create-exceptions-to-the-intune-mobile-application-management-mam-data-transfer-policy"></a>Kivételek létrehozása az Intune Mobilalkalmazás-kezelés (MAM) adatátviteli szabályzataihoz
 
-A rendszergazdák kivételeket hozhatnak létre az Intune Mobilalkalmazás-kezelés (MAM) adatátviteli szabályzataihoz. A kivételekkel meghatározható, hogy mely nem felügyelt alkalmazások végezhetnek felügyelt alkalmazásokból kiinduló és oda irányuló adatátvitelt. Az informatikai RÉSZLEG meg kell bízniuk a nem felügyelt alkalmazásokban, beleértve az a kivételek listáján. 
+A rendszergazdák kivételeket hozhatnak létre az Intune Mobilalkalmazás-kezelés (MAM) adatátviteli szabályzataihoz. A kivételekkel meghatározható, hogy mely nem felügyelt alkalmazások végezhetnek felügyelt alkalmazásokból kiinduló és oda irányuló adatátvitelt. Az informatikai szervezetnek meg kell bíznia a kivételek listáján szereplő nem felügyelt alkalmazásokban. 
 
 >[!WARNING] 
 > Az adatátviteli szabályzat kivételeinek módosítása az Ön felelőssége. A szabályzathoz való hozzáadással engedélyezi, hogy a nem felügyelt alkalmazások (azaz az Intune által nem kezelt alkalmazások) hozzáférjenek a felügyelt alkalmazások által védett adatokhoz. A védett adatokhoz való hozzáférés azonban biztonsági kockázatokkal járhat. Ezért csak olyan alkalmazások esetén hozzon létre adatátviteli kivételeket, amelyeket megbízhatónak tekint a cég, de amelyek nem támogatják az Intune alkalmazásvédelmi szabályzatokat (más néven APP-t). Emellett csakis olyan alkalmazásokhoz ajánlott kivételeket megadni, amelyek nem jelentenek adatszivárgási kockázatot.
 
-Az Intune alkalmazásvédelmi szabályzattal, beállítás belül **///az alkalmazás átadhat adatokat más alkalmazásoknak** való **szabályzattal felügyelt alkalmazások** azt jelenti, hogy az alkalmazás csak az Intune által felügyelt alkalmazások küldhetnek adatokat. Adott alkalmazásokra, amelyek nem támogatják az Intune APP adatátvitel engedélyeznie kell, ha a házirend alóli kivételek használatával létrehozhat **válassza ki a mentesítendő alkalmazásokat**. A kivételekkel az Intune által kezelt alkalmazások URL-protokoll (iOS) vagy csomagnév (Android) alapján hívhatnak meg nem kezelt alkalmazásokat. Alapértelmezés szerint az Intune hozzáadja a fontos natív alkalmazásokat a kivételek alapértelmezett listájához. 
+Az Intune alkalmazás-védelmi szabályzatában az alkalmazás **az adatok más alkalmazásokba való átvitelének engedélyezése** a **házirend által felügyelt alkalmazások** számára beállítás azt jelenti, hogy az alkalmazás csak az Intune által kezelt alkalmazások számára tud adatátvitelt továbbítani. Ha engedélyezni szeretné az adatátvitelt olyan alkalmazások számára, amelyek nem támogatják az Intune-alkalmazást, akkor kivételeket hozhat létre ehhez a Szabályzathoz a **válassza ki az alkalmazások elemet**a kivételhez. A kivételekkel az Intune által kezelt alkalmazások URL-protokoll (iOS) vagy csomagnév (Android) alapján hívhatnak meg nem kezelt alkalmazásokat. Alapértelmezés szerint az Intune hozzáadja a fontos natív alkalmazásokat a kivételek alapértelmezett listájához. 
 
 > [!NOTE]
 > Az adatátviteli szabályzat kivételeinek módosítása vagy bővítése, például a korlátozások kivágása, másolása és beillesztése, nincs hatással más alkalmazásvédelmi szabályzatokra. 
 
 ## <a name="ios-data-transfer-exceptions"></a>Az iOS-es adatátviteli szabályzat kivételei
-Az iOS-es szabályzatok esetén URL-protokoll alapján konfigurálhatók az adatátviteli kivételek. Ha kivételt szeretne hozzáadni, olvassa el az alkalmazás fejlesztője által készített dokumentációt, és ellenőrizze, milyen URL-protokollok vannak támogatva. IOS-es adatátviteli kivételekről kapcsolatos további információkért lásd: [iOS alkalmazás alkalmazásvédelmi szabályzat beállításai – adatátviteli kivételek](app-protection-policy-settings-ios.md#data-transfer-exemptions).
+Az iOS-es szabályzatok esetén URL-protokoll alapján konfigurálhatók az adatátviteli kivételek. Ha kivételt szeretne hozzáadni, olvassa el az alkalmazás fejlesztője által készített dokumentációt, és ellenőrizze, milyen URL-protokollok vannak támogatva. További információ az iOS-adatátviteli kivételekről: [iOS-alkalmazás védelmi szabályzatának beállításai –](app-protection-policy-settings-ios.md#data-transfer-exemptions)adatátviteli kivételek.
 
 > [!NOTE]
 > A Microsoft nem rendelkezik olyan módszerrel, amellyel manuálisan megkereshető lenne az URL protokoll alkalmazáskivételek külső alkalmazásokhoz való létrehozáshoz. 
 
 ## <a name="android-data-transfer-exceptions"></a>Az androidos adatátviteli szabályzat kivételei
-Az androidos szabályzatok esetén alkalmazáscsomagok alapján konfigurálhatók az adatátviteli kivételek. A kivétel létrehozásához a kivételként hozzáadni kívánt alkalmazás csomagnevét a **Google Play** áruházban az alkalmazás oldalán találja meg. Az Androidos adatátviteli kivételekről kapcsolatos további információkért lásd: [Android-alkalmazások alkalmazásvédelmi szabályzat beállításai – adatátviteli kivételek](app-protection-policy-settings-android.md#data-transfer-exemptions).
+Az androidos szabályzatok esetén alkalmazáscsomagok alapján konfigurálhatók az adatátviteli kivételek. A kivétel létrehozásához a kivételként hozzáadni kívánt alkalmazás csomagnevét a **Google Play** áruházban az alkalmazás oldalán találja meg. További információ az androidos adatátviteli kivételekről: az [Android-alkalmazás védelmi házirendjének beállításai –](app-protection-policy-settings-android.md#data-transfer-exemptions)adatátviteli kivételek.
 
 
 >[!TIP]
@@ -52,13 +52,13 @@ Az androidos szabályzatok esetén alkalmazáscsomagok alapján konfigurálható
 ### <a name="example"></a>Példa
 Ha a **Webex** csomagot kivételként hozzáadja a MAM adatátviteli szabályzatához, akkor a felügyelt Outlook-e-mailekben a Webex-hivatkozásokat közvetlenül a Webex-alkalmazásban lehet megnyitni. Az adatátvitel azonban továbbra is korlátozva marad az egyéb nem kezelt alkalmazásokban.
 
-- iOS-es **Webex** példa:   Ha a **Webex** alkalmazást meg tudja, hogy az informatikai engedélyezett az Intune által felügyelt alkalmazások, a következő karakterláncot egy adatátviteli kivételt kell adnia: <code>wbx</code>
+- iOS-es **WebEx** -példa:   Ha a **WebEx** alkalmazást szeretné felvenni, hogy az Intune által felügyelt alkalmazások meg tudják hívni, adatátviteli kivételt kell hozzáadnia a következő sztringhez:<code>wbx</code>
     
- - iOS-es **Maps** példa:  A natív való **Maps** alkalmazást meg tudja, hogy az informatikai engedélyezett az Intune által felügyelt alkalmazások, a következő karakterláncot egy adatátviteli kivételt kell adnia: <code>maps</code>
+- iOS **Maps** – példa:   Ha fel szeretné venni a natív **Maps** alkalmazást, hogy az Intune által felügyelt alkalmazások meg tudják hívni, adatátviteli kivételt kell hozzáadnia a következő sztringhez:<code>maps</code>
 
-- Android **Webex** példa:   Ha a **Webex** alkalmazást meg tudja, hogy az informatikai engedélyezett az Intune által felügyelt alkalmazások, a következő karakterláncot egy adatátviteli kivételt kell adnia: <code>com.cisco.webex.meetings</code>
+- Androidos **WebEx** -példa:   Ha a **WebEx** alkalmazást szeretné felvenni, hogy az Intune által felügyelt alkalmazások meg tudják hívni, adatátviteli kivételt kell hozzáadnia a következő sztringhez:<code>com.cisco.webex.meetings</code>
     
-- Android **SMS** példa:   A natív való **SMS** alkalmazást meg tudja, hogy az informatikai engedélyezett az Intune által kezelt alkalmazás különböző üzenetkezelő alkalmazásokban és Android-eszközökhöz, hozzá kell adnia az adatátviteli kivételekről a következő sztringekhez: 
+- Androidos **SMS** -példa:   Ha a natív **SMS** -alkalmazást szeretné felvenni, hogy az Intune által felügyelt alkalmazások különböző üzenetkezelési alkalmazásokban és Android-eszközökön is meghívhatják azokat, a következő sztringek esetében adatátviteli kivételeket kell hozzáadnia: 
     <code>com.google.android.apps.messaging</code>
     
     <code>com.android.mms</code>
