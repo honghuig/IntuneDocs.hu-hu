@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b062dd12f7a9b77f30d4d831a829f3d0316cacf6
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 7525971f9ab48b92c3274f56cb1046a6fde948a5
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735469"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794370"
 ---
 # <a name="microsoft-intune-app-sdk-xamarin-bindings"></a>Microsoft Intune App SDK Xamarin Bindings
 
@@ -107,6 +107,7 @@ Az Intune app SDK integrálásának teljes áttekintése a [Microsoft Intune app
 A 1.4428.1-kiadástól kezdve a `Microsoft.Intune.MAM.Remapper` csomag hozzáadható egy Xamarin. Android-alkalmazáshoz, amely a MAM-osztály, a metódus és a System Services-szolgáltatások kihelyezésére szolgáló [Build](app-sdk-android.md#build-tooling) -eszközként használható. Ha a remappert is tartalmazza, a rendszer automatikusan elvégzi az átnevezett módszerek és a MAM-alkalmazási csoportok MAM-helyettesítési részeit az alkalmazás létrehozásakor.
 
 Ha ki szeretne zárni egy osztályt a MAM-ification a remapper használatával, a következő tulajdonság adható hozzá `.csproj` a projects-fájlhoz.
+
 ```xml
   <PropertyGroup>
     <ExcludeClasses>Semicolon separated list of relative class paths to exclude from MAM-ification</ExcludeClasses>
