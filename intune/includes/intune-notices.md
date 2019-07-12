@@ -7,68 +7,84 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: fab8f2be48a30f6ad058b3eeb6874a44ff04e6ac
-ms.sourcegitcommit: 7ceae61e036ccf8b33704751b0b39fee81944072
+ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
+ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66744322"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67812473"
 ---
-Ezek a megjegyzések meg fontos információkat, amelyek segítségével előkészítése az Intune jövőbeli változtatásokat és szolgáltatásokat. 
+Ezek a hirdetmények olyan fontos információkat tartalmaznak, amelyek segíthetnek a jövőbeli Intune-változások és-funkciók előkészítésében. 
 
-### <a name="update-your-android-company-portal-app-to-the-latest-version---4536963--"></a>Az androidhoz készült céges portál alkalmazás frissítése a legújabb verzióra <!--4536963-->
-Az Intune rendszeres időközönként frissítéseket ad ki, az Androidos vállalati portál alkalmazás. 2018. November kiadtunk egy vállalati portál frissítése, amely tartalmaz egy háttér-kapcsolót a Google módosítsa a meglévő értesítési platform, a Google Firebase Cloud Messaging (FCM) előkészítése. Ha Google kivonja a meglévő értesítési platform és a lépés a FCM, frissítette a vállalati portál alkalmazást, legalább a 2018. November a felhasználóknak kell teljes kiadási folytatja, a Google play áruházban való kommunikáció során.
+### <a name="update-your-android-company-portal-app-to-the-latest-version---4536963--"></a>Android Céges portál-alkalmazás frissítése a legújabb verzióra <!--4536963-->
+Az Intune rendszeres időközönként frissítéseket szabadít fel az Android Céges portál alkalmazásban. November 2018-én közzétettünk egy vállalati portál frissítést, amely tartalmaz egy back-end kapcsolót, amely felkészíti a Google-t a meglévő értesítési platformról a Google Firebase Cloud Messaging (FCM) szolgáltatásba való váltásra. Ha a Google kihasználja a meglévő értesítési platformot, és áthelyezi az FCM-re, a végfelhasználóknak legalább november 2018 kiadásban frissíteniük kell a vállalati portál alkalmazást, hogy továbbra is kommunikáljanak a Google Play áruházral.
 
 #### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
-A telemetriai adatok azt jelzi, hogy az eszközt a vállalati portál verziónál régebbi verziójú 5.0.4269.0. Ha ez a verzió vagy újabb, a vállalati portál alkalmazás nincs telepítve, IT pro kezdeményezett eszközök műveletei, például törlés, jelszó alaphelyzetbe állítása szükséges és elérhető alkalmazást telepít és tanúsítványigénylés nem működnek megfelelően. Ha az eszközök MDM-regisztrálása az Intune-ban, majd megjelenik a céges portál-verzió és a felhasználók a ügyfélalkalmazások – detektált alkalmazások. Korábbi verziók a céges portál kiválasztása lehetővé teszi, hogy mely felhasználók helyezte-e az eszközöket, amelyek nem frissítette a céges portál.
+A telemetria azt jelzi, hogy a 5.0.4269.0-nál korábbi Céges portál verzióval rendelkező eszközök vannak. Ha a vállalati portál alkalmazás ezen vagy későbbi verziója nincs telepítve, az informatikai részleg olyan műveleteket kezdeményezett, mint például a törlés, a jelszó alaphelyzetbe állítása, az elérhető és a szükséges alkalmazások telepítése, és előfordulhat, hogy a tanúsítványigénylés nem a várt módon működik. Ha az eszközök MDM regisztrálva vannak az Intune-ban, akkor a vállalati portál verzióit és a felhasználókat a Client apps – észlelt alkalmazások oldalon tekintheti meg. Ha kijelöli a Céges portál korábbi verzióit, megtekintheti, hogy a végfelhasználók milyen eszközökkel rendelkeznek a vállalati portál frissítésével.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
-Kérje meg a végfelhasználók számára az Android-eszközök, amelyek még nem frissített frissíteni a vállalati portálon keresztül a Google play. Tájékoztassa a segélyszolgálatot, abban az esetben, ha a felhasználó nem tartott automatikus frissítése, a vállalati portál alkalmazást. További információ található további a Google FCM platform hivatkozásra, és módosítsa.
+Kérje meg az Android-eszközök végfelhasználóit, amelyek nem frissültek a vállalati portál Google Play használatával történő frissítéséhez. Értesítse az ügyfélszolgálatot abban az esetben, ha egy felhasználó nem tartotta meg a vállalati portál alkalmazás automatikus frissítését. További információ a Google FCM platformról és a változásról: további információk a hivatkozáson.
 
 #### <a name="additional-information"></a>További információ
 https://firebase.google.com/docs/cloud-messaging/
 
 
-### <a name="new-fullscreen-experience-coming-to-intune---4593669--"></a>Az Intune-bA érkező új nA celou obrazovku – felhasználói élmény <!--4593669-->
-Bevezetjük frissített létrehozásához és szerkesztéséhez a felhasználói felületi élmény az Intune-bA az Azure Portalon. Az új felületet egy varázsló stílus formátumban, egy panelen sűrített leegyszerűsíti a meglévő munkafolyamatokba. Ez a frissítés azonnal mindenre "panel bővítéseket", vagy minden létrehozási, és a folyamatok, amelyek megkövetelik a részletes panel Journey részleteinek szerkesztése. A létrehozás munkafolyamatok hozzárendelések tartalmazza (kivéve az alkalmazás-hozzárendelés) is frissülni fog.
+### <a name="new-fullscreen-experience-coming-to-intune---4593669--"></a>Új teljes képernyős élmény az Intune-hoz <!--4593669-->
+Folyamatban van a felhasználói felületi tapasztalatok létrehozása és szerkesztése az Intune-ban a Azure Portal. Ez az új felhasználói élmény leegyszerűsíti a meglévő munkafolyamatokat egy olyan varázsló-stílusú formátum használatával, amely egy panelen van tömörítve. Ez a frissítés elvégezhető a "panel terjeszkedésével", vagy olyan létrehozási és szerkesztési folyamatokkal, amelyekkel részletesen lehatolhat a Deep Blade-útvonalak. A munkafolyamatok létrehozása is frissül, hogy tartalmazza a hozzárendeléseket (kivéve az alkalmazás-hozzárendelést).
 
 #### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
-A teljes képernyős élmény fog történni az Intune-hoz is portal.azure.com és devicemanagement.microsoft.com a következő néhány hónapban. Ez a frissítés felhasználói felületén nem érinti a meglévő szabályzatokat és a profilok, de egy kis mértékben módosított munkafolyamatot láthatja. Új szabályzatokat hozhat létre, ha például Ön lesz állíthat be néhány hozzárendelés helyett ezzel a házirend létrehozása után ez a folyamat részeként. Tekintse meg a következő blogbejegyzést: további információk a képernyőképek, az új felület fog kinézni a konzolon.
+A teljes képernyős élmény a következő néhány hónapban a portal.azure.com és a devicemanagement.microsoft.com szolgáltatásban is elérhető az Intune-ban. A felhasználói felület ezen frissítése nem befolyásolja a meglévő szabályzatok és profilok funkcióit, de egy kissé módosított munkafolyamatot fog látni. Új szabályzatok létrehozásakor például beállíthatja, hogy a folyamat részeként bizonyos hozzárendeléseket a szabályzat létrehozása után is be lehessen állítani. Tekintse meg a blogbejegyzés további információit, amelyekkel az új felhasználói élmény a-konzolon fog kinézni.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
-Nem kell semmit sem, de az is, fontolja meg az IT pro útmutatást frissítése, ha szükséges. Dokumentációnkat frissítjük, ahogy ez a tapasztalat bevezeti a különböző paneleket az Intune-ban az Azure Portalon.
+Semmilyen műveletet nem kell elvégeznie, de szükség esetén érdemes lehet az IT Pro-útmutatást is frissíteni. Frissítjük a dokumentációt, mivel ez a folyamat a Azure Portal-beli Intune-ban található különféle pengéket összesíti.
 
 #### <a name="additional-information"></a>További információ 
 https://aka.ms/intune_fullscreen
 
-### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Tervezett módosítás: Az Intune támogatja az iOS 11 vagy újabb szeptembertől áthelyezése <!-- 4665342-->
-Szeptembertől iOS az Apple kell megjelenteti 13 várhatóan. Az Intune-regisztrációt, a céges portál és a Managed Browser támogatja az iOS 11 vagy újabb, az IOS-es 13 kiadás után rövid idővel áthelyezi.
+### <a name="plan-for-change-intune-moving-to-support-ios-11-and-higher-in-september----4665342--"></a>Tervezze meg a változást: Az Intune az iOS 11 és újabb verzióinak támogatására való áttérés szeptemberben <!-- 4665342-->
+Szeptemberben azt várjuk, hogy az iOS 13 az Apple számára legyen felszabadítva. Az Intune-regisztráció, a Céges portál és a Managed Browser az iOS 11 kiadása után nem sokkal magasabban támogatja az iOS 11-es verzióját.
 
 #### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
-Feltéve, hogy az Office 365 mobilalkalmazások iOS 11.0-s és újabb rendszeren támogatott, ez hatással lehet a nem Ön; már valószínűleg már telepítette az operációs rendszer vagy eszköz. Azonban az alábbi eszközök egyikét sem, vagy úgy dönt, hogy regisztrálják az alább felsorolt eszközöket, ha tudja, hogy az alábbi eszközök nem támogatják az operációs rendszer iOS 10-nél nagyobb. Ezek az eszközök kell frissíteni, hogy egy eszköz, amely támogatja az iOS 11 vagy újabb verziója:
+Ha a O365 Mobile apps iOS 11,0-es és újabb verziókban is támogatott, akkor ez nem érinti Önt; valószínűleg már frissítette az operációs rendszert vagy az eszközöket. Ha azonban rendelkezik az alább felsorolt eszközök bármelyikével, vagy dönthet úgy, hogy az alább felsorolt eszközök bármelyikét regisztrálja, akkor tudja, hogy az alábbi eszközök nem támogatják az iOS 10 rendszernél nagyobb operációs rendszert. Ezeket az eszközöket frissíteni kell egy olyan eszközre, amely támogatja az iOS 11 vagy újabb verzióját:
 
 - iPhone 5
 - iPhone 5c
 - iPad (4. generáció)
 
-Július kezdődően az MDM-ben regisztrált eszközökön az iOS 10-es és a vállalati portál rendszer felkéri, hogy az operációs rendszer vagy eszköz frissítése. Alkalmazás alkalmazásvédelmi szabályzatokat (alkalmazás) használatakor a "Megkövetelése (csak figyelmeztetési) minimális iOS operációs rendszer" hozzáférési beállítás is beállíthat.
+A júliustól kezdődően az iOS 10-es MDM regisztrált eszközök, a Céges portál pedig az operációs rendszer vagy az eszköz frissítésére vonatkozó kérést kapnak. Ha alkalmazás-védelmi házirendeket (alkalmazást) használ, beállíthatja az "iOS minimálisan szükséges operációs rendszer (csak figyelmeztetés)" hozzáférési beállítást is.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
-Ellenőrizze az Intune, tekintse meg a felhasználók vagy eszközök milyen hatással lehet a jelentéskészítés. Lépjen a **eszközök** > **minden eszköz** operációs rendszer alatt. Meghatározásához, hogy a vállalatnál ki van-e az iOS 10-es eszközök további oszlopokat is hozzáadhat. A kérés, hogy a végfelhasználók számára az eszközök frissítése egy operációs rendszer támogatott verziója szeptember előtt.
+Tekintse meg az Intune-jelentéskészítést, hogy megtekintse, milyen eszközökre vagy felhasználókra lehet hatással. Válassza az **eszközök** > **minden eszköz** lehetőséget, és szűrje az operációs rendszer alapján. További oszlopokat is hozzáadhat, amelyekkel azonosítható, hogy a szervezeten belül kik rendelkeznek iOS 10 rendszerű eszközökkel. Kérje meg, hogy a végfelhasználók szeptember előtt frissítsenek eszközeiket egy támogatott operációsrendszer-verzióra.
 
-### <a name="plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios----3586942--"></a>Tervezett módosítás: 8.1.1-es verzió támogatása és az iOS-hez készült Intune App SDK újabb <!-- 3586942-->
-Szeptember 2019 az Intune fogja át támogatásához az iOS-alkalmazások az Intune App SDK-val 8.1.1-es és újabb verzióit. Kisebb, mint 8.1.1-es SDK-verziókra létrehozott alkalmazások többé nem lesz támogatott. Ez a változás lépnek életbe várhatóan származnak, körül. szeptember 13 iOS az Apple kiadásával és szintén bejelentettük a MC181399.
+### <a name="plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios----3586942--"></a>Tervezze meg a változást: Az iOS-hez készült Intune app SDK 8.1.1 és újabb verziójának támogatása <!-- 3586942-->
+Az Intune 2019-től kezdve az iOS-alkalmazások támogatásához az Intune app SDK 8.1.1 és újabb verzióit fogja támogatni. A 8.1.1-nál kisebb SDK-verziókkal létrehozott alkalmazások már nem támogatottak. Ez a módosítás hatályba lép az Apple iOS 13 kiadásával, amely várhatóan szeptemberben érkezik, és a MC181399-ben jelent meg.
 
 #### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
-Az Intune App SDK-val vagy az App Wrapping-integrációnak köszönhetően a vállalati adatok védelme is a jóvá nem hagyott alkalmazások és adatok titkosítása felhasználókat. Az Intune App SDK IOS rendszerhez készült fogja használni 256 bites titkosítási kulcsok alapértelmezés szerint, ha a titkosítás engedélyezve van az Intune App Protection házirendek (alkalmazás). A módosítás után bármely SDK korábbi verziók 8.1.1-es, amely 128 bites titkosítási kulcsok használatához az iOS-alkalmazások többé nem lesz képes alkalmazások 8.1.1-es SDK-val integrált vagy 256 bites kulcsokkal megoszthatják az adatokat. Minden iOS-alkalmazás-SDK verziója 8.1.1-es rendelkeznie kell, vagy magasabb, hogy védett adatok megosztásához.
+Az Intune app SDK-val vagy az alkalmazások csomagolásának integrálásával az adatok titkosításával biztosíthatja a nem jóváhagyott alkalmazásokból és felhasználóktól származó vállalati adatok védelmet. Az iOS-hez készült Intune app SDK a 256 bites titkosítási kulcsokat alapértelmezés szerint a Intune App Protection szabályzatok (alkalmazás) általi titkosítás engedélyezésekor fogja használni. Ennek a változásnak a megkezdése után minden, a 128 bites titkosítási kulcsokat használó SDK-verzióhoz tartozó iOS-alkalmazás a továbbiakban nem fogja tudni megosztani az SDK-8.1.1 integrált és a 256 bites kulcsokat használó alkalmazásokkal rendelkező 8.1.1. A védett adatmegosztás engedélyezéséhez minden iOS-alkalmazáshoz 8.1.1 vagy újabb SDK-verzió szükséges.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
-Ellenőrizze a Microsoft, külső és az üzletági (LOB) alkalmazások. Győződjön meg arról, hogy az alkalmazások védelme az Intune APP SDK 8.1.1-es verziót használ, vagy később.
+Keresse meg a Microsoft, harmadik féltől származó és üzletági (LOB) alkalmazásokat. Győződjön meg arról, hogy az Intune-ALKALMAZÁSsal védett összes alkalmazás az SDK 8.1.1 vagy újabb verzióját használja.
 
-- A LOB-alkalmazások: Szükség lehet való ismételt közzétételéhez az alkalmazások integrálva van az SDK-verzió 8.1.1-es vagy újabb verziója. Azt javasoljuk, hogy az SDK legújabb verzióját. A témakörben találhat további információt az útmutató az ÜZLETÁGI alkalmazások előkészítése alkalmazásvédelmi szabályzatokkal, lásd: [– üzletági alkalmazások előkészítése alkalmazásvédelmi szabályzatok](../apps-prepare-mobile-application-management.md).
-- A Microsoft és külső alkalmazások: Győződjön meg arról, hogy ezek az alkalmazások legújabb verzióját a felhasználók számára telepít.
+- LOB-alkalmazások esetén: Előfordulhat, hogy újra kell közzétennie az SDK-8.1.1 vagy újabb verzióval integrált alkalmazásokat. A legújabb SDK-verziót ajánljuk. Az ÜZLETÁGI alkalmazások alkalmazás-védelmi házirendekkel való előkészítésével kapcsolatos információkért lásd: üzletági [alkalmazások előkészítése az App Protection-szabályzatokhoz](../apps-prepare-mobile-application-management.md).
+- Microsoft/harmadik féltől származó alkalmazások esetén: Győződjön meg arról, hogy az alkalmazások legújabb verzióját telepíti a felhasználók számára.
 
-Ha van ilyen, a módosítás tartalmazza az SDK támogatást, is frissítenie kell a dokumentációban vagy a fejlesztői útmutató.
+A dokumentációt és a fejlesztői útmutatót is frissítenie kell, ha ez a módosítás az SDK támogatásában is szerepel.
 
 #### <a name="additional-information"></a>További információ
 https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
+
+### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Tervezze meg a változást: Új Windows Update-beállítások az Intune-ban <!-- 4464404 -->
+Az Intune szolgáltatásra vagy a 1908-re vonatkozó augusztusi kiadástól kezdődően új "határidő-beállításokat" adunk hozzá, amelyek a "felhasználó újraindításának engedélyezése (lefoglalt újraindítás)" beállítások helyett konfigurálhatók. Azt tervezzük, hogy letiltjuk a bekapcsolt újraindítási beállításokat a felhasználói felületen a 1909-as vagy a szeptemberi frissítés után, majd a konzolról teljesen el kell távolítani őket a konzolról október végére. 
+
+#### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
+Ha Windows 10-es eszközöket kezel a környezetben: 
+- Az Intune frissítésével vagy 1908-as verziójában az új határidő-beállítások jelennek meg a konzolon a régi, lefolytatott újraindítási beállítások mellett.
+- Ha a régi és az új beállítások is konfigurálva vannak, a határidő-beállítási értékek felülbírálják a befoglalt újraindítási beállítások értékeit.
+- A határidő beállításai lecserélik a "felhasználó újraindításának engedélyezése (a művelet újraindítása)" beállítást a konzolon a 1910-es frissítésben.
+
+#### <a name="what-can-i-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
+Az 1908-as határidő-beállítások használatával kezdje meg a kívánt értékeket beállítani. Ha ezt megtörtént, beállíthatja a bekapcsolt újraindítási beállítást a "nincs konfigurálva" értékre, hogy előkészítse ezeket az eltávolítást a konzolról októberben.
+
+Szükség esetén frissítse a dokumentációt és az Automation-parancsfájlokat. 
+
+Folyamatosan frissítjük, és egy emlékeztetőt teszünk közzé az üzenetközpont előtt, mielőtt eltávolítjuk a befoglalt újraindítási beállításokat.
