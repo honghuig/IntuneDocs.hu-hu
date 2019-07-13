@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 32a8fb7345a955629c3aa3073f02602fb057c99a
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: 54d9fa1016ff39fcf1e7da9c21391ce70f7acaac
+ms.sourcegitcommit: e451295ca3ee3efc31bf9ee360e599b28ef643ea
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794264"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67863085"
 ---
 # <a name="set-up-intune-enrollment-of-android-enterprise-fully-managed-devices-preview"></a>Az Android Enterprise teljes körűen felügyelt eszközök Intune-regisztrációjának beállítása (előzetes verzió)
 
 Az Android Enterprise teljes körűen felügyelt eszközei olyan vállalati tulajdonú eszközök, amelyek egyetlen felhasználóhoz vannak társítva, és kizárólag munkahelyi és nem személyes használatra használatosak. A rendszergazdák kezelhetik a teljes eszközt, és a házirend-vezérlők nem érhetők el a munkahelyi profilok számára, például:
-- alkalmazások telepítésének engedélyezése csak a felügyelt Google Play áruházból
-- felügyelt alkalmazások eltávolításának tiltása
-- megakadályozhatja a gyári beállítások visszaállítását az eszközökön, és így tovább.
+- Alkalmazások telepítésének engedélyezése csak a felügyelt Google Play áruházból.
+- Felügyelt alkalmazások eltávolításának tiltása.
+- Megakadályozhatja a gyári beállítások visszaállítását az eszközökön, és így tovább.
 
 Az Intune segítségével alkalmazásokat és beállításokat telepíthet az androidos vállalati eszközökre, beleértve az Android Enterprise teljes körűen felügyelt eszközeit. Az Android Enterprise-ról az [Android Enterprise-követelmények](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012)című témakörben olvashat részletesebben.
 
