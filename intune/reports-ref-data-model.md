@@ -17,39 +17,39 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f90568b3939d37bb4e7fbeff72d5e357bc57bd6e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 21f4f55c028c6ff06730e50d9f9862e85d0a9ef1
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884762"
 ---
-# <a name="microsoft-intune-data-warehouse-data-model"></a>A Microsoft Intune-adattárház adatmodelljében
+# <a name="microsoft-intune-data-warehouse-data-model"></a>Adattárház adatmodell Microsoft Intune
 
 Az Intune-adattárház napi adatgyűjtéssel dokumentálja a mobileszközök folyamatosan változó környezetének előzményeit. A nézet az egymással összefüggő entitások időbeli képe.
 
-## <a name="entities-entity-sets"></a>Entitások: Az entitáskészletek
+## <a name="entities-entity-sets"></a>Szervezetek Entitások készletei
 
 Az adattárház a következő magas szintű területeken tünteti fel az adatokat:
 
-  - Alkalmazásvédelem által engedélyezett alkalmazások és használat
-  - Regisztrált eszközök, tulajdontárgyak és készlet
-  - Alkalmazások és szoftverleltár
-  - Eszközkonfigurációs és megfelelőségi szabályzatok
+- Alkalmazásvédelem által engedélyezett alkalmazások és használat
+- Regisztrált eszközök, tulajdontárgyak és készlet
+- Alkalmazások és szoftverleltár
+- Eszközkonfigurációs és megfelelőségi szabályzatok
 
 Ezek a területek tartalmazzák az Intune-környezet számára jelentős entitásokat. Az entitáscsoportokról a következő témakörökben talál részletes információt:
 
-  - [Alkalmazás](reports-ref-application.md)
-  - [Dátum](reports-ref-date.md)
-  - [Eszközök](reports-ref-devices.md)
-  - [Intune felügyeleti bővítmény](reports-ref-intunemanagementextension.md)
-  - [Szabályzat](reports-ref-policy.md)
-  - [Mobilalkalmazás-felügyelet (MAM)](reports-ref-mobile-app-management.md)
-  - [Felhasználó](reports-ref-user.md)
-  - [Jelenlegi felhasználó](reports-ref-current-user.md)
-  - [Felhasználók és eszközök társítása](reports-ref-user-device.md)
+- [Alkalmazás](reports-ref-application.md)
+- [Dátum](reports-ref-date.md)
+- [Eszközök](reports-ref-devices.md)
+- [Intune felügyeleti bővítmény](reports-ref-intunemanagementextension.md)
+- [Szabályzat](reports-ref-policy.md)
+- [Mobilalkalmazás-felügyelet (MAM)](reports-ref-mobile-app-management.md)
+- [Felhasználó](reports-ref-user.md)
+- [Jelenlegi felhasználó](reports-ref-current-user.md)
+- [Felhasználók és eszközök társítása](reports-ref-user-device.md)
 
-## <a name="relationships-star-schema-model"></a>Kapcsolatok: A csillagséma modell
+## <a name="relationships-star-schema-model"></a>Kapcsolatok Csillag – séma modell
 
 Az adattárház olyan kapcsolatokba rendezi az entitásokat, amelyek fontosak lehetnek a feltenni kívánt kérdések szempontjából. Például áttekintheti egy belső fejlesztésű Android-alkalmazás telepítéseinek számát. Az adattárház szerkezete lehetővé teszi a mobil környezet alapos megismerését. Az olyan elemzési eszközök pedig, mint a Microsoft Power BI, képi megjelenítéseket és dinamikus irányítópultokat hozhatnak létre az adattárház adatmodellje alapján.
 
@@ -57,12 +57,12 @@ Az entitások és a kapcsolatok a csillagséma-modell alapján rendeződnek. A c
 
 A rugalmasságra és adatelemzésre optimalizált csillagséma-modell segít összeállítani a folyamatosan változó mobilkörnyezet megértéséhez szükséges jelentéseket.
 
-## <a name="time-daily-snapshots"></a>Idő: A napi pillanatképek
+## <a name="time-daily-snapshots"></a>Idő Napi Pillanatképek
 
 Az adattárház az Intune alsóbb rétege. Az Intune az egyezményes világidő (UTC) szerint éjfélkor napi pillanatképet készít, és ezt a pillanatképet az adattárházban tárolja. A pillanatképek tárolási ideje ténytábláról ténytáblára változik. Némelyiket hét napig, némelyiket 30 napig, vagy akár tovább is tárolja a rendszer.
 
 ## <a name="next-steps"></a>További lépések
 
- - Annak részletesebb megismeréséhez, hogy az adattárház hogyan követi nyomon egy felhasználó Intune-beli élettartamát, lásd: [A felhasználói élettartam reprezentációja az Intune-adattárházban](reports-ref-user-timeline.md).
- - Az adattárházak használatáról az [első adattárház létrehozását](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse) ismertető szakaszban talál további információt.
- - A Power BI és az adattárház használatának részletesebb megismeréséhez lásd: [Új Power BI-jelentés létrehozása adatkészlet importálásával ](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 
+- Annak részletesebb megismeréséhez, hogy az adattárház hogyan követi nyomon egy felhasználó Intune-beli élettartamát, lásd: [A felhasználói élettartam reprezentációja az Intune-adattárházban](reports-ref-user-timeline.md).
+- Az adattárházak használatáról az [első adattárház létrehozását](https://www.codeproject.com/Articles/652108/Create-First-Data-WareHouse) ismertető szakaszban talál további információt.
+- A Power BI és az adattárház használatának részletesebb megismeréséhez lásd: [Új Power BI-jelentés létrehozása adatkészlet importálásával ](https://powerbi.microsoft.com/documentation/powerbi-service-create-a-new-report/). 

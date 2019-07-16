@@ -1,7 +1,7 @@
 ---
 title: Windows 10-es alkalmazások telepítése a Microsoft Intune-nal
 titleSuffix: ''
-description: Ismerje meg a Windows 10-es alkalmazás központi telepítési forgatókönyv elérhető Microsoft Intune-nal.
+description: Ismerkedjen meg a Windows 10-es alkalmazások Microsoft Intunesal elérhető telepítési forgatókönyvével.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8168cdaec4d6616b12fa4da225c84fa2d239994d
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883837"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-es alkalmazások telepítése a Microsoft Intune-nal 
 
@@ -46,23 +46,23 @@ A Vállalati Microsoft Áruház felügyeleti portálján megvásárolt modern V�
 ## <a name="installing-apps-on-windows-10-devices"></a>Alkalmazások telepítése Windows 10-es eszközökön
 Az alkalmazás típusától függően az alkalmazás két módszer egyikével telepíthető Windows 10-es eszközre:
 
-- **Felhasználói környezet**: Ha egy alkalmazás felhasználói környezetben van telepítve, a felügyelt alkalmazás esetén telepítve lesz az adott felhasználó az eszközön a felhasználó bejelentkezik az eszközre. Lényeges, hogy az alkalmazás telepítése csak akkor lesz sikeres, ha a felhasználó bejelentkezik az eszközre. 
-    - A modern üzletági és Microsoft Áruházbeli alkalmazások (online vagy offline) telepíthetők felhasználói környezetben, és az Elérhető és Szükséges hozzárendelés-típust is támogatják.
-    - A **felhasználói módban** vagy **kettős módban** készült Win32-alkalmazások felhasználói környezetben helyezhetők üzembe, és egyaránt támogatják a **Kötelező** és az **Elérhető** szándékmegjelölésű telepítést. 
-- **Eszközkörnyezet**: Egy alkalmazás telepítésekor eszköz a környezetben a felügyelt alkalmazást fog települni közvetlenül az eszköz Intune-nal.
-    - Csak a modern üzleti alkalmazások és az üzleti alkalmazások offline licenccel rendelkező Microsoft Store eszköz környezetben is telepíthető, és csak a kötelező szándékot támogatni fogja.
-    - A **Számítógép módban** vagy **kettős módban** készült Win32-alkalmazások felhasználói környezetben helyezhetők üzembe, és csak a **Kötelező** szándékmegjelölésű telepítést támogatják.
+- **Felhasználói környezet**: Ha egy alkalmazás felhasználói környezetben van telepítve, akkor a felügyelt alkalmazás a felhasználó számára az eszközön fog települni, amikor a felhasználó bejelentkezik az eszközre. Lényeges, hogy az alkalmazás telepítése csak akkor lesz sikeres, ha a felhasználó bejelentkezik az eszközre. 
+  - A modern üzletági és Microsoft Áruházbeli alkalmazások (online vagy offline) telepíthetők felhasználói környezetben, és az Elérhető és Szükséges hozzárendelés-típust is támogatják.
+  - A **felhasználói módban** vagy **kettős módban** készült Win32-alkalmazások felhasználói környezetben helyezhetők üzembe, és egyaránt támogatják a **Kötelező** és az **Elérhető** szándékmegjelölésű telepítést. 
+- **Eszköz környezete**: Ha egy alkalmazás az eszköz kontextusában van telepítve, a felügyelt alkalmazás közvetlenül az eszközre lesz telepítve az Intune-ban.
+  - Csak a modern üzletági alkalmazások és az offline licenccel rendelkező Microsoft Store for Business alkalmazások helyezhetők üzembe az eszköz környezetében, és csak a szükséges szándékot támogatják.
+  - A **Számítógép módban** vagy **kettős módban** készült Win32-alkalmazások felhasználói környezetben helyezhetők üzembe, és csak a **Kötelező** szándékmegjelölésű telepítést támogatják.
 
 > [!NOTE]
 > A **kettős módban** készült Win32-alkalmazások esetén Önnek (a rendszergazdának) kell kiválasztania, hogy az alkalmazás **felhasználói módban** vagy **Számítógép módban** fog-e működni az adott példányhoz kapcsolódó összes hozzárendelés esetében. Az üzembe helyezési környezet hozzárendelésenként változtatható.  
 
 Ha egy alkalmazás eszközkörnyezetben van üzembe helyezve, a telepítés csak akkor lesz sikeres, ha célja az eszközkörnyezetet támogató eszköz. Az eszközkörnyezetben történő üzembe helyezés ezen felül a következő feltételeknek tesz eleget:
 - Ha egy alkalmazás eszközkörnyezetben van üzembe helyezve, célja pedig egy felhasználó, akkor a telepítés sikertelen lesz és a következő állapot- és hibaüzenet jelenik meg a felügyeleti konzolon:
-    - Állapot: Nem sikerült.
-    - Hiba: A felhasználó nem adható meg célként egy környezet telepítése eszközzel.
+  - Állapot: Sikertelen.
+  - Hiba: A felhasználó nem célozhatja meg az eszköz környezetének telepítését.
 - Ha egy alkalmazás eszközkörnyezetben van üzembe helyezve, célja azonban egy olyan eszköz, amely nem támogatja az eszközkörnyezetet, akkor a telepítés sikertelen lesz, és a következő állapot- és hibaüzenet jelenik meg a felügyeleti konzolon:
-    - Állapot: Nem sikerült.
-    - Hiba: A platform nem támogatja az eszköz környezetben telepíti. 
+  - Állapot: Sikertelen.
+  - Hiba: Ez a platform nem támogatja az eszközök környezetének telepítését. 
 
 > [!Note]
 > Ha egy adott üzembe helyezés alkalmazás-hozzárendelése már ki van mentve, ennek a hozzárendelésnek a környezete többé nem módosítható, csak a modern alkalmazások esetén. Modern alkalmazások esetén a környezet felhasználóiról eszközkörnyezetre módosítható. 

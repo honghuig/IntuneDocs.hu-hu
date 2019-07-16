@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ec3685df5865d22874b68a8bf42539d37fb486d7
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b51f310d370876058b8f1a1f872dd0b0e41bd42c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884839"
 ---
 # <a name="integrate-pradeo-with-intune"></a>A Pradeo integrálása az Intune-nal
 
@@ -36,13 +36,13 @@ Mielőtt elkezdené a Pradeo integrálását az Intune-nal, ellenőrizze, hogy r
 
 - Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
 
-    - Bejelentkezés és felhasználói profil olvasása
+  - Bejelentkezés és felhasználói profil olvasása
 
-    - A címtár elérése a bejelentkezett felhasználó nevében
+  - A címtár elérése a bejelentkezett felhasználó nevében
 
-    - Címtáradatok olvasása
+  - Címtáradatok olvasása
 
-    - Eszközadatok küldése az Intune-ba
+  - Eszközadatok küldése az Intune-ba
 
 - Rendszergazdai hitelesítő adatok a Pradeo bztonsági konzol eléréséhez.
 
@@ -68,7 +68,7 @@ A Pradeo alkalmazás engedélyezési folyamata a következő:
 
 4. Az **EMM (Enterprise mobility management - Intune** ablak **1. lépésében** kattintson a **Pradeo-összekötő** gombra. 
 
-    ![Az Intune-ban EMM Pradeo ablak képernyőképe](./media/pradeo_setup.png)
+    ![Képernyőfelvétel a Pradeo az Intune-ról](./media/pradeo_setup.png)
 
 5. A Microsoft Intune kapcsolati ablakában adja meg az Intune-hoz használt hitelesítő adatait.
 

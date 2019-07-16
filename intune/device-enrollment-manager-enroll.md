@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ea1ca5f2661d51088efae79d97da40ce8737b7e
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: f2548e0ff3d4406f64d2091001c38056fe585896
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883538"
 ---
 # <a name="enroll-devices-in-intune-by-using-a-device-enrollment-manager-account"></a>Eszközök regisztrálása az Intune-ban egy eszközregisztráció-kezelői fiók használatával
 
@@ -32,13 +32,13 @@ Készülékregisztráció-kezelői (DEM) fiók használatával akár 1000 mobile
 
 A DEM-fiókokra és a DEM-fiókokkal regisztrált eszközökre a következő korlátozások vonatkoznak:
 
-  - A DEM-fiók felhasználó Intune-licencet kell hozzárendelni.
-  - Nem végezhető el az összes adat törlése a Céges portálról. A DEM felhasználói fiókkal regisztrált eszközök összes adatának törlése a Azure Portalon az Intune-ból végezhető el.
-  - A Vállalati portál alkalmazásban vagy a webhelyén csak a helyi eszköz jelenik meg.
-  - A DEM felhasználói fiókok nem használhatnak az Apple Volume Purchase Program (VPP) keretében vásárolt alkalmazásokat az Apple VPP felhasználói licencekkel, mivel az alkalmazások kezeléséhez felhasználói Apple ID azonosítóra van szükség.
-  - Az eszközök akkor telepíthetnek VPP-alkalmazásokat, ha rendelkeznek Apple VPP-eszközlicenccel.
-  - Eszközei le lettek tiltva a feltételes hozzáférés Windows 10 1803 + kivételével
-  - Minden eszköz regisztrálva DEM-fiókokat az Intune által kezelt megfelelő licencekkel kell. Ez lehet Intune felhasználói licencet, vagy az eszköz Intune-licencet.
+- A DEM-fiókhoz tartozó felhasználónak Intune-licenccel kell rendelkeznie.
+- Nem végezhető el az összes adat törlése a Céges portálról. A DEM felhasználói fiókkal regisztrált eszközök összes adatának törlése a Azure Portalon az Intune-ból végezhető el.
+- A Vállalati portál alkalmazásban vagy a webhelyén csak a helyi eszköz jelenik meg.
+- A DEM felhasználói fiókok nem használhatnak az Apple Volume Purchase Program (VPP) keretében vásárolt alkalmazásokat az Apple VPP felhasználói licencekkel, mivel az alkalmazások kezeléséhez felhasználói Apple ID azonosítóra van szükség.
+- Az eszközök akkor telepíthetnek VPP-alkalmazásokat, ha rendelkeznek Apple VPP-eszközlicenccel.
+- Eszközei le lettek tiltva a feltételes hozzáférés Windows 10 1803 + kivételével
+- A DEM-fiókkal regisztrált összes eszköznek megfelelő licenccel kell rendelkeznie ahhoz, hogy az Intune kezelje őket. A licenc lehet Intune-beli felhasználói licenc vagy Intune-eszköz licence.
 
 
 

@@ -18,12 +18,12 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 210a11cbd6e2c3be85ed0b0f97c2bb4ab59d11e6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 2eb47240516737f03c10d1280887fea275c5ed99
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883942"
 ---
 # <a name="remove-your-ios-device-from-intune"></a>IOS-eszköz eltávolítása az Intune-ból
 
@@ -44,25 +44,25 @@ Ha az eszközt el szeretné távolítani az Intune-ból, kövesse az alábbi lé
     |![Képernyőkép a Céges portál alkalmazás Eszközök képernyőjéről, az Eszköz eltávolítása gombra kattintás után megjelenő lehetőségekkel. Megjelenített gombok: pirosan kiemelt „Eltávolítás” gomb, valamint kékkel kiemelt „További információ” és „Mégse” gomb.](/intune-user-help/media/cp_ios_unenroll_after_1804_002.png)|
 
 
-  Az eszköz regisztrációjának Intune-ból való törlésekor a következők történnek:
+    Az eszköz regisztrációjának Intune-ból való törlésekor a következők történnek:
 
-  - Az eszköz többé nem jelenik meg a vállalati portálon.
+    - Az eszköz többé nem jelenik meg a vállalati portálon.
 
-  - Többé nem telepíthet alkalmazásokat a vállalati portálról.
+    - Többé nem telepíthet alkalmazásokat a vállalati portálról.
 
-  - Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
+    - Az eszközön annak regisztrálásakor módosult beállítások (például a kamera letiltása vagy meghatározott hosszúságú jelszó megkövetelése) hatályukat vesztik.
 
-  - Előfordulhat, hogy az eszközről többé nem lehet elérni egyes vállalati erőforrásokat, például fájlmegosztásokat és belső webhelyeket.
+    - Előfordulhat, hogy az eszközről többé nem lehet elérni egyes vállalati erőforrásokat, például fájlmegosztásokat és belső webhelyeket.
 
-  - Az eszközön többé nem használhatók a vállalati alkalmazások és adatok.
+    - Az eszközön többé nem használhatók a vállalati alkalmazások és adatok.
 
-  - Előfordulhat, hogy Wi-Fi- vagy virtuális magánhálózati (VPN-) kapcsolaton keresztül nem tud többé a vállalati hálózathoz csatlakozni.
+    - Előfordulhat, hogy Wi-Fi- vagy virtuális magánhálózati (VPN-) kapcsolaton keresztül nem tud többé a vállalati hálózathoz csatlakozni.
 
-  - A rendszer eltávolítja a vállalati e-mail profilokat az eszközről.
+    - A rendszer eltávolítja a vállalati e-mail profilokat az eszközről.
 
-  - A csak levelezéshez konfigurált eszközök nem fognak megjelenni a Vállalati portál alkalmazásban és a vállalati portál webhelyén.
-  
-  - Törlődnek az alkalmazások. Törlődnek a vállalati alkalmazásadatok.
+    - A csak levelezéshez konfigurált eszközök nem fognak megjelenni a Vállalati portál alkalmazásban és a vállalati portál webhelyén.
+
+    - Törlődnek az alkalmazások. Törlődnek a vállalati alkalmazásadatok.
 
 ## <a name="removing-data-collected-by-the-company-portal-app"></a>A Céges portál alkalmazás által gyűjtött adatok eltávolítása
 

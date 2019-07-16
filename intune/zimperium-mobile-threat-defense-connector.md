@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 39c3b606033ca8575e079bef9a627b087a3d3318
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: f5c78eb01e495b87a35bed06c9800c04a7f97ba4
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882018"
 ---
 # <a name="zimperium-mobile-threat-defense-connector-with-intune"></a>Zimperium Mobile Threat Defense-összekötő az Intune-nal
 
-Szabályozhatja, hogy a Zimperium által irányított, a Microsoft Intune-nal integrálható a Mobile Threat Defense (MTD) megoldás kockázatfelmérése alapján feltételes hozzáféréssel a vállalati erőforrások mobil elérése. A kockázatfelmérés a Zimperium alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
+A mobileszköz-hozzáférés a vállalati erőforrásokhoz a feltételes hozzáférés használatával szabályozható a Zimperium által végzett, a Microsoft Intune-nal integrálható Mobile Threat Defense (MTD) megoldás kockázatértékelése alapján. A kockázatfelmérés a Zimperium alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
 
-Konfigurálhatja az Intune eszközmegfelelőségi szabályzatai által engedélyezett zimperium által jelentett kockázatértékelés alapján feltételes hozzáférési szabályzatokat. Kockázatok felmérése a szabályzat engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz az észlelt fenyegetések alapján.
+A feltételes hozzáférési szabályzatok az Intune-eszköz megfelelőségi szabályzatai által engedélyezett Zimperium kockázatértékelés alapján konfigurálhatók. A kockázatértékelési házirend engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz az észlelt fenyegetések alapján.
 
 ## <a name="how-do-intune-and-zimperium-help-protect-your-company-resources"></a>Hogyan segíti az Intune és a Zimperium a vállalati erőforrások védelmét?
 
@@ -52,11 +52,11 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
-![Észlelt rosszindulatú alkalmazások fogalmi képe](./media/Maliciousapps_blocked_Zimperium.png)
+![Kártékony alkalmazások fogalmi képe](./media/Maliciousapps_blocked_Zimperium.png)
 
 **A fenyegetés kiküszöbölését követően a hozzáférés ismét biztosított:**
 
-![Megadja a hozzáférést a szervizelés után fogalmi képe](./media/maliciousapps_unblocked_Zimperium.png)
+![A szervizelés után a hozzáférés fogalmi képe](./media/maliciousapps_unblocked_Zimperium.png)
 
 ### <a name="control-access-based-on-threat-to-network"></a>Hozzáférés vezérlése hálózati fenyegetés alapján
 
@@ -96,7 +96,7 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 
 - Zimperium Mobile Threat Defense-előfizetés
 
-    - További információkért lásd: [Zimperium webhelyén](https://www.zimperium.com/zips-mobile-ips).
+  - További információ: [Zimperium](https://www.zimperium.com/zips-mobile-ips)webhelye.
 
 ## <a name="next-steps"></a>További lépések
 

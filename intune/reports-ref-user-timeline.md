@@ -1,7 +1,7 @@
 ---
 title: A felhasználói entitás idővonala az adattárházban
 titleSuffix: Microsoft Intune
-description: Ismerje meg, hogy a Microsoft Intune-adattárház ábrázolja a felhasználókat egy idővonalon.
+description: Ismerje meg, hogy az Microsoft Intune adattárház hogyan jeleníti meg a felhasználókat az idősoron.
 keywords: Intune-adattárház
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3fa483a49ad7fa44172a83f024540a75d1d881dc
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: b61f4ded04d01f04727768557e6730c34fd4760c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66040929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882442"
 ---
 # <a name="user-lifetime-representation-in-the-microsoft-intune-data-warehouse"></a>A felhasználói élettartam reprezentációja a Microsoft Intune-adattárházban
 
@@ -36,13 +36,13 @@ A könnyebb érthetőség kedvéért az alábbiakban kövesse végig egy entitá
 
 Tegyük fel, hogy egy **Kovács János** nevű felhasználóhoz 2017. június 1-én hozzárendeltek egy licencet. Ekkor a **Felhasználó** táblán a következő bejegyzés jelenik meg: 
  
-| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Kovács János | HAMIS | 06/01/2017 | 12/31/9999 | IGAZ
  
 Kovács János 2017. július 25-én visszaadja a licencét. A **Felhasználó** táblán a következő bejegyzések jelennek meg. A meglévő rekordok változásai `marked`. 
 
-| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Kovács János | HAMIS | 06/01/2017 | `07/26/2017` | `FALSE` 
 | Kovács János | IGAZ | 07/26/2017 | 12/31/9999 | IGAZ 
@@ -51,7 +51,7 @@ Az első sor azt jelzi, hogy Kovács János 2017/06/01-től 2017/07/25-ig létez
 
 Most tegyük fel, hogy Kovács János 2017. augusztus 31-én új licencet kap. Ekkor a Felhasználó táblán a következő bejegyzések olvashatók:
  
-| displayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
+| DisplayName | IsDeleted | StartDateInclusiveUTC | EndDateExclusiveUTC | IsCurrent 
 | -- | -- | -- | -- | -- |
 | Kovács János | HAMIS | 06/01/2017 | 07/26/2017 | HAMIS 
 | Kovács János | IGAZ | 07/26/2017 | `08/31/2017` | `FALSE` 
@@ -79,5 +79,5 @@ Annak, aki csak a jelenleg létező dimenzióentitásokat szeretné látni, olya
 
 ## <a name="next-steps"></a>További lépések
 
- - A **Jelenlegi felhasználó** entitással kapcsolatos további információkért lásd: [Aktuális felhasználó típusú entitás referenciája](reports-ref-current-user.md).
- - A **Felhasználó** entitással kapcsolatos további információkért lásd: [Felhasználó típusú entitás referenciája](reports-ref-user.md).
+- A **Jelenlegi felhasználó** entitással kapcsolatos további információkért lásd: [Aktuális felhasználó típusú entitás referenciája](reports-ref-current-user.md).
+- A **Felhasználó** entitással kapcsolatos további információkért lásd: [Felhasználó típusú entitás referenciája](reports-ref-user.md).

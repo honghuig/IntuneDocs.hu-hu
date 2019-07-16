@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2f0a4b9a957948c9bda0b0ad2d9829ff9560f217
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 6ccfe9ccd186f38a971aa6bac5d58bf61e44450d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882751"
 ---
 # <a name="pradeo-mobile-threat-defense-connector-with-intune"></a>A Pradeo Mobile Threat Defense-összekötő működése az Intune-nal
 
-Szabályozhatja, hogy Pradeo, a Microsoft Intune-nal integrálható a Mobile Threat Defense (MTD) megoldás kockázatfelmérése alapján feltételes hozzáféréssel a vállalati erőforrások mobil elérése. A kockázatfelmérés a Pradeo alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
+A mobileszköz-hozzáférés a vállalati erőforrásokhoz a feltételes hozzáférés használatával szabályozható a Pradeo által végzett, a Microsoft Intune-nal integrálható Mobile Threat Defense (MTD) megoldás kockázatértékelése alapján. A kockázatfelmérés a Pradeo alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
 
-Konfigurálhatja az Intune eszközmegfelelőségi szabályzatai, amelyek segítségével engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz az észlelt fenyegetések alapján által engedélyezett Pradeo kockázatértékelés alapján feltételes hozzáférési szabályzatokat.
+A feltételes hozzáférési szabályzatokat az Intune-eszköz megfelelőségi szabályzatai által engedélyezett Pradeo kockázatértékelés alapján konfigurálhatja, amellyel engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz az észlelt fenyegetések alapján.
 
 ## <a name="how-do-intune-and-pradeo-help-protect-your-company-resources"></a>Hogyan segíti az Intune és a Pradeo a vállalati erőforrások védelmét?
 
@@ -49,7 +49,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
-![Észlelt rosszindulatú alkalmazások fogalmi képe](./media/pradeo_maliciousapps_blocked.png)
+![Kártékony alkalmazások fogalmi képe](./media/pradeo_maliciousapps_blocked.png)
 
 **A fenyegetés kiküszöbölését követően a hozzáférés ismét biztosított:**
 
@@ -65,7 +65,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 **A fenyegetés kiküszöbölését követően a hozzáférés ismét biztosított:**
 
-![A fenyegetés kiküszöbölését követően hozzáférés fogalmi képe](./media/pradeo_network_wifi_unblocked.png)
+![Szervizeléssel biztosított hozzáférés fogalmi képe](./media/pradeo_network_wifi_unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Hozzáférés vezérlése a SharePoint Online-hoz hálózati fenyegetés alapján
 
@@ -77,7 +77,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 **A fenyegetés kiküszöbölését követően a hozzáférés ismét biztosított:**
 
-![Megadja a hozzáférést a Sharepoint például a fenyegetés kiküszöbölését fogalmi képe](./media/pradeo_network_spo_unblocked.png)
+![A SharePoint-példa szervizeléséhez biztosított hozzáférés fogalmi képe](./media/pradeo_network_spo_unblocked.png)
 
 ## <a name="supported-platforms"></a>Támogatott platformok
 
@@ -93,7 +93,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 - Pradeo Security for Mobile Threat Defense-előfizetés
 
-    - További információt a [Pradeo webhelyén](https://www.pradeo.com/en-US/mobile-threat-protection) találhat.
+  - További információt a [Pradeo webhelyén](https://www.pradeo.com/en-US/mobile-threat-protection) találhat.
 
 ## <a name="next-steps"></a>További lépések
 

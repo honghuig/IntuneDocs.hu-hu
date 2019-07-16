@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 9cb08757732aa5cad08ed0a4b535fb20c0aa1df0
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 703509c316a22995d26223f6c386de0a2ec66c31
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882722"
 ---
 # <a name="determine-use-case-scenario-requirements"></a>Használatieset-forgatókönyvek követelményeinek meghatározása
 
@@ -50,21 +50,21 @@ Itt található néhány példa a munkahelyi használatieset-forgatókönyvek k�
 Íme néhány további példa, amelyek használhatók a „Követelmények” oszlopban:
 
 - **Biztonságos e-mail**
-    - Feltételes hozzáférés az Exchange Online / helyszíni
-    - Az Outlook alkalmazás adatvédelmi szabályzatai
+  - Feltételes hozzáférés az Exchange Online-hoz/helyszíni
+  - Az Outlook alkalmazás adatvédelmi szabályzatai
 
 - **Eszközbeállítások**
-    - PIN-kód beállítása 4 vagy 6 karakterrel
-    - Felhőbeli biztonsági mentés korlátozása
+  - PIN-kód beállítása 4 vagy 6 karakterrel
+  - Felhőbeli biztonsági mentés korlátozása
 
 - **Profilok**
-    - Wi-Fi
-    - VPN
-    - E-mail (Windows 10 mobil verzió)
+  - Wi-Fi
+  - VPN
+  - E-mail (Windows 10 mobil verzió)
 
 - **Alkalmazások**
-    - Az Office 365 és az alkalmazás adatvédelmi szabályzatai
-    - Üzletági (LOB) alkalmazásvédelmi szabályzatok
+  - Az Office 365 és az alkalmazás adatvédelmi szabályzatai
+  - Üzletági (LOB) alkalmazásvédelmi szabályzatok
 
 ## <a name="next-steps"></a>További lépések
 

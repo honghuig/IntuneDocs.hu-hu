@@ -14,18 +14,18 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 473de0ae24cb3ee2a9f7fbd84ef78e6c25ef6ce6
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 55d4e327d99c8987e6fdc0dea0ac046dd0dc167e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883810"
 ---
 # <a name="better-mobile-threat-defense-connector-with-intune"></a>Better Mobile Threat Defense-összekötő az Intune-hoz
 
-Szabályozhatja, hogy a nagyobb mobil-, a Mobile Threat Defense (MTD) megoldás, amely a Microsoft Intune-nal integrálható kockázatfelmérése alapján feltételes hozzáféréssel a vállalati erőforrások mobil elérése. A kockázatfelmérés a Better Mobile alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
+A mobileszköz-hozzáférés a vállalati erőforrásokhoz a feltételes hozzáférés használatával szabályozható a jobb Mobile, a Mobile Threat Defense (MTD) által a Microsoft Intune-nal integrálható megoldás alapján. A kockázatfelmérés a Better Mobile alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
 
-Konfigurálhatja a feltételes hozzáférési szabályzatok engedélyezve az Intune eszközmegfelelőségi szabályzatai, amelyek segítségével engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz az észlelt fenyegetések alapján jobb Mobile-kockázatfelmérés alapján.
+A feltételes hozzáférési szabályzatokat az Intune-eszközök megfelelőségi házirendjein keresztül engedélyező, jobb mobileszköz-kockázatértékelés alapján konfigurálhatja, amellyel engedélyezheti vagy letilthatja a nem megfelelő eszközök hozzáférését a vállalati erőforrásokhoz az észlelt fenyegetések alapján.
 
 ## <a name="how-do-intune-and-better-mobile-help-protect-your-company-resources"></a>Hogyan segíti az Intune és a Better Mobile a vállalati erőforrások védelmét?
 
@@ -49,7 +49,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 **Letiltás kártékony alkalmazás észlelése esetén:**
 
-![Észlelt rosszindulatú alkalmazások bemutató kép](./media/better_mobile_maliciousapps_blocked.png)
+![Az észlelt kártékony alkalmazásokat bemutató rendszerkép](./media/better_mobile_maliciousapps_blocked.png)
 
 **A fenyegetés kiküszöbölését követően a hozzáférés ismét biztosított:**
 
@@ -65,7 +65,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 **A fenyegetés kiküszöbölését követően a hozzáférés ismét biztosított:**
 
-![A fenyegetés kiküszöbölését követően hozzáférés bemutató kép](./media/better_mobile_network_wifi_unblocked.png)
+![A szervizeléshez megadott hozzáférést megjelenítő rendszerkép](./media/better_mobile_network_wifi_unblocked.png)
 
 ### <a name="control-access-to-sharepoint-online-based-on-threat-to-network"></a>Hozzáférés vezérlése a SharePoint Online-hoz hálózati fenyegetés alapján
 
@@ -93,7 +93,7 @@ Ha az eszközön rosszindulatú alkalmazásokat, például kártevőket észlel 
 
 - Better Mobile Threat Defense-előfizetés
 
-    - További információkért lásd a [Better Mobile webhelyét](https://www.better.mobi/).
+  - További információkért lásd a [Better Mobile webhelyét](https://www.better.mobi/).
 
 ## <a name="next-steps"></a>További lépések
 

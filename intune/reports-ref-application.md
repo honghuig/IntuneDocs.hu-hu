@@ -17,22 +17,22 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 46e90d422afb8ebbd356031d4815708b5b0768f0
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: ceb2b830dc7e403bd138903cf61c80291a0753f2
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882584"
 ---
 # <a name="reference-for-application-entities"></a>Alkalmazás-entitások referencia
 
 Az **Alkalmazás** kategória mobileszközökhöz készült entitásokat tartalmaz, amelyek többek között az alábbi információkat követik nyomon:
 
-  - Az alkalmazás verziói
-  - Az alkalmazás telepítési forrása
-  - Az alkalmazást létrehozó fejlesztők típusai
-  - Az alkalmazáshoz tartozó felügyelt szoftverek típusa, például **sidecar** („oldalkocsis”) vagy **asztali**
-  - Az alkalmazás mennyiségi vásárlási programbeli (VPP) állapota
+- Az alkalmazás verziói
+- Az alkalmazás telepítési forrása
+- Az alkalmazást létrehozó fejlesztők típusai
+- Az alkalmazáshoz tartozó felügyelt szoftverek típusa, például **sidecar** („oldalkocsis”) vagy **asztali**
+- Az alkalmazás mennyiségi vásárlási programbeli (VPP) állapota
 
 ## <a name="apprevision"></a>AppRevision
 

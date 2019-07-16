@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 714a595263475da98a48c982e0ed24d691440097
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 8cc4a109aac22617f2785a74de701e4d1d7bdf09
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885022"
 ---
 # <a name="determine-deployment-goals-objectives-and-challenges"></a>Üzembe helyezési célok, célkitűzések és kihívások meghatározása
 
@@ -34,27 +34,27 @@ Az üzembe helyezési célok azok a hosszútávú eredmények, amelyeket az Intu
 
 - **Integráció az Office 365-tel és az Office-mobilalkalmazások támogatása**
 
-    - **Leírás:** Szoros integráció biztosítása az Office 365 és az Office-mobilalkalmazások alkalmazásvédelemmel használatát.
+  - **Leírás:** Az Office 365 szoros integrációja és az Office Mobile apps használata az App Protection szolgáltatással.
 
-    - **Üzleti érték:** Biztonságos és jobb felhasználói élmény azáltal, hogy felhasználók számára, ismerik és kedvelt alkalmazások használatát.
+  - **Üzleti érték:** Biztonságos és továbbfejlesztett felhasználói élmény azáltal, hogy lehetővé teszi a felhasználók számára, hogy a megszokott és kedvelt alkalmazásokat használják.
 
 - **Belső céges szolgáltatásokhoz való hozzáférés engedélyezése mobileszközökön**
 
-    - **Leírás:** Engedélyezze az alkalmazottak hatékonyan dolgozzanak, bárhol is szükségük van, és az eszközökön a számukra leginkább megfelelő működéséhez. Ez magába foglalja a mobileszközökről végzett hatékony munkát, valamint a céges adatokhoz való biztonságos hozzáférést.
+  - **Leírás:** Lehetővé teheti az alkalmazottak számára, hogy a munkahelyen való munkához szükségesek legyenek, és melyik eszköz a legmegfelelőbb számukra. Ez magába foglalja a mobileszközökről végzett hatékony munkát, valamint a céges adatokhoz való biztonságos hozzáférést.
 
-    - **Üzleti érték:** Az üzleti agilisak lehetnek és a egy versenyképesebbé munkakörnyezet munkavállalók bárhonnan tudnak dolgozni lehetővé teszi.
+  - **Üzleti érték:** Az alkalmazottak számára lehetővé teszi, hogy agilisak legyenek, és olyan helyről, ahol szükségük van rá, hogy a vállalat versenyképesebbé váljék, és nagyobb haszonú munkakörnyezetet biztosítson.
 
 - **Adatvédelem biztosítása a mobileszközökön**
 
-    - **Leírás:** Ha az adatokat mobileszközökön tárolják, ott meg kell védeni azokat a rosszindulatú vagy véletlenszerű elvesztésektől vagy megosztásoktól.
+  - **Leírás:** Ha az adatok mobileszközön vannak tárolva, akkor azt védeni kell a rosszindulatú vagy véletlen adatvesztéstől vagy megosztástól.
 
-    - **Üzleti érték:** Adatok védelme létfontosságú győződjön meg arról, hogy versenyképesek maradjunk, és, hogy azt az a saját és ügyfeleink adatait a lehető legkörültekintőbben kezeljük.
+  - **Üzleti érték:** Az adatvédelem létfontosságú annak biztosításához, hogy versenyképes maradjon, és hogy az ügyfeleket és az azokban lévő adatkezelést a lehető legnagyobb gondossággal kezeljék.
 
 - **Költségcsökkentés**
 
-    - **Leírás:** Ha lehetséges, csökkenti a projektet, telepítési és működtetési költségeket.
+  - **Leírás:** Ha lehetséges, a projekt csökkenti az üzembe helyezést és a működési költségeket.
 
-    - **Üzleti érték:** Az erőforrások hatékony használatát lehetővé teszi, hogy a vállalkozás más területeken fektet, hatékonyabban versenyezhet, és jobb szolgáltatásokat nyújthat az ügyfeleknek.
+  - **Üzleti érték:** Az erőforrások hatékony használata lehetővé teszi, hogy a vállalat más területeken fektessen be, hatékonyabban versenyezzen, és jobb szolgáltatást nyújtson az ügyfeleknek.
 
 ## <a name="deployment-objectives"></a>Üzembe helyezés feladatai
 
@@ -62,19 +62,19 @@ Az üzembe helyezés feladatai olyan műveletek, amelyekkel az adott munkahely e
 
 - **Az eszközkezelési megoldások számának csökkentése**
 
-    - **Végrehajtás:** Összevonása egyetlen mobileszköz-felügyeleti megoldásra: A Microsoft Intune a céges adatok védelme az alkalmazások és eszközök számára.
+  - **Végrehajtása** Konszolidáció egyetlen mobileszköz-felügyeleti megoldásba: Microsoft Intune az alkalmazások és eszközök vállalati szintű védelméhez.
 
 - **Biztosítson az Exchange-hez és a SharePoint Online-hoz biztonságos hozzáférést**
 
-    - **Végrehajtás:** Alkalmazza a feltételes hozzáférés az Exchange és SharePoint Online.
+  - **Végrehajtása** Feltételes hozzáférés alkalmazása az Exchange-hez és a SharePoint Online-hoz.
 
 - **Ne engedje, hogy a céges adatok a mobileszköz nem céges szolgáltatásain kerüljenek tárolásra vagy továbbításra**
 
-    - **Végrehajtás:** A Microsoft Office és az üzletági alkalmazások az Intune alkalmazásvédelmi szabályzatok alkalmazhatók.
+  - **Végrehajtása** Az Intune app Protection-szabályzatok alkalmazása a Microsoft Office és az üzletági alkalmazásokhoz.
 
 - **Biztosítsa a céges adatok törlésének képességét az eszközről**
 
-    - **Végrehajtás:** Eszközök regisztrálása az Intune-ban. Ez lehetővé teszi a vállalati adatok és erőforrások törlését a távolból, ha szükséges.
+  - **Végrehajtása** Eszközök regisztrálása az Intune-ban. Ez lehetővé teszi a vállalati adatok és erőforrások törlését a távolból, ha szükséges.
 
 ## <a name="deployment-challenges"></a>Üzembe helyezés kihívásai
 
@@ -82,16 +82,16 @@ Az üzembe helyezés kihívásai kiemelt fontossággal bírnak a cégek életéb
 
 - A kezdeti projekt nem terjed ki a támogatásra és a végfelhasználói élményre. Ez gyenge végfelhasználói adaptációhoz és a támogatás szervezésében jelentkező kihívásokhoz vezet.
 
-    - **Megoldás:** A támogatási képzéseket foglalják magukban. A végfelhasználói tapasztalat érvényesítése az üzembe helyezési terv sikerességi metrikáival.
+  - **Kockázatcsökkentő** A támogatási képzés beépítése. A végfelhasználói tapasztalat érvényesítése az üzembe helyezési terv sikerességi metrikáival.
 
 - A világosan meghatározott célok és sikerkritériumok metrikáinak hiánya miatt nincsenek kézzelfogható eredmények. Emiatt problémák jelentkezésekor a cég reaktív üzemmódba válthat.
 
-    - **Megoldás:** A célok és sikerkritériumok metrikáinak korai szakaszában definiálja a projekt hatókörének, és ki a bevezetési fázisai hús ezeket az adatpontokat használatával. Győződjön meg róla, hogy SMART céljai vannak (Specific, Measurable, Attainable, Realistic, and Timely – meghatározottak, mérhetőek, elérhetőek, reálisok és időbeliek). Tervezze meg céljai mérését minden fázisban, hogy bevezetési projektjei biztosan a megfelelő irányba haladjanak.
+  - **Kockázatcsökkentő** A célkitűzéseket és a sikerességi mérőszámokat a projekt hatókörében már korán definiálhatja, és ezeket az adatpontokat használhatja a többi bevezetési fázis kiépítéséhez. Győződjön meg róla, hogy SMART céljai vannak (Specific, Measurable, Attainable, Realistic, and Timely – meghatározottak, mérhetőek, elérhetőek, reálisok és időbeliek). Tervezze meg céljai mérését minden fázisban, hogy bevezetési projektjei biztosan a megfelelő irányba haladjanak.
 
 - Elmulasztotta a cég értékeivel összhangban álló, világos értékjavaslat létrehozását, érvényesítését és agresszív megosztását. Ez gyakran korlátozott adaptációhoz és befektetésmegtérüléshez (ROI) vezet.
 
-    - **Megoldás:** Bár bizonyára Izgatottan várja, hogy belevágjon a projektbe, győződjön meg arról, hogy egyértelműen meghatározott a céljait és törekvéseit. Ezeket foglalja bele valamennyi tájékoztatási és képzési tevékenységbe, hogy a felhasználók tisztában legyenek azzal, miért választotta a szervezet az Intune-t.
+  - **Kockázatcsökkentő** Habár érdemes lehet beugrani a projektbe, győződjön meg róla, hogy világosan definiálta a céljait és célkitűzéseit. Ezeket foglalja bele valamennyi tájékoztatási és képzési tevékenységbe, hogy a felhasználók tisztában legyenek azzal, miért választotta a szervezet az Intune-t.
 
 ## <a name="next-steps"></a>További lépések
 
-Most, hogy azonosította a telepítési célok, célkitűzések és a lehetséges kihívásokat, áttérhet a következő szakaszban: [Használati esetek azonosítása](planning-guide-scenarios.md).
+Most, hogy azonosította a telepítési célokat, a célkitűzéseket és a lehetséges kihívásokat, térjen át a következő szakaszra: A [használati esetek meghatározása](planning-guide-scenarios.md).

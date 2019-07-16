@@ -16,16 +16,16 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0656c199d2f6179429415161ec02ef8a9037bf6b
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 29ae889e99a843a8569782bad2b1303c7bb4304c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882845"
 ---
-# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>1\. fázis: A Microsoft Intune előkészítése a mobileszköz-felügyelet (MDM)
+# <a name="phase-1-prepare-microsoft-intune-for-mobile-device-management-mdm"></a>1\. fázis: Microsoft Intune előkészítése a mobileszköz-kezeléshez (MDM)
 
-Mielőtt részletesen rátérnénk az Intune beállítására, tekintsük át a szervezet mobileszköz-felügyeleti követelményeit. Érdemes lehet a jelenlegi MDM-szolgáltatóban jelentéseket készíteni az aktív felhasználókról, ezáltal azonosítani a kritikus felhasználói csoportokat, Majd elkezdeni megválaszolni a kérdéseket a [MDM-követelmények felmérése](migration-guide-prepare.md#assess-mdm-requirements) szakaszban.
+Mielőtt részletesen rátérnénk az Intune beállítására, tekintsük át a szervezet mobileszköz-felügyeleti követelményeit. Érdemes lehet a jelenlegi MDM-szolgáltatóban jelentéseket készíteni az aktív felhasználókról, ezáltal azonosítani a kritikus felhasználói csoportokat, Ezután megkezdheti a kérdések kezelését a [Mdm-követelmények felmérése](migration-guide-prepare.md#assess-mdm-requirements) szakaszban.
 
 ## <a name="assess-mdm-requirements"></a>Az MDM-követelmények felmérése
 
@@ -51,8 +51,8 @@ Mielőtt részletesen rátérnénk az Intune beállítására, tekintsük át a 
 
 - Milyen használati feltételekre van szükség?
 
-    - Ebben a kérdésben mindenképp időben kérje a jogi osztály segítségét.
-    - Milyen honosításra van szükség?
+  - Ebben a kérdésben mindenképp időben kérje a jogi osztály segítségét.
+  - Milyen honosításra van szükség?
 
 - Jártasak-e a felhasználók a technológia és általában a számítástechnika terén?
 
@@ -63,8 +63,8 @@ Mielőtt részletesen rátérnénk az Intune beállítására, tekintsük át a 
 - Mi az eszközök aktuális jelszavainak/PIN-kódjainak hossza?
 
 - Szükség van-e eszközfunkciók letiltására vagy bizonyos fajta eszközműködés korlátozására? Az eszközkonfigurációs profilokkal számos platformspecifikus beállítást szabályozhat:
-    - Kamera letiltása
-    - Egyalkalmazásos mód<br/>
+  - Kamera letiltása
+  - Egyalkalmazásos mód<br/>
 
 - Milyen hitelesítés támogatása szükséges? Ha tanúsítványalapú hitelesítésre van szükség, milyen fajta tanúsítványokat kell létrehozni?
   - Az Intune-nal erőforrás-hozzáférési szabályzatokban használható tanúsítványokat hozhat létre a regisztrált eszközökhöz.

@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 546d62fdea3d1b5b7ae34f1c69423bcd0adb2025
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 35c0c6e6b65350d3b27c9dc1d9ab55d375dac070
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882853"
 ---
 # <a name="phase-2-migration-campaign"></a>2\. fázis: Áttelepítési kampány
 
@@ -43,19 +43,19 @@ A külső MDM-szolgáltatóktól az Intune-ba való migrálás sikerességéhez 
 
 - Figyelje az ügyfélszolgálat terhelését és a regisztráció sikerességét az egyes ciklusokban. Hagyjon időt a sikerességi feltételek értékelésére az egyes csoportok esetében a következő csoport migrálása előtt. A próbabevezetés során ellenőrizni kell a következőket:
 
-    - A sikeres és sikertelen regisztrációk aránya az elvárásokon belül van-e.
+  - A sikeres és sikertelen regisztrációk aránya az elvárásokon belül van-e.
 
-    - A felhasználók termelékenységét:
+  - A felhasználók termelékenységét:
 
-        - A vállalati erőforrások, például a VPN, a Wi-Fi, a levelezés és a tanúsítványok működését.
+    - A vállalati erőforrások, például a VPN, a Wi-Fi, a levelezés és a tanúsítványok működését.
 
-        - A telepített alkalmazások elérhetőségét.
+    - A telepített alkalmazások elérhetőségét.
 
-    - Az adatbiztonságot:
+  - Az adatbiztonságot:
 
-        - A megfelelőségi jelentések készítését.
+    - A megfelelőségi jelentések készítését.
 
-        - A mobilalkalmazás-védelmi funkciók betartatását.
+    - A mobilalkalmazás-védelmi funkciók betartatását.
 
 Ha elégedett a migrálás első fázisával, ismételje meg a [migrációs ciklust](migration-guide-cycle.md) a következő fázis esetében.
 

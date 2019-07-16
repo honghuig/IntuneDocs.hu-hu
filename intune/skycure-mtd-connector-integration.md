@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: cd185a42d36de6aaf1e6d0ff0b8e34619b02c093
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 513001993d890afba848138e01ff823796ea773d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884438"
 ---
 # <a name="set-up-symantec-endpoint-protection-mobile-integration-with-intune"></a>A Symantec Endpoint Protection Mobile és az Intune közötti integráció beállítása
 
@@ -42,19 +42,19 @@ Ha meg szeretne győződni róla, hogy a hálózata megfelelően van beállítva
 
 A SEP Mobile kétféleképpen integrálható az Intune-nal:
 
-- **Írásvédett integráció (alapszintű beállítás):** Csak kiolvassa az eszközök Azure Active Directoryból, és feltölti őket a Symantec Endpoint Protection mobileszköz-kezelési konzolon.
+- **Írásvédett integráció (alapszintű beállítás):** Csak a Azure Active Directory és a Symantec Endpoint Protection Mobile Management konzolon feltölthető leltározási eszközök.
 <br>
-    - Ha az **Eszközök állapotának és kockázatának jelentése az Intune-nak** és **A biztonsági incidensek jelentése az Intune-nak** jelölőnégyzetek nincsenek bejelölve a Symantec Endpoint Protection Mobile Management-konzolon, az integráció írásvédett, ezért nem fogja módosítani az eszközök megfelelőségi állapotát az Intune-ban.
+  - Ha az **Eszközök állapotának és kockázatának jelentése az Intune-nak** és **A biztonsági incidensek jelentése az Intune-nak** jelölőnégyzetek nincsenek bejelölve a Symantec Endpoint Protection Mobile Management-konzolon, az integráció írásvédett, ezért nem fogja módosítani az eszközök megfelelőségi állapotát az Intune-ban.
 <br></br>
-- **Teljes integráció:** Lehetővé teszi, hogy a SEP Mobile jelentse az eszközökkel kapcsolatos kockázatokat és a biztonsági incidensek részleteit az Intune-ban, amely létrehoz egy mindkét felhőszolgáltatások közötti kétirányú kommunikációt.
+- **Teljes integráció:** Lehetővé teszi a SEP Mobile számára a kockázati és biztonsági incidensek adatainak jelentését az Intune-ban, amely kétirányú kommunikációt hoz létre a felhőalapú szolgáltatások között.
 
 ### <a name="how-are-the-sep-mobile-apps-used-with-azure-ad-and-intune"></a>Hogyan használja az Azure AD és az Intune a SEP Mobile-alkalmazásokat?
 
-- **iOS app:** Lehetővé teszi a végfelhasználók bejelentkezni az Azure ad-bA az iOS-alkalmazás.
+- **iOS-alkalmazás:** Lehetővé teszi a végfelhasználóknak az Azure AD-be való bejelentkezést iOS-alkalmazás használatával.
 
-- **Android-alkalmazás:** Lehetővé teszi a végfelhasználók Azure ad-bA az Android-alkalmazás bejelentkezni.
+- **Android-alkalmazás:** Lehetővé teszi a végfelhasználók számára az Azure AD-ba való bejelentkezést Android-alkalmazás használatával.
 
-- **Felügyeleti alkalmazás:** Ez az a SEP Mobile alkalmazást az Azure AD több-bérlős alkalmazás, amely lehetővé teszi a szolgáltatások közötti kommunikációt az Intune-nal.
+- **Felügyeleti alkalmazás:** Ez a SEP Mobile Azure AD több-bérlős alkalmazás, amely lehetővé teszi a szolgáltatások közötti kommunikációt az Intune-nal.
 
 ## <a name="to-set-up-the-read-only-integration-between-intune-and-sep-mobile"></a>Írásvédett integráció beállítása az Intune és a SEP Mobile között
 
@@ -69,7 +69,7 @@ A SEP Mobile kétféleképpen integrálható az Intune-nal:
 
 4. A **iOS-alkalmazás** elem mellett válassza a **Hozzáadás az Active Directoryhoz** lehetőséget.
 
-    ![A Symantec Endpoint Protection mobileszköz-kezelési konzol képe](./media/symantec-portal-basic-add.png)
+    ![A Symantec Endpoint Protection Mobile Management konzol képe](./media/symantec-portal-basic-add.png)
 
 5. Amikor megnyílik a bejelentkezési oldal, adja meg Intune-os hitelesítő adatait, majd válassza az **Elfogadom** lehetőséget.
 
@@ -91,7 +91,7 @@ Hozzá kell adnia egy olyan biztonsági csoportot, amelynek tagja az összes SEP
 
 A SEP Mobile a Mobile Threat Defense szolgáltatást futtató eszközöket az Azure AD biztonsági csoportjaival szinkronizálja.
 
-![A felügyeleti konzolon a SEP Mobile biztonsági csoport konfigurálásának képe](./media/symantec-portal-basic-status.png)
+![Biztonsági csoport konfigurációjának képe a SEP Mobile Management konzolon](./media/symantec-portal-basic-status.png)
 
 ## <a name="to-set-up-the-full-integration-between-intune-and-sep-mobile"></a>Teljes integráció beállítása az Intune és a SEP Mobile között
 

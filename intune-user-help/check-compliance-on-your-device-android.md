@@ -18,19 +18,19 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f012b1cec67de762bbc245f249125f29d37c6930
-ms.sourcegitcommit: 095fd4c324850aae8ebe32be43fa074361816a4b
+ms.openlocfilehash: c3287238900725acebefc23eb00246cd04c7a5bb
+ms.sourcegitcommit: fd2499df5123758ecb093b4cdd486e35f713b040
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66506849"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68230088"
 ---
 # <a name="check-compliance-on-your-android-device"></a>Android-eszköz megfelelőségének ellenőrzése
 
-Ha az eszköz egy ideje nem jelentkezett be az Intune-ba, előfordulhat, hogy nem tudja elérni vállalati vagy iskolai erőforrásait. Próbálja ki ezeket a lépéseket, hogy ismét hozzáférhessen.  
+Ha az eszköz egy ideje nem jelentkezett be az Intune-ba, előfordulhat, hogy nem tudja elérni vállalati vagy iskolai erőforrásait. Próbálja megismételni ezeket a lépéseket a hozzáférés visszaszerzéséhez.  
 
-1. Nyissa meg a céges portál alkalmazás androidos az eszközön.  
+1. Nyissa meg az Android rendszerhez készült Céges portál alkalmazást az eszközön.  
 
-2. Koppintson a **eszközbeállítások ellenőrzése**.  
+2. Koppintson az **eszközbeállítások keresése**elemre.   
 
 Ha nem tudja alaphelyzetbe állítani elveszett vagy ellopott eszközét, kérje meg a cég informatikai támogatási szolgálatát, hogy állítsa alaphelyzetbe. Az elérhetőségét keresse meg a [Vállalati portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980).  

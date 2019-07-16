@@ -14,12 +14,12 @@ ms.service: ''
 ms.technology: ''
 ms.assetid:
 - GET ONE FROM guidgenerator.com
-ms.openlocfilehash: d05559a46cfd2bf9e092378e7cff779022e21792
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: 2b719280c4956234512b85f32abc48f1d3b66c16
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61509639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884133"
 ---
 # <a name="metadata-and-markdown-template"></a>Metaadat- és markdown-sablon
 
@@ -34,11 +34,11 @@ A teljes metaadatblokk a fentiekben található kötelező és opcionális mező
 
 - A kettőspont (:) és a metaadatelem értéke között szóköznek **kell** lennie.
 - Ha az opcionális metaadatelem nem rendelkezik értékkel, tegye megjegyzésbe az elemet egy # karakterrel (ne hagyja üresen, és ne használja az „na” karakterláncot); ha értéket ad egy korábban megjegyzésbe helyezett elemhez, törölje a # karaktert.
-- Az értékben (például a címben) szereplő kettőspontok megtörik a metaadat-elemzőt. A helyükre, használja a HTML-kódolás &#58; (például "cím: Az Azure Rights Management&#58; alapvető |} Az Azure RMS-").
-- **Cím**: Ez a cím fog megjelenni a keresőmotorok találatai között. A cím végén egy függőleges vonalnak (|) kell szerepelnie, amelyet a szolgáltatás neve követ (lásd fentebb). A címnek nem kell megegyeznie (és valószínűleg jobb is, ha nem egyezik meg) a H1 címsorban lévő címmel. Nagyjából 65 karakter hosszú legyen (beleértve a | SZOLGÁLTATÁS NEVÉT)
-- **Szerző**, **manager**, **felülvizsgáló**: Az author mező a **Github-felhasználónevét** a szerző, nem pedig az aliasát.  A manager és a reviewer mezőben azonban aliasnak kell szerepelnie. Az ms.reviewer a cikkhez vagy szolgáltatáshoz társított PM nevét adja meg.
-- **ms.assetid**: Ez a Caps-cikk GUID Azonosítóját. Új markdown-fájl létrehozásakor a GUID Azonosítót a get [ https://www.guidgenerator.com ](https://www.guidgenerator.com). 
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Ezeknek az elemeknek a lehetséges értékek találhatók [Itt](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- Az értékben (például a címben) szereplő kettőspontok megtörik a metaadat-elemzőt. A helyükön használja a HTML-kódolást &#58; (például "title: Az Azure&#58; Rights Management alapjai | Azure RMS ").
+- **cím**: Ez a cím fog megjelenni a keresőmotor eredményei között. A cím végén egy függőleges vonalnak (|) kell szerepelnie, amelyet a szolgáltatás neve követ (lásd fentebb). A címnek nem kell megegyeznie (és valószínűleg jobb is, ha nem egyezik meg) a H1 címsorban lévő címmel. Nagyjából 65 karakter hosszú legyen (beleértve a | SZOLGÁLTATÁS NEVÉT)
+- **Szerző**, **vezető**, **felülvizsgáló**: A szerző mezőnek tartalmaznia kell a szerző **GitHub** -felhasználónevét, nem az aliasát.  A manager és a reviewer mezőben azonban aliasnak kell szerepelnie. Az ms.reviewer a cikkhez vagy szolgáltatáshoz társított PM nevét adja meg.
+- **ms.assetid**: Ez a cikk GUID-azonosítója a CAPS-ből. Új Markdown-fájl létrehozásakor szerezze be a GUID azonosítóját [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **MS. Prod**, **MS. Service**, **MS. Technology**, **MS. devlang**, **MS. topic**, **MS. TGT _pltfrm**: Ezen elemek lehetséges értékei [itt](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default)találhatók.
 
 ## <a name="basic-markdown-and-gfm"></a>Alapvető markdown és GFM
 
@@ -78,7 +78,7 @@ Az egyazon adattárban lévő markdown-fájlra való hivatkozáshoz használjon 
 
 Az egyazon markdown-fájlban lévő címsorra való hivatkozáshoz tekintse meg a közzétett cikk forrását, keresse meg a címsor azonosítóját (például `id="blockquote"`), és a # + azonosító kombináció segítségével hozza létre a hivatkozást (például `#blockquote`).
 
-- Példa: [Idézetblokkok](#blockquote)
+- Példa: [Blockquotes](#blockquote)
 
 Az egyazon adattárban lévő címsorra való hivatkozáshoz használjon relatív hivatkozást és hashtaggel történő hivatkozást.
 
@@ -112,7 +112,7 @@ Ha a markdown-fájlban egy URL-cím jelenik meg, akkor az egy kattintható hivat
     1. Josephine Scarlett
     1. Plum professzor
 1. rendezett
-1. lista
+1. list
 
 
 ### <a name="unordered-lists"></a>Rendezetlen listák
@@ -121,16 +121,16 @@ Ha a markdown-fájlban egy URL-cím jelenik meg, akkor az egy kattintható hivat
 - itt
 - egy
 - listajeles
-- lista
+- list
 
 
 ##### <a name="unordered-list-with-an-embedded-lists"></a>Rendezetlen lista beágyazott listákkal
 
 - Ez 
 - listajeles 
-- lista
-    - Patricia Peacock
-    - John Green
+- list
+  - Patricia Peacock
+  - John Green
 - tartalmazza  
 - más
     1. Mustard ezredes
