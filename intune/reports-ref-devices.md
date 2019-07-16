@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2b1fe488ed7d295a40b42c1fb17a76693004be4d
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: e82ef9cc8e79332665db99d29ed511918f8c77b7
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884711"
 ---
 # <a name="reference-for-devices-entities"></a>Eszközök típusú entitások referenciája
 
 Az **Eszközök** kategória az információkat nyomon követő mobileszközökhöz tartozó entitásokat tartalmazza, egyebek mellett az alábbiakat:
 
-  - Eszköz típusa
-  - Eszköz regisztrációja és a regisztráció állapota
-  - Az eszközök tulajdonjoga
-  - Eszközkezelés állapota
-  - Az eszköz Azure AD-tagságának állapota
-  - Beléptetés állapota
-  - Előzményadatok az eszközről
-  - Az eszközön lévő alkalmazások listája
+- Eszköz típusa
+- Eszköz regisztrációja és a regisztráció állapota
+- Az eszközök tulajdonjoga
+- Eszközkezelés állapota
+- Az eszköz Azure AD-tagságának állapota
+- Beléptetés állapota
+- Előzményadatok az eszközről
+- Az eszközön lévő alkalmazások listája
 
 ## <a name="devicetypes"></a>DeviceTypes
 
@@ -65,7 +65,7 @@ A **DeviceTypes** entitás az adattárház más entitásai által hivatkozott es
 | 11 |Android |Az Eszközadminisztrátorral felügyelt Android-eszköz |
 | 12 |ISocConsumer |iSoc Consumer-eszköz |
 | 14 |MacMDM |A beépített MDM-ügynökkel felügyelt Mac OS X-eszköz |
-| 15 |HoloLens |HoloLens eszköz |
+| 15 |HoloLens |HoloLens-eszköz |
 | 16 |SurfaceHub |Surface Hub-eszköz |
 | 17 |AndroidForWork |Android Profile Owner használatával felügyelt Android-eszköz |
 | 100 |Blackberry |Blackberry-eszköz |
@@ -73,91 +73,91 @@ A **DeviceTypes** entitás az adattárház más entitásai által hivatkozott es
 | 255 |Ismeretlen |Ismeretlen eszköztípus |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-A **EnrollmentActivity** entitás azt jelzi, hogy egy eszköz beléptetési tevékenységét.
+Az **EnrollmentActivity** entitás az eszközök regisztrálásának tevékenységét jelzi.
 
 | Tulajdonság                      | Leírás                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
-| dateKey                       | Mikor lett rögzítve a regisztrációs tevékenység dátumának kulcsa.               |
-| deviceEnrollmentTypeKey       | A tagság típusa kulcsa.                                        |
-| deviceTypeKey                 | Eszköz típusa kulcsa.                                                |
-| enrollmentEventStatusKey      | A sikeres vagy sikertelen, a beléptetési jelző állapot kulcsa.    |
-| enrollmentFailureCategoryKey  | A regisztráció sikertelen kategória (Ha a regisztráció sikertelen) kulcsa.        |
-| enrollmentFailureReasonKey    | A regisztrációs hiba okának (Ha a regisztráció sikertelen) kulcsa.          |
-| osVersion                     | Az eszköz operációs rendszer verzióját.                               |
-| count                         | A fenti besorolások megfelelő tevékenységeket teljes száma.  |
+| dateKey                       | A beléptetési tevékenység rögzítési dátumának kulcsa.               |
+| deviceEnrollmentTypeKey       | A beléptetés típusának kulcsa.                                        |
+| deviceTypeKey                 | Az eszköz típusának kulcsa.                                                |
+| enrollmentEventStatusKey      | A regisztráció sikerességét vagy hibáját jelző állapot kulcsa.    |
+| enrollmentFailureCategoryKey  | A beléptetési hiba kategóriájának kulcsa (ha a regisztráció sikertelen volt).        |
+| enrollmentFailureReasonKey    | A beléptetési hiba okának kulcsa (ha a regisztráció sikertelen volt).          |
+| osVersion                     | Az eszköz operációs rendszerének verziója.                               |
+| count                         | A fenti besorolásoknak megfelelő beléptetési tevékenységek teljes száma.  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-A **EnrollmentEventStatus** entitás azt jelzi, hogy egy eszköz beléptetési eredményét.
+Az **EnrollmentEventStatus** entitás az eszközök regisztrálásának eredményét jelzi.
 
 | Tulajdonság                   | Leírás                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
-| enrollmentEventStatusKey   | Az adatraktárban (helyettes kulcs) a regisztrációs állapot egyedi azonosítója  |
-| enrollmentEventStatusName  | A regisztrációs állapot neve. Lásd az alábbi példákat.                            |
+| enrollmentEventStatusKey   | A regisztrációs állapot egyedi azonosítója az adattárházban (helyettes kulcs)  |
+| enrollmentEventStatusName  | A beléptetési állapot neve. Lásd az alábbi példákat.                            |
 
 ### <a name="example"></a>Példa
 
 | enrollmentEventStatusName  | Leírás                            |
 |----------------------------|----------------------------------------|
-| Siker                    | Egy sikeres eszközök beléptetése         |
-| Meghiúsult                     | A sikertelen eszközök beléptetése             |
-| Nem érhető el              | A beléptetés állapota nem érhető el.  |
+| Siker                    | Sikeres eszközök beléptetése         |
+| Meghiúsult                     | Sikertelen eszközök beléptetése             |
+| Nem érhető el              | A beléptetési állapot nem érhető el.  |
 
 ## <a name="enrollmentfailurecategories"></a>enrollmentFailureCategories 
-A **EnrollmentFailureCategory** entitás azt jelzi, hogy miért-eszközök regisztrálása sikertelen volt. 
+A **EnrollmentFailureCategory** entitás jelzi, hogy az eszközök regisztrálásának miért nem sikerült. 
 
 | Tulajdonság                       | Leírás                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
-| enrollmentFailureCategoryKey   | Egyedi azonosítója az adattárházban (helyettes kulcs), a regisztrációs hiba kategória  |
-| enrollmentFailureCategoryName  | A regisztráció sikertelen kategória neve. Lásd az alábbi példákat.                            |
+| enrollmentFailureCategoryKey   | A beléptetési hiba kategóriájának egyedi azonosítója az adattárházban (helyettes kulcs)  |
+| enrollmentFailureCategoryName  | A beléptetési hiba kategóriájának neve. Lásd az alábbi példákat.                            |
 
 ### <a name="example"></a>Példa
 
 | enrollmentFailureCategoryName   | Leírás                                                                                                   |
 |---------------------------------|---------------------------------------------------------------------------------------------------------------|
-| Nem alkalmazható                  | A regisztráció sikertelen kategória nem alkalmazható.                                                            |
-| Nem érhető el                   | A regisztráció sikertelen kategória nem érhető el.                                                             |
+| Nem alkalmazható                  | A beléptetési hiba kategóriája nem alkalmazható.                                                            |
+| Nem érhető el                   | A beléptetési hiba kategóriája nem érhető el.                                                             |
 | Ismeretlen                         | Ismeretlen hiba.                                                                                                |
 | Authentication                  | A hitelesítés sikertelen.                                                                                        |
-| Authorization                   | Hívás történt hitelesítése, de nem jogosult a regisztrációra.                                                         |
-| AccountValidation               | Nem sikerült érvényesíteni a fiókot a regisztrációhoz. (Blokkolva, fiók regisztrációs nincs engedélyezve)                      |
-| UserValidation                  | Felhasználó nem érvényesíthető. (Felhasználó nem létezik, licenc hiányzik)                                           |
-| DeviceNotSupported              | Eszköz mobileszköz-kezelés nem támogatott.                                                         |
-| InMaintenance                   | Fiók karbantartás alatt van.                                                                                    |
-| BadRequest                      | Ügyfél, amely nem a szolgáltatás által ismert és támogatott kérést küldött.                                        |
-| FeatureNotSupported             | Ezzel a beléptetési által használt vagy több nem támogatottak ehhez a fiókhoz.                                        |
-| EnrollmentRestrictionsEnforced  | Ezzel a beléptetési blokkolja a rendszergazda által konfigurált regisztrációs korlátozások.                                          |
-| ClientDisconnected              | Ügyfél túllépte az időkorlátot, vagy regisztráció a végfelhasználó megszakították.                                                        |
-| UserAbandonment                 | Regisztráció a végfelhasználó félbeszakadt. (Végfelhasználói bevezetési elindult, de nem tudta befejezni a időben)  |
+| Authorization                   | A hívás hitelesítése megtörtént, de nem jogosult a regisztrálásra.                                                         |
+| AccountValidation               | Nem sikerült érvényesíteni a fiókot a beléptetéshez. (Fiók letiltva, regisztráció nincs engedélyezve)                      |
+| UserValidation                  | A felhasználót nem lehetett érvényesíteni. (A felhasználó nem létezik, hiányzó licenc)                                           |
+| DeviceNotSupported              | A mobileszköz-kezelés nem támogatja az eszközt.                                                         |
+| Karbantartás                   | A fiók karbantartás alatt áll.                                                                                    |
+| BadRequest                      | Az ügyfél elküldte a szolgáltatás által nem értelmezhető/támogatott kérelmet.                                        |
+| FeatureNotSupported             | A regisztráció során használt szolgáltatás (ok) nem támogatott ehhez a fiókhoz.                                        |
+| EnrollmentRestrictionsEnforced  | A rendszergazda által konfigurált regisztrációs korlátozások blokkolták ezt a beléptetést.                                          |
+| ClientDisconnected              | Az ügyfél túllépte az időkorlátot, vagy a felhasználó megszakította a regisztrációt.                                                        |
+| UserAbandonment                 | A regisztrációt a végfelhasználó felhagyta. (A végfelhasználó elindította a bevezetést, de nem tudta időben befejezni a végrehajtását)  |
 
 ## <a name="enrollmentfailurereasons"></a>enrollmentFailureReasons  
-A **EnrollmentFailureReason** entitás azt jelzi, hogy egy adott hiba kategórián belül az eszköz regisztrációs nem részletesebb okát.  
+A **EnrollmentFailureReason** entitás egy adott meghibásodási kategórián belül egy eszköz regisztrálási hibájának részletesebb okát jelzi.  
 
 | Tulajdonság                     | Leírás                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
-| enrollmentFailureReasonKey   | A regisztrációs hiba okát az adatraktárban (helyettes kulcs) egyedi azonosítója  |
-| enrollmentFailureReasonName  | A regisztrációs hiba okának neve. Lásd az alábbi példákat.                            |
+| enrollmentFailureReasonKey   | A beléptetési hiba okának egyedi azonosítója az adattárházban (helyettes kulcs)  |
+| enrollmentFailureReasonName  | A beléptetési hiba okának neve. Lásd az alábbi példákat.                            |
 
 ### <a name="example"></a>Példa
 
 | enrollmentFailureReasonName      | Leírás                                                                                                                                                                                            |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nem alkalmazható                   | A regisztrációs hiba oka nem alkalmazható.                                                                                                                                                       |
-| Nem érhető el                    | A regisztrációs hiba oka nem érhető el.                                                                                                                                                        |
-| Ismeretlen                          | Ismeretlen hiba történt.                                                                                                                                                                                         |
+| Nem alkalmazható                   | A beléptetési hiba oka nem alkalmazható.                                                                                                                                                       |
+| Nem érhető el                    | A beléptetési hiba oka nem érhető el.                                                                                                                                                        |
+| Ismeretlen                          | Ismeretlen hiba.                                                                                                                                                                                         |
 | UserNotLicensed                  | A felhasználó nem található az Intune-ban, vagy nem rendelkezik érvényes licenccel.                                                                                                                                     |
-| UserUnknown                      | Felhasználó nem ismeri az Intune-hoz.                                                                                                                                                                           |
-| BulkAlreadyEnrolledDevice        | Csak egy felhasználó regisztrálhat egy eszközt. Egy másik felhasználó korábban már regisztrálta az eszközt.                                                                                                                |
-| EnrollmentOnboardingIssue        | Az Intune mobileszköz-felügyelet (MDM) szolgáltatóként még nincs konfigurálva.                                                                                                                                 |
-| AppleChallengeIssue              | Az iOS felügyeleti profil telepítése késleltetve lett vagy nem sikerült.                                                                                                                                         |
-| AppleOnboardingIssue             | Intune-ban való regisztrálása az Apple MDM push-tanúsítvány szükséges.                                                                                                                                       |
-| DeviceCap                        | A felhasználó regisztrációját további eszközöket, mint a maximális engedélyezett.                                                                                                                                        |
-| AuthenticationRequirementNotMet  | Az Intune regisztrációs szolgáltatást nem sikerült engedélyezni ezt a kérelmet.                                                                                                                                            |
-| UnsupportedDeviceType            | Az eszköz nem felel meg az Intune-regisztráció minimális követelményeinek.                                                                                                                                  |
-| EnrollmentCriteriaNotMet         | Ez az eszköz regisztrálása egy konfigurált regisztrációs korlátozási szabály miatt nem sikerült.                                                                                                                          |
-| BulkDeviceNotPreregistered       | Az eszköz nemzetközi mobilkészülék-azonosító (IMEI) vagy sorozatszáma nem található.  Ezen azonosító nélkül eszközök ismerik a személyes tulajdonú eszközök, amelyek jelenleg le vannak tiltva.  |
-| FeatureNotSupported              | A felhasználó próbált hozzáférni egy szolgáltatás, amely még nem lett kiadva minden ügyfél számára, vagy nem kompatibilis az Intune-konfigurációval.                                                            |
-| UserAbandonment                  | Regisztráció a végfelhasználó félbeszakadt. (Végfelhasználói bevezetési elindult, de nem tudta befejezni a időben)                                                                                           |
-| APNSCertificateExpired           | Lejárt Apple MDM push-tanúsítványt az Apple-eszközök nem felügyelhetők.                                                                                                                            |
+| UserUnknown                      | A felhasználó nem ismeri az Intune-t.                                                                                                                                                                           |
+| BulkAlreadyEnrolledDevice        | Csak egy felhasználó regisztrálhat egy eszközt. Ezt az eszközt korábban egy másik felhasználó regisztrálta.                                                                                                                |
+| EnrollmentOnboardingIssue        | Az Intune mobileszköz-felügyeleti (MDM-) szolgáltató még nincs konfigurálva.                                                                                                                                 |
+| AppleChallengeIssue              | Az iOS felügyeleti profil telepítése késleltetve vagy sikertelen volt.                                                                                                                                         |
+| AppleOnboardingIssue             | Az Intune-ba való regisztráláshoz Apple MDM push-tanúsítvány szükséges.                                                                                                                                       |
+| DeviceCap                        | A felhasználó a maximálisan engedélyezettnél több eszközt próbált regisztrálni.                                                                                                                                        |
+| AuthenticationRequirementNotMet  | Az Intune-beléptetési szolgáltatás nem tudta engedélyezni a kérelmet.                                                                                                                                            |
+| UnsupportedDeviceType            | Ez az eszköz nem felel meg az Intune-regisztráció minimális követelményeinek.                                                                                                                                  |
+| EnrollmentCriteriaNotMet         | Az eszközt nem sikerült regisztrálni egy konfigurált regisztrációs korlátozási szabály miatt.                                                                                                                          |
+| BulkDeviceNotPreregistered       | Nem található az eszköz nemzetközi mobileszköz-azonosítója (IMEI) vagy sorozatszáma.  Ez az azonosító nélkül az eszközöket a rendszer a jelenleg blokkolt személyes tulajdonú eszközökként ismeri fel.  |
+| FeatureNotSupported              | A felhasználó olyan szolgáltatás elérésére tett kísérletet, amely még nem lett közzétéve az összes ügyfél számára, vagy nem kompatibilis az Intune-konfigurációval.                                                            |
+| UserAbandonment                  | A regisztrációt a végfelhasználó felhagyta. (A végfelhasználó elindította a bevezetést, de nem tudta időben befejezni a végrehajtását)                                                                                           |
+| APNSCertificateExpired           | Az Apple-eszközök nem kezelhetők lejárt Apple MDM push-tanúsítvánnyal.                                                                                                                            |
 ## <a name="ownertypes"></a>OwnerTypes
 
 Az **EnrollmentTypes** entitás jelzi, hogy az eszköz tulajdonosa a vállalat, magánszemély vagy ismeretlen.
@@ -166,10 +166,10 @@ Az **EnrollmentTypes** entitás jelzi, hogy az eszköz tulajdonosa a vállalat, 
 |---------|------------|--------|
 | ownerTypeID |A tulajdonostípus egyedi azonosítója. | |
 | ownerTypeKey |A tulajdonostípus egyedi azonosítója az adattárházban – helyettes kulcs. | |
-| ownerTypeName |Az eszközök tulajdonosának típusát jelzi:  <br>Vállalati – eszköz vállalati tulajdonban. <br>Personal – az eszköz saját tulajdonban van (BYOD).  <br>Unknown – nincs információ az eszközről. |Vállalati személyes ismeretlen |
+| ownerTypeName |Az eszközök tulajdonosának típusát jelzi:  <br>Vállalati – az eszköz vállalati tulajdonban van. <br>Personal – az eszköz saját tulajdonban van (BYOD).  <br>Unknown – nincs információ az eszközről. |Vállalati személyes ismeretlen |
 
 > [!Note]  
-> Az a `ownerTypeName` az Azure ad dinamikus csoportok létrehozásakor eszközökhöz, be kell állítani a szűrő értéke `deviceOwnership` , `Company`. További információkért lásd: [eszközök szabályai](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> Az eszközökhöz tartozó dinamikus csoportok létrehozásakor a AzureAD a szűrő `Company`értékét `deviceOwnership` kell beállítania. `ownerTypeName` További információ: [eszközök szabályai](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
 ## <a name="managementstates"></a>ManagementStates
 
@@ -242,7 +242,7 @@ A **Devices** entitás felsorolja az összes kezelt regisztrált eszközt és az
 | DeviceEnrollmentType       | Az eszközhöz társított, a regisztráció módját jelző regisztrációtípus kulcsa.                                                                                             |
 | ComplianceStateKey         | Az eszközhöz társított megfelelőségi állapot kulcsa.                                                                                                                             |
 | OSVersion                  | Az eszközön futó operációs rendszer verziószáma.                                                                                                                                                |
-| EasDeviceId                | Exchange ActiveSync-Azonosítóját az eszköz.                                                                                                                                                  |
+| EasDeviceId                | Az eszköz Exchange ActiveSync-azonosítója.                                                                                                                                                  |
 | a sorozatszám               | a sorozatszám                                                                                                                                                                           |
 | UserId                     | Az eszközhöz társított felhasználó egyedi azonosítója.                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Az eszköz adattárházban történő utolsó módosításának dátuma és időpontja (UTC).                                                                                                       |
@@ -269,7 +269,7 @@ A **DevicePropertyHistory** entitásban ugyanazon tulajdonságok szerepelnek, mi
 |          Tulajdonság          |                                                                                      Leírás                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DateKey                    | A napot megadó dátumtáblázat-hivatkozás.                                                                                                                                          |
-| DeviceKey                  | Egyedi az eszköz azonosítója az adattárházban – helyettes kulcs. Az Intune-eszközazonosítót tartalmazó eszköztáblára mutató hivatkozás.                               |
+| DeviceKey                  | Az eszköz egyedi azonosítója az adattárházban – helyettes kulcs. Az Intune-eszközazonosítót tartalmazó eszköztáblára mutató hivatkozás.                               |
 | Eszköznév                 | Az eszköz neve az eszközök elnevezését megengedő platformokon. Más platformokon az Intune hoz létre nevet más tulajdonságok alapján. Ez az attribútum nem lehet elérhető az összes eszköz számára. |
 | DeviceRegistrationStateKey | Az eszközhöz tartozó eszközregisztrációs állapot attribútum kulcsa.                                                                                                                    |
 | OwnerTypeKey               | Az eszközhöz tartozó tulajdonostípus attribútum kulcsa: corporate (vállalati), personal (személyes), vagy unknown (ismeretlen).                                                                                                  |

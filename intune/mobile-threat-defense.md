@@ -17,26 +17,26 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0452229d6c1ea2d9e87a302675167d200bd348eb
-ms.sourcegitcommit: 6bba9f2ef4d1ec699f5713a4da4f960e7317f1cd
+ms.openlocfilehash: 73c8167c91129d79a98674a92e7ccc5487a6b283
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67407173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885087"
 ---
 # <a name="what-is-mobile-threat-defense-integration-with-intune"></a>Mit jelent a Mobile Threat Defense integrációja az Intune-nal?
-Intune Mobile Threat Defense külső szállítótól származó adatok integrálhatók a megfelelőségi szabályzatokról és a feltételes hozzáférési szabályok információforrásként. Ez az információ segítségével védheti a vállalati erőforrásokhoz, mint az Exchange és SharePoint-, blokkolja a hozzáférést a kitett mobileszközön.  
+Az Intune a mobil veszélyforrások elleni védelem gyártójától származó adatokat a megfelelőségi szabályzatok és a feltételes hozzáférési szabályok információs forrásaként integrálhatja. Ezekkel az információkkal megvédheti a vállalati erőforrásokat, például az Exchange-et és a SharePointot azáltal, hogy blokkolja a hozzáférést a feltört mobileszközökön.  
 
 ## <a name="what-problem-does-this-solve"></a>Milyen problémára nyújt ez megoldást?
-Integrálás a Mobile Threat Defense külső szállítótól származó információk segíthetnek a vállalati erőforrások védelme a fenyegetésekkel szemben, amelyek befolyásolják a mobil platformokra.  
+A Mobile Threat Defense-gyártótól származó információk integrálásával megvédheti a vállalati erőforrásokat a mobil platformokat érintő fenyegetésektől.  
 
-Általában vállalatok proaktív a számítógépeiket védik a biztonsági rések és támadásokkal szemben, miközben a mobileszközök gyakran nem figyelt és nem védett. Mobil platformokhoz beépített védelmi technikákkal, mint az alkalmazások elkülönítése és alkalmazásáruházak rendelkezik, ahol az ezeken a platformokon a rendszer továbbra is sebezhetők az egyre kifinomultabb támadásokkal szemben. Több alkalmazott használja az eszközök a munkahelyi és a bizalmas adatok eléréséhez, a Mobile Threat Defense szállítótól információ segíthet a eszközök és az erőforrások védelme az egyre kifinomultabb támadásokkal szemben.  
+A vállalatok általában proaktív módon védik a számítógépeket a biztonsági rések és a támadások ellen, míg a mobileszközök gyakran nem figyelhetők meg és nem védettek. Ahol a mobil platformok beépített védelemmel rendelkeznek, például az alkalmazások elkülönítése és a bevett fogyasztói alkalmazások tárolói, továbbra is sebezhetőek lesznek a kifinomult támadásokkal szemben. Ahogy egyre több alkalmazott használ eszközöket a munkához és bizalmas információkhoz férhet hozzá, a Mobile Threat Defense-gyártótól származó információk segítenek az eszközök és az erőforrások egyre kifinomultabb támadások elleni védelmében.  
 
 ## <a name="how-do-the-intune-mobile-threat-defense-connectors-work"></a>Az Intune Mobile Threat Defense-összekötők működése
 
-Intune-ban egy Mobile Threat Defense-összekötő használatával hozzon létre egy Intune-ban és a kiválasztott Mobile Threat Defense gyártója által biztosított közötti kommunikációs csatornát. Az Intune Mobile Threat Defense-partnerekkel intuitív, egyszerűen üzembe helyezhető alkalmazások mobileszközökre vonatkozó ajánlat. Ezek az alkalmazások aktívan vizsgálata és elemzése veszélyforrásokkal kapcsolatos megosztani az Intune-nal. Intune-ban használhatja az adatok a jelentés vagy végrehajtás céljából.  
+Az Intune egy Mobile Threat Defense-összekötőt használ az Intune és a kiválasztott Mobile Threat Defense-gyártó közötti kommunikációs csatorna létrehozásához. Az Intune Mobile Threat Defense-partnerek intuitív és könnyen telepíthető alkalmazásokat telepíthetnek a mobileszközök számára. Ezek az alkalmazások aktívan megvizsgálják és elemzik az Intune-nal való megosztásra vonatkozó veszélyforrásokat. Az Intune jelentéskészítési és kényszerítési célból is felhasználhatja az adatgyűjtést.  
 
-Példa: Egy csatlakoztatott Mobile Threat Defense-alkalmazás jelentések, a Mobile Threat Defense szállítónak, hogy a hálózaton a telefon jelenleg kapcsolódik egy hálózatot, amely ki van téve a Man ki a középső támadások. Ez az információ kategorizálva egy megfelelő kockázati szint alacsony, közepes vagy magas. A kockázati szint majd összeveti a kockázati szint keretek beállította az Intune-ban. Ez az összehasonlítás alapján a hozzáférést bizonyos erőforrásokhoz, a választott visszavonhatja közben az eszköz biztonsága sérül.
+Példa: Egy csatlakoztatott Mobile Threat Defense-alkalmazás jelentést küld a Mobile Threat Defense-gyártónak arról, hogy a hálózaton lévő telefon jelenleg csatlakoztatva van egy olyan hálózathoz, amely sebezhető az ember számára a középső támadásokban. Ez az információ az alacsony, közepes vagy magas megfelelő kockázati szintre van kategorizálva. Ezt a kockázati szintet a rendszer az Intune-ban beállított kockázati szintbeli kedvezmények összehasonlításával hasonlítja össze. Ezen összehasonlítás alapján a kiválasztott erőforrásokhoz való hozzáférés visszavonható, miközben az eszköz biztonsága sérül.
 
 ## <a name="what-data-does-intune-collect-for-mobile-threat-defense"></a>Milyen adatokat gyűjt az Intune a Mobile Threat Defense szolgáltatás számára?
 
@@ -47,14 +47,14 @@ Ez a szolgáltatás nem kötelező, a leltáradatokat pedig nem osztjuk meg alap
 **Alkalmazásleltár**  
 Ha engedélyezi az iOS-eszközök alkalmazásszinkronizáicóját, az Intune mind a személyes, mind a vállalati tulajdonban lévő, iOS rendszerű eszközöktől alkalmazásleltár-adatokat küld az Ön MTD-szolgáltatójának. Az alkalmazásleltár adatai az alábbiakat tartalmazzák:
 
- - Alkalmazásazonosító
- - Alkalmazásverzió
- - Alkalmazás rövid verziója
- - Alkalmazásnév
- - Alkalmazás csomagjának mérete
- - Alkalmazás dinamikus mérete
- - Az alkalmazás ellenőrzött állapota
- - Az alkalmazás felügyelt állapota
+- Alkalmazásazonosító
+- Alkalmazásverzió
+- Alkalmazás rövid verziója
+- Alkalmazásnév
+- Alkalmazás csomagjának mérete
+- Alkalmazás dinamikus mérete
+- Az alkalmazás ellenőrzött állapota
+- Az alkalmazás felügyelt állapota
 
 ## <a name="sample-scenarios"></a>Mintaforgatókönyvek
 
@@ -79,5 +79,5 @@ A vállalati erőforrásokhoz való hozzáférés védelme az eszköz-, a háló
 - [Zimperium](zimperium-mobile-threat-defense-connector.md)
 - [Pradeo](pradeo-mobile-threat-defense-connector.md)
 - [Better Mobile](better-mobile-threat-defense-connector.md)
-- [A Sophos Mobile](sophos-mtd-connector.md)
-- [Wandera Mobile Threat Defense](wandera-mtd-connector.md)
+- [Sophos Mobile](sophos-mtd-connector.md)
+- [A Wanda Mobile Threat Defense](wandera-mtd-connector.md)

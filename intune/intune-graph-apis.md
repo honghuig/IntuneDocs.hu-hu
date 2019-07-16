@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f182d356c151c569b9cf49adfe2f2c0cc34f1a54
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: b655dc64958350623ea62caf848043f6baf3787c
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883297"
 ---
 # <a name="how-to-use-azure-ad-to-access-the-intune-apis-in-microsoft-graph"></a>Az Azure AD használata az Intune API-k elérésére a Microsoft Graphban
 
@@ -30,13 +30,13 @@ Az Intune API-k a Microsoft Graphban való eléréséhez a következők szüksé
 
 - Alkalmazásazonosító, amely tartalmazza:
 
-    - az Azure AD és a Microsoft Graph API-k hívásához szükséges engedélyt,
-    - az adott alkalmazásfeladatokhoz kapcsolódó engedélyhatóköröket.
+  - az Azure AD és a Microsoft Graph API-k hívásához szükséges engedélyt,
+  - az adott alkalmazásfeladatokhoz kapcsolódó engedélyhatóköröket.
 
 - Felhasználói hitelesítő adatok, amelyek tartalmazzák:
 
-    - a hozzáférési engedélyt az alkalmazáshoz társított Azure AD-bérlőhöz,
-    - az alkalmazás-engedélyhatókörök támogatásához szükséges szerepkörengedélyeket.
+  - a hozzáférési engedélyt az alkalmazáshoz társított Azure AD-bérlőhöz,
+  - az alkalmazás-engedélyhatókörök támogatásához szükséges szerepkörengedélyeket.
 
 - Végfelhasználó, aki engedélyezi az alkalmazásnak az Azure-bérlőhöz kapcsolódó alkalmazásfeladatokat.
 
@@ -61,7 +61,7 @@ További tudnivalókért lásd:
 
 Ha alkalmazásokat szeretne regisztrálni a Microsoft Graph API használatához:
 
-1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) rendszergazdai hitelesítő adatok használatával.
+1. Jelentkezzen be az [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) -ba rendszergazdai hitelesítő adatok használatával.
 
     Igény szerint az alábbiak közül bármelyiket használhatja:
     - A bérlői rendszergazdafiókot.
@@ -139,7 +139,7 @@ További tudnivalók:
 - [Azure AD-hitelesítés](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect-pass-through-authentication)
 - [Alkalmazás-engedélyhatókörök](https://docs.microsoft.com/azure/active-directory/develop/active-directory-v2-scopes)
 
-Ha engedélyezi a Microsoft Graph, adhatja meg a következő hatókörök Intune-funkciókhoz való hozzáférés vezérléséhez: Az alábbi táblázat foglalja össze az Intune API-ban engedélyhatóköröket.  Az első oszlop a funkció nevét tünteti fel abban a formában, ahogy az Azure Portalon megjelenik, a második oszlopban az engedélyhatókör neve látható.
+Ha engedélyt ad a Microsoft Graph számára, a következő hatóköröket adhatja meg az Intune-funkciókhoz való hozzáférés szabályozásához: Az alábbi táblázat összefoglalja az Intune API engedélyének hatóköreit.  Az első oszlop a funkció nevét tünteti fel abban a formában, ahogy az Azure Portalon megjelenik, a második oszlopban az engedélyhatókör neve látható.
 
 _Hozzáférés engedélyezése_ beállítás | Hatókör neve
 :--|:--
@@ -161,139 +161,139 @@ Jelenleg minden Intune-engedélyhatókörhöz rendszergazdai hozzáférés szük
 
 ### <a name="app-ro"></a>DeviceManagementApps.Read.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune-alkalmazások olvasása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune-alkalmazások olvasása__
 
 - Olvasási hozzáférést biztosít a következő entitástulajdonságokhoz és -állapotokhoz:
-    - Ügyfélalkalmazások
-    - Mobilalkalmazás-kategóriák
-    - Alkalmazásvédelmi szabályzatok
-    - Alkalmazáskonfigurációs szabályzatok
+  - Ügyfélalkalmazások
+  - Mobilalkalmazás-kategóriák
+  - Alkalmazásvédelmi szabályzatok
+  - Alkalmazáskonfigurációs szabályzatok
 
 ### <a name="app-rw"></a>DeviceManagementApps.ReadWrite.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune-alkalmazások olvasása és írás rájuk__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune-alkalmazások olvasása és írás rájuk__
 
 - Lehetővé teszi ugyanazokat a műveleteket, mint a __DeviceManagementApps.Read.All__
 
 - Ezenkívül lehetővé teszi az alábbi entitások módosítását is:
 
-    - Ügyfélalkalmazások
-    - Mobilalkalmazás-kategóriák
-    - Alkalmazásvédelmi szabályzatok
-    - Alkalmazáskonfigurációs szabályzatok
+  - Ügyfélalkalmazások
+  - Mobilalkalmazás-kategóriák
+  - Alkalmazásvédelmi szabályzatok
+  - Alkalmazáskonfigurációs szabályzatok
 
 ### <a name="cfg-ro"></a>DeviceManagementConfiguration.Read.All
 
-- **Hozzáférés engedélyezése** beállítást: __Olvassa el a Microsoft Intune-eszközkonfiguráció és szabályzatok__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune eszköz konfigurációjának és házirendjeinek beolvasása__
 
 - Olvasási hozzáférést biztosít a következő entitástulajdonságokhoz és -állapotokhoz:
-    - Eszközkonfiguráció
-    - Eszköz-megfelelőségi szabályzat
-    - Értesítési üzenetek
+  - Eszközkonfiguráció
+  - Eszköz-megfelelőségi szabályzat
+  - Értesítési üzenetek
 
 ### <a name="cfg-ra"></a>DeviceManagementConfiguration.ReadWrite.All
 
-- **Hozzáférés engedélyezése** beállítást: __A Microsoft Intune-eszközkonfiguráció és szabályzatok olvasása és írása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune eszköz konfigurációjának és házirendjeinek olvasása és írása__
 
 - Lehetővé teszi ugyanazokat a műveleteket, mint a __DeviceManagementConfiguration.Read.All__
 
 - Ezenkívül az alkalmazások létrehozhatják, hozzárendelhetik, törölhetik és módosíthatják a következő entitásokat:
-    - Eszközkonfiguráció
-    - Eszköz-megfelelőségi szabályzat
-    - Értesítési üzenetek
+  - Eszközkonfiguráció
+  - Eszköz-megfelelőségi szabályzat
+  - Értesítési üzenetek
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
 
-- **Hozzáférés engedélyezése** beállítást: __Felhasználót érintő távoli műveletek végzése Microsoft Intune-eszközökön__
+- **Hozzáférés engedélyezése** beállítás: __Felhasználót érintő távoli műveletek végzése Microsoft Intune-eszközökön__
 
 - Lehetővé teszi a következő távoli műveletek felügyelt eszközön való végrehajtását:
-    - Kivonás
-    - Törlés
-    - PIN-kód alaphelyzetbe állítása/helyreállítása
-    - Távoli zárolás
-    - Elveszett eszköz mód engedélyezése/letiltása
-    - Számítógép megtisztítása
-    - Újraindítás
-    - Felhasználó törlése megosztott eszközről
+  - Kivonás
+  - Törlés
+  - PIN-kód alaphelyzetbe állítása/helyreállítása
+  - Távoli zárolás
+  - Elveszett eszköz mód engedélyezése/letiltása
+  - Számítógép megtisztítása
+  - Újraindítás
+  - Felhasználó törlése megosztott eszközről
 
 ### <a name="mgd-ro"></a>DeviceManagementManagedDevices.Read.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune-eszközök olvasása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune-eszközök olvasása__
 
 - Olvasási hozzáférést biztosít a következő entitástulajdonságokhoz és -állapotokhoz:
-    - Felügyelt eszköz
-    - Eszközkategória
-    - Észlelt alkalmazás
-    - Távoli műveletek
-    - Kártevőkre vonatkozó információ
+  - Felügyelt eszköz
+  - Eszközkategória
+  - Észlelt alkalmazás
+  - Távoli műveletek
+  - Kártevőkre vonatkozó információ
 
 ### <a name="mgd-rw"></a>DeviceManagementManagedDevices.ReadWrite.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune-eszközök olvasása és írás rájuk__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune-eszközök olvasása és írás rájuk__
 
 - Lehetővé teszi ugyanazokat a műveleteket,mint a __DeviceManagementManagedDevices.Read.All__
 
 - Ezenkívül az alkalmazások létrehozhatják, törölhetik és módosíthatják a következő entitásokat:
-    - Felügyelt eszköz
-    - Eszközkategória
+  - Felügyelt eszköz
+  - Eszközkategória
 
 - A következő távoli műveletek szintén engedélyezettek:
-    - Eszközök megkeresése
-    - Aktiválási zár megkerülése
-    - Távsegítség kérése
+  - Eszközök megkeresése
+  - Aktiválási zár megkerülése
+  - Távsegítség kérése
 
 ### <a name="rac-ro"></a>DeviceManagementRBAC.Read.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune RBAC beállításainak olvasása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune RBAC beállításainak olvasása__
 
 - Olvasási hozzáférést biztosít a következő entitástulajdonságokhoz és -állapotokhoz:
-    - Szerepkör-hozzárendelések
-    - Szerepkör-definíciók
-    - Erőforrás-műveletek
+  - Szerepkör-hozzárendelések
+  - Szerepkör-definíciók
+  - Erőforrás-műveletek
 
 ### <a name="rac-rw"></a>DeviceManagementRBAC.ReadWrite.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune RBAC beállításainak olvasása és írása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune RBAC beállításainak olvasása és írása__
 
 - Lehetővé teszi ugyanazokat a műveleteket,mint a __DeviceManagementRBAC.Read.All__
 
 - Ezenkívül az alkalmazások létrehozhatják, hozzárendelhetik, törölhetik és módosíthatják a következő entitásokat:
-    - Szerepkör-hozzárendelések
-    - Szerepkör-definíciók
+  - Szerepkör-hozzárendelések
+  - Szerepkör-definíciók
 
 ### <a name="svc-ro"></a>DeviceManagementServiceConfig.Read.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune-konfiguráció olvasása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune-konfiguráció olvasása__
 
 - Olvasási hozzáférést biztosít a következő entitástulajdonságokhoz és -állapotokhoz:
-    - Eszközök beléptetése
-    - Apple Push Notification-tanúsítvány
-    - Apple Készülékregisztrációs program
-    - Apple Volume Purchase Program
-    - Exchange-összekötő
-    - Feltételek és kikötések
-    - Távközlési költségek kezelése
-    - Felhőalapú PKI
-    - Védjegyezés
-    - Mobile Threat Defense
+  - Eszközök beléptetése
+  - Apple Push Notification-tanúsítvány
+  - Apple Készülékregisztrációs program
+  - Apple Volume Purchase Program
+  - Exchange-összekötő
+  - Feltételek és kikötések
+  - Távközlési költségek kezelése
+  - Felhőalapú PKI
+  - Védjegyezés
+  - Mobile Threat Defense
 
 ### <a name="svc-rw"></a>DeviceManagementServiceConfig.ReadWrite.All
 
-- **Hozzáférés engedélyezése** beállítást: __Microsoft Intune-konfiguráció olvasása és írása__
+- **Hozzáférés engedélyezése** beállítás: __Microsoft Intune-konfiguráció olvasása és írása__
 
 - Lehetővé teszi ugyanazokat a műveleteket, mint a DeviceManagementServiceConfig.Read.All_
 
 - Ezenkívül az alkalmazások a következő Intune-funkciókat is konfigurálhatják:
-    - Eszközök beléptetése
-    - Apple Push Notification-tanúsítvány
-    - Apple Készülékregisztrációs program
-    - Apple Volume Purchase Program
-    - Exchange-összekötő
-    - Feltételek és kikötések
-    - Távközlési költségek kezelése
-    - Felhőalapú PKI
-    - Védjegyezés
-    - Mobile Threat Defense
+  - Eszközök beléptetése
+  - Apple Push Notification-tanúsítvány
+  - Apple Készülékregisztrációs program
+  - Apple Volume Purchase Program
+  - Exchange-összekötő
+  - Feltételek és kikötések
+  - Távközlési költségek kezelése
+  - Felhőalapú PKI
+  - Védjegyezés
+  - Mobile Threat Defense
 
 ## <a name="azure-ad-authentication-examples"></a>Példák az Azure AD-hitelesítésre
 

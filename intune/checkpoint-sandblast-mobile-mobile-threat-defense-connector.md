@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f9438c3c566dc62acfa7567428ebe3a6a6be4777
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 9552253469fb6644636d492c9c0f1477891a402d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883759"
 ---
 # <a name="check-point-sandblast-mobile-threat-defense-connector-with-intune"></a>Check Point SandBlast Mobile Threat Defense-összekötő az Intune-nal
 
-Szabályozhatja, hogy a Check Point SandBlast Mobile, a Microsoft Intune-nal integrálható mobil veszélyforrások elleni védelmi megoldás kockázatfelmérése alapján feltételes hozzáféréssel a vállalati erőforrások mobil elérése. A kockázatfelmérés a Check Point SandBlast Mobile alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
+A mobil eszközök hozzáférését a vállalati erőforrásokhoz feltételes hozzáférés használatával szabályozhatja a következő, az Microsoft Intune-nal integrált Mobile Threat Defense-megoldás által végzett kockázatértékelés alapján. A kockázatfelmérés a Check Point SandBlast Mobile alkalmazást futtató eszközökről gyűjtött telemetriai adatokon alapul.
 
-Engedélyezve van az Intune eszközmegfelelőségi szabályzatai által, amely segítségével engedélyezése vagy letiltása nem megfelelő eszközök hozzáférését a vállalati erőforrások észlelt Check Point SandBlast Mobile-kockázatfelmérés alapján történő feltételes hozzáférési szabályzatok konfigurálhatók az fenyegetések.
+A feltételes hozzáférési szabályzatok az Intune-eszközök megfelelőségi házirendjein keresztül engedélyezhető, a nem megfelelő eszközök hozzáférésének engedélyezéséhez vagy letiltásához használhatók a vállalati erőforrások észlelése alapján fenyegetések.
 
 ## <a name="how-do-intune-and-check-point-sandblast-mobile-help-protect-your-company-resources"></a>Hogyan segíti az Intune és a Check Point SandBlast Mobile a vállalati erőforrások védelmét?
 
@@ -96,7 +96,7 @@ Ha az eszközön kártékony alkalmazásokat, például kártevőket észlel a r
 - Microsoft Intune-előfizetés
 
 - Check Point SandBlast Mobile Threat Defense-előfizetés
-    - További információt a [CheckPoint SandBlast webhelyén](https://www.checkpoint.com/) találhat.
+  - További információt a [CheckPoint SandBlast webhelyén](https://www.checkpoint.com/) találhat.
 
 ## <a name="next-steps"></a>További lépések
 

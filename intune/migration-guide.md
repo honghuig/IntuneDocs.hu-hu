@@ -16,12 +16,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b34143e17245de61026a536cc0b8c5e8a7f80107
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 97a0d9074b8617dec2fb28ed59168e08ada57fba
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882763"
 ---
 # <a name="intune-migration-guide"></a>Intune migrációs útmutató
 
@@ -35,27 +35,27 @@ Ez az útmutató végigvezeti a külső MDM-szolgáltatói megoldásról az Intu
 
 Ez az útmutató két fázisra osztja a migrálást, és mindkét fázisban felsorolja azon feladatokat, stratégiákat és taktikai útmutatásokat, amelyek végigvezetik az Intune MDM-re történő migrálás teljes folyamatán.
 
-- [1. fázis: Az Intune előkészítése a mobileszköz-kezelés](migration-guide-prepare.md)
+- [1. fázis: Az Intune előkészítése a mobileszköz-kezeléshez](migration-guide-prepare.md)
 
-    - [Az MDM-migráció követelményeinek felmérése](migration-guide-prepare.md#assess-mdm-requirements)
+  - [Az MDM-migráció követelményeinek felmérése](migration-guide-prepare.md#assess-mdm-requirements)
 
-    - [Alapszintű beállítás](migration-guide-setup.md)
+  - [Alapszintű beállítás](migration-guide-setup.md)
 
-    - [Eszköz- és alkalmazásszabályzatok konfigurálása](migration-guide-configure-policies.md)
+  - [Eszköz- és alkalmazásszabályzatok konfigurálása](migration-guide-configure-policies.md)
 
-    - [Alkalmazásvédelmi szabályzatok konfigurálása](migration-guide-app-protection-policies.md)
+  - [Alkalmazásvédelmi szabályzatok konfigurálása](migration-guide-app-protection-policies.md)
 
-    - [Speciális áttelepítési megfontolások](migration-guide-considerations.md)
+  - [Speciális áttelepítési megfontolások](migration-guide-considerations.md)
 
 - [2. fázis: Áttelepítési kampány](migration-guide-campaign.md)
 
-    - [Kommunikációs terv](migration-guide-communication-plan.md)
+  - [Kommunikációs terv](migration-guide-communication-plan.md)
 
-    - [A végfelhasználói ösztönzése feltételes hozzáféréssel](migration-guide-drive-adoption.md)
+  - [Végfelhasználói elfogadás a feltételes hozzáféréssel](migration-guide-drive-adoption.md)
 
-    - [A szokásos áttelepítési ciklus](migration-guide-cycle.md)
-        - [A migráció figyelése](migration-guide-cycle.md#monitoring-migration)
-        - [Migráció utáni feladatok](migration-guide-cycle.md#post-migration)
+  - [A szokásos áttelepítési ciklus](migration-guide-cycle.md)
+    - [A migráció figyelése](migration-guide-cycle.md#monitoring-migration)
+    - [Migráció utáni feladatok](migration-guide-cycle.md#post-migration)
 
 ## <a name="assumptions"></a>Előfeltételek
 
@@ -71,4 +71,4 @@ Fontos észrevenni, hogy az új Intune-környezet eltérhet a korábban használ
 
 ## <a name="next-steps"></a>További lépések
 
-[1. fázis: Az Intune előkészítése a mobileszköz-kezelés](migration-guide-prepare.md)
+[1. fázis: Az Intune előkészítése a mobileszköz-kezeléshez](migration-guide-prepare.md)

@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 502babf80b4286adb19a09988d16bd56562d4925
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 3bbd90b5a317629bd5b4d87b619d89023053518d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66046670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884243"
 ---
 # <a name="add-wi-fi-settings-for-windows-10-and-later-devices-in-intune"></a>Wi-Fi-beállítások hozzáadása Windows 10 és újabb rendszerű eszközökhöz az Intune-ban
 
@@ -36,78 +36,78 @@ Ez a cikk ezeket a beállításokat ismerteti.
 
 - **Wi-Fi típusa**: Válassza a **Basic** (Egyszerű) lehetőséget. 
 
-- **Wi-Fi neve (SSID)**: Rövid a szolgáltatáskészlet-azonosító. Ez az érték a valódi neve a vezeték nélküli hálózatnak, amelyhez az eszközök csatlakoznak. A felhasználók azonban csak a konfigurált **kapcsolatnevet** látják, amikor kiválasztják a kapcsolatot.
+- **Wi-Fi-név (SSID)** : A szolgáltatáskészlet-azonosító rövid értéke. Ez az érték a valódi neve a vezeték nélküli hálózatnak, amelyhez az eszközök csatlakoznak. A felhasználók azonban csak a konfigurált **kapcsolatnevet** látják, amikor kiválasztják a kapcsolatot.
 
-- **Kapcsolat neve**: Adjon meg egy felhasználóbarát nevet a Wi-Fi-kapcsolat. Az ide beírt szöveg a felhasználók számára megjelenő név, amikor a rendelkezésre álló kapcsolatokat böngészik az eszközeiken.
+- **Kapcsolatok neve**: Adja meg a Wi-Fi kapcsolat felhasználóbarát nevét. Az ide beírt szöveg a felhasználók számára megjelenő név, amikor a rendelkezésre álló kapcsolatokat böngészik az eszközeiken.
 
-- **Automatikus csatlakozás, ha hatótávolságon belül van**: Amikor **Igen**, eszközök automatikus csatlakozás, ha a hálózat hatótávolságon belül. Ha a beállítás **Nem**, akkor az eszközök nem csatlakoznak automatikusan.
+- **Automatikus csatlakozás a tartományon belül**: Ha **Igen**, az eszközök automatikusan csatlakoznak, amikor a hálózat tartományában vannak. Ha a beállítás **Nem**, akkor az eszközök nem csatlakoznak automatikusan.
 
-  - **Előnyben részesített hálózathoz csatlakozni, ha elérhető**: Ha az eszközök számos előnyben részesített hálózathoz, majd válassza ki **Igen** használatához az előnyben részesített hálózathoz. Válassza a **Nem** beállítást, hogy az ebben a konfigurációs profilban lévő Wi-Fi-hálózatot használják.
+  - **Csatlakozás több előnyben részesített hálózathoz, ha elérhető**: Ha az eszközök egy előnyben részesített hálózat hatótávolságán belül vannak, válassza az **Igen** lehetőséget az előnyben részesített hálózat használatához. Válassza a **Nem** beállítást, hogy az ebben a konfigurációs profilban lévő Wi-Fi-hálózatot használják.
 
     Tegyük fel, hogy létrehozott egy **ContosoCorp** nevű Wi-Fi-hálózatot, és a **ContosoCorp** hálózatot használja ebben a konfigurációs profilban. Elérhető távolságban van egy **ContosoGuest** nevű Wi-Fi-hálózat is. Azt szeretné, hogy ha céges eszközei hatókörön belül vannak, automatikusan a **ContosoCorphoz** csatlakozzanak. Ebben az esetben állítsa a **Lehetőség szerint csatlakozás egy előnyben részesített hálózathoz** tulajdonságot **Nem** értékre.
 
-  - **Ehhez a hálózathoz csatlakozni, akkor is, ha nem sugározza az SSID**: Válasszon **Igen** a konfigurációs profilok automatikusan csatlakoznak a hálózathoz, még akkor is, ha a hálózat el van rejtve (azaz, SSID nyilvánosan nem küldhetők). Válassza a **Nem** beállítást, ha nem szeretné, hogy ez a konfigurációs profil a rejtett hálózathoz csatlakozzon.
+  - **Csatlakozás ehhez a hálózathoz, még akkor is, ha nem sugározza az SSID**-t: Válassza az **Igen** lehetőséget a konfigurációs profilhoz, hogy automatikusan csatlakozhasson a hálózathoz, még akkor is, ha a hálózat el van rejtve (vagyis az SSID-t nem a nyilvános szórásra). Válassza a **Nem** beállítást, ha nem szeretné, hogy ez a konfigurációs profil a rejtett hálózathoz csatlakozzon.
 
-- **Mért kapcsolathoz megadott korlátot**: A rendszergazdák kiválaszthatják, hogy a hálózati forgalom forgalmi díjas. Alkalmazások ezt követően ennek a beállításnak az alapján módosíthatják a hálózati forgalommal kapcsolatos viselkedésüket. A választható lehetőségek:
+- **Mért kapcsolatok korlátja**: A rendszergazda megadhatja a hálózat forgalmának mérését. Alkalmazások ezt követően ennek a beállításnak az alapján módosíthatják a hálózati forgalommal kapcsolatos viselkedésüket. A választható lehetőségek:
 
-  - **Korlátlan**: Default (Alapértelmezett): A rendszer nem méri a kapcsolatot, és nincs korlátozva a forgalom.
-  - **Rögzített**: Használja ezt a beállítást, ha a hálózat úgy van konfigurálva, és a rögzített korlátja a hálózati forgalom. A korlát elérése után a hálózati hozzáférés le van tiltva.
-  - **Változó**: Használja ezt a beállítást, ha a hálózati forgalom számlázása az bájt (költség / bájt).
+  - Nem **korlátozott**: Default (Alapértelmezett): A rendszer nem méri a kapcsolatot, és nincs korlátozva a forgalom.
+  - **Kijavítva**: Akkor használja ezt a beállítást, ha a hálózat rögzített korláttal van konfigurálva a hálózati forgalomhoz. A korlát elérése után a hálózati hozzáférés le van tiltva.
+  - **Változó**: Akkor használja ezt a beállítást, ha a hálózati forgalom díja bájt (költség/bájt).
 
-- **Vezeték nélküli biztonság típusa**: Adja meg az eszközök hálózaton való hitelesítésére használt biztonsági protokollt. A következő lehetőségek közül:
-  - **Nyissa meg a (nincs hitelesítés)**: Csak akkor használja ezt a beállítást, ha a hálózat nem biztonságos.
-  - **WPA/WPA2-Personal**: Egy biztonságos lehetőséget, és a Wi-Fi kapcsolat gyakran használják. A további biztonság érdekében előre megosztott kulcsot vagy hálózati kulcsot is megadhat. 
+- **Vezeték nélküli biztonság típusa**: Adja meg a hálózaton lévő eszközök hitelesítéséhez használt biztonsági protokollt. A lehetőségek a következők:
+  - **Megnyitás (nincs hitelesítés)** : Csak akkor használja ezt a beállítást, ha a hálózat nem biztonságos.
+  - **WPA/WPA2-Personal**: Egy biztonságosabb megoldás, amelyet általában a Wi-Fi-kapcsolathoz használ a rendszer. A további biztonság érdekében előre megosztott kulcsot vagy hálózati kulcsot is megadhat. 
 
-    - **Előre megosztott kulcs** (PSK): Választható. Akkor jelenik meg, ha a **WPA/WPA2 (személyes)** biztonsági típust választja. A cég hálózatának beállítása vagy konfigurálása során a rendszer egy jelszót vagy egy hálózati kulcsot is konfigurál. Adja meg ezt a jelszót vagy hálózati kulcsot a PSK értékeként. 8–64 karakter közötti hosszúságú karakterláncot adjon meg. Ha a jelszó vagy a hálózati kulcs 64 karakterből áll, akkor hexadecimális karakteret adjon meg.
+    - **Előmegosztott kulcs** (PSK): Választható. Akkor jelenik meg, ha a **WPA/WPA2 (személyes)** biztonsági típust választja. A cég hálózatának beállítása vagy konfigurálása során a rendszer egy jelszót vagy egy hálózati kulcsot is konfigurál. Adja meg ezt a jelszót vagy hálózati kulcsot a PSK értékeként. 8–64 karakter közötti hosszúságú karakterláncot adjon meg. Ha a jelszó vagy a hálózati kulcs 64 karakterből áll, akkor hexadecimális karakteret adjon meg.
     
       > [!NOTE]
       > A Wi-Fi-profil mentésekor a PSK megadott értéke nem jelenik meg biztonsági okokból. Az előre megosztott kulcs vízjele továbbra is **Nincs konfigurálva** értéket mutat annak ellenére, hogy a PSK el van mentve a profilban. A PSK módosításához adjon meg egy új kulcsot, majd mentse a profilt. Ha a PSK mentésekor szerkeszti a szabályzatot, a PSK-t pedig üresen hagyja, továbbra is a meglévő PSK lesz használatban.
 
-- **Céges proxybeállítások**: Választható a proxybeállításokat a szervezeten belül. A választható lehetőségek:
-  - **Nincs**: Semmilyen proxybeállítás nincs konfigurálva.
-  - **Manuálisan konfigurálnia a**: Adja meg a **proxykiszolgáló IP-cím** és a hozzá tartozó **portszám**.
-  - **Automatikusan konfigurálhatja**: Adja meg a proxy automatikus konfigurációs (PAC) parancsfájl mutató URL-CÍMÉT. Például írja be a következőt: `http://proxy.contoso.com/proxy.pac`.
+- **Vállalati proxybeállítások**: Válassza ki a szervezeten belüli proxybeállítások használatát. A választható lehetőségek:
+  - **Nincs**: Nincsenek proxybeállítások konfigurálva.
+  - **Manuális konfigurálás**: Adja meg a **proxykiszolgáló IP** -címe és **portszámát**.
+  - **Automatikus konfigurálás**: Adja meg a proxy automatikus konfigurációs (PAC) parancsfájlra mutató URL-címet. Például írja be a következőt: `http://proxy.contoso.com/proxy.pac`.
 
 A módosítások mentéséhez válassza az **OK** > **Létrehozás** lehetőséget. Ekkor létrejön a profil, és megjelenik a profilok listájában.
 
 ## <a name="enterprise-profile"></a>Vállalati profil
 
-- **Wi-Fi típusa**: Válasszon **vállalati**. 
+- **Wi-Fi típusa**: Válassza a **vállalat**lehetőséget. 
 
-- **Wi-Fi neve (SSID)**: Rövid a szolgáltatáskészlet-azonosító. Ez az érték a valódi neve a vezeték nélküli hálózatnak, amelyhez az eszközök csatlakoznak. A felhasználók azonban csak a konfigurált **kapcsolatnevet** látják, amikor kiválasztják a kapcsolatot.
+- **Wi-Fi-név (SSID)** : A szolgáltatáskészlet-azonosító rövid értéke. Ez az érték a valódi neve a vezeték nélküli hálózatnak, amelyhez az eszközök csatlakoznak. A felhasználók azonban csak a konfigurált **kapcsolatnevet** látják, amikor kiválasztják a kapcsolatot.
 
-- **Kapcsolat neve**: Adjon meg egy felhasználóbarát nevet a Wi-Fi-kapcsolat. Az ide beírt szöveg a felhasználók számára megjelenő név, amikor a rendelkezésre álló kapcsolatokat böngészik az eszközeiken.
+- **Kapcsolatok neve**: Adja meg a Wi-Fi kapcsolat felhasználóbarát nevét. Az ide beírt szöveg a felhasználók számára megjelenő név, amikor a rendelkezésre álló kapcsolatokat böngészik az eszközeiken.
 
-- **Automatikus csatlakozás, ha hatótávolságon belül van**: Amikor **Igen**, eszközök automatikus csatlakozás, ha a hálózat hatótávolságon belül. Ha a beállítás **Nem**, akkor az eszközök nem csatlakoznak automatikusan.
-  - **Előnyben részesített hálózathoz csatlakozni, ha elérhető**: Ha az eszközök számos előnyben részesített hálózathoz, majd válassza ki **Igen** használatához az előnyben részesített hálózathoz. Válassza a **Nem** beállítást, hogy az ebben a konfigurációs profilban lévő Wi-Fi-hálózatot használják.
+- **Automatikus csatlakozás a tartományon belül**: Ha **Igen**, az eszközök automatikusan csatlakoznak, amikor a hálózat tartományában vannak. Ha a beállítás **Nem**, akkor az eszközök nem csatlakoznak automatikusan.
+  - **Csatlakozás több előnyben részesített hálózathoz, ha elérhető**: Ha az eszközök egy előnyben részesített hálózat hatótávolságán belül vannak, válassza az **Igen** lehetőséget az előnyben részesített hálózat használatához. Válassza a **Nem** beállítást, hogy az ebben a konfigurációs profilban lévő Wi-Fi-hálózatot használják.
 
     Tegyük fel, hogy létrehozott egy **ContosoCorp** nevű Wi-Fi-hálózatot, és a **ContosoCorp** hálózatot használja ebben a konfigurációs profilban. Elérhető távolságban van egy **ContosoGuest** nevű Wi-Fi-hálózat is. Azt szeretné, hogy ha céges eszközei hatókörön belül vannak, automatikusan a **ContosoCorphoz** csatlakozzanak. Ebben az esetben állítsa a **Lehetőség szerint csatlakozás egy előnyben részesített hálózathoz** tulajdonságot **Nem** értékre.
 
-  - **Ehhez a hálózathoz csatlakozni, akkor is, ha nem sugározza az SSID**: Válasszon **Igen** a konfigurációs profilok automatikusan csatlakoznak a hálózathoz, még akkor is, ha a hálózat el van rejtve (azaz, SSID nyilvánosan nem küldhetők). Válassza a **Nem** beállítást, ha nem szeretné, hogy ez a konfigurációs profil a rejtett hálózathoz csatlakozzon.
+  - **Csatlakozás ehhez a hálózathoz, még akkor is, ha nem sugározza az SSID**-t: Válassza az **Igen** lehetőséget a konfigurációs profilhoz, hogy automatikusan csatlakozhasson a hálózathoz, még akkor is, ha a hálózat el van rejtve (vagyis az SSID-t nem a nyilvános szórásra). Válassza a **Nem** beállítást, ha nem szeretné, hogy ez a konfigurációs profil a rejtett hálózathoz csatlakozzon.
 
-- **Mért kapcsolathoz megadott korlátot**: A rendszergazdák kiválaszthatják, hogy a hálózati forgalom forgalmi díjas. Alkalmazások ezt követően ennek a beállításnak az alapján módosíthatják a hálózati forgalommal kapcsolatos viselkedésüket. A választható lehetőségek:
+- **Mért kapcsolatok korlátja**: A rendszergazda megadhatja a hálózat forgalmának mérését. Alkalmazások ezt követően ennek a beállításnak az alapján módosíthatják a hálózati forgalommal kapcsolatos viselkedésüket. A választható lehetőségek:
 
-  - **Korlátlan**: Default (Alapértelmezett): A rendszer nem méri a kapcsolatot, és nincs korlátozva a forgalom.
-  - **Rögzített**: Használja ezt a beállítást, ha a hálózat úgy van konfigurálva, és a rögzített korlátja a hálózati forgalom. A korlát elérése után a hálózati hozzáférés le van tiltva.
-  - **Változó**: Használja ezt a beállítást, ha a hálózati forgalmat a rangsorolt / bájt.
+  - Nem **korlátozott**: Default (Alapértelmezett): A rendszer nem méri a kapcsolatot, és nincs korlátozva a forgalom.
+  - **Kijavítva**: Akkor használja ezt a beállítást, ha a hálózat rögzített korláttal van konfigurálva a hálózati forgalomhoz. A korlát elérése után a hálózati hozzáférés le van tiltva.
+  - **Változó**: Akkor használja ezt a beállítást, ha a hálózati forgalom ára bájtban van számolva.
 
-- **Egyszeri bejelentkezés (SSO)**: Egyszeri bejelentkezés (SSO), ahol számítógép megosztott hitelesítő adatokat, és a Wi-Fi hálózati bejelentkezés konfigurálását teszi lehetővé. A következő lehetőségek közül:
-  - **Tiltsa le**: Egyszeri bejelentkezés viselkedésének letiltja. A felhasználónak külön kell hitelesítenie magát a hálózaton.
-  - **Az eszköz felhasználó előtt engedélyezze**: Egyszeri bejelentkezés használatával hitelesíti a hálózathoz, a felhasználói bejelentkezési folyamat előtt.
-  - **Engedélyezi az eszközre való felhasználó után**: Egyszeri bejelentkezés használatával közvetlenül a felhasználói bejelentkezési folyamat befejezése után a hálózati hitelesítést.
-  - **Maximális idő az időkorlát lejárta előtt hitelesítést**: Adja meg a hitelesítést a hálózathoz, 1 – 120 másodperc időszakát (másodpercben) maximális számát.
-  - **Adatkérés a felhasználónak a további hitelesítő adatok lehetővé teszik Windows**: Választás **Igen** lehetővé teszi a Windows rendszer kéri a felhasználótól a további hitelesítő adatokat, ha a hitelesítési módszer szükséges. A **Nem** beállítás elrejti ezeket a kéréseket.
+- **Egyszeri bejelentkezés (SSO)** : Lehetővé teszi az egyszeri bejelentkezés (SSO) konfigurálását, ahol a hitelesítő adatok megoszthatók a számítógép és a Wi-Fi hálózati bejelentkezés során. A lehetőségek a következők:
+  - **Letiltás**: Letiltja az egyszeri bejelentkezés működését. A felhasználónak külön kell hitelesítenie magát a hálózaton.
+  - **Engedélyezés, mielőtt a felhasználó bejelentkezik az eszközre**: Az egyszeri bejelentkezéssel hitelesítheti a hálózatot közvetlenül a felhasználó bejelentkezési folyamata előtt.
+  - **Engedélyezés, miután a felhasználó bejelentkezik az eszközre**: A felhasználó bejelentkezési folyamatának befejeződése után azonnal hitelesítse magát a hálózatban az SSO használatával.
+  - **Időtúllépés előtti hitelesítés maximális ideje**: Adja meg azt a maximális időtartamot másodpercben, ameddig a hálózatra való hitelesítés előtt várni kell, hogy a rendszer 1-120 másodperc múlva.
+  - **További hitelesítő adatok kérésének engedélyezése a Windows számára a felhasználóknak**: Ha az **Igen** lehetőséget választja, a Windows rendszer további hitelesítő adatok megadását kéri a felhasználótól, ha a hitelesítési módszer szükséges. A **Nem** beállítás elrejti ezeket a kéréseket.
 
-- **Engedélyezze a páros főkulcs (PMK) gyorsítótárazását**: Válassza ki **Igen** a PMK-t a hitelesítéshez használt gyorsítótárazásához. Ez a gyorsítótárazás általában gyorsabb hálózati hitelesítést tesz lehetővé. A **Nem** beállítással megkövetelheti a hitelesítési kézfogást a Wi-Fi-hálózathoz való minden kapcsolódáskor.
+- **Páros főkulcs gyorsítótárazásának engedélyezése**: Válassza az **Igen** lehetőséget a hitelesítéshez használt főkulcsok gyorsítótárazásához. Ez a gyorsítótárazás általában gyorsabb hálózati hitelesítést tesz lehetővé. A **Nem** beállítással megkövetelheti a hitelesítési kézfogást a Wi-Fi-hálózathoz való minden kapcsolódáskor.
 
-  - **Maximális idő a PMK gyorsítótárban tárolt**: A páros főkulcs (PMK) tárolja a gyorsítótárban, az 5 – 1440 perc percek számát adja meg.
-  - **Maximális száma a gyorsítótárban tárolt PMKs**: Adja meg az 1 – 255 a gyorsítótárban tárolt kulcsok.
+  - **A FŐkulcsok maximális ideje a gyorsítótárban tárolódik**: Adja meg, hogy hány perc elteltével páros a rendszer a gyorsítótárban, 5-1440 percen belül.
+  - **A gyorsítótárban tárolt PMKs maximális száma**: Adja meg a gyorsítótárban tárolt kulcsok számát 1-255-ból.
 
-- **Üzem előtti hitelesítés engedélyezése**: Előhitelesítés lehetővé teszi, hogy a profil csatlakozás előtt a hálózat a profilban található összes hozzáférési pontok hitelesítéséhez. Ha a felhasználók illetve az eszközök mozognak a hozzáférési pontok között, az előhitelesítés meggyorsítja az újracsatlakozást. **Igen** beállítással a profil a hálózat összes hatótávolságon belüli hozzáférési pontján hitelesíti magát. **Nem** beállítással a felhasználónak vagy eszköznek minden hozzáférési ponton külön kell hitelesítenie.
+- **Előzetes hitelesítés engedélyezése**: Az előhitelesítés lehetővé teszi, hogy a profil a csatlakozás előtt a hálózat összes hozzáférési pontjára hitelesítse a profilt. Ha a felhasználók illetve az eszközök mozognak a hozzáférési pontok között, az előhitelesítés meggyorsítja az újracsatlakozást. **Igen** beállítással a profil a hálózat összes hatótávolságon belüli hozzáférési pontján hitelesíti magát. **Nem** beállítással a felhasználónak vagy eszköznek minden hozzáférési ponton külön kell hitelesítenie.
 
-  - **Előhitelesítési kísérletek maximális száma**: Adja meg a megpróbálja preauthenticate, 1 – 16-tól.
+  - **Előhitelesítési kísérletek maximális száma**: Adja meg az előhitelesítésre való próbálkozások számát a 1-16-ból.
 
-- **EAP-típus**: Válassza ki az Extensible Authentication Protocol (EAP) biztonságos vezeték nélküli kapcsolatok hitelesítéséhez. A választható lehetőségek:
+- **EAP-típus**: Válassza ki a bővíthető hitelesítési protokoll (EAP) típusát a biztonságos vezeték nélküli kapcsolatok hitelesítéséhez. A választható lehetőségek:
 
   - **EAP-SIM**
   - **EAP-TLS**
@@ -119,36 +119,36 @@ A módosítások mentéséhez válassza az **OK** > **Létrehozás** lehetőség
     > [!NOTE]
     > EAP-típusok használata esetén jelenleg csak az SCEP-tanúsítványprofilok támogatottak. A PKCS-tanúsítványprofilok nem támogatottak. Amikor egy felhasználótól tanúsítvány megadását kérik, mindenképpen SCEP-tanúsítványt kell választani.
 
-      - **Kiszolgáló megbízhatósága**  
+    - **Kiszolgáló megbízhatósága**  
 
-        **Tanúsítvány-kiszolgálók nevei**: Használata **EAP-TLS**, **EAP-TTLS**, vagy **PEAP** EAP-típusok. Adjon meg egy vagy több, a megbízható hitelesítésszolgáltató (CA) által kiállított tanúsítványban használt köznapi nevet. Ha megadja ezt az információt, elkerülheti a dinamikus megbízhatósági párbeszédpanelt, amely megjelenik a felhasználók eszközein, amikor ehhez a Wi-Fi-hálózathoz csatlakoznak.  
+      **Kiszolgálótanúsítvány-kiszolgálók nevei**: Az **EAP-TLS**, **EAP-TTLS**vagy **PEAP** EAP-típusokkal használható. Adjon meg egy vagy több, a megbízható hitelesítésszolgáltató (CA) által kiállított tanúsítványban használt köznapi nevet. Ha megadja ezt az információt, elkerülheti a dinamikus megbízhatósági párbeszédpanelt, amely megjelenik a felhasználók eszközein, amikor ehhez a Wi-Fi-hálózathoz csatlakoznak.  
 
-        **Kiszolgálói érvényesítéshez használandó főtanúsítványok**: Használata **EAP-TLS**, **EAP-TTLS**, vagy **PEAP** EAP-típusok. Válassza ki a kapcsolat hitelesítéséhez használni kívánt megbízható főtanúsítvány-profilt.  
+      **Kiszolgáló-ellenőrzés**főtanúsítványa: Az **EAP-TLS**, **EAP-TTLS**vagy **PEAP** EAP-típusokkal használható. Válassza ki a kapcsolat hitelesítéséhez használni kívánt megbízható főtanúsítvány-profilt.  
 
-        **Identitásadatok védelme (külső identitás)**: Használata **PEAP** EAP-típus. Adja meg az EAP-identitásra irányuló kérelemre adott válasz szövegét. Ez a szöveg tetszőleges érték lehet. A hitelesítés során a rendszer először a névtelen identitást küldi el, majd később egy biztonságos csatornán küldi el a valódi azonosítót.  
+      **Személyazonosság védelme (külső identitás)** : **PEAP** EAP-típussal használható. Adja meg az EAP-identitásra irányuló kérelemre adott válasz szövegét. Ez a szöveg tetszőleges érték lehet. A hitelesítés során a rendszer először a névtelen identitást küldi el, majd később egy biztonságos csatornán küldi el a valódi azonosítót.  
 
-      - **Ügyfél-hitelesítés**
+    - **Ügyfél-hitelesítés**
 
-        **Ügyféltanúsítvány a hitelesítéshez használandó ügyféltanúsítványt (identitástanúsítványt)**: Használata **EAP-TLS** EAP-típus. Válassza ki a kapcsolat hitelesítéséhez használni kívánt tanúsítványprofilt.
+      Ügyféltanúsítvány **az ügyfél-hitelesítéshez (identitás-tanúsítvány)** : Az **EAP-TLS EAP-** típussal használható. Válassza ki a kapcsolat hitelesítéséhez használni kívánt tanúsítványprofilt.
 
-        **Hitelesítési módszer**: Használata **EAP-TTLS** EAP-típus. Válassza ki a kapcsolat hitelesítési módszerét:  
+      **Hitelesítési módszer**: Az **EAP-TTLS EAP-** típussal használható. Válassza ki a kapcsolat hitelesítési módszerét:  
 
-          - **Tanúsítványok**: Jelölje be az ügyféltanúsítványt, amely a kiszolgálónak az identitás tanúsítványaként.
-          - **Felhasználónév és jelszó**: Adjon meg egy **nem EAP-módszer (belső identitás)** hitelesítési módszert. A választható lehetőségek:
+      - **Tanúsítványok**: Válassza ki azt az ügyféltanúsítványt, amely a kiszolgálónak bemutatott identitás-tanúsítvány.
+      - **Felhasználónév és jelszó**: Adjon meg egy **nem EAP-módszer (belső identitás)** módszert a hitelesítéshez. A választható lehetőségek:
 
-            - **Titkosítatlan jelszó (PAP)**
-            - **Kérdés-kézfogás (CHAP)**
-            - **Microsoft CHAP (MS-CHAP)**
-            - **Microsoft CHAP 2-es verzió (MS-CHAP v2)**
+        - **Titkosítatlan jelszó (PAP)**
+        - **Kérdés-kézfogás (CHAP)**
+        - **Microsoft CHAP (MS-CHAP)**
+        - **Microsoft CHAP 2-es verzió (MS-CHAP v2)**
 
-        **Identitásadatok védelme (külső identitás)**: Használata **EAP-TTLS** EAP-típus. Adja meg az EAP-identitásra irányuló kérelemre adott válasz szövegét. Ez a szöveg tetszőleges érték lehet. A hitelesítés során a rendszer először a névtelen identitást küldi el, majd később egy biztonságos csatornán küldi el a valódi azonosítót.
+      **Személyazonosság védelme (külső identitás)** : Az **EAP-TTLS EAP-** típussal használható. Adja meg az EAP-identitásra irányuló kérelemre adott válasz szövegét. Ez a szöveg tetszőleges érték lehet. A hitelesítés során a rendszer először a névtelen identitást küldi el, majd később egy biztonságos csatornán küldi el a valódi azonosítót.
 
-- **Céges proxybeállítások**: Választható a proxybeállításokat a szervezeten belül. A választható lehetőségek:
-  - **Nincs**: Semmilyen proxybeállítás nincs konfigurálva.
-  - **Manuálisan konfigurálnia a**: Adja meg a **proxykiszolgáló IP-cím** és a hozzá tartozó **portszám**.
-  - **Automatikusan konfigurálhatja**: Adja meg a proxy (PAC) automatikus konfigurációs parancsfájl mutató URL-CÍMÉT. Például írja be a következőt: `http://proxy.contoso.com/proxy.pac`.
+- **Vállalati proxybeállítások**: Válassza ki a szervezeten belüli proxybeállítások használatát. A választható lehetőségek:
+  - **Nincs**: Nincsenek proxybeállítások konfigurálva.
+  - **Manuális konfigurálás**: Adja meg a **proxykiszolgáló IP** -címe és **portszámát**.
+  - **Automatikus konfigurálás**: Adja meg a proxy automatikus konfigurációs (PAC) parancsfájlra mutató URL-címet. Például írja be a következőt: `http://proxy.contoso.com/proxy.pac`.
 
-- **Meg kell felelnie a a Federal Information feldolgozása Standard (FIPS) hogy a Wi-Fi profil kényszerített**: Válasszon **Igen** az FIPS 140-2 szabvány szerinti érvényességének ellenőrzése közben. Ennek a szabványnak a betartása kötelező az összes Egyesült Államokbeli Szövetségi kormányzati szerv részére, ahol titkosításon alapuló biztonsági rendszereket használnak a digitálisan tárolt bizalmas, de nem titkos minősítésű információk tárolására. Válassza a **Nem** lehetőséget, ha nem szeretne FIPS-megfelelőséget.
+- **A Wi-Fi profil kényszerítése a Federal Information Processing standard (FIPS) szabványnak megfelelően**: Az FIPS 140-2 szabványnak megfelelő érvényesítéskor válassza az **Igen** lehetőséget. Ennek a szabványnak a betartása kötelező az összes Egyesült Államokbeli Szövetségi kormányzati szerv részére, ahol titkosításon alapuló biztonsági rendszereket használnak a digitálisan tárolt bizalmas, de nem titkos minősítésű információk tárolására. Válassza a **Nem** lehetőséget, ha nem szeretne FIPS-megfelelőséget.
 
 A módosítások mentéséhez válassza az **OK** > **Létrehozás** lehetőséget. Ekkor létrejön a profil, és megjelenik a profilok listájában.
 

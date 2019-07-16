@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 96c05543884e0d9a00b570fb9ed4be1cdef65ca0
-ms.sourcegitcommit: 1ba785f6e51517b63588a292ab5c45b9d9144b72
+ms.openlocfilehash: 397ca3c03c96adc9bd6b0ca691f835e3e579fba0
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66938333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882244"
 ---
 # <a name="use-teamviewer-to-remotely-administer-intune-devices"></a>A TeamViewer használata Intune-eszközök távoli felügyeletéhez
 
@@ -32,10 +32,10 @@ Az Intune által kezelt eszközök a [TeamViewer](https://www.teamviewer.com) ha
 
 - Az Azure Portal-beli Intune rendszergazdának a következő [Intune-szerepkörökkel](role-based-access-control.md) kell rendelkeznie:  
 
-    - **Távoli segítségnyújtás frissítése**: Lehetővé teszi, hogy a rendszergazda módosítsa a TeamViewer-összekötő beállításait
-    - **Távsegítség kérése**: Lehetővé teszi a rendszergazdák bármely felhasználó számára egy új Távsegítség-munkamenet elindításához. Az ezzel a szerepkörrel rendelkező felhasználókat nem korlátozzák a hatókörön belüli Intune-szerepkörök. A hatókörön belüli Intune-szerepkörhöz rendelt felhasználói vagy eszközcsoportok szintén kérhetnek távsegítséget. 
+  - **Távsegítség frissítése**: Lehetővé teszi a rendszergazdák számára a TeamViewer-összekötő beállításainak módosítását
+  - **Távsegítség kérése**: Lehetővé teszi, hogy a rendszergazdák új Távsegítség-munkamenetet indítsanak bármely felhasználó számára. Az ezzel a szerepkörrel rendelkező felhasználókat nem korlátozzák a hatókörön belüli Intune-szerepkörök. A hatókörön belüli Intune-szerepkörhöz rendelt felhasználói vagy eszközcsoportok szintén kérhetnek távsegítséget. 
 
-- A [TeamViewer](https://www.teamviewer.com) a bejelentkezési hitelesítő adatokkal rendelkező fiókot. Csak néhány TeamViewer-licenc támogathatja az Intune szolgáltatással való integráció. A TeamViewer konkrét igényeinek megfelelő, tekintse meg a [TeamViewer-integrációja Partner: A Microsoft Intune-ban](https://www.teamviewer.com/integrations/microsoft-intune/).
+- Egy [TeamViewer](https://www.teamviewer.com) -fiók a bejelentkezési hitelesítő adatokkal. Csak néhány TeamViewer-licenc támogatja az Intune-nal való integrációt. Adott TeamViewer-igények esetén lásd [: TeamViewer Integration partner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 
 A TeamViewer használatával engedélyezi a TeamViewer for Intune összekötőjének TeamViewer-munkamenetek létrehozását, Active Directory-adatok olvasását és a TeamViewer-fiók hozzáférési jogkivonatának mentéset.
 
@@ -60,10 +60,10 @@ Az összekötő konfigurálása után megkezdheti egy eszköz távoli felügyele
 
 ![Androidos eszköz távoli felügyelet a TeamViewer használatával – példa](./media/android-teamviewer.png)
 
-A távoli munkamenet indításakor megjelenik a felhasználók számára egy értesítésjelzőt a céges portál alkalmazás ikonján az eszközén. Egy értesítés is megjelenik az alkalmazás megnyitásakor. Felhasználó ekkor elfogadhatja a távsegítségkérést.
+Amikor elindít egy távoli munkamenetet, a felhasználók egy értesítési jelzőt látnak az eszközön Céges portál alkalmazás ikonján. Az alkalmazás megnyitásakor is megjelenik egy értesítés. A felhasználók ezután elfogadják a Távsegítség kérését.
 
 > [!NOTE]
-> "Felhasználó nélküliek" módszer, például a készülékregisztráció-kezelő és WCD, használatával beléptetett Windows-eszközök ne jelenjen meg a TeamViewer-értesítés a céges portál alkalmazásban. Ezekben az esetekben javasoljuk a TeamViewer-portál használata a munkamenet létrehozásához.
+> A "felhasználó nélkül" metódusokkal beléptetett Windows-eszközök, mint például a DEM és a WCD, nem jelenítik meg a TeamViewer-értesítést a Céges portál alkalmazásban. Ezekben a forgatókönyvekben ajánlott a TeamViewer portál használatával előállítani a munkamenetet.
 
 A TeamViewerben sokféle művelet, például az eszköz felügyeletének átvétele is végrehajtható az eszközön. Az elvégezhető tevékenységek teljes körű ismertetését a [TeamViewer útmutató](https://www.teamviewer.com/support/documents/) tartalmazza.
 

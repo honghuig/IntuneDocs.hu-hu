@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6082f4de6a881f211f2c7569fcd052ba1f37ad7b
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: d96167eb37ac7c3c90bad82783e9ce06814f8c88
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66045914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884779"
 ---
 # <a name="data-collection-in-intune"></a>Adatgyűjtés az Intune-ban
 
@@ -41,48 +41,48 @@ Az Intune által gyűjtött személyes adat többsége azonosított adat. Az ily
 Az Intune által gyűjtött azonosított adatok többek között az alábbiak lehetnek: 
 
 - Felhasználói adatok
-    - A tulajdonos neve vagy a felhasználó (a felhasználó Azure-ban regisztrált, az AzureUserId által azonosított neve)
-    - Egyszerű felhasználónév vagy e-mail-cím
-    - Külső felhasználói azonosítók (például AppleId)
+  - A tulajdonos neve vagy a felhasználó (a felhasználó Azure-ban regisztrált, az AzureUserId által azonosított neve)
+  - Egyszerű felhasználónév vagy e-mail-cím
+  - Külső felhasználói azonosítók (például AppleId)
 - A hardverleltár információi
-    - Eszköz neve
-    - Gyártó
-    - Operációs rendszer
-    - Sorozatszám
-    - IMEI-szám
-    - IP-cím
-    - Wi-Fi Mac-címe
-    - ICCID
-    - Telefonszám
+  - Eszköz neve
+  - Gyártó
+  - Operációs rendszer
+  - Sorozatszám
+  - IMEI-szám
+  - IP-cím
+  - Wi-Fi Mac-címe
+  - ICCID
+  - Telefonszám
 - Az auditnapló adatai, többek között az alábbi tevékenységekhez kapcsolódó adatok
-    - A számítógépeken futó
-    - Hozzon létre
-    - Frissítés (szerkesztés)
-    - Törlés
-    - Hozzárendelés
-    - Távoli feladatok
+  - A számítógépeken futó
+  - Hozzon létre
+  - Frissítés (szerkesztés)
+  - Törlés
+  - Hozzárendelés
+  - Távoli feladatok
 - Támogatási információk
-    - Kapcsolattartási adatok (név, telefonszám, e-mail-cím)
-    - E-mail-beszélgetések a Microsoft-támogatással és a termék- és/vagy az ügyfélélményt kezelő munkatársakkal
+  - Kapcsolattartási adatok (név, telefonszám, e-mail-cím)
+  - E-mail-beszélgetések a Microsoft-támogatással és a termék- és/vagy az ügyfélélményt kezelő munkatársakkal
 - Hozzáférés-vezérlési adatok (az Intune ezeket az adatokat arra használja, hogy a felügyeleti szerepkörökhöz és funkciókhoz való hozzáférést kezelje például a [Szerepköralapú hozzáférés-vezérlés](role-based-access-control.md) funkcióval.
-    - Statikus hitelesítők (az ügyfél jelszava)
-    - Adatvédelmi kulcsok tanúsítványokhoz 
+  - Statikus hitelesítők (az ügyfél jelszava)
+  - Adatvédelmi kulcsok tanúsítványokhoz 
 - Adminisztrátori és fiókinformációk
-    - A rendszergazdai felhasználó utóneve és vezetékneve
-    - A rendszergazdai felhasználó neve
-    - Egyszerű felhasználónév (e-mail)
-    - Telefonszám
-    - A fiók tulajdonosának e-mail-címe
-    - Minden ügyfél-rendszergazda Active Directory-azonosítója
-    - Ügyfélszámlázási fizetési adatok
-    - Előfizetői kulcs
+  - A rendszergazdai felhasználó utóneve és vezetékneve
+  - A rendszergazdai felhasználó neve
+  - Egyszerű felhasználónév (e-mail)
+  - Telefonszám
+  - A fiók tulajdonosának e-mail-címe
+  - Minden ügyfél-rendszergazda Active Directory-azonosítója
+  - Ügyfélszámlázási fizetési adatok
+  - Előfizetői kulcs
 - Alkalmazásleltár, például
-    - alkalmazásnév
-    - verzió
-    - alkalmazásazonosító
-    - méret
-    - telepítés helye
-    - Az alkalmazás leltáradatait csak akkor gyűjti a rendszer, ha a rendszergazda az eszközt vállalati tulajdonúnak jelölte meg, vagy ha be van kapcsolva a megfelelő alkalmazás funkció.  
+  - alkalmazásnév
+  - verzió
+  - alkalmazásazonosító
+  - méret
+  - telepítés helye
+  - Az alkalmazás leltáradatait csak akkor gyűjti a rendszer, ha a rendszergazda az eszközt vállalati tulajdonúnak jelölte meg, vagy ha be van kapcsolva a megfelelő alkalmazás funkció.  
 - Az ügyfél harmadik féltől származó bérlőazonosítója, például Apple ID. 
 
 ## <a name="pseudonymized-data"></a>Álnevesített adatok
@@ -92,30 +92,30 @@ Az álnevesített adatok egy egyedi azonosítóhoz tartoznak, amely általában 
 Az Intune által gyűjtött álnevesített adatok többek között az alábbiak lehetnek: 
 
 - Egy felhasználóhoz és/vagy egy eszközhöz kapcsolódó diagnosztikai, teljesítménybeli és használati adatok
-    - A szám, mely azt jelzi, hányszor használtak egy funkciót
-    - A funkcióhoz érkező parancsok
-    - Egy szolgáltatás válaszideje
-    - Telepítések és más folyamatok sikerességi rátája
-    - Az Intune vállalati portálon előforduló alkalmazáshibák
-    - Felhasználók és eszközök azonosítói
-    - Hivatkozási, korrelációs és felügyeleti célokból gyűjtött azonosítók 
+  - A szám, mely azt jelzi, hányszor használtak egy funkciót
+  - A funkcióhoz érkező parancsok
+  - Egy szolgáltatás válaszideje
+  - Telepítések és más folyamatok sikerességi rátája
+  - Az Intune vállalati portálon előforduló alkalmazáshibák
+  - Felhasználók és eszközök azonosítói
+  - Hivatkozási, korrelációs és felügyeleti célokból gyűjtött azonosítók 
 - Eszközhöz vagy felhasználóhoz nem köthető eszközadatok (ha az ilyen adat eszközhöz vagy felhasználóhoz köthető, akkor azt az Intune azonosított adatként kezeli)
-    - Intune-eszközazonosító
-    - Azure Active Directory-eszközazonosító
-    - Az Intune eszközfelügyeleti azonosítója
-    - Bérlőazonosító
-    - Fiókazonosító
-    - EAS-eszközazonosító
-    - Platformspecifikus azonosítók
-    - AppleID iOS-eszközök esetén
-    - MAC-címek Mac-eszközök esetén
-    - Windows-azonosító Windows-eszközök esetén
+  - Intune-eszközazonosító
+  - Azure Active Directory-eszközazonosító
+  - Az Intune eszközfelügyeleti azonosítója
+  - Bérlőazonosító
+  - Fiókazonosító
+  - EAS-eszközazonosító
+  - Platformspecifikus azonosítók
+  - AppleID iOS-eszközök esetén
+  - MAC-címek Mac-eszközök esetén
+  - Windows-azonosító Windows-eszközök esetén
 - Felügyelt alkalmazás adatai
-    - Felügyelt alkalmazás azonosítója
-    - Felügyelt alkalmazás eszközcímkéje
-    - Az Intune eszközfelügyeleti azonosítója
-    - Azure Active Directory-eszközazonosító
-    - Titkosítási kulcsok
+  - Felügyelt alkalmazás azonosítója
+  - Felügyelt alkalmazás eszközcímkéje
+  - Az Intune eszközfelügyeleti azonosítója
+  - Azure Active Directory-eszközazonosító
+  - Titkosítási kulcsok
 
 ## <a name="aggregated-data"></a>Összesített adatok
 
@@ -125,14 +125,14 @@ Az Intune által gyűjtött összesített adatok többek között az alábbiak l
 
 - Rendszergazdai használati adatok az összes Intune-bérlőből (például a felügyeleti konzol használata közben kiválasztott felügyeleti vezérlők)
 - Bérlői fiókok adatai (ez az adat az Intune-panelről érhető el)
-    - A regisztrált eszközök vagy felhasználók száma
-    - Azonosított eszközplatformok száma  
-    - A telepített eszközök száma
-    - installedDeviceCount: A, amelyre telepítve van az alkalmazás eszközök számát.
-    - notApplicableDeviceCount: Amelynek az alkalmazás jelenleg nem megfelelő eszközök száma.
-    - notInstalledDeviceCount: A, amelynek az alkalmazás akkor alkalmazható, de nem telepített eszközök számát.
-    - pendingInstallDeviceCount: Az eszközök, amelynek az alkalmazás akkor alkalmazható, és a telepítés numberr függőben.
-    
+  - A regisztrált eszközök vagy felhasználók száma
+  - Azonosított eszközplatformok száma  
+  - A telepített eszközök száma
+  - installedDeviceCount: Azon eszközök száma, amelyeken az alkalmazás telepítve van.
+  - notApplicableDeviceCount: Azon eszközök száma, amelyekhez az alkalmazás nem alkalmazható.
+  - notInstalledDeviceCount: Azon eszközök száma, amelyekhez az alkalmazás alkalmazható, de nincs telepítve.
+  - pendingInstallDeviceCount: Azon eszközök száma, amelyeken az alkalmazás alkalmazható, és a telepítés függőben van.
+
 ## <a name="next-steps"></a>További lépések
 
 További információ arról, ahogyan az Intune [tárolja, feldolgozza](privacy-data-store-process.md) és [megosztja](privacy-data-secure-share.md) a személyes adatokat. 
