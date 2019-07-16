@@ -15,12 +15,12 @@ ms.reviewer: dagerrit
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 76f5188a866e744c034fd592f9b1dfcbc9061ffa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 78cf3c2ff5babbfb45dfa6a41add09ef91549e8d
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885031"
 ---
 # <a name="basic-setup"></a>Alapszintű beállítás
 
@@ -36,7 +36,7 @@ Az Intune-hoz az Azure Active Directoryt (AAD) kell használni felhasználóicso
 
 - [A címtár-szinkronizálás követelményei](https://docs.microsoft.com/azure/active-directory/active-directory-hybrid-identity-design-considerations-directory-sync-requirements)
 
-- [Többtényezős hitelesítés (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
+- [Multi-Factor Authentication (MFA)](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)
 
 - [A felhasználói és eszközcsoportok megtervezése](users-add.md)
 
@@ -61,17 +61,17 @@ Az Intune-ra való migráláshoz Intune-előfizetés szükséges.
 
 - [Ezen a lapon](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0) útmutatást találhat a következőkhöz:
 
-    - Új AAD-bérlőhöz kapcsolt új Intune-előfizetés létrehozása
+  - Új AAD-bérlőhöz kapcsolt új Intune-előfizetés létrehozása
 
-    - Intune-előfizetés összekapcsolása meglévő AAD-bérlőbe való bejelentkezés révén.
+  - Intune-előfizetés összekapcsolása meglévő AAD-bérlőbe való bejelentkezés révén.
 
-### <a name="task-2-assign-intune-user-licenses"></a>2\. feladat: Az Intune felhasználói licencek hozzárendelése
+### <a name="task-2-assign-intune-user-licenses"></a>2\. feladat: Intune felhasználói licencek kiosztása
 
 - Ismerje meg, [hogyan oszthatja ki az Intune felhasználói licenceit](licenses-assign.md).
 
 - Ha új Azure Active Directory-bérlőt hozott létre, ismerje meg, [hogyan lehet új felhasználókat létrehozni vagy a helyszíni Active Directory (AD) felhasználóit ide szinkronizálni.](https://docs.microsoft.com/azure/active-directory/connect/active-directory-aadconnect)
 
-### <a name="task-3-set-your-mdm-authority-to-intune"></a>3\. feladat: Az MDM-szolgáltató beállítása az Intune-hoz
+### <a name="task-3-set-your-mdm-authority-to-intune"></a>3\. feladat: A MDM-szolgáltató beállítása az Intune-ra
 
 Az Intune kezelhető az Azure Portalról vagy a Configuration Manager Aktuális ágának konzoljáról. Ha nincs rá szükség, hogy az Intune-t a Configuration Manager Aktuális ágán alapuló környezettel integrálja, ajánlott az Intune-t az [Azure Portalról](https://portal.azure.com) kezelni.
 

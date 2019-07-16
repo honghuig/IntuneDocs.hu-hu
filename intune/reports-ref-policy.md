@@ -16,21 +16,21 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 4f66cc3a10711b137e081fab98445d73108748a9
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: f9f834057e95058634020fc955ced013d32b68a9
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882558"
 ---
 # <a name="reference-for-policy-entities"></a>Szabályzat típusú entitások referenciája
 
 A **Szabályzat**kategória mobileszközökhöz tartozó entitásokat tartalmaz, amelyek információt gyűjtenek, például:
 
-  - Az eszköz- és alkalmazáskonfigurációs profilok, valamint a megfelelőségi szabályzatok készlete  
-  - A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma naponta  
-  - A sikeres, függő, sikertelen vagy hibás állapotú felhasználók száma naponta  
-  - A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma összesen  
+- Az eszköz- és alkalmazáskonfigurációs profilok, valamint a megfelelőségi szabályzatok készlete  
+- A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma naponta  
+- A sikeres, függő, sikertelen vagy hibás állapotú felhasználók száma naponta  
+- A sikeres, függő, sikertelen vagy hibás állapotú eszközök száma összesen  
 
 ## <a name="policy"></a>Házirend
 
@@ -59,7 +59,7 @@ A **PolicyType** entitás az eszköz- és alkalmazáskonfigurációs profilok, v
 
 ## <a name="deviceconfiguration"></a>DeviceConfiguration
 
-A **DeviceConfigurationProfileDeviceActivity** entitás azt sorolja fel száma **eszközök** sikeres, függő, sikertelen vagy hibás állapotú. A szám az entitáshoz rendelt eszközkonfigurációs profilokat jelöli. Például ha egy **eszköz** van valamennyi hozzárendelt szabályzata a sikeres állapotot, a sikeres számláló be ilyet, az adott napra növekszik. Ha az adott eszköz két hozzárendelt profillal rendelkezik, amelyek közül az egyik sikeres, míg a másik hibás állapotú, akkor az entitás növeli az értéket a sikeres állapotot jelző számlálón, és hibás állapotba helyezi az eszközt. Az entitás azt sorolja fel, hogy hány eszköz van az egyes állapotokban az elmúlt 30 napon belüli adott napon.
+A **DeviceConfigurationProfileDeviceActivity** entitás naponta listázza a sikeres, függő, sikertelen vagy hibás állapotú **eszközök** számát. A szám az entitáshoz rendelt eszközkonfigurációs profilokat jelöli. Ha például egy **eszköz** sikeres állapotban van az összes hozzárendelt házirend esetében, az adott napra a sikeres számlálót eggyel növeli. Ha az adott eszköz két hozzárendelt profillal rendelkezik, amelyek közül az egyik sikeres, míg a másik hibás állapotú, akkor az entitás növeli az értéket a sikeres állapotot jelző számlálón, és hibás állapotba helyezi az eszközt. Az entitás azt sorolja fel, hogy hány eszköz van az egyes állapotokban az elmúlt 30 napon belüli adott napon.
 
 | Tulajdonság  | Leírás | Példa |
 |---------|------------|--------|
@@ -69,7 +69,7 @@ A **DeviceConfigurationProfileDeviceActivity** entitás azt sorolja fel száma *
 | Hiba |A hibás állapotú egyedi eszközök száma. |10 |
 | Sikertelen |A sikertelen állapotú egyedi eszközök száma. |2 |
 
-A **DeviceConfigurationProfileUserActivity** entitás azt sorolja fel száma **felhasználók** sikeres, függő, sikertelen vagy hibás állapotú. A szám az entitáshoz rendelt eszközkonfigurációs profilokat jelöli. Például ha egy **felhasználói** van a sikeres állapotot valamennyi hozzárendelt szabályzata, az azt feljebb a sikeres számláló egy, az adott napra. Ha az adott felhasználó két hozzárendelt profillal rendelkezik, amelyek közül az egyik sikeres, míg a másik hibás állapotú, akkor a felhasználót hibás állapotúnak számítjuk.  A **DeviceConfigurationProfileUserActivity** entitás azt sorolja fel, hogy hány felhasználó van az egyes állapotokban az elmúlt 30 napon belüli adott napon.
+A **DeviceConfigurationProfileUserActivity** entitás naponta listázza a sikeres, függő, sikertelen vagy hibás állapotú **felhasználók** számát. A szám az entitáshoz rendelt eszközkonfigurációs profilokat jelöli. Ha például egy **felhasználó** az összes hozzárendelt szabályzat esetében sikeres állapotú, akkor az adott napra a sikeres számlálót eggyel feljebb helyezi. Ha az adott felhasználó két hozzárendelt profillal rendelkezik, amelyek közül az egyik sikeres, míg a másik hibás állapotú, akkor a felhasználót hibás állapotúnak számítjuk.  A **DeviceConfigurationProfileUserActivity** entitás azt sorolja fel, hogy hány felhasználó van az egyes állapotokban az elmúlt 30 napon belüli adott napon.
 
 | Tulajdonság  | Leírás | Példa |
 |---------|------------|--------|

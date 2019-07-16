@@ -18,12 +18,12 @@ ms.reviewer: jieyang
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 85435acffbad3117f6adbbafe60e1993b2d18bdb
-ms.sourcegitcommit: 143dade9125e7b5173ca2a3a902bcd6f4b14067f
+ms.openlocfilehash: b55368f5c512ff3efd4059d420717321729450ee
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61504332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884061"
 ---
 # <a name="remotely-lock-your-device-from-the-company-portal-website"></a>Az eszköz távoli zárolása a Vállalati portál webhelyéről
 
@@ -44,7 +44,7 @@ A távoli zárolás a következőknél működik:
 
     ![Képernyőkép az Eszközök oldalról, amelyen két csempén azonosítatlan, általános nevű eszközök láthatók. Közvetlenül az eszközök alatt egy szürke szalagcím helyezkedik el, amely arra kéri a felhasználót, hogy azonosítsa a használt eszközt, vagy adjon hozzá egy újat.](./media/rename-reset-device-step2-1808.png) 
 
-3. Válassza a **Távoli zárolás** lehetőséget. Ha a zárolás lehetőség nem jelenik meg az oldal tetején, válassza az **Egyéb (…)** > **Távoli zárolás** lehetőséget.  
+3. Válassza a **Távoli zárolás** lehetőséget. Ha a zárolás lehetőség nem jelenik meg az oldal tetején, válassza az **Egyéb (…)**  > **Távoli zárolás** lehetőséget.  
 
    ![A kiválasztott eszköz adatai a Céges portál webhelyén, felül az Átnevezés, az Eltávolítás, az Eszköz alaphelyzetbe állítása, a Jelszó alaphelyzetbe állítása és a Távoli zárolás lehetőségekre mutató hivatkozásokkal. ](./media/rename-reset-device-1808.png) 
 
@@ -56,9 +56,9 @@ A jóváhagyás után a Céges portál kísérletet tesz az eszköz zárolásár
 
 A Távoli zárolás állapota három helyen jelenik meg:
 
-   * A webhely értesítési területén.
-   * Az eszköz **Részletek** lapján.
-   * Az oldal **Eszközök** területén, az eszköz nevét megjelenítő csempén.  
+* A webhely értesítési területén.
+* Az eszköz **Részletek** lapján.
+* Az oldal **Eszközök** területén, az eszköz nevét megjelenítő csempén.  
 
 > [!Note]
 > Ha a távoli zárolás sikertelenségét jelző üzenet jelenik meg, várjon néhány percig. Próbálja meg ismét zárolni az eszközt. Ekkor az állapot ismét „Távoli zárolás függőben” lesz. Ha az újrapróbálkozás sikertelen, forduljon a cég informatikai támogatási szolgálatához.

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 02dcaa26e51f3b8c4632aed0fbc87131cc617532
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3870918378a2b3dd115d6449c3c83d37fe8e96c5
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884878"
 ---
 # <a name="create-a-design"></a>Terv létrehozása
 
@@ -49,47 +49,47 @@ A környezet ugyanis befolyásolhatja a tervezési döntéseket, ezért azt doku
 
 - **Felhőbeli identitás**
 
-    - Használják-e a DirSync vagy az Azure Active Directory (Azure AD) Connect szoftvert?
+  - Használják-e a DirSync vagy az Azure Active Directory (Azure AD) Connect szoftvert?
 
-    - Összevont-e a környezet?
+  - Összevont-e a környezet?
 
-    - Engedélyezve van-e a többtényezős hitelesítés (MFA)?
+  - Engedélyezve van-e a többtényezős hitelesítés (MFA)?
 
 - **E-mail-környezet**
 
-    - Használnak Exchange-et? Helyszíni vagy felhőbeli megoldásban?
+  - Használnak Exchange-et? Helyszíni vagy felhőbeli megoldásban?
 
-    - Folyamatban van-e az Exchange felhőbe való migrálása?
+  - Folyamatban van-e az Exchange felhőbe való migrálása?
 
 - **Az aktuális mobileszköz-felügyeleti (MDM) megoldás**
 
-    - Használnak-e jelenleg más MDM-megoldásokat?
+  - Használnak-e jelenleg más MDM-megoldásokat?
 
-    - Milyen MDM-megoldást használnak a vállalati, illetve a személyes tulajdonú eszközök esetében?
+  - Milyen MDM-megoldást használnak a vállalati, illetve a személyes tulajdonú eszközök esetében?
 
-    - Milyen képességeket használnak (például alkalmazások eszközbeállításai, Wi-Fi konfigurációk)?
+  - Milyen képességeket használnak (például alkalmazások eszközbeállításai, Wi-Fi konfigurációk)?
 
-    - Milyen eszközplatformokat támogatnak?
+  - Milyen eszközplatformokat támogatnak?
 
-    - Hány felhasználó használja az MDM-megoldást, és milyen csoportokra vannak tagolva?
+  - Hány felhasználó használja az MDM-megoldást, és milyen csoportokra vannak tagolva?
 
 - **Tanúsítványmegoldás**
 
-    - Van-e használatban tanúsítványmegoldás?
+  - Van-e használatban tanúsítványmegoldás?
 
-    - Milyen típusú tanúsítványokat használnak?
+  - Milyen típusú tanúsítványokat használnak?
 
 - **Rendszerfelügyelet**
 
-    - Hogyan felügyelik a PC-s és a kiszolgálói környezetet?
+  - Hogyan felügyelik a PC-s és a kiszolgálói környezetet?
 
-    - Használják-e a System Center Configuration Managert? Használnak-e külső gyártótól származó rendszerfelügyeleti platformot?
+  - Használják-e a System Center Configuration Managert? Használnak-e külső gyártótól származó rendszerfelügyeleti platformot?
 
 - **VPN-megoldás**
 
-    - Milyen VPN-megoldást használnak?
+  - Milyen VPN-megoldást használnak?
 
-    - Használják-e a vállalati, illetve a személyes tulajdonú eszközök esetében is?
+  - Használják-e a vállalati, illetve a személyes tulajdonú eszközök esetében is?
 
 Az aktuális MDM-környezet dokumentálásakor mindenképpen jegyezze fel azokat a projekteket és más érvényben lévő terveket, amelyek hatással lehetnek a környezetre. Alább egy példával szemléltetjük, hogyan lehet dokumentálni az aktuális környezetet az Intune-terv elkészítéséhez:
 
@@ -108,10 +108,10 @@ A saját Intune-tervének kidolgozásához [letöltheti a fenti táblázat sablo
 
 ## <a name="choose-an-intune-deployment-option"></a>Intune-telepítési lehetőség választása
 
-Az Intune kétféle telepítési lehetőséget kínál, ezek az önálló és a hibrid. Önálló telepítés esetén az Intune szolgáltatáshoz, a felhőben futó, hibrid telepítés esetén az Intune-ban a System Center Configuration Managerrel integrálva. Ez az útmutató elsősorban az önálló telepítésről szól. [Döntse el, melyik lehetőség felel meg az üzleti követelményeknek](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
+Az Intune kétféle telepítési lehetőséget kínál, ezek az önálló és a hibrid. Önálló a felhőben futó Intune szolgáltatásra hivatkozik, amely az Intune és a System Center Configuration Manager közötti integrációra utal. Ez az útmutató elsősorban az önálló telepítésről szól. [Döntse el, melyik lehetőség felel meg az üzleti követelményeknek](https://docs.microsoft.com/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).
 
 > [!Important]
->Új hibrid MDM-ügyfelek bevezetésének elavult. További információkért lásd: a [válthatnak a hibrid mobileszköz-kezelés az Intune-bA az Azure-ban](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blogbejegyzést.
+>Az új hibrid MDM-ügyfelek bevezetése elavult. További információ: [áttérés hibrid mobileszköz-kezelésről az Intune-ra az Azure-](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Move-from-Hybrid-Mobile-Device-Management-to-Intune-on-Azure/ba-p/280150) blogbejegyzésben.
 
 
 ## <a name="intune-tenant-location"></a>Az Intune-bérlő földrajzi helye
@@ -137,7 +137,7 @@ A külső függőségek olyan szolgáltatások és termékek, amelyek ugyan nem 
 
 - Nyilvános kulcsú infrastruktúra (PKI)
 
-Az alábbiakban a gyakoribb külső függőségekre részletesebben tárgyaljuk.
+A következőkben részletesebben ismertetjük ezeket a gyakori külső függőségeket.
 
 ### <a name="identity"></a>Identitás
 
@@ -216,7 +216,7 @@ A saját eszközlistájának kidolgozásához [letöltheti a fenti táblázat sa
 
 Az Intune támogatja a vállalati, illetve a személyes tulajdonban lévő eszközöket is. Azok az eszközök minősülnek vállalati tulajdonúaknak, amelyeket egy eszközregisztráció-kezelő vagy egy készülékregisztrációs program regisztrál. Ilyen lehet például egy, az Apple Készülékregisztrációs programmal regisztrált eszköz, amelyet vállalati tulajdonúként jelölnek meg, és egy olyan eszközcsoportba helyezik, amely célzott vállalati szabályzatokat és alkalmazásokat kap.
 
-Tekintse meg [3. szakasz: Használatieset-forgatókönyvek követelményeinek meghatározása](planning-guide-requirements.md) vonatkozó további információ a vállalati és a BYOD használati eseteket.
+Tekintse [meg a 3. szakaszt: A használati esetekre vonatkozó](planning-guide-requirements.md) követelmények meghatározása a vállalati és BYOD használati eseteivel kapcsolatos további információkért.
 
 ### <a name="bulk-enrollment"></a>Tömeges regisztrálás
 
@@ -262,10 +262,10 @@ Platformonként legalább egy konfigurációs szabályzatot célszerű létrehoz
 
 | **Szabályzat neve** | **Eszközplatform** | **Beállítások** | **Célcsoport** |   
 |:---:|:---:|:---:|:---:|
-| Vállalati – iOS | iOS | PIN-kód megadása kötelező, hossza: 6, Felhőbeli biztonsági mentés korlátozása | Vállalati eszközök |                                                           
-| Vállalati – Android | Android | PIN-kód megadása kötelező, hossza: 6, Felhőbeli biztonsági mentés korlátozása | Vállalati eszközök |                                                           
-| BYOD – iOS  | iOS | PIN-kód megadása kötelező, hossza: 4 | BYOD-eszközök |
-| BYOD – Android  | Android | PIN-kód megadása kötelező, hossza: 4 | BYOD-eszközök |
+| Vállalati – iOS | iOS | PIN-kód szükséges, hossz: 6, a felhő biztonsági mentésének korlátozása | Vállalati eszközök |                                                           
+| Vállalati – Android | Android | PIN-kód szükséges, hossz: 6, a felhő biztonsági mentésének korlátozása | Vállalati eszközök |                                                           
+| BYOD – iOS  | iOS | PIN-kód szükséges, hossz: 4 | BYOD-eszközök |
+| BYOD – Android  | Android | PIN-kód szükséges, hossz: 4 | BYOD-eszközök |
 
 
 A saját konfigurációs szabályzatainak meghatározásához [letöltheti a fenti táblázat sablonját](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
@@ -389,7 +389,7 @@ Az alkalmazásvédelmi szabályzatok azt definiálják, hogyan kezelheti egy alk
 A saját alkalmazásvédelmi szabályzatainak meghatározásához [letöltheti a fenti táblázat sablonját](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 #### <a name="compliance-policies"></a>Megfelelőségi szabályzatok
 
-A megfelelőségi szabályzatok határozzák meg, hogy egy adott eszköz megfelel-e bizonyos követelményeknek. Az Intune megfelelőségi szabályzatokkal határozza meg, hogy az eszközök megfelelőnek minősülnek-e, vagy sem. Ezt követően a megfelelőségi állapot alapján lehet korlátozni vagy engedélyezni a vállalati erőforrások elérését. Ha a feltételes hozzáférés szükség, azt javasoljuk, hogy tervezzen egy [eszközmegfelelőségi szabályzat](device-compliance.md).
+A megfelelőségi szabályzatok határozzák meg, hogy egy adott eszköz megfelel-e bizonyos követelményeknek. Az Intune megfelelőségi szabályzatokkal határozza meg, hogy az eszközök megfelelőnek minősülnek-e, vagy sem. Ezt követően a megfelelőségi állapot alapján lehet korlátozni vagy engedélyezni a vállalati erőforrások elérését. Ha feltételes hozzáférésre van szükség, javasoljuk, hogy tervezzen egy [eszköz megfelelőségi szabályzatát](device-compliance.md).
 
 A követelmények és a használati esetek alapján döntse el, hogy hány eszközmegfelelőségi szabályzatra van szüksége, és hogy ezek mely felhasználói csoportokra fognak vonatkozni. Ezenkívül azt is el kell döntenie, hogy mennyi ideig lehet egy eszköz offline állapotban, mielőtt nem megfelelőnek minősülne.
 
@@ -403,20 +403,20 @@ Az alábbi példa egy megfelelőségi szabályzat tervezését szemlélteti:
 A saját megfelelőségi szabályzatainak meghatározásához [letöltheti a fenti táblázat sablonját](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0).
 #### <a name="conditional-access-policies"></a>Feltételes hozzáférési szabályzatok
 
-Feltételes hozzáférés segítségével csak megfelelő eszközök férhessenek hozzá és az egyéb munkahelyi erőforrásokhoz. Az Intune a Enterprise Mobility + Security (EMS) csomaggal együttműködve szabályozza a vállalati erőforrások elérését. Döntse el, ha szüksége van-e a feltételes hozzáférést, és mit fog védeni. További tudnivalók [a feltételes hozzáférésről](conditional-access.md)
+A feltételes hozzáférés lehetővé teszi, hogy csak a megfelelő eszközök férhessenek hozzá az e-mailekhez és más vállalati erőforrásokhoz. Az Intune a Enterprise Mobility + Security (EMS) csomaggal együttműködve szabályozza a vállalati erőforrások elérését. Döntse el, hogy feltételes hozzáférést igényel-e, és hogy mit kell védeni. További tudnivalók [a feltételes hozzáférésről](conditional-access.md)
 
-Online elérés döntse el, mely platformok és felhasználói csoportokra fog céljaként feltételes hozzáférési szabályzatok. Emellett határozza meg, hogy kell telepíteni vagy konfigurálni az Intune-összekötő a helyszíni Exchange: 
+Online hozzáférés esetén döntse el, hogy milyen platformokat és felhasználói csoportokat fog megcélozni feltételes hozzáférési szabályzatok alapján. Azt is állapítsa meg, hogy telepítenie vagy konfigurálnia kell-e az Intune-összekötőt a helyszíni Exchange-hez: 
 
 - [Helyszíni Exchange](exchange-connector-install.md)
 
-A következő példa bemutatja, hogyan dokumentum feltételes hozzáférési szabályzatok:
+Az alábbi példa bemutatja, hogyan dokumentálhatja a feltételes hozzáférési szabályzatokat:
 
 | **Szolgáltatás** | **Modern hitelesítési platformok** | **Egyszerű hitelesítés** | **Használati esetek** |   
 |:---:|:---:|:---:|:---:|
 | Exchange Online | iOS, Android | A nem megfelelő eszközök letiltása az Intune által támogatott platformokon | Vállalati, BYOD |
 | SharePoint Online | iOS, Android |  | Vállalati, BYOD |
 
-Is [letöltheti a fenti táblázat sablonját](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) a feltételes hozzáférési szabályzatainak meghatározásához.
+A feltételes hozzáférési szabályzatok megadásához [letöltheti a fenti táblázat sablonját](https://gallery.technet.microsoft.com/Intune-deployment-planning-fae156c2?redir=0) .
 
 ## <a name="next-steps"></a>További lépések
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d94f2bd9237e92b22b9d73e4f7777dc0faf3f0fe
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: ca51fc38a7469d865640840647280375eaa74bbe
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883031"
 ---
 # <a name="enroll-ios-devices-in-intune"></a>iOS-eszközök regisztrálása az Intune-ban
 
@@ -67,9 +67,9 @@ További információ az [Apple Configurator-regisztrációról](apple-configura
 A felhasználói affinitással konfigurált eszközökön telepítheti és futtathatja a Vállalati portál alkalmazást az alkalmazások letöltéséhez és az eszközök kezeléséhez. Miután a felhasználók megkapják az eszközeiket, több további lépést kell végrehajtaniuk a Beállítási asszisztens befejezéséhez és a Vállalati portál alkalmazás telepítéséhez.
 
 Felhasználói affinitás szükséges az alábbiak támogatásához:
-  - Mobilalkalmazás-felügyeleti (MAM) alkalmazások
-  - E-mailek és a vállalati adatokhoz való feltételes hozzáférés
-  - Vállalati portál alkalmazás
+- Mobilalkalmazás-felügyeleti (MAM) alkalmazások
+- Feltételes hozzáférés az e-mailekhez és a vállalati adatszolgáltatásokhoz
+- Vállalati portál alkalmazás
 
 **A vállalat által birtokolt iOS-eszközök regisztrálása felhasználói affinitás használatával**
 1. Amikor a felhasználók bekapcsolják az eszközüket, megjelenik a Beállítási asszisztens befejezését kérő üzenet. 
@@ -86,4 +86,4 @@ Ha szükség van a felhasználói affinitásra, az eszköz regisztrálása előt
 
 ## <a name="see-also"></a>Lásd még:
 
-[IOS-eszközregisztrációs problémák a Microsoft Intune hibáinak elhárítása](https://support.microsoft.com/help/4039809)
+[IOS-eszközök regisztrálásával kapcsolatos problémák elhárítása Microsoft Intune](https://support.microsoft.com/help/4039809)

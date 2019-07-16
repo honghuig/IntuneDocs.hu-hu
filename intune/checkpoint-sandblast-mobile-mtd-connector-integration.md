@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 49a6e8e625a08c9ad039d3106ff5d5c7001c2cab
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: ae9bd6d6f56ec85a993ffcb2f3c1af9897a2a87f
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67547111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883660"
 ---
 # <a name="integrate-check-point-sandblast-mobile-with-intune"></a>A Check Point SandBlast Mobile integrálása az Intune-nal
 
@@ -37,13 +37,13 @@ A Check Point SandBlast Mobile Intune szolgáltatással való integrálásának 
 
 - Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
 
-    - Bejelentkezés és felhasználói profil olvasása
+  - Bejelentkezés és felhasználói profil olvasása
 
-    - A címtár elérése a bejelentkezett felhasználó nevében
+  - A címtár elérése a bejelentkezett felhasználó nevében
 
-    - Címtáradatok olvasása
+  - Címtáradatok olvasása
 
-    - Eszközadatok küldése az Intune-ba
+  - Eszközadatok küldése az Intune-ba
 
 - Rendszergazdai hitelesítő adatok a Check Point SandBlast Mobile MTD konzol eléréséhez.
 

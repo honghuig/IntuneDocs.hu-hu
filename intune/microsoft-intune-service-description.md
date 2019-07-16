@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 88ca608027e6509eb56fad74a8edae405fa915fa
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: c813e413d0d3447955f785e0aff1e0edd3501b6a
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882884"
 ---
 # <a name="microsoft-intune-service-description"></a>A Microsoft Intune szolgáltatás leírása
 
@@ -58,26 +58,26 @@ Mivel a mobileszköz-kezelési ökoszisztéma az operációs rendszer frissíté
 
 - [Újdonságok a Microsoft Intune-ban](whats-new.md). Ezt a témakört a havi szolgáltatásfrissítésekkel frissítjük, de heti frissítések is előfordulhatnak, ha új alkalmazás (például a Céges Portál alkalmazás) jelenik meg.
 
-- A fontos szolgáltatásfrissítésekről is bejelentjük a [Microsoft 365 felügyeleti központban](https://admin.microsoft.com/) üzenetközpont. Az [Office 365 felügyeleti társalkalmazás](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) telepítésével mobileszközén is fogadhatja az értesítéseket. További tudnivalók az [Office 365 üzenetközpontjában](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates) való munkavégzésről.
+- A fontos szolgáltatási frissítéseket a [Microsoft 365 felügyeleti központ](https://admin.microsoft.com/) üzenetközpont is bejelentette. Az [Office 365 felügyeleti társalkalmazás](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) telepítésével mobileszközén is fogadhatja az értesítéseket. További tudnivalók az [Office 365 üzenetközpontjában](https://support.office.com/client/results?Shownav=true&ns=O365ENTADMIN&version=15&ver=15&HelpID=O365E_MCManageUpdates) való munkavégzésről.
 
-    Néhány hasznos tanács:
+  Néhány hasznos tanács:
 
-    - Az Office 365 üzenetközpontjában célzott üzenetek jelennek meg. Így ha például a cég nem használja az Intune oktatási ajánlatait, akkor nem küldünk üzenetet az Intune oktatási ajánlataival kapcsolatban.
+  - Az Office 365 üzenetközpontjában célzott üzenetek jelennek meg. Így ha például a cég nem használja az Intune oktatási ajánlatait, akkor nem küldünk üzenetet az Intune oktatási ajánlataival kapcsolatban.
 
-    - Az üzenetek lejárati idővel rendelkeznek. Például egy szolgáltatásfrissítésről tájékoztató értesítés, amely az Újdonságok oldalra mutató hivatkozást is tartalmaz, valószínűleg még az előtt lejár, hogy megjelenne az újabb szolgáltatásfrissítési értesítés. Ellenkező esetben előfordulhatna, hogy nagy mennyiségű nem releváns üzenetek halmozódnak fel.
+  - Az üzenetek lejárati idővel rendelkeznek. Például egy szolgáltatásfrissítésről tájékoztató értesítés, amely az Újdonságok oldalra mutató hivatkozást is tartalmaz, valószínűleg még az előtt lejár, hogy megjelenne az újabb szolgáltatásfrissítési értesítés. Ellenkező esetben előfordulhatna, hogy nagy mennyiségű nem releváns üzenetek halmozódnak fel.
 
-    - Az Office 365 felügyeleti mobilalkalmazással kereshet is az üzenetekben, és továbbíthatja is az üzeneteket, ha például másokkal is meg szeretné osztani azokat a szervezeten belül.
+  - Az Office 365 felügyeleti mobilalkalmazással kereshet is az üzenetekben, és továbbíthatja is az üzeneteket, ha például másokkal is meg szeretné osztani azokat a szervezeten belül.
 
-    - A jövőben tervezzük bevezetni azt a lehetőséget, hogy az Üzenetközpont beállításainak szerkesztése lehetőség alatt kijelölhesse az **Intune-t**, és így csak az Intune-előfizetéshez kapcsolódó üzenetek jelenjenek meg. Az Office 365 mobileszköz-kezelése más szolgáltatás, tehát nem az Intune-ra vonatkozik.
+  - A jövőben tervezzük bevezetni azt a lehetőséget, hogy az Üzenetközpont beállításainak szerkesztése lehetőség alatt kijelölhesse az **Intune-t**, és így csak az Intune-előfizetéshez kapcsolódó üzenetek jelenjenek meg. Az Office 365 mobileszköz-kezelése más szolgáltatás, tehát nem az Intune-ra vonatkozik.
 
 - Két blogban is közzétesszük az EMS-üzeneteket és az Intune-támogatás bevált módszereit:
 
-    - [Enterprise Mobility + Security blog](https://blogs.technet.microsoft.com/enterprisemobility/)
+  - [Enterprise Mobility + Security blog](https://blogs.technet.microsoft.com/enterprisemobility/)
 
-    - [Intune-támogatási blog](https://blogs.technet.microsoft.com/intunesupport/)
+  - [Intune-támogatási blog](https://blogs.technet.microsoft.com/intunesupport/)
 
->[!Note]
->Az Intune szolgáltatás állapotát nyomon követheti a [Microsoft 365 felügyeleti központban](https://admin.microsoft.com). Válassza a bal oldali panel **Szolgáltatás állapota** elemét. A szolgáltatás állapotát ezen kívül az [Office 365 felügyeleti mobilalkalmazás](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) használatával is ellenőrizheti.
+> [!Note]
+> Az Intune szolgáltatás állapotának figyelése a [Microsoft 365 felügyeleti központban](https://admin.microsoft.com)végezhető el. Válassza a bal oldali panel **Szolgáltatás állapota** elemét. A szolgáltatás állapotát ezen kívül az [Office 365 felügyeleti mobilalkalmazás](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) használatával is ellenőrizheti.
 
 ## <a name="types-of-notices-microsoft-provides-about-the-intune-service"></a>A Microsoft Intune szolgáltatással kapcsolatos értesítések típusai
 
@@ -102,7 +102,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 - **Intune with System Center Configuration Manager.** Use the Configuration Manager management console to manage computers and mobile devices in your enterprise. This configuration can help you to manage all your organization’s devices through a single console, the Configuration Manager Admin Console. Configuration Manager supports large numbers of mobile devices, servers, and computers. For more about Configuration Manager, see [Hybrid mobile device management (MDM) with System Center Configuration Manager and Microsoft Intune](/sccm/mdm/understand/hybrid-mobile-device-management). For more help deciding which approach is right for you, see [Choose between Microsoft Intune standalone and hybrid mobile device management with Configuration Manager](/sccm/mdm/understand/choose-between-standalone-intune-and-hybrid-mobile-device-management).--->
 
 ## <a name="language-support"></a>Nyelvi támogatás
-Intune-ban fut, az Azure Portalon, amely a következő nyelveket támogatja: Kínai (egyszerűsített), kínai (hagyományos), Cseh, holland, angol, német, magyar, olasz, japán, portugál (brazíliai), portugál (portugáliai), orosz, spanyol, angol, francia, koreai, lengyel, svéd, török.
+Az Intune a Azure Portalon fut, amely a következő nyelveket támogatja: Kínai (egyszerűsített), Kínai (hagyományos), Cseh, holland, angol, német, magyar, olasz, Japán, Portugál (brazíliai), Portugál (portugáliai), Orosz, spanyol, angol, francia, Koreai, lengyel, svéd, Török.
 
 Az Intune felügyeleti konzol és a felhasználói mobilélmények az Azure-portál által támogatott nyelveken kívül a következő nyelveket támogatják: dán, finn, görög, norvég és román.
 

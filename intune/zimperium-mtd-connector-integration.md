@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e78c9034058a5f60f01056711465b28deca77d83
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: 3eb18c45f81e427f1d14ce77086e0d7684994e82
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884162"
 ---
 # <a name="integrate-zimperium-with-intune"></a>A Zimperium integrálása az Intune-nal
 
@@ -37,15 +37,15 @@ Mielőtt elkezdené a Zimperium integrálását az Intune-nal, ellenőrizze, hog
 
 - Microsoft Intune-előfizetés
 
-- Az Azure Active Directory globális rendszergazdájának rendszergazdai hitelesítő adataival a következő engedélyek megadására:
+- Azure Active Directory a globális rendszergazda rendszergazdai hitelesítő adatait a következő engedélyek megadásához:
 
-    - Bejelentkezés és felhasználói profil olvasása
+  - Bejelentkezés és felhasználói profil olvasása
 
-    - A címtár elérése a bejelentkezett felhasználó nevében
+  - A címtár elérése a bejelentkezett felhasználó nevében
 
-    - Címtáradatok olvasása
+  - Címtáradatok olvasása
 
-    - Eszközadatok küldése az Intune-ba
+  - Eszközadatok küldése az Intune-ba
 
 - Rendszergazdai hitelesítő adatok a Zimperium MTD konzol eléréséhez.
 
@@ -53,7 +53,7 @@ Mielőtt elkezdené a Zimperium integrálását az Intune-nal, ellenőrizze, hog
 
 A Zimperium alkalmazás engedélyezési folyamata a következő:
 
-- Engedélyek biztosítása a Zimperium szolgáltatás az adatok az Eszközállapot vissza az Intune-hoz. Az engedélyek megadása a globális rendszergazdai hitelesítő adatokkal kell használnia. Engedélyek megadása az egy egyszeri művelet. Miután az engedélyek a globális rendszergazdai hitelesítő adatokkal nem szükségesek a napi művelethez.
+- Adja meg a Zimperium szolgáltatás engedélyeit az eszköz állapotával kapcsolatos információk az Intune-nal való visszaadásához. Ezen engedélyek megadásához globális rendszergazdai hitelesítő adatokat kell használnia. Az engedélyek megadása egyszeri művelet. Az engedélyek megadása után a globális rendszergazdai hitelesítő adatok nem szükségesek a napi művelethez.
 
 - A Zimperium szinkronizálást végez az Azure Active Directory (AD) regisztrációs csoporttagsággal az eszköz adatbázisának feltöltéséhez.
 
@@ -61,12 +61,12 @@ A Zimperium alkalmazás engedélyezési folyamata a következő:
 
 - Engedélyezze a Zimperium alkalmazás számára az Azure AD SSO használatát a bejelentkezéshez.
 
-Jóváhagyás és Azure Active Directory-alkalmazásokkal kapcsolatos további információkért lásd: [engedélyeket kérhet a directory-rendszergazda](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) az Azure Active Directory-cikkben *engedélyek és jóváhagyás az Azure Active Directory v2.0-végpont*.
+A beleegyező és Azure Active Directory alkalmazásokkal kapcsolatos további információkért lásd: [az engedélyek kérése egy címtár](https://docs.microsoft.com/azure/active-directory/develop/v2-permissions-and-consent#request-the-permissions-from-a-directory-admin) -rendszergazdától a *Azure Active Directory v 2.0-végpont engedélyei és beleegyezik*a Azure Active Directory című cikkben.
 
 
 ## <a name="to-set-up-zimperium-integration"></a>A Zimperium-integráció beállítása
 
-1. Nyissa meg a [Zimperium MTD konzolt](https://www.zimperium.com/platform), és jelentkezzen be a hitelesítő adataival. A Zimperium-integráció telepítési folyamat végrehajtásához egy Azure Active Directory-felhasználó, aki rendelkezik a globális rendszergazdai szerepkörrel kell bejelentkeznie. Egyszeri beállítás művelet használja a globális rendszergazdai jogosultságokkal a Zimperium-alkalmazások kommunikálni az Intune-ban a szervezet engedélyt adni. 
+1. Nyissa meg a [Zimperium MTD konzolt](https://www.zimperium.com/platform), és jelentkezzen be a hitelesítő adataival. A Zimperium-integráció telepítési folyamatának végrehajtásához be kell jelentkeznie egy olyan Azure Active Directory felhasználóval, aki globális rendszergazdai szerepkörrel rendelkezik. Ez az egyszeri telepítési művelet a globális rendszergazdai jogosultságokat használja a szervezeten belüli engedélyek megadására a Zimperium-alkalmazások számára az Intune-nal való kommunikációhoz. 
 
 2. Válassza a bal oldali menü **Felügyelet** pontját.
 
@@ -74,18 +74,18 @@ Jóváhagyás és Azure Active Directory-alkalmazásokkal kapcsolatos további i
 
 4. Válassza az **MDM hozzáadása** elemet, majd az **MDM-szolgáltatók** listájából válassza ki a **Microsoft Intune** elemet.
 
-5. Miután beállította a Microsoft Intune mobileszköz-kezelési szolgáltatásként, a **a Microsoft Intune-konfiguráció** ablakban, válassza ki a **hozzáadása az Azure Active Directory** minden mód: **Zimperium zconsole-t**, **zIPS iOS- és Android-alkalmazások** Zimperium kommunikáljon az Intune és az Azure AD keresztül az Azure AD egyszeri bejelentkezés engedélyezéséhez.
+5. Miután beállította a Microsoft Intunet a MDM szolgáltatásként, megjelenik a **Microsoft Intune konfigurációs** ablak, válassza ki a **Azure Active Directory hozzáadása** lehetőséget az egyes beállításokhoz: **Zimperium zConsole**, **cipzáras iOS-és Android-alkalmazások** , amelyek engedélyezik a Zimperium számára az Intune-nal és az Azure ad-vel való kommunikációt az Azure ad egyszeri bejelentkezéssel.
 
     > [!IMPORTANT]  
-    > Hozzá kell adnia a Zimperium zConsole, zIPS iOS és Android-alkalmazások az Intune-nal integrációs folyamat befejezéséhez.
+    > Az Intune-nal való integrációs folyamat befejezéséhez hozzá kell adnia a Zimperium zConsole, a zip iOS és Android rendszerű alkalmazásokat.
 
 6. Válassza az **Elfogadás** elemet. Ezzel engedélyezi, hogy a Zimperium kommunikáljon az Intune-nal és az Azure Active Directoryval.
 
-7. Miután hozzáadta a **Zimperium zconsole-t** és a **zips iOS és Android-alkalmazást** az Azure AD-alkalmazások hozzáadása az Azure AD biztonsági csoportjait. A hozzáadás lehetővé teszi, hogy a Zimperium szinkronizálja a szolgáltatással az Azure AD biztonsági csoportját.
+7. Miután hozzáadta a **Zimperium zConsole** és a **zip-iOS-és Android-** alkalmazásokat az Azure ad-hez, adja hozzá az Azure ad biztonsági csoportjait. A hozzáadás lehetővé teszi, hogy a Zimperium szinkronizálja a szolgáltatással az Azure AD biztonsági csoportját.
 
 8. A **Befejezés** elem kiválasztásával menti a konfigurációt, és elindítja az Azure AD biztonsági csoport első szinkronizálását.
 
-9. Jelentkezzen ki a Zimperium MTD-konzolon.
+9. Jelentkezzen ki a Zimperium MTD-konzolról.
 
 ## <a name="next-steps"></a>További lépések
 

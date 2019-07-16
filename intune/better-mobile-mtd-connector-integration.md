@@ -14,12 +14,12 @@ ms.technology: ''
 ms.assetid: ''
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a7072d7d3d24578e0f82ea21eb653906dfa30b4c
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 861c2dd73e3a78fd833a24500728bd977d1186a2
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883739"
 ---
 # <a name="integrate-better-mobile-with-intune"></a>A Better Mobile és az Intune integrálása
 
@@ -36,13 +36,13 @@ Mielőtt elkezdené a Better Mobile és az Intune integrálását, ellenőrizze,
 
 - Azure Active Directory rendszergazdai hitelesítő adatok a következő engedélyek megadására:
 
-    - Bejelentkezés és felhasználói profil olvasása
+  - Bejelentkezés és felhasználói profil olvasása
 
-    - A címtár elérése a bejelentkezett felhasználó nevében
+  - A címtár elérése a bejelentkezett felhasználó nevében
 
-    - Címtáradatok olvasása
+  - Címtáradatok olvasása
 
-    - Eszközadatok küldése az Intune-ba
+  - Eszközadatok küldése az Intune-ba
 
 - Rendszergazdai azonosító adatok a Better Mobile rendszergazdai konzoljának hozzáféréséhez
 
@@ -63,7 +63,7 @@ A Better Mobile alkalmazás hitelesítésének folyamata a következő:
 1. Lépjen a [Better Mobile rendszergazdai konzoljához](https://aad.bmobi.net), és jelentkezzen be a hitelesítő adataival.
 2. Válassza az **Integration** > **EMM/MDM** > **ADD ACCOUNT** (Integráció, EMM/MDM, FIÓK HOZZÁADÁSA) lehetőséget.
 
-     ![A jobb mobileszköz-felügyeleti konzol képe](media/better_mobile_console.png)
+     ![A jobb Mobile felügyeleti konzol képe](media/better_mobile_console.png)
  
 3. Válassza az **Intune** lehetőséget.
 4. Az **ACCOUNT NAME** (FIÓKNÉV) elemnél adjon meg egy leírót. 
