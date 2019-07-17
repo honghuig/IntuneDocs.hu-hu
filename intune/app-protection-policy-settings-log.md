@@ -1,7 +1,7 @@
 ---
 title: Az alkalmazásvédelmi szabályzat naplóinak áttekintése
 titleSuffix: Microsoft Intune
-description: Ez a témakör ismerteti az Intune alkalmazásvédelmi szabályzat (alkalmazás) naplók konfigurálása.
+description: Ez a témakör az Intune app Protection-szabályzatok (APP) naplófájljainak konfigurálását ismerteti.
 keywords: ''
 author: Erikre
 ms.author: erikre
@@ -17,32 +17,32 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: acad6b0fa343bdbcc722929886a8e68a4fa4d8bc
-ms.sourcegitcommit: 63b55e81122e5c15893302b109ae137c30855b55
+ms.openlocfilehash: 7f9ee4d978bcb44f3b13ddcf9aafa4a3210f0f7e
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67713288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885066"
 ---
 # <a name="review-client-app-protection-logs"></a>Ügyfelekre vonatkozó alkalmazásvédelmi naplók áttekintése
 
-Ismerje meg az alkalmazásvédelmi naplók áttekinthető beállításait. Naplók el az Intune-diagnosztika engedélyezése a mobil ügyfelekből. 
+Ismerje meg az alkalmazásvédelmi naplók áttekinthető beállításait. A naplók eléréséhez engedélyezze az Intune Diagnostics szolgáltatást egy mobil ügyfélen. 
 
-A folyamat engedélyezéséhez és a naplók összegyűjtése platformonként:
-- **Android-eszközök** -használatát a *céges portál*. Lásd: [e-mailt a cég informatikai támogatási naplók](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
-- **iOS-eszközök** – használja a Managed Browser vagy *Microsoft Edge* naplók gyűjtését. További információkért lásd: az Intune támogatási csapatának blogja [új Intune diagnosztikai konzol napló elküldése az Intune Managed Browser](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-New-Intune-Diagnostic-Console-for-Log-Submission-in/ba-p/280021). 
-- **Windows 10-eszközök** -használat *MDMDiag* és az eseménynaplókat. Látható, [MDM diagnosztizálhatja a hibákat a Windows 10](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) a Windows ügyfél-felügyeleti tartalmat, és a blogon [hibaelhárítása a Windows 10-es Intune házirendjének hibáit](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures)
+A naplók engedélyezésére és gyűjtésére szolgáló folyamat a következő platformokra változik:
+- **Android-eszközök** – használja a *céges portál*. Tekintse [meg az e-mail naplókat a cég informatikai támogatási szolgálatának](/intune-user-help/send-logs-to-your-it-admin-by-email-android).
+- **iOS-eszközök** – Managed Browser vagy *Microsoft Edge* használatával gyűjti össze a naplókat. További részletekért tekintse meg az Intune támogatási csapatának blogja az [új Intune diagnosztikai konzolt a naplók küldéséhez a Intune Managed Browser](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-New-Intune-Diagnostic-Console-for-Log-Submission-in/ba-p/280021). 
+- **Windows 10-es eszközök** – a *MDMDiag* és az eseménynaplókat használja. Lásd: [Mdm hibák diagnosztizálása a Windows 10-es](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) verzióban a Windows ügyfél-felügyeleti tartalomban, valamint a [Windows 10 Intune-szabályzat hibáinak elhárítása](http://configmgrdogsarchive.com/2018/08/09/troubleshooting-windows-10-intune-policy-failures) a blogon
 
 
-Az alábbi táblázat a nevét és magyarázatát tartalmazza a naplóban tárolt beállítások.
+A következő táblázat a naplóban rögzített beállítások nevét és magyarázatát tartalmazza.
 
 ## <a name="app-protection-policy-settings"></a>Alkalmazásvédelmi szabályzatbeállítások
 
 | Name (Név)                        | Lehetséges érték(ek)                                                                                                                                                                                                                                                                                           | A beállítás az Azure Intune mobilalkalmazás-kezelésben                                                                                                                            |
 |-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AccessRecheckOfflineTimeout | x perc                                                                                                                                                                                                                                                                                                   | [Hozzáférés] A hozzáférési követelmények ismételt ellenőrzése – Offline türelmi időszak<br>Megjegyezés: Ez az az adott időszakban, mielőtt az alkalmazás hozzáférési követelményeinek újbóli ellenőrzéséig Ha az eszköz offline állapotban van.             |
-| AccessRecheckOnlineTimeout  | _x_ perc                                                                                                                                                                                                                                                                                                   | [Hozzáférés] A hozzáférési követelmények ismételt ellenőrzése – Időtúllépés.<br>Megjegyezés: Ez az az adott időszakban, mielőtt az alkalmazás hozzáférési követelményeinek újbóli ellenőrzéséig követően az alkalmazást elindítja, ha az eszköz online állapotban. |
-| AllowedOutboundClipboardSharingExceptionLength               | x karakter                                                                                                                                                                                                                                                                                           | [Hozzáférés] Adja meg, amely kivágott vagy másolt a kezelt alkalmazások karakterek száma.  Ez a beállítás felülbírálja a `AllowedOutboundClipboardSharingLevel` korlátozás. Alapértelmezett érték "0", sem kivétel engedélyezve van. 
+| AccessRecheckOfflineTimeout | x perc                                                                                                                                                                                                                                                                                                   | [Hozzáférés] A hozzáférési követelmények ismételt ellenőrzése – Offline türelmi időszak<br>Megjegyezés: Ez az az időtartam, ameddig az eszköz offline állapotban van, az alkalmazás hozzáférési követelményeinek ismételt bejelölése megtörténik.             |
+| AccessRecheckOnlineTimeout  | _x_ perc                                                                                                                                                                                                                                                                                                   | [Hozzáférés] A hozzáférési követelmények ismételt ellenőrzése – Időtúllépés.<br>Megjegyezés: Ez az az időtartam, ameddig a rendszer az alkalmazás elindítása után újra bejelöli az alkalmazás hozzáférési követelményeit, ha az eszköz online állapotban van. |
+| AllowedOutboundClipboardSharingExceptionLength               | x karakter                                                                                                                                                                                                                                                                                           | Hozzáférés Itt adhatja meg, hogy hány karakterből lehet kivágni vagy másolni egy felügyelt alkalmazásból.  Ez a beállítás felülbírálja a `AllowedOutboundClipboardSharingLevel` korlátozást. Az alapértelmezett "0" érték azt jelenti, hogy nem engedélyezett kivétel. 
 | AppPinDisabled              | 0 = Nem<br>1 = Igen                                                                                                                                                                                                                                                                                           | [Hozzáférés] Alkalmazás PIN-kódjának letiltása, ha az eszköz PIN-kódja felügyelt.                                                                                                                                     |
 | AppSharingFromLevel         | 0 = Egy alkalmazás sem<br>1 = Felügyelt alkalmazások<br>2 = Bármely alkalmazás.                                                                                                                                                                                                                                                              | [Adatáthelyezés] Más alkalmazásokból való adatfogadás engedélyezése az alkalmazásnak.                                                                                                                        |
 | AppSharingToLevel           | 0 = Egy alkalmazás sem<br>1 = Felügyelt alkalmazások<br>2 = Bármely alkalmazás.                                                                                                                                                                                                                                                              | [Adatáthelyezés] Más alkalmazásokba való adatküldés engedélyezése az alkalmazásnak.                                                                                                                         |
@@ -72,5 +72,5 @@ Az alábbi táblázat a nevét és magyarázatát tartalmazza a naplóban tárol
 
 ## <a name="next-steps"></a>További lépések
 
- - Az alkalmazásvédelmi szabályzatokról a [Mik azok az alkalmazásvédelmi szabályzatok?](app-protection-policy.md) című témakörben talál további információt.
- - Az Intune számos eszközt kínál a környezetben végezhető hibaelhárításhoz. További információt a [Segítségnyújtás a felhasználóknak a hibaelhárítási portál használatával](help-desk-operators.md) című témakörben talál.
+- Az alkalmazásvédelmi szabályzatokról a [Mik azok az alkalmazásvédelmi szabályzatok?](app-protection-policy.md) című témakörben talál további információt.
+- Az Intune számos eszközt kínál a környezetben végezhető hibaelhárításhoz. További információt a [Segítségnyújtás a felhasználóknak a hibaelhárítási portál használatával](help-desk-operators.md) című témakörben talál.
