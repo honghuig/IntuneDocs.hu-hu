@@ -998,3 +998,5 @@
           href: data-outside-protect.md
         - name: Adatszivárgás megakadályozása nem felügyelt eszközökön
           href: data-leak-prevention.md
+    - name: Az Intune végfelhasználói dokumentációja
+      href: /intune-user-help/use-managed-devices-to-get-work-done
