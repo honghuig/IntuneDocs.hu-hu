@@ -1,7 +1,7 @@
 ---
-title: Az Egyesült Államok kormányzati központi telepítések – Microsoft Intune hálózati végpont
+title: Hálózati végpontok az Egyesült Államok kormányának üzembe helyezéséhez – Microsoft Intune
 titleSuffix: ''
-description: Tekintse át az USA kormányzati végpontok az Intune-hoz.
+description: Tekintse át az Egyesült államokbeli kormányzati végpontokat az Intune-ban.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,23 +17,23 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e4712c2958e2beee8853ad0d2620414d823da327
-ms.sourcegitcommit: 6e07c35145f70b008cf170bae57143248a275b67
+ms.openlocfilehash: 9828b04ae30d8f35313564b93dfc9b997795bf76
+ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804494"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68306727"
 ---
-# <a name="us-government-endpoints-for-microsoft-intune"></a>Egyesült Államok kormányzati végpontok a Microsoft Intune
+# <a name="us-government-endpoints-for-microsoft-intune"></a>Az Egyesült Államok kormányzati végpontja Microsoft Intune
 
-Ezen a lapon találhatók az USA kormányzati végpontok az Intune-ban üzemelő szükséges.
+Ezen a lapon az Intune-környezetekben a proxybeállítások számára szükséges Egyesült államokbeli kormányzati végpontok szerepelnek.
 
-Tűzfalak és proxykiszolgálók mögött található eszközök felügyeletére, engedélyeznie kell a kommunikációt az Intune-hoz.
+A tűzfalak és proxykiszolgálók mögötti eszközök kezeléséhez engedélyeznie kell az Intune-nal való kommunikációt.
 
 - A proxykiszolgálónak támogatnia kell mind a **HTTP (80)** , mind a **HTTPS (443)** protokollt, mert az Intune-ügyfelek mindkét protokollt használják
-- Bizonyos tevékenységek (például a szoftverfrissítések letöltése), az Intune hitelesített proxykiszolgálói hozzáférést igényel a manage.microsoft.com
+- Bizonyos feladatokhoz (például a szoftverfrissítések letöltéséhez) az Intune-nak nem hitelesített proxykiszolgáló-hozzáférésre van szüksége a manage.microsoft.com
 
-Proxykiszolgáló beállításai az egyes ügyfélszámítógépeken módosíthatja. A csoportházirend-beállítások segítségével módosíthatja az összes, egy adott proxykiszolgáló mögött található ügyfélszámítógépek beállításait.
+Az egyes ügyfélszámítógépeken módosíthatja a proxykiszolgáló beállításait. A megadott proxykiszolgáló mögött található ügyfélszámítógépek beállításainak módosításához Csoportházirend beállításokat is használhat.
 
 A felügyelt eszközöket úgy kell beállítani, hogy **Minden felhasználó** hozzáférjen a szolgáltatásokhoz a tűzfalon keresztül.
 
@@ -44,15 +44,15 @@ A következő táblázat az Intune-ügyfél által elért portokat és szolgált
 |*.manage.microsoft.us | 52.243.26.209 <br> 52.247.173.11 <br> 52.227.183.12 <br>52.227.180.205 <br> 52.227.178.107 <br> 13.72.185.168 <br> 52.227.173.179 <br> 52.227.175.242 <br> 13.72.39.209 <br> 52.243.26.209 <br> 52.247.173.11 |
 | enterpriseregistration.microsoftonline.us | 13.72.188.239 <br> 13.72.55.179 |
 
-## <a name="us-government-customer-designated-endpoints"></a>Egyesült Államokbeli kormányzati ügyfelek végpontok kapja:
-- Az Azure Portalon: https://portal.azure.us/ 
-- Office 365: https://portal.office365.us/ 
-- Az Intune céges portál: https://portal.manage.microsoft.us/ 
+## <a name="us-government-customer-designated-endpoints"></a>Az Egyesült Államok kormányzati ügyfelei által kijelölt végpontok:
+- Azure Portal: https:\//Portal.Azure.us/ 
+- Office 365: https:\//Portal.office365.us/ 
+- Intune céges portál: https:\//Portal.Manage.microsoft.us/ 
 
-## <a name="partner-service-endpoints-that-intune-depends-on"></a>Partner Szolgáltatásvégpontok, amelyek az Intune-ban függ:
-- AAD-szinkronizáló szolgáltatás: https://syncservice.gov.us.microsoftonline.com/DirectoryService.svc
-- Evo STS: https://login.microsoftonline.us
-- Címtár-Proxy: https://directoryproxy.microsoftazure.us/DirectoryProxy.svc
-- Az AAD Graph: https://directory.microsoftazure.us és https://graph.microsoftazure.us
-- Az MS Graph: https://graph.microsoft.us
-- ADRS: https://enterpriseregistration.microsoftonline.us
+## <a name="partner-service-endpoints-that-intune-depends-on"></a>A partneri szolgáltatási végpontok, amelyeket az Intune a következőktől függ:
+- AAD-szinkronizáló szolgáltatás: https:\//syncservice.gov.us.microsoftonline.com/DirectoryService.SVC
+- Evo STS: https:\//login.microsoftonline.us
+- Directory-proxy: https\/:/directoryproxy.microsoftazure.us/DirectoryProxy.SVC
+- HRE gráf: https:\//Directory.microsoftazure.us és https:\//Graph.microsoftazure.us
+- MS Graph: https:\//Graph.microsoft.us
+- ADRS: https:\//enterpriseregistration.microsoftonline.us
