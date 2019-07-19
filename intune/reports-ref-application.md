@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: ceb2b830dc7e403bd138903cf61c80291a0753f2
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: a5436de6b972e5cbe8b2b17d42f0974cb38df47e
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882584"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313809"
 ---
 # <a name="reference-for-application-entities"></a>Alkalmazás-entitások referencia
 
@@ -34,31 +34,31 @@ Az **Alkalmazás** kategória mobileszközökhöz készült entitásokat tartalm
 - Az alkalmazáshoz tartozó felügyelt szoftverek típusa, például **sidecar** („oldalkocsis”) vagy **asztali**
 - Az alkalmazás mennyiségi vásárlási programbeli (VPP) állapota
 
-## <a name="apprevision"></a>AppRevision
+## <a name="apprevisions"></a>appRevisions
 
 Az **AppRevision** entitás listázza az alkalmazások összes verzióját.
 
 | Tulajdonság  | Leírás | Példa |
 |---------|------------|--------|
 | AppKey |Az alkalmazás egyedi azonosítója. |123 |
-| Alkalmazásazonosító |Az alkalmazás egyedi azonosítója – Az AppKey-hez hasonlít, de természetes kulcs. |b66bc706-ffff-7437-0340-032819502773 |
+| applicationId |Az alkalmazás egyedi azonosítója – Az AppKey-hez hasonlít, de természetes kulcs. |b66bc706-ffff-7437-0340-032819502773 |
 | Változat |A bináris feltöltése során a rendszergazda által említett verzió. |2 |
-| Cím |Az alkalmazás címe. |Excel |
-| Kiadó |Az alkalmazás kiadója. |Microsoft |
+| title |Az alkalmazás címe. |Excel |
+| publisher |Az alkalmazás kiadója. |Microsoft |
 | UploadState |Az alkalmazás feltöltésének állapota. |1 |
 | AppTypeKey |A következő szakaszban leírt AppType érték hivatkozása. | |
 | VppProgramTypeKey |A következő szakaszban leírt VppProgramType érték hivatkozása. | |
 | CreationTime |A jelen változat létrehozásának ideje. |2016.11.23. 12:00:00 |
 | ModifiedTime |A legutóbbi, jelen változattal kapcsolatos bármilyen módosítás ideje. |2016.11.23. 12:00:00 |
-| Méret |A bináris mérete. | |
-| StartDateInclusiveUTC |A jelen változat adattárházban történő létrehozásának dátuma és időpontja (UTC). |2016.11.23. 12:00:00 |
+| size |A bináris mérete. | |
+| startDateInclusiveUTC |A jelen változat adattárházban történő létrehozásának dátuma és időpontja (UTC). |2016.11.23. 12:00:00 |
 | EndDateExclusiveUTC |A jelen változat elavulásának dátuma és időpontja (UTC). |2016.11.23. 12:00:00 |
 | IsCurrent |Jelzi, hogy az alkalmazásverzió aktuális-e az adattárházban. |Igaz/hamis |
 | RowLastModifiedDateTimeUTC |Az alkalmazásverzió legutóbbi módosításának dátuma és időpontja (UTC) az adattárházban. |2016.11.23. 12:00:00 |
 
-## <a name="apptypes"></a>AppTypes
+## <a name="apptypes"></a>appTypes
 
-Az **AppTypes** entitás az alkalmazás telepítési forrásait listázza.
+Az **appType** entitás az alkalmazás telepítési forrásait listázza.
 
 | Tulajdonság  | Leírás |
 |---------|------------|
@@ -85,9 +85,9 @@ Az **AppTypes** entitás az alkalmazás telepítési forrásait listázza.
 | 12 |Windows Phone LOB app | Üzletági Windows Phone-alkalmazás. |
 
 
-## <a name="vppprogramtypes"></a>VppProgramTypes
+## <a name="vppprogramtypes"></a>vppProgramTypes
 
-A **VppProgramTypes** entitás az alkalmazás lehetséges VPP-programtípusait listázza.
+A **vppProgramType** entitás az alkalmazás lehetséges VPP-programtípusait listázza.
 
 | Tulajdonság  | Leírás |
 |---------|------------|
@@ -105,21 +105,21 @@ A **VppProgramTypes** entitás az alkalmazás lehetséges VPP-programtípusait l
 
 
 
-## <a name="applicationinventory"></a>ApplicationInventory
+## <a name="applicationinventories"></a>applicationInventories
 
-Az **ApplicationInventory** entitás a leltárkészítés pillanatában az eszközön talált alkalmazásokat sorolja fel.
+A **applicationInventory** entitás felsorolja az eszközön talált alkalmazásokat a leltár gyűjtése során.
 
 | Tulajdonság  | Leírás |
 |---------|------------|
 | DeviceKey | Az Intune-eszközazonosítót tartalmazó eszköztáblára mutató hivatkozás. |
-| DateKey | A leltári napot megadó dátumtáblázat-hivatkozás. |
-| Alkalmazásnév | Az alkalmazás neve. |
+| dateKey | A leltári napot megadó dátumtáblázat-hivatkozás. |
+| applicationName | Az alkalmazás neve. |
 | ApplicationVersion | Az alkalmazás verziója. |
 | BundleSize | Az alkalmazás mérete bájtban. |
 
-## <a name="mobileappinstallstate"></a>MobileAppInstallState
+## <a name="mobileappinstallstates"></a>mobileAppInstallStates
 
-A **MobileAppInstallState** entitás egy mobilalkalmazás telepítési állapotát jelöli, miután az hozzá lett rendelve egy eszközöket, felhasználókat vagy mindkettőt tartalmazó csoporthoz.
+A **mobileAppInstallState** entitás a mobileszköz telepítési állapotát jelöli, miután hozzá lett rendelve egy olyan csoporthoz, amely eszközöket, felhasználókat vagy mindkettőt tartalmaz.
 
 | Tulajdonság | Leírás |
 |---|---|

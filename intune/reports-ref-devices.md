@@ -6,7 +6,7 @@ keywords: Intune-adattárház
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/09/2019
+ms.date: 07/08/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e82ef9cc8e79332665db99d29ed511918f8c77b7
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: d5231daf1d28f94b6e2e1ef0c976c5b9f1877d22
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884711"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313761"
 ---
 # <a name="reference-for-devices-entities"></a>Eszközök típusú entitások referenciája
 
-Az **Eszközök** kategória az információkat nyomon követő mobileszközökhöz tartozó entitásokat tartalmazza, egyebek mellett az alábbiakat:
+Az **eszközök** kategória a mobileszközök olyan entitásait tartalmazza, amelyek a következő információkat követik nyomon:
 
 - Eszköz típusa
 - Eszköz regisztrációja és a regisztráció állapota
@@ -37,14 +37,14 @@ Az **Eszközök** kategória az információkat nyomon követő mobileszközökh
 - Előzményadatok az eszközről
 - Az eszközön lévő alkalmazások listája
 
-## <a name="devicetypes"></a>DeviceTypes
+## <a name="devicetypes"></a>deviceTypes
 
-A **DeviceTypes** entitás az adattárház más entitásai által hivatkozott eszköztípust jelöli. Az eszköztípus általában leírja az eszköz típusát, gyártóját vagy mindkettőt.
+A **deviceTypes** entitás a más adatraktár-entitások által hivatkozott eszköz típusát jelöli. Az eszköztípus általában leírja az eszköz típusát, gyártóját vagy mindkettőt.
 
 | Tulajdonság  | Leírás |
 |---------|------------|
 | DeviceTypeID |Az eszköztípus egyedi azonosítója |
-| DeviceTypeKey |Az eszköztípus egyedi azonosítója az adattárházban – helyettes kulcs |
+| deviceTypeKey |Az eszköztípus egyedi azonosítója az adattárházban – helyettes kulcs |
 | DeviceTypeName |Eszköz típusa |
 
 ### <a name="example"></a>Példa
@@ -73,7 +73,7 @@ A **DeviceTypes** entitás az adattárház más entitásai által hivatkozott es
 | 255 |Ismeretlen |Ismeretlen eszköztípus |
 
 ## <a name="enrollmentactivities"></a>enrollmentActivities 
-Az **EnrollmentActivity** entitás az eszközök regisztrálásának tevékenységét jelzi.
+Az **enrollmentActivity** entitás az eszközök regisztrálásának tevékenységét jelzi.
 
 | Tulajdonság                      | Leírás                                                               |
 |-------------------------------|---------------------------------------------------------------------------|
@@ -87,7 +87,7 @@ Az **EnrollmentActivity** entitás az eszközök regisztrálásának tevékenys�
 | count                         | A fenti besorolásoknak megfelelő beléptetési tevékenységek teljes száma.  |
 
 ## <a name="enrollmenteventstatuses"></a>enrollmentEventStatuses 
-Az **EnrollmentEventStatus** entitás az eszközök regisztrálásának eredményét jelzi.
+Az **enrollmentEventStatus** entitás az eszközök regisztrálásának eredményét jelzi.
 
 | Tulajdonság                   | Leírás                                                                       |
 |----------------------------|-----------------------------------------------------------------------------------|
@@ -158,9 +158,9 @@ A **EnrollmentFailureReason** entitás egy adott meghibásodási kategórián be
 | FeatureNotSupported              | A felhasználó olyan szolgáltatás elérésére tett kísérletet, amely még nem lett közzétéve az összes ügyfél számára, vagy nem kompatibilis az Intune-konfigurációval.                                                            |
 | UserAbandonment                  | A regisztrációt a végfelhasználó felhagyta. (A végfelhasználó elindította a bevezetést, de nem tudta időben befejezni a végrehajtását)                                                                                           |
 | APNSCertificateExpired           | Az Apple-eszközök nem kezelhetők lejárt Apple MDM push-tanúsítvánnyal.                                                                                                                            |
-## <a name="ownertypes"></a>OwnerTypes
+## <a name="ownertypes"></a>ownerTypes
 
-Az **EnrollmentTypes** entitás jelzi, hogy az eszköz tulajdonosa a vállalat, magánszemély vagy ismeretlen.
+A **enrollmentType** entitás azt jelzi, hogy az eszköz vállalati, személyes tulajdonú vagy ismeretlen.
 
 | Tulajdonság  | Leírás | Példa |
 |---------|------------|--------|
@@ -171,9 +171,9 @@ Az **EnrollmentTypes** entitás jelzi, hogy az eszköz tulajdonosa a vállalat, 
 > [!Note]  
 > Az eszközökhöz tartozó dinamikus csoportok létrehozásakor a AzureAD a szűrő `Company`értékét `deviceOwnership` kell beállítania. `ownerTypeName` További információ: [eszközök szabályai](https://docs.microsoft.com/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
 
-## <a name="managementstates"></a>ManagementStates
+## <a name="managementstates"></a>managementStates
 
-A **ManagementStates** entitás az eszköz állapotáról ad információt. Ezek a részletek hasznosak lehetnek távoli műveletek végrehajtásakor és jailbreakelt vagy rootolt eszköz esetén.
+Az **managementStates** entitás az eszköz állapotáról nyújt részleteket. Ezek a részletek hasznosak lehetnek távoli műveletek végrehajtásakor és jailbreakelt vagy rootolt eszköz esetén.
 
 | Tulajdonság  | Leírás |
 |---------|------------|
@@ -198,9 +198,9 @@ A **ManagementStates** entitás az eszköz állapotáról ad információt. Ezek
 | 10 |RetireCanceled | A kivonási parancsot visszavonták. |
 | 11 |Discovered | Az eszközt újonnan derítette fel az Intune, és amint az első alkalommal bejelentkezik, Managed (kezelt) állapotba fog kerülni. |
 
-## <a name="managementagenttypes"></a>ManagementAgentTypes
+## <a name="managementagenttypes"></a>managementAgentTypes
 
-A **ManagementAgentTypes** az eszköz kezelésére szolgáló ügynököket jelöli.
+Az **ManagementAgentType** entitás az eszköz kezeléséhez használt ügynököket jelöli.
 
 | Tulajdonság  | Leírás |
 |---------|------------|
@@ -220,35 +220,35 @@ A **ManagementAgentTypes** az eszköz kezelésére szolgáló ügynököket jel�
 | 8 |ConfigManagerClient | A System Center Configuration Manager-ügynökkel kezelt eszköz |
 | 16 |Ismeretlen | A kezelőügynök típusa ismeretlen |
 
-## <a name="devices"></a>Eszközök
+## <a name="devices"></a>eszközök
 
-A **Devices** entitás felsorolja az összes kezelt regisztrált eszközt és azok lényeges tulajdonságait.
+Az **eszközök** entitás felsorolja a felügyelet alatt álló összes regisztrált eszközt, valamint a hozzájuk tartozó tulajdonságokat.
 
 |          Tulajdonság          |                                                                                       Leírás                                                                                      |
 |:--------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | DeviceKey                  | Az eszköz egyedi azonosítója az adattárházban – helyettes kulcs.                                                                                                               |
-| DeviceId                   | Az eszköz egyedi azonosítója.                                                                                                                                                     |
-| Eszköznév                 | Az eszköz neve az eszközök elnevezését megengedő platformokon. Más platformokon az Intune más tulajdonságok alapján hoz létre nevet. Ez az attribútum nem lehet elérhető az összes eszköz számára. |
-| DeviceTypeKey              | Az eszközhöz tartozó eszköztípus attribútum kulcsa.                                                                                                                                    |
+| deviceId                   | Az eszköz egyedi azonosítója.                                                                                                                                                     |
+| DeviceName                 | Az eszköz neve az eszközök elnevezését megengedő platformokon. Más platformokon az Intune más tulajdonságok alapján hoz létre nevet. Ez az attribútum nem lehet elérhető az összes eszköz számára. |
+| deviceTypeKey              | Az eszközhöz tartozó eszköztípus attribútum kulcsa.                                                                                                                                    |
 | DeviceRegistrationState    | Az eszközhöz tartozó ügyfél-regisztrációs állapot attribútum kulcsa.                                                                                                                      |
-| OwnerTypeKey               | Az eszközhöz tartozó tulajdonostípus attribútum (corporate, personal, vagy unknown) kulcsa.                                                                                                    |
-| EnrolledDateTime           | Az eszköz regisztrálásának dátuma és időpontja.                                                                                                                                         |
-| LastSyncDateTime           | Az eszköz utolsó Intune-bejelentkezése.                                                                                                                                              |
+| ownerTypeKey               | Az eszközhöz tartozó tulajdonostípus attribútum (corporate, personal, vagy unknown) kulcsa.                                                                                                    |
+| enrolledDateTime           | Az eszköz regisztrálásának dátuma és időpontja.                                                                                                                                         |
+| lastSyncDateTime           | Az eszköz utolsó Intune-bejelentkezése.                                                                                                                                              |
 | ManagementAgentKey         | Az eszközhöz társított kezelőügynök kulcsa.                                                                                                                             |
-| ManagementStateKey         | Az eszközhöz társított kezelési állapot, beleértve a távoli műveletek utolsó állapotát, és hogy az eszköz jailbreakelt vagy rootolt-e.                                                |
+| managementStateKey         | Az eszközhöz társított kezelési állapot, beleértve a távoli műveletek utolsó állapotát, és hogy az eszköz jailbreakelt vagy rootolt-e.                                                |
 | AzureADDeviceId            | Az Azure-eszközazonosító ehhez az eszközhöz.                                                                                                                                                  |
 | AzureADRegistered          | Regisztrálva van-e az eszköz az Azure Active Directoryban.                                                                                                                             |
-| DeviceCategoryKey          | Az eszközhöz társított kategória kulcsa.                                                                                                                                     |
+| deviceCategoryKey          | Az eszközhöz társított kategória kulcsa.                                                                                                                                     |
 | DeviceEnrollmentType       | Az eszközhöz társított, a regisztráció módját jelző regisztrációtípus kulcsa.                                                                                             |
-| ComplianceStateKey         | Az eszközhöz társított megfelelőségi állapot kulcsa.                                                                                                                             |
-| OSVersion                  | Az eszközön futó operációs rendszer verziószáma.                                                                                                                                                |
-| EasDeviceId                | Az eszköz Exchange ActiveSync-azonosítója.                                                                                                                                                  |
-| a sorozatszám               | a sorozatszám                                                                                                                                                                           |
-| UserId                     | Az eszközhöz társított felhasználó egyedi azonosítója.                                                                                                                           |
+| complianceStateKey         | Az eszközhöz társított megfelelőségi állapot kulcsa.                                                                                                                             |
+| osVersion                  | Az eszközön futó operációs rendszer verziószáma.                                                                                                                                                |
+| easDeviceId                | Az eszköz Exchange ActiveSync-azonosítója.                                                                                                                                                  |
+| serialNumber               | a sorozatszám                                                                                                                                                                           |
+| userId                     | Az eszközhöz társított felhasználó egyedi azonosítója.                                                                                                                           |
 | RowLastModifiedDateTimeUTC | Az eszköz adattárházban történő utolsó módosításának dátuma és időpontja (UTC).                                                                                                       |
-| Gyártó               | Az eszköz gyártója                                                                                                                                                             |
-| Modell                      | Az eszköz típusa                                                                                                                                                                    |
-| OperatingSystem            | Az eszközön futó operációs rendszer. Windows, iOS stb.                                                                                                                                   |
+| gyártó               | Az eszköz gyártója                                                                                                                                                             |
+| modell                      | Az eszköz típusa                                                                                                                                                                    |
+| operatingSystem            | Az eszközön futó operációs rendszer. Windows, iOS stb.                                                                                                                                   |
 | IsDeleted                  | Bináris érték, amely azt jelzi, hogy az eszköz törölve van vagy sem.                                                                                                                                 |
 | AndroidSecurityPatchLevel  | Az Android biztonsági javítási szintje                                                                                                                                                           |
 | MEID                       | MEID                                                                                                                                                                                   |
@@ -257,39 +257,27 @@ A **Devices** entitás felsorolja az összes kezelt regisztrált eszközt és az
 | TotalStorageSpaceInBytes   | Összes tárterület bájtban.                                                                                                                                                                |
 | EncryptionState            | Az eszköz titkosítási állapota.                                                                                                                                                      |
 | SubscriberCarrier          | Az eszköz előfizetői szolgáltatója                                                                                                                                                       |
-| PhoneNumber                | Az eszköz telefonszáma                                                                                                                                                             |
+| Telefonszám                | Az eszköz telefonszáma                                                                                                                                                             |
 | IMEI                       | IMEI                                                                                                                                                                                   |
 | CellularTechnology         | Az eszköz mobiltechnológiája                                                                                                                                                    |
 | WiFiMacAddress             | Wi-Fi MAC                                                                                                                                                                              |
+| ICCD                       | Integrált áramköri kártya azonosítója                                                                                                                                                     |
 
-## <a name="devicepropertyhistory"></a>DevicePropertyHistory
+## <a name="devicepropertyhistories"></a>devicePropertyHistories
 
-A **DevicePropertyHistory** entitásban ugyanazon tulajdonságok szerepelnek, mint a Devices (Eszközök) táblában, amely minden eszközről napi pillanatképet tárol 90 napra visszamenőleg. A DateKey mező az egyes sorok napját jelzi.
+A **devicePropertyHistory** entitás ugyanazokkal a tulajdonságokkal rendelkezik, mint az eszközök táblázata, valamint az egyes rekordok napi pillanatképe az elmúlt 90 nap folyamán. A DateKey mező az egyes sorok napját jelzi.
 
 |          Tulajdonság          |                                                                                      Leírás                                                                                     |
 |:--------------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| DateKey                    | A napot megadó dátumtáblázat-hivatkozás.                                                                                                                                          |
+| dateKey                    | A napot megadó dátumtáblázat-hivatkozás.                                                                                                                                          |
 | DeviceKey                  | Az eszköz egyedi azonosítója az adattárházban – helyettes kulcs. Az Intune-eszközazonosítót tartalmazó eszköztáblára mutató hivatkozás.                               |
-| Eszköznév                 | Az eszköz neve az eszközök elnevezését megengedő platformokon. Más platformokon az Intune hoz létre nevet más tulajdonságok alapján. Ez az attribútum nem lehet elérhető az összes eszköz számára. |
-| DeviceRegistrationStateKey | Az eszközhöz tartozó eszközregisztrációs állapot attribútum kulcsa.                                                                                                                    |
-| OwnerTypeKey               | Az eszközhöz tartozó tulajdonostípus attribútum kulcsa: corporate (vállalati), personal (személyes), vagy unknown (ismeretlen).                                                                                                  |
-| ManagementStateKey         | Az eszközhöz társított kezelési állapot, beleértve a távoli műveletek utolsó állapotát, és hogy az eszköz jailbreakelt vagy rootolt-e.                                                |
+| DeviceName                 | Az eszköz neve az eszközök elnevezését megengedő platformokon. Más platformokon az Intune hoz létre nevet más tulajdonságok alapján. Ez az attribútum nem lehet elérhető az összes eszköz számára. |
+| deviceRegistrationStateKey | Az eszközhöz tartozó eszközregisztrációs állapot attribútum kulcsa.                                                                                                                    |
+| ownerTypeKey               | Az eszközhöz tartozó tulajdonostípus attribútum kulcsa: corporate (vállalati), personal (személyes), vagy unknown (ismeretlen).                                                                                                  |
+| managementStateKey         | Az eszközhöz társított kezelési állapot, beleértve a távoli műveletek utolsó állapotát, és hogy az eszköz jailbreakelt vagy rootolt-e.                                                |
 | AzureADRegistered          | Regisztrálva van-e az eszköz az Azure Active Directoryban.                                                                                                                             |
-| ComplianceStateKey         | Kulcs a ComplianceState-hez.                                                                                                                                                            |
+| complianceStateKey         | Kulcs a ComplianceState-hez.                                                                                                                                                            |
 | OSVersion                  | Operációs rendszer verziója.                                                                                                                                                                          |
-| JailBroken                 | Az, hogy az eszköz jailbreakelve vagy rootolva van-e.                                                                                                                                         |
-| DeviceCategoryKey          | Az eszközhöz tartozó eszközkategória attribútum kulcsa. 
-
-## <a name="applicationinventory"></a>ApplicationInventory
-
-Az **ApplicationInventory** entitás a leltárkészítés pillanatában az eszközön talált alkalmazásokat sorolja fel.
-
-
-|      Tulajdonság      |                       Leírás                        |
-|--------------------|----------------------------------------------------------|
-|     DeviceKey      |              Hivatkozás az Eszközök táblára.               |
-|   ApplicationKey   | ? (ExchangeDeviceService\DeviceApplication helyről másolva). |
-|  Alkalmazásnév   | ? (ExchangeDeviceService\DeviceApplication helyről másolva). |
-| ApplicationVersion | ? (ExchangeDeviceService\DeviceApplication helyről másolva). |
-|     BundleSize     | ? (ExchangeDeviceService\DeviceApplication helyről másolva). |
+| jailBroken                 | Az, hogy az eszköz jailbreakelve vagy rootolva van-e.                                                                                                                                         |
+| deviceCategoryKey          | Az eszközhöz tartozó eszközkategória attribútum kulcsa. 
 

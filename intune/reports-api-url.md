@@ -1,7 +1,7 @@
 ---
 title: Intune-adattárház API-végpontja
 titleSuffix: Microsoft Intune
-description: A referencia-témakör ismerteti a Microsoft Intune Data Warehouse API URL-Címének szerkezete. Szűrő példák állnak rendelkezésre.
+description: Ez a témakör a Microsoft Intune adattárház API URL-struktúráját ismerteti. Példák szűrésére.
 keywords: Intune-adattárház
 author: Erikre
 ms.author: erikre
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6d2e6c99d9493d935f4a8f87c6525af19796b5f6
-ms.sourcegitcommit: 1b7ee2164ac9490df4efa83c5479344622c181b5
+ms.openlocfilehash: 59e2a681c542da46a2e938c7bf07e7185925aab2
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648782"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313750"
 ---
 # <a name="intune-data-warehouse-api-endpoint"></a>Intune-adattárház API-végpontja
 
@@ -51,7 +51,7 @@ Az URL-cím a következő elemeket tartalmazza:
 | Elem | Példa | Leírás |
 |-------------------|------------|--------------------------------------------------------------------------------------------------------------------|
 | location | msua06 | Az alap URL-cím helye az Azure Portalon található adattárház API paneljén látható. |
-| entitásgyűjtemény | dátumok | Az OData-entitásgyűjtemény neve. Az adatmodellben lévő gyűjteményekről és entitásokról további információt a [Adatmodell](reports-ref-data-model.md) című témakörben talál. |
+| entitásgyűjtemény | devicePropertyHistories | Az OData-entitásgyűjtemény neve. Az adatmodellben lévő gyűjteményekről és entitásokról további információt a [Adatmodell](reports-ref-data-model.md) című témakörben talál. |
 | api-verzió | béta | Verzió alatt az elérni kívánt API verzióját értjük. További információt a [Verzió](reports-api-url.md#api-version-information) című témakörben talál. |
 | maxhistorydays | 7 | (Nem kötelező) Az előzmények bejegyzéseinek maximális lekérési időtartama (napokban kifejezve). Ez a paraméter bármely gyűjteménnyel használható, de csak olyan gyűjteményeknél lép érvénybe, amelyek tartalmazzák a `dateKey` értéket a kulcstulajdonság részeként. További információk: [DateKey típusú tartományszűrők](reports-api-url.md#datekey-range-filters). |
 
@@ -63,7 +63,7 @@ A bétaverzió használatával kipróbálhatja az adattárház legújabb funkci�
 
 ## <a name="odata-query-options"></a>Az OData-lekérdezés beállításai
 
-A jelenlegi verzió a következő OData-lekérdezésparamétereket támogatja: `$filter`, `$select`, `$skip,` és `$top`. A `$filter`, csak `DateKey` vagy `RowLastModifiedDateTimeUTC` lehet, hogy támogatja az oszlopok vonatkoznak, és egyéb tulajdonságok hibás kérelem lép működésbe.
+A jelenlegi verzió a következő OData-lekérdezési paramétereket `$filter`támogatja `$select`: `$skip,` , `$top`és. A `$filter`-ben `DateKey` csak `RowLastModifiedDateTimeUTC` vagy lehet, ha az oszlopok alkalmazhatók, és más tulajdonságok helytelen kérést indítanak.
 
 ## <a name="datekey-range-filters"></a>DateKey típusú tartományszűrők
 
@@ -75,7 +75,7 @@ A `DateKey` tartományszűrők az adatletöltés korlátozására használhatók
 ## <a name="filter-examples"></a>Példák a szűrőkre
 
 > [!NOTE]
-> A szűrő példákban feltételezzük még ma a 2019/2/21.
+> A szűrő példái a következők: 2/21/2019.
 
 |                             Szűrés                             |           A teljesítmény optimalizálása           |                                          Leírás                                          |
 |:--------------------------------------------------------------:|:--------------------------------------------:|:---------------------------------------------------------------------------------------------:|
@@ -83,4 +83,4 @@ A `DateKey` tartományszűrők az adatletöltés korlátozására használhatók
 |    `$filter=DateKey eq 20180214`                                 |    Összes                                      |    Olyan adatokat ad vissza, amelyekben a `DateKey` értéke megegyezik a 20180214 értékkel.                                                    |
 |    `$filter=DateKey ge 20180214 and DateKey lt 20180221`         |    Összes                                      |    Olyan adatokat ad vissza, amelyekben a `DateKey` értéke 20180214 és 20180220 között van.                                     |
 |    `maxhistorydays=7&$filter=DateKey eq 20180214`                |    Összes                                      |    Olyan adatokat ad vissza, amelyekben a `DateKey` értéke megegyezik a 20180214 értékkel. A rendszer mellőzi a `maxhistorydays` értékét.                            |
-|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Összes                                       |    Vissza az adatokat `RowLastModifiedDateTimeUTC` nagyobb vagy egyenlő `2018-02-21T23:18:51.3277273Z`                             |
+|    `$filter=RowLastModifiedDateTimeUTC ge 2018-02-21T23:18:51.3277273Z`                                |    Összes                                       |    A nagyobb vagy `RowLastModifiedDateTimeUTC` egyenlő értékkel rendelkező adatvisszaadás`2018-02-21T23:18:51.3277273Z`                             |

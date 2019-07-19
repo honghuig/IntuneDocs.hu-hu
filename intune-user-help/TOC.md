@@ -12,7 +12,7 @@
 ### [Miért kell regisztrálni az Android-eszközt](why-enroll-android-device.md)
 ### Saját eszköz regisztrálása
 #### [Android-eszköz regisztrálása](enroll-device-android-company-portal.md)  
-#### [Regisztrálás androidos munkahelyi profillal](create-a-work-profile-and-enroll-your-device-in-intune-android.md)
+#### [Regisztrálás androidos munkahelyi profillal](enroll-device-android-work-profile.md)
 #### [Regisztrálás Microsoft Intune-alkalmazással](enroll-device-android-microsoft-intune-app.md)
 ### [Felügyelt alkalmazások használata az eszközön](use-managed-apps-on-your-device-android.md)
 ### [Az eszköz titkosítása](encrypt-your-device-android.md)

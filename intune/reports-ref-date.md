@@ -6,7 +6,7 @@ keywords: Intune-adattárház
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/09/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -17,43 +17,43 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0baf74515af22fb04f773da0d26b94a7eec5f572
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 16cb03788f8a3dd261a1e6d9dbc3efe4b50f4f73
+ms.sourcegitcommit: c3ac858bbadb63d248ed54069e48160d703bbaf2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041022"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313822"
 ---
-# <a name="reference-for-date-entity"></a>Dátum típusú entitás referenciája
+# <a name="reference-for-dates-entity"></a>Dátumok entitásra mutató hivatkozás
 
-A **Dátum** kategória a **Dátum** entitást tartalmazza, amely dátumhivatkozások definiálására szolgál az adatmodellben.
+A **dátumok** kategória tartalmazza az adatmodellben a dátumokra mutató hivatkozások definiálásához használt **Date** entitást.
 
-## <a name="date"></a>Date
+## <a name="dates"></a>dátumok
 
-A **Dátum** entitás olyan dátumokat jelöl, amelyekre több adattárház-entitás is hivatkozik.
+A **date** entitás olyan dátumokat jelöl, amelyekre több adattárház-entitás is hivatkozik.
 
 
 |    Tulajdonság     |                      Leírás                       |       Példa        |
 |-----------------|--------------------------------------------------------|----------------------|
-|     DateKey     | A dátum egyedi azonosítója az adattárházban. |       20160703       |
-|    FullDate     |    Az adott dátum teljes dátum/idő formátumban kifejezve.     | 2016.3.7. 12:00:00 |
-|    DayOfWeek    |                      A hét hányadik napja                       |          1           |
-|   DayOfMonth    |                      A hónap hányadik napja                      |          3           |
-|    DayOfYear    |                      Az év hányadik napja                       |         185          |
-|   WeekOfYear    |                      Az év hányadik hete                      |          28          |
-|   MonthOfYear   |                   Az év hányadik hónapja                    |          7           |
-| CalendarQuarter |                    Naptári negyedév                    |          3           |
-|  CalendarYear   |                     Naptári év                      |         2016         |
-|     DateKey     | A dátum egyedi azonosítója az adattárházban. |       20160703       |
-|    FullDate     |    Az adott dátum teljes dátum/idő formátumban kifejezve.     | 2016.3.7. 12:00:00 |
-|    DayOfWeek    |                      A hét hányadik napja                       |          1           |
-|   DayOfMonth    |                      A hónap hányadik napja                      |          3           |
-|    DayOfYear    |                      Az év hányadik napja                       |         185          |
-|   WeekOfYear    |                      Az év hányadik hete                      |          28          |
-|   MonthOfYear   |                   Az év hányadik hónapja                    |          7           |
-| CalendarQuarter |                    Naptári negyedév                    |          3           |
-|  CalendarYear   |                     Naptári év                      |         2016         |
+|     dateKey     | A dátum egyedi azonosítója az adattárházban. |       20160703       |
+|    fullDate     |    Az adott dátum teljes dátum/idő formátumban kifejezve.     | 2016.3.7. 12:00:00 |
+|    dayOfWeek    |                      A hét hányadik napja                       |          1           |
+|   dayOfMonth    |                      A hónap hányadik napja                      |          3           |
+|    dayOfYear    |                      Az év hányadik napja                       |         185          |
+|   weekOfYear    |                      Az év hányadik hete                      |          28          |
+|   monthOfYear   |                   Az év hányadik hónapja                    |          7           |
+| calendarQuarter |                    Naptári negyedév                    |          3           |
+|  calendarYear   |                     Naptári év                      |         2016         |
+|     dateKey     | A dátum egyedi azonosítója az adattárházban. |       20160703       |
+|    fullDate     |    Az adott dátum teljes dátum/idő formátumban kifejezve.     | 2016.3.7. 12:00:00 |
+|    dayOfWeek    |                      A hét hányadik napja                       |          1           |
+|   dayOfMonth    |                      A hónap hányadik napja                      |          3           |
+|    dayOfYear    |                      Az év hányadik napja                       |         185          |
+|   weekOfYear    |                      Az év hányadik hete                      |          28          |
+|   monthOfYear   |                   Az év hányadik hónapja                    |          7           |
+| calendarQuarter |                    Naptári negyedév                    |          3           |
+|  calendarYear   |                     Naptári év                      |         2016         |
 
 ## <a name="next-steps"></a>További lépések
 
-- Tudjon meg többet a [Intune Data Warehouse](reports-nav-create-intune-reports.md).
+- További információ az [Intune](reports-nav-create-intune-reports.md)-adattárházról.
