@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3665a785391d2bff707bf5b8fe0a7e4f6e8a43d
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: fec72636a5d76ce4eb1fa0c28978eeb70d1e61b5
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044524"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353552"
 ---
 # <a name="compare-managing-windows-pcs-as-computers-or-mobile-devices"></a>Windows-számítógépek számítógépként és mobileszközként való felügyeletének összehasonlítása
 
@@ -46,10 +46,10 @@ A vállalatok a Microsoft Intune-ban kezelhetik a Windows-számítógépeket mob
 |**Távsegítség** |TeamViewer<br>[Távsegítség kérése és nyújtása Windows rendszerű számítógépekhez](request-and-provide-remote-assistance-for-windows-pcs-in-microsoft-intune.md)|TeamViewer<br> [A TeamViewer használata Intune-eszközök távoli felügyeletéhez](teamviewer-support.md) |
 |**Alkalmazástelepítés** | Nem érhető el a Vállalati Microsoft Áruházhoz,<br>.exe, .appx, és csak a több fájlból álló .msi<br>[Az Intune szoftverügyfelet futtató Windows rendszerű számítógépes alkalmazások hozzáadása](add-apps-for-windows-pcs-in-microsoft-intune.md)|Elérhető a Microsoft Áruház alkalmazásaihoz és az üzletági alkalmazásokhoz<br>[Windows áruházbeli alkalmazások hozzáadása](store-apps-windows.md)<br>[Windowsos üzletági (LOB) alkalmazások hozzáadása](lob-apps-windows.md)|
 |**Alkalmazásvédelem**|Nem érhető el|Elérhető <br>[Mik azok az alkalmazásvédelmi szabályzatok?](app-protection-policy.md)|
-|**Az Eszközállapot-igazolás**|Nem érhető el|Elérhető|
+|**Állapot igazolása**|Nem érhető el|Elérhető|
 
 
-### <a name="advantages-of-mdm-windows-pc-management"></a>Az MDM Windows-számítógép-felügyelet előnyei
+## <a name="advantages-of-mdm-windows-pc-management"></a>Az MDM Windows-számítógép-felügyelet előnyei
 A Windows-számítógépek modern mobileszköz-felügyelettel történő kezelése a következő előnyökkel jár:
 - **Méretezhetőség** – A mobileszköz-felügyelet az Intune-felhőkezeléssel együtt méretezhető. Az Intune szoftverügyfél 7000 számítógépre korlátozódik.
 - **Egyszerűség** – Az operációs rendszerben foglalt modern felügyeleti képességeket használ anélkül, hogy letöltött szoftverügyfélre kellene támaszkodnia

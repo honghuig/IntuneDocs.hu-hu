@@ -17,18 +17,18 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 417ed2e7f151e187efd54a9fb079c966c056242a
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 519ac8529737a870eb4f8ce9a3e06af5b1dcac79
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884863"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353648"
 ---
 # <a name="create-a-report-from-the-odata-feed-with-power-bi"></a>Jelentés készítése az OData-adatcsatornából a Power BI használatával
 
 Ez a cikk bemutatja, hogyan hozhat létre egy fatérkép-diagramot a Power BI Desktop használatával, az Intune-adattárház API-ból származó interaktív szűrővel. Előfordulhat például, hogy a pénzügyi igazgató azt szeretné tudni, hogy a teljes eszközállomány hogyan oszlik meg vállalati és személyes tulajdonúak között. A fatérkép-diagram megmutatja az eszköztípusok teljes számát. Látható benne, hogy hány iOS-es, hány androidos és hány windowsos eszköz van vállalati, és hány személyes tulajdonban.
 
-### <a name="overview-of-creating-the-chart"></a>A diagram létrehozásának áttekintése
+## <a name="overview-of-creating-the-chart"></a>A diagram létrehozásának áttekintése
 
 A diagram létrehozásához az alábbi lépéseket kell elvégeznie:
 1. A Power BI Desktop telepítése, ha még nincs telepítve.

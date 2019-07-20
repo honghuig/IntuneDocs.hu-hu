@@ -17,19 +17,19 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: eade2a1bc19e4b0c477faf2ad8e262196da8cc30
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: b79f488fcaa221523b5833aa1cebcf872d5f9b3d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572522"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354018"
 ---
 # <a name="help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune"></a>A Windows rendszerű számítógépek védelme Windows tűzfalházirendek használatával a Microsoft Intune-ban
 
 [!INCLUDE [classic-portal](includes/classic-portal.md)]
 
 > [!NOTE]
-> A jelen témakörben ismertetett információk csak azokra a PC-ként felügyelt Windows-számítógépekre vonatkoznak, amelyeket az Intune szoftverügyfél segítségével felügyel. Ha a kezelni kívánt tűzfal beállításait a Windows rendszerű számítógépek mobileszközként, lásd: [endpoint protection-beállítások hozzáadása az Intune-ban](endpoint-protection-configure.md).
+> A jelen témakörben ismertetett információk csak azokra a PC-ként felügyelt Windows-számítógépekre vonatkoznak, amelyeket az Intune szoftverügyfél segítségével felügyel. Ha a tűzfal beállításait a mobileszközökként regisztrált Windows rendszerű számítógépeken szeretné kezelni, tekintse meg [az Endpoint Protection-beállítások hozzáadása az Intune-ban](endpoint-protection-configure.md)című témakört.
 
 A Microsoft Intune-nal számos módon teheti biztonságossá az Intune ügyfélprogrammal kezelt Windows rendszerű számítógépeket. Többek között olyan szabályzatokat tesz elérhetővé, amelyekkel konfigurálhatja a Windows tűzfal beállításait a számítógépeken.
 
@@ -140,5 +140,5 @@ Konfigurálhatja azokat a kivételeket, amelyek bizonyos típusú hálózati for
 |**Windows Virtual PC**<br>(Windows 7 vagy újabb)|Lehetővé teszi, hogy a virtuális gépek kommunikáljanak más számítógépekkel.|
 |**Vezeték nélküli hordozható eszközök**|Lehetővé teszi a hálózatra csatlakoztatható kamerákról vagy egyéb médiaeszközökről a felügyelt számítógépek felé irányuló, MTP protokoll alapú médiaátvitelt. A beállítás SSDP és UPnP technológiát használ.|
 
-### <a name="see-also"></a>Lásd még:
+## <a name="see-also"></a>Lásd még:
 [Szabályzatok a Windows rendszerű számítógépek védelméhez](policies-to-protect-windows-pcs-in-microsoft-intune.md)

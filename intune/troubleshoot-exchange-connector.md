@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 5bdb727b542cd66e0b8fcf4a0822eaf0107600ad
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735733"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354463"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>A helyszíni Intune Exchange Connector hibaelhárítása
 
@@ -51,5 +51,5 @@ A [Helyszíni Intune Exchange Connector beállítása](exchange-connector-instal
 - A postaládához tartozó SMTP-címek listájához használja ezt a parancsot: Get-Mailbox -Identity user | select emailaddresses | fl
 - Az eszköz hozzáférési állapotáról részletes információt a következő paranccsal jeleníthet meg: Get-CASMailbox <upn> | fl
 
-### <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>További lépések
 Ha ezek az információk nem segítettek, akkor [Támogatást kérhet a Microsoft Intune-hoz](get-support.md).

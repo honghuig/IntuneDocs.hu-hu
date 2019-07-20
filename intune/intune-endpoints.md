@@ -1,7 +1,7 @@
 ---
-title: A Microsoft Intune hálózati végpont
+title: Microsoft Intune hálózati végpontok
 titleSuffix: ''
-description: Tekintse át a végpontok az Intune-ban.
+description: Tekintse át az Intune-végpontokat.
 keywords: ''
 author: ErikjeMS
 ms.author: erikje
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 026536b1f0c059808220273ccffefacc28b80ae0
-ms.sourcegitcommit: 119962948045079022aa48f968dde3e961d7cd0c
+ms.openlocfilehash: 8f95e16b9c500f9c4e0750fc0453f5ed1fcea129
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67031598"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353986"
 ---
-# <a name="network-endpoints-for-microsoft-intune"></a>A Microsoft Intune hálózati végpont
+# <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune hálózati végpontok
 
-Ezen a lapon találhatók az IP-címek és portbeállítások az Intune-ban telepítések esetén szükséges.
+Ez a lap felsorolja az Intune-környezetekben a proxybeállítások számára szükséges IP-címeket és port-beállításokat.
 
-Csak felhőalapú szolgáltatás az Intune a helyszíni infrastruktúrát, például a kiszolgálókat vagy átjárókat nem szükséges.
+Csak felhőalapú szolgáltatásként az Intune nem igényel helyszíni infrastruktúrát, például kiszolgálókat vagy átjárókat.
 
-Tűzfalak és proxykiszolgálók mögött található eszközök felügyeletére, engedélyeznie kell a kommunikációt az Intune-hoz.
+A tűzfalak és proxykiszolgálók mögötti eszközök kezeléséhez engedélyeznie kell az Intune-nal való kommunikációt.
 
-- A proxykiszolgáló támogatnia kell mind **HTTP (80)** és **HTTPS (443)** , mert az Intune-ügyfelek mindkét protokollt használják. Windows Information Protection 444-es portot használja.
-- Bizonyos tevékenységek (például a szoftverfrissítések letöltése a klasszikus pc agenthez készült), az Intune hitelesített proxykiszolgálói hozzáférést igényel a manage.microsoft.com
+- A proxykiszolgáló csak a **http (80)** és a **https (443)** protokollt támogatja, mert az Intune-ügyfelek mindkét protokollt használják. A Windows Information Protection a 444-es portot használja.
+- Bizonyos feladatokhoz (például a klasszikus PC-ügynökhöz tartozó szoftverfrissítések letöltéséhez) az Intune-nak nem hitelesített proxykiszolgáló-hozzáférésre van szüksége a manage.microsoft.com
 
-Proxykiszolgáló beállításai az egyes ügyfélszámítógépeken módosíthatja. A csoportházirend-beállítások segítségével módosíthatja az összes, egy adott proxykiszolgáló mögött található ügyfélszámítógépek beállításait.
+Az egyes ügyfélszámítógépeken módosíthatja a proxykiszolgáló beállításait. A megadott proxykiszolgáló mögött található ügyfélszámítógépek beállításainak módosításához Csoportházirend beállításokat is használhat.
 
 
 <!--
@@ -81,8 +81,8 @@ A következő táblázat az Intune-ügyfél által elért portokat és szolgált
 |mam.manage.microsoft.com|104.40.69.125<br>13.90.192.78<br>40.85.174.177<br>40.85.77.31<br>137.116.229.43<br>52.163.215.232<br>52.174.102.180|
 
 
-### <a name="network-requirements-for-powershell-scripts-and-win32-apps"></a>Powershell-parancsprogramok és Win32-alkalmazások hálózati követelményei
-Ha az Intune-ban való üzembe helyezése a Powershell-szkriptekkel vagy Win32-alkalmazások használata esetén is szüksége, amelyben a jelenleg bérlőjüket végpontok hozzáférést.
+## <a name="network-requirements-for-powershell-scripts-and-win32-apps"></a>A PowerShell-parancsfájlok és a Win32-alkalmazások hálózati követelményei
+Ha az Intune-t használja PowerShell-parancsfájlok vagy Win32-alkalmazások üzembe helyezéséhez, hozzáférést kell biztosítania azokhoz a végpontokhoz is, amelyekben a bérlő jelenleg található.
 
 |ASU | Tároló neve | Tartalomkézbesítési hálózat (CDN) |
 | --- | --- |--- |
@@ -108,33 +108,33 @@ Ha az Intune-ban való üzembe helyezése a Powershell-szkriptekkel vagy Win32-a
 | AMSUC0501 | prodmsuc05data | https:\//prodmsuc05data.azureedge.net |
 | AMSUA0701 | pemsua07rcdata | https:\//pemsua07data.azureedge.net |
 
-### <a name="windows-push-notification-services-wns"></a>Windows leküldéses értesítéseket kezelő szolgáltatásai (WNS)
-Mobileszköz-felügyeleti (MDM) segítségével felügyelt Windows Intune által felügyelt eszközöket, az eszköz más azonnali tevékenységek, a Windows leküldéses értesítési szolgáltatása (WNS) használatát igénylik. További információ: [vállalati tűzfalon keresztül lehetővé teszi a Windows értesítési forgalom](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).    
+## <a name="windows-push-notification-services-wns"></a>Windows leküldéses Notification Services (WNS)
+A mobileszköz-kezelés (MDM) használatával felügyelt Intune által felügyelt Windows-eszközök esetén az eszközök műveletei és egyéb azonnali tevékenységei a Windows leküldéses Notification Services (WNS) használatát igénylik. További információ: a [Windows értesítési forgalmának engedélyezése vállalati tűzfalakon keresztül](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).    
 
-### <a name="delivery-optimization-port-requirements"></a>Kézbesítési optimalizálás port követelményei
+## <a name="delivery-optimization-port-requirements"></a>Kézbesítési optimalizálási portra vonatkozó követelmények
 
-#### <a name="port-requirements"></a>Port követelményei
-Társ-társ-forgalom esetén kézbesítésoptimalizálás TCP/IP-vagy a NAT-átjárást, (opcionálisan Teredo) 3544 7680 használja. Ügyfél szolgáltatás közötti kommunikáció, használja a HTTP vagy HTTPS-porton keresztül 80-as/443-as.
+### <a name="port-requirements"></a>Portra vonatkozó követelmények
+A társközi forgalom esetében a kézbesítési optimalizálás a 7680-es TCP/IP-vagy 3544-alapú NAT-bejárást használja (opcionális Teredo). Az ügyfél és a szolgáltatás közötti kommunikációhoz HTTP vagy HTTPS protokollt használ a 80/443-as porton keresztül.
 
-#### <a name="proxy-requirements"></a>Proxy-követelmények
-Kézbesítésoptimalizálás használatához engedélyeznie kell a bájttartomány kérelmeket. További információkért lásd: [Proxy követelményei Windows Update](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
+### <a name="proxy-requirements"></a>Proxyra vonatkozó követelmények
+A kézbesítési optimalizálás használatához engedélyeznie kell a byte Range kérelmeket. További információ: [Windows Update proxyra vonatkozó követelményei](https://docs.microsoft.com/windows/deployment/update/windows-update-troubleshooting).
 
-#### <a name="firewall-requirements"></a>Tűzfalra vonatkozó követelmények
-Lehetővé teszi a következő állomásneveket használja kézbesítésoptimalizálás támogatásához a tűzfalon keresztül.
-Az ügyfelek és a kézbesítésoptimalizálás felhőszolgáltatás közötti kommunikáció:
+### <a name="firewall-requirements"></a>A tűzfalra vonatkozó követelmények
+Engedélyezze a következő állomásnevek használatát a tűzfalon a kézbesítés optimalizálásának támogatásához.
+Az ügyfelek és a kézbesítési optimalizálási felhő szolgáltatás közötti kommunikációhoz:
 - *.do.dsp.mp.microsoft.com
 
-Kézbesítésoptimalizálás metaadatok:
+Kézbesítési optimalizálási metaadatok:
 - *.dl.delivery.mp.microsoft.com
 - *.emdl.ws.microsoft.com
 
-### <a name="apple-device-network-information"></a>Apple-eszközhálózati információ
+## <a name="apple-device-network-information"></a>Apple-eszközhálózati információ
 
 
-|Használt|Hostname (IP address/subnet)|Protocol|Port|
+|Használatban|Hostname (IP address/subnet)|Protocol|Port|
 |-----|--------|------|-------|
-|Beolvasása és a tartalom Apple kiszolgálókról történő megjelenítése|itunes.apple.com<br>\*. itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
-|APNS-kiszolgálókkal való kommunikációhoz|#-courier.push.apple.com<br>'#' egy véletlenszerű szám 0-50-re.|    TCP     |  5223 és 443  |
-|Különféle funkciók biztosításához, beleértve a webes elérése, iTunes Store áruházból, macOS-alkalmazás-áruházban, icloud-alapú, üzenetkezelés, stb. |phobos.apple.com<br>ocsp.apple.com<br>AX.iTunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 vagy 443   |
+|Apple-kiszolgálók tartalmának beolvasása és megjelenítése|itunes.apple.com<br>\*. itunes.apple.com<br>\*.mzstatic.com<br>\*.phobos.apple.com<br> \*.phobos.itunes-apple.com.akadns.net |    HTTP    |      80      |
+|Kommunikáció a APNS-kiszolgálókkal|#-courier.push.apple.com<br>a "#" a 0 és 50 közötti véletlenszerű szám.|    TCP     |  5223 és 443  |
+|Különböző funkciók, többek között a World Wide Web, az iTunes Store, a macOS App Store, az iCloud, az üzenetküldés stb. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 vagy 443   |
 
-További információkért tekintse meg az Apple [szoftvertermékek Apple által használt TCP és UDP-portok](https://support.apple.com/en-us/HT202944), [kiszolgálókapcsolatok gazdagép és az iTunes macOS, iOS és az iTunes kapcsolatos háttér-folyamatok](https://support.apple.com/en-us/HT201999), és [Ha a macOS- és iOS-ügyfelek nincsenek rájuk vonatkozó Apple leküldéses értesítéseket](https://support.apple.com/en-us/HT203609).
+További információkért lásd az Apple [szoftvertermékek által használt Apple TCP-és UDP](https://support.apple.com/en-us/HT202944)-portokat, [a MacOS-, iOS-és iTunes Server Host-kapcsolatokat](https://support.apple.com/en-us/HT201999), valamint az iTunes-alapú háttér-folyamatokat, és [Ha a MacOS-és iOS-ügyfelek nem kapnak Apple push-t értesítések](https://support.apple.com/en-us/HT203609).

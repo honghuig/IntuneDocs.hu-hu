@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7a4f81f29fea9008c7dd47902812141db8448bc3
-ms.sourcegitcommit: 1dc9d4e1d906fab3fc46b291c67545cfa2231660
+ms.openlocfilehash: 9c13ebdd6cf908a62c99d4c81443c94ce6a07d8e
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67735724"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353824"
 ---
 # <a name="enroll-your-android-enterprise-dedicated-devices-or-fully-managed-devices-preview"></a>Androidos vállalati dedikált eszközök vagy teljes körűen felügyelt eszközök regisztrálása (előzetes verzió)
 
@@ -33,15 +33,15 @@ Miután beállította az androidos [vállalati dedikált eszközöket](android-k
 | Kis hatótávolságú kommunikáció | 5.1 |
 | Biztonsági jogkivonat | 6.0 |
 | QR-kód | 7.0 |
-| Zero Touch  | 8.0\* |
+| Zero Touch  | 8,0\* |
 
 \*A résztvevő gyártókon.
 
-### <a name="enroll-by-using-near-field-communication-nfc"></a>Regisztráció kis hatótávolságú kommunikáció (NFC) használatával
+## <a name="enroll-by-using-near-field-communication-nfc"></a>Regisztráció kis hatótávolságú kommunikáció (NFC) használatával
 
 Az NFC-t támogató eszközökhöz speciálisan formázott NFC-címke létrehozásával hozhatja létre az eszközöket. Használhatja saját alkalmazását vagy bármilyen NFC-címke létrehozására alkalmas eszközt. További információ: [C-alapú Android Enterprise-eszközök regisztrációja Microsoft Intune](https://blogs.technet.microsoft.com/cbernier/2018/10/15/nfc-based-android-enterprise-device-enrollment-with-microsoft-intune/) és a [Google Android Management API dokumentációjában](https://developers.google.com/android/management/provision-device#nfc_method).
 
-### <a name="enroll-by-using-a-token"></a>Regisztráció jogkivonat használatával
+## <a name="enroll-by-using-a-token"></a>Regisztráció jogkivonat használatával
 
 Android 6 vagy újabb rendszerű eszközök esetén használhatja a jogkivonatot az eszköz regisztrálásához. Az Android 6,1 és újabb verziók a **AFW # Setup** beléptetési módszerének használatakor is HASZNÁLHATJÁK a QR-kódok vizsgálatát.
 
@@ -51,11 +51,11 @@ Android 6 vagy újabb rendszerű eszközök esetén használhatja a jogkivonatot
 4. Fogadja el a Google feltételeit és kikötéseit, majd válassza a **TOVÁBB** lehetőséget.
 5. A Google bejelentkezési képernyőjén Gmail-fiók helyett adja meg az **afw#setup** értéket, majd válassza a **TOVÁBB** lehetőséget.
 6. Válassza a **TELEPÍTÉS** lehetőséget az **Android eszközszabályzat** alkalmazáshoz.
-7. Folytassa a szabályzat telepítését.  Bizonyos eszközök további feltételek elfogadását is kérhetik. 
+7. Folytassa a szabályzat telepítését.  Bizonyos eszközök további feltételek elfogadását is kérhetik.
 8. Az **Eszköz regisztrálása** képernyőn olvastassa be a QR-kódot az eszközzel, vagy válassza a jogkivonat manuális megadását.
-9. A regisztráció befejezéséhez kövesse a képernyőn megjelenő utasításokat. 
+9. A regisztráció befejezéséhez kövesse a képernyőn megjelenő utasításokat.
 
-### <a name="enroll-by-using-a-qr-code"></a>Regisztráció QR-kód használatával
+## <a name="enroll-by-using-a-qr-code"></a>Regisztráció QR-kód használatával
 
 Android 7 vagy újabb rendszerű eszközökön az eszköz regisztrálásához beolvashatja a regisztrációs profilhoz tartozó QR-kódot.
 
@@ -66,26 +66,26 @@ Android 7 vagy újabb rendszerű eszközökön az eszköz regisztrálásához be
 2. Android 7-es és 8-as eszközökön a rendszer kérni fogja egy QR-kódolvasó telepítését. Az Android 9 és újabb rendszerű eszközökön már van telepítve QR-kódolvasó.
 3. Olvassa be a regisztrációs profil QR-kódját a QR-kódolvasóval, majd a regisztráláshoz kövesse a képernyőn megjelenő utasításokat.
 
-### <a name="enroll-by-using-google-zero-touch"></a>Regisztráció a Google Zero Touch használatával
+## <a name="enroll-by-using-google-zero-touch"></a>Regisztráció a Google Zero Touch használatával
 
-A Google Zero Touch rendszerének használatához az eszköznek támogatnia kell azt, és a szolgáltatásban részt vevő szállítótól kell származnia.  Erről a [Google Zero Touch programjának webhelyén](https://www.android.com/enterprise/management/zero-touch/) talál további információt. 
+A Google Zero Touch rendszerének használatához az eszköznek támogatnia kell azt, és a szolgáltatásban részt vevő szállítótól kell származnia.  Erről a [Google Zero Touch programjának webhelyén](https://www.android.com/enterprise/management/zero-touch/) talál további információt.
 
 1. Hozzon létre új konfigurációt a Zero Touch-konzolon.
 2. Az EMM DPC legördülő listából válassza a **Microsoft Intune** lehetőséget.
 3. Másolja és illessze be a következő JSON-kódot a Google Zero Touch-konzoljának Egyéb DPC beállítások mezőjébe. A *YourEnrollmentToken* szöveget írja át a regisztrációs profilja részeként létrehozott regisztrációs jogkivonatra. Ügyeljen rá, hogy a regisztrációs jogkivonat időzőjelek között legyen.
 
     ```json
-    { 
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver", 
-    
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg", 
-    
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup", 
-    
-        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": { 
-            "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken" 
-        } 
-    } 
+    {
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver",
+
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg",
+
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup",
+
+        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+            "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
+        }
+    }
     ```
 
 4. Válassza az **Alkalmaz** lehetőséget.

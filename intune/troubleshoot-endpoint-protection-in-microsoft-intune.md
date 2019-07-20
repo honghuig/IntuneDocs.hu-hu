@@ -1,6 +1,6 @@
 ---
-title: Közös endpoint protection üzenetek a Microsoft Intune – Azure |} A Microsoft Docs
-description: Tekintse meg a közös üzenetek és a lehetséges megoldást használ, és az endpoint protection és a Microsoft Intune-ban a Windows Defender hibáinak elhárítása.
+title: Common Endpoint Protection-üzenetek a Microsoft Intune-Azure-ban | Microsoft Docs
+description: Tekintse meg az Endpoint Protection és a Windows Defender használatának és hibaelhárításának gyakori üzeneteit és lehetséges megoldásait Microsoft Intuneban.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -17,37 +17,37 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a4f749ab85d283ed9743d227476f8229dc1cf7c3
-ms.sourcegitcommit: a97b6139770719afbd713501f8e50f39636bc202
+ms.openlocfilehash: 5159ee595a6699eb457b194162d21038d4667063
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66402646"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353338"
 ---
-# <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Végpontvédelmi problémákkal és a lehetséges megoldások a Microsoft Intune-ban
+# <a name="endpoint-protection-issues-and-possible-solutions-in-microsoft-intune"></a>Endpoint Protection-problémák és lehetséges megoldások a Microsoft Intune
 
-Ez a cikk felsorolja és ismerteti a lehetséges okait és megoldásait bizonyos hibák és figyelmeztetések. Az információk használatával kapcsolatos problémák megoldásához, az endpoint protection használata esetén.
+Ez a cikk a hibák és figyelmeztetések lehetséges okait és megoldásait sorolja fel és ismerteti. Az Endpoint Protection használata során felmerülő problémák megoldása érdekében használja az információkat.
 
-## <a name="windows-defender-error-codes"></a>A Windows Defender-hibakódok
+## <a name="windows-defender-error-codes"></a>Windows Defender-hibakódok
 
-Tekintse át az eseménynaplókat és a hibakódok [Windows Defender Víruskereső hibáinak elhárítása](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus).
+Tekintse át az eseménynaplókat és a hibakódokat a [Windows DEFENDER AV-vel kapcsolatos](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-antivirus/troubleshoot-windows-defender-antivirus)hibák elhárításához.
 
-## <a name="common-intune-errors-and-possible-resolutions"></a>Az Intune előforduló gyakori hibák és a lehetséges megoldások
+## <a name="common-intune-errors-and-possible-resolutions"></a>Gyakori Intune-hibák és lehetséges megoldások
 
-#### <a name="endpoint-protection-engine-unavailable"></a>Az Endpoint Protection-motor nem érhető el
+### <a name="endpoint-protection-engine-unavailable"></a>Az Endpoint Protection-motor nem érhető el
 
 **Lehetséges ok**: Az Intune végpontvédelmi motorja sérült vagy törölték.
 
-**A lehetséges megoldásokról**:
+**Lehetséges megoldások**:
 
-- Ha az endpoint protection sérült, vagy nem frissít, majd frissítse, vagy telepítse újra a programot.
-- Azonnali frissítés kényszerítéséhez. Az endpoint protection ügyfélprogram (valószínűleg a tálcán), válasszon **frissítés**.
-- A Vezérlőpult > programokat, válassza ki azokat **a Microsoft Intune Endpoint Protection-ügynök**. Az alkalmazás telepítésének eltávolításához.
+- Ha az Endpoint Protection sérült vagy nem frissül, akkor frissítse vagy telepítse újra a programot.
+- Azonnali frissítés kényszerítése. Az Endpoint Protection-ügyfélprogramban (valószínűleg a tálcán) válassza a **frissítés**lehetőséget.
+- A Vezérlőpulton > programok területen válassza az **Microsoft Intune Endpoint Protection ügynök**lehetőséget. Távolítsa el az alkalmazást.
 - A következő frissítési szinkronizálás során a Microsoft Online Management frissítéskezelője észleli a hiányzó programot, és az ütemezés szerinti telepítési időpontban újratelepíti.
 
-#### <a name="features-are-disabled"></a>Szolgáltatások le vannak tiltva.
+### <a name="features-are-disabled"></a>A funkciók le vannak tiltva
 
-Előfordulhat, hogy kap egy üzenetet, hogy néhány funkció le van-e tiltva. Ezeket az üzeneteket akkor fordulhat elő, ha az Intune endpoint protection vagy a Windows Defender konfigurációs profil segítségével a rendszergazda által le van tiltva. Vagy le van tiltva az eszközön a felhasználó által. Lehetséges üzenetek:
+Előfordulhat, hogy bizonyos funkciók le vannak tiltva. Ezek az üzenetek akkor fordulnak elő, ha a rendszergazda letiltotta az Intune Endpoint Protection vagy a Windows Defender használatát egy konfigurációs profillal. Vagy a végfelhasználó letiltotta az eszközön. Lehetséges üzenetek:
 
 `Endpoint Protection disabled`  
 `Real-time protection disabled`  
@@ -57,30 +57,30 @@ Előfordulhat, hogy kap egy üzenetet, hogy néhány funkció le van-e tiltva. E
 `Script scanning disabled`  
 `Network Inspection System disabled`  
 
-**A lehetséges megoldásokról**: Ezek a funkciók engedélyezéséhez. Útmutatásért lásd:
+**Lehetséges megoldások**: Engedélyezze ezeket a funkciókat. Útmutatásért lásd:
 
-- [Endpoint protection-beállítások hozzáadása](endpoint-protection-configure.md)
-- [A Windows Defender víruskereső](device-restrictions-windows-10.md#windows-defender-antivirus)
-- [Végfelhasználók: Vállalati erőforrások eléréséhez a valós idejű védelem bekapcsolása](/intune-user-help/turn-on-defender-windows)
+- [Endpoint Protection-beállítások hozzáadása](endpoint-protection-configure.md)
+- [Windows Defender víruskereső](device-restrictions-windows-10.md#windows-defender-antivirus)
+- [Végfelhasználók: A valós idejű védelem bekapcsolása a vállalati erőforrások eléréséhez](/intune-user-help/turn-on-defender-windows)
 
-#### <a name="malware-definitions-out-of-date"></a>A kártevő-definíciók elavultak
+### <a name="malware-definitions-out-of-date"></a>A kártevő-definíciók elavultak
 
-Ez az állapot mutatja, ha az eszközön a kártevőszoftver-leírások elavultak legalább 14 napja. Az üzenet valószínűleg például, ha az eszköz nem kapcsolódik az internethez, vagy a kártevő-definíciók elavultak.
+Ez az állapot akkor jelenik meg, ha az eszközön a kártevő-definíciók elavultak (14 nap). Előfordulhat például, hogy az üzenet megmutathatja, hogy az eszköz le van választva az internetről, vagy elavultak a kártevő-definíciók.
 
-**A lehetséges megoldásokról**: Kártevőszoftver-leírások elavultak, frissítheti használatával [Windows Defender víruskereső](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Lehetséges megoldások**: Ha a kártevő-definíciók elavultak, frissítse a definíciókat a [Windows Defender Antivirus](device-restrictions-windows-10.md#windows-defender-antivirus)használatával.
 
-#### <a name="full-scan-overdue-or-quick-scan-overdue"></a>Teljes vizsgálat késésben vagy Gyorsvizsgálat késésben
+### <a name="full-scan-overdue-or-quick-scan-overdue"></a>A teljes ellenőrzés elmaradt, vagy a gyors ellenőrzés késésben
 
-A teljes vizsgálat vagy Gyorsvizsgálat 14 napig nem befejeződött. Ez akkor fordulhat elő, ha az eszköz újraindul a teljes vizsgálat során.
+A teljes vizsgálat vagy a gyors vizsgálat 14 napig nem fejeződött be. Ez a forgatókönyv akkor fordulhat elő, ha az eszköz egy teljes vizsgálat során újraindul.
 
-**A lehetséges megoldásokról**: Ha a vizsgálat késésben, futtathat egy egyszeri vizsgálatot, vagy ismétlődő vizsgálatokat. Lásd: [Windows Defender víruskereső](device-restrictions-windows-10.md#windows-defender-antivirus).
+**Lehetséges megoldások**: Ha egy vizsgálat késésben van, futtathat egy egyszeri vizsgálatot, vagy ismétlődő vizsgálatokat is ütemezhet. Lásd: [Windows Defender víruskereső](device-restrictions-windows-10.md#windows-defender-antivirus).
 
-#### <a name="another-endpoint-protection-application-running"></a>Egy másik végpontvédelmi alkalmazás fut
+### <a name="another-endpoint-protection-application-running"></a>Egy másik végpontvédelmi alkalmazás fut
 
-Egy másik végpontvédelmi alkalmazás fut, és az eszköz nem kifogástalan állapotú.
+Egy másik Endpoint Protection-alkalmazás fut, és az eszköz kifogástalan állapotú.
 
-**A lehetséges megoldásokról**: Ha egy másik végpontvédelmi alkalmazás telepítve van, és az Intune érzékeli azt, az eszköz instabillá válhat.
+**Lehetséges megoldások**: Ha egy másik Endpoint Protection-alkalmazás telepítve van, és az Intune észleli ezt az alkalmazást, akkor az eszköz instabillá válhat.
 
 ## <a name="next-steps"></a>További lépések
 
-Első [segítséget a Microsoft támogatási](get-support.md), vagy használja a [közösségi fórumokat is talál](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).
+Kérjen [támogatási segítséget](get-support.md)a Microsofttól, vagy használja a [közösségi fórumokat](https://social.technet.microsoft.com/Forums/en-US/home?category=microsoftintune).

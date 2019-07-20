@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b612a245e0a12384f8f9e7ec4a2c970afc2fd628
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: eb9f7eef1f7f0e4a712bdf3e8a3706374ac002a8
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67548824"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353317"
 ---
 # <a name="use-policies-to-simplify-windows-pc-management"></a>A Windows rendszerű számítógép kezelésének leegyszerűsítése szabályzatok használatával
 
@@ -32,7 +32,7 @@ Ha a Windows rendszerű számítógépeket a rájuk telepített Intune szoftver�
 
 ![Szabályzatsablon Windows rendszerű számítógépekhez](media/pc_policy_template.png)
 
-### <a name="manage-the-microsoft-intune-center"></a>A Microsoft Intune Center felügyelete
+## <a name="manage-the-microsoft-intune-center"></a>A Microsoft Intune Center felügyelete
 A felhasználók számára az Intune-szoftverügyfél az **Microsoft Intune Center** formájában jelenik meg. A Microsoft Intune Center a következőket teszi lehetővé a felhasználók számára:
 
 - alkalmazások beszerzése a vállalati portálról;
@@ -51,7 +51,7 @@ A Microsoft Intune Center minden felügyelt számítógépre telepítve van. Az 
 |**Telefonszám**|A számítógépet felügyelő rendszergazda telefonszáma.<br />Maximális hossz: 20 karakter|
 |**E-mail cím**|A számítógépet felügyelő rendszergazda e-mail címe.<br />Maximális hossz: 40 karakter|
 |**Webhely neve**|A felhasználói támogatási webhely neve.<br />> maximális hossz: 40 karakter|
-|**Webhely URL-címe**|A támogatási webhely URL-címe.<br />Maximális hossz: 150 karakternél|
+|**Webhely URL-címe**|A támogatási webhely URL-címe.<br />Maximális hossz: 150 karakter|
 |**Megjegyzések**|A felhasználóknak megjelenített megjegyzés.<br />Maximális hossz: 120 karakter|
 
 A Windows rendszerű számítógépekre vonatkozóan konfigurált szabályzatokról és beállításokról a következő információforrásokból tájékozódhat:
@@ -63,6 +63,6 @@ A Windows rendszerű számítógépekre vonatkozóan konfigurált szabályzatokr
 - [A Windows rendszerű számítógépek védelme Windows tűzfalházirendek használatával a Microsoft Intune-ban](help-protect-windows-pcs-using-windows-firewall-policies-in-microsoft-intune.md) – Ezek a szabályzatok leegyszerűsítik a Windows tűzfal beállításainak adminisztrációját a felügyelt számítógépeken.
 
 
-### <a name="see-also"></a>Lásd még:
+## <a name="see-also"></a>Lásd még:
 
 [A Windows rendszerű számítógépek Intune-szoftverügyféllel való felügyeletének általános feladatai](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)

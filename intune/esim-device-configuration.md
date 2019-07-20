@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e241dc534427b97086013a12391f06bd2f342779
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: e4a171255c545e2f2c55adf4695476107d06aefe
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883259"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354386"
 ---
 # <a name="configure-esim-cellular-profiles-in-intune---public-preview"></a>eSIM mobilhálózati profilok konfigurálása az Intune-ban – Nyilvános előzetes verzió
 
@@ -79,7 +79,7 @@ A mobilhálózati aktiváló kódokat a mobilszolgáltató adja meg egy vesszőv
 4. Válassza ki az aktiváló kódot tartalmazó CSV-fájlt.
 5. Válassza ki **OK** a módosítások mentéséhez.
 
-#### <a name="csv-file-requirements"></a>A CSV-fájlokhoz kapcsolódó követelmények
+### <a name="csv-file-requirements"></a>A CSV-fájlokhoz kapcsolódó követelmények
 
 Az aktiváló kódokat tartalmazó CSV-fájl kezelése során Önnek vagy a rendszergazdának a következőkre kell ügyelnie:
 
@@ -89,7 +89,7 @@ Az aktiváló kódokat tartalmazó CSV-fájl kezelése során Önnek vagy a rend
 - Minden egyes fájl csak egy adott mobilszolgáltatóhoz, és minden aktiváló kód egy adott számlázási csomaghoz tartozhat. Az Intune véletlenszerűen osztja ki az aktiváló kódokat a megcélzott eszközök között. Nem garantálható, hogy egy adott aktiváló kódot egy adott eszköz kap meg.
 - Egy csv-fájlban legfeljebb 1000 aktiválási kód importálható.
 
-#### <a name="csv-file-example"></a>Példa a CSV-fájlra
+### <a name="csv-file-example"></a>Példa a CSV-fájlra
 
 1. A csv fájl első sora és első cellája a mobilszolgáltató eSIM aktiváló szolgálatának URL-címe, amelynek a neve: SM-DP+ (Subscription Manager Data Preparation server, előfizetés-kezelő adat-előkészítési kiszolgáló). Az URL-cím csak teljesen minősített, vessző nélküli tartománynév (FDQN) lehet.
 2. A második és az azt követő összes további sor az egyedi, egyszer használható aktiváló kódokat tartalmazza, kétféle értékkel:
@@ -129,7 +129,7 @@ Az aktiváló kódok csak egyszer használhatók fel. Miután az Intune telepít
 
 ## <a name="step-4-monitor-deployment"></a>4\. lépés: Központi telepítés figyelése
 
-#### <a name="review-the-deployment-status"></a>A központi telepítés állapotának áttekintése
+### <a name="review-the-deployment-status"></a>A központi telepítés állapotának áttekintése
 
 A profil hozzárendelése után figyelheti az előfizetési készlet központi telepítésének állapotát.
 
@@ -138,7 +138,7 @@ A profil hozzárendelése után figyelheti az előfizetési készlet központi t
 3. Kattintson az **Eszközkonfiguráció** > **eSIM mobilhálózati profilok** elemre. A megjelenő lista tartalmaz minden meglévő eSIM mobilhálózati előfizetési készletet.
 4. Válasszon ki egy előfizetést, és tekintse át a **központi telepítés állapotát**.
 
-#### <a name="check-the-profile-status"></a>Profil állapotának ellenőrzése
+### <a name="check-the-profile-status"></a>Profil állapotának ellenőrzése
 Az eszközprofil létrehozása után az Intune grafikus diagramokat nyújt. Ezek a diagramok a profilok állapotát jelenik meg, például, hogy hozzá vannak-e rendelve eszközökhöz, vagy tartalmaznak-e ütközéseket.
 
 1. Válassza ki az **Eszközkonfiguráció** > **eSIM mobilhálózati profilok** > Meglévő előfizetés kiválasztása lehetőséget.
@@ -167,7 +167,7 @@ Figyelheti és megtekintheti az Eszközállapotban megtekinthető eszközök ré
     - **Mobil állapot**: A mobilszolgáltató által biztosított állapot. A hibaelhárításhoz vegye fel a kapcsolatot a mobilszolgáltatóval.
     - **Utolsó beadás**: Az eszköz az Intune-nal való legutóbbi kommunikációjának dátuma
 
-#### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Az eSIM-profil adatainak figyelése az adott eszközön
+### <a name="monitor-esim-profile-details-on-the-actual-device"></a>Az eSIM-profil adatainak figyelése az adott eszközön
 
 1. A saját eszközön nyissa meg a **Beállítások** részt, majd > keresse meg a **Hálózat és internet** lehetőséget.
 2. Válassza ki a **Mobilhálózat** > **eSIM-profilok kezelése** lehetőséget.

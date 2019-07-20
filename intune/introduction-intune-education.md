@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7775a0aec8bdba648cf809e3f797ce5606b2ca4f
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: fa084d2a52e23273effdfb035b218c8ee1f7f2ab
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66047414"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354043"
 ---
 # <a name="how-is-intune-for-education-different-from-the-full-device-management-experience-in-intune"></a>Miben tér el az Intune for Education az Intune teljes eszközfelügyeleti felületétől?
 
@@ -41,7 +41,7 @@ Mind az Intune és az Intune for Education segítségével:
 * Szabályozhatja a felhasználók adatelérését és adatmegosztását, ezáltal védheti a szervezeti adatokat.
 * Gondoskodhat arról, hogy az eszközök és az alkalmazások megfeleljenek a biztonsági követelményeknek.
 
-### <a name="next-steps"></a>További lépések
+## <a name="next-steps"></a>További lépések
 * Ismerkedjen meg a termékkel egy [90 napos ingyenes Intune-próbaverzió](https://signup.microsoft.com/Signup?OfferId=5eec053c-cc40-4cd5-a06a-ea8d75cf2686&ali=1) révén. Ha már rendelkezik hozzáféréssel, látogasson el a (https://intuneeducation.portal.azure.com) címre a kezdéshez.
 * Tudjon meg többet az [Intune for Education használatbavételének leggyorsabb módjáról](/intune-education/what-is-express-configuration).
 * Mélyedjen el az Intune [műszaki követelményeiben és képességeiben](/intune/supported-devices-browsers).
