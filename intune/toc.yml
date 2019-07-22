@@ -382,6 +382,8 @@
               href: privacy-data-view-correct.md
             - name: 'Naplózás, exportálás, törlés'
               href: privacy-data-audit-export-delete.md
+        - name: Eszközök titkosítása
+          href: encrypt-devices.md
         - name: Feltételes hozzáférés
           href: conditional-access.md
           items:
