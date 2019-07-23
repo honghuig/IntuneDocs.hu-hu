@@ -1,12 +1,12 @@
 ---
 title: Egyéni beállítások hozzáadása macOS-eszközökhöz a Microsoft Intune-ban – Azure | Microsoft Docs
 titleSuffix: ''
-description: Exportálhat macOS-beállításokat az Apple Configuratorből vagy az Apple Profile Managerből, majd a Microsoft Intune-ba importálhatja őket. Ezek a beállítások létrehozását, használatát és egyéni beállításainak és funkcióinak macOS-eszközökön. Ez az egyéni profil ezután hozzárendelhető vagy kiosztható a cég vagy szervezet macOS-eszközei számára egy kiindulási alap vagy szabvány létrehozása érdekében.
+description: Exportálhat macOS-beállításokat az Apple Configuratorből vagy az Apple Profile Managerből, majd a Microsoft Intune-ba importálhatja őket. Ezek a beállítások a macOS-eszközök egyéni beállításait és funkcióit hozhatják létre, használhatják és vezérelhetik. Ez az egyéni profil ezután hozzárendelhető vagy kiosztható a cég vagy szervezet macOS-eszközei számára egy kiindulási alap vagy szabvány létrehozása érdekében.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/23/2018
+ms.date: 06/26/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 04671df820fee96d4090b13f6fa8f6c4f983a1ac
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: e0309c5aa73dc8c03cabd69878d55ac51aa6d4f3
+ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530229"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375134"
 ---
 # <a name="use-custom-settings-for-macos-devices-in-microsoft-intune"></a>macOS-eszközökre vonatkozó egyéni beállítások használata a Microsoft Intune-ban
 
@@ -31,13 +31,17 @@ macOS-eszközök használatakor az alábbi két megoldással lehet egyéni beál
 - [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12)
 - [Apple Profile Manager](https://support.apple.com/profile-manager)
 
-Ezekkel az eszközökkel exportálhatja a beállításokat egy konfigurációs profilba. Az Intune-ban importálja ezt a fájlt, majd hozzárendeli a profilt a macOS-felhasználókhoz és -eszközökhöz. A hozzárendelés után a beállítások ki lesznek osztva, és létrehoznak egy macOS-eszközökre vonatkozó kiindulási alapot vagy szabványt a cégen vagy szervezeten belül.
+Ezekkel az eszközökkel exportálhatja a beállításokat egy konfigurációs profilba. Az Intune-ban importálja ezt a fájlt, majd hozzárendeli a profilt a macOS-felhasználókhoz és -eszközökhöz. A hozzárendelés után a rendszer elosztja a beállításokat. Emellett létrehoznak egy alapkonfigurációt vagy egy standardot a macOS rendszerhez a szervezetben.
 
-Ebből a cikkből megtudhatja, hogyan hozhat létre egyéni profilt macOS-eszközök számára, és az Apple Configurator és az Apple Profil Manager használatához is útmutatást kap.
+Ez a cikk útmutatást nyújt az Apple konfigurátor és az Apple-profil kezelőjének használatáról, valamint ismerteti a konfigurálható tulajdonságokat is.
 
 ## <a name="before-you-begin"></a>Előkészületek
 
-- Ha a konfigurációs profilokat az **Apple Configuratorral** hozza létre, győződjön meg arról, hogy az exportált beállítások kompatibilisek az Ön által használt eszközökön futó macOS verziójával. A nem kompatibilis beállításokból fakadó problémák megoldásával kapcsolatos információkat az [Apple Developer](https://developer.apple.com/) webhelyről letölthető **Configuration Profile Reference** és **Mobile Device Management Protocol Reference** című (angol nyelvű) útmutatókban talál.
+[Hozza létre a profilt](device-profile-create.md).
+
+## <a name="what-you-need-to-know"></a>Amit még tudnia kell
+
+- Ha az **Apple konfigurátor** használatával hozza létre a konfigurációs profilt, ügyeljen arra, hogy az exportált beállítások kompatibilisek legyenek az eszközök MacOS-verziójával. A nem kompatibilis beállításokból fakadó problémák megoldásával kapcsolatos információkat az [Apple Developer](https://developer.apple.com/) webhelyről letölthető **Configuration Profile Reference** és **Mobile Device Management Protocol Reference** című (angol nyelvű) útmutatókban talál.
 
 - Az **Apple Profile Manager** használatakor:
 
@@ -47,25 +51,19 @@ Ebből a cikkből megtudhatja, hogyan hozhat létre egyéni profilt macOS-eszkö
 
     Töltse le és mentse ezt a fájlt. A fájlt az Intune-profilban adja majd meg. 
 
-  - Ellenőrizze, hogy az Apple Profile Managerből exportált beállítások kompatibilisek-e az Ön által használt eszközökön futó macOS-verzióval. A nem kompatibilis beállításokból fakadó problémák megoldásával kapcsolatos információkat az [Apple Developer](https://developer.apple.com/) webhelyről letölthető **Configuration Profile Reference** és **Mobile Device Management Protocol Reference** című (angol nyelvű) útmutatókban talál.
+  - Ügyeljen arra, hogy az Apple profil Managerből exportált beállítások kompatibilisek legyenek az eszközök macOS-verziójával. A nem kompatibilis beállításokból fakadó problémák megoldásával kapcsolatos információkat az [Apple Developer](https://developer.apple.com/) webhelyről letölthető **Configuration Profile Reference** és **Mobile Device Management Protocol Reference** című (angol nyelvű) útmutatókban talál.
 
-## <a name="create-the-profile"></a>A profil létrehozása
+## <a name="custom-configuration-profile-settings"></a>Egyéni konfigurációs profil beállításai
 
-1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
-2. Válassza az **Eszközkonfiguráció** > **Profilok** > **Profil létrehozása** lehetőséget.
-3. Adja meg a következő beállításokat:
+- **Egyéni konfigurációs profil neve**: Adja meg a szabályzat nevét. Ez a név megjelenik az eszközön, valamint az Intune állapotában.
+- **Konfigurációs profil fájlja**: Keresse meg a létrehozott konfigurációs profilt az Apple konfigurátor vagy az Apple Profile Manager használatával. Az importált fájl megjelenik a **Fájl tartalma** területen.
 
-    - **Név**: Adja meg egy nevet a profilnak, például `macos custom profile`.
-    - **Description** (Leírás): Adja meg a profil leírását.
-    - **Platform**: Válasszon **macOS**.
-    - **Profil típusa**: Válasszon **egyéni**.
+  Az eszközök jogkivonatait is hozzáadhatja a `.mobileconfig` fájlokhoz. Az eszköz-jogkivonatok az eszközre vonatkozó információk hozzáadására szolgálnak. A sorozatszám megjelenítéséhez például írja be `{{serialnumber}}`a következőt:. Az eszközön a szöveg a következőhöz hasonló `123456789ABC`módon jelenik meg:, amely egyedi az egyes eszközökön. A változók beírásakor ügyeljen arra, hogy kapcsos zárójeleket `{{ }}`használjon. Az [alkalmazás-konfigurációs tokenek](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) tartalmazzák a használható változók listáját. Használhatja a `deviceid` vagy bármely más eszközre jellemző értéket is.
 
-4. Az **Egyéni konfiguráció** részben adja meg a következő beállításokat:
+  > [!NOTE]
+  > A rendszer nem érvényesíti a változókat a felhasználói felületen, és megkülönbözteti a kis-és nagybetűket. Ennek eredményeképpen előfordulhat, hogy a profilok helytelen bevitelsel lettek mentve. Ha például a `{{deviceid}}`helyett a értéket `{{DeviceID}}` adja meg, akkor az eszköz egyedi azonosítója helyett a literál sztring jelenik meg. Ügyeljen arra, hogy a helyes adatokat adja meg.
 
-    - **Egyéni konfigurációs profil neve**: Adja meg a szabályzat nevét. Ez a név megjelenik az eszközön, valamint az Intune állapotában.
-    - **Konfigurációs profil fájlja**: Keresse meg az Apple Configuratort vagy az Apple-profil Manager használatával létrehozott konfigurációs profilt. Az importált fájl megjelenik a **Fájl tartalma** területen.
-
-5. Az Intune-profil létrehozásához válassza az **OK** > **Létrehozás** lehetőséget. Ha a profil elkészült, megjelenik az **Eszközkonfiguráció – Profilok** listában.
+A módosítások mentéséhez válassza az **OK** > **Létrehozás** lehetőséget. Ekkor létrejön a profil, és megjelenik a profilok listájában.
 
 ## <a name="next-steps"></a>További lépések
 

@@ -4,7 +4,7 @@ description: A Microsoft 365 Nagyvállalati verzió tartalmazza a Microsoft Intu
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/12/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 audience: ITPro
 ms.service: microsoft-intune
@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f476c3129f3f3da4cde98fd0cd9960c223ffd6ae
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: 8525dd143a8e08f6915fa90dff0d51d6632eceea
+ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884275"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387312"
 ---
 # <a name="what-is-device-management"></a>Mi az eszközkezelés? 
 
@@ -73,11 +73,11 @@ Az [MDM és az MAM](https://docs.microsoft.com/intune/byod-technology-decisions)
 
 Az Intune beállításakor azt is kiválaszthatja, hogy csak az Azure Portalon, vagy az Intune és a Microsoft 365 együttes használatával kívánja kezelni az eszközöket. [A mobileszköz-kezelés áttelepítése az Intune-ba a Azure Portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) egy Microsoft IT-esettanulmány. Ebben az esetben tekintse meg, hogyan választotta a Microsoft IT a modern eszközkezelés megközelítését, és olvassa el a tanulságokat.
 
-## <a name="simplify-it-tasks-using-the-device-management-dashboard"></a>Informatikai feladatok egyszerűsítése a Eszközkezelés irányítópulttal
+## <a name="simplify-it-tasks-using-the-device-management-specialist-workspace"></a>Az informatikai feladatok egyszerűsítése az Eszközkezelő Specialist munkaterülettel
 
-Az [Eszközkezelés irányítópulton](https://devicemanagement.portal.azure.com/) egy helyen kezelheti mobileszközeit, és végezhet rajtuk feladatokat. Az irányítópult magában foglalja az eszközkezeléshez használt szolgáltatásokat, köztük az Intune-t és az Azure Active Directoryt, és az ügyfélalkalmazások kezelésére is alkalmas. 
+Az [Eszközkezelő Specialist](https://devicemanagement.portal.azure.com/) munkaterülete egy egyablakos eszköz, amellyel kezelheti és elvégezheti a mobileszközök feladatait. Ez a munkaterület magában foglalja az eszközök felügyeletéhez használt szolgáltatásokat, beleértve az Intune-t és a Azure Active Directoryt, valamint az ügyfélalkalmazások felügyeletét is. 
 
-Az Eszközkezelés irányítópulton a következőket hajthatja végre:
+Az Eszközkezelő Specialist munkaterületen a következőket teheti:
 
 - [Eszközök regisztrálása](https://docs.microsoft.com/intune/device-enrollment)
 - [Eszközmegfelelőség beállítása](https://docs.microsoft.com/intune/device-compliance-get-started)
