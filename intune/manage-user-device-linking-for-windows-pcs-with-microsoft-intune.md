@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic-keep
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f4dad2d22b742b62ca35bd7fb98c7f7e8241cbb4
-ms.sourcegitcommit: 256952cac44bc6289156489b6622fdc1a3c9c889
+ms.openlocfilehash: 0eca9dfddbf9ea2c68cf58b1da64d9b046df7e77
+ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402904"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68353637"
 ---
 # <a name="manage-user-device-linking-for-windows-pcs"></a>Felhasználók és eszközök összekapcsolásának felügyelete Windows rendszerű számítógépekhez
 
@@ -32,7 +32,7 @@ Az ebben a témakörben ismertetett információk csak az Intune-szoftverügyfé
 
 Mielőtt szoftvereket telepítene egy felhasználónak, a felhasználót egy számítógéphez kell kapcsolni. Egy felhasználót több számítógéphez is kapcsolhat, de minden gép csak egyetlen felhasználóhoz kapcsolható. A felhasználókat a rendszer automatikusan összekapcsolja azokkal a számítógépekkel, amelyeket a céges portálon keresztül regisztráltak az Intune-ban.
 
-Egy eszköz elsődleges felhasználója kapcsolatos további információkért lásd: [kereshet elsődleges felhasználói](find-primary-user.md).
+További információ az eszköz elsődleges felhasználóról: [elsődleges felhasználó keresése](find-primary-user.md).
 
 Felhasználók kapcsolása számítógépekhez:
 
@@ -46,13 +46,13 @@ Felhasználók kapcsolása számítógépekhez:
 
    - Ha azt szeretné, hogy a számítógép továbbra is az aktuális felhasználóhoz legyen kapcsolva (ha van ilyen), válassza a **Mégse** lehetőséget.
 
-   - Távolítsa el az aktuális felhasználóhoz való kapcsolatot, ha van ilyen, válassza a <strong>hivatkozás eltávolítása **&gt;** OK</strong>.
+   - Ha el szeretné távolítani az aktuális felhasználóra mutató hivatkozást, ha van ilyen, válassza a <strong> **&gt;** kapcsolat eltávolítása ok</strong>lehetőséget.
 
    - Ha a számítógépet egy új felhasználóhoz szeretné kapcsolni, válasszon ki egy felhasználót a **Minden felhasználó** listában. Erősítse meg, hogy a felhasználói adatok helyesek, majd kattintson az **OK** gombra.
 
 > [!TIP]
 > Ha korlátozni szeretné végfelhasználókat abban, hogy önmagukat számítógépekkel kapcsolják össze, engedélyezze **A felhasználók korlátozása abban, hogy önmagukat számítógépekhez csatolhassák** beállítást a **Microsoft Intune-ügynök beállításai** szabályzatban.
 
-### <a name="see-also"></a>Lásd még:
+## <a name="see-also"></a>Lásd még:
 
 [A Windows rendszerű számítógépek Intune-szoftverügyféllel való felügyeletének általános feladatai](common-windows-pc-management-tasks-with-the-microsoft-intune-computer-client.md)
