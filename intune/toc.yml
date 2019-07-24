@@ -171,6 +171,7 @@
       items:
         - name: Mi az eszközregisztrálás?
           href: device-enrollment.md
+          displayName: COD; BYOD; DEM; DEP; USB-SA; USB-Direct; co-management; GPO
         - name: Eszközkezelési képességek
           href: device-management-capabilities.md
         - name: Regisztrációs beállítások
@@ -184,6 +185,7 @@
               href: apple-mdm-push-certificate-get.md
             - name: Vállalati azonosítók
               href: corporate-identifiers-add.md
+              displayName: COD
             - name: Többtényezős hitelesítés
               href: multi-factor-authentication.md
             - name: Készülékregisztráció-kezelő
@@ -273,6 +275,8 @@
           href: device-remove-user.md
         - name: Elsődleges felhasználó megkeresése
           href: find-primary-user.md
+        - name: Értesítések küldése
+          href: custom-notifications.md
         - name: macOS-eszköz adatainak törlése
           href: device-erase.md
         - name: Távolról vezérelt mobileszközök
@@ -559,20 +563,27 @@
               href: apps-add-built-in.md
             - name: PowerShell-parancsprogramok
               href: intune-management-extension.md
-        - name: Alkalmazások telepítése
-          href: apps-deploy.md
+        - name: Alkalmazások hozzárendelése
           items:
+            - name: Alkalmazások hozzárendelése csoportokhoz
+              href: apps-deploy.md
+              displayName: app assignment; assignment
             - name: Alkalmazások belefoglalása vagy kizárása
               href: apps-inc-exl-assignments.md
+              displayName: app assignment
             - name: Windows 10-alkalmazások telepítése
               href: apps-windows-10-app-deploy.md
             - name: Alkalmazások üzembe helyezése kormányzati környezetekben
               href: apps-deploy-gcc-dod.md
         - name: Alkalmazások figyelése
           href: apps-monitor.md
+        - name: Felderített alkalmazások
+          href: app-discovered-apps.md
         - name: Alkalmazások konfigurálása
-          href: app-configuration-policies-overview.md
           items:
+            - name: Alkalmazáskonfigurációs szabályzatok
+              href: app-configuration-policies-overview.md
+              displayName: App configuration policy; configuration policy
             - name: iOS felügyelt eszközök
               href: app-configuration-policies-use-ios.md
             - name: Android felügyelt eszközök
