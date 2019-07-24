@@ -1,5 +1,5 @@
 ---
-title: Webes elérés kezelése a Microsoft Edge és a Microsoft Intune használatával
+title: Az iOS és az Android rendszerhez készült Microsoft Edge felügyelete az Intune-nal
 titleSuffix: ''
 description: A Microsoft Edge Intune app Protection-szabályzatokkal biztosíthatja, hogy a vállalati webhelyek mindig elérhetők legyenek a szükséges védelemmel.
 keywords: ''
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: a2deaa53486947ceeedbed56dfd7d192debc4eab
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
-ms.translationtype: HT
+ms.openlocfilehash: bc18ba2210719cbebe77cd5b37024be4bb7b0d3e
+ms.sourcegitcommit: a01f0f3070932e3be44a4f545d4de11d715381ea
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882947"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68287215"
 ---
 # <a name="manage-web-access-by-using-microsoft-edge-with-microsoft-intune"></a>Webes elérés kezelése a Microsoft Edge és a Microsoft Intune használatával
 
@@ -133,7 +133,7 @@ A Intune Managed Browser és a Microsoft Edge is használható házirend által 
 |------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    `com.microsoft.intune.useEdge`    |    Az érték `true` a Microsoft Edge letöltésére és használatára utasítja a felhasználókat.<br>Az érték `false` lehetővé teszi, hogy a felhasználók a Intune Managed Browser használják.    |
 
-Ha az alkalmazás konfigurációs értéke nincs **** beállítva, a következő logika határozza meg, hogy melyik böngészőt fogja használni a vállalati hivatkozások megnyitásához.
+Ha az alkalmazás konfigurációs értéke nincs  beállítva, a következő logika határozza meg, hogy melyik böngészőt fogja használni a vállalati hivatkozások megnyitásához.
 
 Androidon:
 - A Intune Managed Browser akkor indul el, ha a felhasználó a Intune Managed Browser és a Microsoft Edge is le van töltve az eszközön. 
@@ -183,7 +183,7 @@ Ezzel a beállítással beállíthatja a Microsoft Edge-re mutató parancsikont.
 
 A Kezdőlap parancsikonjának konfigurálásához használja a következő kulcs/érték párokat:
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.intune.mam.managedbrowser.homepage   |    Adjon meg egy érvényes URL-címet. A helytelen URL-címek biztonsági intézkedésként le vannak tiltva.<br>**Például** <`https://www.bing.com`>
     |
@@ -209,7 +209,7 @@ A felügyelt könyvjelzők konfigurálásához használja a következő kulcs/é
 
 Alapértelmezés szerint a felhasználók a Microsoft Edge-könyvjelzőn belül egy mappában konfigurált MyApps-helyeket jelenítik meg. A mappa a szervezet nevével van megjelölve.
 
-|    Kulcs    |    Value    |
+|    Kulcs    |    Érték    |
 |------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 |    com.microsoft.intune.mam.managedbrowser.MyApps    |    A **true (igaz** ) érték a Microsoft Edge-könyvjelzőn belüli MyApps mutatja.<p>**Hamis** elrejti a MyApps a Microsoft Edge-n belül.    |
 
@@ -236,9 +236,9 @@ Az engedélyezett/letiltott webhelyek listája a különböző URL-címek haszn�
     |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
     |    `http://www.contoso.com`    |    Egyetlen lapnak felel meg    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
     |    `http://contoso.com`    |    Egyetlen lapnak felel meg    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/&#42;`   |    Az összes `www.contoso.com` karakterlánccal kezdődő URL-cím    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Az összes altartományra illeszkedik`contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |
-    |    `http://www.contoso.com/images`    |    Egyetlen mappa    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
+    |    `http://www.contoso.com/*;`   |    Az összes `www.contoso.com` karakterlánccal kezdődő URL-cím    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
+    |    `http://*.contoso.com/*`    |    Az összes altartományra illeszkedik`contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`    |    `http://*contoso.com/*`    |    A-vel végződő összes altartományra illeszkedik`contoso.com/`    |    `http://news-contoso.com`<br>`http://news-contoso.com.com/daily`    |    `http://news-contoso.host.com`    |
+    `http://www.contoso.com/images`    |    Egyetlen mappa    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
     |    `http://www.contoso.com:80`    |    Egyetlen lapra illeszkedik, egy portszám használatával    |    `http://www.contoso.com:80`    |         |
     |    `https://www.contoso.com`    |    Egyetlen biztonságos lap    |    `https://www.contoso.com`    |    `http://www.contoso.com`    |
     |    `http://www.contoso.com/images/*`    |    Egyetlen mappa és annak összes almappája    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |

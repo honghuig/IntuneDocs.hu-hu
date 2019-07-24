@@ -15,12 +15,12 @@ ms.reviewer: angerobe
 ms.suite: ems
 search.appverid: MET150
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8525dd143a8e08f6915fa90dff0d51d6632eceea
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 5be25e9ab88f4dd44399d6ddc37cfc25955475ba
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387312"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427315"
 ---
 # <a name="what-is-device-management"></a>Mi az eszközkezelés? 
 
@@ -59,7 +59,7 @@ Minden eszközkezelési megoldás fő feladata a biztonság és a védelem. Az I
 - A **Windows Defender** a Windows 10-es eszközök védelmében közreműködő számos biztonsági funkciót tartalmaz. Az Intune és a Windows Defender együttes használatával megteheti például a következőket: 
 
   - Engedélyezheti a [Windows Defender SmartScreen](https://docs.microsoft.com/intune/endpoint-protection-windows-10) megoldást, amely gyanús tevékenységeket keres mobileszközökön, fájlokban és alkalmazásokban. 
-  - A [Windows Defender komplex veszélyforrások elleni védelem (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) használatával megakadályozhatja a mobileszközök biztonsági megsértését. A és a segítségével korlátozhatja a biztonsági rések hatását azáltal, hogy blokkolja a felhasználót a vállalati erőforrásokból.
+  - A [Microsoft Defender komplex veszélyforrások elleni védelem (ATP)](https://docs.microsoft.com/intune/advanced-threat-protection) használatával megakadályozhatja a mobileszközök biztonsági megsértését. A és a segítségével korlátozhatja a biztonsági rések hatását azáltal, hogy blokkolja a felhasználót a vállalati erőforrásokból.
 
 - A **feltételes hozzáférés** a Azure Active Directory egyik funkciója, és szépen együttműködik az Intune-nal. A [feltételes hozzáférés](https://docs.microsoft.com/intune/conditional-access)használata esetén győződjön meg arról, hogy csak a megfelelő eszközök férhetnek hozzá az e-mailekhez, a sharepointhoz és más alkalmazásokhoz. 
 
@@ -73,11 +73,11 @@ Az [MDM és az MAM](https://docs.microsoft.com/intune/byod-technology-decisions)
 
 Az Intune beállításakor azt is kiválaszthatja, hogy csak az Azure Portalon, vagy az Intune és a Microsoft 365 együttes használatával kívánja kezelni az eszközöket. [A mobileszköz-kezelés áttelepítése az Intune-ba a Azure Portal](https://www.microsoft.com/itshowcase/Article/Content/1042/Migrating-mobile-device-management-to-Intune-in-the-Azure-portal) egy Microsoft IT-esettanulmány. Ebben az esetben tekintse meg, hogyan választotta a Microsoft IT a modern eszközkezelés megközelítését, és olvassa el a tanulságokat.
 
-## <a name="simplify-it-tasks-using-the-device-management-specialist-workspace"></a>Az informatikai feladatok egyszerűsítése az Eszközkezelő Specialist munkaterülettel
+## <a name="simplify-it-tasks-using-the-device-management-admin-center"></a>Az informatikai feladatok egyszerűsítése az Eszközkezelő felügyeleti központban
 
-Az [Eszközkezelő Specialist](https://devicemanagement.portal.azure.com/) munkaterülete egy egyablakos eszköz, amellyel kezelheti és elvégezheti a mobileszközök feladatait. Ez a munkaterület magában foglalja az eszközök felügyeletéhez használt szolgáltatásokat, beleértve az Intune-t és a Azure Active Directoryt, valamint az ügyfélalkalmazások felügyeletét is. 
+Az [Eszközkezelő felügyeleti központ](https://devicemanagement.portal.azure.com/) egy egyablakos áruház a mobileszközök feladatainak kezeléséhez és végrehajtásához. Ez a munkaterület magában foglalja az eszközök felügyeletéhez használt szolgáltatásokat, beleértve az Intune-t és a Azure Active Directoryt, valamint az ügyfélalkalmazások felügyeletét is. 
 
-Az Eszközkezelő Specialist munkaterületen a következőket teheti:
+Az Eszközkezelő felügyeleti központban a következőket teheti:
 
 - [Eszközök regisztrálása](https://docs.microsoft.com/intune/device-enrollment)
 - [Eszközmegfelelőség beállítása](https://docs.microsoft.com/intune/device-compliance-get-started)

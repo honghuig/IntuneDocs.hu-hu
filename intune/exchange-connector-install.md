@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7663009c7d45171ab6469f7f6e96b4c8f979b744
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883287"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427322"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>A helyszíni Intune Exchange Connector beállítása Microsoft Intune
 A cikkben található információk segítségével telepítheti és figyelheti a Exchange Active Sync helyszíni összekötőt az Intune-hoz.  Az Intune helyszíni Exchange Connector és a [feltételes hozzáférési szabályzatok segítségével engedélyezheti vagy letilthatja a helyszíni Exchange-postaládák elérését](conditional-access-exchange-create.md). 
@@ -152,8 +152,22 @@ A helyszíni Exchange Connector magas rendelkezésre állása azt jelenti, hogy 
 A feladatátvétel végrehajtásához, miután az összekötő sikeresen létrehozta az Exchange-hez való csatlakozást a megadott HITELESÍTÉSSZOLGÁLTATÓK használatával, az összekötő felfedi a további CASst az adott Exchange-szervezet számára. A további CASs ismerete lehetővé teszi, hogy az összekötő feladatátvételt hajtson végre egy másik CAS számára, ha elérhető, amíg az elsődleges HITELESÍTÉSSZOLGÁLTATÓK elérhetővé nem válnak. Alapértelmezés szerint a további CASs felderítése engedélyezve van. A feladatátvételt a következő eljárással kapcsolhatja ki:  
 1. A kiszolgálón, amelyen az Exchange Connector telepítve van, lépjen a következőre:%*ProgramData*% \ Microsoft\Windows Intune Exchange Connector. 
 2. Nyissa meg egy szövegszerkesztőben az **OnPremisesExchangeConnectorServiceConfiguration.xml** fájlt.
-3. Módosítsa az &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; értéket az &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt; értékre a funkció letiltásához.    
+3. Módosítsa az &lt;IsCasFailoverEnabled&gt;**true**&lt;/IsCasFailoverEnabled&gt; értéket az &lt;IsCasFailoverEnabled&gt;**false**&lt;/IsCasFailoverEnabled&gt; értékre a funkció letiltásához.  
  
+## <a name="optional-performance-tuning-for-the-exchange-connector"></a>Opcionális teljesítmény-hangolás az Exchange connectorhoz  
+
+Ha az Exchange ActiveSync használatával 5 000 vagy több eszközt támogat, konfigurálhat egy opcionális beállítást az összekötő teljesítményének növelése érdekében. Nagyobb teljesítmény érhető el azáltal, hogy lehetővé teszi, hogy az Exchange a PowerShell-parancsok több példányát használja a futtatáshoz. 
+
+A módosítás előtt győződjön meg arról, hogy az Exchange Connector futtatásához használt fiók nem használatos más Exchange-felügyeleti célokra. Ennek az az oka, hogy az Exchange-fiók legfeljebb 18 futtatási helyet tartalmazhat, amelyek többségét az összekötő fogja használni. 
+
+Ez a teljesítmény-változás nem alkalmas a régebbi vagy lassabb hardveren futó összekötők esetében.  
+
+1. Nyissa meg az összekötők telepítési könyvtárát azon a kiszolgálón, amelyen az összekötő telepítve van.  Az alapértelmezett hely a *C:\ProgramData\Microsoft\Windows Intune Exchange Connector*. 
+2. Szerkessze a *OnPremisesExchangeConnectorServiceConfiguration. XML*fájlt.
+3. Keresse meg a **EnableParallelCommandSupport** , és állítsa az **igaz**értéket:  
+     
+   \<EnableParallelCommandSupport > True\</EnableParallelCommandSupport >
+4. Mentse a fájlt, majd indítsa újra a Microsoft Intune Exchange Connector szolgáltatást.
 
 ## <a name="reinstall-the-on-premises-exchange-connector"></a>A helyszíni Exchange Connector újratelepítése
 Előfordulhat, hogy újra kell telepítenie az Exchange Connectort. Mivel a rendszer egyetlen összekötőt támogat az egyes Exchange-szervezetekhez való csatlakozáshoz, ha egy második összekötőt telepít egy szervezet számára, a telepített új összekötő lecseréli az eredeti összekötőt.

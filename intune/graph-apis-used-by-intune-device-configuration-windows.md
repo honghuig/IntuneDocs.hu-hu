@@ -1,7 +1,7 @@
 ---
 title: Graph API-k az eszközök konfigurálásához a Microsoft Intune-Azure-ban | Microsoft Docs
 titleSuffix: ''
-description: Tekintse meg a Windows 10-es eszközökön a megfelelő Windows CSP és eltolási URI azonosítóval rendelkező Graph API entitások listáját, amelyeket az eszközök Microsoft Intune való konfigurálásakor használ. Tekintse meg a megfelelő API-t és CSP-t a megosztott számítógépek, az Endpoint Protection, a Windows Defender komplex veszélyforrások elleni védelem, az Identity Protection, a Windows 10 Teams, a kioszk és a vállalati Windows Update számára.
+description: Tekintse meg a Windows 10-es eszközökön a megfelelő Windows CSP és eltolási URI azonosítóval rendelkező Graph API entitások listáját, amelyeket az eszközök Microsoft Intune való konfigurálásakor használ. Tekintse meg a megfelelő API-t és CSP-t a megosztott számítógépek, az Endpoint Protection, a Microsoft Defender komplex veszélyforrások elleni védelem, az Identity Protection, a Windows 10 Teams, a kioszk és a Windows Update vállalat számára.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3732a4539c13ad05ae8c95621246429b7f38987e
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: 9db6be9c61455056f7ad32a9dba3fa6be9f6f5c3
+ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354418"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427270"
 ---
 # <a name="graph-apis-and-matching-windows-10-csps-used-in-intune"></a>Az Intune-ban használt Graph API-k és az ahhoz tartozó Windows 10-es kriptográfiai szolgáltatók
 

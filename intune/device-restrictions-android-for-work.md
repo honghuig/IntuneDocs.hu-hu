@@ -1,6 +1,6 @@
 ---
 title: Android Enterprise eszközbeállítások a Microsoft Intune – Azure |} A Microsoft Docs
-description: Android Enterprise vagy az Android for Work-eszközök korlátozása az eszköz beállításai, többek között másolás és beillesztés, show, értesítések, az Alkalmazásengedélyek, az adatok megosztásához, a jelszó hosszát, a bejelentkezési hibák használata ujjlenyomat a zárolás feloldásához újbóli jelszavak, és a bluetooth engedélyezése a munkahelyi névjegyek megosztása. Eszközök konfigurálása egy dedikált eszköz teljes képernyős alkalmazás egy vagy több alkalmazás futtatásához.
+description: Android Enterprise vagy az Android for Work-eszközök korlátozása az eszköz beállításai, többek között másolás és beillesztés, show, értesítések, az Alkalmazásengedélyek, az adatok megosztásához, a jelszó hosszát, a bejelentkezési hibák használata ujjlenyomat a zárolás feloldásához újbóli jelszavak, és a bluetooth engedélyezése a munkahelyi névjegyek megosztása. Az eszközöket dedikált eszközként konfigurálhatja egy alkalmazás vagy több alkalmazás futtatásához.
 keywords: ''
 author: MandiOhlinger
 ms.author: mandia
@@ -14,16 +14,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure, seodec18
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: fc91fc685c28beff38dc395dd83b60e99343af57
-ms.sourcegitcommit: 2545ffb75b8d9290718d3a67acdcbea2f279090f
+ms.openlocfilehash: d4ab90a36254de49eb27e326086ffb137c782005
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67883435"
 ---
 # <a name="android-enterprise-device-settings-to-allow-or-restrict-features-using-intune"></a>Android Enterprise eszközbeállítások engedélyezett vagy korlátozott funkciók az Intune-nal
 
-Ez a cikk és az Android Enterprise eszközökön szabályozhatja a különböző beállításokat ismerteti. A mobileszköz-felügyelet (MDM) megoldás részeként használja ezeket a beállításokat engedélyezi vagy letiltja a szolgáltatások, a dedikált eszközök, a biztonság szabályozásához és a további futtatási alkalmazások.
+Ez a cikk és az Android Enterprise eszközökön szabályozhatja a különböző beállításokat ismerteti. A mobileszköz-kezelési (MDM) megoldás részeként ezeket a beállításokat használhatja a funkciók engedélyezéséhez vagy letiltásához, a dedikált eszközökön futó alkalmazások futtatásához, valamint a biztonság szabályozásához.
 
 ## <a name="before-you-begin"></a>Előkészületek
 
@@ -33,157 +33,157 @@ Ez a cikk és az Android Enterprise eszközökön szabályozhatja a különböz�
 
 ### <a name="general-settings"></a>Általános beállítások
 
-- **Képernyőfelvétel**: Válasszon **blokk** megakadályozza a képernyőképek és a képernyő rögzíti az eszközön. Ezen kívül megakadályozza a tartalom megjelenítését a biztonságos videokimenettel nem rendelkező megjelenítő eszközökön. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználó képként rögzítse a képernyőn látható tartalmat.
-- **Kamera**: Válasszon **blokk** kívánja tagadni a hozzáférést az eszközön a kamera. **Nem szükséges** engedélyezi a hozzáférést az eszköz kamerájának használatát.
-- **Alapértelmezett alkalmazásengedélyezési szabályzat**: Ez a beállítás a futtatókörnyezeti engedélyekre irányuló kérelmek alapértelmezett engedélyházirendjének meghatározása. Lehetséges értékei többek között a következők:
-  - **Eszköz alapértelmezése**: Az eszköz alapértelmezett beállítást használja.
-  - **Rákérdezés**: Kéri a felhasználót, hogy az engedélyt jóvá.
-  - **Automatikus engedélyezés**: Automatikusan engedélyekkel.
-  - **Automatikus elutasítás**: Engedélyeket a rendszer automatikusan megtagadja.
-- **Dátum-és időmódosítás**: Válasszon **blokk** megakadályozza, hogy a felhasználók manuális beállítása dátuma és időpontja. **Nincs konfigurálva** lehetővé teszi a felhasználóknak az beállított dátumot és időt az eszközön.
-- **Hangerőmódosítások**: Válasszon **blokk** meg, hogy a felhasználók módosítsák az eszköz kötet. **Nincs konfigurálva** lehetővé teszi, hogy a kötet beállításokat az eszközön.
-- **Gyári beállítások visszaállítása**: Válasszon **blokk** megakadályozza, hogy a felhasználók segítségével a gyári alaphelyzetbe az eszköz beállításaiban. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók számára ez a beállítás használatát az eszközön.
-- **Biztonságos indítás**: Válasszon **blokk** meg, hogy a felhasználók biztonságosan módba az eszköz újraindítását. **Nincs konfigurálva** lehetővé teszi a felhasználóknak indítsa újra az eszközt a csökkentett módban.
-- **Állapotsor**: Válasszon **blokk** , hogy megakadályozza a hozzáférést az állapotsorhoz való, beleértve az értesítéseket és a gyors beállításokat. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók az állapotsor való hozzáférést.
-- **Data services központi**: Válasszon **blokk** a mobilhálózati adatroaming elkerülése érdekében. **Nincs konfigurálva** engedélyezi az adatroaming használatát, ha az eszköz mobilhálózati.
-- **Wi-Fi-beállítások módosításai**: Válasszon **blokk** , az eszköz tulajdonosa által létrehozott Wi-Fi-beállítások módosításának megakadályozása. Felhasználók saját Wi-Fi-beállításokat hozhat létre. **Nincs konfigurálva** lehetővé teszi a felhasználóknak, hogy a Wi-Fi-beállításokat az eszközön.
-- **Wi-Fi hozzáférési pont konfigurációja**: Válasszon **blokk** , hogy a felhasználók létrehozása vagy módosítása a Wi-Fi-konfigurációkat. **Nincs konfigurálva** lehetővé teszi a felhasználóknak, hogy a Wi-Fi-beállításokat az eszközön.
-- **Bluetooth-konfiguráció**: Válasszon **blokk** meg, hogy a felhasználók a Bluetooth konfigurálását az eszközön. **Nincs konfigurálva** lehetővé teszi, hogy az eszköz Bluetooth használatával.
-- **-Alapú internetmegosztás és hozzáférési pontokhoz**: Válasszon **blokk** hordozható pontokhoz-alapú internetmegosztás és a hozzáférés megelőzése érdekében. **Nincs konfigurálva** -alapú internetmegosztás és hordozható elérési pontokhoz való hozzáférést.
-- **USB-tárolók**: Válasszon **engedélyezése** az eszköz USB-tároló elérése érdekében. **Nincs konfigurálva** megakadályozza a USB-tároló.
-- **USB-fájlátvitel**: Válasszon **blokk** elkerülése érdekében fájlok átvitelével az USB-kapcsolaton keresztül. **Nincs konfigurálva** lehetővé teszi a fájlok átviteléhez.
-- **Külső adathordozó**: Válasszon **blokk** megakadályozza a használatával, és kapcsolódás bármilyen külső adathordozó az eszközön. **Nincs konfigurálva** külső adathordozó engedélyezi az eszközön.
-- **Az NFC segítségével adatokat fényt**: Válasszon **blokk** , hogy a kis hatótávolságú kommunikációs (NFC) technológia használatával távolsági adatokat az alkalmazásokból. **Nincs konfigurálva** lehetővé teszi, hogy az NFC segítségével végzett eszközök között adatokat megosztani.
-- **Hibakeresési funkciók**: Válasszon **engedélyezése** , hogy a felhasználók hibakeresési funkciók használata az eszközön. **Nincs konfigurálva** megakadályozza, hogy a felhasználók a hibakeresési funkciók használata az eszközön.
-- **Mikrofon beállítása**: Válasszon **blokk** , hogy a felhasználók a mikrofon visszahangosításának és a mikrofon hangereje. **Nincs konfigurálva** lehetővé teszi a felhasználó használhatja, és állítsa be a mikrofon az eszközön.
-- **Gyári visszaállítás elleni védelem e-mail-címei**: Válasszon **Google-fiók e-mail-címek**. Adja meg, amely oldhatja fel az eszköz tartalma törlődik, miután eszközadminisztrátorok e-mail címét. Ügyeljen arra, hogy az e-mail-címeket egymástól pontosvesszővel, mint például `admin1@gmail.com;admin2@gmail.com`. Ha egy e-mailt nem adott meg, bárki is az eszköz feloldásához, a gyári beállítások visszaállítása után. E-mailek csak akkor alkalmazható, ha az nem felhasználói gyári beállítások visszaállítása futtatta, például a futó a gyári beállításokat a helyreállítási menü segítségével.
-- **Hálózati vészkijárat**: Válasszon **engedélyezése** , hogy a felhasználók a hálózat escape csíkozási funkció bekapcsolása. Ha a hálózati kapcsolat az eszköz nem végzett, majd a vészkijárat kéri ideiglenesen csatlakozzon egy hálózathoz, és frissítenie kell az szabályzat. A szabályzat alkalmazása után a rendszer elfelejti az átmeneti hálózatot, és az eszköz folytatja a rendszerindítást. Ez a funkció eszköz csatlakozik a hálózathoz, ha:
+- **Képernyőfelvétel**: A **Letiltás** elemre kattintva megakadályozhatja a képernyőképek vagy képernyőfelvételek készítését az eszközön. Ezen kívül megakadályozza a tartalom megjelenítését a biztonságos videokimenettel nem rendelkező megjelenítő eszközökön. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználó képként rögzítse a képernyőn látható tartalmat.
+- **Kamera**: Válassza a **Letiltás** lehetőséget a kamera elérésének megakadályozásához az eszközön. **Nem szükséges** engedélyezi a hozzáférést az eszköz kamerájának használatát.
+- **Alapértelmezett Engedélyházirend**: Ez a beállítás határozza meg a futásidejű engedélyekre vonatkozó kérelmek alapértelmezett engedélyezési házirendjét. Lehetséges értékei többek között a következők:
+  - **Eszköz alapértelmezett értéke**: Használja az eszköz alapértelmezett beállítását.
+  - Rákérdezés: A rendszer megkéri a felhasználót, hogy hagyja jóvá az engedélyt.
+  - **Automatikus engedélyezés**: Az engedélyek megadása automatikusan megtörténik.
+  - **Automatikus megtagadás**: Az engedélyek automatikusan megtagadva.
+- **Dátum-és**időváltozások: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók manuálisan állítsa be a dátumot és az időt. **Nincs konfigurálva** lehetővé teszi a felhasználóknak az beállított dátumot és időt az eszközön.
+- **Kötet módosításai**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók módosíthassák az eszköz kötetét. **Nincs konfigurálva** lehetővé teszi, hogy a kötet beállításokat az eszközön.
+- **Gyári beállítások visszaállítása**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy a felhasználók a gyári beállítások visszaállítása lehetőséget használják az eszköz beállításaiban. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók számára ez a beállítás használatát az eszközön.
+- **Biztonságos rendszerindítás**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók biztonságos módba indítsanak az eszközt. **Nincs konfigurálva** lehetővé teszi a felhasználóknak indítsa újra az eszközt a csökkentett módban.
+- **Állapotsor**: A **Letiltás** elemre kattintva megakadályozhatja az állapotsor elérését, beleértve az értesítéseket és a gyors beállításokat is. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók az állapotsor való hozzáférést.
+- **Barangoló**adatszolgáltatások: A **Letiltás** elemre kattintva megakadályozhatja az adatroamingot a mobil hálózaton. **Nincs konfigurálva** engedélyezi az adatroaming használatát, ha az eszköz mobilhálózati.
+- **Wi-Fi-beállítások módosításai**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók módosítsák az eszköz tulajdonosa által létrehozott Wi-Fi-beállításokat. Felhasználók saját Wi-Fi-beállításokat hozhat létre. **Nincs konfigurálva** lehetővé teszi a felhasználóknak, hogy a Wi-Fi-beállításokat az eszközön.
+- **Wi-Fi hozzáférési pont konfigurációja**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók bármilyen Wi-Fi konfigurációt hozzanak létre vagy módosítsanak. **Nincs konfigurálva** lehetővé teszi a felhasználóknak, hogy a Wi-Fi-beállításokat az eszközön.
+- **Bluetooth-konfiguráció**: A **Letiltás** elem kiválasztásával megakadályozhatja a felhasználók számára a Bluetooth konfigurálását az eszközön. **Nincs konfigurálva** lehetővé teszi, hogy az eszköz Bluetooth használatával.
+- **Lekötés és hozzáférés a hozzáférési**pontokhoz: A **Letiltás** elemre kattintva megakadályozhatja a lekötést és a hordozható hozzáférési pontokhoz való hozzáférést. **Nincs konfigurálva** -alapú internetmegosztás és hordozható elérési pontokhoz való hozzáférést.
+- **USB-tároló**: Válassza az **Engedélyezés lehetőséget** az USB-tároló eléréséhez az eszközön. **Nincs konfigurálva** megakadályozza a USB-tároló.
+- **USB-fájlátvitel**: A **Letiltás** elemre kattintva megakadályozhatja a fájlok USB-kapcsolaton keresztüli átvitelét. **Nincs konfigurálva** lehetővé teszi a fájlok átviteléhez.
+- **Külső adathordozó**: A **Letiltás** elemre kattintva megakadályozhatja, hogy külső adathordozót használjon vagy csatlakoztasson az eszközön. **Nincs konfigurálva** külső adathordozó engedélyezi az eszközön.
+- **Adatsugár az NFC használatával**: A **blokkolás** gombra kattintva megakadályozhatja, hogy a kis hatótávolságú kommunikáció (NFC) technológia használatával az adatok az alkalmazásokból legyenek elválasztva. **Nincs konfigurálva** lehetővé teszi, hogy az NFC segítségével végzett eszközök között adatokat megosztani.
+- **Hibakeresési funkciók**: Az **Engedélyezés** lehetőség kiválasztásával engedélyezheti a felhasználóknak a hibakeresési funkciók használatát az eszközön. **Nincs konfigurálva** megakadályozza, hogy a felhasználók a hibakeresési funkciók használata az eszközön.
+- **Mikrofon beállítása**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy a felhasználók visszakapcsolják a mikrofont, és beállítsa a mikrofon kötetét. **Nincs konfigurálva** lehetővé teszi a felhasználó használhatja, és állítsa be a mikrofon az eszközön.
+- **Gyári beállítások visszaállítása a védelmi e-mailekre**: Válassza ki a **Google-fiók e-mail-címeit**. Adja meg, amely oldhatja fel az eszköz tartalma törlődik, miután eszközadminisztrátorok e-mail címét. Ügyeljen arra, hogy az e-mail-címeket egymástól pontosvesszővel, mint például `admin1@gmail.com;admin2@gmail.com`. Ha egy e-mailt nem adott meg, bárki is az eszköz feloldásához, a gyári beállítások visszaállítása után. Ezek az e-mailek csak akkor érvényesek, ha nem a felhasználó gyári alaphelyzetbe állítását futtatják, például a gyári beállítások visszaállítását a helyreállítási menü használatával.
+- **Hálózati Escape-sraffozás**: Az **Engedélyezés** lehetőség kiválasztásával engedélyezheti a felhasználóknak a hálózati Escape-sraffozás funkció bekapcsolását. Ha a hálózati kapcsolat az eszköz nem végzett, majd a vészkijárat kéri ideiglenesen csatlakozzon egy hálózathoz, és frissítenie kell az szabályzat. A szabályzat alkalmazása után a rendszer elfelejti az átmeneti hálózatot, és az eszköz folytatja a rendszerindítást. Ez a funkció eszköz csatlakozik a hálózathoz, ha:
   - Nincs megfelelő hálózati a legutóbbi házirendben.
   - Az eszköz zárolási feladat üzemmódban alkalmazás indul.
   - A felhasználó nem tudja elérni az Eszközbeállítások között.
 
   **Nincs konfigurálva** megakadályozza, hogy a felhasználók ne tudják bekapcsolni a a hálózat escape csíkozási funkciót az eszközön.
 
-- **Rendszerfrissítés**: Válasszon egy lehetőséget adja meg, hogyan kezeli az eszköz a vezeték nélküli frissítések:
-  - **Eszköz alapértelmezése**: Az eszköz alapértelmezett beállítást használja.
-  - **Automatikus**: Frissítések automatikusan települnek a felhasználói beavatkozás nélkül. Ennek a szabályzatnak a beállításakor minden függőben lévő frissítés azonnal települ.
-  - **Elhalasztva**: Frissítések vannak Elhalasztva 30 napig. A 30 nap végén Android kéri a felhasználót, hogy a frissítés telepítéséhez. Az eszközgyártók vagy a szolgáltatók megakadályozhatják (kivételként) a fontos biztonsági frissítések elhalasztását. A kivételként kezelt frissítések rendszerértesítést jelenítenek meg a felhasználó számára az eszközön. 
-  - **Karbantartási időszak**: Az Intune-ban beállított napi karbantartási időszak alatt automatikusan telepíti a frissítéseket. Telepítés megkísérli naponta 30 napig, és meghiúsulhat, ha nincs elegendő terület vagy akkumulátor szintjét. A 30 nap elteltével Android kéri a felhasználót, hogy telepítse. Ez az időszak szolgál a Play-alkalmazások frissítéseinek telepítésére is. Dedikált eszközök, például kioszkok, a beállítást használja, Egyalkalmazásos dedikált előtér eszközalkalmazások frissítheti.
+- **Rendszerfrissítés**: Válassza ki azt a lehetőséget, amely meghatározza, hogy az eszköz hogyan kezelje a csatornákon kívüli frissítéseket:
+  - **Eszköz alapértelmezett értéke**: Használja az eszköz alapértelmezett beállítását.
+  - **Automatikus**: A frissítések felhasználói beavatkozás nélkül automatikusan települnek. Ennek a szabályzatnak a beállításakor minden függőben lévő frissítés azonnal települ.
+  - **Elhalasztva**: A frissítések 30 napig Elhalasztva vannak. A 30 nap végén Android kéri a felhasználót, hogy a frissítés telepítéséhez. Az eszközgyártók vagy a szolgáltatók megakadályozhatják (kivételként) a fontos biztonsági frissítések elhalasztását. A kivételként kezelt frissítések rendszerértesítést jelenítenek meg a felhasználó számára az eszközön. 
+  - **Karbantartási**időszak: Automatikusan telepíti a frissítéseket az Intune-ban beállított napi karbantartási időszak során. Telepítés megkísérli naponta 30 napig, és meghiúsulhat, ha nincs elegendő terület vagy akkumulátor szintjét. A 30 nap elteltével Android kéri a felhasználót, hogy telepítse. Ez az időszak szolgál a Play-alkalmazások frissítéseinek telepítésére is. Ezt a lehetőséget olyan dedikált eszközökhöz használhatja, mint például a kioszkok, az Egyalkalmazásos dedikált eszköz előtérben lévő alkalmazások is frissíthetők.
 
-- **A windows értesítési**: Ha a beállítása **letiltása**, ablakban értesítéseket, beleértve a toasts, a bejövő hívások, a kimenő hívások, a teljesítményriasztások és a rendszerhibák nem jelennek meg az eszközön. Ha a beállítása **nincs konfigurálva**, az operációs rendszer alapértelmezett értéket használja, amely lehet értesítéseket jeleníthet meg.
-- **Kihagyás először a mutatók**: Válasszon **engedélyezése** elrejtése, vagy hagyja ki a javaslatok alkalmazások végighaladhat az oktatóanyagok, vagy olvassa el bármilyen bevezető mutatók, az alkalmazás indításakor. Ha a beállítása **nincs konfigurálva**, az operációs rendszer alapértelmezett szolgál, amely lehet ezek a javaslatok megjelenítése, az alkalmazás indításakor.
+- **Értesítési ablakok**: Ha a **Letiltás**értékre van állítva, a rendszer nem jeleníti meg az eszközön az ablakos értesítéseket, például a pirítóst, a bejövő hívásokat, a kimenő hívásokat, a rendszerriasztásokat és a rendszerhibák Ha a **nincs konfigurálva**értékre van állítva, a rendszer az operációs rendszer alapértelmezett beállításait használja, ami lehet, hogy az értesítéseket jeleníti meg.
+- **Első használati útmutatók**kihagyása: Az **enable (Engedélyezés** ) gombra kattintva elrejtheti vagy kihagyhatja az alkalmazások javaslatait, és megtekintheti az oktatóanyagokat, illetve bevezető javaslatokat olvashat az alkalmazás indításakor. Ha a **nincs konfigurálva**értékre van állítva, a rendszer az operációs rendszer alapértelmezett beállításait használja, amely az alkalmazás indításakor a javaslatok megjelenítéséhez vezethet.
 
 ### <a name="system-security-settings"></a>A rendszer biztonsági beállításai
 
-- **Alkalmazások fenyegetettségvizsgálata**: **Szükséges** (alapértelmezett) lehetővé teszi, hogy a Google Play Protect apps beolvasása előtt és után vannak telepítve. Fenyegetést észlel, ha azt figyelmeztetheti a felhasználót, hogy távolítsa el az alkalmazást az eszközről. **Nincs konfigurálva** nem engedélyezi, vagy futtassa a Google Play Protect apps vizsgálata.
+- **Veszélyforrások vizsgálata az alkalmazásokban**: **Szükséges** (alapértelmezés) lehetővé teszi, hogy a Google Play Protect alkalmazás a telepítés előtt és után ellenőrizze az alkalmazásokat. Ha fenyegetést észlel, figyelmeztetheti a felhasználót, hogy távolítsa el az alkalmazást az eszközről. A **nincs konfigurálva beállítás** nem engedélyezi vagy nem futtatja a Google Play Protect alkalmazást az alkalmazások vizsgálatához.
 
-### <a name="dedicated-device-settings"></a>Dedikált eszközök beállításai
+### <a name="dedicated-device-settings"></a>Dedikált eszközbeállítások
 
-Ezek a beállítások használatával az dedikált eszközök kioszk stílusú felhasználói beállítása. Egyetlen alkalmazás-eszközök konfigurálása, vagy számos alkalmazás futtatásához. Ha egy eszköz teljes képernyős mód be van állítva, csak a hozzáadott alkalmazások elérhetők lesznek. Ezek a beállítások dedikált Android Enterprise-eszközökre vonatkoznak. Teljes körűen felügyelt Android Enterprise-eszközöket, nem vonatkoznak.
+Ezekkel a beállításokkal konfigurálhatja a dedikált eszközökön a kioszk stílusú élményt. Beállíthat egy eszközt egy alkalmazás futtatásához vagy számos alkalmazás futtatásához. Ha egy eszköz kioszk módban van beállítva, csak a hozzáadott alkalmazások érhetők el. Ezek a beállítások az Android Enterprise dedikált eszközökre vonatkoznak. Nem vonatkoznak az Android Enterprise teljes körűen felügyelt eszközeire.
 
-**Teljes képernyős mód**: Akkor válassza, ha az eszköz egy alkalmazást futtat, vagy több alkalmazást futtat.
+Teljes **képernyős mód**: Válassza ki, hogy az eszköz futtat-e egy alkalmazást, vagy több alkalmazást futtat.
 
-- **Egyetlen alkalmazás**: Felhasználók csak érhetik el egy alkalmazást az eszközön. Amikor az eszköz elindul, csak az adott alkalmazás elindul. A felhasználók nem nyithatnak meg új alkalmazásokat, és nem módosíthatják a futó alkalmazást.
+- **Egyetlen alkalmazás**: A felhasználók csak egyetlen alkalmazást tudnak elérni az eszközön. Amikor az eszköz elindul, csak az adott alkalmazás elindul. A felhasználók nem nyithatnak meg új alkalmazásokat, és nem módosíthatják a futó alkalmazást.
 
   **Lépések**
   1. Válasszon **felügyelt alkalmazás kiválasztása**, és válassza ki a felügyelt Google Play-alkalmazást a listából. 
 
-      Ha nem rendelkezik az összes alkalmazás szerepel a listában, majd [bizonyos Android-alkalmazások hozzáadása](apps-add-android-for-work.md) az eszközön. Ügyeljen arra, hogy [rendeli az alkalmazást a dedikált eszközök számára létrehozott megfelelő eszközcsoporthoz](apps-deploy.md).
+      Ha nem rendelkezik az összes alkalmazás szerepel a listában, majd [bizonyos Android-alkalmazások hozzáadása](apps-add-android-for-work.md) az eszközön. Ügyeljen arra, hogy [az alkalmazást a dedikált eszközökhöz létrehozott eszközcsoport](apps-deploy.md)számára társítsa.
 
   2. Válasszon **OK** > **OK** az alkalmazás hozzáadásához.
 
-- **Többalkalmazásos**: A felhasználók egy korlátozott számú alkalmazások az eszközön. Amikor az eszköz elindul, csak a hozzáadott alkalmazások indítsa el. Bizonyos webes hivatkozások, amelyek a felhasználó meg tudja nyitni is hozzáadhat. A házirend van érvényben, amikor megjelenik a felhasználók számára az engedélyezett alkalmazások ikonjai a kezdőképernyőn.
+- **Több alkalmazás**: A felhasználók korlátozott számú alkalmazást tudnak elérni az eszközön. Amikor az eszköz elindul, csak a hozzáadott alkalmazások indítsa el. Bizonyos webes hivatkozások, amelyek a felhasználó meg tudja nyitni is hozzáadhat. A házirend van érvényben, amikor megjelenik a felhasználók számára az engedélyezett alkalmazások ikonjai a kezdőképernyőn.
 
   > [!IMPORTANT]
-  > A többalkalmazásos dedikált eszközök, a [kezdőlap képernyő felügyelt alkalmazás](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) a Google Play áruházból **kell**:
+  > A többalkalmazásos dedikált eszközök esetében a Google Play által [kezelt kezdőképernyő alkalmazásnak](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise) a következőknek **kell lennie**:
   >   - [Egy ügyfélalkalmazás hozzáadott](apps-add-android-for-work.md) az Intune-ban
-  >   - [Az eszköz csoporthoz rendelt](apps-deploy.md) a dedikált eszközök számára létrehozott
+  >   - [Hozzárendelve a](apps-deploy.md) dedikált eszközökhöz létrehozott eszközcsoport számára
   > 
-  > A **kezdőlap képernyő felügyelt** alkalmazás nem található a konfigurációs profil feltétlenül szükséges, de ügyfélalkalmazásként hozzá kell adni. Ha a **kezdőlap képernyő felügyelt** alkalmazás ügyfélalkalmazásként adnak, adja hozzá azokat a konfigurációs profilt minden más alkalmazás ikonok jelennek meg a a **kezdőlap képernyő felügyelt** alkalmazást. 
+  > A **kezdőlap képernyő felügyelt** alkalmazás nem található a konfigurációs profil feltétlenül szükséges, de ügyfélalkalmazásként hozzá kell adni. Ha a **felügyelt kezdőképernyő** alkalmazást ügyfél-alkalmazásként adja hozzá, a konfigurációs profilban hozzáadott más alkalmazások ikonként jelennek meg a felügyelt **kezdőképernyő** alkalmazásban. 
   >
-  > Többalkalmazásos kioszk mód kezdőlap képernyőt felügyelt használatakor előfordulhat, hogy a tárcsázó/telefonos alkalmazások nem működnek megfelelően. 
+  > A többalkalmazásos kioszk mód felügyelt kezdőképernyő használatával történő használata esetén előfordulhat, hogy a tárcsázó/telefonos alkalmazások nem működnek megfelelően. 
 
   - Válasszon **Hozzáadás**, és válassza ki az alkalmazások a listából.
 
-    Ha a **kezdőlap képernyő felügyelt** alkalmazás nem szerepel a listán, majd [adja hozzá a Google Play áruházból](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Ügyeljen arra, hogy [rendelni az alkalmazást](apps-deploy.md) az eszközcsoporthoz a dedikált eszközök számára létrehozott.
+    Ha a **kezdőlap képernyő felügyelt** alkalmazás nem szerepel a listán, majd [adja hozzá a Google Play áruházból](https://play.google.com/work/apps/details?id=com.microsoft.launcher.enterprise). Ügyeljen arra, hogy [az alkalmazást](apps-deploy.md) a dedikált eszközökhöz létrehozott eszközcsoport számára társítsa.
 
-    Is hozzáadhat más [Android-alkalmazások](apps-add-android-for-work.md) és [webes alkalmazások](web-app.md) hozta létre a szervezet az eszköz számára. Ügyeljen arra, hogy [rendeli az alkalmazást a dedikált eszközök számára létrehozott megfelelő eszközcsoporthoz](apps-deploy.md).
+    Is hozzáadhat más [Android-alkalmazások](apps-add-android-for-work.md) és [webes alkalmazások](web-app.md) hozta létre a szervezet az eszköz számára. Ügyeljen arra, hogy [az alkalmazást a dedikált eszközökhöz létrehozott eszközcsoport](apps-deploy.md)számára társítsa.
 
-  - **Virtuális kezdőlap gombjának**: Válasszon **engedélyezése** , a kezdőlap gombjának megjelenítése a dedikált eszközön. Kiválasztásakor visszaadja a felhasználó az eszköz kezdőképernyőjére így a felhasználók egyszerűen válthat az alkalmazások között. Néhány Android-eszközön a felhasználók valószínűleg a pöccintsen felfelé a kezdőlap gombjának megjelenítése a képernyőn. **Tiltsa le** egy otthoni gomb nem jelenik meg, így a felhasználók alkalmazások közötti váltás kell használnia a Vissza gombra.
-  - **Hagyja meg a teljes képernyős mód**: Válasszon **engedélyezése** , hogy a rendszergazdák számára, hogy ideiglenesen letilthatja a teljes képernyős mód az eszköz frissítéséhez. Ezzel a funkcióval a rendszergazda használata: 
+  - **Virtuális otthoni gomb**: Válassza az **Engedélyezés** lehetőséget a Kezdőlap gomb megjelenítéséhez a dedikált eszközön. Kiválasztásakor visszaadja a felhasználó az eszköz kezdőképernyőjére így a felhasználók egyszerűen válthat az alkalmazások között. Néhány Android-eszközön a felhasználók valószínűleg a pöccintsen felfelé a kezdőlap gombjának megjelenítése a képernyőn. **Tiltsa le** egy otthoni gomb nem jelenik meg, így a felhasználók alkalmazások közötti váltás kell használnia a Vissza gombra.
+  - A **kioszk mód**kihagyása: Az **Engedélyezés** lehetőség kiválasztásával engedélyezheti, hogy a rendszergazdák ideiglenesen szüneteltetik a kioszk módot az eszköz frissítéséhez. A szolgáltatás használatához a rendszergazda: 
   
-    1. Továbbra is fennáll, addig, amíg megjelenik a "Kilépés a teljes képernyős" gombra, jelölje be a Vissza gombra. 
-    2. A gombot választja, és beírja az **hagyja meg a teljes képernyős mód kód** PIN-kódot.
+    1. Továbbra is kijelöli a vissza gombot, amíg meg nem jelenik a "kilépési kioszk" gomb. 
+    2. Kiválasztja a gombot, és belép a teljes **képernyős mód kód** PIN-kódjába.
     3. Amikor végzett a módosításokkal, válassza ki a **kezdőlap képernyő felügyelt** alkalmazást. Ez a lépés az eszköz relocks többalkalmazásos kioszk módba. 
 
-    **Tiltsa le** nem lehetővé teheti a teljes képernyős mód felfüggesztése. Ha a rendszergazda továbbra is fennáll, kattintson a Vissza gombra, és a "Kilépés a teljes képernyős" gombot választja, egy üzenet tájékoztatja, hogy egy PIN-kód megadása kötelező.
+    **Tiltsa le** nem lehetővé teheti a teljes képernyős mód felfüggesztése. Ha a rendszergazda továbbra is kiválasztja a vissza gombot, és kiválasztja a "kilépés a kioszkból" gombot, akkor egy üzenet jelzi, hogy PIN-kódot kell megadnia.
 
-    - **Hagyja meg a teljes képernyős mód kód**: Adjon meg egy 4 – 6 számjegyű numerikus PIN-kód. A rendszergazda ideiglenesen letilthatja a teljes képernyős mód a PIN-kódot használja.
+    - A **kioszk mód kódjának**kihagyása: Adjon meg egy 4-6 számjegyű numerikus PIN-kódot. A rendszergazda ideiglenesen letilthatja a teljes képernyős mód a PIN-kódot használja.
 
-  - **Állítsa be az egyéni URL-cím hátterének**: Adja meg a dedikált eszközön a háttérben futó képernyő testreszabása URL-CÍMÉT.
+  - **Egyéni URL-cím beállításának beállítása**: Adjon meg egy URL-címet, amely testreszabja a háttér képernyőt a dedikált eszközön.
     
     > [!NOTE]
-    > A legtöbb esetben javasoljuk, hogy a képekkel, legalább a következő méret:
+    > A legtöbb esetben azt javasoljuk, hogy legalább a következő méretű képekkel kezdjen el:
     >
-    > - Telefonszám: 1080x1920 px
-    > - Tábla: 1920x1080 px
+    > - Phone 1080x1920 px
+    > - Tabletta 1920 × 1080 px
     >    
-    > A legjobb élményt és éles részletei javasolt, hogy minden eszköz lemezképen eszközök hozhatók létre a megjelenítési előírásainak.
+    > A legjobb élmény és a ropogós részletek tekintetében azt javasoljuk, hogy eszközönként a megjelenítési specifikációk alapján hozzon létre egy eszközön rendszerkép-eszközöket.
     >
-    > Rendelkezik képpontos magasabb sűrűség és megjelenítheti a 4K egyenértékű 2K/definíció lemezképek modern jeleníti meg.
-  - **Wi-Fi konfiguráció**: Válasszon **engedélyezése** , hogy a végfelhasználók számára, hogy az eszköz csatlakoztatása a különböző Wi-Fi-hálózatok. Emellett a funkció engedélyezése bekapcsolja az eszköz helyét. **Nincs konfigurálva** (alapértelmezett) megakadályozza, hogy a felhasználók a felügyelt kezdőlap képernyő (zárolás feladat mód) a Wi-Fi hálózatokhoz való csatlakozás.
+    > A modern kijelzők nagyobb képpontokkal rendelkeznek, és megfelelő 2K/4K definíciós képeket tudnak megjeleníteni.
+  - **Wi-Fi-konfiguráció**: Az **Engedélyezés** lehetőség kiválasztásával engedélyezheti a végfelhasználók számára az eszköz csatlakoztatását a különböző WiFi-hálózatokhoz. A funkció engedélyezése az eszköz helyét is bekapcsolja. **Nincs konfigurálva** (alapértelmezés) megakadályozza, hogy a felhasználók a felügyelt kezdőképernyő (a zárolási feladat mód) közben csatlakozzanak a WiFi-hálózatokhoz.
 
-    A több [zárolási feladat mód](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (az Android a webhely nyílik meg).
+    További információ a [zárolási feladat módjáról](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (az Android webhely megnyitása).
 
-  - **Bluetooth-konfiguráció**: Válasszon **engedélyezése** Bluetooth engedélyezése az eszközön, és hogy a végfelhasználók pár eszközök Bluetooth-on keresztül. Emellett a funkció engedélyezése bekapcsolja az eszköz helyét. **Nincs konfigurálva** (alapértelmezett) megakadályozza, hogy a felhasználók és -eszközökhöz a felügyelt kezdőlap képernyő (zárolás feladat mód) a párosítást Bluetooth konfigurálása. 
+  - **Bluetooth-konfiguráció**: Az **Engedélyezés** gombra kattintva engedélyezheti a Bluetooth használatát az eszközön, és lehetővé teheti a végfelhasználók számára az eszközök párosítását Bluetooth-kapcsolaton keresztül A funkció engedélyezése az eszköz helyét is bekapcsolja. **Nincs konfigurálva** (alapértelmezés) megakadályozza, hogy a felhasználók a felügyelt kezdőlapon (a zárolási feladat módban) a Bluetooth és a párosítási eszközöket konfigurálja. 
 
-    A több [zárolási feladat mód](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (az Android a webhely nyílik meg).
+    További információ a [zárolási feladat módjáról](https://developer.android.com/work/dpc/dedicated-devices/lock-task-mode) (az Android webhely megnyitása).
 
 ### <a name="device-password-settings"></a>Eszköz jelszóbeállításai
 
-- **Tiltsa le a zárolási képernyőn**: Válasszon **letiltása** megakadályozza, hogy a felhasználók Keyguard zárolási képernyő funkció használatát az eszközön. **Nincs konfigurálva** lehetővé teszi a felhasználó Keyguard funkcióinak használatát.
-- **Le van tiltva a zárolási képernyő Funkciók**: Ha keyguard engedélyezve van az eszközön, válassza ki a fejlesztendő funkciók letiltása. Például, hogy amikor **biztonságos kamera** be van jelölve, a kamera funkció le van tiltva az eszközön. A szolgáltatásokat, nincs ellenőrizve engedélyezve van az eszközön.
+- **Zárolási képernyő letiltása**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy a felhasználók a billentyûzár zárolási képernyőjének funkcióját használják az eszközön. **Nincs konfigurálva** lehetővé teszi a felhasználó Keyguard funkcióinak használatát.
+- A **zárolási képernyő funkcióinak letiltása**: Ha a billentyűzár engedélyezve van az eszközön, válassza ki a letiltani kívánt szolgáltatásokat. Ha például a **biztonságos kamera** be van jelölve, a kamera funkció le van tiltva az eszközön. A nem ellenőrzött funkciók engedélyezve vannak az eszközön.
 
-  Ezek a funkciók akkor érhetők el a felhasználók számára az eszköz zárolva van. Felhasználók fognak megjelenni, és a rendszer ellenőrzi a szolgáltatások eléréséhez.
+  Ezek a funkciók a felhasználók számára érhetők el, ha az eszköz zárolva van. A felhasználók nem látják és nem férnek hozzá a bejelölt szolgáltatásokhoz.
 
-- **Kötelező jelszótípus**: Az eszköz kötelező jelszó típusát határozza meg. A választható lehetőségek:
+- **Szükséges jelszó típusa**: Az eszközhöz szükséges jelszó típusának megadása. A választható lehetőségek:
   - **Eszköz alapértelmezése**
-  - **Jelszó szükséges, korlátozás nélkül**
-  - **Biometrikus weak**: [Erős vagy egyszerű biometrikus](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (Android a webhely megnyitása)
-  - **Numerikus**: Jelszó csak számokból kell, például `123456789`. Adja meg a **jelszó minimális hossza** a felhasználónak meg kell adnia, 4 és 16 karakter között.
-  - **Komplex numerikus**: Ismétlődő vagy egymást követő számokat, például az "1111" vagy "1234", nem engedélyezett. Adja meg a **jelszó minimális hossza** a felhasználónak meg kell adnia, 4 és 16 karakter között.
-  - **Alfabetikus**: Az ábécé betűit szükség. Számok és szimbólumok nem szükséges. Adja meg a **jelszó minimális hossza** a felhasználónak meg kell adnia, 4 és 16 karakter között.
-  - **Alphanumeric**: Nagybetűk, kisbetűk és numerikus karaktereket tartalmaz. Adja meg a **jelszó minimális hossza** a felhasználónak meg kell adnia, 4 és 16 karakter között.
-  - **Alfanumerikus karakterek és szimbólumok**: Nagybetűk, kisbetűk, számjegyekből, írásjelek és szimbólumokat tartalmaz. Ezt is adja meg:
+  - **Jelszó szükséges, nincs korlátozás**
+  - **Gyenge biometrikus**: [Erős vagy gyenge biometria](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (az Android webhely megnyitása)
+  - **Numerikus**: A `123456789`jelszó csak számok, például:. Adja meg a **jelszó minimális hosszát** , amelyet a felhasználónak 4 és 16 karakter között kell megadnia.
+  - **Komplex numerikus**: Ismétlődő vagy egymást követő számok (például "1111" vagy "1234") nem engedélyezettek. Adja meg a **jelszó minimális hosszát** , amelyet a felhasználónak 4 és 16 karakter között kell megadnia.
+  - **ABC**: Az ábécében szereplő betűket kötelező megadni. A számok és szimbólumok nem szükségesek. Adja meg a **jelszó minimális hosszát** , amelyet a felhasználónak 4 és 16 karakter között kell megadnia.
+  - **Alfanumerikus karakterek**: Nagybetűket, kisbetűket és numerikus karaktereket tartalmaz. Adja meg a **jelszó minimális hosszát** , amelyet a felhasználónak 4 és 16 karakter között kell megadnia.
+  - **Alfanumerikus karakterek és szimbólumok**: Nagybetűket, kisbetűket, numerikus karaktereket, írásjeleket és szimbólumokat tartalmaz. Ezt is adja meg:
 
-    - **Jelszó minimális hossza**: Adja meg a jelszóban, 4 és 16 karakter között minimális hosszát.
-    - **Hány karakterből kell állnia**: Adja meg az karakterek a jelszóban, 0 és 16 karakter között.
-    - **Kötelező kisbetűs karakterek**: Itt adhatja meg a jelszóban kisbetűs karakterek, 0 és 16 karakter között.
-    - **Nagybetűs karakterek számát**: Itt adhatja meg a jelszóban nagybetűs karakterek, 0 és 16 karakter között.
-    - **Hány karakterből kell állnia nem a levelek**: Itt adhatja meg, nem-betűket (a szóközön kívül bármilyen az ábécé betűit), a jelszót kell rendelkeznie, 0 és 16 karakter között.
-    - **Numerikus karakterek számát**: A numerikus karakterek számát adja meg (`1`, `2`, `3`, és így tovább) a jelszót kell rendelkeznie, 0 és 16 karakter között.
-    - **Hány szimbólumnak szükséges**: Adja meg, hány szimbólumnak (`&`, `#`, `%`, és így tovább) a jelszót kell rendelkeznie, 0 és 16 karakter között.
+    - **Jelszó minimális hossza**: Adja meg azt a minimális hosszúságot, ameddig a jelszónak 4 és 16 karakter közöttinek kell lennie.
+    - **Szükséges karakterek száma**: Adja meg, hogy hány karakterből kell állnia a jelszónak 0 és 16 karakter között.
+    - **Szükséges kisbetűs karakterek száma**: Adja meg azt a kisbetűs karaktert, amelyet a jelszónak 0 és 16 karakter közötti értékkel kell rendelkeznie.
+    - **Szükséges nagybetűk száma**: Adja meg a jelszóban szereplő nagybetűs karakterek számát 0 és 16 karakter között.
+    - **A nem Letter karakterek kötelező száma**: Adja meg a nem betűk számát (az ábécében szereplő betűk kivételével), a jelszónak 0 és 16 karakter közöttinek kell lennie.
+    - **Szükséges numerikus karakterek száma**: Adja meg a numerikus karakterek számát (`1`, `2`, `3`stb.) a jelszónak 0 és 16 karakter közöttinek kell lennie.
+    - **A szimbólumok karaktereinek száma kötelező**: Adja meg a szimbólum karaktereinek számát (`&`, `#`, `%`stb.) a jelszónak 0 és 16 karakter közöttinek kell lennie.
 
-- **Hány nap elteltével jelszó lejár**: Adja meg a között eltelt napok számát, 1 – 365, elteltével kell megváltoztatni az eszköz jelszavát. Írja be például a jelszó módosításához 60 nap után `60`. Ha a jelszó lejár, a hozzon létre egy új jelszót a rendszer kéri a felhasználókat.
-- **Hány felhasználó előtt meg kell adni egy jelszót resuse is**: Adja meg a korábban használt jelszavak nem használható fel újra, 1-24 közötti számát. Ezzel a beállítással korlátozhatja, hogy a felhasználó korábban használt jelszavakat hozzon létre.
-- **Bejelentkezési hibák eszköz törlése előtt**: Adja meg a számot, 4 és 11 közötti, mielőtt a rendszer törölné az eszközt a sikertelen bejelentkezéseket között.
+- **A jelszó lejárati ideje (nap**): Adja meg a napok számát 1-365 között, amíg meg nem változtatja az eszköz jelszavát. Ha például a 60 nap után szeretné módosítani a jelszót, írja `60`be a következőt:. A jelszó lejáratakor a rendszer a felhasználókat új jelszó létrehozására kéri.
+- **Jelszó megadásához szükséges jelszavak száma**: Adja meg a legutóbbi olyan jelszavak számát, amelyeket nem lehet újra felhasználni 1-24 között. Ezzel a beállítással korlátozhatja, hogy a felhasználó korábban használt jelszavakat hozzon létre.
+- **Sikertelen bejelentkezések száma az eszköz törlése előtt**: Adja meg a sikertelen bejelentkezések 4-11 közötti számát az eszköz törlésének engedélyezése előtt.
 
 ### <a name="power-settings"></a>Energiaellátási beállítások
 
-- **Képernyő zárolásáig eltelt idő**: Adja meg a üresjárati idő az eszköz zárolása előtt meg kell adni.
-- **Képernyő bekapcsolása, amikor eszköz csatlakoztatva**: Válassza ki, melyik áramforrásokhoz okozhat, ha csatlakoztatva hagyja el a az eszköz képernyőjén.
+- **Zárolási idő**: Állítsa be az eszköz zárolása előtti üresjárati idő mennyiségét.
+- **Képernyő az eszköz csatlakoztatása közben**: Válassza ki, hogy mely áramforrások okozzák az eszköz képernyőjét a csatlakoztatásakor.
 
 ### <a name="users-and-accounts-settings"></a>Felhasználói és fiókbeállítások
 
-- **Új felhasználók hozzáadása**: Válasszon **blokk** megakadályozza, hogy a felhasználók új felhasználók hozzáadása. Minden felhasználó rendelkezik személyes munkaterülettel az eszközön az egyéni kezdőlap képernyők, fiókok, alkalmazások és beállítások. **Nincs konfigurálva** lehetővé teszi a felhasználóknak más felhasználók felvétele az eszközre.
-- **Felhasználók eltávolítása**: Válasszon **blokk** megakadályozza, hogy a felhasználók felhasználók eltávolítását. **Nincs konfigurálva** lehetővé teszi a felhasználóknak más felhasználók eltávolítása az eszközről.
-- **Módosítások fiók**: Válasszon **blokk** megakadályozza, hogy a felhasználók fiókok módosítása. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók frissíthetik a felhasználói fiókokat az eszközön.
+- **Új felhasználók hozzáadása**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók új felhasználókat adjanak hozzá. Minden felhasználó rendelkezik személyes munkaterülettel az eszközön az egyéni kezdőlap képernyők, fiókok, alkalmazások és beállítások. **Nincs konfigurálva** lehetővé teszi a felhasználóknak más felhasználók felvétele az eszközre.
+- **Felhasználó eltávolítása**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók eltávolítsanak felhasználókat. **Nincs konfigurálva** lehetővé teszi a felhasználóknak más felhasználók eltávolítása az eszközről.
+- **Fiók módosításai**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók módosíthassák a fiókokat. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók frissíthetik a felhasználói fiókokat az eszközön.
 
 ### <a name="applications"></a>Alkalmazások
 
-- **Lehetővé teszi az ismeretlen forrásból történő telepítést**: Válasszon **engedélyezése** így a felhasználók bekapcsolhatja **ismeretlen források**. Ez a beállítás lehetővé teszi, hogy az ismeretlen forrásokból, például a Google Play Store kívül telepíteni kívánt alkalmazások. **Nincs konfigurálva** megakadályozza, hogy a felhasználók ne tudják bekapcsolni a **ismeretlen források**.
-- **Minden alkalmazás Google Play áruházban való hozzáférés engedélyezése**: Ha a beállítása **engedélyezése**, felhasználók is hozzáférhetnek az összes alkalmazásba a Google Play áruházban. Nem kap hozzáférést a rendszergazda blokkolja az alkalmazások [ügyfélalkalmazás](apps-add-android-for-work.md). **Nincs konfigurálva** arra kényszeríti a felhasználók csak a rendszergazda segítségével érhető el a Google Play áruházbeli alkalmazások, vagy a szükséges alkalmazások férhetnek hozzá [ügyfélalkalmazás](apps-add-android-for-work.md).
-- **Alkalmazás automatikusan frissül**: Válassza ki, ha az automatikus frissítések telepítve vannak. A választható lehetőségek:
+- **Ismeretlen forrásból történő telepítés engedélyezése**: Válassza az **Engedélyezés lehetőséget** , hogy a felhasználók be tudják kapcsolni az **ismeretlen forrásokat**. Ez a beállítás lehetővé teszi, hogy az alkalmazások ismeretlen forrásokból telepítsenek, beleértve a Google Play Áruházon kívüli forrásokat is. **Nincs konfigurálva** megakadályozza, hogy a felhasználók ne tudják bekapcsolni a **ismeretlen források**.
+- **Hozzáférés engedélyezése a Google Play áruházban lévő összes alkalmazáshoz**: Az **Engedélyezés**beállítás megadása esetén a felhasználók hozzáférhetnek a Google Play áruházban lévő összes alkalmazáshoz. Nem férhetnek hozzá az alkalmazásokhoz az [ügyfélalkalmazások](apps-add-android-for-work.md)rendszergazdai blokkja. **Nincs konfigurálva** , hogy a felhasználók csak az alkalmazásokhoz férhessenek hozzá, a rendszergazda elérhetővé teszi a Google Play áruházat vagy az [ügyfélalkalmazások](apps-add-android-for-work.md)számára szükséges alkalmazásokat.
+- **Alkalmazás automatikus frissítései**: Válassza ki az automatikus frissítések telepítését. A választható lehetőségek:
   - **Nincs konfigurálva**
   - **Felhasználói választási lehetőség**
   - **Soha nem**
@@ -192,27 +192,27 @@ Ezek a beállítások használatával az dedikált eszközök kioszk stílusú f
 
 ### <a name="connectivity"></a>Kapcsolat
 
-- **Always-on VPN**: Válasszon **engedélyezése** egy VPN-ügyfél automatikusan csatlakozhat, és újból csatlakozik a virtuális Magánhálózat beállításához. A mindig bekapcsolt VPN-kapcsolatokkal a kapcsolat folyamatosan fenntartható vagy azonnal elindítható, ha a felhasználó zárolja az eszközét, ha az eszköz újraindul, vagy ha a vezeték nélküli hálózat megváltozik. 
+- **Always-On VPN**: Az **Engedélyezés** beállítás megadásával beállíthatja, hogy a VPN-ügyfél automatikusan kapcsolódjon a VPN-hez, és kapcsolódjon újra. A mindig bekapcsolt VPN-kapcsolatokkal a kapcsolat folyamatosan fenntartható vagy azonnal elindítható, ha a felhasználó zárolja az eszközét, ha az eszköz újraindul, vagy ha a vezeték nélküli hálózat megváltozik. 
 
   A mindig bekapcsolt VPN beállítás az összes VPN-ügyfél számára való letiltásához válassza a **Nincs konfigurálva** lehetőséget.
 
   > [!IMPORTANT]
   > Egy eszközön egyszerre csak egy mindig bekapcsolt VPN-szabályzatot helyezzen üzembe. Több ilyen szabályzat üzembe helyezése egyetlen eszközön nem támogatott.
 
-- **VPN-ügyfél**: Válassza ki a VPN-ügyfél, amely támogatja az Always On. A választható lehetőségek:
+- **VPN-ügyfél**: Válassza ki az Always on szolgáltatást támogató VPN-ügyfelet. A választható lehetőségek:
   - Cisco AnyConnect
   - F5 Access
   - Palo Alto Hálózatok GlobalProtect
   - Pulse Secure
   - Egyéni
-    - **Csomagazonosító**: Adja meg a Google Play áruházban az alkalmazás Csomagazonosítóját. Ha például az áruházban levő alkalmazás URL-címe `https://play.google.com/store/details?id=com.contosovpn.android.prod`, a csomagazonosító `com.contosovpn.android.prod` lesz.
+    - **Csomag azonosítója**: Adja meg az alkalmazás csomag-AZONOSÍTÓját a Google Play áruházban. Ha például az áruházban levő alkalmazás URL-címe `https://play.google.com/store/details?id=com.contosovpn.android.prod`, a csomagazonosító `com.contosovpn.android.prod` lesz.
 
   > [!IMPORTANT]
-  >  - A kiválasztott VPN-ügyfelet az eszközön kell telepíteni, és támogatnia kell az alkalmazásonkénti VPN-t a munkahelyi profilokban. Ellenkező esetben hiba történik. 
-  >  - A VPN-ügyfélalkalmazást jóvá kell hagynia a **felügyelt Google Play Áruházban**, szinkronizálnia kell az alkalmazást az Intune-nal, majd üzembe helyeznie az eszközön. Ezt követően az alkalmazás telepítve lesz a felhasználó munkahelyi profiljában.
-  >  - Van Előfordulhat, hogy ismert problémák alkalmazásonkénti VPN az Android 3.0.4 F5 hozzáféréssel rendelkező használatakor. Lásd: [F5 kibocsátási megjegyzések az F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) további információt.
+  > - A kiválasztott VPN-ügyfelet az eszközön kell telepíteni, és támogatnia kell az alkalmazásonkénti VPN-t a munkahelyi profilokban. Ellenkező esetben hiba történik. 
+  > - A VPN-ügyfélalkalmazást jóvá kell hagynia a **felügyelt Google Play Áruházban**, szinkronizálnia kell az alkalmazást az Intune-nal, majd üzembe helyeznie az eszközön. Ezt követően az alkalmazás telepítve lesz a felhasználó munkahelyi profiljában.
+  > - Van Előfordulhat, hogy ismert problémák alkalmazásonkénti VPN az Android 3.0.4 F5 hozzáféréssel rendelkező használatakor. Lásd: [F5 kibocsátási megjegyzések az F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) további információt.
 
-- **Zárolt módban**: Válasszon **engedélyezése** kényszerítése minden hálózati forgalmat a VPN-alagút használatához. Ha a VPN-kapcsolat nincs kiépítve, az eszköznek nem lesz hálózati hozzáférése.
+- **Zárolási mód**: Válassza az **Engedélyezés** lehetőséget az összes hálózati forgalom kényszerítéséhez a VPN-alagút használatára. Ha a VPN-kapcsolat nincs kiépítve, az eszköznek nem lesz hálózati hozzáférése.
 
   A **Nincs konfigurálva** beállítással a forgalom a VPN-alagúton vagy a mobilhálózaton is áthaladhat.
 
@@ -222,14 +222,14 @@ Ezek a beállítások használatával az dedikált eszközök kioszk stílusú f
 
 #### <a name="general"></a>Általános
 
-- **Munkahelyi és személyes profilok közötti másolást és beillesztést**: Válasszon **blokk** , hogy a másolás és beillesztés a munkahelyi és személyes alkalmazások között. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók megoszthassák az adatokat a személyes profilban szereplő alkalmazások használata a másolás és beillesztés 
-- **Munkahelyi és személyes profilok közötti adatmegosztás**: Válassza ki, ha a munkahelyi profilban szereplő alkalmazások alkalmazások megoszthatnak a személyes profilban. Például szabályozhatja megosztási műveletek alkalmazásokban, mint például a **megosztás...** lehetőséget a Chrome böngészőalkalmazásban). Ez a beállítás nem vonatkozik a másolás/beillesztés vágólapi viselkedésre. A megosztási beállítások:
-  - **Alapértelmezett megosztási korlátozások**: Alapértelmezett megosztási az eszköz, amely az Android-verziótól függően változik. Alapértelmezés szerint a személyes profilból lehet a munkahelyi profilba adatokat megosztani, a munkahelyiből a személyesbe viszont nem. A beállítás célja a munkahelyi profilból a személyesbe irányuló adatmegosztás megelőzése. A Google a 6.0-snál újabb verziójú eszközökön nem nyújt lehetőséget a személyesből a munkahelyi profilba irányuló adatmegosztás blokkolására.
-  - **A munkahelyi profilban szereplő alkalmazások kezelhetik a személyes profilból érkező megosztási kérelmeket**: Lehetővé teszi a beépített Android-funkciót, amely engedélyezi a személyesből a munkahelyi profilba. Engedélyezéskor a személyes profil alkalmazásaiból származó megosztási kérések kezdeményezhetnek adatmegosztást a munkahelyi profil alkalmazásaival. A 6.0-snál korábbi verziójú androidos eszközökön ez az alapértelmezett beállítás.
-  - **Határokon keresztüli megosztás engedélyezése**: Ezzel a lehetőséggel engedélyezheti a munkahelyi profil határán mindkét irányban. Ilyenkor a munkahelyi profilban szereplő alkalmazások megoszthatnak adatokat a személyes profi jelöletlen alkalmazásaival. A beállítással lehetővé teszi a munkahelyi profil alkalmazásainak az adatmegosztást az eszköz nem felügyelt részével. Így körültekintően használja ezt a lehetőséget.
+- **Másolás és beillesztés a munkahelyi és a személyes profilok között**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja a munkahelyi és a személyes alkalmazások közötti másolást és beillesztést. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználók megoszthassák az adatokat a személyes profilban szereplő alkalmazások használata a másolás és beillesztés 
+- **A munkahelyi és a személyes profilok közötti adatmegosztás**: Válassza ki, hogy a munkahelyi profilban szereplő alkalmazások megoszthatnak-e az alkalmazásokkal a személyes profilban. Például szabályozhatja megosztási műveletek alkalmazásokban, mint például a **megosztás...** lehetőséget a Chrome böngészőalkalmazásban). Ez a beállítás nem vonatkozik a másolás/beillesztés vágólapi viselkedésre. A megosztási beállítások:
+  - **Alapértelmezett megosztási korlátozások**: Az eszköz alapértelmezett megosztási viselkedése, amely az Android-verziótól függően változhat. Alapértelmezés szerint a személyes profilból lehet a munkahelyi profilba adatokat megosztani, a munkahelyiből a személyesbe viszont nem. A beállítás célja a munkahelyi profilból a személyesbe irányuló adatmegosztás megelőzése. A Google a 6.0-snál újabb verziójú eszközökön nem nyújt lehetőséget a személyesből a munkahelyi profilba irányuló adatmegosztás blokkolására.
+  - **A munkahelyi profilban lévő alkalmazások kezelhetik a személyes profilból érkező megosztási kéréseket**: Engedélyezi a beépített Android-funkciót, amely lehetővé teszi a személyes és a munkahelyi profil közötti megosztást. Engedélyezéskor a személyes profil alkalmazásaiból származó megosztási kérések kezdeményezhetnek adatmegosztást a munkahelyi profil alkalmazásaival. A 6.0-snál korábbi verziójú androidos eszközökön ez az alapértelmezett beállítás.
+  - **Határokon keresztüli megosztás engedélyezése**: Lehetővé teszi a munkahelyi profil határán belüli megosztást mindkét irányban. Ilyenkor a munkahelyi profilban szereplő alkalmazások megoszthatnak adatokat a személyes profi jelöletlen alkalmazásaival. A beállítással lehetővé teszi a munkahelyi profil alkalmazásainak az adatmegosztást az eszköz nem felügyelt részével. Így körültekintően használja ezt a lehetőséget.
 
-- **Munkahelyi profil értesítései az eszköz zárolt**: Azt szabályozza, hogy a munkahelyi profilban szereplő alkalmazások adatait megjelenítheti értesítéseket, amikor az eszköz zárolva van. **Blokk** nem jelenik meg az adatokat. **Nincs konfigurálva** adatokat mutatja.
-- **Alapértelmezett Alkalmazásengedélyek**: Meghatározza a munkahelyi profilban található összes alkalmazásra vonatkozó alapértelmezett szabályzatot. Az Android 6-os verziójától kezdve a rendszer alkalmazásindításkor felszólítja a felhasználót az alkalmazás által megkövetelt, konkrét engedélyek megadására. Ezzel a szabályzatbeállítással döntheti el, hogy a felhasználók megadhatják-e a munkahelyi profilban szereplő összes alkalmazás engedélyeit. Hozzárendelhet például egy olyan alkalmazást a munkahelyi profilhoz, amely helyadatokhoz kér hozzáférést. Általában az alkalmazás kéri a felhasználót a helyadatokhoz való hozzáférés megadására vagy elutasítására. Ezzel a szabályzattal kérdés nélkül automatikusan engedélyezhet vagy letilthat minden hozzáférést, vagy átadhatja a döntés jogát a felhasználónak. A következő lehetőségek közül választhat:
+- **Munkahelyi profil értesítései az eszköz zárolt állapotában**: Azt szabályozza, hogy a munkahelyi profilban szereplő alkalmazások megjeleníthetnek-e értesítéseket az eszköz zárolt állapotában. **Blokk** nem jelenik meg az adatokat. **Nincs konfigurálva** adatokat mutatja.
+- **Alapértelmezett alkalmazás engedélyei**: Meghatározza a munkahelyi profilban található összes alkalmazásra vonatkozó alapértelmezett szabályzatot. Az Android 6-os verziójától kezdve a rendszer alkalmazásindításkor felszólítja a felhasználót az alkalmazás által megkövetelt, konkrét engedélyek megadására. Ezzel a szabályzatbeállítással döntheti el, hogy a felhasználók megadhatják-e a munkahelyi profilban szereplő összes alkalmazás engedélyeit. Hozzárendelhet például egy olyan alkalmazást a munkahelyi profilhoz, amely helyadatokhoz kér hozzáférést. Általában az alkalmazás kéri a felhasználót a helyadatokhoz való hozzáférés megadására vagy elutasítására. Ezzel a szabályzattal kérdés nélkül automatikusan engedélyezhet vagy letilthat minden hozzáférést, vagy átadhatja a döntés jogát a felhasználónak. A következő lehetőségek közül választhat:
   - **Eszköz alapértelmezése**
   - **Rákérdezés**
   - **Automatikus engedélyezés**
@@ -237,89 +237,89 @@ Ezek a beállítások használatával az dedikált eszközök kioszk stílusú f
 
   Alkalmazáskonfigurációs szabályzatokkal is engedélyeket adhat egyes alkalmazásoknak (**Ügyfélalkalmazások** > **Alkalmazáskonfigurációs szabályzatok**).
 
-- **Fiókok hozzáadása és eltávolítása**: Válasszon **blokk** , hogy a végfelhasználók manuálisan fiókok hozzáadásának vagy eltávolításának a munkahelyi profilban található. Ha például a Gmail alkalmazást androidos munkahelyi profilban telepíti, megakadályozhatja, hogy a végfelhasználók fiókokat adjanak hozzá vagy távolítsanak el ebben a munkaprofilban. **Nincs konfigurálva** lehetővé teszi, hogy a munkahelyi profilban található fiókok hozzáadásának.  
+- **Fiókok hozzáadása és eltávolítása**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a végfelhasználók manuálisan adjanak hozzá vagy távolítanak el fiókokat a munkahelyi profilban. Ha például a Gmail alkalmazást androidos munkahelyi profilban telepíti, megakadályozhatja, hogy a végfelhasználók fiókokat adjanak hozzá vagy távolítsanak el ebben a munkaprofilban. **Nincs konfigurálva** lehetővé teszi, hogy a munkahelyi profilban található fiókok hozzáadásának.  
 
-- **Bluetooth-névjegyek megosztása**: Lehetővé teszi a hozzáférést a munkahelyi névjegyekhez egy másik eszköz, például egy autó párosítva van a Bluetooth segítségével. Alapértelmezés szerint ez a beállítás nincs konfigurálva, a munkahelyi névjegyek pedig nem jelennek meg. A megosztás engedélyezéséhez és a munkahelyi profil névjegyeinek megjelenítéséhez válassza az **Engedélyezés** lehetőséget. Ez a beállítás az Android munkahelyi profilos, Android v6.0 és újabb operációs rendszerekkel rendelkező eszközökre vonatkozik. A beállítás engedélyezésével megengedheti bizonyos Bluetooth-eszközöknek, hogy az első kapcsolat alkalmával gyorsítótárazzák a munkahelyi kapcsolatokat. Ennek a szabályzatnak az eredeti párosítás/szinkronizálás utáni letiltása nem feltétlenül távolítja el a munkahelyi kapcsolatokat a Bluetooth-eszközről.
+- **Névjegyek megosztása Bluetooth-kapcsolaton keresztül**: Lehetővé teszi a munkahelyi kapcsolatok elérését egy másik eszközről, például egy, Bluetooth-kapcsolattal rendelkező eszközről. Alapértelmezés szerint ez a beállítás nincs konfigurálva, a munkahelyi névjegyek pedig nem jelennek meg. A megosztás engedélyezéséhez és a munkahelyi profil névjegyeinek megjelenítéséhez válassza az **Engedélyezés** lehetőséget. Ez a beállítás az Android munkahelyi profilos, Android v6.0 és újabb operációs rendszerekkel rendelkező eszközökre vonatkozik. A beállítás engedélyezésével megengedheti bizonyos Bluetooth-eszközöknek, hogy az első kapcsolat alkalmával gyorsítótárazzák a munkahelyi kapcsolatokat. Ennek a szabályzatnak az eredeti párosítás/szinkronizálás utáni letiltása nem feltétlenül távolítja el a munkahelyi kapcsolatokat a Bluetooth-eszközről.
 
-- **Képernyőfelvétel**: Válasszon **blokk** megakadályozza a képernyőképek és a képernyő rögzíti a munkahelyi profilban található az eszközön. Ezen kívül megakadályozza a tartalom megjelenítését a biztonságos videokimenettel nem rendelkező megjelenítő eszközökön. **Nincs konfigurálva** lehetővé teszi, hogy a képernyőképek beolvasása.
+- **Képernyőfelvétel**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a képernyőképek vagy képernyőfelvételek az eszközön legyenek a munkahelyi profilban. Ezen kívül megakadályozza a tartalom megjelenítését a biztonságos videokimenettel nem rendelkező megjelenítő eszközökön. **Nincs konfigurálva** lehetővé teszi, hogy a képernyőképek beolvasása.
 
-- **Munkahelyi kapcsolattartási hívóazonosító megjelenítése a személyes profilban**: Ha engedélyezve van (**nincs konfigurálva**), a munkahelyi hívó részletei megjelennek a személyes profilban szereplőkkel. Ha a beállítása **blokk**, a munkahelyi hívó nem jelenik meg a személyes profilban. Az Android operációs rendszer 6.0-ás és újabb verzióira vonatkozik.
+- **Munkahelyi kapcsolattartási hívó azonosítójának megjelenítése a személyes profilban**: Ha engedélyezve van (**nincs konfigurálva**), a munkahelyi kapcsolat hívójának adatai megjelennek a személyes profilban. Ha a beállítása **blokk**, a munkahelyi hívó nem jelenik meg a személyes profilban. Az Android operációs rendszer 6.0-ás és újabb verzióira vonatkozik.
 
-- **Keresés a munkahelyi névjegyek személyes profiltól érkező**: Válasszon **blokk** megakadályozza, hogy a felhasználók a személyes profilban szereplő alkalmazások a munkahelyi névjegyek keresése. **Nem szükséges** lehetővé teszi, hogy a személyes profilban munkahelyi névjegyek keresése.
+- **Munkahelyi Névjegyek keresése a személyes profilból**: A **Letiltás** elem kiválasztásával megakadályozhatja, hogy a felhasználók munkahelyi névjegyeket keressenek a személyes profilban található alkalmazásokban. **Nem szükséges** lehetővé teszi, hogy a személyes profilban munkahelyi névjegyek keresése.
 
-- **Kamera**: Válasszon **blokk** kívánja tagadni a hozzáférést a munkahelyi profilban található az eszközön a kamera. A beállítás nincs hatással a fényképezőkép személyes profilban való használatára. **Nem szükséges** a kamerához való hozzáférés lehetővé teszi a munkahelyi profil.
+- **Kamera**: A **blokkolás** gombra kattintva megakadályozhatja, hogy a munkahelyi profilban lévő eszközön hozzáférhessen a kamerához. A beállítás nincs hatással a fényképezőkép személyes profilban való használatára. **Nem szükséges** a kamerához való hozzáférés lehetővé teszi a munkahelyi profil.
 
 #### <a name="work-profile-password"></a>Munkahelyi profilhoz tartozó jelszó
 
-- **Munkahelyi profilhoz tartozó jelszó megkövetelése**: Engedélyezett munkahelyi profillal rendelkező Android 7.0-s és újabb vonatkozik. Válasszon **megkövetelése** megadnia a PIN-kód-szabályzatot, amely csak a munkahelyi profilban szereplő alkalmazások vonatkozik. Alapértelmezés szerint a végfelhasználónak lehetősége van két külön-külön definiált PIN-kód használatára, vagy a felhasználók dönthetnek úgy, hogy a két meghatározott PIN-kód összevonásával csak az erősebbet használják. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználó használja a munkahelyi alkalmazásokat, anélkül, hogy jelszót írna be.
-- **Jelszó minimális hossza**: Rendelkeznie kell a felhasználó jelszava, karakterek minimális számát adja meg a **4**-**16**.
-- **Profil zárolása legfeljebb ennyi perc inaktivitás után a munkahelyi**: Válassza ki az idő a munkahelyi profil zárolása előtt. A felhasználónak ezután meg kell adnia a hitelesítő adatait a hozzáférés visszanyeréséhez.
-- **Bejelentkezési hibák eszköz törlése előtt**: Adja meg, hogy hányszor helytelen jelszót megadni, mielőtt a munkahelyi profilt a rendszer törölné az eszközről.
-- **Jelszó érvényessége (napokban)** : Adja meg, hány nap elteltével kell megváltoztatni a végfelhasználó jelszavát (a **1**-**255**).
-- **Kötelező jelszótípus**: Válassza ki, hogy az eszközön beállítandó jelszó típusát. A következő lehetőségek közül választhat:
+- **Munkahelyi profil jelszavának**megkövetelése: Az Android 7,0-es vagy újabb verziójára vonatkozik a munkahelyi profillal engedélyezve. Válasszon **megkövetelése** megadnia a PIN-kód-szabályzatot, amely csak a munkahelyi profilban szereplő alkalmazások vonatkozik. Alapértelmezés szerint a végfelhasználónak lehetősége van két külön-külön definiált PIN-kód használatára, vagy a felhasználók dönthetnek úgy, hogy a két meghatározott PIN-kód összevonásával csak az erősebbet használják. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználó használja a munkahelyi alkalmazásokat, anélkül, hogy jelszót írna be.
+- **Jelszó minimális hossza**: Adja meg a felhasználók jelszavában szereplő karakterek minimális számát ( **4**-**16**).
+- **A munkahelyi profil zárolása legfeljebb ennyi perc inaktivitás**után: Válassza ki azt az időtartamot, ameddig a munkahelyi profil zárolva van. A felhasználónak ezután meg kell adnia a hitelesítő adatait a hozzáférés visszanyeréséhez.
+- **Sikertelen bejelentkezések száma az eszköz törlése előtt**: Adja meg, hogy hányszor lehet helytelen jelszót beírni, mielőtt a rendszer törli a munkahelyi profilt az eszközről.
+- **Jelszó érvényessége (napokban)** : Adja meg, hogy hány nap elteltével kell módosítani a végfelhasználó jelszavát ( **1**-**255**).
+- **Szükséges jelszó típusa**: Válassza ki a jelszó típusát, amelyet be kell állítani az eszközön. A következő lehetőségek közül választhat:
   - **Eszköz alapértelmezése**
   - **Alacsony biztonságú biometrikus**
   - **Kötelező**
   - **Legalább számok**
-  - **Komplex numerikus**: Ismétlődő vagy egymást követő számokat, mint például a "1111" vagy "1234" nem engedélyezett
+  - **Komplex numerikus**: Ismétlődő vagy egymást követő számok, például "1111" vagy "1234" nem engedélyezettek
   - **Legalább betűk**
   - **Legalább alfanumerikus karakterek**
   - **Legalább alfanumerikus karakterek és szimbólumok**
-- **Korábbi jelszavak újbóli használatának tiltása**: Adja meg az új jelszót használni kell, mielőtt egy korábbit újból használhatna (a **1**-**24**).
-- **Ujjlenyomattal történő Zárolásfeloldás**: Válasszon **blokk** megakadályozza, hogy a végfelhasználók számára az eszköz ujjlenyomat-olvasót használja az eszköz zárolásának feloldásához. **Nincs konfigurálva** lehetővé teszi a felhasználók a munkahelyi profilban szereplő ujjlenyomat a zárolás feloldásához.
-- **Smart Lock és más megbízhatósági ügynökök**: Válasszon **blokk** , hogy a Smart Lock és más megbízhatósági ügynökök módosíthassák a zárolási képernyő beállításai kompatibilis eszközökön. Ez a funkció, más néven bizalmi ügynök lehetővé teszi, hogy letiltását vagy megkerülését az eszköz zárolási képernyője jelszavának, ha az eszköz megbízható helyen van. Így például megkerülheti a munkahelyi profil jelszavát abban az esetben, ha egy adott Bluetooth-eszközhöz van csatlakoztatva, vagy egy bizonyos NFC-címke közelében van. Ezzel a beállítással letilthatja, hogy a felhasználók konfigurálják az intelligens zárolást.
+- **Korábbi jelszavak újbóli használatának tiltása**: Adja meg, hogy hány új jelszót kell használni a régi jelszó újbóli felhasználása előtt ( **1**-**24**).
+- **Ujjlenyomat feloldása**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy a végfelhasználók az eszköz ujjlenyomat-olvasóját használják a zárolás feloldásához. **Nincs konfigurálva** lehetővé teszi a felhasználók a munkahelyi profilban szereplő ujjlenyomat a zárolás feloldásához.
+- **Smart Lock és más megbízhatósági ügynökök**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy Smart lock vagy más megbízhatósági ügynökök a kompatibilis eszközökön módosítsák a zárolási képernyő beállításait. Ez a funkció, más néven bizalmi ügynök lehetővé teszi, hogy letiltását vagy megkerülését az eszköz zárolási képernyője jelszavának, ha az eszköz megbízható helyen van. Így például megkerülheti a munkahelyi profil jelszavát abban az esetben, ha egy adott Bluetooth-eszközhöz van csatlakoztatva, vagy egy bizonyos NFC-címke közelében van. Ezzel a beállítással letilthatja, hogy a felhasználók konfigurálják az intelligens zárolást.
 
 ### <a name="device-password"></a>Eszköz jelszava
 
 A jelszó-beállításokat alkalmazni a munkahelyi profilt használó eszközök személyes profilok.
 
-- **Jelszó minimális hossza**: Rendelkeznie kell a felhasználó jelszava, karakterek minimális számát adja meg a **4**-**14**.
-- **Ennyi perc inaktivitás képernyőzárolás**: Válassza ki, hogy mennyi idő elteltével automatikusan zárolja magát az eszközök
-- **Bejelentkezési hibák eszköz törlése előtt**: Adja meg, hogy hányszor helytelen jelszót megadni, mielőtt az összes adat végleg törlődne az eszközről
-- **Jelszó érvényessége (napokban)** : Adja meg, hány nap elteltével kell megváltoztatni a végfelhasználó jelszavát (a **1**-**255**)
-- **Kötelező jelszótípus**: Válassza ki, hogy az eszközön beállítandó jelszó típusát. A következő lehetőségek közül választhat:
+- **Jelszó minimális hossza**: Adja meg a felhasználók jelszavában szereplő karakterek minimális számát ( **4**-**14**).
+- **A képernyőfelvételek legfeljebb ennyi perc inaktivitás**után: Válassza ki azt az időtartamot, ameddig egy inaktív eszköz automatikusan zárolja
+- **Sikertelen bejelentkezések száma az eszköz törlése előtt**: Adja meg, hogy hányszor lehet helytelen jelszót beírni, mielőtt az összes adat törlődik az eszközről.
+- **Jelszó érvényessége (napokban)** : Adja meg, hogy hány nap elteltével kell módosítani a végfelhasználói jelszót ( **1**-**255**)
+- **Szükséges jelszó típusa**: Válassza ki a jelszó típusát, amelyet be kell állítani az eszközön. A következő lehetőségek közül választhat:
   - **Eszköz alapértelmezése**
   - **Alacsony biztonságú biometrikus**
   - **Kötelező**
   - **Legalább számok**
-  - **Komplex numerikus**: Ismétlődő vagy egymást követő számokat, mint például a "1111" vagy "1234" nem engedélyezettek.
+  - **Komplex numerikus**: Ismétlődő vagy egymást követő számok, például "1111" vagy "1234" nem engedélyezettek
   - **Legalább betűk**
   - **Legalább alfanumerikus karakterek**
   - **Legalább alfanumerikus karakterek és szimbólumok**
-- **Korábbi jelszavak újbóli használatának tiltása**: Adja meg az új jelszót használni kell, mielőtt egy korábbit újból használhatna (a **1**-**24**).
-- **Ujjlenyomattal történő Zárolásfeloldás**: Válasszon **blokk** megakadályozza, hogy a végfelhasználó számára az eszköz ujjlenyomat-olvasót használja az eszköz zárolásának feloldásához. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználó számára az eszközzárolás ujjlenyomattal történő használatával.
-- **Smart Lock és más megbízhatósági ügynökök**: Válasszon **blokk** , hogy a Smart Lock és más megbízhatósági ügynökök módosíthassák a zárolási képernyő beállításai kompatibilis eszközökön. Ez a funkció, más néven bizalmi ügynök lehetővé teszi, hogy letiltását vagy megkerülését az eszköz zárolási képernyője jelszavának, ha az eszköz megbízható helyen van. Így például megkerülheti a munkahelyi profil jelszavát abban az esetben, ha egy adott Bluetooth-eszközhöz van csatlakoztatva, vagy egy bizonyos NFC-címke közelében van. Ezzel a beállítással letilthatja, hogy a felhasználók konfigurálják az intelligens zárolást.
+- **Korábbi jelszavak újbóli használatának tiltása**: Adja meg, hogy hány új jelszót kell használni a régi jelszó újbóli felhasználása előtt ( **1**-**24**).
+- **Ujjlenyomat feloldása**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy a végfelhasználó az eszköz ujjlenyomat-olvasójának használatával feloldja az eszközt. **Nincs konfigurálva** lehetővé teszi, hogy a felhasználó számára az eszközzárolás ujjlenyomattal történő használatával.
+- **Smart Lock és más megbízhatósági ügynökök**: A **Letiltás** lehetőség kiválasztásával megakadályozhatja, hogy Smart lock vagy más megbízhatósági ügynökök a kompatibilis eszközökön módosítsák a zárolási képernyő beállításait. Ez a funkció, más néven bizalmi ügynök lehetővé teszi, hogy letiltását vagy megkerülését az eszköz zárolási képernyője jelszavának, ha az eszköz megbízható helyen van. Így például megkerülheti a munkahelyi profil jelszavát abban az esetben, ha egy adott Bluetooth-eszközhöz van csatlakoztatva, vagy egy bizonyos NFC-címke közelében van. Ezzel a beállítással letilthatja, hogy a felhasználók konfigurálják az intelligens zárolást.
 
 ### <a name="system-security"></a>Rendszerbiztonság
 
-- **Alkalmazások fenyegetettségvizsgálata**: **Szükséges** érvényesíti a **alkalmazások ellenőrzése** beállítás engedélyezve van a munkahelyi és személyes profiloknál.
+- **Veszélyforrások vizsgálata az alkalmazásokban**: **Kötelezővé teszi** , hogy az **alkalmazások ellenőrzése** beállítás engedélyezve legyen a munkahelyi és a személyes profilokhoz.
 
    > [!Note]
    > Ez a beállítás csak Android O vagy újabb rendszerű eszközök esetén érvényesül.
 
 ### <a name="connectivity"></a>Kapcsolat
 
-- **Always-on VPN**: Válasszon **engedélyezése** egy VPN-ügyfél automatikusan csatlakozhat, és újból csatlakozik a virtuális Magánhálózat beállításához. A mindig bekapcsolt VPN-kapcsolatokkal a kapcsolat folyamatosan fenntartható vagy azonnal elindítható, ha a felhasználó zárolja az eszközét, ha az eszköz újraindul, vagy ha a vezeték nélküli hálózat megváltozik. 
+- **Always-On VPN**: Az **Engedélyezés** beállítás megadásával beállíthatja, hogy a VPN-ügyfél automatikusan kapcsolódjon a VPN-hez, és kapcsolódjon újra. A mindig bekapcsolt VPN-kapcsolatokkal a kapcsolat folyamatosan fenntartható vagy azonnal elindítható, ha a felhasználó zárolja az eszközét, ha az eszköz újraindul, vagy ha a vezeték nélküli hálózat megváltozik. 
 
   A mindig bekapcsolt VPN beállítás az összes VPN-ügyfél számára való letiltásához válassza a **Nincs konfigurálva** lehetőséget.
 
   > [!IMPORTANT]
   > Egy eszközön egyszerre csak egy mindig bekapcsolt VPN-szabályzatot helyezzen üzembe. Több ilyen szabályzat üzembe helyezése egyetlen eszközön nem támogatott.
 
-- **VPN-ügyfél**: Válassza ki a VPN-ügyfél, amely támogatja az Always On. A választható lehetőségek:
+- **VPN-ügyfél**: Válassza ki az Always on szolgáltatást támogató VPN-ügyfelet. A választható lehetőségek:
   - Cisco AnyConnect
   - F5 Access
   - Palo Alto Hálózatok GlobalProtect
   - Pulse Secure
   - Egyéni
-    - **Csomagazonosító**: Adja meg a Google Play áruházban az alkalmazás Csomagazonosítóját. Ha például az áruházban levő alkalmazás URL-címe `https://play.google.com/store/details?id=com.contosovpn.android.prod`, a csomagazonosító `com.contosovpn.android.prod` lesz.
+    - **Csomag azonosítója**: Adja meg az alkalmazás csomag-AZONOSÍTÓját a Google Play áruházban. Ha például az áruházban levő alkalmazás URL-címe `https://play.google.com/store/details?id=com.contosovpn.android.prod`, a csomagazonosító `com.contosovpn.android.prod` lesz.
 
   > [!IMPORTANT]
-  >  - A kiválasztott VPN-ügyfelet az eszközön kell telepíteni, és támogatnia kell az alkalmazásonkénti VPN-t a munkahelyi profilokban. Ellenkező esetben hiba történik. 
-  >  - A VPN-ügyfélalkalmazást jóvá kell hagynia a **felügyelt Google Play Áruházban**, szinkronizálnia kell az alkalmazást az Intune-nal, majd üzembe helyeznie az eszközön. Ezt követően az alkalmazás telepítve lesz a felhasználó munkahelyi profiljában.
-  >  - Van Előfordulhat, hogy ismert problémák alkalmazásonkénti VPN az Android 3.0.4 F5 hozzáféréssel rendelkező használatakor. Lásd: [F5 kibocsátási megjegyzések az F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) további információt.
+  > - A kiválasztott VPN-ügyfelet az eszközön kell telepíteni, és támogatnia kell az alkalmazásonkénti VPN-t a munkahelyi profilokban. Ellenkező esetben hiba történik. 
+  > - A VPN-ügyfélalkalmazást jóvá kell hagynia a **felügyelt Google Play Áruházban**, szinkronizálnia kell az alkalmazást az Intune-nal, majd üzembe helyeznie az eszközön. Ezt követően az alkalmazás telepítve lesz a felhasználó munkahelyi profiljában.
+  > - Van Előfordulhat, hogy ismert problémák alkalmazásonkénti VPN az Android 3.0.4 F5 hozzáféréssel rendelkező használatakor. Lásd: [F5 kibocsátási megjegyzések az F5 Access for Android 3.0.4](https://support.f5.com/kb/en-us/products/big-ip_apm/releasenotes/related/relnote-f5access-android-3-0-4.html#relnotes_known_issues_f5_access_android) további információt.
 
-- **Zárolt módban**: Válasszon **engedélyezése** kényszerítése minden hálózati forgalmat a VPN-alagút használatához. Ha a VPN-kapcsolat nincs kiépítve, az eszköznek nem lesz hálózati hozzáférése.
+- **Zárolási mód**: Válassza az **Engedélyezés** lehetőséget az összes hálózati forgalom kényszerítéséhez a VPN-alagút használatára. Ha a VPN-kapcsolat nincs kiépítve, az eszköznek nem lesz hálózati hozzáférése.
 
   A **Nincs konfigurálva** beállítással a forgalom a VPN-alagúton vagy a mobilhálózaton is áthaladhat.
 
@@ -327,8 +327,8 @@ A jelszó-beállításokat alkalmazni a munkahelyi profilt használó eszközök
 
 [Rendelje hozzá a profilt](device-profile-assign.md), és [kövesse nyomon az állapotát](device-profile-monitor.md).
 
-Is létrehozhat dedikált eszköz teljes képernyős profilok [Android](device-restrictions-android.md#kiosk) és [Windows 10-es](kiosk-settings.md) eszközök.
+Az [Android](device-restrictions-android.md#kiosk) és a [Windows 10 rendszerű](kiosk-settings.md) eszközökhöz is létrehozhat dedikált eszközök kioszk-profilokat.
 
 ## <a name="see-also"></a>Lásd még:
 
-[És hibáinak elhárítása a Microsoft Intune vállalati Android-eszköz konfigurálása](https://support.microsoft.com/help/4476974)
+[Androidos vállalati eszközök konfigurálása és hibaelhárítása Microsoft Intune](https://support.microsoft.com/help/4476974)

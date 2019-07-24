@@ -1,7 +1,7 @@
 ---
-title: Oktatóanyag – nem felügyelt eszközökön az Exchange Online e-mailek védelme
+title: Oktatóanyag – Exchange Online e-mail küldése nem felügyelt eszközökön
 titleSuffix: Microsoft Intune
-description: Ismerje meg, az Intune alkalmazásvédelmi szabályzataival és Azure AD feltételes hozzáférés az Office 365 Exchange Online biztonságossá tételéhez.
+description: Ismerje meg, hogyan védheti meg az Office 365 Exchange Online-t az Intune app Protection-szabályzatokkal és az Azure AD feltételes hozzáférésével.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,140 +16,140 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7868d5f9ef97f4b054457deff6f24cd91d6c31d8
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: a7907889a1419ad6ff37b3975fa65adb02389ab6
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67884499"
 ---
-# <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Oktatóanyag: Nem felügyelt eszközökön az Exchange Online e-mailek védelme
+# <a name="tutorial-protect-exchange-online-email-on-unmanaged-devices"></a>Oktatóanyag Exchange Online-levelezés biztosítása nem felügyelt eszközökön
 
-Ismerje meg az alkalmazásvédelmi szabályzatok használata a feltételes hozzáférés Exchange Online védelme akkor is, ha az eszközök nincsenek regisztrálva az Intune-ban például eszközfelügyeleti megoldás. Az oktatóanyag segítségével megtanulhatja a következőket: 
+Ismerje meg, hogyan használhatja az alkalmazás-védelmi szabályzatokat feltételes hozzáféréssel az Exchange Online védelméhez, még akkor is, ha az eszközök nincsenek regisztrálva az Intune-ban. Az oktatóanyag segítségével megtanulhatja a következőket: 
 
 > [!div class="checklist"]
-> * Hozzon létre az Outlook alkalmazás az Intune alkalmazásvédelmi szabályzat. Fogja korlátozzák, hogy a felhasználó milyen alkalmazásadatok mindenre megakadályozzák, hogy a "Mentés másként" és korlátozása kivágási, másolási és beillesztési műveleteket. 
-> * Hozzon létre az Azure Active Directory (Azure AD) feltételes hozzáférési szabályzatai csak az Outlook alkalmazás vállalati e-mailek elérését az Exchange Online. Többtényezős hitelesítés (MFA) is a Modern hitelesítési ügyfelek, például az Outlook iOS-hez és az Android lesz szükséges.
+> * Hozzon létre egy Intune app Protection-szabályzatot az Outlook alkalmazáshoz. A "Mentés másként" lehetőséggel és a kivágási, másolási és beillesztési műveletek korlátozásával korlátozhatja, hogy a felhasználó mit tehet az alkalmazásban. 
+> * Hozzon létre Azure Active Directory (Azure AD) feltételes hozzáférési szabályzatokat, amelyekkel csak az Outlook alkalmazás férhet hozzá a vállalati e-mailekhez az Exchange Online-ban. A többtényezős hitelesítés (MFA) is szükséges a modern hitelesítési ügyfelekhez, például az iOS-hez és az Androidhoz készült Outlookhoz.
 
 ## <a name="prerequisites"></a>Előfeltételek
-  - Az oktatóanyag végrehajtásához szüksége lesz egy tesztelési bérlőre a következő előfizetésekkel:
-    - Prémium szintű Azure Active Directory ([ingyenes próbaverzió](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
-    - Intune-előfizetés ([az ingyenes próbaidőszak](free-trial-sign-up.md))
-    - Office 365 Vállalati előfizetés, ami magában foglalja az Exchange-et ([ingyenes próbaverzió](https://go.microsoft.com/fwlink/p/?LinkID=510938))
+- Az oktatóanyag végrehajtásához szüksége lesz egy tesztelési bérlőre a következő előfizetésekkel:
+  - Prémium szintű Azure Active Directory ([ingyenes próbaverzió](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+  - Intune-előfizetés ([ingyenes próbaverzió](free-trial-sign-up.md))
+  - Office 365 Vállalati előfizetés, ami magában foglalja az Exchange-et ([ingyenes próbaverzió](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## <a name="sign-in-to-intune"></a>Bejelentkezés az Intune-ba
 
 Jelentkezzen be az [Intune-ba](https://go.microsoft.com/fwlink/?linkid=2090973) globális rendszergazdaként vagy Intune-beli szolgáltatásadminisztrátorként. Az Intune-t az Azure Portalon a **Minden szolgáltatás** > **Intune** útvonalon érheti el.
 
-## <a name="create-the-app-protection-policy"></a>Az alkalmazásvédelmi szabályzat létrehozása
-Ebben az oktatóanyagban állítunk be az Outlook alkalmazás az alkalmazási szintű védelmet bevezetni az Intune alkalmazásvédelmi szabályzat. Mi lesz PIN-kódot, nyissa meg az alkalmazást munkahelyi környezetben. Azt fogjuk is korlátozhatja az adatok megosztása az alkalmazások között, és megakadályozza, hogy a vállalati adatokat a személyes helyre való mentését.
+## <a name="create-the-app-protection-policy"></a>Az alkalmazás-védelmi szabályzat létrehozása
+Ebben az oktatóanyagban egy Intune app Protection-szabályzatot hozunk létre az Outlook alkalmazáshoz, amely az alkalmazás szintjén helyezi el a védelmet. Az alkalmazás munkahelyi környezetben való megnyitásához PIN-kód szükséges. Emellett korlátozza az alkalmazások közötti adatmegosztást, és megakadályozhatja, hogy a vállalati adatok személyes helyre legyenek mentve.
 
-1. Jelentkezzen be a [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) , majd **ügyfélalkalmazás** > **alkalmazásvédelmi szabályzatok** > **szabályzat létrehozása**.  
+1. Jelentkezzen be az [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) -ba, és lépjen az **ügyféloldali alkalmazások** > **alkalmazás-védelmi szabályzatok** > **házirend létrehozása**elemre.  
 2. Adja meg a következő beállítást:  
-   - **Név**: Adja meg **Outlook alkalmazás házirend tesztelése**.  
-   - **Description** (Leírás): Adja meg **Outlook alkalmazás házirend tesztelése**.  
-   - **Platform**: Válassza ki **iOS**.  
-   - **Minden alkalmazástípusra cél**: Válassza ki **nem**, majd **alkalmazástípusok**, jelölje be a **nem felügyelt eszközökön futó alkalmazások**.  
-3. Válassza ki **alkalmazások**. Az alkalmazások listájában jelölje ki a **Outlook**, és válassza a **kiválasztása**.
-4. Válassza ki **beállítások** a beállítások panel megnyitásához. 
-5. A beállítások panelen válassza ki a **adatvédelem**. A Data protection panelen alábbi *adatátviteli*, ebben az oktatóanyagban a következő beállításokat:
+   - **Név**: Adja meg az **Outlook app Policy tesztet**.  
+   - **Description** (Leírás): Adja meg az **Outlook app Policy tesztet**.  
+   - **Platform**: Válassza az **iOS**lehetőséget.  
+   - **Az összes alkalmazás típusának**megcélzása: Válassza a nem lehetőséget, majd az **alkalmazás típusa**mezőben jelölje be a **nem**felügyelt eszközökön lévő **alkalmazások**jelölőnégyzetét.  
+3. Válassza az **alkalmazások**lehetőséget. Az alkalmazások listában válassza az **Outlook**lehetőséget, majd válassza a **kiválasztás**lehetőséget.
+4. A beállítások panel megnyitásához válassza a **Beállítások** lehetőséget. 
+5. A beállítások ablaktáblán válassza az **Adatvédelem**lehetőséget. A *adatátvitel*alatt az adatvédelem ablaktáblán adja meg a következő beállításokat az oktatóanyaghoz:
 
-   - A **Org küldhet adatokat más alkalmazásokból**válassza **None**.  
-   - A **fogadhat adatokat más alkalmazásokból**válassza **None**.  
-   - A **szervezeti adatok másolatának mentése**válassza **blokk**.  
-   - A **Kivágás, másolás és beillesztés más alkalmazások között**válassza **letiltott**. 
-   - Hagyja a többi beállítás az alapértelmezett értéken. 
+   - Ha **más alkalmazásokba szeretné elküldeni a szervezeti**adatküldést, válassza a **nincs**lehetőséget.  
+   - **Más alkalmazásoktól érkező adatok fogadásához**válassza a **nincs**lehetőséget.  
+   - A **szervezeti adatmásolatok mentéséhez**válassza a **Letiltás**lehetőséget.  
+   - A **kivágási, másolási és beillesztési műveletek korlátozása más alkalmazások között**válassza a Letiltva lehetőséget. 
+   - Hagyja meg az összes többi beállítást az alapértelmezett értékeken. 
    
-   ![Válassza ki az Outlook alkalmazás alkalmazásvédelmi szabályzat adatáthelyezési beállítások](media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
+   ![Válassza ki az Outlook-alkalmazás védelmi házirendjének adatáthelyezési beállításait.](media/tutorial-protect-email-on-unmanaged-devices/data-protection-settings.png)
 
-   Válassza ki **OK** térjen vissza a beállítások panel.  
+   A beállítások panelre való visszatéréshez kattintson **az OK gombra** .  
 
-6. Válassza ki **a hozzáférési követelmények** , majd konfigurálja a következő beállításokat:  
+6. Válassza a **hozzáférési követelmények** lehetőséget, majd adja meg a következő beállításokat:  
 
-   - A **hozzáférési PIN-kód**válassza **megkövetelése**.
-   - A **munkahelyi vagy iskolai fiók hitelesítő adatait a hozzáféréshez**válassza **megkövetelése**.
-   - Hagyja a többi beállítás az alapértelmezett értéken.
+   - A **PIN-kód eléréséhez**válassza a **kötelező**lehetőséget.
+   - A **hozzáféréshez használt munkahelyi vagy iskolai fiók hitelesítő adatai**területen válassza a **kötelező**lehetőséget.
+   - Hagyja meg az összes többi beállítást az alapértelmezett értékeken.
  
-    ![Válassza ki az Outlook alkalmazás alkalmazásvédelmi szabályzat hozzáférési műveletek](media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png)
+    ![Válassza ki az Outlook-alkalmazás védelmi házirendjének hozzáférési műveleteit.](media/tutorial-protect-email-on-unmanaged-devices/access-requirements-settings.png)
 
-    Válassza ki **OK** térjen vissza a beállítások panel.  
+    A beállítások panelre való visszatéréshez kattintson **az OK gombra** .  
 
-7. A beállítások panelen válassza ki a **OK**, majd a szabályzat létrehozás panelen válassza ki **létrehozás**.
+7. A beállítások ablaktáblán kattintson az **OK gombra**, majd a házirend létrehozása panelen válassza a **Létrehozás**lehetőséget.
 
-Az Outlook az alkalmazásvédelmi szabályzat jön létre. Ezt követően kell beállítani a feltételes hozzáférés az eszközök használata az Outlook alkalmazás megkövetelése.
+Létrejön az Outlook alkalmazás-védelmi szabályzata. Ezután beállíthatja a feltételes hozzáférést, hogy az eszközök az Outlook alkalmazást használják.
 
 ## <a name="create-conditional-access-policies"></a>Feltételes hozzáférési szabályzatok létrehozása
-Most, hogy biztosítsák az összes eszközplatformot két feltételes hozzáférési szabályzatok hozunk létre.  
+Most hozzunk létre két feltételes hozzáférési szabályzatot az összes eszköz platformjának lefedéséhez.  
 
-- Az első házirend, hogy a Modern hitelesítési ügyfelek a jóváhagyott Outlook alkalmazás és a többtényezős hitelesítés (MFA) használata szükséges. Modern hitelesítési ügyfelek például az Outlook iOS-hez és Androidhoz készült Outlook.  
+- Az első szabályzat megköveteli, hogy a modern hitelesítési ügyfelek a jóváhagyott Outlook alkalmazást és multi-Factor Authentication (MFA) hitelesítést használják. A modern hitelesítési ügyfelek közé tartoznak az iOS és az Android rendszerhez készült Outlook.  
 
-- A második házirend szükséges, hogy az Exchange ActiveSync-ügyfelek az engedélyezett az Outlook alkalmazás használata. (Jelenleg az Exchange Active Sync nem támogatja a feltételek eszközplatform kivételével). Konfigurálhatja a feltételes hozzáférési szabályzatokat az Azure AD portálon vagy az Intune-portálon. Mivel már az Intune portálon vagyunk, itt fogjuk létrehozni a szabályzatot.  
+- A második szabályzat megköveteli, hogy az Exchange ActiveSync-ügyfelek a jóváhagyott Outlook alkalmazást használják. (A Exchange Active Sync jelenleg nem támogatja az eszköz platformján kívüli feltételeket). A feltételes hozzáférési szabályzatokat az Azure AD-portálon vagy az Intune-portálon is konfigurálhatja. Mivel már az Intune portálon vagyunk, itt fogjuk létrehozni a szabályzatot.  
 
-### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>Az MFA-szabályzat létrehozása a Modern hitelesítési ügyfelek  
+### <a name="create-an-mfa-policy-for-modern-authentication-clients"></a>MFA-szabályzat létrehozása modern hitelesítési ügyfelek számára  
 
-1. Válassza ki az Intune-ban **feltételes hozzáférési** > **házirendek** > **új szabályzat**.  
+1. Az Intune-ban válassza a **feltételes hozzáférési** > **szabályzatok** > **új házirend**elemet.  
 
-2. A **neve**, adja meg **házirend tesztelése a modern hitelesítési ügyfelek**.  
+2. A **név**mezőben adja meg **a modern hitelesítési ügyfelekhez**tartozó tesztelési házirendet.  
 
 3. A **Hozzárendelések** alatt válassza a **Felhasználók és csoportok** lehetőséget. A **Belefoglalás** lapon válassza a **Minden felhasználó** lehetőséget, majd a **Kész** elemet.
 
-4. A **hozzárendelések**válassza **alkalmazások vagy műveleteket a felhő**. Mivel az Office 365 Exchange Online e-mailjeit szeretnénk megvédeni, a következő lépések segítségével választhatjuk ki:  
+4. A **hozzárendelések**területen válassza a **felhőalapú alkalmazások vagy műveletek**elemet. Mivel az Office 365 Exchange Online e-mailjeit szeretnénk megvédeni, a következő lépések segítségével választhatjuk ki:  
      
    1. A **Belefoglalás** lapon válassza az **Alkalmazások kiválasztása** elemet.  
    2. Válassza a **Kiválasztás** lehetőséget  
-   3. Az alkalmazások listájában jelölje ki a **Office 365 Exchange Online**, és válassza a **válassza**.  
-   4. Válassza ki **kész** térjen vissza az új szabályzat paneljén.  
+   3. Az alkalmazások listában válassza az **Office 365 Exchange Online**lehetőséget, majd válassza a **kiválasztás**lehetőséget.  
+   4. Kattintson a **kész** gombra az új házirend panelre való visszatéréshez.  
   
    ![Az Office 365 Exchange Online alkalmazás kiválasztása](media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-cloud-apps.png)
 
 5. A **Hozzárendelések** alatt válassza a **Feltételek** > **Eszközplatformok** lehetőséget.  
    1. A **Konfigurálás** alatt válassza az **Igen** lehetőséget.  
-   2. Az a **Belefoglalás** lapon jelölje be **bármilyen eszközön**.  
+   2. A **beágyazás** lapon válassza a **bármely eszköz**elemet.  
    3. Válassza a **Done** (Kész) lehetőséget.  
    
-6. Az a **feltételek** ablaktáblán válassza **ügyfélalkalmazás**.  
+6. A **feltételek** ablaktáblán válassza az **ügyfélalkalmazások**elemet.  
    1. A **Konfigurálás** alatt válassza az **Igen** lehetőséget.  
-   2. Válassza ki **mobilalkalmazások és asztali ügyfelek** és **Modern hitelesítési ügyfelek**.  
-   3. Törölje a többi jelölőnégyzet jelölését.  
-   4. Válassza ki **kész** > **kész** térjen vissza az új szabályzat paneljén.  
+   2. Válassza a **Mobile apps és az asztali ügyfelek** és a **modern hitelesítési ügyfelek**lehetőséget.  
+   3. Törölje a jelet a többi jelölőnégyzetből.  
+   4. Az új házirend panelre való visszatéréshez válassza a **kész** > **kész** lehetőséget.  
 
    ![Az Office 365 Exchange Online alkalmazás kiválasztása](media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-client-apps.png)
 
 7. A **Hozzáférés-vezérlés** alatt válassza ki az **Engedélyezés** elemet. 
      
    1. Az **Engedélyezés** lapon válassza az **Engedélyek megadása** lehetőséget.
-   2. Válassza ki **többtényezős hitelesítés megkövetelése**.
+   2. Válassza a többtényezős **hitelesítés**megkövetelése lehetőséget.
    3. Válassza ki a **Jóváhagyott ügyfélalkalmazás megkövetelése** elemet.
    4. A **Több vezérlő esetén** elem alatt válassza a **minden kiválasztott vezérlő megkövetelésére** szolgáló lehetőséget. Ez a beállítás biztosítja, hogy mindkét kiválasztott követelmény érvényben legyen, amikor egy eszköz hozzá próbál férni az e-mailekhez.
    5. Válassza a **Kiválasztás** lehetőséget
      
    ![Az Office 365 Exchange Online alkalmazás kiválasztása](media/tutorial-protect-email-on-unmanaged-devices/modern-auth-policy-mfa.png)
 
-7. Alatt **házirend engedélyezése**válassza **a**, majd válassza ki **létrehozás**.  
+7. A **házirend engedélyezése**területen válassza **a**be lehetőséget, majd válassza a **Létrehozás**lehetőséget.  
      
     ![Az Office 365 Exchange Online alkalmazás kiválasztása](media/tutorial-protect-email-on-unmanaged-devices/enable-policy.png)  
 
-A Modern hitelesítési ügyfelek feltételes hozzáférési szabályzat jön létre. Most már létrehozhat egy szabályzatot Exchange ActiveSync-ügyfelek.
+Létrejön a modern hitelesítési ügyfelek feltételes hozzáférési szabályzata. Most létrehozhat egy házirendet Exchange Active Sync-ügyfelek számára.
 
-### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Hozzon létre egy házirendet az Exchange Active Sync-ügyfelek  
-1. Válassza ki az Intune-ban **feltételes hozzáférési** > **házirendek** > **új szabályzat**.  
-2. A **neve**, adja meg **Tesztszabályzat EAS-ügyfelek**.  
+### <a name="create-a-policy-for-exchange-active-sync-clients"></a>Szabályzat létrehozása Exchange Active Sync ügyfelek számára  
+1. Az Intune-ban válassza a **feltételes hozzáférési** > **szabályzatok** > **új házirend**elemet.  
+2. A **név**mezőben adja meg **az EAS**-ügyfelekhez tartozó tesztelési szabályzatot.  
 3. A **Hozzárendelések** alatt válassza a **Felhasználók és csoportok** lehetőséget.  
 4. A *Belefoglalás* lapon válassza a **Minden felhasználó** lehetőséget, majd a **Kész** elemet.  
 
-5. A **hozzárendelések**válassza **alkalmazások vagy műveleteket a felhő**. Válassza ki az Office 365 Exchange Online e-mailt a következő lépésekkel:  
+5. A **hozzárendelések**területen válassza a **felhőalapú alkalmazások vagy műveletek**elemet. Válassza az Office 365 Exchange Online e-mailek elemet a következő lépésekkel:  
    1. A *Belefoglalás* lapon válassza az **Alkalmazások kiválasztása** elemet.  
    2. Válassza a **Kiválasztás** lehetőséget  
-   3. Listájából *alkalmazások*válassza **Office 365 Exchange Online**, és válassza a **válassza**, majd **kész**.  
+   3. Az *alkalmazások*listájából válassza ki az **Office 365 Exchange Online**elemet, majd válassza a **kiválasztás**, majd a **kész**lehetőséget.  
   
 6. A **Hozzárendelések** alatt válassza a **Feltételek** > **Eszközplatformok** lehetőséget.  
    1. A **Konfigurálás** alatt válassza az **Igen** lehetőséget.  
-   2. Az a **Belefoglalás** lapon jelölje be **bármilyen eszközön**, majd válassza ki **kész**.  
+   2. A **beágyazás** lapon válassza ki a kívánt **eszközt**, majd kattintson a **kész**gombra.  
 
-7. Az a **feltételek** ablaktáblán válassza **ügyfélalkalmazás**.  
+7. A **feltételek** ablaktáblán válassza az **ügyfélalkalmazások**elemet.  
    1. A **Konfigurálás** alatt válassza az **Igen** lehetőséget.  
-   2. Válassza ki **mobilalkalmazások és asztali ügyfelek**.  
-   3. Válassza ki **Exchange ActiveSync-ügyfelek** és **házirend alkalmazása csak a támogatott platformok**.  
+   2. Válassza **a Mobile apps és az asztali ügyfelek**lehetőséget.  
+   3. Válassza az **Exchange ActiveSync-ügyfelek** lehetőséget, és **alkalmazza a házirendet csak a támogatott platformokra**.  
    4. Az összes többi jelölőnégyzet jelölését törölje.  
    5. Kattintson a **Kész**, majd ismét a **Kész** gombra.  
     
@@ -166,19 +166,19 @@ A Modern hitelesítési ügyfelek feltételes hozzáférési szabályzat jön l�
 
 9. Kattintson a **Létrehozás** gombra.  
 
-Az alkalmazásvédelmi szabályzatok és a feltételes hozzáférés mostantól vannak érvényben, és készen áll teszteléséhez.  
+Az alkalmazás-védelmi szabályzatok és a feltételes hozzáférés már érvényben van, és készen áll a tesztelésre.  
 
 ## <a name="try-it-out"></a>Próbálja ki!  
-A létrehozott szabályzatok az eszközök regisztrálása az Intune-ban, és az Outlook mobilalkalmazást az Office 365 e-mailek elérését kell. A forgatókönyv teszteléséhez egy iOS-eszközön próbáljon meg a tesztelési bérlő egyik felhasználójának hitelesítő adataival bejelentkezni az Exchange Online-ra.  
+A létrehozott házirendekkel az eszközöknek regisztrálniuk kell az Intune-ban, és az Outlook Mobile alkalmazást kell használniuk az Office 365 e-mail eléréséhez. A forgatókönyv teszteléséhez egy iOS-eszközön próbáljon meg a tesztelési bérlő egyik felhasználójának hitelesítő adataival bejelentkezni az Exchange Online-ra.  
 1. iPhone-on történő teszteléshez válassza a **Beállítások** > **Jelszavak és fiókok** > **Fiók hozzáadása** > **Exchange** elemet.  
 2. Adja meg a tesztelési bérlő felhasználójának e-mail-címét, és válassza a **Tovább** gombot.  
 3. Válassza a **Bejelentkezés** elemet.  
 4. Adja meg a tesztfelhasználó jelszavát, és válassza a **Bejelentkezés** gombot.  
-5. Az üzenet **további információra szükség** jelenik meg, ami azt jelenti, hogy kéri, hogy többtényezős hitelesítés beállítása. Lépjen tovább, és állítsa be további hitelesítési módszer.  
-6. Ezután megjelenik egy üzenetet arról, hogy a próbál megnyitni ezt az erőforrást, hogy az informatikai részleg által nem engedélyezett. Az üzenet azt jelenti, hogy hozzáférése blokkolva van, a natív e-mail alkalmazással. A bejelentkezés megszakítása.  
-7. Nyissa meg az Outlookot és **beállítások** > **fiók hozzáadása** > **E-mail-fiók hozzáadása**.  
+5. Az üzenetnek **további információra van szüksége** , ami azt jelenti, hogy a rendszer felszólítja az MFA beállítására. Folytassa a további ellenőrzési módszer megadásával.  
+6. Ezután megjelenik egy üzenet, amely szerint az erőforrást az informatikai részleg által nem jóváhagyott alkalmazással próbálja megnyitni. Az üzenet azt jelenti, hogy a natív posta alkalmazás használatával blokkolva van. A bejelentkezés megszakítása.  
+7. Nyissa meg az Outlook alkalmazást, és válassza a **Beállítások** > **fiók** > hozzáadása**e-mail fiók hozzáadása**lehetőséget.  
 8. Adja meg a tesztelési bérlő felhasználójának e-mail-címét, és válassza a **Tovább** gombot.  
-9. Nyomja meg **jelentkezzen be az Office 365**. Kérni fogja a további hitelesítési és nyilvántartási. Miután bejelentkezett, tesztelheti a műveleteket, mint például a kivágási, másolási, beillesztési és "Mentés másként".  
+9. Nyomja meg **az Office 365-vel való bejelentkezést**. A rendszer további hitelesítést és regisztrációt kér. Miután bejelentkezett, tesztelheti az olyan műveleteket, mint például a Kivágás, a másolás, a Beillesztés és a Mentés másként lehetőség.  
 
 ## <a name="clean-up-resources"></a>Az erőforrások eltávolítása  
 Ha már nincs szükség a tesztszabályzatokra, eltávolíthatja őket.  
@@ -186,7 +186,7 @@ Ha már nincs szükség a tesztszabályzatokra, eltávolíthatja őket.
 2. Válassza az **Eszközmegfelelőség** > **Szabályzatok** elemet.  
 3. A **Szabályzat neve** listában válassza a tesztszabályzat helyi menüjét ( **...** ), majd válassza a **Törlés** elemet. Válassza az **OK** lehetőséget a megerősítéshez.  
 4. Válassza a **Feltételes hozzáférés** > **Szabályzatok** elemet.  
-5. Az a **házirendnév** listájához, válassza ki a helyi menüt ( **...** ) a tesztszabályzattal, és válassza ki az egyes **törlése**. Válassza az **Igen** lehetőséget a megerősítéshez.  
+5. A **szabályzat neve** listában válassza a helyi menüt ( **..** .) minden egyes tesztelési házirendhez, majd válassza a **Törlés**lehetőséget. Válassza az **Igen** lehetőséget a megerősítéshez.  
 
 ## <a name="next-steps"></a>További lépések  
-Ebben az oktatóanyagban létrehozott alkalmazásvédelmi szabályzatok korlátozni, mi a felhasználó visszaállíthatja-e az Outlook alkalmazással, és az Outlook alkalmazás megkövetelése és a többtényezős hitelesítés megkövetelése a Modern hitelesítési ügyfelek feltételes hozzáférési szabályzatok létrehozott. Feltételes hozzáférés az Intune használatát más alkalmazások és szolgáltatások védelmét kapcsolatos további információkért lásd: [feltételes hozzáférés beállítása](conditional-access.md).
+Ebben az oktatóanyagban létrehozott egy alkalmazás-védelmi szabályzatot, amely korlátozza, hogy a felhasználó mit tehet az Outlook alkalmazással, és feltételes hozzáférési szabályzatokat hozott létre az Outlook alkalmazás megköveteléséhez, valamint az MFA használatát a modern hitelesítési ügyfelek számára. További információ az Intune és a feltételes hozzáférés használatáról más alkalmazások és szolgáltatások elleni védelemhez: [feltételes hozzáférés beállítása](conditional-access.md).
