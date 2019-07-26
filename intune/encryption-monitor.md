@@ -16,12 +16,12 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: a04a8b9f1973479fd0695ad0e782488fdef43d10
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 3294959e6b11bb8982afa088acdd7262246c3923
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375148"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467426"
 ---
 # <a name="monitor-device-encryption"></a>Mobileszköz titkosításának figyelése  
 
@@ -93,8 +93,6 @@ Amikor kijelöl egy eszközt a titkosítási jelentésből, az Intune megjelení
 - **Profil állapotának összegzése** – az eszközre érvényes profilok összegzése. Az összefoglalás a legkevésbé kedvező feltételt jelöli a megfelelő profilok között. Ha például a különböző profilok közül csak egy jelenik meg, akkor a *profil állapota összefoglaló* *hibaüzenetet*jelenít meg.  
 
 - **Állapotadatok** – részletes információk az eszköz titkosítási állapotáról.  
-  > [!NOTE]
-  > A FileVault támogatása korlátozott, amíg a júliusi kiadás befejeződik néhány nap alatt. Amíg a bevezetési folyamat be nem fejeződik, előfordulhat, hogy az eszköz állapotával kapcsolatos adatok és a macOS-titkosítás részletei nem jelennek meg pontosan a titkosítási jelentésben.
 
   > [!IMPORTANT]  
   > Windows 10-es eszközök esetén az Intune csak a *Windows 10 április 2019* -es vagy újabb verzióját futtató eszközök *állapotának adatait* jeleníti meg.  

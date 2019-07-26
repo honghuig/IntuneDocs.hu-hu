@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b073047455cd21dc3ffe5efcb52f51584db5ff30
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: b6db255cc4c4bb8466d36e25deaf36e5c3480106
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68353773"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467502"
 ---
 # <a name="configure-and-use-scep-certificates-with-intune"></a>SCEP-tanúsítványok konfigurálása és használata az Intune-nal
 
@@ -373,7 +373,14 @@ A szolgáltatás futásának ellenőrzéséhez nyisson meg egy böngészőt, és
      - Windows 10 és újabb
 
 
-   - **Tulajdonos nevének formátuma**: Válassza ki, hogy az Intune hogyan hozza létre automatikusan a tulajdonos nevét a tanúsítványkérelmet. A beállítások eltérőek a **Felhasználói** és az **Eszköz** tanúsítványtípus kiválasztásakor. 
+   - **Tulajdonos nevének formátuma**: Válassza ki, hogy az Intune hogyan hozza létre automatikusan a tulajdonos nevét a tanúsítványkérelmet. A beállítások eltérőek a **Felhasználói** és az **Eszköz** tanúsítványtípus kiválasztásakor.  
+
+     > [!NOTE]  
+     > [Ismert hiba](#avoid-certificate-signing-requests-with-escaped-special-characters) történt a SCEP használatával a tanúsítványok lekéréséhez, ha az eredményül kapott tanúsítvány-aláírási kérelem (CSR) tulajdonos neve a következő karakterek egyikét tartalmazza Escape-karakterként (fordított perjel \\):
+     > - \+
+     > - ;
+     > - ;
+     > - =
 
         **Felhasználói tanúsítványtípus**  
 
@@ -495,6 +502,42 @@ A szolgáltatás futásának ellenőrzéséhez nyisson meg egy böngészőt, és
      - A profil létrehozásához válassza az **OK**, majd a **Létrehozás** lehetőséget.
 
 Ekkor létrejön a profil, és megjelenik a profilok listáját tartalmazó panelen.
+
+### <a name="avoid-certificate-signing-requests-with-escaped-special-characters"></a>A tanúsítvány-aláírási kérelmek elhagyása Escape-speciális karakterekkel
+Létezik egy ismert probléma a tulajdonos nevét (CN) tartalmazó SCEP, amely egy vagy több következő speciális karakterből áll Escape-karakterként. Azok a tulajdonosi nevek, amelyek a speciális karakterek egyikét tartalmazzák Escape-karakterként, helytelen tulajdonosi névvel rendelkező CSR-t eredményeznek, ami viszont az Intune SCEP-kérdés ellenőrzésének sikertelenségét eredményezi, és nem állít ki tanúsítványt.  
+
+A speciális karakterek a következők:
+- \+
+- ;
+- ;
+- =
+
+Ha a tulajdonos neve tartalmaz egy speciális karaktert, a következő lehetőségek közül választhat a korlátozás megkerüléséhez:  
+- A speciális karaktert idézőjelekkel tartalmazó CN-érték beágyazása.  
+- Távolítsa el a speciális karaktert a CN-értékből.  
+
+**Például**van egy tulajdonos neve, amely a *test User (TestCompany, LLC)* néven jelenik meg.  A *TestCompany* és az *LLC* közötti vesszőt tartalmazó CN-t magában foglaló CSR-ben problémát jelent.  A probléma elkerülhető úgy, hogy idézőjeleket helyez a teljes CN-re, vagy eltávolítja a vesszőt a *TestCompany* és az *LLC*-ből:
+- **Idézőjelek hozzáadása**: *CN =* "test User (TESTCOMPANY, LLC)", OU = USERACCOUNTS, DC = Corp, DC = contoso, DC = com *
+- **Távolítsa el a vesszőt**: *CN = test User (TestCompany LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
+
+ Ha azonban a vesszőt egy fordított perjel karakterrel próbálja meg elmenekülni, a rendszer hibát jelez a CRP-naplókban:  
+- **Megszökött vessző**: *CN = test User (TestCompany\\, LLC), OU = UserAccounts, DC = Corp, DC = contoso, DC = com*
+
+A hiba a következő hibához hasonló: 
+
+```
+Subject Name in CSR CN="Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com" and challenge CN=Test User (TESTCOMPANY\, LLC),OU=UserAccounts,DC=corp,DC=contoso,DC=com do not match  
+
+  Exception: System.ArgumentException: Subject Name in CSR and challenge do not match
+
+   at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+Exception:    at Microsoft.ConfigurationManager.CertRegPoint.ChallengeValidation.ValidationPhase3(PKCSDecodedObject pkcsObj, CertEnrollChallenge challenge, String templateName, Int32 skipSANCheck)
+
+   at Microsoft.ConfigurationManager.CertRegPoint.Controllers.CertificateController.VerifyRequest(VerifyChallengeParams value
+```
+
+
 
 ## <a name="assign-the-certificate-profile"></a>A tanúsítványprofil eszközökhöz rendelése
 

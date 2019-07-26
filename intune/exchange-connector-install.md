@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: f55ecd98e047dbf77e6e8eb58284577078e21a61
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
+ms.openlocfilehash: 0a2ebf91efb35ecd46607baffc47abbe73c5fc5c
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: hu-HU
 ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427322"
+ms.locfileid: "68467483"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>A helyszíni Intune Exchange Connector beállítása Microsoft Intune
 A cikkben található információk segítségével telepítheti és figyelheti a Exchange Active Sync helyszíni összekötőt az Intune-hoz.  Az Intune helyszíni Exchange Connector és a [feltételes hozzáférési szabályzatok segítségével engedélyezheti vagy letilthatja a helyszíni Exchange-postaládák elérését](conditional-access-exchange-create.md). 
@@ -158,7 +158,7 @@ A feladatátvétel végrehajtásához, miután az összekötő sikeresen létreh
 
 Ha az Exchange ActiveSync használatával 5 000 vagy több eszközt támogat, konfigurálhat egy opcionális beállítást az összekötő teljesítményének növelése érdekében. Nagyobb teljesítmény érhető el azáltal, hogy lehetővé teszi, hogy az Exchange a PowerShell-parancsok több példányát használja a futtatáshoz. 
 
-A módosítás előtt győződjön meg arról, hogy az Exchange Connector futtatásához használt fiók nem használatos más Exchange-felügyeleti célokra. Ennek az az oka, hogy az Exchange-fiók legfeljebb 18 futtatási helyet tartalmazhat, amelyek többségét az összekötő fogja használni. 
+A módosítás előtt győződjön meg arról, hogy az Exchange Connector futtatásához használt fiók nem használatos más Exchange-felügyeleti célokra. Ennek az az oka, hogy az Exchange-fiók korlátozott számú futtatási tárhelyet tartalmaz, amelyek többségét az összekötő fogja használni. 
 
 Ez a teljesítmény-változás nem alkalmas a régebbi vagy lassabb hardveren futó összekötők esetében.  
 

@@ -18,16 +18,20 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e43fccabd142527d9e17317d56fa029844fa270d
-ms.sourcegitcommit: cd03ea890f563b48339a8c8bb50386b8852ba894
+ms.openlocfilehash: bff8f2d74b06d1cd4ee7dffe594917b4d0946d5c
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329999"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467319"
 ---
 # <a name="enroll-device-with-android-work-profile"></a>Eszköz regisztrálása androidos munkahelyi profillal
 
-Személyes Android-eszközének regisztrálásával hozzáférhet a vállalati e-mailekhez, alkalmazásokhoz és egyéb munkahelyi szolgáltatásokhoz. A regisztráció során androidos munkahelyi profilt fog beállítani. Ez a profil elkülöníti az eszközön tárolt személyes adatait a munkahelyi adatoktól. A cég informatikai támogatási szolgálata csak a munkahelyi fájlokból és az adataiból álló munkahelyi profilt kezeli. A cég informatikai támogatási szolgálata nem tudja kezelni az eszközön tárolt személyes adatait. Többet tudhat meg arról, hogy [mi történik a munkahelyi profil létrehozásakor](what-happens-when-you-create-a-work-profile-android.md).  
+Személyes Android-eszközének regisztrálásával hozzáférhet a vállalati e-mailekhez, alkalmazásokhoz és egyéb munkahelyi szolgáltatásokhoz. A regisztráció során androidos munkahelyi profilt fog beállítani. Ez a profil elkülöníti az eszközön tárolt személyes adatait a munkahelyi adatoktól. A cég informatikai támogatási szolgálata csak a munkahelyi fájlokból és az adataiból álló munkahelyi profilt kezeli. A cég informatikai támogatási szolgálata nem tudja kezelni az eszközön tárolt személyes adatait.
+</br>
+> [!VIDEO https://www.youtube.com/embed/9Dl8HsGk4tI]
+
+Többet tudhat meg arról, hogy [mi történik a munkahelyi profil létrehozásakor](what-happens-when-you-create-a-work-profile-android.md).
 
 ## <a name="create-work-profile-and-enroll-device"></a>Munkahelyi profil létrehozása és eszköz regisztrálása
 

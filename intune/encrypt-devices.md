@@ -6,7 +6,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,12 +16,12 @@ ms.reviewer: annovich
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 57b459efa5b423f1c73a0d6b7b9172f71f4c86d3
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 3f37b9b0bc16572cc86cbf79be616c7f395aa784
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375174"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467473"
 ---
 # <a name="use-device-encryption-with-intune"></a>Az eszközök titkosításának használata az Intune-nal  
 
@@ -66,10 +66,7 @@ Az Intune-nal kezelhető FileVault-beállítás részleteiért lásd: [FileVault
 
    Példa: Elveszett vagy nemrég elforgatott helyreállítási kulcs lekéréséhez jelentkezzen be a Intune Céges portál webhelyére bármely eszközről. A portálon lépjen az *eszközök* elemre, és válassza ki azt az eszközt, amelyen engedélyezve van az FileVault, majd válassza a *helyreállítási kulcs*beolvasása elemet. Megjelenik az aktuális helyreállítási kulcs.  
 
-6. Konfigurálja a többi beállítást az üzleti igények kielégítéséhez, majd kattintson **az OK gombra**.  
-
-   > [!NOTE]
-   > A FileVault támogatása korlátozott, amíg a júliusi kiadás befejeződik néhány nap alatt. Amíg a bevezetést be nem fejeződik, a FileVault konfigurálásakor be kell állítania a *késleltetés FileVault, amíg ki nem jelentkezik* az **Engedélyezés**gombra.  
+6. Konfigurálja a fennmaradó [FileVault-beállításokat](endpoint-protection-macos.md#filevault) az üzleti igények kielégítéséhez, majd kattintson **az OK gombra**.  
 
 7. Fejezze be a további beállítások konfigurációját, majd mentse a profilt.  
 

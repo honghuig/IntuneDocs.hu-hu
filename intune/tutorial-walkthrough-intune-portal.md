@@ -1,12 +1,12 @@
 ---
-title: Oktatóanyag – útmutató az Intune az Azure Portalon
+title: Oktatóanyag – útmutató az Intune-hoz a Azure Portal
 titleSuffix: Microsoft Intune
-description: Ebben az oktatóanyagban, fog ismerkedhet meg a Microsoft Intune értelmezheti a feladatok elvégzésének módját.
+description: Ebben az oktatóanyagban Microsoft Intune a feladatok végrehajtásának jobb megismeréséhez.
 keywords: ''
-author: ErikRe
+author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2019
+ms.date: 07/24/2019
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,128 +17,128 @@ ms.reviewer: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: e3c305cc579fedb9090faaf6c7270fcc546e36eb
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 8cac5d8e160ac7ca665edeabaa2a93560285bdf4
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044328"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483052"
 ---
-# <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Oktatóanyag: Az útmutató a Microsoft Intune-ban az Azure Portalon
+# <a name="tutorial-walkthrough-of-microsoft-intune-in-the-azure-portal"></a>Oktatóanyag A Azure Portal Microsoft Intune áttekintése
 
-[Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) több mint 100, segítségére lehetnek a felhő-számítástechnikai helyzetekben és a lehetőségek különböző szolgáltatásokat tartalmaz. A Microsoft Intune Azure-ban elérhető számos szolgáltatás egyike. Az Intune segítségével győződjön meg arról, hogy a vállalati eszközök, alkalmazások és adatok megfelelnek-e a vállalat biztonsági követelményeinek. Rendelkezik a vezérlő, amely követelményeknek kell ellenőrizni kell, és mi történik, ha ezek a követelmények nem teljesülnek. A Microsoft Intune szolgáltatást az [Azure Portalon](https://portal.azure.com) találhatja meg. Az Intune-ban elérhető szolgáltatások megismerése segít a különböző mobileszköz-felügyeleti (MDM) és mobilalkalmazás-felügyeleti (MAM) feladatok elvégzését.
+Az [Azure](https://docs.microsoft.com/learn/modules/welcome-to-azure) több mint 100 szolgáltatást tartalmaz, amelyek segítséget nyújtanak a különböző felhőalapú számítástechnikai forgatókönyvekhez és lehetőségekhez. Microsoft Intune az Azure-ban elérhető számos szolgáltatás egyike. Az Intune segítségével biztosíthatja, hogy a vállalat eszközei, alkalmazásai és adatai megfeleljenek a vállalat biztonsági követelményeinek. A vezérlővel beállíthatja, hogy mely követelményeket kell ellenőrizni, és mi történik, ha ezek a követelmények nem teljesülnek. A Microsoft Intune szolgáltatást az [Azure Portalon](https://portal.azure.com) találhatja meg. Az Intune funkcióinak megismerése segít a különböző mobileszköz-kezelési (MDM) és mobileszköz-kezelési (MAM) feladatok megvalósításában.
 
 Az oktatóanyag során az alábbi lépéseket fogja végrehajtani:
 > [!div class="checklist"]
-> * A bemutató a Microsoft Intune-ban
-> * Az Azure portál konfigurálása
+> * Bemutató Microsoft Intune
+> * A Azure Portal konfigurálása
 
 Ha nem rendelkezik Intune-előfizetéssel, [regisztráljon egy ingyenes próbafiókkal](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Előfeltételek
 A Microsoft Intune beállítása előtt tekintse át az alábbi követelményeket:
 
-   - [Támogatott operációs rendszerek és böngészők](supported-devices-browsers.md) 
-   - [A hálózati konfiguráció követelményei és a sávszélesség](network-bandwidth-use.md)
+- [Támogatott operációs rendszerek és böngészők](supported-devices-browsers.md) 
+- [A hálózati konfiguráció követelményei és a sávszélesség](network-bandwidth-use.md)
 
 ## <a name="sign-up-for-a-microsoft-intune-free-trial"></a>Regisztráció a Microsoft Intune ingyenes próbaverziójára
 
-Az Intune kipróbálása 30 napig ingyenes. Ha már rendelkezik munkahelyi vagy iskolai fiókkal, **jelentkezzen be** vele, és adja hozzá az Intune-t az előfizetéshez. Egyéb esetben [regisztráljon egy ingyenes próbafiókot](free-trial-sign-up.md) az Intune-nal a szervezet számára.
+Az Intune kipróbálása 30 napig ingyenes. Ha már rendelkezik munkahelyi vagy iskolai fiókkal, **jelentkezzen be** vele, és adja hozzá az Intune-t az előfizetéshez. Ellenkező esetben regisztrálhat [az ingyenes próbaverziós fiókra](free-trial-sign-up.md) , hogy az Intune-t használja a szervezete számára.
 
 > [!IMPORTANT]
 > Meglévő munkahelyi vagy iskolai fiókok nem vonhatók össze újonnan regisztrált fiókokkal.
 
-## <a name="tour-microsoft-intune"></a>A bemutató a Microsoft Intune-ban
+## <a name="tour-microsoft-intune"></a>Bemutató Microsoft Intune
 
-Az Intune segít jobban megérteni az Azure Portalon az alábbi lépésekkel. Miután elvégezte a bemutatót, rendelkezni fog néhány olyan Intune főbb területei jobb megértése.
+Kövesse az alábbi lépéseket az Intune jobb megismeréséhez a Azure Portalban. A turné befejezése után jobban megismerheti az Intune egyes főbb területeit.
 
-1. Nyisson meg egy böngészőt, és jelentkezzen be a [Intune-portálon](https://aka.ms/intuneportal). Ha most ismerkedik az Intune-ban, használhatja az ingyenes próba-előfizetését.
+1. Nyisson meg egy böngészőt, és jelentkezzen be az [Intune](https://aka.ms/intuneportal)-portálra. Ha még nem ismeri az Intune-t, használja az ingyenes próbaverziós előfizetését.
 
-    ![A Microsoft Intune-portál képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-01.png)
+    ![A Microsoft Intune portál képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-01.png)
 
-    Ha megnyitja az Intune-ban vagy bármely más szolgáltatást az Azure-ban, a szolgáltatás panelen jelenik meg. Használhatja az Intune-ban először tevékenységprofilok néhány **eszközök**, **ügyfélalkalmazás**, **felhasználók**, és **csoportok**. Egy számítási feladat a szolgáltatás egyszerűen egy alárendelt területe. Amikor kiválasztja a tevékenységprofilt, panelen megnyílik teljes oldalon. Más panelek megnyitáskor jobb oldali ablaktábla megnyitásához, és közel váljanak az előző ablaktáblára. A panelen is nevezik tartalmazó panel. 
+    Amikor megnyitja az Intune-t vagy bármely más szolgáltatást az Azure-ban, a szolgáltatás megjelenik egy panelen. Az Intune-ban használható első munkaterhelések közé tartoznak például az **eszközök**, az **ügyfélalkalmazások**, a **felhasználók**és a **csoportok**. A munkaterhelés egyszerűen egy szolgáltatás alterülete. Amikor kiválasztja a munkaterhelést, az a panel teljes oldalként nyílik meg. Az egyéb ablaktáblák a megnyitáskor a panel jobb oldalán, az előző ablaktábla megjelenítéséhez pedig a Bezárás gombra mutatnak. A panelt egy panelnek is nevezzük. 
 
-    Alapértelmezés szerint az Intune megnyitásakor látni fogja a **áttekintése** ablaktáblán. Ezen a panelen biztosít egy eszköz-hozzárendelés és megfelelőségi állapotát, valamint az alkalmazás telepítési állapotának általános képi pillanatképét.
+    Alapértelmezés szerint az Intune megnyitásakor megjelenik az **Áttekintés** panel. Ez a panel az eszköz-hozzárendelés és a megfelelőségi állapot általános vizuális pillanatképét, valamint az alkalmazások telepítési állapotát jeleníti meg.
 
-2. A [Intune](https://aka.ms/intuneportal)válassza **eszközregisztráció** az Intune-bérlőben a regisztrált eszközök adatainak megjelenítéséhez. Egy új Intune-bérlő rendszertől, ha még nem fog a regisztrált eszközöket. 
+2. Az [Intune](https://aka.ms/intuneportal)-ból válassza az **eszközök** regisztrálása lehetőséget a regisztrált eszközök adatainak megjelenítéséhez az Intune-bérlőben. Ha új Intune-bérlőt indít, még nem lesz regisztrált eszköze. 
 
-    ![Az eszköz regisztrációs panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-02.png)
+    ![Képernyőfelvétel az eszközök regisztrálási paneljéről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-02.png)
     
-    Az Intune lehetővé teszi a dolgozók az eszközök és alkalmazások, beleértve a vállalati adatokhoz való hozzáférésük kezelését. A mobileszköz-felügyelet (MDM) szolgáltatás használatához, az eszközöket először regisztrálni kell az Intune-ban. Az eszközök regisztrálásakor azok egy MDM-tanúsítványt kapnak. Ez a tanúsítvány az Intune szolgáltatással való kommunikációra szolgál. 
+    Az Intune-nal kezelheti a munkaerő eszközeit és alkalmazásait, beleértve a vállalati adataik elérését. A mobileszköz-felügyeleti (MDM) szolgáltatás használatához először regisztrálni kell az eszközöket az Intune-ban. Az eszközök regisztrálásakor azok egy MDM-tanúsítványt kapnak. Ez a tanúsítvány az Intune szolgáltatással való kommunikációra szolgál. 
 
-    A munkaerő-eszközök regisztrálása az Intune-ban többféle módszer áll rendelkezésre. Az egyes módszerek az eszköz tulajdonosától (személyes vagy céges), az eszköztípustól (iOS, Windows, Android) és a felügyeleti követelményektől (alaphelyzetbe állítások, affinitás, zárolás) függ. Azonban eszközregisztráció engedélyezése előtt be kell állítania az Intune-infrastruktúrát. Különösen fontos, hogy az eszközregisztrációhoz szükség van [saját MDM-szolgáltató beállítására](mdm-authority-set.md). Felkészülés az Intune-környezet (bérlő) kapcsolatos további információkért lásd: [beállítása az Intune-ban](setup-steps.md). Miután készen áll az Intune-bérlőjéhez, az eszközt regisztrálhat. További információt az eszközregisztrációról a [Mi az eszközregisztrálás?](device-enrollment.md) című témakörben találhat
+    Több módszer is van a munkaerő eszközeinek Intune-ba való regisztrálására. Az egyes módszerek az eszköz tulajdonosától (személyes vagy céges), az eszköztípustól (iOS, Windows, Android) és a felügyeleti követelményektől (alaphelyzetbe állítások, affinitás, zárolás) függ. Az eszközök regisztrálásának engedélyezése előtt azonban be kell állítania az Intune-infrastruktúrát. Különösen fontos, hogy az eszközregisztrációhoz szükség van [saját MDM-szolgáltató beállítására](mdm-authority-set.md). Az Intune-környezet (bérlő) készenléti állapotáról további információt az [Intune beállítása](setup-steps.md)című témakörben talál. Ha elkészült az Intune-Bérlővel, regisztrálhat eszközöket. További információt az eszközregisztrációról a [Mi az eszközregisztrálás?](device-enrollment.md) című témakörben találhat
 
-3. A [Intune](https://aka.ms/intuneportal)válassza **eszközmegfelelőség** az Intune által felügyelt eszközök megfelelőségi adatainak megjelenítéséhez. Látni fogja, az alábbi képhez hasonló részleteit.
+3. Az Intune [-ból válassza](https://aka.ms/intuneportal)az **eszköz megfelelősége** lehetőséget az Intune által felügyelt eszközök megfelelőségi adatainak megjelenítéséhez. A következő képhez hasonló részleteket fog látni.
 
-    ![Az eszköz megfelelőségi panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-03.png)
+    ![Képernyőfelvétel az eszköz megfelelőségi paneljéről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-03.png)
     
-    Megfelelőségi követelmények lényegében szabályok; például az eszköz PIN-KÓDJÁNAK igénylő vagy az eszköztitkosítás megkövetelése. Az eszközmegfelelőségi szabályzatok definiálása a szabályokat és beállításokat, amelyek az eszközök megfelelőségéhez kell követnie. Eszközmegfelelőség használatához meg kell rendelkeznie:
-    - Az Intune-ra és az Azure Active Directory (Azure AD) Premium előfizetéssel
-    - Eszközök támogatott platformmal működik
-    - Eszközöket regisztrálni kell az Intune-ban
-    - Egy felhasználó vagy az elsődleges felhasználóval nem regisztrált eszközökön.
+    A megfelelőségi követelmények alapvetően szabályok, például az eszköz PIN-kódjának megkövetelése vagy az eszközök titkosításának megkövetelése. Az eszköz megfelelőségi szabályzatai határozzák meg azokat a szabályokat és beállításokat, amelyeket az eszköznek követnie kell a megfelelőség szempontjából. Az eszközök megfelelőségének használatához a következőket kell tennie:
+    - Intune és Azure Active Directory (Azure AD) prémium szintű előfizetés
+    - Támogatott platformot futtató eszközök
+    - Az eszközöket regisztrálni kell az Intune-ban
+    - Egy felhasználóhoz vagy elsődleges felhasználóhoz regisztrált eszközök.
     
-    További információkért lásd: [az Intune eszközmegfelelőségi szabályzatai – első lépések](device-compliance-get-started.md).
+    További információkért lásd: az [eszközök megfelelőségi szabályzatának első lépései az Intune-ban](device-compliance-get-started.md).
 
-4. A [Intune](https://aka.ms/intuneportal)válassza **eszközkonfiguráció** az Intune-ban eszközprofilok részleteit jeleníti meg. 
+4. Az [Intune](https://aka.ms/intuneportal)-ból válassza az **eszköz konfigurációja** lehetőséget az eszközbeállítások az Intune-ban való megjelenítéséhez. 
 
-    ![Az eszköz konfigurációs panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
+    ![Képernyőfelvétel az eszköz konfigurációs paneljéről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-04.png)
     
-    Az Intune olyan beállításokat és funkciókat kínál, amelyeket Ön engedélyezhet vagy letilthat a vállalatához tartozó különböző eszközökön. Ezek a beállítások és funkciók "profilok" kerülnek. A különböző eszközökre és a különböző platformokon, beleértve az iOS, Android és Windows profilokat hozhat létre. Ezt követően az Intune segítségével a szervezet a profil-eszközökre vonatkoznak.   
+    Az Intune olyan beállításokat és funkciókat kínál, amelyeket Ön engedélyezhet vagy letilthat a vállalatához tartozó különböző eszközökön. Ezek a beállítások és funkciók hozzáadódnak a "konfigurációs profilokhoz". Létrehozhat profilokat különböző eszközökhöz és különböző platformokhoz, például iOS-, Android-és Windows-rendszerekhez is. Ezt követően az Intune használatával alkalmazhatja a profilt a szervezet eszközeire.   
 
-    Eszköz konfigurálásával kapcsolatos további információkért lásd: [funkciók beállítások alkalmazásához az eszközök Microsoft Intune-ban eszközprofilok segítségével](device-profiles.md).
+    Az eszköz konfigurációjával kapcsolatos további információkért lásd: a [szolgáltatások beállításainak alkalmazása az eszközökön a Microsoft Intune eszköz profiljainak használatával](device-profiles.md).
 
-5. A [Intune](https://aka.ms/intuneportal)válassza **eszközök** részleteit az Intune bérlői a regisztrált eszközökre. Egy új Intune-ban bejegyzési rendszertől, ha még nem fog a regisztrált eszközöket. 
+5. Az [Intune](https://aka.ms/intuneportal)-ból válassza az **eszközök** lehetőséget az Intune-bérlő regisztrált eszközeinek részleteinek megjelenítéséhez. Ha új Intune-bejegyzést indít, akkor még nem lesz regisztrált eszköze. 
 
-    ![Az eszköz regisztrációs panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-05.png)
+    ![Képernyőfelvétel az eszközök regisztrálási paneljéről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-05.png)
     
-    A **eszközök** ablaktáblája tartalmaz a bérlő adatait a regisztrált eszközökre. Kattinthat **minden eszköz** az eszközök listáját jeleníti meg az Intune-bérlőhöz. 
+    Az **eszközök** ablaktábla a bérlő regisztrált eszközeinek részleteit tartalmazza. Az Intune-bérlőhöz tartozó eszközök listájának megjelenítéséhez kattintson a **minden eszköz** lehetőségre. 
 
-6. A [Intune](https://aka.ms/intuneportal), jelölje be **ügyfélalkalmazás** alkalmazás telepítési állapotának megjelenítéséhez.
+6. Az [Intune](https://aka.ms/intuneportal)-ból válassza az **ügyfélalkalmazások** lehetőséget az alkalmazások telepítési állapotának megjelenítéséhez.
 
-    ![Az ügyfél alkalmazások panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-06.png)
+    ![Képernyőkép az ügyfélalkalmazások panelről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-06.png)
     
-    A rendszergazdák a Microsoft Intune használatával kezelhetik a cég által használt ügyfélalkalmazásokat. Ez a funkció az eszközkezelési és adatvédelmi funkciókat egészíti ki. A rendszergazdák egyik elsődleges feladata annak biztosítása, hogy a végfelhasználók hozzáférjenek a munkájukhoz szükséges alkalmazásokhoz. Emellett előfordulhat, hogy az Intune-ban nem regisztrált eszközökön található alkalmazásokat is szeretne hozzárendelni és felügyelni. Az Intune számos szolgáltatást kínál a szükséges alkalmazások kívánt eszközökön való használatához. Hozzáadásával és alkalmazások hozzárendelésével kapcsolatos további információkért lásd: [alkalmazások hozzáadása Microsoft Intune-bA](apps-add.md) és [alkalmazások hozzárendelése csoportokhoz a Microsoft Intune-nal](apps-deploy.md).
+    A rendszergazdák a Microsoft Intune használatával kezelhetik a cég által használt ügyfélalkalmazásokat. Ez a funkció az eszközkezelési és adatvédelmi funkciókat egészíti ki. A rendszergazdák egyik elsődleges feladata annak biztosítása, hogy a végfelhasználók hozzáférjenek a munkájukhoz szükséges alkalmazásokhoz. Emellett előfordulhat, hogy az Intune-ban nem regisztrált eszközökön található alkalmazásokat is szeretne hozzárendelni és felügyelni. Az Intune számos szolgáltatást kínál a szükséges alkalmazások kívánt eszközökön való használatához. Az alkalmazások hozzáadásával és hozzárendelésével kapcsolatos további információkért lásd: [Alkalmazások hozzáadása Microsoft Intune](apps-add.md) és [alkalmazások társítása a csoportokhoz a Microsoft Intune használatával](apps-deploy.md).
 
-7. A [Intune](https://aka.ms/intuneportal)válassza **feltételes hozzáférési** hozzáférési házirendek részleteit jeleníti meg.
+7. Az [Intune](https://aka.ms/intuneportal)-ból válassza a **feltételes hozzáférés** lehetőséget a hozzáférési szabályzatok részleteinek megjelenítéséhez.
 
-    ![A feltételes hozzáférési panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
+    ![A feltételes hozzáférés panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-07.png)
 
-    Feltételes hozzáférés hivatkozik módokon szabályozhatja az eszközök és alkalmazások, amelyek használata engedélyezett az e-mailek és a vállalati erőforrások eléréséhez. További tudnivalók: eszközalapú és alkalmazásalapú feltételes hozzáférés, és keresse meg a gyakori forgatókönyvek a feltételes hozzáférés használata az Intune-nal: [Mi a feltételes hozzáférés?](conditional-access.md)
+    A feltételes hozzáférés arra utal, hogy miként szabályozható az e-mailekhez és a vállalati erőforrásokhoz való kapcsolódásra jogosult eszközök és alkalmazások. Az eszköz-és az alkalmazás-alapú feltételes hozzáférés megismeréséhez és az Intune-nal való feltételes hozzáférés használatának gyakori forgatókönyveit lásd: [Mi a feltételes hozzáférés?](conditional-access.md)
 
-8. A [Intune](https://aka.ms/intuneportal)válassza **felhasználók** a felhasználók az Intune-ban szereplő részleteit jeleníti meg. Ezek a felhasználók a cég munkatársának kell lennie. 
+8. Az [Intune](https://aka.ms/intuneportal)-ból válassza a **felhasználók** lehetőséget az Intune-ban található felhasználók részleteinek megjelenítéséhez. Ezek a felhasználók a vállalat munkaereje. 
  
-    ![Képernyőkép a felhasználók panelről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-08.png)
+    ![Képernyőfelvétel a felhasználók panelről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-08.png)
 
-    Felhasználók hozzáadása az Intune közvetlenül, vagy a felhasználók a helyszíni Active Directoryból szinkronizál. Ha felvették a felhasználókat a szolgáltatásba, regisztrálhatják az eszközeiket, és elérhetik a vállalati erőforrásokat. Meg is adhat a felhasználóknak további engedélyeket az eléréséhez az Intune-ban. További információkért lásd: [felhasználók hozzáadása és rendszergazdai engedély biztosítása az Intune-ban](users-add.md).
+    Hozzáadhat felhasználókat közvetlenül az Intune-hoz, vagy szinkronizálhat felhasználókat a helyszíni Active Directoryról. Ha felvették a felhasználókat a szolgáltatásba, regisztrálhatják az eszközeiket, és elérhetik a vállalati erőforrásokat. Emellett további engedélyeket is biztosíthat a felhasználóknak az Intune eléréséhez. További információ: [felhasználók hozzáadása és rendszergazdai engedély biztosítása az Intune-hoz](users-add.md).
 
-9. A [Intune](https://aka.ms/intuneportal)válassza **csoportok** az Azure Active Directory (Azure AD) csoportok az Intune-ban szereplő részleteit jeleníti meg. Intune rendszergazdaként csoportok segítségével kezelheti az eszközöket és felhasználókat. 
+9. Az [Intune](https://aka.ms/intuneportal)-ból válassza a **csoportok** lehetőséget az intune-ban található Azure Active Directory-(Azure ad-) csoportok részleteinek megjelenítéséhez. Intune-rendszergazdaként csoportok használatával kezelheti az eszközöket és a felhasználókat. 
 
-    ![A csoportok panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
+    ![Képernyőfelvétel a csoportok panelről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-09.png)
 
-    Csoportokat állíthat a szervezet igényeinek. Létrehozhat csoportokat a felhasználók és eszközök földrajzi hely, részleg vagy hardverjellemzők szerinti rendezéséhez. Használjon csoportokat a feladatok nagy számban való végrehajtásához. Például sok felhasználó házirendjeinek beállítása vagy alkalmazások telepítése az eszközök. Csoportokkal kapcsolatos további információkért lásd: [adja hozzá a felhasználók és eszközök rendszerezéséhez csoportok](groups-add.md).
+    A szervezeti igényeknek megfelelő csoportokat is beállíthat. Létrehozhat csoportokat a felhasználók és eszközök földrajzi hely, részleg vagy hardverjellemzők szerinti rendezéséhez. Használjon csoportokat a feladatok nagy számban való végrehajtásához. Beállíthatja például, hogy a szabályzatok számos felhasználóhoz legyenek beállítva, vagy alkalmazásokat telepítsenek egy adott eszközre. A csoportokkal kapcsolatos további információkért lásd: [csoportok hozzáadása a felhasználók és eszközök rendszerezéséhez](groups-add.md).
 
-10. A [Intune](https://aka.ms/intuneportal)válassza **Súgó és támogatás** kérelem súgójában. Rendszergazdaként, használhatja a **Súgó és támogatás** keresheti ki és megoldások, megtekintése, valamint egy online támogatási jegy fájlt az Intune-hoz lehetőséget. 
+10. Az [Intune](https://aka.ms/intuneportal)-ban kattintson a **Súgó és támogatás** lehetőségre a Súgó kéréséhez. Rendszergazdaként a **Súgó és támogatás** lehetőséget használhatja a megoldások keresésére és megtekintésére, valamint az Intune-hoz kapcsolódó online támogatási jegy beszerzésére. 
 
     ![A Súgó és támogatás panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-10.png)
 
-    Hozzon létre egy támogatási jegyet, hogy a fiók az Azure Active Directory rendszergazdai szerepköréhez kell hozzárendelni. Adja meg rendszergazdai szerepköröket, **Intune-rendszergazda**, **globális rendszergazdai**, és **szolgáltatás-rendszergazda**. További információkért lásd: [hogyan kérhet támogatást a Microsoft Intune](get-support.md).
+    Támogatási jegy létrehozásához a fiókot rendszergazdai szerepkörként kell hozzárendelni a Azure Active Directory-ben. Rendszergazdai szerepkörök: **Intune-rendszergazda**, **globális rendszergazda**és **szolgáltatás-rendszergazda**. További információkért lásd: [a Microsoft Intune támogatásának](get-support.md)beszerzése.
 
-11. A [Intune](https://aka.ms/intuneportal)válassza **Bérlőállapot** az Intune-bérlő részleteit jeleníti meg.
+11. Az [Intune](https://aka.ms/intuneportal)-ból válassza a **bérlő állapota** lehetőséget az Intune-bérlő részleteinek megjelenítéséhez.
 
-    ![A bérlő állapotának panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-11.png)
+    ![Képernyőfelvétel a bérlő állapota panelről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-11.png)
 
-    Bérlői állapot részletei tartalmazzák összekötő állapota, az Intune szolgáltatás állapota és az Intune híreket. Bármilyen probléma merül fel a bérlőhöz vagy az Intune önmagában, a részleteket megtalálja a **Bérlőállapot** ablaktáblán. További információkért lásd: [Intune-bérlő állapotát](tenant-status.md).
+    A bérlői állapot részletei közé tartozik az összekötő állapota, az Intune Service Health és az Intune-hírek. Ha a Bérlővel vagy az Intune-nal kapcsolatban bármilyen probléma merül fel, a részletek a **bérlő állapota** ablaktáblán találhatók. További információ: az [Intune-bérlő állapota](tenant-status.md).
 
-12. A [Intune](https://aka.ms/intuneportal)válassza **hibaelhárítás** elérni egy parancsikont a hibaelhárítási tippek, támogatás kéréséhez vagy az Intune állapotának ellenőrzése. Ez az információ csak az Intune-felhasználó választja.
+12. Az [Intune](https://aka.ms/intuneportal)-ból válassza a **Hibaelhárítás** lehetőséget a hibaelhárítási tippek, támogatás kérése vagy az Intune állapotának ellenőrzéséhez. Ezek az információk a kiválasztott Intune-felhasználóra vonatkoznak.
 
-    ![A hibaelhárítás panel képernyőképe](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-12.png)
+    ![Képernyőkép a hibakeresési panelről](media/tutorial-walkthrough-intune-portal/tutorial-walkthrough-intune-portal-12.png)
 
-Intune-ban hibaelhárítással kapcsolatos további információkért lásd: [a céges felhasználóknak a hibaelhárítási portál használatával](help-desk-operators.md).
+További információ az Intune-on belüli hibaelhárításról: [a hibaelhárítási portál használata a felhasználóknak](help-desk-operators.md)a vállalatnál.
 
-## <a name="configure-the-azure-portal"></a>Az Azure portál konfigurálása
+## <a name="configure-the-azure-portal"></a>A Azure Portal konfigurálása
 
-Az Azure lehetővé teszi, hogy a nézet a portál konfigurálása és testreszabását.
+Az Azure segítségével testreszabhatja és konfigurálhatja a portál nézetét.
 
 ### <a name="change-the-sidebar"></a>Az oldalsáv módosítása
 
@@ -167,9 +167,9 @@ Ez a funkció relevánsabb lesz, miután további tartalmakat is hozzáadott az 
 
 ## <a name="next-steps"></a>További lépések
 
-Az első futtat gyorsan a Microsoft Intune-végighaladhat az Intune rövid útmutatók első beállítása egy ingyenes Intune-fiók.
+A Microsoft Intune gyors futtatásához lépjen az Intune rövid útmutatói között az ingyenes Intune-fiók beállításával.
 
 > [!div class="nextstepaction"]
-> [Gyors útmutató: A Microsoft Intune ingyenes kipróbálása](free-trial-sign-up.md)
+> [QuickStart Próbálja ki Microsoft Intune ingyen](free-trial-sign-up.md)
 
 

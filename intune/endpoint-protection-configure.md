@@ -15,12 +15,12 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 mr.reviewer: karthib
-ms.openlocfilehash: d0e3e67cd227c5ce8ac2cb42f79bdea1da8e2d75
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 13e8c7fd0c822a2bdfbf7c183ea6752f99cf7991
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375125"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482773"
 ---
 # <a name="add-endpoint-protection-settings-in-intune"></a>Endpoint Protection-beállítások hozzáadása az Intune-ban  
 
@@ -63,7 +63,7 @@ Ha egyéni tűzfalszabályok alapján tervez profilt, vegye figyelembe a követk
 - Minden profil esetében, ha egyetlen szabályt nem sikerül alkalmazni, a profilban szereplő összes szabály sikertelen lesz, és a rendszer egyetlen szabályt sem alkalmaz az eszközre.  
 - Ha egy szabályt nem sikerül alkalmazni, a profilban szereplő összes szabályt nem sikerült jelenteni. Az Intune nem tudja azonosítani, hogy melyik egyedi szabály nem sikerült.  
 
-Az Intune által kezelhető tűzfalszabályok részletesen szerepelnek a Windows [tűzfal konfigurációs]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) szolgáltatójában (CSP). Az Intune által támogatott Windows 10-es eszközök egyéni tűzfalbeállítások listájának áttekintéséhez tekintse meg az [Egyéni tűzfalszabályok](endpoint-protection-windows-10.md#custom-firewall-rules)című témakört.  
+Az Intune által kezelhető tűzfalszabályok részletesen szerepelnek a Windows [tűzfal konfigurációs]( https://docs.microsoft.com/windows/client-management/mdm/firewall-csp) szolgáltatójában (CSP). Az Intune által támogatott Windows 10-es eszközök egyéni tűzfalbeállítások listájának áttekintéséhez tekintse meg az [Egyéni tűzfalszabályok](endpoint-protection-windows-10.md#firewall-rules)című témakört.  
 
 ### <a name="to-add-custom-firewall-rules-to-an-endpoint-protection-profile"></a>Egyéni tűzfalszabályok hozzáadása Endpoint Protection-profilhoz  
 
@@ -73,7 +73,7 @@ Az Intune által kezelhető tűzfalszabályok részletesen szerepelnek a Windows
 
 3. Válassza a **Windows Defender-tűzfal** lehetőséget a konfiguráció lap megnyitásához, majd a *Tűzfalszabályok* kiválasztásához kattintson a **Hozzáadás** elemre a **szabály létrehozása** lap megnyitásához.  
 
-4. Adja meg a tűzfalszabály beállításait, majd kattintson **az OK gombra** a mentéshez. A dokumentációban elérhető egyéni tűzfalszabályok beállításainak áttekintését lásd: [Egyéni tűzfalszabályok](endpoint-protection-windows-10.md#custom-firewall-rules).  
+4. Adja meg a tűzfalszabály beállításait, majd kattintson **az OK gombra** a mentéshez. A dokumentációban elérhető egyéni tűzfalszabályok beállításainak áttekintését lásd: [Egyéni tűzfalszabályok](endpoint-protection-windows-10.md#firewall-rules).  
 
 5. A szabály mentése után az megjelenik a *Windows Defender-tűzfal* lapon a szabályok listájában.  
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic; get-started
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: b836e754b8c08397fccb0c74b40ba9fe0675076e
-ms.sourcegitcommit: 97a46f0f6a27eda0592ff6518fac46bc2447b622
+ms.openlocfilehash: 1dd836d8bbc4d6f32081c74fb6f9edc42aff2cac
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411597"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482958"
 ---
 # <a name="network-endpoints-for-microsoft-intune"></a>Microsoft Intune hálózati végpontok  
 
@@ -146,7 +146,7 @@ További információkért lásd az Apple [szoftvertermékek által használt Ap
 
 ## <a name="microsoft-intune-certificate-connector"></a>A Microsoft Intune Certificate Connector  
 
-A Microsoft Intune Tanúsítvány-összekötő futtató kiszolgálónak hozzáféréssel kell rendelkeznie a **443** -es **TCP** -porton az alábbi táblázatban felsorolt nyilvános IP-címekhez.  
+A Microsoft Intune Tanúsítvány-összekötő futtató kiszolgálónak hozzáféréssel kell rendelkeznie a **443** -es **TCP** -porton az alábbi táblázatban felsorolt nyilvános IP-címekhez. A tanúsítványokkal kapcsolatos további információkért lásd: [PKCS-tanúsítványok konfigurálása és használata az Intune](certficates-pfx-configure.md) -nal, valamint [a SCEP-tanúsítványok konfigurálása és használata az Intune](certificates-scep-configure.md)-nal.
 
 |Tartományok                             |IP-cím       |
 |---------------|--------------------------------------|

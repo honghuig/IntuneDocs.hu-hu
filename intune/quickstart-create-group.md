@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a9cf1b610830928a753be176de2643fa1826bd0
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 8a8a444f886a5b754fd6ba3763e183db0fe95d5f
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050322"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482972"
 ---
-# <a name="quickstart-create-a-group-to-manage-users"></a>Gyors útmutató: Hozzon létre egy csoportot, hogy a felhasználók kezelése
+# <a name="quickstart-create-a-group-to-manage-users"></a>QuickStart Csoport létrehozása a felhasználók kezeléséhez
 
 Ebben a rövid útmutatóban az Intune használatával fog csoportot létrehozni egy meglévő felhasználó alapján. Csoportokkal kezelheti a felhasználókat, és ellenőrzés alatt tarthatja, hogy a felhasználók milyen céges erőforrásokat érhetnek el. Ezek lehetnek a vállalati intranet részei, vagy olyan külső erőforrások, mint a SharePoint-webhelyek, SaaS-alkalmazások vagy webalkalmazások.
 
@@ -39,7 +39,7 @@ Ha nem rendelkezik Intune-előfizetéssel, [regisztráljon egy ingyenes próbafi
 
 ## <a name="sign-in-to-intune"></a>Bejelentkezés az Intune-ba
 
-Jelentkezzen be a [Intune-portálon](https://aka.ms/intuneportal) , egy [globális rendszergazda vagy egy Intune-szolgáltatásadminisztrátor](users-add.md#types-of-administrators). Ha létrehozott egy Intune próba-előfizetést, az a fiók lesz a globális rendszergazda, amelyikkel azt létrehozta.
+Jelentkezzen be az [Intune](https://aka.ms/intuneportal) -portálra [globális rendszergazdaként vagy Intune szolgáltatás](users-add.md#types-of-administrators)-rendszergazdaként. Ha létrehozott egy Intune próba-előfizetést, az a fiók lesz a globális rendszergazda, amelyikkel azt létrehozta.
 
 ## <a name="create-a-group"></a>Csoport létrehozása
 
@@ -47,10 +47,10 @@ Létre fog hozni egy csoportot, amelyet a későbbiekben fog használni ebben a 
 
 1. Miután megnyitotta a **Microsoft Intune** panelt, válassza a **Csoportok** > **Új csoport** lehetőséget.
 2. A **Csoporttípus** legördülő listában válassza a **Biztonság** elemet.
-3. Az a **csoportnév** mezőben adja meg az új csoport nevét (például **Contoso tesztelőknek**).
-4. Adjon hozzá egy **leírás** a csoporthoz.
+3. A **csoport neve** mezőbe írja be az új csoport nevét (például **contoso-tesztelők**).
+4. Adja meg  a csoport leírását.
 5. Adja meg a **Tagság típusa** elemhez a **Hozzárendelt** beállítást. 
-6. Kattintson a **tagok** , és válassza ki a csoport egy vagy több tagot a listából.
+6. Kattintson a **tagok** elemre, és válassza ki a csoport egy vagy több tagját a listából.
 
     ![Képernyőkép egy csoport létrehozásáról a Microsoft Intune-ban](./media/quickstart-use-groups-01.png)
 
@@ -65,4 +65,4 @@ Ebben a rövid útmutatóban az Intune használatával hozott létre csoportot e
 Kövesse az Intune rövid útmutatóinak sorozatát a következő rövid útmutatóval.
 
 > [!div class="nextstepaction"]
-> [Gyors útmutató: A Windows 10-es eszközök automatikus regisztrációjának beállítása](quickstart-setup-auto-enrollment.md)
+> [QuickStart Automatikus regisztráció beállítása Windows 10-es eszközökhöz](quickstart-setup-auto-enrollment.md)

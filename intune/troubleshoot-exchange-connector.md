@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2718ee7936e82bffc50126eeb57f1b6f732df22d
-ms.sourcegitcommit: bd09decb754a832574d7f7375bad0186a22a15ab
+ms.openlocfilehash: ea3ae66a32353b4aa6c782b13e6a587ee1f4464e
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354463"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491815"
 ---
 # <a name="troubleshoot-the-intune-on-premises-exchange-connector"></a>A helyszíni Intune Exchange Connector hibaelhárítása
 
@@ -47,9 +47,9 @@ A [Helyszíni Intune Exchange Connector beállítása](exchange-connector-instal
 
 
 ## <a name="using-powershell-to-get-more-data-on-exchange-connector-issues"></a>További adatok gyűjtése az Exchange Connectorral kapcsolatos problémákról a PowerShell segítségével
-- Az adott postaládához tartozó mobileszközök listáját ezzel a paranccsal jelenítheti meg: Get-ActiveSyncDeviceStatistics -mailbox mbx
-- A postaládához tartozó SMTP-címek listájához használja ezt a parancsot: Get-Mailbox -Identity user | select emailaddresses | fl
-- Az eszköz hozzáférési állapotáról részletes információt a következő paranccsal jeleníthet meg: Get-CASMailbox <upn> | fl
+- A postaláda összes mobileszköz-listájának lekéréséhez használja a következőt:`Get-ActiveSyncDeviceStatistics -mailbox mbx`
+- A postaláda SMTP-címeinek listájának lekéréséhez használja a következőt:`Get-Mailbox -Identity user | select emailaddresses | fl`
+- Az eszköz hozzáférési állapotának részletes ismertetéséhez használja a következőt`Get-CASMailbox <upn> | fl`
 
 ## <a name="next-steps"></a>További lépések
 Ha ezek az információk nem segítettek, akkor [Támogatást kérhet a Microsoft Intune-hoz](get-support.md).

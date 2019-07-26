@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,25 +17,25 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: bb175d2133cf2a7bc5b064c13afb7e252147c729
-ms.sourcegitcommit: 4b83697de8add3b90675c576202ef2ecb49d80b2
+ms.openlocfilehash: 148320dc55ee044c057222a2316077396040882d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67044251"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483024"
 ---
-# <a name="quickstart-send-notifications-to-noncompliant-devices"></a>Gyors útmutató: Értesítések küldése a nem megfelelő eszközökre
+# <a name="quickstart-send-notifications-to-noncompliant-devices"></a>QuickStart Értesítések küldése a nem megfelelő eszközökre
 
 Ebben a rövid útmutatóban a e-mailes értesítéseket küldhet az alkalmazottai nem megfelelő eszközeire a Microsoft Intune-nal.
 
-Alapértelmezés szerint az Intune a nem megfelelő eszköz észlelése után azonnal nem megfelelőként jelöli meg azt. Az Azure Active Directory (AAD) [feltételes hozzáférési](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) majd letiltja az eszközt. Az Intune meg nem felelés esetén végrehajtandó műveleteivel rugalmas döntésekre is lehetőséget ad, ha egy eszköz nem megfelelő. Például türelmi időszakot adhat az ügyfeleknek a megfelelőséghez mielőtt letiltaná az eszközöket.
+Alapértelmezés szerint az Intune a nem megfelelő eszköz észlelése után azonnal nem megfelelőként jelöli meg azt. A Azure Active Directory (HRE) [feltételes hozzáférés](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) letiltja az eszközt. Az Intune meg nem felelés esetén végrehajtandó műveleteivel rugalmas döntésekre is lehetőséget ad, ha egy eszköz nem megfelelő. Például türelmi időszakot adhat az ügyfeleknek a megfelelőséghez mielőtt letiltaná az eszközöket.
 
 A nem megfelelőség esetén e-mailt küldet az adott végfelhasználóknak. Az értesítő e-mailt testreszabhatja, mielőtt elküldené a végfelhasználónak. Így pontosan megadhatja az e-mail címzettjeit és tárgyát, az üzenet szövegét, a céges emblémát és a kapcsolattartási adatokat. Az Intune a nem megfelelő eszköz adatait is szerepelteti az értesítésben.
 
 Ha nem rendelkezik Intune-előfizetéssel, [regisztráljon egy ingyenes próbafiókkal](free-trial-sign-up.md).
 
 ## <a name="prerequisites"></a>Előfeltételek
-- Az eszközmegfelelőségi szabályzatok használata az eszközök céges erőforrásokhoz, ha a feltételes hozzáférés aad-ben be kell állítania. Ha elvégezte az [Eszközmegfelelőségi szabályzat létrehozása](quickstart-set-password-length-android.md) című útmutatót, az Azure Active Directoryt használja. Aad-ben kapcsolatos további információkért lásd: [feltételes hozzáférés az Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) és [az Intune-nal feltételes hozzáférés használatának szokásos módjai](conditional-access-intune-common-ways-use.md).
+- Ha eszköz-megfelelőségi szabályzatok segítségével tiltja le az eszközöket a vállalati erőforrásokból, be kell állítania a feltételes hozzáférést a HRE. Ha elvégezte az [Eszközmegfelelőségi szabályzat létrehozása](quickstart-set-password-length-android.md) című útmutatót, az Azure Active Directoryt használja. További információ a HRE: [feltételes hozzáférés Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-conditional-access-azure-portal) és az Intune-nal való [feltételes hozzáférés gyakori módjai](conditional-access-intune-common-ways-use.md).
 
 ## <a name="sign-in-to-intune"></a>Bejelentkezés az Intune-ba
 
@@ -49,11 +49,11 @@ Ha e-mailt szeretne küldeni a felhasználóknak, hozzon létre egy értesítés
 2. Adja meg a következő információkat:
 
    - **Név**: *Contoso-rendszergazda*
-   - **Tulajdonos**: *Eszközmegfelelőség*
-   - **Üzenet**: *Az eszköz jelenleg nem teljesíti a szervezeti megfelelőségi követelményeknek.*
-   - **E-mail fejléce – céges embléma megjelenítése**: Állítsa be **engedélyezve** , a cég emblémájának megjelenítése.
-   - **E-mail lábléce – a cég emblémájának**: Állítsa be **engedélyezve** a szervezet nevének megjelenítéséhez.
-   - **E-mail lábléce – kapcsolatfelvételi adatok**: Állítsa be **engedélyezve** a szervezet kapcsolattartási adatok megjelenítéséhez.
+   - **Tárgy**: *Eszközmegfelelőség*
+   - **Üzenet**: *Az eszköz jelenleg nem felel meg a szervezet megfelelőségi követelményeinek.*
+   - **E-mail fejléce – a cég emblémájának**befoglalása: Állítsa **engedélyezve** értékre a szervezet emblémájának megjelenítéséhez.
+   - **E-mail lábléce – a cég nevét tartalmazza**: Állítsa **engedélyezve** értékre a szervezet nevének megjelenítéséhez.
+   - **E-mail lábléce – a kapcsolattartási adatokat tartalmazza**: Állítsa **engedélyezve** értékre a szervezet kapcsolattartási adatainak megjelenítéséhez.
 
    ![Megfelelőségről szóló értesítési üzenetminta az Intune-ban](./media/quickstart-send-notification-01.png)
 
@@ -74,7 +74,7 @@ A következő lépésekkel létrehozhat egy megfelelőségi szabályzatot Window
 2. Válassza a **Szabályzatok** > **Szabályzat létrehozása** lehetőséget.
 3. Adja meg a következő információkat:
 
-   - **Név**: *Windows 10-es megfelelőségi*
+   - **Név**: *Windows 10 megfelelőség*
    - **Description** (Leírás): *Windows 10-es megfelelőségi szabályzat*
    - **Platform**: Windows 10 és újabb
 
@@ -84,11 +84,11 @@ A következő lépésekkel létrehozhat egy megfelelőségi szabályzatot Window
 
     <img alt="System Security settings for a new compliance policy" src="./media/quickstart-send-notification-02.png" width="600">
 
-7. Válassza ki **OK** > **OK** > **létrehozás** az eszközmegfelelőségi szabályzat létrehozásához.
+7. A megfelelőségi szabályzat létrehozásához kattintson **az OK** > **OK** > **Létrehozás** gombra.
 8. Válassza a **Tulajdonságok** > **Meg nem felelés esetén végrehajtandó műveletek** > **Hozzáadás**. lehetőséget.
 9. A **Művelet** legördülő menüben ellenőrizze, hogy az **E-mail küldése a végfelhasználóknak** lehetőség van kiválasztva.
 10. Válassza az **Üzenetsablon** > **Contoso rendszergazda** > **Kiválasztás** lehetőséget a korábban létrehozott üzenetsablon kiválasztásához.
-11. Válassza ki **hozzáadása** > **OK** > **mentése** a módosítások mentéséhez.
+11. A módosítások mentéséhez kattintson a **Hozzáadás** > **OK** > **Mentés** elemre.
 
 ## <a name="assign-the-policy"></a>A szabályzat hozzárendelése
 
@@ -112,4 +112,4 @@ Ebben a rövid útmutatóban az Intune használatával létrehozott és hozzáre
 Kövesse az Intune rövid útmutatóinak sorozatát a következő rövid útmutatóval.
 
 > [!div class="nextstepaction"]
-> [Gyors útmutató: Egy ügyfél alkalmazások felvételét és hozzárendelését](quickstart-add-assign-app.md)
+> [QuickStart Ügyfélalkalmazás hozzáadása és kiosztása](quickstart-add-assign-app.md)

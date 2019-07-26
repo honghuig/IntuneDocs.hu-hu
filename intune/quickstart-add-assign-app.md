@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1fa23deb26dbf54f8e3e98ec0b9604859a34a90d
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: cd310cea29a3dac7a178d88c0f29d1a4e36ad37d
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67528310"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68482813"
 ---
-# <a name="quickstart-add-and-assign-a-client-app"></a>Gyors útmutató: Egy ügyfél alkalmazások felvételét és hozzárendelését
+# <a name="quickstart-add-and-assign-a-client-app"></a>QuickStart Ügyfélalkalmazás hozzáadása és kiosztása
 
 Ebben a rövid útmutatóban egy ügyfélalkalmazást ad és rendel hozzá a cége alkalmazottaihoz az Intune használatával. A rendszergazdák egyik elsődleges feladata annak biztosítása, hogy a végfelhasználók hozzáférjenek a munkájukhoz szükséges alkalmazásokhoz. 
 
@@ -36,36 +36,35 @@ Ha nem rendelkezik Intune-előfizetéssel, [regisztráljon egy ingyenes próbafi
 
 ## <a name="sign-in-to-intune"></a>Bejelentkezés az Intune-ba
 
-Jelentkezzen be a [Intune](https://aka.ms/intuneportal) , egy [globális rendszergazda vagy egy Intune-szolgáltatásadminisztrátor](users-add.md#types-of-administrators). Ha létrehozott egy Intune próba-előfizetést, az a fiók lesz a globális rendszergazda, amelyikkel azt létrehozta.
+Jelentkezzen be az [Intune](https://aka.ms/intuneportal) -ba [globális rendszergazdaként vagy Intune szolgáltatás](users-add.md#types-of-administrators)-rendszergazdaként. Ha létrehozott egy Intune próba-előfizetést, az a fiók lesz a globális rendszergazda, amelyikkel azt létrehozta.
 
 ## <a name="add-the-client-app-to-intune"></a>Az ügyfélalkalmazás hozzáadása az Intune-hoz
 
 Az alkalmazás belefoglalásával az Intune kezelheti annak részleteit. 
 
 A következő lépéseket követve adjon hozzá egy alkalmazást az Intune-hoz:
-
 1. Az [Intune-ban](https://aka.ms/intuneportal) válassza az **Ügyfélalkalmazások** > **Alkalmazások** > **Hozzáadás** elemet. 
 2. Válassza a **Windows 10** lehetőséget az **Alkalmazástípus** legördülő mező **Office 365 csomag** szakaszában.
 3. A hozzárendelni kívánt Office-alkalmazások kiválasztásához válassza az **Alkalmazáscsomag konfigurálása** lehetőséget.
 4. Az alapértelmezett alkalmazások elfogadásához kattintson az **OK** gombra.
 5. Válassza az **Alkalmazáscsomag adatai** lehetőséget.
 6. Adja meg a **Microsoft Office 365 alkalmazáscsomag** kifejezést a **csomag neveként**.
-7. Adja meg **a Microsoft Office 365 alkalmazáscsomag** , a **csomag leírása**.
+7. A **csomag leírásaként**adja meg **a Microsoft Office 365 App Suite** -t.
 8. A **Megjelenítés kiemelt alkalmazásként a Céges portálon** lehetőségnél kattintson az **Igen** gombra.
 9. Kattintson az **OK** gombra.
 
     ![Képernyőkép az alkalmazás adatainak hozzáadásáról](media/quickstart-add-assign-app/quickstart-add-assign-app-01.png)
 
-8. Válassza az **Alkalmazáscsomag beállításai** lehetőséget.
-9. A **Frissítési csatorna** legördülő mezőben válassza a **Havonta** elemet.
-10. Kattintson az **OK** > **Hozzáadás** lehetőségre.
+10. Válassza az **Alkalmazáscsomag beállításai** lehetőséget.
+11. A **Frissítési csatorna** legördülő mezőben válassza a **Havonta** elemet.
+12. Kattintson az **OK** > **Hozzáadás** lehetőségre.
 
 ## <a name="assign-the-app-to-a-group"></a>Az alkalmazás csoporthoz rendelése
 
 Miután hozzáadott egy alkalmazást a Microsoft Intune-hoz, azt felhasználói csoportokhoz és eszközökhöz rendelheti hozzá.
 
 > [!NOTE]
-> Ez a rövid útmutató-sorozat előző útmutatóink épül. Részletekért tekintse meg az útmutató [előfeltételeit](quickstart-add-assign-app.md#prerequisites).
+> Ez a rövid útmutató a sorozat előző rövid útmutatókra épül. Részletekért tekintse meg az útmutató [előfeltételeit](quickstart-add-assign-app.md#prerequisites).
 
 Egy alkalmazás egy csoporthoz rendeléséhez használja a következő lépéseket:
 1. Az [Intune-ban](https://aka.ms/intuneportal) válassza az **Ügyfélalkalmazások** > **Alkalmazások** elemet. 
@@ -91,7 +90,7 @@ Az Intune-on keresztül elérhető **Contoso To-Do** alkalmazás telepítéséhe
 4. Kattintson az Intune-nal hozzáadott alkalmazásra. Ebben a rövid útmutatóban hozzáadta a **Microsoft Office 365 alkalmazáscsomag** alkalmazást.
 
     > [!NOTE]
-    > Ha Ön nem sikerült társít alkalmazások az Intune-felhasználó, a következő üzenet jelenik meg: *A rendszergazda nem hajtott végre bármely alkalmazás érhető el Önnek.*
+    > Ha nem sikerült egy alkalmazást hozzárendelni az Intune-felhasználóhoz, a következő üzenet jelenik meg: *A rendszergazda semmilyen alkalmazást nem adott Önnek elérhetővé.*
 
 5. Kattintson az **Install** (Telepítés) gombra.
 
@@ -104,4 +103,4 @@ Ebben a rövid útmutatóban hozzáadott alkalmazásokat az Intune-hoz, ezeket e
 Kövesse az Intune rövid útmutatóinak sorozatát a következő rövid útmutatóval.
 
 > [!div class="nextstepaction"]
-> [Gyors útmutató: Létrehozása és hozzárendelése az alkalmazásvédelmi szabályzatokhoz](quickstart-create-assign-app-policy.md)
+> [QuickStart Alkalmazás-védelmi szabályzat létrehozása és társítása](quickstart-create-assign-app-policy.md)

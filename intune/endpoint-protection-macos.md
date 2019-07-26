@@ -5,7 +5,7 @@ keywords: ''
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -14,12 +14,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 3a885abfdd7f23f453f03c63fdb0086bed40a7b1
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: 1fe22291c808c498f9c099498b97e131ea531334
+ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375037"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68467420"
 ---
 # <a name="macos-endpoint-protection-settings-in-intune"></a>MacOS Endpoint Protection-beállítások az Intune-ban  
 
@@ -92,35 +92,24 @@ Az Apple FileVault beállításaival kapcsolatos további információkért lás
   - **Helyreállítási kulcs típusa**  
     A rendszer létrehozza a *személyes kulcs* helyreállítási kulcsait az eszközökhöz. Adja meg a következő beállításokat a személyes kulcshoz.  
 
-    - **Személyes helyreállítási kulcs helye** – adja meg a felhasználó rövid üzenetét, amely elmagyarázza, hogyan kérheti le a személyes helyreállítási kulcsot. A rendszer beszúrja a szöveget a FileVault engedélyezésekor a felhasználó által megjelenő üzenetbe.  
+    - **Személyes helyreállítási kulcs helye** – egy rövid üzenetet adhat meg a felhasználónak, amely elmagyarázza, hogyan és hol kérheti le személyes helyreállítási kulcsát. Ezt a szöveget szúrja be a felhasználó által a bejelentkezési képernyőn megjelenő üzenetbe, amikor a rendszer kéri, hogy adja meg a személyes helyreállítási kulcsot, ha elfelejtik a jelszót.  
       
     - **Személyes helyreállítási kulcs** elforgatása – Itt adhatja meg, hogy az eszköz személyes helyreállítási kulcsa milyen gyakran legyen elforgatva. Kiválaszthatja a **nincs konfigurálva**beállítás alapértelmezett értékét, vagy **1** és **12** hónap közötti értéket is megadhat.  
 
-  - **FileVault késleltetése a kijelentkezésig**  
-    > [!NOTE]
-    > A FileVault támogatása korlátozott, amíg a júliusi kiadás befejeződik néhány nap alatt. Amíg a bevezetést be nem fejeződik, a FileVault konfigurálásakor be kell állítania a *késleltetés FileVault, amíg ki nem jelentkezik* az **Engedélyezés**gombra.   
-
-    A FileVault csak akkor lesz engedélyezve, ha a felhasználó kijelentkezik. A rendszer a helyi felhasználó vagy a mobil fiók felhasználójának a kijelentkezéskor vagy a következő bejelentkezéskor fogja kérni a FileVault engedélyezését.  
+  - **Figyelmeztetés letiltása a kijelentkezéskor**  
+    Megakadályozza, hogy a rendszer felszólítsa a felhasználót, hogy engedélyezze a FileVault a kijelentkezéskor.  Ha a beállítás letiltva értékre van állítva, a kijelentkezéskor megjelenő üzenet le lesz tiltva, és a rendszer a bejelentkezéskor kéri a felhasználót.  
     - **Nincs konfigurálva**  
-    - **Engedélyezése**  
+    - **Megbénít**  
+
     **Alapértelmezett**: Nincs konfigurálva  
 
+  - **Megkerülő időpontok száma**  
+  Állítsa be, hogy a felhasználó hányszor hagyhatja figyelmen kívül a kéréseket, hogy engedélyezze a FileVault, mielőtt FileVault a felhasználónak a bejelentkezéshez.  
 
-
-    - **Figyelmeztetés letiltása a kijelentkezéskor**  
-      Megakadályozza, hogy a rendszer felszólítsa a felhasználót, hogy engedélyezze a FileVault a kijelentkezéskor.  
-      - **Nincs konfigurálva**  
-      - **Engedélyezése**  
-
-      **Alapértelmezett**: Nincs konfigurálva  
-
-    - **Megkerülő időpontok száma**  
-    Állítsa be, hogy a felhasználó hányszor hagyhatja figyelmen kívül a kéréseket, hogy engedélyezze a FileVault, mielőtt FileVault a felhasználónak a bejelentkezéshez.  
-
-      - **Nincs konfigurálva** – az eszközön a következő bejelentkezés engedélyezése előtt titkosítás szükséges.  
-      -  **1** – **10** – lehetővé teszi, hogy a felhasználó 1 – 10 alkalommal figyelmen kívül hagyja a kérést, mielőtt titkosítást kellene megadnia az eszközön.  
-      - **Nincs korlát, mindig** Rákérdezés – a rendszer felszólítja a felhasználót, hogy engedélyezze a FileVault, de a titkosítás soha nem szükséges.  
+    - **Nincs konfigurálva** – az eszközön a következő bejelentkezés engedélyezése előtt titkosítás szükséges.  
+    - **1** – **10** – lehetővé teszi, hogy a felhasználó 1 – 10 alkalommal figyelmen kívül hagyja a kérést, mielőtt titkosítást kellene megadnia az eszközön.  
+    - **Nincs korlát, mindig** Rákérdezés – a rendszer felszólítja a felhasználót, hogy engedélyezze a FileVault, de a titkosítás soha nem szükséges.  
  
-      **Alapértelmezett**: Nincs konfigurálva  
+    **Alapértelmezett**: Nincs konfigurálva  
 
 

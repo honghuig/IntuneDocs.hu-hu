@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,14 +17,14 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ec42d122bf3da3fbacef513d6af2dbe124b196c
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: 626c5d49c4f6bc7fef5f4f29c2397fafead50fda
+ms.sourcegitcommit: d2ac912b834c4840de9cc92ba1815b6ecfbfb52b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67530778"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68483002"
 ---
-# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>Gyors útmutató: Alkalmazásvédelmi szabályzat létrehozása és hozzárendelése
+# <a name="quickstart-create-and-assign-an-app-protection-policy"></a>QuickStart Alkalmazásvédelmi szabályzat létrehozása és hozzárendelése
 
 Ebben a rövid útmutatóban az Intune-nal létrehoz és hozzárendel egy alkalmazásvédelmi szabályzatot egy ügyfélalkalmazáshoz a végfelhasználó eszközén. Az Intune alkalmazásvédelmi szabályzatokkal ellenőrzi, hogy az alkalmazások megfelelnek-e a szervezet adatvédelmi követelményeinek.
 
@@ -40,15 +40,15 @@ Jelentkezzen be az [Intune-ba](https://aka.ms/intuneportal) [globális rendszerg
 
 ## <a name="create-an-app-protection-policy"></a>Alkalmazásvédelmi szabályzat létrehozása
 
-A következő lépések segítségével hozzon létre egy alkalmazásvédelmi szabályzatot:
+Az alábbi lépések végrehajtásával hozhat létre egy alkalmazás-védelmi szabályzatot:
 
 1. Az [Intune-ban](https://aka.ms/intuneportal) válassza az **Ügyfélalkalmazások** > **Alkalmazásvédelmi szabályzatok** > **Szabályzat létrehozása** lehetőséget. 
 2. Adja meg a következő adatokat: 
 
-    - **Név**: *Windows 10-es tartalomvédelem*
-    - **Description** (Leírás): *A szabályzathoz társított felhasználók nem fognak tudni a Kivágás, másolja vagy illessze be a kiosztott alkalmazást és más nem felügyelt alkalmazások között bármilyen tartalmat az eszközön.*
+    - **Név**: *Windows 10 tartalomvédelem*
+    - **Description** (Leírás): *Az ehhez a Szabályzathoz társított felhasználók nem tudnak kivágni, másolni vagy beilleszteni bármilyen tartalmat a hozzárendelt alkalmazás és az eszközön nem felügyelt alkalmazások között.*
     - **Platform**: *Windows 10*
-    - **Regisztráció állapota**: *A regisztrációhoz*
+    - **Beléptetési állapot**: *Regisztrációval*
 
 3. Válassza a **Védett alkalmazások** lehetőséget a szabályzatnak megfeleltetni kívánt alkalmazások kiválasztásához.
 4. Kattintson az **Alkalmazások hozzáadása** lehetőségre.
@@ -71,7 +71,7 @@ Alkalmazásvédelmi szabályzat hozzárendeléséhez kövesse az alábbi lépés
 3. Válassza a **Hozzárendelések** lehetőséget.
 4. A **Befoglalás** lapon válassza a **Belefoglalandó csoportok kijelölése** lehetőséget.
 5. Válassza a **Contoso tesztelők** elemet a belefoglalandó csoportként.
-6. Kattintson a **kiválasztása** > **mentése**. 
+6. Kattintson a**Mentés** **kiválasztása** > gombra. 
 
 Ezzel hozzárendelte az alkalmazásvédelmi szabályzatot.
 
@@ -85,4 +85,4 @@ Ebbe a rövid útmutatóban létrehozott és hozzárendelt egy alkalmazásvédel
 Kövesse az Intune rövid útmutatóinak sorozatát a következő rövid útmutatóval.
 
 > [!div class="nextstepaction"]
-> [Gyors útmutató: Hozzon létre, és a egy egyéni szerepkör hozzárendelése](quickstart-create-custom-role.md)
+> [QuickStart Egyéni szerepkör létrehozása és társítása](quickstart-create-custom-role.md)
