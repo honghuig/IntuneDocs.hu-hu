@@ -1,7 +1,7 @@
 ---
-title: Az Intune biztonsági alapterveket beállítások Windows 10 rendszerhez
+title: Az Intune biztonsági alapkonfigurációinak beállításai a Windows 10 rendszerhez
 titleSuffix: Microsoft Intune
-description: Az Intune biztonsági alapterv beállításainak kezelése Windows 10-es
+description: Az Intune biztonsági alapbeállításai a Windows 10 felügyeletéhez
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,1311 +16,1311 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 8fa5589f62900027b90659b8f570e7caa10b1cd8
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
-ms.translationtype: MT
+ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
+ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.translationtype: HT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67882300"
 ---
-# <a name="mdm-security-baseline-settings-for-intune"></a>Mobileszköz-kezelési biztonsági Alapterv beállítások az Intune-hoz  
+# <a name="mdm-security-baseline-settings-for-intune"></a>MDM biztonsági alapkonfigurációjának beállításai az Intune-ban  
 
-A mobileszköz-kezelési biztonsági Alapterv beállítások megjelenítéséhez a Windows 10 rendszerű eszközökhöz a Microsoft Intune által támogatott vagy újabb. Ez a alapvető beállítások alapértelmezett értékeit jelölik az ajánlott konfiguráció alkalmazható eszközökhöz, és nem egyeznek meg a referenciakonfiguráció alapértelmezett értékeket a többi biztonsági előírások.  
+Tekintse meg a Microsoft Intune által támogatott MDM biztonsági alapbeállításokat a Windows 10 vagy újabb rendszerű eszközökön. Az alapkonfigurációban a beállítások alapértelmezett értékei a megfelelő eszközök ajánlott konfigurációját jelentik, és előfordulhat, hogy nem egyeznek az alapértékekkel más biztonsági alaptervekben.  
 
-A legújabb alapkonfigurációt van **MDM biztonsági alapterv Spring 2019 frissítés (19 órával 1)**  
+A legújabb alapverzió a **Spring 2019 Update (19H1) Mdm biztonsági** alapterve  
 
-Ez a alapvető legújabb verziója megváltozott a korábbi verzióról kapcsolatos további információkért lásd: [változások az új sablon](#whats-changed-in-the-new-template).  
+Ha többet szeretne megtudni arról, hogy mi változott az alapkonfiguráció legújabb verziójában az előző verzióban, tekintse meg [a mi változott az új sablonban](#whats-changed-in-the-new-template).  
 
 > [!NOTE]  
-> A 2019. június, az előzetes verzió MDM biztonsági alapkonfiguráció megjelenésével értéke le lett cserélve a *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* sablon, amely generaly (nem előzetes verzióban érhető el). Elérhetősége előtt létrehozott profilok a *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* alapkonfiguráció megfelelően a beállításokat és a mobileszköz-kezelési biztonsági alapterv Spring 2019 frissítés (19 órával 1 szereplő értékek nem frissítése ) verziója.  Bár az előzetes verzió sablon alapján új profilt nem hozható létre, szerkesztheti, és továbbra is használhatja a korábban létrehozott profilok –, amelyek az előzetes verzió sablon alapján.   
+> 2019 júniusában az előzetes verziójú MDM biztonsági alapkonfigurációt a *Spring 2019 Update (19H1) sablon Mdm biztonsági* alapkonfigurációjának kiadása váltotta fel, amely általánosságban elérhető (nem előzetes verzióban). A *spring 2019 Update (19H1)* alapkonfigurációjának Mdm biztonsági alaptervének rendelkezésre állása előtt létrehozott profilok nem frissülnek, hogy TÜKRÖZZÉK a Mdm biztonsági alapkonfigurációjában a Spring 2019 Update (19H1) verziójának beállításait és értékeit.  Bár az előnézeti sablon alapján nem hozhatók létre új profilok, szerkesztheti és tovább használhatja a korábban létrehozott profilokat az előnézeti sablon alapján.   
   
-Biztonsági alapterv használatával az Intune-nal kapcsolatos további információkért lásd: [használja a biztonsági előírások](security-baselines.md).  
+A biztonsági alapkonfigurációk Intune-nal történő használatáról további információt a biztonsági alapkonfigurációk [használata](security-baselines.md)című témakörben talál.  
 
 
    
-## <a name="above-lock"></a>Zárolási felett  
-További információkért lásd: [házirend CSP - AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) a Windows dokumentációjában.  
+## <a name="above-lock"></a>Zárolás felett  
+További információ: [Policy CSP-AboveLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-abovelock) a Windows dokumentációjában.  
 
-- **Bejelentési értesítések megjelenítésének letiltása**  
-  Ez a házirend-beállítással megakadályozhatja, hogy a zárolási képernyőn megjelenő alkalmazás értesítéseit. Ha ez a szabályzatbeállítás engedélyezi, nem alkalmazásbeli értesítések jelennek meg a zárolási képernyőn. Ha letiltja vagy nem konfigurálja ezt a beállítást, felhasználók eldönthetik, hogy mely alkalmazások jelenít meg értesítéseket, a zárolási képernyőn.  
+- **Bejelentési értesítések megjelenítésének tiltása**  
+  Ezzel a házirend-beállítással megakadályozhatja, hogy az alkalmazás értesítései megjelenjenek a zárolási képernyőn. Ha engedélyezi ezt a házirend-beállítást, akkor a zárolási képernyőn nem jelennek meg alkalmazás-értesítések. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók kiválaszthatják, hogy mely alkalmazások jelenítsék meg az értesítéseket a zárolási képernyőn.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067101)  
 
   **Alapértelmezett**: Igen  
 
-- **Hangvezérelt alkalmazások zárolt képernyőn aktiválása**  
+- **Alkalmazások hang aktiválása zárolt képernyőről**  
 
   **Alapértelmezett**: Letiltva
 
-## <a name="app-runtime"></a>Alkalmazás-modul    
-További információkért lásd: [házirend CSP - AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
+## <a name="app-runtime"></a>Alkalmazás futtatókörnyezete    
+További információ: [Policy CSP-AppRuntime](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-appruntime
 ) a Windows dokumentációjában.  
 
-- **Windows Store apps esetén nem kötelező Microsoft-fiókok**  
-  Ez a házirend-beállítással szabályozhatja, hogy Microsoft-fiókok megadása nem kötelező, jelentkezzen be a fiók szükséges Windows Store-alkalmazások. Ez a szabályzat csak az azt támogató Windows Store apps van hatással. Ha ez a szabályzatbeállítás engedélyezi, amely általában egy Microsoft-fiókkal való bejelentkezéshez szükséges Windows Store apps segítségével a felhasználók ehelyett jelentkezzen be vállalati fiók. Ha letiltja vagy nem konfigurálja ezt a beállítást, felhasználók Microsoft-fiókkal kell bejelentkeznie.  
+- **Microsoft-fiókok választhatók a Windows áruházbeli alkalmazásokhoz**  
+  Ezzel a házirend-beállítással szabályozhatja, hogy a Microsoft-fiókok választhatók-e olyan Windows áruházbeli alkalmazásokhoz, amelyekhez fiók szükséges a bejelentkezéshez. Ez a szabályzat csak az azt támogató Windows áruházbeli alkalmazásokat érinti. Ha engedélyezi ezt a házirend-beállítást, a Windows áruházbeli alkalmazások, amelyek általában a bejelentkezéshez Microsoft-fiók igényelnek, lehetővé teszik a felhasználók számára a vállalati fiókkal való bejelentkezést. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználóknak Microsoft-fiók kell bejelentkezniük.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067104)  
   
   **Alapértelmezett**: Enabled  
 
-## <a name="application-management"></a>Alkalmazáskezelés   
-További információkért lásd: [házirend CSP - ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) a Windows dokumentációjában.  
+## <a name="application-management"></a>Alkalmazások kezelése   
+További információ: [Policy CSP-ApplicationManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationmanagement) a Windows dokumentációjában.  
 
-- **Telepítések letiltása felhasználói vezérlése**  
-  A házirend-beállítás lehetővé teszi a felhasználók számára, amely jellemzően az csak a rendszergazdák számára érhető el a telepítés beállításainak módosításához. Ha ez a szabályzatbeállítás engedélyezi, a Windows Installer biztonsági funkcióit is telepítővarázslója kihagyja. Lehetővé teszi a telepítés befejezéséhez, ellenkező esetben kellene lennie le biztonság megsértése miatt. Ha letiltja vagy nem konfigurálja ezt a beállítást, a biztonsági funkciók a Windows Installer módosításának megakadályozása például adja meg a könyvtárat, amelyhez a fájlok települnek a rendszergazdák számára fenntartott telepítési beállításait. Windows Installer azt észleli, hogy egy csomag lehetővé teszi a felhasználó egy védett beállítást módosíthatja, ha leállítja a telepítést, és megjelenít egy üzenetet. Ezek a biztonsági funkciók csak ha a telepítési program fut a biztonsági környezet, amelyben a felhasználó nem jogosult könyvtárak hozzáféréssel rendelkezik. A házirend-beállítás kevésbé korlátozó környezetekhez lett kialakítva. A telepítőprogram, amely megakadályozza, hogy a szoftver telepítése folyamatban hibák megkerülésére használható.  
+- **Felhasználók felügyeletének tiltása a telepítéseken**  
+  Ezzel a házirend-beállítással a felhasználók módosíthatják azokat a telepítési beállításokat, amelyek jellemzően csak rendszergazdák számára érhetők el. Ha engedélyezi ezt a házirend-beállítást, a Windows Installer egyes biztonsági funkcióit a rendszer figyelmen kívül hagyja. Lehetővé teszi a telepítés befejezését, mert a biztonsági szabálysértés miatt leáll. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows Installer biztonsági funkciói megakadályozzák, hogy a felhasználók a rendszergazdák számára fenntartott telepítési beállításokat használják, például megadhatják azt a könyvtárat, amelyre a fájlok telepítve vannak. Ha Windows Installer észleli, hogy egy telepítőcsomag engedélyezte a felhasználó számára egy védett beállítás módosítását, leállítja a telepítést, és megjelenít egy üzenetet. Ezek a biztonsági funkciók csak akkor működnek, ha a telepítőprogram olyan rendszerjogosultságú biztonsági környezetben fut, amelyben hozzáfér a felhasználónak elutasítottak könyvtáraihoz. Ez a házirend-beállítás kevésbé korlátozó környezetekhez készült. A használatával megkerülheti a szoftverek telepítését megakadályozó telepítőprogram hibáit.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067060)  
 
   **Alapértelmezett**: Igen
 
-- **Emelt szintű jogosultságokkal letiltása az MSI-alkalmazások telepítésére**  
-  A házirend-beállítás a Windows Installer emelt jogosultsági szintű használata, amikor telepíti a rendszer minden program irányítja.  
-  - *Ha ez a szabályzatbeállítás engedélyezi*, jogosultságok bővítve lettek a programok. Ezek a jogosultságok általában a felhasználó (Asztalon felkínált), a számítógép (telepített automatikusan) f rendelt rendelt, vagy a Vezérlőpult Programok telepítése és a rendelkezésre bocsátott programok számára vannak fenntartva. Ez a profil-beállítás lehetővé teszi a felhasználóknak, hogy a felhasználó előfordulhat, hogy nincs engedélye megtekintése és módosítása, például a könyvtárak rendkívül korlátozott számítógépeken könyvtárak hozzáférést igénylő programok telepítése.
-  - *Ha letiltja vagy nem konfigurálja a házirend-beállítás*, a rendszer az aktuális felhasználói engedélyek vonatkozik, amikor egy rendszergazda nem terjesztheti vagy ajánlat programok telepíti. Megjegyezés: A házirend-beállítás jelenik meg, a számítógép-konfiguráció és a felhasználói tartalmazó mappákat is. Ahhoz, hogy a házirend-beállítás érvényes, engedélyeznie kell azt mindkét mappában. Figyelmeztetés: Gyakorlott felhasználók kihasználhatja az engedélyeket a házirend-beállítás jogosultságait módosíthatja, és korlátozott fájlok és mappák állandó hozzáférést biztosít. Vegye figyelembe, hogy a házirend-beállítás felhasználói konfiguráció verziója nem garantált, hogy biztonságos legyen.  
+- **MSI-alkalmazások telepítésének letiltása emelt szintű jogosultságokkal**  
+  Ezzel a házirend-beállítással a Windows Installer emelt szintű engedélyek használhatók, amikor a rendszerre telepít bármely programot.  
+  - *Ha engedélyezi ezt a házirend-beállítást*, a rendszer minden programra kiterjeszti a jogosultságokat. Ezek a jogosultságok általában olyan programok számára vannak fenntartva, amelyek hozzá vannak rendelve a felhasználóhoz (az asztalon elérhető), a számítógéphez (automatikusan telepített) f, vagy elérhetővé válnak a Vezérlőpult Programok telepítése és törlése segédprogramjában. Ez a Profilbeállítások lehetővé teszi, hogy a felhasználók olyan programokat telepítsenek, amelyek hozzáférést igényelnek a címtárakhoz, amelyekhez a felhasználónak nincs engedélye a megtekintésre vagy a módosításra, beleértve a nagymértékben korlátozott számítógépeken lévő
+  - *Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást*, akkor a rendszer az aktuális felhasználó engedélyeit alkalmazza, amikor olyan programokat telepít, amelyeket a rendszergazda nem terjeszt el vagy biztosít. Megjegyezés: Ez a házirend-beállítás a számítógép konfigurációja és a felhasználói konfigurációs mappákban is megjelenik. Ahhoz, hogy ez a házirend-beállítás érvényes legyen, mindkét mappában engedélyeznie kell azt. Vigyázat A gyakorlott felhasználók kihasználhatják az engedélyek előnyeit ezzel a házirend-beállítással, hogy megváltoztassák a jogosultságokat, és állandó hozzáférést szerezzenek a korlátozott fájlokhoz és mappákhoz. Vegye figyelembe, hogy a házirend-beállítás felhasználói konfigurációs verziója nem garantált, hogy biztonságos legyen.  
   
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067134)    
 
   **Alapértelmezett**: Igen
 
-- **Játékvideó letiltása (csak asztali verzió)**  
-  Annak konfigurálása, rögzítése és közvetítése játékok engedélyezett-e.  
+- **Játék DVR blokkolása (csak asztali verzió)**  
+  Annak konfigurálása, hogy engedélyezett-e a játékok rögzítése és közvetítése.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067056)  
   
   **Alapértelmezett**: Igen  
 
 ## <a name="auto-play"></a>Automatikus lejátszás   
-További információkért lásd: [házirend CSP - lejátszás](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) a Windows dokumentációjában.  
+További információ: [Policy CSP-Robotpilota](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) a Windows dokumentációjában.  
 
-- **Automatikus lejátszás alapértelmezett automatikus futtatási viselkedés**  
-  Ez a beállítás hatással van az alapértelmezett viselkedést automatikus futtatási parancsok. Automatikus futtatási parancsok autorun.inf fájlokban van tárolva, és programokat vagy más módon indíthatja el. Amikor *engedélyezve*, a rendszergazdák módosíthatják az alapértelmezett automatikus futtatási viselkedés egy eszközön, amelyen a Windows Vista vagy újabb. Viselkedés értékre lehet beállítani: a) teljesen automatikus futtatási parancsok letiltja, vagy (b) térhet vissza a korábbi Windows Vista működése automatikusan a futtatási parancs végrehajtása. Ha a beállítása *letiltott* vagy *nincs konfigurálva*, Windows Vista rendszerű eszközök, vagy később kérdezzen rá, hogy a felhasználó egy automatikus futtatási parancs futtatva.  
+- **Automatikus lejátszás alapértelmezett automatikus futtatási viselkedése**  
+  Ez a beállítás hatással van az automatikus futtatási parancsok alapértelmezett viselkedésére. Az automatikus futtatási parancsok az Autorun. inf fájlban tárolódnak, és a telepítőprogramokat vagy más rutinokat indíthatnak el. Ha ez a *beállítás engedélyezve van*, a rendszergazdák megváltoztathatják a Windows Vista vagy újabb rendszert futtató eszközök alapértelmezett automatikus futtatási viselkedését. A viselkedés beállítható a következőre: a) teljesen letilthatja az automatikus futtatási parancsokat, vagy b) visszatérhet a Windows Vista előtti működésre, amely automatikusan végrehajtja az Autorun parancs futtatását. Ha a beállítás  letiltva vagy *nincs konfigurálva*értékre van állítva, akkor a Windows Vista vagy újabb rendszerű eszközök megkérik a felhasználót, hogy az Autorun parancs fusson.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067133)       
   
-  **Alapértelmezett**: Nem hajtható végre  
+  **Alapértelmezett**: Végrehajtás mellőzése  
   
-- **Automatikus lejátszás üzemmódban**  
-  A házirend-beállítás lehetővé teszi, hogy az automatikus lejátszás szolgáltatás kikapcsolása. Automatikus lejátszás megkezdi az adatok egy meghajtóról, amint helyezze adathordozót a meghajtóba. Ennek eredményeképpen a telepítőfájl a programok és a music hanganyag azonnali indítása. Windows XP SP2-t előtt automatikus lejátszás a cserélhető meghajtók, például a hajlékonylemez-meghajtó (de nem a CD-ROM-meghajtó) és a hálózati meghajtókon lévő alapértelmezés szerint le van tiltva. Windows XP SP2 verziótól kezdődően automatikus lejátszás engedélyezve van a cserélhető meghajtók, például a Zip-meghajtók és a egy USB-háttértár eszközök. Ha ez a szabályzatbeállítás engedélyezi, az automatikus lejátszás, a CD-ROM-ról és a cserélhető adathordozó meghajtó le van tiltva vagy le van tiltva az összes meghajtón. A házirend-beállítás letiltja az automatikus lejátszás további típusú meghajtókon. Ez a beállítás bekapcsolása a meghajtón, amelyen le van tiltva alapértelmezés szerint nem használható. Ha letiltja vagy nem konfigurálja ezt a beállítást, az automatikus lejátszás engedélyezve van. Megjegyezés: A házirend-beállítás jelenik meg a számítógép konfigurációja-és felhasználói konfigurációt. Ha a házirend-beállításokat ütközés lép fel, akkor a házirend-beállítás a számítógép konfigurációja élvez a házirend-beállítás a felhasználói konfigurációt.  
+- **Automatikus lejátszási mód**  
+  Ez a házirend-beállítás lehetővé teszi az automatikus lejátszás funkció kikapcsolását. Az automatikus lejátszás megkezdi a meghajtóról való beolvasást, amint adathordozót szúr be a meghajtóba. Ennek eredményeképpen a programok telepítési fájlja és a hanganyagokon megjelenő zene azonnal elindul. A Windows XP SP2 előtt az automatikus lejátszási szolgáltatás alapértelmezés szerint le van tiltva a cserélhető meghajtókon, például a hajlékonylemez-meghajtón (de nem a CD-ROM-meghajtón) és a hálózati meghajtókon. A Windows XP SP2 verziótól kezdődően az automatikus lejátszás engedélyezve van a cserélhető meghajtókon, beleértve a zip-meghajtókat és néhány USB háttértár-eszközt is. Ha engedélyezi ezt a házirend-beállítást, az automatikus lejátszási funkció le van tiltva a CD-ROM-és cserélhető adathordozó-meghajtókon, vagy le van tiltva az összes meghajtón. Ezzel a házirend-beállítással a további típusú meghajtókon letiltja az Automatikus lejátszást. Ezzel a beállítással nem engedélyezheti az Automatikus lejátszást azon meghajtókon, amelyeken a szolgáltatás alapértelmezés szerint le van tiltva. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az automatikus lejátszás engedélyezve van. Megjegyezés: Ez a házirend-beállítás a számítógép konfigurációja és a felhasználói konfigurációs mappákban is megjelenik. Ha a házirend-beállítások ütköznek, a számítógép konfigurációjában a házirend-beállítás elsőbbséget élvez a felhasználói konfiguráció házirend-beállításával szemben.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2066793)  
   
   **Alapértelmezett**: Letiltva
 
-- **Automatikus lejátszás a nem mennyiségi eszközök letiltása**  
-  A házirend-beállítás tiltja a lejátszás MTP eszközökhöz, például fényképezőgépek vagy telefonok. Ha ez a szabályzatbeállítás engedélyezi, az automatikus lejátszás MTP eszközök például fényképezőgépek vagy telefonok esetén nem engedélyezett. Ha letiltja vagy nem konfigurálja ezt a beállítást, az automatikus lejátszás nem mennyiségi eszközök engedélyezve van.  
+- **Nem mennyiségi eszközök automatikus lejátszásának letiltása**  
+  Ez a házirend-beállítás nem engedélyezi az Automatikus lejátszást az MTP-eszközök, például a kamerák vagy a telefonok számára. Ha engedélyezi ezt a házirend-beállítást, az automatikus lejátszás nem engedélyezett MTP-eszközökhöz, például fényképezőgépekhez vagy telefonokhoz. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az automatikus lejátszás engedélyezve van a nem mennyiségi eszközökhöz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067106)    
   
   **Alapértelmezett**: Enabled  
 
-## <a name="bitlocker"></a>A BitLocker    
-További információkért lásd: [házirend CSP - Bitlocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
+## <a name="bitlocker"></a>BitLocker    
+További információ: [Policy CSP-BitLocker](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-bitlocker
 ) a Windows dokumentációjában.  
 
-- **Bit széfjét a cserélhető meghajtót házirend**  
-  A titkosítási módszer vezérlőelemet, és cipher erőssége a házirend-beállítás szolgál. Az a szabályzat határozza meg, hogy a titkosítás a BitLocker titkosítási használó erősségét. Vállalatok előfordulhat, hogy kívánják vezérelni a titkosítás szintjét, a biztonság fokozása érdekében (AES-256-ot az AES-128-nál nagyobb). Ha engedélyezi ezt a beállítást, konfigurálhat egy titkosítási algoritmus és a fő erőssége a rögzített adatmeghajtók, operációsrendszer-meghajtók és a cserélhető adatmeghajtók egy külön-külön fogja. A rögzített és operációs rendszert tartalmazó meghajtókon azt javasoljuk az XTS-AES algoritmus használata. A cserélhető meghajtók használjon AES-CBC 128 bites vagy AES-CBC 256 bites Ha a meghajtó eszközöktől, amelyek nem futnak Windows 10-es, 1511-es vagy újabb verzióját használja. A titkosítási mód módosítása nem befolyásolja, ha a meghajtó már titkosítva van, vagy ha a titkosítás folyamatban van. Ebben az esetben figyelmen kívül ezt a beállítást.  
+- **Bites zárolás cserélhető meghajtó házirendje**  
+  Ezzel a házirend-beállítással szabályozható a titkosítási módszer és a titkosítás erőssége. A szabályzat értékei határozzák meg a BitLocker által a titkosításhoz használt rejtjel erősségét. A vállalatok a fokozott biztonság érdekében érdemes szabályozni a titkosítási szintet (az AES-256 erősebb, mint az AES-128). Ha engedélyezi ezt a beállítást, konfigurálhat egy titkosítási algoritmust és a kulcs titkosítási erősségét a rögzített adatmeghajtók, az operációsrendszer-meghajtók és a cserélhető adatmeghajtók számára egyenként. A rögzített és az operációsrendszer-meghajtók esetében javasoljuk, hogy használja a XTS-AES algoritmust. A cserélhető meghajtók esetében az AES-CBC 128-bit vagy az AES-CBC 256-bit használatát kell használnia, ha a meghajtót olyan más eszközök használják, amelyeken nem fut a Windows 10, a 1511-es vagy újabb verzió. A titkosítási módszer módosítása nincs hatással, ha a meghajtó már titkosítva van, vagy ha a titkosítás folyamatban van. Ezekben az esetekben a rendszer figyelmen kívül hagyja ezt a házirend-beállítást.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067140) 
 
-  Bit széfjét a cserélhető meghajtót házirend konfigurálja a következő beállítást:
+  A következő beállítással állíthatja be a cserélhető meghajtó cserélhető meghajtójának házirendjét:
 
-    - **Titkosítás megkövetelése az írási hozzáférés**  
-      **Alapértelmezett**: Igen  
+  - **Titkosítás megkövetelése írási hozzáféréshez**  
+    **Alapértelmezett**: Igen  
   
 
 ## <a name="browser"></a>Browser  
-További információkért lásd: [házirend CSP - böngésző](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) a Windows dokumentációjában.  
+További információ: [szabályzat CSP-böngésző](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-browser) a Windows dokumentációjában.  
 
-- **A Microsoft Edge SmartScreen megkövetelése**  
-  A Microsoft Edge felhasználók megvédeni a potenciális adathalászattal és a kártevő szoftverek alapértelmezés szerint a Windows Defender SmartScreen (bekapcsolva) használja. Továbbá alapértelmezés szerint felhasználók nem tiltható le (kapcsolja ki) a Windows Defender SmartScreen. A szabályzat engedélyezése a Windows Defender SmartScreen kikapcsolja, és megakadályozza, hogy a felhasználók ne tudják bekapcsolni a. Ne konfigurálja ezt a házirendet, hogy a felhasználó, hogy a Windows defender SmartScreen engedélyezése vagy letiltása.  
+- **SmartScreen megkövetelése a Microsoft Edge-hez**  
+  A Microsoft Edge a Windows Defender SmartScreen (bekapcsolva) használatával védi a felhasználókat a lehetséges adathalászat-csalások és kártevő szoftverek alapértelmezés szerint. Alapértelmezés szerint a felhasználók nem letilthatják (kikapcsolják) a Windows Defender SmartScreen szolgáltatását. A házirend engedélyezése kikapcsolja a Windows Defender SmartScreen szolgáltatást, és megakadályozza, hogy a felhasználók bekapcsolják azt. Ne konfigurálja ezt a házirendet úgy, hogy a felhasználók a Windows Defender SmartScreen be-vagy kikapcsolását választják.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067029)   
   
   **Alapértelmezett**: Igen  
   
-- **Rosszindulatú webhelyelérés letiltása**  
-  Alapértelmezés szerint a Microsoft Edge lehetővé teszi a felhasználók kihagyhatják (figyelmen kívül hagyása) a Windows Defender SmartScreen-figyelmeztetések potenciálisan rosszindulatú webhelyekről, lehetővé téve számukra az, hogy a hely. Az ehhez a szabályzathoz, konfigurálhatja a Microsoft Edge megakadályozza, hogy a felhasználók a figyelmeztetések mellőzése letiltják őket a továbbra is a hely.  
+- **Rosszindulatú hely elérésének letiltása**  
+  Alapértelmezés szerint a Microsoft Edge lehetővé teszi, hogy a felhasználók megkerüljék (figyelmen kívül hagyják) a Windows Defender SmartScreen figyelmeztetéseit a potenciálisan kártékony webhelyekről, így azok továbbra is a webhelyre léphetnek. Ezzel a házirenddel azonban beállíthatja a Microsoft Edge-t, hogy megakadályozza a felhasználók számára a figyelmeztetések megkerülését, és blokkolja őket a helyről.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067040)   
   
   **Alapértelmezett**: Igen  
   
-- **Ellenőrizetlen fájlletöltés letiltása**  
-  Alapértelmezés szerint a Microsoft Edge lehetővé teszi a felhasználók kihagyhatják (figyelmen kívül hagyása) a Windows Defender SmartScreen-figyelmeztetések potenciálisan kártékony fájlokkal, lehetővé teheti, hogy továbbra is a nem ellenőrzött fájlok letöltésével kapcsolatos. E szabályzat engedélyezésével megakadályozza, hogy felhasználók letiltják őket a nem ellenőrzött fájlok letöltése a figyelmeztetések mellőzése.  
+- **Nem ellenőrzött fájlok letöltésének tiltása**  
+  Alapértelmezés szerint a Microsoft Edge lehetővé teszi, hogy a felhasználók megkerüljék (figyelmen kívül hagyják) a Windows Defender SmartScreen figyelmeztetéseit a potenciálisan kártékony fájlokról, így továbbra is letöltheti a nem ellenőrzött fájlokat. A szabályzat engedélyezése megakadályozza, hogy a felhasználók megkerüljék a figyelmeztetéseket, és blokkolja a nem ellenőrzött fájlok letöltését.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067023)  
   
   **Alapértelmezett**: Igen  
   
-- **Jelszókezelő letiltása**  
-  Alapértelmezés szerint a Microsoft Edge jelszókezelő automatikusan használja, így a felhasználók helyi manager jelszavak. Jelszókezelő használatával a Microsoft Edge letiltja ezt a szabályzatot korlátozza. Ne konfigurálja ezt a házirendet, ha azt szeretné, hogy a felhasználók menteni, és jelszavak használatával helyben jelszókezelő kezelése.  
+- **A Password Manager letiltása**  
+  Alapértelmezés szerint a Microsoft Edge automatikusan a Password Managert használja, így a felhasználók helyileg is elérhetik a jelszavakat. A szabályzat letiltása korlátozza a Microsoft Edge használatát a Password Manager használatával. Ne konfigurálja ezt a házirendet, ha engedélyezni szeretné a felhasználók számára a jelszavak helyi mentését és kezelését a Password Manager használatával.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067128)  
   
   **Alapértelmezett**: Igen  
   
-- **Tanúsítvány hiba felülbírálások megakadályozása**  
-  A házirend-beállítás megakadályozza, hogy a felhasználó Secure Sockets Layer/Transport Layer Security (SSL/TLS) tanúsítványt hibák működését zavaró, az Internet Explorer programban (mint például a "lejárt", "Visszavonva" vagy "neve tér" hibák) böngészés figyelmen kívül hagyásával. Ha ez a szabályzatbeállítás engedélyezi, a felhasználó böngészés nem folytatható. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó választhat figyelmen kívül a hitelesítési hibák, és folytassa a böngészést.  
+- **Tanúsítvány-hibák felülbírálásának megakadályozása**  
+  Ezzel a házirend-beállítással megakadályozható, hogy a felhasználó figyelmen kívül hagyja a böngészést megszakító SSL/Transport Layer Security (SSL/TLS) tanúsítványokat (például a "lejárt", a "visszavont" vagy a "név eltérése" hibákat) az Internet Explorerben. Ha engedélyezi ezt a házirend-beállítást, a felhasználó nem folytathatja a böngészést. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a felhasználó dönthet úgy, hogy figyelmen kívül hagyja a tanúsítvány hibáit, és folytatja a böngészést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067126)  
   
   **Alapértelmezett**: Igen  
 
 ## <a name="connectivity"></a>Kapcsolat  
-További információkért lásd: [házirend CSP - kapcsolat](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) a Windows dokumentációjában.  
+További információ: [Policy CSP – kapcsolat](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-connectivity) a Windows dokumentációjában.  
 
-- **Közzététel a weben és internetes rendelés varázsló blokk internetes letöltés**  
-  A házirend-beállítás megadja a Windows letöltse-e a webes közzététel és az Internetes rendelés varázsló szolgáltatók listáját. Ezek a varázslók engedélyezése a felhasználók számára, például az online tárhelyen és photographic nyomtatási szolgáltatásokat nyújtó cégek listájából válassza ki. Alapértelmezés szerint a Windows a beállításjegyzékben megadott szolgáltatók mellett egy Windows webhelyéről letöltött szolgáltatókat jelenít meg. Ha ez a szabályzatbeállítás engedélyezi, Windows nem sikerül letölteni a szolgáltatók és csak a helyi beállításjegyzékben jelennek meg a gyorsítótárba helyezett szolgáltatók. Ha letiltja vagy nem konfigurálja ezt a beállítást, szolgáltatók listáját tölti le, amikor a felhasználó használja a webes közzététel vagy az Internetes rendelés varázsló. További információkért, amely tartalmazza a részleteket a szolgáltatói meghatározásáról a beállításjegyzékben dokumentációjában, a webes közzététel és az Internetes rendelés varázsló számára.  
+- **Internetes letöltés letiltása a webes közzététel és az online rendezési varázslók számára**  
+  Ezzel a házirend-beállítással adható meg, hogy a Windows letöltse-e a szolgáltatók listáját a webes közzétételi és az online rendezési varázslókhoz. Ezek a varázslók lehetővé teszik a felhasználók számára, hogy kiválasszák azon vállalatok listáját, amelyek olyan szolgáltatásokat biztosítanak, mint például az online tárterület és a fényképészeti nyomtatás. Alapértelmezés szerint a Windows a beállításjegyzékben megadott szolgáltatók mellett a Windows-webhelyről letöltött szolgáltatókat jeleníti meg. Ha engedélyezi ezt a házirend-beállítást, a Windows nem tölti le a szolgáltatókat, és csak azok a szolgáltatók jelennek meg, amelyek a helyi beállításjegyzékben vannak gyorsítótárazva. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer letölti a szolgáltatók listáját, amikor a felhasználó a webes közzétételi vagy online rendezési varázslót használja. További információ a szolgáltatók beállításjegyzékbeli megadásáról: a webes közzététel és az online rendezés varázsló dokumentációja.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067136)  
   
   **Alapértelmezett**: Enabled  
 
-- **Nyomtatóillesztők HTTP protokollon keresztüli letöltésének letiltása**  
-  A házirend-beállítás megadja, hogy az ügyfél nyomtató-illesztőprogram-csomagok letöltése HTTP protokollon keresztül történő engedélyezéséhez. Állítsa be a HTTP-nyomtatás, nem beépített illesztőprogramokat kell HTTP protokollon keresztül tölthetők. Megjegyezés: A házirend-beállítás nem akadályozza meg az ügyfél nyomtatás az intraneten vagy az interneten nyomtatókhoz HTTP protokollon keresztül. Csak tiltja, illesztőprogramokat, amelyek nincsenek még telepítve helyileg letöltése. Ha ez a szabályzatbeállítás engedélyezi, nyomtatóillesztők HTTP protokollon keresztül nem lehet letölteni. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználók letölthetik nyomtatóillesztők HTTP protokollon keresztül.  
+- **A nyomtatóillesztők HTTP-n keresztüli letöltésének letiltása**  
+  Ezzel a házirend-beállítással megadható, hogy az ügyfél letöltse-e a nyomtatóillesztő-csomagokat HTTP-n keresztül. HTTP-nyomtatás beállításához a nem beérkező illesztőprogramokat HTTP-n keresztül kell letölteni. Megjegyezés: Ez a házirend-beállítás nem akadályozza meg, hogy az ügyfél az intraneten vagy az interneten keresztül HTTP-n keresztül nyomtasson a nyomtatókra. Csak a helyileg telepített illesztőprogramok letöltését tiltja le. Ha engedélyezi ezt a házirend-beállítást, a nyomtatóillesztők nem tölthetők le HTTP-n keresztül. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználók HTTP-n keresztül tölthetnek le nyomtatóillesztőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067141)  
   
   **Alapértelmezett**: Enabled  
 
 ## <a name="credentials-delegation"></a>Hitelesítő adatok delegálása  
-További információkért lásd: [házirend CSP - CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
+További információ: [Policy CSP-CredentialsDelegation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsdelegation
 ) a Windows dokumentációjában.  
 
-- **Távoli állomás nem exportálható hitelesítő adatok delegálása**  
-  Távoli állomás lehetővé teszi, hogy nem exportálható hitelesítő adatok delegálását. Hitelesítő adatok delegálása használatakor az eszközök a távoli gazdagéphez, amely elérhetővé teszi a felhasználók a hitelesítő adatok ellopásának kockázata a támadók a távoli gazdagépen adja meg hitelesítő adatokat egy exportálható verzióját. Ha ez a szabályzatbeállítás engedélyezi, a gazdagép támogatja a távoli Credential Guard vagy a korlátozott rendszergazdai mód. Ha letiltja vagy nem konfigurálja ezt a beállítást, a korlátozott felügyeleti és a távoli Credential Guard módban nem támogatottak. Felhasználói mindig kell megadnia a hitelesítő adataikat a gazdagépre.  
+- **Nem exportálható hitelesítő adatok távoli gazdagép-delegálása**  
+  A távoli gazdagép lehetővé teszi a nem exportálható hitelesítő adatok delegálását. A hitelesítő adatok delegálásakor az eszközök a hitelesítő adatok exportálható verzióját biztosítják a távoli gazdagép számára, amely lehetővé teszi a felhasználók számára a távoli gazdagépen lévő támadók által a hitelesítő adatok ellopásának kockázatát. Ha engedélyezi ezt a házirend-beállítást, a gazdagép támogatja a korlátozott rendszergazdai vagy távoli hitelesítő adatok Guard üzemmódot. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a korlátozott felügyelet és a távoli hitelesítőadat-őr mód nem támogatott. A felhasználónak mindig meg kell adnia a hitelesítő adatait a gazdagépen.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067103)   
   
   **Alapértelmezett**: Enabled  
 
-## <a name="credentials-ui"></a>Credentials UI  
-További információkért lásd: [házirend CSP - CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) a Windows dokumentációjában.  
+## <a name="credentials-ui"></a>Hitelesítő adatok felhasználói felülete  
+További információ: [Policy CSP-CredentialsUI](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-credentialsui) a Windows dokumentációjában.  
 
-- **A rendszergazdák számbavétele** a házirend-beállítással megadható, hogy a rendszergazdai fiókok jelenít meg, amikor egy felhasználó megpróbál egy futó alkalmazás megszerzését. Alapértelmezés szerint a rendszergazdai fiókok nem jelennek meg, amikor a felhasználó megpróbál egy futó alkalmazás megszerzését. Ha ez a szabályzatbeállítás engedélyezi, a számítógép összes helyi rendszergazdai fiók jeleníti meg, így a felhasználó válasszon egyet, és adja meg a helyes jelszót. Ha letiltja ezt a beállítást, felhasználók mindig kell adjon meg egy felhasználónevet és a jelszó megszerzését.  
+- **Rendszergazdák számbavétele** Ezzel a házirend-beállítással szabályozható, hogy a rendszergazdai fiókok megjelenjenek-e, amikor egy felhasználó egy futó alkalmazást próbál meg emelni. Alapértelmezés szerint a rendszergazdai fiókok nem jelennek meg, amikor a felhasználó egy futó alkalmazást próbál meg emelni. Ha engedélyezi ezt a házirend-beállítást, a számítógép összes helyi rendszergazdai fiókja megjelenik, így a felhasználó kiválaszthatja az egyiket, és megadhatja a megfelelő jelszót. Ha letiltja ezt a házirend-beállítást, a felhasználóknak mindig meg kell adnia egy felhasználónevet és egy jelszót a jogosultságszint-emeléshez.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067021)
 
   
   **Alapértelmezett**: Letiltva  
 
 ## <a name="data-protection"></a>Adatvédelem  
-További információkért lásd: [házirend CSP - DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
+További információ: [Policy CSP-DataProtection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dataprotection
 ) a Windows dokumentációjában.  
 
 - **Közvetlen memória-hozzáférés letiltása**  
-  A házirend-beállítás lehetővé teszi, hogy, hogy közvetlen memória-hozzáférés (DMA) letiltása az összes gyakran használt adatok moduláris PCI alsóbb rétegbeli port mindaddig, amíg a felhasználó bejelentkezik a Windows. Miután egy felhasználó bejelentkezik, a Windows enumerálnia a PCI-eszköz csatlakozik a gazdagép beépülő PCI portokat. Minden alkalommal, amikor a felhasználó a gép zárolja, DMA le van tiltva a gyakori elérésű beépülő PCI portokon gyermekek eszközökkel nem rendelkező mindaddig, amíg a felhasználó újra bejelentkezik. Már enumerálták, amikor a számítógép zárolása fel lett oldva eszközök továbbra is működni, amíg nem választható le. A házirend-beállítás csak akkor lép érvénybe, ha a BitLocker vagy az eszköztitkosítás engedélyezve van.  
+  Ezzel a házirend-beállítással letilthatja a közvetlen memória-hozzáférést (DMA) az összes melegen csatlakoztatható PCI-porthoz, amíg a felhasználó be nem jelentkezik a Windowsba. Miután a felhasználó bejelentkezik, a Windows feljegyzi a gazdagéphez csatlakozó PCI-portokhoz csatlakozó PCI-eszközöket. Minden alkalommal, amikor a felhasználó zárolja a gépet, a rendszer letiltja a DMA-t a gyermekek nélküli gyors csatlakozású PCI-portok esetében, amíg a felhasználó újra be nem jelentkezik. A gép zárolásának feloldása után már enumerált eszközök továbbra is működni fognak, amíg le nem húzta a gépet. Ez a házirend-beállítás csak akkor lép érvénybe, ha a BitLocker vagy az eszköz titkosítása engedélyezve van.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067031)     
   
   **Alapértelmezett**: Igen  
 
-## <a name="device-guard"></a>A Device Guard  
-További információkért lásd: [házirend CSP - DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
+## <a name="device-guard"></a>Device Guard  
+További információ: [Policy CSP-DeviceGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceguard
 ) a Windows dokumentációjában.  
 
-- **Credential Guard**  
-  Ez a beállítás lehetővé teszi, hogy a felhasználók bekapcsolása a Credential Guard virtualizálás-alapú biztonság a következő rendszerindításkor hitelesítő adatok védelme érdekében.  
+- **Hitelesítőadat-őr**  
+  Ezzel a beállítással a felhasználók bekapcsolhatják a hitelesítő adatokat a virtualizálás-alapú biztonsággal a hitelesítő adatok védelme érdekében a következő újraindításkor.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067044)
    
-  **Alapértelmezett**: UEFI-zárolással engedélyezése 
+  **Alapértelmezett**: Engedélyezés UEFI-zárral 
 
-- **A virtualizálás-alapú biztonság engedélyezése**   
-  Kapcsolja be a virtualizálás-alapú biztonság (VBS a következő újraindításkor). A virtualizálás-alapú biztonság a Windows hipervizorral nyújt támogatást biztonsági szolgáltatásokhoz.  
+- **Virtualizációs alapú biztonság engedélyezése**   
+  A virtualizálás-alapú biztonság (VBS) bekapcsolása a következő újraindításkor. A virtualizálás-alapú biztonság a Windows hipervizorral nyújt támogatást biztonsági szolgáltatásokhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067066)  
   
   **Alapértelmezett**: Igen  
 
 
-- **Indítsa el a rendszer őrfeltétel**    
+- **Rendszerőr elindítása**    
   **Alapértelmezett**: Enabled  
 
 ## <a name="device-installation"></a>Eszköz telepítése  
-További információkért lásd: [házirend CSP - DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) a Windows dokumentációjában.  
+További információ: [Policy CSP-DeviceInstallation](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-deviceinstallation) a Windows dokumentációjában.  
 
-- **A készülékazonosítók hardver eszköz telepítése**  
-  A házirend-beállítás lehetővé teszi, hogy adja meg a Plug and Play hardverazonosítók és, hogy Windows rendszer akadályozza eszközökhöz kompatibilis azonosítók listáját. A házirend-beállítás élvez bármely más házirend-beállítás lehetővé teszi, hogy a Windows eszköz telepítése. Ha ez a szabályzatbeállítás engedélyezi, Windows van akadályozza egy eszközt, amelynek hardveres vagy kompatibilis azonosítója megjelenik a listában hoz létre. Ha engedélyezi ezt a beállítást, a távoli asztali kiszolgálón, a házirend-beállítást befolyásolja irányíthassa át a megadott eszközök, a távoli asztali ügyfélhez a távoli asztali kiszolgálónak. Ha letiltja vagy nem konfigurálja ezt a beállítást, eszközökön telepítheti és engedélyezett vagy egyéb házirend-beállítás megakadályozta abban frissíteni.  
+- **Hardvereszközök telepítése eszköz-azonosítók alapján**  
+  Ezzel a házirend-beállítással megadható azoknak az eszközöknek a Plug and Play-azonosítói és-kompatibilis azonosítói, amelyek nem telepíthetők a Windows rendszerben. Ez a házirend-beállítás elsőbbséget élvez minden más olyan házirend-beállítással szemben, amely lehetővé teszi, hogy a Windows telepítsen egy eszközt. Ha engedélyezi ezt a házirend-beállítást, a Windows megakadályozza, hogy olyan eszközt telepítsen, amelynek hardver-azonosítója vagy kompatibilis azonosítója megjelenik a létrehozott listában. Ha engedélyezi ezt a házirend-beállítást egy távoli asztali kiszolgálón, a házirend-beállítás a megadott eszközök távoli asztali ügyfélről a távoli asztali kiszolgálóra való átirányítását befolyásolja. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az eszközök az engedélyezettnek megfelelően telepíthetik és frissíthetik az eszközöket, és más házirend-beállítások is megtiltják azokat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2066794)  
   
-  **Alapértelmezett**: Blokk hardveres eszköz telepítése  
+  **Alapértelmezett**: Hardvereszköz telepítésének letiltása  
 
-    Amikor *hardveres eszköz telepítést* van kijelölve, a következő beállítások érhetők el.
+  Ha a *hardveres eszköz telepítésének letiltása* lehetőség van kiválasztva, a következő beállítások érhetők el.
+
+  - **A megfelelő hardvereszközök eltávolítása**   
+    Ez a beállítás csak akkor érhető el, ha az *eszköz azonosítói alapján* a hardvereszköz telepítése *blokkolja a hardveres eszközök telepítését*.
+    
+    **Alapértelmezett**: Igen
+
+  - **A letiltott hardveres eszközök azonosítói**  
+    Ez a beállítás csak akkor érhető el, ha az *eszköz azonosítói alapján* a hardvereszköz telepítése *blokkolja a hardveres eszközök telepítését*.
+    
+    **Alapértelmezett**: Igen  
   
-    - **Megfelelő hardveres eszközök eltávolítása**   
-    Ez a beállítás nem érhető el, csak ha *hardveres eszköz telepítése által készülékazonosítók* értékre van állítva *hardveres eszköz telepítést*.
-      
-      **Alapértelmezett**: Igen
-  
-    - **Hardver eszközök azonosítói nem futtatható**  
-       Ez a beállítás nem érhető el, csak ha *hardveres eszköz telepítése által készülékazonosítók* értékre van állítva *hardveres eszköz telepítést*.
-      
-      **Alapértelmezett**: Igen  
-  
-- **A telepítő osztályok hardveres eszköz telepítése**  
-  A házirend-beállítás lehetővé teszi, hogy az eszköz beállítása osztály globálisan egyedi azonosítóra (GUID, hogy Windows rendszer akadályozza az eszközillesztők) egy listában megadhatja a. A házirend-beállítás élvez bármely más házirend-beállítás lehetővé teszi, hogy a Windows eszköz telepítése. Ha ez a szabályzatbeállítás engedélyezi, Windows van ebben az esetben telepítésekor vagy frissítésekor az eszköz-illesztőprogramokat, amelyek osztályát GUID szerepelnek a listán hoz létre. Ha engedélyezi ezt a beállítást, a távoli asztali kiszolgálón, a házirend-beállítást befolyásolja irányíthassa át a megadott eszközök, a távoli asztali ügyfélhez a távoli asztali kiszolgálónak. Ha letiltja vagy nem konfigurálja ezt a beállítást, telepítheti a Windows és a frissítési eszközök engedélyezett, vagy egyéb házirend-beállítás megakadályozza.  
+- **Hardvereszközök telepítése telepítési osztályok szerint**  
+  Ezzel a házirend-beállítással megadhatja az eszközök telepítési osztályának globálisan egyedi azonosítókat (GUID azonosítókat) tartalmazó listáját azon eszközillesztők számára, amelyeket a Windows megakadályoz a telepítésben. Ez a házirend-beállítás elsőbbséget élvez minden más olyan házirend-beállítással szemben, amely lehetővé teszi, hogy a Windows telepítsen egy eszközt. Ha engedélyezi ezt a házirend-beállítást, a Windows megakadályozza azon eszközillesztők telepítését vagy frissítését, amelyek az eszköz telepítési osztályának GUID azonosítói megjelennek a létrehozott listában. Ha engedélyezi ezt a házirend-beállítást egy távoli asztali kiszolgálón, a házirend-beállítás a megadott eszközök távoli asztali ügyfélről a távoli asztali kiszolgálóra való átirányítását befolyásolja. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a Windows a házirend-beállításoknak megfelelően telepítheti és frissítheti az eszközöket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067048)  
   
-  **Alapértelmezett**: Blokk hardveres eszköz telepítése  
+  **Alapértelmezett**: Hardvereszköz telepítésének letiltása  
 
-    Amikor *hardveres eszköz telepítést* van kijelölve, a következő beállítások érhetők el.
-    - **Megfelelő hardveres eszközök eltávolítása**    
-    Ez a beállítás nem érhető el, csak ha *hardveres eszköz telepítése a telepítő osztályok* értékre van állítva *hardveres eszköz telepítést*.  
+  Ha a *hardveres eszköz telepítésének letiltása* lehetőség van kiválasztva, a következő beállítások érhetők el.
+  - **A megfelelő hardvereszközök eltávolítása**    
+    Ez a beállítás csak akkor érhető el, ha a *telepítési osztályok által telepített hardvereszközök telepítése* *blokkolja a hardvereszközök telepítését*.  
 
-      **Alapértelmezett**: *Alapértelmezett konfiguráció nélkül*  
-  
-    - **Hardver eszközök azonosítói nem futtatható**  
-      Ez a beállítás nem érhető el, csak ha *hardveres eszköz telepítése a telepítő osztályok* értékre van állítva *hardveres eszköz telepítést*.
-      
-      **Alapértelmezett**: *Alapértelmezett konfiguráció nélkül*  
+    **Alapértelmezett**: *Nincs alapértelmezett konfiguráció*  
 
-## <a name="device-lock"></a>Device Lock  
-További információkért lásd: [házirend CSP - DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) a Windows dokumentációjában.  
+  - **A letiltott hardveres eszközök azonosítói**  
+    Ez a beállítás csak akkor érhető el, ha a *telepítési osztályok által telepített hardvereszközök telepítése* *blokkolja a hardvereszközök telepítését*.
+    
+    **Alapértelmezett**: *Nincs alapértelmezett konfiguráció*  
+
+## <a name="device-lock"></a>Eszköz zárolása  
+További információ: [Policy CSP-DeviceLock](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-devicelock) a Windows dokumentációjában.  
 
 - **Kamera használatának megakadályozása**  
-  Letilthatja a zárolási képernyő kamera váltógomb kapcsolót a számítógép beállításait, és megakadályozza, hogy a fényképezőgép a zárolási képernyőn elindításának. Alapértelmezés szerint a felhasználók engedélyezhetik a zárolási képernyőn egy elérhető kamera lett meghívva. Ha engedélyezi ezt a beállítást, a felhasználók többé nem fognak tudni engedélyezése vagy letiltása a zárolási képernyő kamera-hozzáférés a PC-beállítások, és a kamera nem hívható meg a zárolási képernyőn.  
+  Letiltja a zárolási képernyő kamera-kapcsolóját a számítógép beállításaiban, és megakadályozza, hogy a rendszer meghívja a kamerát a zárolási képernyőn. Alapértelmezés szerint a felhasználók a zárolási képernyőn is engedélyezhetik a rendelkezésre álló kamera meghívását. Ha engedélyezi ezt a beállítást, a felhasználók többé nem fogják tudni engedélyezni vagy letiltani a zárolási képernyő kamera-hozzáférését a számítógép beállításaiban, és a kamerát nem lehet meghívni a zárolási képernyőn.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067052)
   
   **Alapértelmezett**: Enabled  
 
-- **Jelszó kérése**  
-  Itt adhatja meg, hogy engedélyezve van-e az eszköz zárolása.  
+- **Jelszó megkövetelése**  
+  Megadja, hogy engedélyezve van-e az eszköz zárolása.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067049)  
   
   **Alapértelmezett**: Igen  
   
-    Amikor *jelszó kérése* értékre van állítva *Igen*, a következő beállítások érhetők el.
+  Ha a *jelszó* megkövetelése *Igen*értékre van állítva, a következő beállítások érhetők el.
 
-    - **Jelszó minimális karakterkészlet száma**  
-      Összetett elemtípusok (kis-és nagybetűk, számok és központozási), erős PIN-kód vagy jelszó szükséges számát. PIN-kód kikényszeríti a következő viselkedés, asztali és mobil eszközökhöz: 1 – számjegyek csak 2 - számokat és kisbetűket szükséges 3 - kisbetűk, számjegyek és nagybetűk szükség. Az asztali Microsoft-fiókok és a tartományi fiókok nem támogatott. 4 – számjegy, kisbetűk, nagybetűk és speciális karakterek szükség. Nem támogatott a desktopban. Az alapértelmezett érték az 1.  
-      [További információ](https://go.microsoft.com/fwlink/?linkid=2067055)  
+  - **Jelszó minimális karakterkészletének száma**  
+    Az erős PIN-kódokhoz vagy jelszóhoz szükséges összetett elemek (kis-és nagybetűk, számok és írásjelek) száma. A PIN-kód a következő viselkedést alkalmazza az asztali és a mobileszközök esetében: 1 – csak 2 számjegyből és kisbetűkből álló számjegyek szükségesek 3 számjegyű, kisbetűket és nagybetűket. Asztali Microsoft-fiókok és tartományi fiókok esetében nem támogatott. 4 számjegyű, kisbetűket, nagybetűket és speciális karaktereket kell megadni. Az asztali verzióban nem támogatott. Az alapértelmezett érték az 1.  
+    [További információ](https://go.microsoft.com/fwlink/?linkid=2067055)  
+    
+    **Alapértelmezett**: 3  
+
+  - **Sikertelen bejelentkezések száma, mielőtt törlődne az eszközön lévő összes adat**  
+    Az eszköz törlése előtt engedélyezett hitelesítési hibák száma. A 0 érték letiltja az eszköz törlési funkcióját.  
+    [További információ](https://go.microsoft.com/fwlink/?linkid=2067030)  
       
-      **Alapértelmezett**: 3  
-  
-    - **Sikertelen bejelentkezések száma, mielőtt törlődne az eszközön lévő összes adat**  
-      Az eszköz törlése előtt engedélyezett hitelesítési hibák száma. A 0 érték letiltja az eszköz törlési funkciót.  
-      [További információ](https://go.microsoft.com/fwlink/?linkid=2067030)  
-        
-      **Alapértelmezett**: 10  
-  
-    - **Jelszó lejárata (nap)**  
-      A maximális jelszó kora házirend-beállítás meghatározza, hogy az hogyan mennyi ideig (napokban), hogy egy jelszót is használható, mielőtt a rendszer a felhasználó módosíthatja azt igényli. Beállíthatja a jelszavak lejárnak egy 1 és 999 közötti napok számát, vagy megadhatja, hogy jelszavuk Sose járjon le a napok számát állítsa 0-ra. Ha jelszó maximális kora 1 és 999 nap közötti, a jelszó minimális kora jelszó maximális kora kisebbnek kell lennie. Ha a jelszó maximális kora 0 értékre van állítva, a jelszó minimális kora 0 és 998 nap között bármilyen érték lehet.  
-      [További információ](https://go.microsoft.com/fwlink/?linkid=2067028)  
-      
-      **Alapértelmezett**: 60  
-  
-    - **Kötelező jelszótípus**  
-      Határozza meg a PIN-kód vagy jelszó megadása kötelező.  
-      [További információ](https://go.microsoft.com/fwlink/?linkid=2067027)  
-      
-      **Alapértelmezett**: Alfanumerikus karakterek  
-  
-    - **Jelszó minimális hossza**  
-      A minimális jelszó hossza házirend-beállítás meghatározza, hogy legalább hány karakterből kell állnia egy felhasználói fiók jelszavát is alkotó. Beállíthatja a egy értéke 1 és 14 karakter között, vagy hozhat létre, hogy a karakterek száma 0-ra állításával jelszavát nem szükséges.  
-      [További információ](https://go.microsoft.com/fwlink/?linkid=2067024)  
-      
-      **Alapértelmezett**: 8  
-  
-    - **Egyszerű jelszavak blokkolása**  
-      Itt adhatja meg, hogy a PIN-kód vagy jelszó például a "1111" vagy "1234" engedélyezettek. Az asztal a képjelszavak használatát is meghatározza.  
-      [További információ](https://go.microsoft.com/fwlink/?linkid=2067127) 
-      
-      **Alapértelmezett**: Igen  
-        *Igen, egy beállítás megakadályozza, hogy az egyszerű jelszavak használatát.* 
+    **Alapértelmezett**: 10  
+
+  - **Jelszó lejárata (nap)**  
+    A jelszó maximális élettartama házirend-beállítás határozza meg, hogy mennyi ideig használható a jelszó, mielőtt a rendszer megköveteli a felhasználótól, hogy módosítsa azt. Beállíthatja, hogy a jelszavak egy 1 és 999 közötti számú nap elteltével lejárnak, vagy megadhatja, hogy a jelszavak soha ne járjanak le, ha a napok számát 0-ra állítja. Ha a jelszó maximális kora 1 és 999 nap közé esik, a jelszó minimális élettartama nem lehet kisebb, mint a jelszó maximális kora. Ha a jelszó maximális élettartama 0, akkor a jelszó minimális kora 0 és 998 nap közötti érték lehet.  
+    [További információ](https://go.microsoft.com/fwlink/?linkid=2067028)  
+    
+    **Alapértelmezett**: 60  
+
+  - **Kötelező jelszótípus**  
+    Meghatározza, hogy milyen típusú PIN-kód vagy jelszó szükséges.  
+    [További információ](https://go.microsoft.com/fwlink/?linkid=2067027)  
+    
+    **Alapértelmezett**: Alfanumerikus  
+
+  - **Jelszó minimális hossza**  
+    A jelszó minimális hossza házirend-beállítás határozza meg, hogy hány karakterből állhat egy felhasználói fiók jelszava. Megadhat egy 1 és 14 karakter közötti értéket, vagy megadhatja, hogy nincs szükség jelszóra, ha a karakterek számát 0-ra állítja.  
+    [További információ](https://go.microsoft.com/fwlink/?linkid=2067024)  
+    
+    **Alapértelmezett**: 8  
+
+  - **Egyszerű jelszavak letiltása**  
+    Megadja, hogy engedélyezett-e a PIN-kód vagy a jelszavak (például "1111" vagy "1234"). Az asztal esetében a képjelszavak használatát is szabályozza.  
+    [További információ](https://go.microsoft.com/fwlink/?linkid=2067127) 
+    
+    **Alapértelmezett**: Igen  
+      *Az Igen beállítás meggátolja az egyszerű jelszavak használatát.* 
 
   - **Korábbi jelszavak újbóli használatának tiltása**  
-    Itt adhatja meg, hány jelszó tárolható az előzményeket, amely nem használható. Az érték a felhasználó jelenlegi jelszavának tartalmazza. Például a beállítását *1* a felhasználó nem használhatja az aktuális jelszó újra, amikor kiválasztja az új jelszót. A beállításnak *5* azt jelenti, hogy a felhasználó nem állíthatja be az új jelszóval az aktuális jelszó vagy bármely olyan az előző négy jelszavait.  
+    Meghatározza, hogy hány jelszó tárolható a nem használható előzményekben. Az érték tartalmazza a felhasználó aktuális jelszavát. Ha például az *1* értékre kattint, a felhasználó nem tudja újból felhasználni a jelenlegi jelszavát új jelszó kiválasztásakor. Az *5* beállítás azt jelenti, hogy a felhasználók nem állíthatják be az új jelszavukat a jelenlegi jelszavuk vagy az előző négy jelszavuk közül.  
     [További információ](https://go.microsoft.com/fwlink/?linkid=2066795)  
     
     **Alapértelmezett**: 24  
 
-- **Diavetítés megakadályozása**  
-  Letiltása a zárolási képernyő diavetítés beállításai a számítógép beállításait, és megakadályozza, hogy Diavetítés lejátszása a zárolási képernyőn. Alapértelmezés szerint a felhasználók engedélyezhetik a diavetítés, akkor zárolja a gép után fog futni. Ha engedélyezi ezt a beállítást, a felhasználó nem módosíthatja a gépház diavetítés beállításait, és nincs diavetítés megkezdheti.  
+- **A diavetítés megakadályozása**  
+  Letiltja a zárolási képernyő görgetősávjának beállításait a számítógép beállításaiban, és megakadályozza a diavetítés lejátszását a zárolási képernyőn. Alapértelmezés szerint a felhasználók engedélyezheti a diavetítést, amely a gép zárolása után fog futni. Ha engedélyezi ezt a beállítást, a felhasználók nem módosíthatják a számítógép beállításaiban a diavetítés beállításait, és nem indíthatnak el diavetítést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067105) 
   
   **Alapértelmezett**: Enabled  
-  *Engedélyezett beállítás megakadályozza, hogy a diavetítések futását.* 
+  *Az Engedélyezve beállítás megadásával megakadályozhatja a diavetítés futtatását.* 
 
-- **Jelszó minimális kora napokban**  
-  A minimális jelszó kora házirend-beállítás határozza meg azt a időszakot (napokban), amely egy jelszónak kell lennie, mielőtt a felhasználó módosíthatná. Beállíthat egy 1 és 998 nap közötti értéket, vagy közvetlenül engedélyezheti a jelszó módosítására a napok száma 0-ra állításával. A jelszó minimális kora kisebbnek kell lennie a jelszó maximális kora, kivéve, ha a jelszó maximális kora értéke 0, amely azt jelzi, hogy jelszavuk Sose járjon le. Jelszó maximális kora értéke 0, ha a jelszó minimális kora 0 és 998 között bármilyen érték lehet állítani.  
+- **Jelszó minimális kora (nap)**  
+  A jelszó minimális élettartama házirend-beállítás határozza meg azt az időtartamot (nap), ameddig a felhasználónak meg kell változtatnia a jelszót. 1 és 998 nap közötti értéket adhat meg, vagy a jelszó módosításait azonnal engedélyezheti, ha a napok számát 0-ra állítja. A jelszó minimális élettartama nem lehet kisebb, mint a jelszó maximális kora, kivéve, ha a jelszó maximális élettartama 0 értékű, ami azt jelzi, hogy a jelszavak soha nem járnak le. Ha a jelszó maximális élettartama 0, akkor a jelszó minimális kora 0 és 998 közötti értékre állítható be.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067022) 
   
   **Alapértelmezett**: 1  
 
-## <a name="dma-guard"></a>DMA Guard  
-További információkért lásd: [házirend CSP - DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) a Windows dokumentációjában.
-- **A külső eszközök nem kompatibilisek a Kernel DMA védelmet enumerálási**  
-  Ez a szabályzat funkcionalitást biztosít a további biztonsági külső DMA-kompatibilis eszközök ellen. Lehetővé teszi az enumerálás a külső DMA-kompatibilis eszközök felett több szabályozási nem kompatibilis a DMA Újramegfeleltetést/eszköz memória elkülönítése és az elszigetelés. Ez a szabályzat csak akkor lép érvénybe, ha Kernel DMA védelem támogatott, és a rendszer belső vezérlőprogramja által engedélyezett. Kernel DMA védelmi funkciója platform, amely nem vezérelhető, hogy egy házirend vagy a végfelhasználó. Gyártási alkalmával a rendszer által támogatott rendelkezik. Ellenőrizze, hogy ha a rendszer támogatja-e a Kernel DMA védelem, tekintse meg a Kernel DMA védelem mezője MSINFO32.exe összegzés lapján.  
+## <a name="dma-guard"></a>DMA-őr  
+További információ: [Policy CSP-DmaGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard) a Windows dokumentációjában.
+- **A kernel DMA-védelemmel nem kompatibilis külső eszközök enumerálása**  
+  A szabályzat célja, hogy további biztonságot nyújtson a külső DMA-kompatibilis eszközökhöz. Lehetővé teszi a külső DMA-kompatibilis eszközök enumerálásának nagyobb mértékű szabályozását, amely nem kompatibilis a DMA újramegfeleltetésével/az eszköz memóriájának elkülönítésével és a munkavégzéssel. Ez a szabályzat csak akkor lép érvénybe, ha a rendszer belső vezérlőprogramja támogatja a kernel DMA védelmét. A kernel DMA-védelem olyan platform-szolgáltatás, amely nem vezérelhető házirend vagy végfelhasználó által. A rendszernek a gyártáskor támogatottnak kell lennie. Annak vizsgálatához, hogy a rendszeren támogatott-e a kernel DMA-védelem, tekintse meg a kernel DMA-védelem mezőt az MSINFO32. exe összefoglalás lapján.  
   [További információ](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-dmaguard#dmaguard-deviceenumerationpolicy)
 
-  **Alapértelmezett**: Összes letiltása   
+  **Alapértelmezett**: Az összes letiltása   
 
-## <a name="event-log-service"></a>Event Log Service  
-További információkért lásd: [házirend CSP - EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) a Windows dokumentációjában.  
+## <a name="event-log-service"></a>Eseménynapló szolgáltatás  
+További információ: [Policy CSP-EventLogService](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-eventlogservice) a Windows dokumentációjában.  
 
-- **Biztonsági napló maximális mérete KB-ban**  
-  A házirend-beállítás meghatározza a naplófájl maximális méretét kilobájtban. Ha engedélyezi ezt a beállítást, konfigurálhatja a naplófájl maximális mérete 1 megabájt (1024 kilobájt) és 2 terabájt (2147483647 kilobájt) kilobájtoktól a petabájtokig lépésekben kell esnie. Ha letiltja vagy nem konfigurálja ezt a beállítást, a naplófájl maximális méretét a helyileg konfigurált értékre van állítva. A helyi rendszergazda, a napló tulajdonságai párbeszédpanelen módosíthatja ezt az értéket, és a rendszer alapértelmezés szerint 20 MB.  
+- **Biztonsági napló maximális fájlmérete KB-ban**  
+  Ezzel a házirend-beállítással adható meg a naplófájl maximális mérete kilobájtban. Ha engedélyezi ezt a házirend-beállítást, a naplófájlok maximális méretét 1 megabájt (1024 kilobájt) és 2 terabájt (2147483647 kilobájt) értékre állíthatja kilobájtos növekményekben. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a naplófájl maximális mérete a helyileg konfigurált értékre van állítva. Ezt az értéket a helyi rendszergazda módosíthatja a napló tulajdonságai párbeszédpanelen, és az alapértelmezett érték 20 megabájt.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067042)  
   
    **Alapértelmezett**: 196608  
 
-- **Rendszernapló fájl maximális mérete KB-ban**  
-  A házirend-beállítás meghatározza a naplófájl maximális méretét kilobájtban. Ha engedélyezi ezt a beállítást, konfigurálhatja a naplófájl maximális mérete 1 megabájt (1024 kilobájt) és 2 terabájt (2147483647 kilobájt) kilobájtoktól a petabájtokig lépésekben kell esnie. Ha letiltja vagy nem konfigurálja ezt a beállítást, a naplófájl maximális méretét a helyileg konfigurált értékre van állítva. A helyi rendszergazda, a napló tulajdonságai párbeszédpanelen módosíthatja ezt az értéket, és a rendszer alapértelmezés szerint 20 MB.  
+- **Rendszernapló maximális fájlmérete (KB)**  
+  Ezzel a házirend-beállítással adható meg a naplófájl maximális mérete kilobájtban. Ha engedélyezi ezt a házirend-beállítást, a naplófájlok maximális méretét 1 megabájt (1024 kilobájt) és 2 terabájt (2147483647 kilobájt) értékre állíthatja kilobájtos növekményekben. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a naplófájl maximális mérete a helyileg konfigurált értékre van állítva. Ezt az értéket a helyi rendszergazda módosíthatja a napló tulajdonságai párbeszédpanelen, és az alapértelmezett érték 20 megabájt.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2066798)  
   
   **Alapértelmezett**: 32768  
 
-- **Alkalmazás log fájl maximális mérete KB-ban**  
-  A házirend-beállítás meghatározza a naplófájl maximális méretét kilobájtban. Ha engedélyezi ezt a beállítást, konfigurálhatja a naplófájl maximális mérete 1 megabájt (1024 kilobájt) és 2 terabájt (2147483647 kilobájt) kilobájtoktól a petabájtokig lépésekben kell esnie. Ha letiltja vagy nem konfigurálja ezt a beállítást, a naplófájl maximális méretét a helyileg konfigurált értékre van állítva. A helyi rendszergazda, a napló tulajdonságai párbeszédpanelen módosíthatja ezt az értéket, és a rendszer alapértelmezés szerint 20 MB.  
+- **Alkalmazásnapló maximális fájlmérete KB-ban**  
+  Ezzel a házirend-beállítással adható meg a naplófájl maximális mérete kilobájtban. Ha engedélyezi ezt a házirend-beállítást, a naplófájlok maximális méretét 1 megabájt (1024 kilobájt) és 2 terabájt (2147483647 kilobájt) értékre állíthatja kilobájtos növekményekben. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a naplófájl maximális mérete a helyileg konfigurált értékre van állítva. Ezt az értéket a helyi rendszergazda módosíthatja a napló tulajdonságai párbeszédpanelen, és az alapértelmezett érték 20 megabájt.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067125)  
   
   **Alapértelmezett**: 32768  
 
 ## <a name="experience"></a>Élmény  
-További információkért lásd: [házirend CSP - élmény](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) a Windows dokumentációjában.  
+További információ: [Policy CSP –](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-experience) a Windows dokumentációjában található tapasztalat.  
 
-- **Windows reflektorfény blokkolása**  
-  Lehetővé teszi a rendszergazdáknak, hogy kapcsolja ki az összes Windows reflektorfény szolgáltatások - ablak reflektorfény a zárolási képernyő, Windows-tippek a Microsoft fogyasztói funkciók, és az egyéb kapcsolódó funkciókat.  
+- **A Windows reflektorfény letiltása**  
+  Lehetővé teszi, hogy a rendszergazdák kikapcsolják az összes Windows reflektorfény-funkciót – ablak Reflektorfényben a zárolási képernyőn, a Windows-tippeket, a Microsoft fogyasztói funkcióit és egyéb kapcsolódó funkciókat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067037)  
   
   **Alapértelmezett**: Igen  
 
-  Amikor *Windows reflektorfény blokkolása* értékre van állítva *Igen*, a következő beállítások érhetők el.
+  Ha a *Windows reflektorfény letiltása* *Igen*értékre van állítva, a következő beállítások érhetők el.
   
-  - **Harmadik féltől származó javaslatok a Windows Reflektorfényben letiltása**  
-    Itt adhatja meg, hogy a külső alkalmazások és tartalmak javaslatok engedélyezése a közzétevők a Windows reflektorfény szolgáltatások, mint például a reflektorfény a zárolási képernyő, a javasolt alkalmazások megjelenítése a Start menübe, és a Windows-tippek. Előfordulhat, hogy továbbra is látnak javaslatok Microsoft szolgáltatások, alkalmazások és szolgáltatások.  
+  - **Harmadik féltől származó javaslatok letiltása a Windows reflektorfényben**  
+    Megadja, hogy engedélyezi-e a harmadik féltől származó szoftvergyártók alkalmazás-és tartalmi javaslatainak használatát a Windows reflektorfényben, például a zárolási képernyő Spotlight, a javasolt alkalmazások a Start menüben és a Windows-tippek. A felhasználók továbbra is láthatják a Microsoft funkcióit, alkalmazásait és szolgáltatásait.  
     [További információ](https://go.microsoft.com/fwlink/?linkid=2067045)  
       
     **Alapértelmezett**: Igen  
-  - **Fogyasztói funkciók letiltása**  
-    Lehetővé teszi a rendszergazdáknak, hogy kapcsolja be, amelyek jellemzően a fogyasztók számára, például a kezdőképernyőn megjelenő javaslatok, a tagsági értesítések, a Kezdőélmény futtatása után alkalmazás telepítése, és átirányítási csempék.  
+  - **A fogyasztói sajátosságok letiltása**  
+    Lehetővé teszi a rendszergazdáknak, hogy csak a felhasználók számára, például a Start Suggestions, a tagsági értesítések, az OOBE utáni alkalmazások telepítése és a csempék átirányítása céljából bekapcsolják a felhasználói élményeket.  
     [További információ](https://go.microsoft.com/fwlink/?linkid=2067054)  
      
     **Alapértelmezett**: Igen  
 
-## <a name="exploit-guard"></a>Biztonsági rés kiaknázása  
-További információkért lásd: [házirend CSP - ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) a Windows dokumentációjában.  
+## <a name="exploit-guard"></a>Védelem kiaknázása  
+További információ: [Policy CSP-ExploitGuard](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-exploitguard) a Windows dokumentációjában.  
 
-- **Biztonsági rés kiaknázása elleni védelem XML**  
-  Lehetővé teszi a rendszergazda leküldenie egy konfigurációt, amely az átnézni kívánt rendszer és alkalmazás kockázatcsökkentési beállításokat a szervezet összes eszközre. A konfigurációs XML képviseli. Biztonsági rés kiaknázása elleni védelem segít eszközök védelme a kártevők, amelyek a biztonsági rések használatával elosztani és fertőznek. A Windows biztonsági alkalmazás vagy a PowerShell használatával létrehozhat egy csoportot (más néven a konfigurációs) megoldások. Ez a konfiguráció exportálása XML-fájlba, majd ossza meg több gépet a hálózaton úgy, hogy az összes ugyanazokat a kockázatcsökkentési beállításokat. Képes konvertálni, és egy meglévő EMET konfigurációs XML-fájl importálása egy biztonsági rés kiaknázása elleni védelem konfigurációs XML-jét.  
+- **Védelem XML-kódjának kiaknázása**  
+  Lehetővé teszi a rendszergazda számára egy olyan konfiguráció kiküldését, amely a kívánt rendszer-és alkalmazás-kockázatcsökkentő beállításokat jelöli a szervezet összes eszközén. A konfigurációt egy XML-fájl jelképezi. A védelem kiaknázásával megvédheti az eszközöket olyan kártevők ellen, amelyek kihasználják a kiaknázást és a fertőzést. A Windows biztonsági alkalmazás vagy a PowerShell használatával hozhat létre kockázatcsökkentő (más néven konfiguráció) készletet. Ezt követően exportálhatja ezt a konfigurációt XML-fájlként, és megoszthatja azt több, a hálózaton található géppel, hogy mindegyiknek ugyanazokat a kockázatcsökkentő beállításokat adja meg. Egy meglévő EMET konfigurációs XML-fájlt is konvertálhat, és importálhatja a biztonsági rés kiaknázása konfigurációs XML-fájlba.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067035)  
   
-  **Alapértelmezett**: *A megadott minta xml* 
+  **Alapértelmezett**: *A minta XML-fájlja megadva* 
  
 ## <a name="file-explorer"></a>Fájlkezelő  
-További információkért lásd: [házirend CSP - fájlkezelő](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) a Windows dokumentációjában.  
+További információ: [Policy CSP-fájlkezelő](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-fileexplorer) a Windows dokumentációjában.  
 
-- **Adatvégrehajtás-megakadályozási letiltása**  
-  Gyakori letiltása bizonyos örökölt beépülő modul alkalmazások nélküli megszakítást Explorer lehetővé teszi.  
+- **Az adatvégrehajtás-megelőzés letiltása**  
+  Az adatvégrehajtás megakadályozása lehetővé teszi bizonyos örökölt beépülőmodul-alkalmazások működésének leállítását az Explorer leállítása nélkül.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067043)  
   
   **Alapértelmezett**: Letiltva  
    
-- **Sérülés blokk halommemória-lezárás**  
-  Halommemória-lezárás sérülés letiltása bizonyos örökölt beépülő modul alkalmazások Explorer leállítása nélkül, azonnal működni engedélyezheti, bár Explorer továbbra is felmondhatja váratlanul később.  
+- **A kupac megszakításának letiltása a Sérüléskor**  
+  Ha letiltja a megszakított adatvesztést a sérülés miatt, bizonyos örökölt beépülőmodul-alkalmazások az Intéző azonnali leállítása nélkül is működhetnek, bár a tallózó a későbbiekben is váratlanul leállhat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067107)  
   
   **Alapértelmezett**: Letiltva  
     
 
 ## <a name="internet-explorer"></a>Internet Explorer  
-További információkért lásd: [házirend CSP - InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) a Windows dokumentációjában.  
+További információ: [Policy CSP-InternetExplorer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-internetexplorer) a Windows dokumentációjában.  
 
-- **Az Internet Explorer korlátozott zóna frissítései állapotsor parancsfájl használatával**  
-  A házirend-beállítás lehetővé teszi, hogy kezelheti, hogy a parancsfájl engedélyezett a zónán belül az állapotsor frissítése. 
-  - *Ha ez a szabályzatbeállítás engedélyezi*, parancsfájl engedélyezett az állapotsor frissítése.
-  - *Ha letiltja vagy nem konfigurálja a házirend-beállítás*, parancsfájl az állapotsor frissítése nem engedélyezett.  
+- **Az Internet Explorer korlátozott zónájának frissítései az állapotsorban parancsfájl használatával**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a parancsfájl engedélyezheti-e a zónán belüli állapotjelző sáv frissítését. 
+  - *Ha engedélyezi ezt a házirend-beállítást*, a parancsfájl frissítheti az állapotsort.
+  - *Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást*, a parancsfájl nem jogosult az állapotsor frissítésére.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067074)  
 
   **Alapértelmezett**: Letiltva
 
-- **Az Internet Explorer az internet zóna húzza és dobja el, vagy másolja és illessze be a fájlokat**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók húzással vagy másolással illessze be a zónán belüli forrásból származó fájlokat. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók vagy másolással húzza át és illessze be a zóna fájlok automatikusan. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, hogy e húzással, vagy a fájlok másolása a zóna. Ha letiltja ezt a beállítást, a rendszer megakadályozza a felhasználókat a fájlok húzással másolással és beillesztéssel fájlokat ebben a zónában. Ha nem konfigurálja ezt a beállítást, a felhasználók húzással vagy másolással és illessze be a zóna fájlok automatikusan.  
+- **Internet Explorer Internet Zone húz és eldobása, illetve fájlok másolása és beillesztése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók beilleszthetnek-e fájlokat, vagy másolhatnak és beilleszthetnek fájlokat a zónán belüli forrásokból. Ha engedélyezi ezt a házirend-beállítást, a felhasználók áthelyezhetik a fájlokat, vagy automatikusan másolhatják és beilleszthetik a fájlokat a zónából. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy eldöntse, hogy a zónából kíván-e fájlokat áthúzni vagy másolni. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tudnak fájlokat húzni, vagy fájlokat másolni és beilleszteni a zónából. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók áthelyezhetik a fájlokat, vagy a zónából automatikusan másolhatják és beilleszthetik a fájlokat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067076)  
 
   **Alapértelmezett**: Letiltás
 
-- **Az Internet Explorer korlátozott zóna .NET-keretrendszer tartománybeli összetevők**    
-  Ez a házirend-beállítással kezelheti, hogy a .NET-keretrendszer összetevők, az Authenticode aláírással nem rendelkező hajthat végre az Internet Explorer. Ezen összetevők közé tartozik egy objektum címke és a egy hivatkozást a hivatkozott felügyelt végrehajtható fájlok a hivatkozott felügyelt szabályozza. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer végrehajtja a aláíratlan felügyelt összetevőket. Kérdés a legördülő mezőben válassza ki, ha az Internet Explorer kéri a felhasználó határozza meg, hogy végrehajtásához előjel nélküli felügyelt összetevőket. Ha letiltja ezt a beállítást, az Internet Explorer nem hajtható végre aláíratlan felügyelt összetevőket. Ha nem adja meg a házirend-beállítás, az Internet Explorer nem hajtható végre aláíratlan felügyelt összetevőket.  
+- **Az Internet Explorer korlátozott zóna .NET-keretrendszerének függő összetevői**    
+  Ezzel a házirend-beállítással felügyelheti, hogy az Authenticode-ban nem aláírt .NET-keretrendszer-összetevők az Internet Explorerben futtathatók-e. Ezen összetevők közé tartoznak az Object tag által hivatkozott felügyelt vezérlők, valamint a hivatkozásokból hivatkozott felügyelt végrehajtható fájlok. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer aláíratlan felügyelt összetevőket fog végrehajtani. Ha a legördülő listában a kérdés gombra kattint, az Internet Explorer megkéri a felhasználót, hogy döntse el, hogy aláíratlan felügyelt összetevőket kíván-e végrehajtani. Ha letiltja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláíratlan felügyelt összetevőket. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláíratlan felügyelt összetevőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067077)
 
   **Alapértelmezett**: Letiltás
 
 
-- **Az Internet Explorer helyi zónán nem futtathatnak kártevőirtó ActiveX-vezérlők**  
-  A házirend-beállítás meghatározza, hogy az Internet Explorer fut-e kártevőirtó-programok ellen ActiveX-vezérlők annak ellenőrzéséhez, hogy azok biztonságos voltát oldalain betölteni. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha letiltja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha nem konfigurálja ezt a beállítást, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Bármikor ezt a viselkedést be- vagy kikapcsolása az Internet Explorer biztonsági beállításokkal.  
+- **Az Internet Explorer helyi számítógép zónája ne futtasson antimalware-t az aktív X vezérlőkön**  
+  Ezzel a házirend-beállítással megállapítható, hogy az Internet Explorer antimalware-programokat futtat-e az ActiveX-vezérlőkön, hogy ellenőrizze, biztonságos-e a lapok betöltése. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha letiltja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi a kártevő szoftverét, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. A felhasználók az Internet Explorer biztonsági beállításainak használatával be-vagy kikapcsolhatják ezt a viselkedést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067152)
 
   **Alapértelmezett**: Letiltva
 
-- **Az Internet Explorer internetes zóna hozzáférést az adatforrásokhoz**  
-  Ez a házirend-beállítással kezelheti, hogy az Internet Explorer érhessék el az adatokat a Microsoft XML Parser (MSXML) vagy ActiveX Data Objects (ADO) használatával egy másik biztonsági zónából. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók betölthetnek egy oldal, amely az MSXML vagy ADO használ a zóna egy másik helyről származó adatok eléréséhez a zónában. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, döntse el, hogy engedélyezi, hogy a lap betöltése a zónában, amelyek az MSXML vagy ADO segítségével érheti el adatait a zónában egy másik helyről. Ha letiltja ezt a beállítást, a felhasználók nem tudják betölteni egy oldal, amely az MSXML vagy ADO használ a zóna egy másik helyről származó adatok eléréséhez a zónában. Ha nem konfigurálja ezt a beállítást, a felhasználók nem tudják betölteni egy oldal, amely az MSXML vagy ADO használ a zóna egy másik helyről származó adatok eléréséhez a zónában.  
+- **Internet Explorer Internet Zone-hozzáférés az adatforrásokhoz**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Internet Explorer hozzáférhet-e egy másik biztonsági zónából származó adatokhoz a Microsoft XML Parser (MSXML) vagy a ActiveX Data Objects (ADO) használatával. Ha engedélyezi ezt a házirend-beállítást, a felhasználók betölthetnek egy olyan lapot a zónába, amely az MSXML vagy az ADO használatával fér hozzá a zónában lévő másik helyről származó adatokhoz. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a lap betöltését az MSXML vagy az ADO protokollt használó zónában a zóna egy másik helyéről származó adatok eléréséhez. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tölthetnek be olyan lapot a zónában, amely az MSXML vagy az ADO használatával fér hozzá a zónában lévő másik helyről származó adatokhoz. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók nem tölthetnek be olyan lapot a zónában, amely az MSXML vagy az ADO használatával fér hozzá a zónában lévő másik helyről származó adatokhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067078)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna tartalom húzza az eltérő tartományokban időkereten belül**  
-  A házirend-beállítás lehetővé teszi a húzással tartalom egyik tartományból egy másik tartományba Ha a forrás- és ugyanabban az ablakban beállításainak megadása. Ha engedélyezi ezt a házirend-beállítást, és kattintson az engedélyezés, felhasználók húzhatja tartalom egyik tartományából egy másik tartományba, ha a forrás- és a rendszer ugyanabban az ablakban. Felhasználók nem módosíthatják ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és kattintson a Letiltás elemre, felhasználók nem húzható tartalom egyik tartományából egy másik tartományba, ha a forrás- és a rendszer ugyanabban az ablakban. Felhasználók nem módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelt. Az Internet Explorer 10 Ha ezt a beállítást letiltja vagy nem konfigurálja, felhasználók nem húzható tartalom egyik tartományából egy másik tartományba Ha a forrás- és ugyanabban az ablakban. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelt. Az Internet Explorer 9 és korábbi verzióiban Ha ezt a beállítást letiltja vagy nem konfigurálja, felhasználók húzhatja tartalom egyik tartományából egy másik tartományba, ha a forrás- és a rendszer ugyanabban az ablakban. Felhasználók nem módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelt.  
+- **Az Internet Explorer korlátozott zónája különböző tartományokból származó tartalmat húzhat a Windowsban**  
+  Ezzel a házirend-beállítással beállíthatja, hogy az egyik tartományból egy másik tartományba húzza a tartalmat, ha a forrás és a cél ugyanabban az ablakban található. Ha engedélyezi ezt a házirend-beállítást, és az Engedélyezés gombra kattint, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél ugyanabban az ablakban található. A felhasználók nem változtathatják meg ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és a Letiltás gombra kattint, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél ugyanabban az ablakban található. A felhasználók nem változtathatják meg ezt a beállítást az Internetbeállítások párbeszédpanelen. Ha az Internet Explorer 10 böngészőben letiltja ezt a házirend-beállítást, vagy nem konfigurálja, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél ugyanabban az ablakban található. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelen. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az Internet Explorer 9 és korábbi verzióiban a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél ugyanabban az ablakban található. A felhasználók nem változtathatják meg ezt a beállítást az Internetbeállítások párbeszédpanelen.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067079)  
   
   **Alapértelmezett**: Letiltva
   
-- **Az Internet Explorer tanúsítvány cím eltérés figyelmeztetés**  
-  A házirend-beállítás lehetővé teszi, hogy kapcsolja be a tanúsítvány cím eltérő biztonsági figyelmeztetést. Ha a házirend-beállítás be van kapcsolva, a rendszer figyelmezteti a felhasználót szolgálhassanak HTTP Secure (HTTPS) webhelyek a jelenlegi, egy másik webhely címét kiállított tanúsítványok. Ez a figyelmeztetés megakadályozható, hogy olyan hamisítási támadásokat. Ha ez a szabályzatbeállítás engedélyezi, a tanúsítvány cím eltérés figyelmeztetés mindig megjelenik. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó dönthet úgy, hogy megjelenik-e a tanúsítvány cím eltérés figyelmeztetés (a Speciális lap használatával az Internet Vezérlőpult).  
+- **Az Internet Explorer-tanúsítvány címe nem megfelelő figyelmeztetés**  
+  Ezzel a házirend-beállítással a tanúsítvány címe nem egyezik a biztonsági figyelmeztetéssel. Ha ez a házirend-beállítás be van kapcsolva, a rendszer figyelmezteti a felhasználót, amikor olyan biztonságos HTTP-(HTTPS-) webhelyeket látogat meg, amelyek egy másik webhely címeként kiállított tanúsítványokat jelennek meg Ez a figyelmeztetés segít megelőzni a hamisítás elleni támadásokat. Ha engedélyezi ezt a házirend-beállítást, a tanúsítvány címe nem megfelelő figyelmeztetés mindig megjelenik. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználó kiválaszthatja, hogy a tanúsítvány címe nem megfelelő figyelmeztetés jelenik-e meg (a Speciális lapon az Internet Vezérlőpulton).  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067153)  
   
   **Alapértelmezett**: Enabled 
   
-- **Az Internet Explorer korlátozott zóna kevesebb jogosultsággal rendelkező helyek**  
-  Ez a házirend-beállítással kezelheti, hogy kevesebb jogosultsággal rendelkező zónák, internetes webhelyekre, például a webhelyek navigálni a zóna. Ha ez a szabályzatbeállítás engedélyezi, kevesebb jogosultsággal rendelkező zónákban lévő webhelyekről nyissa meg az új windows vagy is ebbe a zónába lépjen. A biztonsági zóna a biztonsági réteggel is a zóna jogosultságszint-emelési biztonsági funkció védelmet által biztosított nélkül fog futni. Kérdés választja a legördülő mezőben, ha a rendszer figyelmezteti a felhasználót, hogy potenciálisan veszélyes navigációs arra készül, hogy történnek. Ha letiltja ezt a beállítást, esetleg káros navigációs miatt nem sikerült. Az Internet Explorer biztonsági funkció van kapcsolva a zóna védelmet állította be a zóna jogosultságszint-emelési szolgáltatásvezérlő. Ha nem konfigurálja ezt a beállítást, a potenciálisan veszélyes műveleteket ebben az esetben. Az Internet Explorer biztonsági funkció van kapcsolva a zóna védelmet állította be a zóna jogosultságszint-emelési szolgáltatásvezérlő.  
+- **Az Internet Explorer korlátozott zónáinak kevésbé privilegizált helyei**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a webhelyek kevesebb jogosultsági szintű zónából, például internetes webhelyről is bejelentkezhetnek-e a zónába. Ha engedélyezi ezt a házirend-beállítást, a kevesebb jogosultsági szintű zónából származó webhelyek megnyithatják az új ablakokat, vagy megkereshetik a zónát. A biztonsági zóna a védelem által a zóna jogosultságszint-emelése biztonsági szolgáltatás által biztosított kiegészítő biztonsági réteg nélkül fog futni. Ha a legördülő listában a kérdés elemre kattint, egy figyelmeztetés jelenik meg a felhasználó számára, aki potenciálisan kockázatos navigálást végez. Ha letiltja ezt a házirend-beállítást, akkor a rendszer valószínűleg ártalmas navigálást végez. Az Internet Explorer biztonsági funkciója ebben a zónában a zóna jogosultságszint-emelési funkciójának vezérlésével megadható. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer megakadályozza a valószínűleg ártalmas navigálást. Az Internet Explorer biztonsági funkciója ebben a zónában a zóna jogosultságszint-emelési funkciójának vezérlésével megadható.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067148)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna automatikus kérése fájl letöltése**  
-  A házirend-beállítás határozza meg, hogy a rendszer kéri a fájl nem felhasználó által kezdeményezett letöltések. Ezt a beállítást, függetlenül a felhasználók kapnak a fájl letöltése párbeszédpanel letöltéseit felhasználó által kezdeményezett. Ha engedélyezi ezt a beállítást, a felhasználók kapnak a fájl letöltése párbeszédpanel automatikus letöltési kísérletek. Ha letiltja vagy nem konfigurálja ezt a beállítást, a letöltéseket, amelyek nem a felhasználó által kezdeményezett blokkolva vannak, és a felhasználók az értesítési sávban helyett a fájl letöltése párbeszédpanel jelenik meg. Felhasználók ezután kattintson az értesítési sávban, hogy a fájl letöltése használatával.  
+- **Internet Explorer – korlátozott zóna – automatikus Rákérdezés a fájlok letöltésére**  
+  Ezzel a házirend-beállítással adható meg, hogy a rendszer kéri-e a felhasználókat a nem felhasználó által kezdeményezett fájlok letöltésére Ettől a beállítástól függetlenül a felhasználók a fájl letöltése párbeszédpaneleket kapják meg a felhasználó által kezdeményezett letöltésekhez. Ha engedélyezi ezt a beállítást, a felhasználók egy fájl letöltése párbeszédpanelt kapnak az automatikus letöltési kísérletekhez. Ha letiltja vagy nem konfigurálja ezt a beállítást, a nem felhasználó által kezdeményezett fájlletöltés le van tiltva, és a felhasználók az értesítési sávot a fájl letöltése párbeszédpanel helyett láthatják. A felhasználók ezután rákattintanak az értesítési sávra a fájl letöltésének megadásához.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067150)  
   
   **Alapértelmezett**: Letiltva
   
-- **Az Internet Explorer internetes zóna .NET-keretrendszer tartománybeli összetevők**  
-  Ez a házirend-beállítással kezelheti, hogy a .NET-keretrendszer összetevők, amelyek nem Authenticode aláírással rendelkező hajthat végre az Internet Explorer. Ezen összetevők közé tartozik egy objektum címke és a egy hivatkozást a hivatkozott felügyelt végrehajtható fájlok a hivatkozott felügyelt szabályozza. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer végrehajtja a aláíratlan felügyelt összetevőket. Kérdés a legördülő mezőben válassza ki, ha az Internet Explorer kéri a felhasználó határozza meg, hogy végrehajtásához előjel nélküli felügyelt összetevőket. Ha letiltja ezt a beállítást, az Internet Explorer nem futtatja az aláíratlan felügyelt összetevőket. Ha nem konfigurálja ezt a beállítást, az Internet Explorer végrehajtja a aláíratlan felügyelt összetevőket.  
+- **Internet Explorer Internet Zone .NET-keretrendszerre vonatkozó függő összetevők**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Authenticode-ban nem aláírt .NET-keretrendszer-összetevők az Internet Explorerben futtathatók-e. Ezen összetevők közé tartoznak az Object tag által hivatkozott felügyelt vezérlők, valamint a hivatkozásokból hivatkozott felügyelt végrehajtható fájlok. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer aláíratlan felügyelt összetevőket fog végrehajtani. Ha a legördülő listában a kérdés gombra kattint, az Internet Explorer megkéri a felhasználót, hogy döntse el, hogy aláíratlan felügyelt összetevőket kíván-e végrehajtani. Ha letiltja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláíratlan felügyelt összetevőket. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer aláíratlan felügyelt összetevőket fog végrehajtani.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067073)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Az Internet Explorer internetes zóna engedélyezése csak a jóváhagyott tartományok tdc ActiveX-vezérlők használata**  
-  A házirend-beállítás szabályozza, ha a felhasználó futtathatja a webhelyeken a TDC ActiveX-vezérlőt. Ha ez a szabályzatbeállítás engedélyezi, a TDC ActiveX-vezérlőt futtatásának megakadályozása a zóna webhelyekről. Ha letiltja ezt a beállítást, a TDC Active X-vezérlés a zónában lévő összes webhelyről fog futni.  
+- **Az Internet Explorer internetes zónája csak a jóváhagyott tartományok TDC ActiveX-vezérlők használatát engedélyezi**  
+  Ezzel a házirend-beállítással szabályozható, hogy a felhasználó futtathat-e TDC ActiveX-vezérlőt a webhelyeken. Ha engedélyezi ezt a házirend-beállítást, a TDC ActiveX-vezérlő nem fog futni a zónában lévő webhelyekről. Ha letiltja ezt a házirend-beállítást, a TDC aktív X vezérlő az ebben a zónában lévő összes helyről futni fog.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067151)
   
   **Alapértelmezett**: Enabled 
   
-- **Az Internet Explorer korlátozott zóna parancsfájl indított windows**  
-  A házirend-beállítás lehetővé teszi, hogy korlátozásokat előugró ablakok parancsfájl által kezdeményezett, és a title és az állapot sávok tartalmazó windows kezelheti. Ha ez a szabályzatbeállítás engedélyezi, biztonsági Windows korlátozásai nem vonatkoznak a zóna. A biztonsági zónában, ez a szolgáltatás által biztosított biztonsági réteggel nélkül futtatja. Ha letiltja ezt a beállítást, a parancsfájl által kezdeményezett előugró ablakok és a title és az állapot sávok tartalmazó windows lehetséges káros műveleteket nem futtatható. Az Internet Explorer biztonsági szolgáltatása megegyezik az ebben a zónában szolgáltatásvezérlő a Windows biztonsági korlátozások parancsprogrammal létrehozva a folyamat állítja. Ha nem konfigurálja ezt a beállítást, a parancsfájl által kezdeményezett előugró ablakok és a title és az állapot sávok tartalmazó windows lehetséges káros műveleteket nem futtatható. Az Internet Explorer biztonsági szolgáltatása megegyezik az ebben a zónában szolgáltatásvezérlő a Windows biztonsági korlátozások parancsprogrammal létrehozva a folyamat állítja.  
+- **Az Internet Explorer korlátozott zónájának parancsfájlja kezdeményezte a Windowst**  
+  Ezzel a házirend-beállítással felügyelheti a parancsfájl által kezdeményezett előugró ablakokat és windowsokat, amelyek tartalmazzák a címet és az állapotjelző sávokat. Ha engedélyezi ezt a házirend-beállítást, a Windows-korlátozások biztonsága nem lesz érvényes ebben a zónában. A biztonsági zóna a szolgáltatás által biztosított hozzáadott biztonsági réteg nélkül fut. Ha letiltja ezt a házirend-beállítást, a parancsfájl által kezdeményezett előugró ablakokban és windowsokban lévő lehetséges ártalmas műveletek nem futtathatók. Az Internet Explorer biztonsági funkciója ebben a zónában található, ahogy azt a Windowsos biztonsági korlátozásokkal kapcsolatos, a folyamathoz tartozó parancsfájl-ellenőrzési beállítás diktálja. Ha nem konfigurálja ezt a házirend-beállítást, a parancsfájl által kezdeményezett előugró ablakokban és windowsokban lévő lehetséges ártalmas műveletek nem futtathatók. Az Internet Explorer biztonsági funkciója ebben a zónában található, ahogy azt a Windowsos biztonsági korlátozásokkal kapcsolatos, a folyamathoz tartozó parancsfájl-ellenőrzési beállítás diktálja.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067075)  
   
   **Alapértelmezett**: Letiltva 
   
-- **A fájlok feltöltése a kiszolgáló szerepeljen az Internet Explorer az internet zóna helyi elérési útja**  
-  Ez a házirend-beállítást vezérli, hogy a helyi elérési úttal kapcsolatos információkat küldi, ha a felhasználó tölti fel egy fájlt egy HTML-űrlapot. A helyi elérési út adatokat küld, ha néhány információt előfordulhat, hogy véletlenül is megjeleníthetők a kiszolgálóhoz. Például a felhasználó asztali küldött fájlokat tartalmazhat az elérési út részeként a felhasználó nevét. Amikor a felhasználó tölti fel egy fájlt egy HTML-űrlapot, ha ez a szabályzatbeállítás engedélyezi, a rendszer elküldi az elérési út adatokat. Amikor a felhasználó egy HTML-űrlapot egy fájlt tölt, ha letiltja ezt a beállítást, a rendszer eltávolítja az elérési úttal kapcsolatos információkat. Ha nem konfigurálja ezt a beállítást, a felhasználó dönthet úgy, hogy elérési úttal kapcsolatos információkat küldi, ha azok egy HTML-űrlapot fájl feltöltése. Alapértelmezés szerint az útvonal-információinak zajlik.  
+- **Az Internet Explorer internetes zónája helyi elérési utat tartalmaz a fájlok kiszolgálóra való feltöltésekor**  
+  Ezzel a házirend-beállítással szabályozható, hogy a rendszer mikor küldje el a helyi elérési utat, amikor a felhasználó HTML-űrlapon keresztül tölt fel fájlokat. Ha a rendszer elküldje a helyi elérési utat, előfordulhat, hogy a kiszolgáló véletlenül nem tárt fel adatokat. Előfordulhat például, hogy a felhasználó asztaláról eljuttatott fájlok tartalmazzák a felhasználónevet az elérési út részeként. Ha engedélyezi ezt a házirend-beállítást, a rendszer az elérési út adatait akkor továbbítja, amikor a felhasználó HTML-űrlapon keresztül tölt fel egy fájlt. Ha letiltja ezt a házirend-beállítást, a rendszer eltávolítja az elérésiút-információkat, amikor a felhasználó HTML-űrlapon keresztül tölt fel egy fájlt. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó kiválaszthatja, hogy a rendszer elküldje-e az elérési utat, amikor feltölt egy fájlt egy HTML-űrlapon keresztül. Alapértelmezés szerint a rendszer az elérésiút-információkat elküldi.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067072)  
   
   **Alapértelmezett**: Letiltva 
   
-- **Az Internet Explorer fokozott védett módban folyamatok letiltása**  
-  A házirend-beállítás meghatározza, hogy a Internet Explorer 11 Ha 64 bites folyamatokat (a nagyobb biztonság), vagy 32 bites folyamatok (a nagyobb kompatibilitás) használjon a fokozottan védett üzemmódban futó Windows 64 bites verziói. Fontos! Egyes ActiveX-vezérlők és eszköztárak előfordulhat, hogy nem érhető el 64 bites folyamatokat használatakor. Ha ez a szabályzatbeállítás engedélyezi, akkor amikor fokozottan védett üzemmód a Windows 64 bites verzióin futó Internet Explorer 11 64 bites fül folyamatai fogja használni. Ha letiltja ezt a beállítást, az Internet Explorer 11 32 bites fül folyamatai készítésére használ a fokozottan védett üzemmód Windows 64 bites verzióiban. Ha nem konfigurálja ezt a beállítást, a felhasználók bekapcsolják ezt a szolgáltatást, és ki az Internet Explorer beállításainak használatával. Ez a funkció alapértelmezés szerint ki van kapcsolva.  
+- **Az Internet Explorer fokozottan védett módban tiltja le a folyamatokat**  
+  Ez a házirend-beállítás határozza meg, hogy az Internet Explorer 11 a 64 bites folyamatokat (nagyobb biztonság esetén) vagy 32 bites folyamatokat (a nagyobb kompatibilitás érdekében) használja-e a Windows rendszerű, 64 bites verzióin a fokozottan védett módban. Fontos! Előfordulhat, hogy néhány ActiveX-vezérlő és-eszköztár nem érhető el, ha 64 bites folyamatokat használ. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer 11 64 bites Tab-folyamatokat fog használni, amikor a Windows 64 bites verzióiban fokozottan védett módban fut. Ha letiltja ezt a házirend-beállítást, az Internet Explorer 11 32 bites Tab-folyamatokat fog használni, amikor a Windows 64 bites verzióiban fokozottan védett módban fut. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók az Internet Explorer beállításaival be-vagy kikapcsolhatják ezt a funkciót. Ez a funkció alapértelmezés szerint ki van kapcsolva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067149)  
   
   **Alapértelmezett**: Enabled 
   
-- **Az Internet Explorer figyelmen kívül hagyja a tanúsítvánnyal kapcsolatos hiba**  
-  A házirend-beállítás megakadályozza, hogy a felhasználó Secure Sockets Layer/Transport Layer Security (SSL/TLS) tanúsítványt hibák működését zavaró, az Internet Explorer programban (mint például a "lejárt", "Visszavonva" vagy "neve tér" hibák) böngészés figyelmen kívül hagyásával. Ha ez a szabályzatbeállítás engedélyezi, a felhasználó böngészés nem folytatható. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó választhat figyelmen kívül a hitelesítési hibák, és folytassa a böngészést.  
+- **Internet Explorer – tanúsítvány-hibák figyelmen kívül hagyása**  
+  Ezzel a házirend-beállítással megakadályozható, hogy a felhasználó figyelmen kívül hagyja a böngészést megszakító SSL/Transport Layer Security (SSL/TLS) tanúsítványokat (például a "lejárt", a "visszavont" vagy a "név eltérése" hibákat) az Internet Explorerben. Ha engedélyezi ezt a házirend-beállítást, a felhasználó nem folytathatja a böngészést. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a felhasználó dönthet úgy, hogy figyelmen kívül hagyja a tanúsítvány hibáit, és folytatja a böngészést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067071)  
   
   **Alapértelmezett**: Letiltva 
   
-- **Az Internet Explorer internetes zóna betöltése XAML-fájlok**  
-  Ezzel a szabályzatbeállítással kezelése Extensible Application Markup Language (XAML) a fájlok betöltését teszi lehetővé. XAML egy XML-alapú deklaratív jelölőnyelv gazdag felhasználói felületek és a grafikai, amelyek kihasználják a Windows Presentation Foundation létrehozása gyakran használják. Ha engedélyezi ezt a házirend-beállítást, és állítsa be a legördülő listában annak érdekében, XAML fájlok automatikusan betöltődnek az Internet Explorerben. A felhasználó nem módosíthatja ezt a viselkedést. Kérdés beállította a legördülő listából, ha a felhasználó a rendszer XAML fájlok betöltése. Ha letiltja ezt a beállítást, az XAML-fájlok az Internet Explorerben nem betöltve. A felhasználó nem módosíthatja ezt a viselkedést. Ha nem konfigurálja ezt a beállítást, a felhasználó eldöntheti XAML betölteni az Internet Explorerben.  
+- **Internet Explorer Internet Zone XAML-fájlok betöltése**  
+  Ezzel a házirend-beállítással kezelheti Extensible Application Markup Language-(XAML-) fájlok betöltését. A XAML egy XML-alapú deklaratív jelölési nyelv, amely gazdag felhasználói felületek és grafikák létrehozására szolgál, amelyek kihasználják a Windows megjelenítési alaprendszer. Ha engedélyezi ezt a házirend-beállítást, és a legördülő listát engedélyezi, a XAML-fájlok automatikusan betöltődnek az Internet Explorerben. A felhasználó nem változtathatja meg ezt a viselkedést. Ha a legördülő lista megadását kéri, a rendszer a felhasználótól kéri a XAML-fájlok betöltését. Ha letiltja ezt a házirend-beállítást, a XAML-fájlok nem töltődnek be az Internet Explorerben. A felhasználó nem változtathatja meg ezt a viselkedést. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó eldöntheti, hogy XAML-fájlokat kíván-e betölteni az Internet Explorerben.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067147)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Az Internet Explorer internetes zóna automatikus kérdés fájl letöltése**  
-  A házirend-beállítás határozza meg, hogy a rendszer kéri a fájl nem felhasználó által kezdeményezett letöltések. Ezt a beállítást, függetlenül a felhasználók kapnak a fájl letöltése párbeszédpanel letöltéseit felhasználó által kezdeményezett. Ha engedélyezi ezt a beállítást, a felhasználók kapnak a fájl letöltése párbeszédpanel automatikus letöltési kísérletek. Ha letiltja vagy nem konfigurálja ezt a beállítást, a letöltéseket, amelyek nem a felhasználó által kezdeményezett blokkolva vannak, és a felhasználók az értesítési sávban helyett a fájl letöltése párbeszédpanel jelenik meg. Felhasználók ezután kattintson az értesítési sávban, hogy a fájl letöltése használatával.  
+- **Internet Explorer Internet Zone automatikus Rákérdezés a fájlok letöltésére**  
+  Ezzel a házirend-beállítással adható meg, hogy a rendszer kéri-e a felhasználókat a nem felhasználó által kezdeményezett fájlok letöltésére Ettől a beállítástól függetlenül a felhasználók a fájl letöltése párbeszédpaneleket kapják meg a felhasználó által kezdeményezett letöltésekhez. Ha engedélyezi ezt a beállítást, a felhasználók egy fájl letöltése párbeszédpanelt kapnak az automatikus letöltési kísérletekhez. Ha letiltja vagy nem konfigurálja ezt a beállítást, a nem felhasználó által kezdeményezett fájlletöltés le van tiltva, és a felhasználók az értesítési sávot a fájl letöltése párbeszédpanel helyett láthatják. A felhasználók ezután rákattintanak az értesítési sávra a fájl letöltésének megadásához.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067117)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna biztonsági figyelmeztetés a potenciálisan nem biztonságos fájlok**  
-  A házirend-beállítás vezérli, hogy a "Nyissa meg a fájl – biztonsági figyelmeztetés" üzenet jelenik meg, amikor a felhasználó megpróbálja megnyitni a végrehajtható fájlok vagy más potenciálisan nem biztonságos fájlok (az intranetes a Fájlkezelővel, például fájlmegosztások). Ha engedélyezi ezt a házirend-beállítást, és állítsa be a legördülő listában annak érdekében, ezek a fájlok nyissa meg a biztonsági figyelmeztetés nélkül. Ha a legördülő listából a kérdés, biztonsági figyelmeztetés jelenik meg, a fájlok megnyitása előtt. Ha letiltja ezt a beállítást, az ezeket a fájlokat nem nyitnak meg. Ha nem konfigurálja ezt a beállítást, a felhasználó konfigurálhat a fájlok kezelésének. Alapértelmezés szerint ezeket a fájlokat a Tiltott helyek zónához, az intranetes és a helyi számítógép zónában, engedélyezve van a blokkolt és állítsa be az Internet és megbízható zónában kéréséhez.  
+- **Internet Explorer – korlátozott zóna biztonsági figyelmeztetése potenciálisan nem biztonságos fájlokhoz**  
+  Ezzel a házirend-beállítással szabályozható, hogy a "fájl-biztonsági figyelmeztetés megnyitása" üzenet jelenik-e meg, amikor a felhasználó megpróbál megnyitni egy végrehajtható fájlt vagy más potenciálisan nem biztonságos fájlt (például egy intranetes fájlmegosztást a fájlkezelő használatával). Ha engedélyezi ezt a házirend-beállítást, és a legördülő listát engedélyezi, a rendszer biztonsági figyelmeztetés nélkül nyitja meg a fájlokat. Ha a legördülő lista megadását kéri, a rendszer biztonsági figyelmeztetést jelenít meg a fájlok megnyitása előtt. Ha letiltja ezt a házirend-beállítást, akkor ezek a fájlok nem nyílnak meg. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó beállíthatja, hogy a számítógép hogyan kezelje ezeket a fájlokat. Alapértelmezés szerint ezek a fájlok le vannak tiltva a korlátozott zónában, amely engedélyezve van az intranetes és a helyi számítógép zónában, és az interneten és a megbízható zónákban való rákérdezésre van beállítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2066797)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer az internet zóna keresztszűrő hely parancsfájl-kezelési**  
-  Ez az irányelv szabályozza, ha a többhelyes parancsfájl-kezelési (XSS) szűrő érzékeli, és megakadályozza a webhelyközi parancsprogramot injektálások, websites, a zóna. Ha ez a szabályzatbeállítás engedélyezi, a XSS szűrő zónában is engedélyezve van, és a XSS-szűrő megpróbálja webhelyközi parancsprogramot injektálások letiltása. Ha letiltja ezt a beállítást, a XSS szűrő ki van kapcsolva a zónában, és az Internet Explorer lehetővé teszi a webhelyközi parancsprogramot injektálások.  
+- **Internet Explorer Internet zóna helyközi parancsfájl-szűrő**  
+  Ez a házirend azt szabályozza, hogy a helyek közötti parancsfájlok (XSS) szűrő felismeri-e és megakadályozza-e a helyek közötti parancsfájl-befecskendezést a zónában lévő webhelyeken. Ha engedélyezi ezt a házirend-beállítást, az XSS-szűrő be van kapcsolva a zónában található helyekhez, és az XSS-szűrő megkísérli blokkolni a helyek közötti parancsfájlok befecskendezését. Ha letiltja ezt a házirend-beállítást, az XSS-szűrő ki van kapcsolva az ebben a zónában lévő helyeknél, és az Internet Explorer engedélyezi a helyek közötti parancsfájlok befecskendezését.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067053) 
   
   **Alapértelmezett**: Enabled 
   
 - **Az Internet Explorer tartalék SSL3**  
-  A házirend-beállítás lehetővé teszi, hogy egy nem biztonságos tartalék SSL 3.0 letiltása. Ha ez a szabályzat engedélyezve van, az Internet Explorer megkísérli SSL 3.0-t használó helyek vagy alatt, ha sikertelen a TLS 1.0-s vagy nagyobb. Azt javasoljuk, hogy nincs-e nem biztonságos tartalék engedélyezése a man-in-the-middle támadások megelőzése érdekében. Ez a házirend nincs hatással, mely biztonsági protokollok engedélyezettek. Ha letiltja ezt a házirendet, a rendszer alapértelmezett értékeket használják.  
+  Ezzel a házirend-beállítással letilthat egy nem biztonságos tartalékot az SSL 3,0-re. Ha ez a szabályzat engedélyezve van, az Internet Explorer az SSL 3,0-es vagy újabb verziójának használatával próbál csatlakozni a webhelyekhez, ha a TLS 1,0 vagy nagyobb hibát jelez. Azt javasoljuk, hogy ne engedélyezze a nem biztonságos tartalékot, hogy megakadályozza a személyes támadásokat. Ez a házirend nem befolyásolja, hogy mely biztonsági protokollok engedélyezettek. Ha letiltja ezt a házirendet, a rendszer az alapértelmezett értékeket használja.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067118)  
   
   **Alapértelmezett**: Nincsenek helyek  
 
-- **Az Internet Explorer titkosítás támogatása**  
-  A házirend-beállítás lehetővé teszi, hogy kapcsolja ki a böngészőben a Transport Layer Security (TLS) 1.0, TLS 1.1, TLS 1.2-es, Secure Sockets Layer (SSL) 2.0-s vagy az SSL 3.0 támogatása. A TLS és az SSL olyan protokollok, amelyek a böngésző és a célkiszolgáló közötti kommunikáció védelme érdekében. Amikor a böngésző megpróbál egy védett kommunikációt a célkiszolgáló beállítása, a böngésző és a kiszolgáló egyeztetni a mely protokoll és verzió használatára is. A böngésző és a kiszolgáló megkísérli minden más támogatott protokollok és listája verziók, és kiválasztják a leginkább előnyben részesített egyezést. Ha ez a szabályzatbeállítás engedélyezi, a böngésző egyezteti, vagy nem egyeztet titkosítási alagutat a legördülő listából kiválasztott titkosítási módszerrel. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó kiválaszthat melyik titkosítási módszer a böngésző támogatja.  
+- **Az Internet Explorer titkosításának támogatása**  
+  Ezzel a házirend-beállítással kikapcsolhatja a Transport Layer Security (TLS) 1,0, TLS 1,1, TLS 1,2, SSL (SSL) 2,0 vagy SSL 3,0 támogatását a böngészőben. A TLS és az SSL olyan protokollok, amelyek segítenek a böngésző és a célkiszolgáló közötti kommunikáció védelmében. Amikor a böngésző megpróbál beállítani egy védett kommunikációt a célkiszolgálón, a böngésző és a kiszolgáló egyezteti a használandó protokollt és verziót. A böngésző és a kiszolgáló megpróbálta egyeztetni egymással a támogatott protokollok és verziók listáját, és kiválasztja a leginkább előnyben részesített egyezést. Ha engedélyezi ezt a házirend-beállítást, a böngésző egyezteti vagy nem egyeztet egy titkosítási alagutat a legördülő listából kiválasztott titkosítási módszerek használatával. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználó kiválaszthatja a böngésző által támogatott titkosítási módszert.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067057)
 
-  **Alapértelmezett**: 2 elem:  A TLS 1.1 és TLS 1.2-es verzió  
-  *Válassza ki a lefelé mutató nyílra, ez a beállítás választható beállítások megjelenítéséhez.*
+  **Alapértelmezett**: 2 elem:  TLS v 1.1 és TLS 2.0  
+  *Válassza a lefelé mutató nyilat a beállításhoz választható beállítások megjelenítéséhez.*
   
-- **Az Internet Explorer, az internet zóna intelligens képernyő zárolva**  
-  Ez a házirend-beállítással megadható, hogy a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha ez a szabályzatbeállítás engedélyezi, a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha letiltja ezt a beállítást, a SmartScreen szűrő a rosszindulatú zóna oldal nem beolvasása. Ha nem konfigurálja ezt a beállítást, a felhasználó választhat megvizsgálja-e a SmartScreen szűrő az oldalakat a rosszindulatú zóna. Megjegyezés: Az Internet Explorer 7 a házirend-beállítás meghatározza, hogy megvizsgálja-e adathalász szűrő oldalak rosszindulatú zónában.  
+- **Az Internet Explorer zárolta az Internet zóna intelligens képernyőjét**  
+  Ezzel a házirend-beállítással szabályozható, hogy a SmartScreen szűrő megvizsgálja-e a zónában található oldalakat a kártékony tartalomhoz. Ha engedélyezi ezt a házirend-beállítást, a SmartScreen szűrő kártékony tartalmat keres az ebben a zónában lévő lapokon. Ha letiltja ezt a házirend-beállítást, a SmartScreen szűrő nem vizsgálja meg a zónában lévő lapokat a kártékony tartalomhoz. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó megadhatja, hogy a SmartScreen szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz. Megjegyezés: Az Internet Explorer 7 programban ez a házirend-beállítás határozza meg, hogy az adathalászat-szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067059)  
   
   **Alapértelmezett**: Enabled 
   
-- **Az Internet Explorer korlátozott zóna indítási alkalmazásokat és fájlokat egy IFRAME elembe**  
-  Ez a házirend-beállítással kezelheti, hogy futtatható alkalmazások és a egy IFRAME-referencia a HTML-lapok ebben a zónában lévő fájlok letölthetők. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók alkalmazásokat futtathat és IFRAME fájlok letöltése a zónában lévő lapok a felhasználói beavatkozás nélkül. Kérdés választja a legördülő mezőben, ha a rendszer megkérdezi a felhasználókat, hogy az alkalmazások futtatásához és IFRAME fájlok letöltése a zóna oldalain e. Ha letiltja ezt a beállítást, a rendszer megakadályozza a felhasználókat a futó alkalmazások és IFRAME fájlok letöltése a zóna oldalain. Ha nem konfigurálja ezt a beállítást, a rendszer megakadályozza a felhasználókat a futó alkalmazások és IFRAME fájlok letöltése a zóna oldalain.  
+- **Internet Explorer korlátozott zóna alkalmazások és fájlok elindítása iFrame-ben**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az alkalmazások futtathatók-e, és hogy a fájlok letölthetők-e a zónában lévő lapok HTML-ben lévő IFRAME-hivatkozásból. Ha engedélyezi ezt a házirend-beállítást, a felhasználók felhasználói beavatkozás nélkül futtathatják az alkalmazásokat, és fájlokat tölthetnek le a zóna oldalain lévő IFRAME ELEMEKből. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy szeretné-e futtatni az alkalmazásokat, és letölti a fájlokat a zóna lapjain lévő IFRAME elemek közül. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tudnak alkalmazásokat futtatni és fájlokat letölteni a zónában lévő lapok IFRAME ELEMEIből. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer megakadályozza, hogy a felhasználók futtassák az alkalmazásokat, és fájlokat töltsenek le a zónában lévő lapok IFRAME ELEMEIből.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067061)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Az Internet Explorer SmartScreen figyelmeztetések, ritka fájlok kihagyása**  
-  Ez a szabályzatbeállítás határozza meg, hogy a felhasználó elkerülheti a SmartScreen szűrő figyelmeztetéseit. A SmartScreen szűrő figyelmezteti a felhasználót a végrehajtható fájlokat, az Internet Explorer-felhasználók gyakran nem letöltése az internetről. Ha ez a szabályzatbeállítás engedélyezi, a SmartScreen szűrő figyelmeztetéseit letiltása a felhasználó. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó elkerülheti a SmartScreen szűrő figyelmeztetéseit.  
+- **Internet Explorer – a nem gyakori fájlokra vonatkozó figyelmeztetések mellőzése az intelligens képernyőn**  
+  Ezzel a házirend-beállítással adható meg, hogy a felhasználó megkerülhet-e a SmartScreen szűrőből származó figyelmeztetéseket. A SmartScreen szűrő figyelmezteti a felhasználót olyan végrehajtható fájlokra, amelyeket az Internet Explorer felhasználói általában nem töltenek le az internetről. Ha engedélyezi ezt a házirend-beállítást, a SmartScreen szűrő figyelmeztetései letiltják a felhasználót. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a felhasználó megkerülheti a SmartScreen szűrő figyelmeztetéseit.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067068)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer internetes zóna előugró ablakok blokkolása**  
-  Ez a házirend-beállítással kezelheti, hogy nemkívánatos előugró ablak jelenik meg. Előugró ablakok nyílnak meg, amikor a végfelhasználó egy hivatkozásra kattint, nincsenek letiltva. Ha ez a szabályzatbeállítás engedélyezi, leggyakrabban nemkívánatos előugró ablakok ebben az esetben jelennek meg. Ha letiltja ezt a beállítást, az előugró windows nem nem jelenik meg. Ha nem konfigurálja ezt a beállítást, leggyakrabban nemkívánatos előugró ablakok ebben az esetben jelennek meg.  
+- **Internet Explorer Internet zóna előugró ablak blokkolása**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a nemkívánatos előugró ablakok megjelenjenek-e. Az előugró ablak akkor nyílik meg, amikor a végfelhasználó egy hivatkozásra kattint. Ha engedélyezi ezt a házirend-beállítást, a legtöbb nemkívánatos előugró ablak nem jelenik meg. Ha letiltja ezt a házirend-beállítást, a rendszer nem akadályozza meg az előugró ablakok megjelenését. Ha nem konfigurálja ezt a házirend-beállítást, a legtöbb nemkívánatos előugró ablak nem jelenik meg.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067069)  
   
   **Alapértelmezett**: Engedélyezés  
   
-- **Az Internet Explorer dolgozza fel a konzisztens MIME-kezelés**  
-  Az Internet Explorer tartalmaz dinamikus bináris viselkedéseket: összetevőket, amelyek bizonyos funkciók, amelyhez hozzá van rendelve a HTML-elemek magába foglalja. Ez a házirend-beállítással megadható, hogy a bináris viselkedés biztonsági korlátozása beállítást. Ebben az esetben, vagy engedélyezett. Ha ez a szabályzatbeállítás engedélyezi, a rendszer letiltja a bináris viselkedést a Fájlkezelőben és az Internet Explorer folyamatokat. Ha letiltja ezt a beállítást, a bináris viselkedéseket a Fájlkezelőben és az Internet Explorer-folyamatokhoz történő használata engedélyezett. Ha nem konfigurálja ezt a beállítást, a rendszer letiltja a bináris viselkedést a Fájlkezelőben és az Internet Explorer folyamatokat.  
+- **Az Internet Explorer az konzisztens MIME-kezelést dolgozza fel**  
+  Az Internet Explorer dinamikus bináris viselkedést tartalmaz: olyan összetevők, amelyek adott funkciókat biztosítanak azon HTML-elemek számára, amelyekhez csatolva vannak. Ezzel a házirend-beállítással szabályozható, hogy a bináris viselkedés biztonsági korlátozásának beállítása meggátolható vagy engedélyezve van-e. Ha engedélyezi ezt a házirend-beállítást, a rendszer a Fájlkezelőben és az Internet Explorer folyamataiban nem akadályozza meg a bináris viselkedést. Ha letiltja ezt a házirend-beállítást, a fájlkezelő és az Internet Explorer folyamatainak bináris viselkedése is engedélyezett. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer megakadályozza a bináris viselkedést a fájlkezelő és az Internet Explorer folyamataiban.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067144)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer zóna java engedélyei korlátozottak**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, a Java-alkalmazások le vannak tiltva.  
+- **Internet Explorer – korlátozott zóna – Java-engedélyek**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, a Java-kisalkalmazások le vannak tiltva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067132)  
   
-  **Alapértelmezett**: Tiltsa le a java  
+  **Alapértelmezett**: A Java letiltása  
     
   
-- **Az Internet Explorer Active X-vezérlők védett módban**  
-  A házirend-beállítás megakadályozza, hogy az ActiveX-vezérlők védett módban fut, amikor a fokozottan védett üzemmód engedélyezve van. Amikor a felhasználó rendelkezik ActiveX-vezérlő telepítve van, amely nem kompatibilis a fokozottan védett üzemmód, és egy webhely megkísérli betölteni a vezérlőt, az Internet Explorer értesíti a felhasználót, és lehetőséget ad arra, hogy a webhely rendszeres védett módban fusson. Ezzel a szabályzatbeállítással letiltja ezt az értesítést, és arra kényszeríti az összes webhely futtathat a fokozottan védett üzemmód. Fokozottan védett üzemmód rosszindulatú webhelyekre elleni további védelmet biztosít a 64 bites Windows 64 bites folyamatokat használatával. Vagy újabb rendszert futtató számítógépek Windows 8, a fokozottan védett üzemmóddal is korlátozza a helyeken, az Internet Explorer is olvasható, és a beállításjegyzék és a fájlrendszerhez. Fokozottan védett üzemmód engedélyezve van, és a egy felhasználó olyan webhely, amely megpróbálja az olyan ActiveX-vezérlőt, amely nem kompatibilis a fokozottan védett üzemmód között érhető el, ha az Internet Explorer értesíti a felhasználót, és lehetőséget ad arra, hogy tiltsa le a fokozottan védett üzemmód számára adott adott webhelyre. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem lehetővé teheti a felhasználó a fokozottan védett üzemmód letiltása. Minden védett mód webhelyek fokozottan védett üzemmódban fog futni. Ha letiltja vagy nem konfigurálja ezt a beállítást, az Internet Explorer értesíti a felhasználókat, és futtassa a webhelyek rendszeres védett módban nem kompatibilis ActiveX-vezérlők lehetőséget biztosít.  
+- **Az Internet Explorer aktív X vezérlői védett módban**  
+  Ezzel a házirend-beállítással megakadályozható, hogy az ActiveX-vezérlők védett módban fussanak, ha engedélyezve van a fokozottan védett mód. Ha a felhasználó olyan ActiveX-vezérlővel rendelkezik, amely nem kompatibilis a fokozottan védett móddal, és egy webhely megkísérli betölteni a vezérlőt, az Internet Explorer értesíti a felhasználót, és lehetővé teszi a webhely normál védelemmel ellátott módban történő futtatását. Ezzel a házirend-beállítással a rendszer letiltja ezt az értesítést, és az összes webhelyet fokozottan védett módban futtatja. A továbbfejlesztett védett mód további védelmet biztosít a rosszindulatú webhelyekkel szemben, ha 64 bites folyamatokat használ a Windows 64-bites verzióiban. A Windows 8 rendszerű számítógépek esetében a fokozottan védett mód is korlátozza az Internet Explorer által a beállításjegyzékből és a fájlrendszerből beolvasott helyeket. Ha a bővített védett mód engedélyezve van, és a felhasználó egy olyan webhelyre érkezik, amely nem kompatibilis a fokozottan védett móddal, az Internet Explorer értesíti a felhasználót, és lehetővé teszi a fokozottan védett üzemmód letiltását a következőre: adott webhelyre. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer nem teszi lehetővé a felhasználó számára a fokozottan védett üzemmód letiltását. Az összes védett mód webhelye fokozottan védett módban fog futni. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az Internet Explorer értesíti a felhasználókat, és lehetőséget biztosít a nem kompatibilis ActiveX-vezérlőkkel rendelkező webhelyek normál védett módban való futtatására.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067145)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna betöltése XAML-fájlok**  
-  Ezzel a szabályzatbeállítással kezelése Extensible Application Markup Language (XAML) a fájlok betöltését teszi lehetővé. XAML egy XML-alapú deklaratív jelölőnyelv gazdag felhasználói felületek és a grafikai, amelyek kihasználják a Windows Presentation Foundation létrehozása gyakran használják. Ha engedélyezi ezt a házirend-beállítást, és állítsa be a legördülő listában annak érdekében, XAML fájlok automatikusan betöltődnek az Internet Explorerben. A felhasználó nem módosíthatja ezt a viselkedést. Kérdés beállította a legördülő listából, ha a felhasználó a rendszer XAML fájlok betöltése. Ha letiltja ezt a beállítást, az XAML-fájlok az Internet Explorerben nem betöltve. A felhasználó nem módosíthatja ezt a viselkedést. Ha nem konfigurálja ezt a beállítást, a felhasználó eldöntheti XAML betölteni az Internet Explorerben.  
+- **Az Internet Explorer korlátozott zónájának XAML-fájljainak betöltése**  
+  Ezzel a házirend-beállítással kezelheti Extensible Application Markup Language-(XAML-) fájlok betöltését. A XAML egy XML-alapú deklaratív jelölési nyelv, amely gazdag felhasználói felületek és grafikák létrehozására szolgál, amelyek kihasználják a Windows megjelenítési alaprendszer. Ha engedélyezi ezt a házirend-beállítást, és a legördülő listát engedélyezi, a XAML-fájlok automatikusan betöltődnek az Internet Explorerben. A felhasználó nem változtathatja meg ezt a viselkedést. Ha a legördülő lista megadását kéri, a rendszer a felhasználótól kéri a XAML-fájlok betöltését. Ha letiltja ezt a házirend-beállítást, a XAML-fájlok nem töltődnek be az Internet Explorerben. A felhasználó nem változtathatja meg ezt a viselkedést. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó eldöntheti, hogy XAML-fájlokat kíván-e betölteni az Internet Explorerben.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067070)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer parancsfájlalapú ablak biztonsági korlátozások dolgozza fel.**  
-  Az Internet Explorer lehetővé teszi a parancsfájlok programozott módon megnyitásához, átméretezése és áthelyezése a windows a különféle fenyegetési típusokat. Az ablak korlátozó biztonsági szolgáltatás korlátozza az előugró ablakok, és megakadályozza, hogy a parancsfájlok, amelyben a title és az állapot sávok nem láthatók a felhasználó számára, vagy más Windows' címet és állapotsorairól rejtse windows megjelenítése. Ha ez a szabályzatbeállítás engedélyezi, parancsfájlalapú windows korlátozza a rendszer az összes folyamat. Ha letiltja vagy nem konfigurálja ezt a beállítást, a parancsfájl a windows nem korlátozott.  
+- **Az Internet Explorer parancsfájlokkal ellátható biztonsági korlátozásokat dolgoz fel**  
+  Az Internet Explorer lehetővé teszi a parancsfájlok számára a különböző típusú ablakok programozott megnyitását, átméretezését és áthelyezését. Az ablak korlátozásai biztonsági funkció korlátozza a felugró ablakokat, és letiltja azokat a Windows-verziókat, amelyekben a cím és az állapotjelző sávok nem láthatók a felhasználó számára, vagy eltorzítják a többi Windows-címet és állapotjelző sávot. Ha engedélyezi ezt a házirend-beállítást, a parancsfájlba állított Windows minden folyamat esetében korlátozott. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a megírt Windows nem korlátozott.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067146)  
   
   **Alapértelmezett**: Enabled   
   
-- **Az Internet Explorer korlátozott zóna futtathat ActiveX-vezérlők és beépülő modulok**  
-  A házirend-beállítás lehetővé teszi, hogy kezelheti-e az ActiveX-vezérlők és beépülő modulok futtatható oldalakon a megadott zónában. Ha ez a szabályzatbeállítás engedélyezi, vezérlők és beépülő modulok futtathatók, felhasználói beavatkozás nélkül. A legördülő listában kiválasztott kérése, ha a felhasználók, döntse el, hogy a vezérlőelemek a gyakori vagy a beépülő modul futtatása. Ha letiltja ezt a beállítást, vezérlők és beépülő modulok nem futtathatók. Ha nem konfigurálja ezt a beállítást, vezérlők és beépülő modulok nem futtathatók.  
+- **Internet Explorer – korlátozott zóna – aktív X vezérlők és beépülő modulok futtatása**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az ActiveX-vezérlők és a beépülő modulok futhatnak-e a megadott zónán lévő lapokon. Ha engedélyezi ezt a házirend-beállítást, a vezérlők és a beépülő modulok felhasználói beavatkozás nélkül is futtathatók. Ha a legördülő listában a kérdés lehetőséget választotta, a rendszer felkéri a felhasználókat arra, hogy engedélyezzék a vezérlők vagy a beépülő modul futtatását. Ha letiltja ezt a házirend-beállítást, a vezérlők és beépülő modulok nem futnak. Ha nem konfigurálja ezt a házirend-beállítást, a vezérlők és beépülő modulok nem futnak.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067114) 
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna parancsfájl Active X szabályozza biztonságosként megjelölt futtatása**  
-  A házirend-beállítás lehetővé teszi, hogy kezelheti, hogy egy parancsfájl kommunikálhatnak a biztonságosként megjelölt ActiveX-vezérlőt. Ha ez a szabályzatbeállítás engedélyezi, parancsfájl interakció automatikusan történik, felhasználói beavatkozás nélkül. Kérdés választja a legördülő mezőben, ha a rendszer megkérdezi a felhasználókat, hogy a parancsfájl beavatkozás engedélyezése e. Ha letiltja ezt a beállítást, parancsfájl van megakadályozza a való együttműködést. Ha nem konfigurálja ezt a beállítást, parancsfájl van megakadályozza a való együttműködést.  
+- **Az Internet Explorer korlátozott zónájának parancsfájljában aktív X vezérlők biztonságosként vannak megjelölve parancsfájlok futtatásához**  
+  Ezzel a házirend-beállítással felügyelheti, hogy egy biztonságosként megjelölt ActiveX-vezérlő képes-e a parancsfájlok kezelésére. Ha engedélyezi ezt a házirend-beállítást, a parancsfájlok interakciója automatikusan, felhasználói beavatkozás nélkül is megtörténhet. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a parancsfájlok interakcióját. Ha letiltja ezt a házirend-beállítást, a parancsfájlok interakciója nem történik meg. Ha nem konfigurálja ezt a házirend-beállítást, a parancsfájl-interakció megakadályozása nem történik meg.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067062)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna bejelentkezési beállítások**  
-  A házirend-beállítás lehetővé teszi, hogy a bejelentkezési lehetőségek beállításainak kezelése. Ha ez a szabályzatbeállítás engedélyezi, a következő bejelentkezési lehetőségek közül választhat. 
-  - *Névtelen* – névtelen bejelentkezés a tiltsa le a HTTP-hitelesítést használja, és a Vendég fiók csak a Common Internet File System (CIFS) protokollt használja. 
-  - *Kérdés* -tartozó felhasználói azonosítók és jelszavak felhasználónév és jelszó használata parancssort. Után a felhasználó lekérdezése követi, ezeket az értékeket a a munkamenet hátralevő beavatkozás nélkül is használni. 
-  - *Csak az Intranet zónában bejelentkezés automatikus* -használja ezt a beállítást, a lekérdezés felhasználóinak felhasználói azonosítók és jelszavak a más zónákban. Után a felhasználó lekérdezése követi, ezeket az értékeket a a munkamenet hátralevő beavatkozás nélkül is használni. 
-  - *Aktuális felhasználónév és jelszó automatikus bejelentkezés*-használja ezt a beállítást, próbálja meg a Windows NT kérdés-válasz (más néven az NTLM-hitelesítés) a bejelentkezéshez. Ha a kiszolgáló támogatja a Windows NT kérdés-válasz, a bejelentkezést a felhasználói hálózati felhasználónevet és jelszót a bejelentkezéshez használ. Ha a kiszolgáló nem támogatja a Windows NT kérdés-válasz, a felhasználó lekérdezése követi, a felhasználónév és a jelszót. 
+- **Az Internet Explorer korlátozott zónájának bejelentkezési beállításai**  
+  Ezzel a házirend-beállítással kezelheti a bejelentkezési beállítások beállításait. Ha engedélyezi ezt a házirend-beállítást, a következő bejelentkezési beállítások közül választhat. 
+  - *Névtelen* – Névtelen bejelentkezés használata a http-hitelesítés letiltásához és a vendég fiók csak a Common Internet File System (CIFS) protokollhoz való használatához. 
+  - A felhasználók felhasználói azonosítóinak és jelszavának lekérdezéséhez kérje a Felhasználónév és a jelszó megadását. A felhasználó lekérdezése után ezek az értékek csendesen használhatók a munkamenet hátralevő részében. 
+  - *Automatikus bejelentkezés csak az intranet zónában* – ezzel a beállítással lekérdezheti a felhasználókat a többi zónában lévő felhasználói azonosítók és jelszavak számára. A felhasználó lekérdezése után ezek az értékek csendesen használhatók a munkamenet hátralevő részében. 
+  - *Automatikus bejelentkezés a jelenlegi felhasználónévvel és jelszóval*– ezzel a beállítással megpróbálhatja bejelentkezni a Windows NT kérdéses válasz (más néven NTLM-hitelesítés) használatával. Ha a kiszolgáló támogatja a Windows NT kérdéses választ, a bejelentkezés a felhasználó hálózati felhasználónevét és jelszavát használja a bejelentkezéshez. Ha a kiszolgáló nem támogatja a Windows NT kérdéses választ, a rendszer lekérdezi a felhasználót, hogy megadja a felhasználónevet és a jelszót. 
 
-  Ha letiltja ezt a beállítást, jelentkezzen be van állítva *automatikus bejelentkezés csak az Intranet zónában*. Ha nem konfigurálja ezt a beállítást, jelentkezzen be van állítva *Rákérdezés* felhasználóneve és jelszava.  
+  Ha letiltja ezt a házirend-beállítást, a bejelentkezés *csak az intranet zónában automatikus bejelentkezésre*van beállítva. Ha nem konfigurálja ezt a házirend-beállítást, a bejelentkezés a Felhasználónév és  a jelszó megadására van beállítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067110)  
   
   **Alapértelmezett**: Névtelen  
   
-- **Az Internet Explorer megbízható zóna inicializálása és parancsfájl Active X-vezérlők nem biztonságosként megjelölt**  
-  Ez a szabályzatbeállítás nem biztonságosként megjelölt ActiveX-vezérlők kezelését teszi lehetővé. Ha ez a szabályzatbeállítás engedélyezi, az ActiveX-vezérlők, betöltött paraméterekkel és futtatása parancsfájlalapú objektum nem megbízható adatok vagy parancsfájlok biztonságának beállítása nélkül. Ezt a beállítást nem ajánlott, kivéve a biztonságos és felügyelt zónák. A beállítás hatására nem biztonságos, és a biztonságos vezérlők inicializálása és parancsprogrammal létrehozva, a rendszer figyelmen kívül hagyja az ActiveX-vezérlők biztonságosnak lehetőséget. Ha engedélyezi ezt a házirend-beállítást, és a legördülő mezőben válassza ki a kérdés, felhasználók kérdezhető le, hogy a vezérlő betöltés paramétereket az engedélyezi-e, vagy parancsprogram. Ha letiltja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva. Ha nem konfigurálja ezt a beállítást, a felhasználók kérdezhető le, hogy a vezérlő betöltés paramétereket az engedélyezi-e vagy parancsprogrammal létrehozva.  
+- **Az Internet Explorer megbízható zónájának inicializálása és a parancsfájlok nem biztonságosként megjelölt aktív X-vezérlők**  
+  Ezzel a házirend-beállítással kezelheti a nem biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, a rendszer futtatja az ActiveX-vezérlőket, betölti azokat paraméterekkel, és parancsfájlt helyez el anélkül, hogy a nem megbízható adatokra vagy parancsfájlokra vonatkozó biztonsági beállításokat Ez a beállítás nem ajánlott, a biztonságos és felügyelt zónák kivételével. Ez a beállítás azt eredményezi, hogy a nem biztonságos és a biztonságos vezérlők inicializálása és parancsfájlba való helyezése megtörtént, figyelmen kívül hagyva a parancsfájlok számára biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, és a legördülő listában a kérdés elemre kattint, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a vezérlőnek a paramétereket vagy parancsfájlokkal való betöltését. Ha letiltja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a vezérlőnek a paramétereket vagy parancsfájlokkal való betöltését.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067137)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer ellenőrzés kiszolgálói tanúsítvány-visszavonás**  
-  Ez a házirend-beállítással kezelheti-e az Internet Explorer-kiszolgálók tanúsítványok visszavonási állapotát ellenőrzi. Tanúsítványok visszavonódnak, sérült vagy már nem érvényes, és érvényességük bizalmas adatokat, amelyek rosszindulatú vagy nem biztonságos helyre küldjön. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer ellenőrzi, ha a kiszolgálói tanúsítványok visszavonták. Ha letiltja ezt a beállítást, az Internet Explorer nem ellenőrzi kiszolgálói tanúsítványok megtekintéséhez, ha azok visszavonták. Ha nem konfigurálja ezt a beállítást, az Internet Explorer nem ellenőrizze kiszolgálói tanúsítványok megtekintéséhez, ha azok visszavonták.  
+- **Internet Explorer-kiszolgáló tanúsítvány-visszavonásának ellenőrzése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Internet Explorer ellenőriznie fogja-e a kiszolgálók tanúsítványainak visszavonási állapotát. A rendszer visszavonja a tanúsítványokat, amikor azok sérülnek, vagy már nem érvényesek, és ez a beállítás védi a felhasználókat abban, hogy bizalmas adatokkal elküldjenek egy olyan webhelyre, amely hamis vagy nem biztonságos lehet. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer megtekinti, hogy a kiszolgálói tanúsítványok visszavonva lettek-e. Ha letiltja ezt a házirend-beállítást, az Internet Explorer nem fogja megtekinteni a kiszolgálói tanúsítványokat, hogy azok visszavonták-e őket. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer nem fogja megtekinteni a kiszolgálói tanúsítványokat, hogy azok visszavonták-e őket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067046)  
   
   **Alapértelmezett**: Enabled 
   
-- **Az Internet Explorer az internet zóna kevesebb jogosultsággal rendelkező helyek**  
-  Ez a házirend-beállítással kezelheti, hogy kevesebb jogosultsággal rendelkező zónák, például a Tiltott helyek, a webhelyek navigálni a zóna. Ha ez a szabályzatbeállítás engedélyezi, kevesebb jogosultsággal rendelkező zónákban lévő webhelyekről nyissa meg az új windows vagy is ebbe a zónába lépjen. A biztonsági zóna a biztonsági réteggel is a zóna jogosultságszint-emelési biztonsági funkció védelmet által biztosított nélkül fog futni. Kérdés választja a legördülő mezőben, ha a rendszer figyelmezteti a felhasználót, hogy potenciálisan veszélyes navigációs arra készül, hogy történnek. Ha letiltja ezt a beállítást, a potenciálisan veszélyes műveleteket ebben az esetben. Az Internet Explorer biztonsági funkció van kapcsolva a zóna védelmet állította be a zóna jogosultságszint-emelési szolgáltatásvezérlő. Ha nem konfigurálja ezt a beállítást, kevesebb jogosultsággal rendelkező zónákban lévő webhelyekről nyissa meg az új windows vagy is ebbe a zónába lépjen.  
+- **Internet Explorer Internet Zone less privilegizált helyek**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a webhelyek a kevésbé privilegizált zónákból, például a tiltott helyekről is bejelentkezhetnek-e a zónába. Ha engedélyezi ezt a házirend-beállítást, a kevesebb jogosultsági szintű zónából származó webhelyek megnyithatják az új ablakokat, vagy megkereshetik a zónát. A biztonsági zóna a védelem által a zóna jogosultságszint-emelése biztonsági szolgáltatás által biztosított kiegészítő biztonsági réteg nélkül fog futni. Ha a legördülő listában a kérdés elemre kattint, egy figyelmeztetés jelenik meg a felhasználó számára, aki potenciálisan kockázatos navigálást végez. Ha letiltja ezt a házirend-beállítást, a rendszer megakadályozza a valószínűleg ártalmas navigálást. Az Internet Explorer biztonsági funkciója ebben a zónában a zóna jogosultságszint-emelési funkciójának vezérlésével megadható. Ha nem konfigurálja ezt a házirend-beállítást, a kevesebb jogosultsági szintű zónából származó webhelyek megnyithatják az új ablakokat, vagy megkereshetik a zónát.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067109)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna fájlletöltések**  
-  A házirend-beállítás lehetővé teszi, hogy kezelheti a fájlok letöltése a zónából engedélyezettek-e. Ezt a lehetőséget a letöltés, amelyről a fájl kézbesíti a rendszer a zóna nem okoz a hivatkozást tartalmazó lekérdezi határozza meg a zónát, az oldal. Ha ez a szabályzatbeállítás engedélyezi, fájlok, a zóna letölthető. Ha letiltja ezt a beállítást, a rendszer megakadályozza a fájlok letöltését a zónából. Ha nem konfigurálja ezt a beállítást, a rendszer megakadályozza a fájlok letöltését a zónából.  
+- **Internet Explorer – korlátozott zóna fájljának letöltése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a fájlok letöltése engedélyezett-e a zónából. Ezt a beállítást az oldal zónája határozza meg, amely a letöltést okozza, nem pedig azt a zónát, amelyről a fájlt leszállítják. Ha engedélyezi ezt a házirend-beállítást, a fájlok a zónából tölthetők le. Ha letiltja ezt a házirend-beállítást, a rendszer megakadályozza a fájlok letöltését a zónából. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer megakadályozza a fájlok letöltését a zónából.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067038)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer az internet zóna futtatása a .NET-keretrendszer Authenticode aláírással rendelkező tartománybeli összetevők**  
-  Ez a házirend-beállítással kezelheti, hogy a .NET-keretrendszer összetevők, az Authenticode aláírással rendelkező hajthat végre az Internet Explorer. Ezen összetevők közé tartozik egy objektum címke és a egy hivatkozást a hivatkozott felügyelt végrehajtható fájlok a hivatkozott felügyelt szabályozza. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer végrehajtja a aláírt felügyelt összetevőket. Kérdés a legördülő mezőben válassza ki, ha az Internet Explorer kéri a felhasználó határozza meg, hogy aláírt felügyelt összetevőket végrehajtásához. Ha letiltja ezt a beállítást, az Internet Explorer aláírt felügyelt összetevőket nem hajtható végre. Ha nem konfigurálja ezt a beállítást, az Internet Explorer aláírt felügyelt összetevőket nem hajtható végre.  
+- **Internet Explorer Internet zóna – az Authenticode-aláírással aláírt .NET-keretrendszerre támaszkodó összetevők futtatása**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Authenticode-val aláírt .NET-keretrendszer-összetevők az Internet Explorerben futtathatók-e. Ezen összetevők közé tartoznak az Object tag által hivatkozott felügyelt vezérlők, valamint a hivatkozásokból hivatkozott felügyelt végrehajtható fájlok. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer aláírt felügyelt összetevőket fog végrehajtani. Ha a legördülő listában a kérdés gombra kattint, az Internet Explorer megkéri a felhasználót, hogy döntse el, hogy végrehajtja-e az aláírt felügyelt összetevőket. Ha letiltja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláírt felügyelt összetevőket. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláírt felügyelt összetevőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067033)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer minden felhasználó telepítéshez az ActiveX-vezérlők megakadályozása**  
-  Ez a házirend-beállítással megakadályozhatja, hogy a telepítés, az ActiveX-vezérlők, felhasználónkénti alapon. Ha ez a szabályzatbeállítás engedélyezi, az ActiveX-vezérlők nem lehet telepíteni, felhasználónkénti alapon. Ha letiltja vagy nem konfigurálja ezt a beállítást, az ActiveX-vezérlők felhasználónkénti alapon is telepíthető.  
+- **Az Internet Explorer megakadályozza az aktív X vezérlők felhasználónkénti telepítését**  
+  Ezzel a házirend-beállítással megakadályozhatja, hogy az ActiveX-vezérlők telepítése felhasználónkénti alapon történjen. Ha engedélyezi ezt a házirend-beállítást, az ActiveX-vezérlőket nem lehet felhasználónkénti alapon telepíteni. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor az ActiveX-vezérlők felhasználónkénti alapon telepíthetők.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067058)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer a SmartScreen szűrő kezelésének megakadályozása**  
-  A házirend-beállítás megakadályozza, hogy a felhasználó kezelje a SmartScreen szűrő, amely figyelmezteti a felhasználót, ha megtekinti a webhely ismert rosszindulatú kísérletek "adathalász" keresztül személyes adatokat gyűjthet, vagy a gazdagép kártevő ismert. Ha ez a szabályzatbeállítás engedélyezi, a nem kéri a felhasználót, hogy a SmartScreen szűrő bekapcsolására. Az összes webhely címét, amelyek nem szerepelnek a szűrők engedélyezése listája automatikusan elküld a Microsoft a felhasználó értesítése nélkül. Ha letiltja vagy nem konfigurálja ezt a beállítást, a lekérdezi kéri a felhasználót, hogy az első rendszerindítás során a SmartScreen szűrő bekapcsolására kell-e.  
+- **Az Internet Explorer megakadályozza az intelligens képernyő-szűrő kezelését**  
+  Ezzel a házirend-beállítással megakadályozható, hogy a felhasználó kezelje a SmartScreen szűrőt, amely figyelmezteti a felhasználót, ha a meglátogatott webhelyről ismert, hogy csalárd kísérletet tesz személyes adatok gyűjtésére az "adathalászat" vagy a kártevő szoftverek üzemeltetése során. Ha engedélyezi ezt a házirend-beállítást, a rendszer nem kéri a felhasználót a SmartScreen szűrő bekapcsolására. A szűrők engedélyezése listán nem szereplő összes webhely címét a rendszer automatikusan elküldi a Microsoftnak a felhasználó értesítése nélkül. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer felszólítja a felhasználót, hogy döntse el, hogy bekapcsolja-e a SmartScreen szűrőt az első futtatási élményben.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067135)  
   
   **Alapértelmezett**: Engedélyezés  
   
-- **Az Internet Explorer MIME elemzés biztonsági szolgáltatás dolgozza fel.**  
-  A házirend-beállítás meghatározza, hogy e az Internet Explorer MIME-elemzése megakadályozza, hogy egy adott típusú fájl több veszélyes fájl típusra. Ha ez a szabályzatbeállítás engedélyezi, MIME-elemzése soha nem lépteti elő egy adott típusú fájlt egy több veszélyes fájl típusra. Ha letiltja ezt a beállítást, az Internet Explorer folyamatok lehetővé teszi egy adott típusú fájlt egy több veszélyes fájl típusra való előléptetése másikká. Ha nem konfigurálja ezt a beállítást, MIME-elemzése soha nem lépteti elő egy adott típusú fájlt egy több veszélyes fájl típusra.  
+- **Az Internet Explorer feldolgozza a MIME-elemzések biztonsági funkcióját**  
+  Ezzel a házirend-beállítással megadható, hogy az Internet Explorer MIME-elemzése megakadályozza-e egy típusú fájl egy veszélyesebb fájltípusra való előléptetését. Ha engedélyezi ezt a házirend-beállítást, a MIME-elemzés soha nem fogja előléptetni az egyik típusú fájlt veszélyesebb fájltípusra. Ha letiltja ezt a házirend-beállítást, az Internet Explorer folyamatai lehetővé teszik a MIME-elemzések számára, hogy egy adott típusú fájlt egy veszélyesebb fájltípusra ösztönözzék. Ha nem konfigurálja ezt a házirend-beállítást, a MIME-elemzés soha nem előlépteti az egyik típusú fájlt veszélyesebb fájltípusra.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067124)  
   
   **Alapértelmezett**: Enabled  
   
-- **Aláírt ActiveX-vezérlők az Internet Explorer korlátozott zóna letöltése**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók letölthetnek aláírt ActiveX-vezérlők a zónában lévő oldal. Ha engedélyezi ezt a házirendet, a felhasználók letölthetik aláírt vezérlők felhasználói beavatkozás nélkül. Kérdés a legördülő mezőben válassza ki, ha a felhasználók dönthetik töltse le a nem megbízható közzétevők által aláírt szabályozza-e. Csendes letöltődik a megbízható közzétevők által aláírt kód. Ha letiltja a házirend-beállítást, a nem aláírt vezérlők tölthető le. Ha nem konfigurálja ezt a beállítást, a felhasználók dönthetik töltse le a nem megbízható közzétevők által aláírt szabályozza-e. Csendes letöltődik a megbízható közzétevők által aláírt kód.  
+- **Internet Explorer – korlátozott zóna – aláírt aktív X vezérlők letöltése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók letölthetik-e az aláírt ActiveX-vezérlőket a zóna egy oldaláról. Ha engedélyezi ezt a házirendet, a felhasználók felhasználói beavatkozás nélkül tölthetik le az aláírt vezérlőket. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy a nem megbízható közzétevők által aláírt vezérlőket szeretné-e letölteni. A megbízható közzétevők által aláírt kód csendesen le van töltve. Ha letiltja a házirend-beállítást, az aláírt vezérlők nem tölthetők le. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer lekérdezi a felhasználókat, hogy letöltötte-e a nem megbízható közzétevők által aláírt vezérlőket. A megbízható közzétevők által aláírt kód csendesen le van töltve.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067120) 
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer automatikus kiegészítés**  
-  Az automatikus kiegészítés funkció ne felejtse el és a felhasználónevek és jelszavak űrlapokon javaslat. Ha engedélyezi ezt a beállítást, a felhasználó nem módosíthatja, "felhasználónevet és jelszót" vagy "Rákérdezés is menthetik a jelszavakat". A felhasználónevek és jelszavak űrlapokon automatikus teljes funkciót be van kapcsolva. Akkor válassza a "Rákérdezés is menthetik a jelszavakat" kell-e. Ha letiltja ezt a beállítást a nem módosítható az a felhasználó a "felhasználónevet és jelszót" vagy "Rákérdezés is menthetik a jelszavakat". A felhasználónevek és jelszavak űrlapokon automatikus teljes szolgáltatás ki van kapcsolva. A felhasználó még nem tilthatók le is menthetik a jelszavakat kéri. Ha nem konfigurálja ezt a beállítást, a felhasználók számára az, hogy automatikusan teljes felhasználónevet és a jelszavakat a képernyők és kéri a felhasználót, jelszavak mentése egyszerű lehetőséget szabadon. Megjelenítéséhez ezt a beállítást, a felhasználók az Internetbeállítások párbeszédpanel megnyitásához kattintson a tartalom lap és a beállítások gombra.  
+- **Az Internet Explorer automatikus kiegészítése**  
+  Ez az automatikus kiegészítési funkció megjegyezheti és javasolhatja a felhasználóneveket és a jelszavakat az űrlapokon. Ha engedélyezi ezt a beállítást, a felhasználó nem változtathatja meg a "felhasználónevek és jelszavak az űrlapokon" vagy "a jelszavak mentése" üzenetet. Az űrlapokon lévő felhasználónevek és jelszavak automatikus teljes funkciója be van kapcsolva. El kell döntenie, hogy kiválasztja-e a "jelszó mentése" üzenetet. Ha letiltja ezt a beállítást, a felhasználó nem változtathatja meg a "felhasználónevek és jelszavak az űrlapokon" vagy a "kérdés a jelszavak mentéséhez" lehetőséget. Az űrlapokon lévő felhasználónevek és jelszavak automatikus teljes funkciója ki van kapcsolva. A felhasználó nem dönthet úgy is, hogy kéri a jelszavak mentését. Ha nem konfigurálja ezt a beállítást, a felhasználónak lehetősége van az automatikus kiegészítés bekapcsolására az űrlapokon a Felhasználónév és a jelszó megadására, és a jelszavak mentésére is lehetőség van. A beállítás megjelenítéséhez a felhasználók megnyitják az Internetbeállítások párbeszédpanelt, kattintson a tartalom fülre, és kattintson a beállítások gombra.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067122)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer az internet zóna VBScript-parancsprogramot futtatni engedélyezése**  
-  A házirend-beállítás lehetővé teszi, hogy Ön döntse el, hogy a VBScript futtatható-e az adott Internet Explorer zónákban oldalain. A lehetőségek a következők: 
-  - *Engedélyezése* -VBScript parancsfájlt futtat lapok adott zónákban, felhasználói beavatkozás nélkül. 
-  - *Rákérdezés* -alkalmazottak a rendszer kéri-e, hogy a VBScript-parancsprogramot a zónában. 
-  - *Tiltsa le* -VBScript megakadályozta a zóna fut. Ha letiltja vagy nem konfigurálja ezt a beállítást, VBScript parancsfájlt futtat, a megadott zónában felhasználói beavatkozás nélkül.    
+- **Az Internet Explorer internetes zónája a VBscript futtatásának engedélyezése**  
+  Ezzel a házirend-beállítással eldöntheti, hogy a VBScript futtatható-e az adott Internet Explorer-zónákban lévő lapokon. A lehetőségek a következők: 
+  - *Engedélyezés* – a VBScript az adott zónákban lévő lapokon, interakció nélkül fut. 
+  - *Kérés* – az alkalmazottaknak meg kell adni, hogy engedélyezni kell-e a VBScript futtatását a zónában. 
+  - A *disable* -VBScript nem fut a zónában. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a VBScript a megadott zónán belüli interakció nélkül fut.    
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067119)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Tiltott helyek zónához engedélyezése az Internet Explorer csak a jóváhagyott tartományok tdc ActiveX-vezérlők használata**  
-  A házirend-beállítás szabályozza, ha a felhasználó futtathatja a webhelyeken a TDC ActiveX-vezérlőt. Ha ez a szabályzatbeállítás engedélyezi, a TDC ActiveX-vezérlőt futtatásának megakadályozása a zóna webhelyekről. Ha letiltja ezt a beállítást, a TDC Active X-vezérlés a zónában lévő összes webhelyről fog futni.  
+- **Az Internet Explorer korlátozott zónája csak jóváhagyott tartományokat engedélyez a TDC aktív X-vezérlők használatához**  
+  Ezzel a házirend-beállítással szabályozható, hogy a felhasználó futtathat-e TDC ActiveX-vezérlőt a webhelyeken. Ha engedélyezi ezt a házirend-beállítást, a TDC ActiveX-vezérlő nem fog futni a zónában lévő webhelyekről. Ha letiltja ezt a házirend-beállítást, a TDC aktív X vezérlő az ebben a zónában lévő összes helyről futni fog.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067032)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer Megbízható helyek zónájába kártevőirtó ActiveX-vezérlők nem futtatásához**  
-  A házirend-beállítás meghatározza, hogy az Internet Explorer fut-e kártevőirtó-programok ellen ActiveX-vezérlők annak ellenőrzéséhez, hogy azok biztonságos voltát oldalain betölteni. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha letiltja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha nem konfigurálja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Bármikor ezt a viselkedést be- vagy kikapcsolása az Internet Explorer biztonsági beállításokkal.  
+- **Az Internet Explorer megbízható zónája nem futtat antimalware-t az aktív X vezérlőkön**  
+  Ezzel a házirend-beállítással megállapítható, hogy az Internet Explorer antimalware-programokat futtat-e az ActiveX-vezérlőkön, hogy ellenőrizze, biztonságos-e a lapok betöltése. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha letiltja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi a kártevő szoftverét, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi, hogy van-e biztonságos megoldás az ActiveX-vezérlő példányának létrehozására. A felhasználók az Internet Explorer biztonsági beállításainak használatával be-vagy kikapcsolhatják ezt a viselkedést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067115)  
   
   **Alapértelmezett**: Letiltva 
   
-- **Az Internet Explorer helyi gép zóna java-engedélyek**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, az engedély értéke közepes biztonságát.  
+- **Az Internet Explorer helyi számítógép-zónájának Java-engedélyei**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, az engedély közepes biztonsági értékre van állítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067113)  
   
-  **Alapértelmezett**: Tiltsa le a java 
+  **Alapértelmezett**: A Java letiltása 
   
-- **Az Internet Explorer intranetes zóna nem futtathatnak kártevőirtó ActiveX-vezérlők**  
-  A házirend-beállítás meghatározza, hogy az Internet Explorer fut-e kártevőirtó-programok ellen ActiveX-vezérlők annak ellenőrzéséhez, hogy azok biztonságos voltát oldalain betölteni. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha letiltja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha nem konfigurálja ezt a beállítást, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Bármikor ezt a viselkedést be- vagy kikapcsolása az Internet Explorer biztonsági beállításokkal.  
+- **Az Internet Explorer intranetes zónája nem futtat antimalware-t az aktív X vezérlőkön**  
+  Ezzel a házirend-beállítással megállapítható, hogy az Internet Explorer antimalware-programokat futtat-e az ActiveX-vezérlőkön, hogy ellenőrizze, biztonságos-e a lapok betöltése. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha letiltja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi a kártevő szoftverét, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. A felhasználók az Internet Explorer biztonsági beállításainak használatával be-vagy kikapcsolhatják ezt a viselkedést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067138)  
   
   **Alapértelmezett**: Letiltva  
 
-- **Az Internet Explorer korlátozott zóna Szkriptletek**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználó futtathatja a Szkriptletek. Ha ez a szabályzatbeállítás engedélyezi, akkor a felhasználó Szkriptletek futtathatja. Ha letiltja ezt a beállítást, a felhasználó Szkriptletek nem futtatható. Ha nem konfigurálja ezt a beállítást, a felhasználó engedélyezheti vagy letilthatja a Szkriptletek.  
+- **Az Internet Explorer korlátozott zónájának Szkriptletek**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználó futtathat-e Szkriptletek. Ha engedélyezi ezt a házirend-beállítást, akkor a felhasználó futtathat Szkriptletek. Ha letiltja ezt a házirend-beállítást, a felhasználó nem tudja futtatni a Szkriptletek. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó engedélyezheti vagy letilthatja a Szkriptletek.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067112)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer folyamatok értesítési sáv**  
-  Ez a házirend-beállítással kell kezelni az értesítési sáv jelenik meg az Internet Explorer folyamatok, ha a fájl-vagy kód korlátozva-e. Alapértelmezés szerint az értesítési sáv jelenik meg az Internet Explorer folyamatok. Ha ez a szabályzatbeállítás engedélyezi, az értesítési sáv az Internet Explorer folyamatok jeleníti meg. Ha letiltja ezt a beállítást, az értesítési sáv az Internet Explorer folyamatok nem jeleníthető meg. Ha nem konfigurálja ezt a beállítást, akkor az értesítési sávban a nem az Internet Explorer folyamatok jeleníti meg.  
+- **Az Internet Explorer az értesítési sávot dolgozza fel**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az értesítési sáv megjelenjen-e az Internet Explorer folyamataihoz, ha a fájl-vagy programkódok telepítése korlátozott. Alapértelmezés szerint az értesítési sáv az Internet Explorer folyamataihoz jelenik meg. Ha engedélyezi ezt a házirend-beállítást, megjelenik az értesítési sáv az Internet Explorer folyamataihoz. Ha letiltja ezt a házirend-beállítást, az értesítési sáv nem jelenik meg az Internet Explorer folyamataihoz. Ha nem konfigurálja ezt a házirend-beállítást, az értesítési sáv nem jelenik meg az Internet Explorer folyamataihoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067139)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer internetes zóna letöltés aláírt ActiveX-vezérlők**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók letölthetnek aláírt ActiveX-vezérlők a zónában lévő oldal. Ha engedélyezi ezt a házirendet, a felhasználók letölthetik aláírt vezérlők felhasználói beavatkozás nélkül. Kérdés a legördülő mezőben válassza ki, ha a felhasználók dönthetik töltse le a nem megbízható közzétevők által aláírt szabályozza-e. Csendes letöltődik a megbízható közzétevők által aláírt kód. Ha letiltja a házirend-beállítást, a nem aláírt vezérlők tölthető le. Ha nem konfigurálja ezt a beállítást, a felhasználók dönthetik töltse le a nem megbízható közzétevők által aláírt szabályozza-e. Csendes letöltődik a megbízható közzétevők által aláírt kód.  
+- **Internet Explorer Internet Zone – aláírt ActiveX-vezérlők letöltése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók letölthetik-e az aláírt ActiveX-vezérlőket a zóna egy oldaláról. Ha engedélyezi ezt a házirendet, a felhasználók felhasználói beavatkozás nélkül tölthetik le az aláírt vezérlőket. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy a nem megbízható közzétevők által aláírt vezérlőket szeretné-e letölteni. A megbízható közzétevők által aláírt kód csendesen le van töltve. Ha letiltja a házirend-beállítást, az aláírt vezérlők nem tölthetők le. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer lekérdezi a felhasználókat, hogy letöltötte-e a nem megbízható közzétevők által aláírt vezérlőket. A megbízható közzétevők által aláírt kód csendesen le van töltve.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067064)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna SmartScreen**  
-  Ez a házirend-beállítással megadható, hogy a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha ez a szabályzatbeállítás engedélyezi, a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha letiltja ezt a beállítást, a SmartScreen szűrő a rosszindulatú zóna oldal nem beolvasása. Ha nem konfigurálja ezt a beállítást, a felhasználó választhat megvizsgálja-e a SmartScreen szűrő az oldalakat a rosszindulatú zóna. Megjegyezés: Az Internet Explorer 7 a házirend-beállítás meghatározza, hogy megvizsgálja-e adathalász szűrő oldalak rosszindulatú zónában.  
+- **Az Internet Explorer korlátozott zónájának intelligens képernyője**  
+  Ezzel a házirend-beállítással szabályozható, hogy a SmartScreen szűrő megvizsgálja-e a zónában található oldalakat a kártékony tartalomhoz. Ha engedélyezi ezt a házirend-beállítást, a SmartScreen szűrő kártékony tartalmat keres az ebben a zónában lévő lapokon. Ha letiltja ezt a házirend-beállítást, a SmartScreen szűrő nem vizsgálja meg a zónában lévő lapokat a kártékony tartalomhoz. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó megadhatja, hogy a SmartScreen szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz. Megjegyezés: Az Internet Explorer 7 programban ez a házirend-beállítás határozza meg, hogy az adathalászat-szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067034)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer, távolítsa el az elavult ActiveX-vezérlők következő idő gomb futtatására**  
-  A házirend-beállítás lehetővé teszi, hogy a felhasználók lássák a "Futtatás most" gomb és az Internet Explorer adott elavult ActiveX-vezérlők futását. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók láthatják a "Futtatás most" gombra a figyelmeztető üzenet jelenik meg, amikor az Internet Explorer blokkolja az elavult ActiveX-vezérlők a. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználók látják a "Futtatás most" gombra a figyelmeztető üzenet jelenik meg, amikor az Internet Explorer blokkolja az elavult ActiveX-vezérlők a. Erre a gombra kattintva lehetővé teszi, hogy a felhasználó egyszeri futtatás a elavult ActiveX-vezérlőt. További információkért lásd: "Elavult ActiveX-vezérlők" az Internet Explorer TechNet könyvtárban.  
+- **Az Internet Explorer az elavult aktív X vezérlőknél az idő futtatása gombjának eltávolítása**  
+  Ezzel a házirend-beállítással megakadályozhatja, hogy a felhasználók meglássák a "Futtatás ebben az időben" gombot, és az Internet Explorerben adott elavult ActiveX-vezérlőket futtasson. Ha engedélyezi ezt a házirend-beállítást, a felhasználók nem láthatják a figyelmeztető üzenet "Futtatás ideje" gombját, amely akkor jelenik meg, ha az Internet Explorer elavult ActiveX-vezérlőt blokkol. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a felhasználók az elavult ActiveX-vezérlőt blokkoló figyelmeztető üzenetben láthatják a "Futtatás ideje" gombot. Ha erre a gombra kattint, a felhasználó egyszer futtathatja az elavult ActiveX-vezérlőt. További információ: "elavult ActiveX-vezérlők" az Internet Explorer TechNet könyvtárában.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067123)  
   
   **Alapértelmezett**: Enabled 
   
-- **Az Internet Explorer internetes zóna indítási alkalmazásokat és fájlokat egy IFRAME elembe**  
-  Ez a házirend-beállítással kezelheti, hogy futtatható alkalmazások és a egy IFRAME-referencia a HTML-lapok ebben a zónában lévő fájlok letölthetők. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók alkalmazásokat futtathat és IFRAME fájlok letöltése a zónában lévő lapok a felhasználói beavatkozás nélkül. Kérdés választja a legördülő mezőben, ha a rendszer megkérdezi a felhasználókat, hogy az alkalmazások futtatásához és IFRAME fájlok letöltése a zóna oldalain e. Ha letiltja ezt a beállítást, a rendszer megakadályozza a felhasználókat a futó alkalmazások és IFRAME fájlok letöltése a zóna oldalain. Ha nem konfigurálja ezt a beállítást, a rendszer megkérdezi a felhasználókat, hogy az alkalmazások futtatásához és IFRAME fájlok letöltése a zóna oldalain e.  
+- **Internet Explorer Internet Zone alkalmazások és fájlok elindítása iframe-ben**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az alkalmazások futtathatók-e, és hogy a fájlok letölthetők-e a zónában lévő lapok HTML-ben lévő IFRAME-hivatkozásból. Ha engedélyezi ezt a házirend-beállítást, a felhasználók felhasználói beavatkozás nélkül futtathatják az alkalmazásokat, és fájlokat tölthetnek le a zóna oldalain lévő IFRAME ELEMEKből. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy szeretné-e futtatni az alkalmazásokat, és letölti a fájlokat a zóna lapjain lévő IFRAME elemek közül. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tudnak alkalmazásokat futtatni és fájlokat letölteni a zónában lévő lapok IFRAME ELEMEIből. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer lekérdezi a felhasználókat, hogy futtatják-e az alkalmazásokat, és fájlokat töltenek le a zóna lapjain lévő IFRAME elemek közül.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067020)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Keresse meg a windows és a keretek az Internet Explorer korlátozott zóna különböző tartományokban**  
-  A házirend-beállítás lehetővé teszi a húzással tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows beállításainak megadása. Ha engedélyezi ezt a házirend-beállítást, és kattintson az engedélyezés, felhasználók húzza tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és kattintson a Letiltás elemre, felhasználók nem húzható tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást. Az Internet Explorer 10 Ha ezt a beállítást letiltja vagy nem konfigurálja, felhasználók nem húzható tartalom egyik tartományából egy másik tartományba Ha a forrás- és a különböző windows. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelt. Az Internet Explorer 9 és korábbi verzióiban Ha ez a szabályzat letiltja vagy nem konfigurálja, felhasználók húzhatja tartalom egyik tartományából egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást.  
+- **Az Internet Explorer korlátozott zónája különböző tartományokban navigáljon a Windows és a keretek között**  
+  Ezzel a házirend-beállítással beállíthatja, hogy a rendszer hogyan húzza át a tartalmat az egyik tartományból egy másik tartományba, ha a forrás és a cél különböző Windows-környezetben található. Ha engedélyezi ezt a házirend-beállítást, és az Engedélyezés gombra kattint, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél különböző Windows-környezetben található. A felhasználók nem változtathatják meg ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és a Letiltás gombra kattint, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél is különböző Windows-környezetben található. A felhasználók nem változtathatják meg ezt a beállítást. Ha az Internet Explorer 10 böngészőben letiltja ezt a házirend-beállítást, vagy nem konfigurálja, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél különböző Windows-környezetben található. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelen. Ha letiltja vagy nem konfigurálja ezt a házirendet az Internet Explorer 9 és a korábbi verzióiban, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél különböző Windows-alapú. A felhasználók nem változtathatják meg ezt a beállítást.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067050)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer internetes zóna SmartScreen**  
-  Ez a házirend-beállítással megadható, hogy a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha ez a szabályzatbeállítás engedélyezi, a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha letiltja ezt a beállítást, a SmartScreen szűrő a rosszindulatú zóna oldal nem beolvasása. Ha nem konfigurálja ezt a beállítást, a felhasználó választhat megvizsgálja-e a SmartScreen szűrő az oldalakat a rosszindulatú zóna. Megjegyezés: Az Internet Explorer 7 a házirend-beállítás meghatározza, hogy megvizsgálja-e adathalász szűrő oldalak rosszindulatú zónában.  
+- **Internet Explorer Internet Zone – intelligens képernyő**  
+  Ezzel a házirend-beállítással szabályozható, hogy a SmartScreen szűrő megvizsgálja-e a zónában található oldalakat a kártékony tartalomhoz. Ha engedélyezi ezt a házirend-beállítást, a SmartScreen szűrő kártékony tartalmat keres az ebben a zónában lévő lapokon. Ha letiltja ezt a házirend-beállítást, a SmartScreen szűrő nem vizsgálja meg a zónában lévő lapokat a kártékony tartalomhoz. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó megadhatja, hogy a SmartScreen szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz. Megjegyezés: Az Internet Explorer 7 programban ez a házirend-beállítás határozza meg, hogy az adathalászat-szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067047)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer Megbízható helyek zónájába java engedélyek zárolva**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, a Java-alkalmazások le vannak tiltva.  
+- **Az Internet Explorer zárolta a megbízható zóna Java-engedélyeit**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, a Java-kisalkalmazások le vannak tiltva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067142)  
   
   
-  **Alapértelmezett**: Tiltsa le a java 
+  **Alapértelmezett**: A Java letiltása 
   
-- **Az Internet Explorer letöltött programok aláírásának ellenőrzése**  
-  Ez a házirend-beállítással kezelheti-e az Internet Explorer ellenőrzi a digitális aláírások (amely azonosítja a szoftver gyártóját, és ellenőrzi a még nem lettek módosítva vagy illetéktelenül) a felhasználó számítógépén végrehajtható programok letöltése előtt. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer végrehajtható programok a digitális aláírások ellenőrzése és előtt a felhasználó számítógépére történő letöltésük megjelenítéséhez. Ha letiltja ezt a beállítást, az Internet Explorer nem a végrehajtható programok a digitális aláírások ellenőrzése vagy identitásuk megjelenítése előtt felhasználó számítógépére történő. Ha nem konfigurálja a házirendet, az Internet Explorer nem a végrehajtható programok a digitális aláírások ellenőrzése vagy identitásuk megjelenítése előtt felhasználó számítógépére történő.  
+- **Internet Explorer-ellenőrzési aláírások a letöltött programokban**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Internet Explorer ellenőrizze-e a digitális aláírásokat (amely azonosítja az aláírt szoftverek közzétevőjét, és ellenőrzi, hogy nem módosította vagy módosították-e) a felhasználó számítógépeken a végrehajtható programok letöltése előtt. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer megtekinti a végrehajtható programok digitális aláírásait, és megjeleníti azok identitását, mielőtt letölti őket a felhasználói számítógépekre. Ha letiltja ezt a házirend-beállítást, az Internet Explorer nem fogja megtekinteni a végrehajtható programok digitális aláírásait, vagy a felhasználói számítógépekre való letöltés előtt megjeleníti az identitását. Ha nem konfigurálja ezt a házirendet, az Internet Explorer nem fogja megtekinteni a végrehajtható programok digitális aláírásait, vagy a felhasználói számítógépekre való letöltés előtt megjeleníti az identitását.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067051)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer korlátozott webes böngészővezérlők parancsprogramok zóna**  
-  A házirend-beállítás meghatározza, hogy e lap szabályozhatja a beágyazott WebBrowser vezérlők parancsfájl használatával. Ha ez a szabályzatbeállítás engedélyezi, a parancsfájl hozzáférést ovládací prvek WebBrowser engedélyezett. Ha letiltja ezt a beállítást, ovládací prvek WebBrowser parancsfájlok hozzáférése nem engedélyezett. Ha nem konfigurálja ezt a beállítást, a felhasználó engedélyezheti vagy letilthatja ovládací prvek WebBrowser parancsfájl-hozzáférését. Alapértelmezés szerint csak az intranetes zónák és helyi számítógép ovládací prvek WebBrowser parancsfájl hozzáférést engedélyezett.  
+- **Az Internet Explorer korlátozott zónáinak parancsfájlkezelése webböngésző-vezérlőkkel**  
+  Ezzel a házirend-beállítással megadható, hogy egy oldal képes-e a beágyazott WebBrowser vezérlők futtatására parancsfájl használatával. Ha engedélyezi ezt a házirend-beállítást, a WebBrowser vezérlőhöz való parancsfájl-hozzáférés engedélyezett. Ha letiltja ezt a házirend-beállítást, a WebBrowser vezérlőhöz való parancsfájl-hozzáférés nem engedélyezett. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó engedélyezheti vagy letilthatja a WebBrowser vezérlőhöz tartozó parancsfájlok elérését. Alapértelmezés szerint a WebBrowser vezérlőhöz való parancsfájl-hozzáférés csak a helyi gépen és az intranet zónában engedélyezett.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067098)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna keresztszűrő hely parancsfájl-kezelési**  
-  Ez az irányelv szabályozza, ha a többhelyes parancsfájl-kezelési (XSS) szűrő érzékeli, és megakadályozza a webhelyközi parancsprogramot injektálások, websites, a zóna. Ha ez a szabályzatbeállítás engedélyezi, a XSS szűrő zónában is engedélyezve van, és a XSS-szűrő megpróbálja webhelyközi parancsprogramot injektálások letiltása. Ha letiltja ezt a beállítást, a XSS szűrő ki van kapcsolva a zónában, és az Internet Explorer lehetővé teszi a webhelyközi parancsprogramot injektálások.  
+- **Az Internet Explorer korlátozott zónájának helyközi parancsfájl-szűrője**  
+  Ez a házirend azt szabályozza, hogy a helyek közötti parancsfájlok (XSS) szűrő felismeri-e és megakadályozza-e a helyek közötti parancsfájl-befecskendezést a zónában lévő webhelyeken. Ha engedélyezi ezt a házirend-beállítást, az XSS-szűrő be van kapcsolva a zónában található helyekhez, és az XSS-szűrő megkísérli blokkolni a helyek közötti parancsfájlok befecskendezését. Ha letiltja ezt a házirend-beállítást, az XSS-szűrő ki van kapcsolva az ebben a zónában lévő helyeknél, és az Internet Explorer engedélyezi a helyek közötti parancsfájlok befecskendezését.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067178)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer korlátozott zóna bináris vagy parancsfájl viselkedések**  
-  A házirend-beállítás lehetővé teszi, hogy a dinamikus bináris és parancsfájl viselkedéseinek kezeléséhez: magába foglalja a HTML-elemek, amelyhez csatolva vannak bizonyos funkciók összetevőket. Ha ez a szabályzatbeállítás engedélyezi, bináris és parancsfájl viselkedések érhetők el. Ha jóvá a legördülő listából a rendszergazda, csak a rendszergazda által jóváhagyott viselkedéseket a bináris viselkedéseket házirend szereplő viselkedések érhetők el. Ha letiltja ezt a beállítást, bináris és parancsfájl viselkedések nem érhetők el, csak alkalmazások rendelkeznek egy egyéni biztonsági manager. Ha nem konfigurálja ezt a beállítást, bináris és parancsfájl viselkedések nem érhetők el, csak alkalmazások rendelkeznek egy egyéni biztonsági manager.  
+- **Az Internet Explorer korlátozott zónájának bináris és parancsfájl-viselkedései**  
+  Ezzel a házirend-beállítással kezelheti a dinamikus bináris és parancsfájl-viselkedést: olyan összetevőket, amelyek olyan HTML-elemek speciális funkcióit ágyazzák be, amelyekhez csatolva vannak. Ha engedélyezi ezt a házirend-beállítást, a bináris és a parancsfájl-viselkedés is elérhető. Ha a rendszergazda által jóváhagyott lehetőséget választja a legördülő listában, a rendszer csak a bináris viselkedések biztonsági korlátozási szabályzatában szereplő, a rendszergazda által jóváhagyott viselkedések területen felsorolt viselkedéseket jeleníti meg. Ha letiltja ezt a házirend-beállítást, a bináris és a parancsfájl-viselkedés nem érhető el, ha az alkalmazások egyéni biztonsági kezelőt implementáltak. Ha nem konfigurálja ezt a házirend-beállítást, a bináris és a parancsfájl-viselkedés nem érhető el, ha az alkalmazások egyéni biztonsági kezelőt implementáltak.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067224)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer biztonsági beállítások ellenőrzése**  
-  A házirend-beállítás a biztonsági beállítások ellenőrzése szolgáltatást, amely ellenőrzi az Internet Explorer biztonsági beállításokat határozza meg, amikor a beállítások veszélynek az Internet Explorer kikapcsolása. Ha ez a szabályzatbeállítás engedélyezi, a funkció ki van kapcsolva. Ha letiltja vagy nem konfigurálja ezt a beállítást, a funkció be van kapcsolva.  
+- **Az Internet Explorer biztonsági beállításainak bejelölése**  
+  Ezzel a házirend-beállítással kikapcsolhatja a biztonsági beállítások ellenőrzése funkciót, amely ellenőrzi, hogy az Internet Explorer biztonsági beállításai meghatározzák-e, hogy a beállítások az Internet Explorert veszélyeztetik-e. Ha engedélyezi ezt a házirend-beállítást, a szolgáltatás ki van kapcsolva. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a funkció be van kapcsolva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067182)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer az internet zóna biztonsági figyelmeztetés a potenciálisan nem biztonságos fájlok**  
-  A házirend-beállítás vezérli, hogy a "Nyissa meg a fájl – biztonsági figyelmeztetés" üzenet jelenik meg, amikor a felhasználó megpróbálja megnyitni a végrehajtható fájlok vagy más potenciálisan nem biztonságos fájlok (az intranetes a Fájlkezelővel, például fájlmegosztások). Ha engedélyezi ezt a házirend-beállítást, és állítsa be a legördülő listában annak érdekében, ezek a fájlok nyissa meg a biztonsági figyelmeztetés nélkül. Ha a legördülő listából a kérdés, biztonsági figyelmeztetés jelenik meg, a fájlok megnyitása előtt. Ha letiltja ezt a beállítást, az ezeket a fájlokat nem nyitnak meg. Ha nem konfigurálja ezt a beállítást, a felhasználó konfigurálhat a fájlok kezelésének. Alapértelmezés szerint ezeket a fájlokat a Tiltott helyek zónához, az intranetes és a helyi számítógép zónában, engedélyezve van a blokkolt és állítsa be az Internet és megbízható zónában kéréséhez.  
+- **Az Internet Explorer Internet zóna biztonsági figyelmeztetése potenciálisan nem biztonságos fájlokhoz**  
+  Ezzel a házirend-beállítással szabályozható, hogy a "fájl-biztonsági figyelmeztetés megnyitása" üzenet jelenik-e meg, amikor a felhasználó megpróbál megnyitni egy végrehajtható fájlt vagy más potenciálisan nem biztonságos fájlt (például egy intranetes fájlmegosztást a fájlkezelő használatával). Ha engedélyezi ezt a házirend-beállítást, és a legördülő listát engedélyezi, a rendszer biztonsági figyelmeztetés nélkül nyitja meg a fájlokat. Ha a legördülő lista megadását kéri, a rendszer biztonsági figyelmeztetést jelenít meg a fájlok megnyitása előtt. Ha letiltja ezt a házirend-beállítást, akkor ezek a fájlok nem nyílnak meg. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó beállíthatja, hogy a számítógép hogyan kezelje ezeket a fájlokat. Alapértelmezés szerint ezek a fájlok le vannak tiltva a korlátozott zónában, amely engedélyezve van az intranetes és a helyi számítógép zónában, és az interneten és a megbízható zónákban való rákérdezésre van beállítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067204)  
   
   **Alapértelmezett**: Kérdés  
   
-- **Az Internet Explorer intranetes zóna java-engedélyek**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, az engedély értéke közepes biztonságát.  
+- **Az Internet Explorer intranetes zónájának Java-engedélyei**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, az engedély közepes biztonsági értékre van állítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067206)  
   
-  **Alapértelmezett**: Magas biztonsági 
+  **Alapértelmezett**: Magas biztonság 
   
-- **Az Internet Explorer elavult blokk ActiveX-vezérlők**   
-  A házirend-beállítás határozza meg, hogy az Internet Explorer blokkolja adott elavult ActiveX-vezérlők. Elavult ActiveX-vezérlők a rendszer soha nem blokkolja az Intranet zóna. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem blokkolja az elavult ActiveX-vezérlőket. Ha letiltja vagy nem konfigurálja ezt a beállítást, az Internet Explorer továbbra is adott elavult ActiveX-vezérlők letiltása. További információkért lásd: "Elavult ActiveX-vezérlők" az Internet Explorer TechNet könyvtárban.  
+- **Az Internet Explorer elavult aktív X vezérlőket blokkol**   
+  Ez a házirend-beállítás határozza meg, hogy az Internet Explorer blokkolja-e az elavult ActiveX-vezérlőket. Az intranetes zónában soha nem blokkolja az elavult ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer leállítja az elavult ActiveX-vezérlők blokkolását. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az Internet Explorer továbbra is blokkol bizonyos elavult ActiveX-vezérlőket. További információ: "elavult ActiveX-vezérlők" az Internet Explorer TechNet könyvtárában.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067203)  
   
   **Alapértelmezett**: Enabled  
   
-- **Internet Explorer restricted zone popup blocker**  
-  Ez a házirend-beállítással kezelheti, hogy nemkívánatos előugró ablak jelenik meg. Előugró ablakok nyílnak meg, amikor a végfelhasználó egy hivatkozásra kattint, nincsenek letiltva. Ha ez a szabályzatbeállítás engedélyezi, leggyakrabban nemkívánatos előugró ablakok ebben az esetben jelennek meg. Ha letiltja ezt a beállítást, az előugró windows nem nem jelenik meg. Ha nem konfigurálja ezt a beállítást, leggyakrabban nemkívánatos előugró ablakok ebben az esetben jelennek meg.  
+- **Internet Explorer korlátozott zóna felugró ablakának blokkolása**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a nemkívánatos előugró ablakok megjelenjenek-e. Az előugró ablak akkor nyílik meg, amikor a végfelhasználó egy hivatkozásra kattint. Ha engedélyezi ezt a házirend-beállítást, a legtöbb nemkívánatos előugró ablak nem jelenik meg. Ha letiltja ezt a házirend-beállítást, a rendszer nem akadályozza meg az előugró ablakok megjelenését. Ha nem konfigurálja ezt a házirend-beállítást, a legtöbb nemkívánatos előugró ablak nem jelenik meg.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067180)  
   
   **Alapértelmezett**: Engedélyezés  
   
-- **Az Internet Explorer folyamatok MK protokoll biztonsági korlátozása**  
-  Az MK protokoll biztonsági korlátozása a házirend-beállítást csökkenti a támadási felület megakadályozzák, hogy az MK protokollt. Az MK protokollon sikertelen lesz. Ha ez a szabályzatbeállítás engedélyezi, a fájlkezelő és az Internet Explorer számára letiltja az MK protokollt, és az MK protokollon sikertelen lesz. Ha letiltja ezt a beállítást, az alkalmazások használhatják az MK-protokoll API-t. Az MK protokollon a Fájlkezelőben és az Internet Explorer folyamatok esetében működnek. Ha nem konfigurálja ezt a beállítást, a fájlkezelő és az Internet Explorer számára letiltja az MK protokollt, és az MK protokollon sikertelen lesz.  
+- **Az Internet Explorer az MK protokoll biztonsági korlátozását dolgozza fel**  
+  Az MK protokoll biztonsági korlátozási házirendjének beállítása csökkenti a támadási felületet az MK protokoll megakadályozásával. Az MK protokollon tárolt erőforrások sikertelenek lesznek. Ha engedélyezi ezt a házirend-beállítást, a fájlkezelő és az Internet Explorer nem fogja tudni letiltani az MK protokollt, és az MK protokollon tárolt erőforrások sikertelenek lesznek. Ha letiltja ezt a házirend-beállítást, az alkalmazások használhatják az MK protokoll API-ját. Az MK protokollon tárolt erőforrások a Fájlkezelőben és az Internet Explorer folyamataiban is működni fognak. Ha nem konfigurálja ezt a házirend-beállítást, a fájlkezelő és az Internet Explorer nem fogja tudni letiltani az MK protokollt, és az MK protokollon tárolt erőforrások sikertelenek lesznek.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067179)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer megbízható zóna java-engedélyek**   
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, az engedély értéke alacsony biztonsági.  
+- **Az Internet Explorer megbízható zónájának Java-engedélyei**   
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, az engedély alacsony biztonsági értékre van állítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067200)  
   
-  **Alapértelmezett**: Magas biztonsági  
+  **Alapértelmezett**: Magas biztonság  
   
-- **Az Internet Explorer korlátozott kisalkalmazások parancsprogramok zóna**  
-  A házirend-beállítás lehetővé teszi, hogy e kisalkalmazások érhetők el a zóna parancsfájlok kezelését. Ha ez a szabályzatbeállítás engedélyezi, a parancsfájlok kisalkalmazások automatikusan, felhasználói beavatkozás nélkül hozzáférhetnek. Kérdés választja a legördülő mezőben, ha a rendszer megkérdezi a felhasználókat, döntse el, hogy engedélyezi a parancsprogramokat alkalmazások eléréséhez. Ha letiltja ezt a beállítást, parancsfájlokat ebben az esetben a az alkalmazásainak elérését. Ha nem konfigurálja ezt a beállítást, parancsfájlokat ebben az esetben a az alkalmazásainak elérését.  
+- **Az Internet Explorer korlátozott zónákon keresztüli parancsfájlkezelése Java-kisalkalmazások esetén**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a kisalkalmazások elérhetők-e a zónán belüli parancsfájlok számára. Ha engedélyezi ezt a házirend-beállítást, a parancsfájlok felhasználói beavatkozás nélkül automatikusan hozzáférhetnek a kisalkalmazásokhoz. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a parancsfájlok elérését a kisalkalmazásokhoz. Ha letiltja ezt a házirend-beállítást, a parancsfájlok nem férnek hozzá a kisalkalmazásokhoz. Ha nem konfigurálja ezt a házirend-beállítást, a parancsfájlok nem férnek hozzá a kisalkalmazásokhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067202)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer zárolja a Tiltott helyek zónához java-engedélyek**   
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, a Java-alkalmazások le vannak tiltva.  
+- **Az Internet Explorer letiltotta a korlátozott zóna Java-engedélyeit**   
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, a Java-kisalkalmazások le vannak tiltva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067181)  
   
-  **Alapértelmezett**: Tiltsa le a java 
+  **Alapértelmezett**: A Java letiltása 
   
-- **Az Internet Explorer internetes zóna engedélyezése csak a jóváhagyott tartományok ActiveX-vezérlők használata**   
-  A házirend-beállítás szabályozza, ha kéri a felhasználót, hogy engedélyezze az ActiveX-vezérlők futtathatók a webhelyeken a webhely, amelyen telepítve van az ActiveX-vezérlő nem. Ha ez a szabályzatbeállítás engedélyezi, kéri a felhasználót, az ActiveX-vezérlők a zóna webhelyekről futtatása előtt. A felhasználó választhat, hogy a vezérlő az aktuális helyről, vagy az összes helyről. Ha letiltja ezt a beállítást, a felhasználó nem látja a webhely szerinti ActiveX használatával, és a zónában lévő összes webhely ActiveX-vezérlők futtatható.  
+- **Az Internet Explorer internetes zónája csak a jóváhagyott tartományok számára engedélyezi az ActiveX-vezérlők használatát**   
+  Ezzel a házirend-beállítással szabályozható, hogy a rendszer a felhasználótól az ActiveX-vezérlőt telepítő webhelytől eltérő webhelyeken is fusson. Ha engedélyezi ezt a házirend-beállítást, a rendszer arra kéri a felhasználót, hogy az ActiveX-vezérlők futtathatók legyenek a zónában található webhelyekről. A felhasználó dönthet úgy, hogy engedélyezi, hogy a vezérlő az aktuális helyről vagy az összes helyről fusson. Ha letiltja ezt a házirend-beállítást, a felhasználó nem látja a helyhez tartozó ActiveX-parancssort, és az ActiveX-vezérlők a zóna összes webhelyéről futtathatók.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067091)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer minden hálózati elérési**  
-  Az Internet Explorer az összes hálózati elérési utak közé tartozik.  
+- **Az Internet Explorer minden hálózati elérési utat tartalmaz**  
+  Az Internet Explorer minden hálózati elérési utat tartalmaz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067090)  
   
   **Alapértelmezett**: Letiltva 
   
-- **Az Internet Explorer internetes zóna a védett mód**  
-  A házirend-beállítás lehetővé teszi, hogy a védett mód bekapcsolása. A védett mód megvédi az Internet Explorer a kihasznált biztonsági réseket a helyeken, amelyek az Internet Explorer a beállításjegyzék és a fájlrendszerhez írhat csökkentésével. Ha ez a szabályzatbeállítás engedélyezi, védett üzemmód be van kapcsolva. A felhasználó nem a védett mód kikapcsolása. Ha letiltja ezt a beállítást, a védett mód ki van kapcsolva. A felhasználó nem a védett mód bekapcsolása. Ha nem konfigurálja ezt a beállítást, a felhasználó kapcsolja be, vagy kapcsolja ki a védett mód.  
+- **Internet Explorer Internet zóna által védett üzemmód**  
+  Ezzel a házirend-beállítással engedélyezheti a védett üzemmódot. A védett mód segít megvédeni az Internet Explorert a kihasznált biztonsági rések révén, ha csökkenti az Internet Explorer által a beállításjegyzékben és a fájlrendszerben írni kívánt helyeket. Ha engedélyezi ezt a házirend-beállítást, a védett mód be van kapcsolva. A felhasználó nem kapcsolhatja ki a védett üzemmódot. Ha letiltja ezt a házirend-beállítást, a védett mód ki van kapcsolva. A felhasználó nem kapcsolhatja be a védett üzemmódot. Ha nem konfigurálja ezt a házirend-beállítást, akkor a felhasználó be-vagy kikapcsolhatja a védett módot.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067171)  
   
   **Alapértelmezett**: Engedélyezés 
   
-- **Az Internet Explorer az internet zóna inicializálása és parancsfájl Active X-vezérlők nem biztonságosként megjelölt**  
-  Ez a szabályzatbeállítás nem biztonságosként megjelölt ActiveX-vezérlők kezelését teszi lehetővé. Ha ez a szabályzatbeállítás engedélyezi, az ActiveX-vezérlők, betöltött paraméterekkel és futtatása parancsfájlalapú objektum nem megbízható adatok vagy parancsfájlok biztonságának beállítása nélkül. Ezt a beállítást nem ajánlott, kivéve a biztonságos és felügyelt zónák. A beállítás hatására nem biztonságos, és a biztonságos vezérlők inicializálása és parancsprogrammal létrehozva, a rendszer figyelmen kívül hagyja az ActiveX-vezérlők biztonságosnak lehetőséget. Ha engedélyezi ezt a házirend-beállítást, és a legördülő mezőben válassza ki a kérdés, felhasználók kérdezhető le, hogy a vezérlő betöltés paramétereket az engedélyezi-e, vagy parancsprogram. Ha letiltja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva. Ha nem konfigurálja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva.  
+- **Az Internet Explorer internetes zónájának inicializálása és a parancsfájlok aktív X vezérlők nem biztonságosakként vannak megjelölve**  
+  Ezzel a házirend-beállítással kezelheti a nem biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, a rendszer futtatja az ActiveX-vezérlőket, betölti azokat paraméterekkel, és parancsfájlt helyez el anélkül, hogy a nem megbízható adatokra vagy parancsfájlokra vonatkozó biztonsági beállításokat Ez a beállítás nem ajánlott, a biztonságos és felügyelt zónák kivételével. Ez a beállítás azt eredményezi, hogy a nem biztonságos és a biztonságos vezérlők inicializálása és parancsfájlba való helyezése megtörtént, figyelmen kívül hagyva a parancsfájlok számára biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, és a legördülő listában a kérdés elemre kattint, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a vezérlőnek a paramétereket vagy parancsfájlokkal való betöltését. Ha letiltja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal. Ha nem konfigurálja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067170)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Az Internet Explorer SmartScreen tiltott helyek zónához zárolva**   
-  Ez a házirend-beállítással megadható, hogy a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha ez a szabályzatbeállítás engedélyezi, a SmartScreen szűrő megvizsgálja a rosszindulatú zóna oldalak. Ha letiltja ezt a beállítást, a SmartScreen szűrő a rosszindulatú zóna oldal nem beolvasása. Ha nem konfigurálja ezt a beállítást, a felhasználó választhat megvizsgálja-e a SmartScreen szűrő az oldalakat a rosszindulatú zóna. Megjegyezés: Az Internet Explorer 7 a házirend-beállítás meghatározza, hogy megvizsgálja-e adathalász szűrő oldalak rosszindulatú zónában.  
+- **Az Internet Explorer lezárta a korlátozott zóna intelligens képernyőjét**   
+  Ezzel a házirend-beállítással szabályozható, hogy a SmartScreen szűrő megvizsgálja-e a zónában található oldalakat a kártékony tartalomhoz. Ha engedélyezi ezt a házirend-beállítást, a SmartScreen szűrő kártékony tartalmat keres az ebben a zónában lévő lapokon. Ha letiltja ezt a házirend-beállítást, a SmartScreen szűrő nem vizsgálja meg a zónában lévő lapokat a kártékony tartalomhoz. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó megadhatja, hogy a SmartScreen szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz. Megjegyezés: Az Internet Explorer 7 programban ez a házirend-beállítás határozza meg, hogy az adathalászat-szűrő megvizsgálja-e a zónában lévő lapokat a kártékony tartalomhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067092)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer összeomlási észlelése**  
-  A házirend-beállítás lehetővé teszi, hogy az összeomlási észlelési funkcióját kiegészítő felügyeleti kezelheti. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer összeomlás verziójának megfelelően viselkedik a Windows XP Professional Service Pack 1 és korábbi verzióiban, nevezetesen meghívni a Windows hibajelentés. Az összes házirend-beállítások a Windows hibajelentés továbbra is a alkalmazni. Ha letiltja vagy nem konfigurálja ezt a beállítást, az összeomlási duplikálásészlelési szolgáltatását a kiegészítő felügyeleti működőképességét.  
+- **Az Internet Explorer összeomlásának észlelése**  
+  Ezzel a házirend-beállítással kezelheti a bővítmények felügyeletének összeomlás-észlelési funkcióját. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer összeomlása a Windows XP Professional Service Pack 1 és korábbi verziókban is megjelenik, nevezetesen a Windows hibajelentés meghívásához. A Windows hibajelentés összes házirend-beállítása továbbra is érvényben marad. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a beépülő modul felügyeletének összeomlás-észlelési funkciója működőképes.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067094)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer internetes zóna java-engedélyek**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, az engedély értéke magas biztonsági.  
+- **Internet Explorer Internet Zone Java-engedélyek**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, az engedély magas biztonságra van állítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067174)  
   
-  **Alapértelmezett**: Tiltsa le a java  
+  **Alapértelmezett**: A Java letiltása  
   
-- **Az Internet Explorer korlátozott zóna active scripting**  
-  Ez a házirend-beállítással kezelheti, hogy fut a zónában lévő lapok a parancsfájl kód. Ha ez a szabályzatbeállítás engedélyezi, a zónában lévő lapok szkriptkódot automatikusan futtathatók. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, hogy a parancsfájl kód futtatásához a zónában lévő lapok teszi lehetővé e. Ha letiltja a beállítást, a szkriptkód a lapok zónában nem futtathatók. Ha nem konfigurálja ezt a beállítást, a zónában lévő lapok szkriptkódot nem futtathatók.  
+- **Internet Explorer – korlátozott zóna – aktív parancsfájlok**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a zóna oldalain lévő parancsfájl-kód fut-e. Ha engedélyezi ezt a házirend-beállítást, a rendszer automatikusan futtathatja a zónában lévő lapokon található parancsfájl kódját. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezzék-e a parancsfájlok futtatását a zónában lévő lapokon. Ha letiltja ezt a házirend-beállítást, a rendszer megakadályozza, hogy a zóna lapjain lévő parancsfájl-kód fusson. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer megakadályozza, hogy a zóna lapjain lévő parancsfájl-kód ne fusson.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067172)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer internetes zóna bejelentkezési beállítások**  
-  A házirend-beállítás lehetővé teszi, hogy a bejelentkezési lehetőségek beállításainak kezelése. Ha ez a szabályzatbeállítás engedélyezi, a következő bejelentkezési lehetőségek közül választhat. Tiltsa le a HTTP-hitelesítést és -felhasználási névtelen bejelentkezés a Vendég fiók csak a Common Internet File System (CIFS) protokollhoz. Felhasználónév és jelszó kérése tartozó felhasználói azonosítók és jelszavak. Miután egy felhasználó kérdeznek le, ezeket az értékeket használható csendes a munkamenet hátralévő részére. Automatikus bejelentkezés csak az Intranet zónába tartozó felhasználói azonosítók és jelszavak a más zónákban lekérdezés felhasználóinak. Után a felhasználó lekérdezése követi, ezeket az értékeket a a munkamenet hátralevő beavatkozás nélkül is használni. Automatikus bejelentkezés aktuális felhasználónevet és jelszót megpróbálja bejelentkezés Windows NT kérdés-válasz (más néven az NTLM-hitelesítés) használatával. Ha a kiszolgáló támogatja a Windows NT kérdés-válasz, a bejelentkezést a felhasználói hálózati felhasználónevet és jelszót a bejelentkezéshez használ. Ha a kiszolgáló nem támogatja a Windows NT kérdés-válasz, a felhasználó lekérdezése követi, a felhasználónév és a jelszót. Ha letiltja ezt a beállítást, bejelentkezési értéke napló automatikus a csak az Intranet zónában. Ha nem konfigurálja ezt a beállítást, jelentkezzen be az automatikus bejelentkezési értéke csak az Intranet zóna.  
+- **Internet Explorer Internet zóna bejelentkezési beállításai**  
+  Ezzel a házirend-beállítással kezelheti a bejelentkezési beállítások beállításait. Ha engedélyezi ezt a házirend-beállítást, a következő bejelentkezési beállítások közül választhat. Névtelen bejelentkezés a HTTP-hitelesítés letiltásához és a vendég fiók csak a Common Internet File System (CIFS) protokollhoz való használatához. Kérje meg a felhasználónevet és a jelszót a felhasználók felhasználói azonosítók és jelszavak lekérdezéséhez. A felhasználó lekérdezése után ezeket az értékeket csendesen használhatja a munkamenet hátralévő részében. Automatikus bejelentkezés csak intranet zónában felhasználói azonosítók és jelszavak más zónákban való lekérdezéséhez. A felhasználó lekérdezése után ezek az értékek csendesen használhatók a munkamenet hátralevő részében. Automatikus bejelentkezés a jelenlegi felhasználónévvel és jelszóval a Windows NT kérdéses válasz (más néven NTLM-hitelesítés) használatával történő bejelentkezéshez. Ha a kiszolgáló támogatja a Windows NT kérdéses választ, a bejelentkezés a felhasználó hálózati felhasználónevét és jelszavát használja a bejelentkezéshez. Ha a kiszolgáló nem támogatja a Windows NT kérdéses választ, a rendszer lekérdezi a felhasználót, hogy megadja a felhasználónevet és a jelszót. Ha letiltja ezt a házirend-beállítást, a bejelentkezés csak az intranetes zónában automatikus bejelentkezésre van beállítva. Ha nem konfigurálja ezt a házirend-beállítást, akkor a bejelentkezés csak az intranetes zónában automatikus bejelentkezésre van beállítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067194)  
   
   **Alapértelmezett**: Kérdés  
   
-- **Internet Explorer restricted zone allow vbscript to run**   
-  Ez a házirend-beállítással kezelheti, hogy VBScript futtathatja a lapokon az Internet Explorerben a megadott zónában. A legördülő listában kiválasztott engedélyezése, ha a VBScript felhasználói beavatkozás nélkül futtatható. A legördülő listában kiválasztott kérése, ha rendszer kéri a felhasználóktól, hogy a VBScript futtatását engedélyezi-e. A legördülő listában kiválasztott tiltsa le, ha VBScript nem futtathatók. Ha nem konfigurálja, vagy tiltsa le a házirend-beállítás, VBScript nem futtathatók.  
+- **Az Internet Explorer korlátozott zónája lehetővé teszi a VBScript futtatását**   
+  Ezzel a házirend-beállítással felügyelheti, hogy a VBScript futtatható-e az Internet Explorerben megadott zónán lévő lapokon. Ha a legördülő listában az Engedélyezés lehetőséget választotta, a VBScript felhasználói beavatkozás nélkül futtatható. Ha a legördülő listában a kérdés lehetőséget választotta, a felhasználóknak meg kell választaniuk, hogy engedélyezik-e a VBScript futtatását. Ha a legördülő listában a Letiltás lehetőséget választotta, a VBScript nem fut. Ha nem konfigurálja vagy letiltja ezt a házirend-beállítást, a VBScript megakadályozza a futtatását.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067173)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer az internet zóna húzza tartalmat más tartományokból keresztül windows**  
-  A házirend-beállítás lehetővé teszi a húzással tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows beállításainak megadása. Ha engedélyezi ezt a házirend-beállítást, és kattintson az engedélyezés, felhasználók húzza tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és kattintson a Letiltás elemre, felhasználók nem húzható tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást. Az Internet Explorer 10 Ha ezt a beállítást letiltja vagy nem konfigurálja, felhasználók nem húzható tartalom egyik tartományából egy másik tartományba Ha a forrás- és a különböző windows. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelt. Az Internet Explorer 9 és korábbi verzióiban Ha ez a szabályzat letiltja vagy nem konfigurálja, felhasználók húzhatja tartalom egyik tartományából egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást.  
+- **Az Internet Explorer internetes zónája különböző tartományokból származó tartalmat húzhat át a Windowsban**  
+  Ezzel a házirend-beállítással beállíthatja, hogy a rendszer hogyan húzza át a tartalmat az egyik tartományból egy másik tartományba, ha a forrás és a cél különböző Windows-környezetben található. Ha engedélyezi ezt a házirend-beállítást, és az Engedélyezés gombra kattint, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél különböző Windows-környezetben található. A felhasználók nem változtathatják meg ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és a Letiltás gombra kattint, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél is különböző Windows-környezetben található. A felhasználók nem változtathatják meg ezt a beállítást. Ha az Internet Explorer 10 böngészőben letiltja ezt a házirend-beállítást, vagy nem konfigurálja, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél különböző Windows-környezetben található. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelen. Ha letiltja vagy nem konfigurálja ezt a házirendet az Internet Explorer 9 és a korábbi verzióiban, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél különböző Windows-alapú. A felhasználók nem változtathatják meg ezt a beállítást.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067093)  
   
   **Alapértelmezett**: Letiltva 
   
-- **Az Internet Explorer intranetes zóna inicializálása és parancsfájl Active X-vezérlők nem biztonságosként megjelölt**  
-  Ez a szabályzatbeállítás nem biztonságosként megjelölt ActiveX-vezérlők kezelését teszi lehetővé. Ha ez a szabályzatbeállítás engedélyezi, az ActiveX-vezérlők, betöltött paraméterekkel és futtatása parancsfájlalapú objektum nem megbízható adatok vagy parancsfájlok biztonságának beállítása nélkül. Ezt a beállítást nem ajánlott, kivéve a biztonságos és felügyelt zónák. A beállítás hatására nem biztonságos, és a biztonságos vezérlők inicializálása és parancsprogrammal létrehozva, a rendszer figyelmen kívül hagyja az ActiveX-vezérlők biztonságosnak lehetőséget. Ha engedélyezi ezt a házirend-beállítást, és a legördülő mezőben válassza ki a kérdés, felhasználók kérdezhető le, hogy a vezérlő betöltés paramétereket az engedélyezi-e, vagy parancsprogram. Ha letiltja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva. Ha nem konfigurálja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva.  
+- **Az Internet Explorer intranetes zónájának inicializálása és a parancsfájlok nem biztonságosként megjelölt aktív X-vezérlők**  
+  Ezzel a házirend-beállítással kezelheti a nem biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, a rendszer futtatja az ActiveX-vezérlőket, betölti azokat paraméterekkel, és parancsfájlt helyez el anélkül, hogy a nem megbízható adatokra vagy parancsfájlokra vonatkozó biztonsági beállításokat Ez a beállítás nem ajánlott, a biztonságos és felügyelt zónák kivételével. Ez a beállítás azt eredményezi, hogy a nem biztonságos és a biztonságos vezérlők inicializálása és parancsfájlba való helyezése megtörtént, figyelmen kívül hagyva a parancsfájlok számára biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, és a legördülő listában a kérdés elemre kattint, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a vezérlőnek a paramétereket vagy parancsfájlokkal való betöltését. Ha letiltja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal. Ha nem konfigurálja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067175)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Az Internet Explorer letöltési ház**  
-  A házirend-beállítás megakadályozza, hogy a felhasználó kellene (fájlmellékletek) házak letöltve az hírcsatorna a felhasználó számítógépén. Ha ez a szabályzatbeállítás engedélyezi, a felhasználó nem állítható be a hírcsatorna-szinkronizálási motor letölteni egy ház hírcsatorna tulajdonságok oldalán keresztül. A fejlesztő nem módosítható a letöltési beállítását a hírcsatorna-API-kon keresztül. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó beállíthat egy ház hírcsatorna tulajdonságok oldalán keresztül letöltéséhez a hírcsatorna-szinkronizálási motor. A fejlesztők a letöltési beállítást a hírcsatorna-API-k segítségével módosíthatja.  
+- **Internet Explorer-Letöltés – készülékházak**  
+  Ezzel a házirend-beállítással megakadályozható, hogy a felhasználó betöltse a hírcsatornáról a felhasználó számítógépére. Ha engedélyezi ezt a házirend-beállítást, a felhasználó nem állíthatja be a hírcsatorna-szinkronizálási motort úgy, hogy a csatorna tulajdonságlapján keresztül letöltse a bekerítést. A fejlesztők nem változtathatják meg a letöltési beállítást a hírcsatorna API-kon keresztül. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a felhasználó beállíthatja, hogy a hírcsatorna-szinkronizálási motor letöltse a bekerítést a hírcsatorna tulajdonságlapján. A fejlesztő a hírcsatorna API-jai segítségével módosíthatja a letöltési beállítást.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067245)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna töltse le a nem aláírt ActiveX-vezérlők**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók letölthetnek aláíratlan ActiveX-vezérlők a zónából. Az ilyen kódja potenciálisan káros, különösen akkor, ha egy nem megbízható zóna származik. Ha ez a szabályzatbeállítás engedélyezi, az aláírás nélküli vezérlők felhasználói beavatkozás nélkül futtathatók. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, döntse el, hogy az adott vezérlőt futtatásához. Ha letiltja ezt a beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket. Ha nem konfigurálja ezt a beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket.  
+- **Az Internet Explorer korlátozott zónájának aláíratlan aktív X vezérlők letöltése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók le tudják-e tölteni az aláíratlan ActiveX-vezérlőket a zónából. Ez a kód potenciálisan ártalmas, különösen akkor, ha nem megbízható zónából érkeznek. Ha engedélyezi ezt a házirend-beállítást, a felhasználók felhasználói beavatkozás nélkül futtathatnak aláíratlan vezérlőket. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e az aláíratlan vezérlő futtatását. Ha letiltja ezt a házirend-beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067177)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer az internet zóna tartalom húzza az eltérő tartományokban időkereten belül**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók letölthetnek aláíratlan ActiveX-vezérlők a zónából. Az ilyen kódja potenciálisan káros, különösen akkor, ha egy nem megbízható zóna származik. Ha ez a szabályzatbeállítás engedélyezi, az aláírás nélküli vezérlők felhasználói beavatkozás nélkül futtathatók. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, döntse el, hogy az adott vezérlőt futtatásához. Ha letiltja ezt a beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket. Ha nem konfigurálja ezt a beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket.  
+- **Az Internet Explorer internetes zónája a különböző tartományokból származó tartalmakat a Windowson belül húzza**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók le tudják-e tölteni az aláíratlan ActiveX-vezérlőket a zónából. Ez a kód potenciálisan ártalmas, különösen akkor, ha nem megbízható zónából érkeznek. Ha engedélyezi ezt a házirend-beállítást, a felhasználók felhasználói beavatkozás nélkül futtathatnak aláíratlan vezérlőket. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e az aláíratlan vezérlő futtatását. Ha letiltja ezt a házirend-beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067095)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer folyamatok korlátozása Active X-telepítés**   
-  A házirend-beállítás lehetővé teszi, hogy a webböngésző vezérlőt tartalmazó alkalmazások letiltása, az ActiveX-vezérlő telepítésére kérő üzenet automatikus. Ha ez a szabályzatbeállítás engedélyezi, a webböngésző vezérlő letiltja az összes folyamat ActiveX-vezérlő telepítésére kérő üzenet automatikus. Ha letiltja vagy nem konfigurálja ezt a beállítást, a webböngésző vezérlőelem nem blokkolja az összes folyamat ActiveX-vezérlő telepítésére kérő üzenet automatikus.  
+- **Az Internet Explorer folyamatai korlátozzák az aktív X-telepítést**   
+  Ezzel a házirend-beállítással engedélyezheti, hogy a webböngésző vezérlőt futtató alkalmazások blokkolják az ActiveX-vezérlő telepítésének automatikus megadását. Ha engedélyezi ezt a házirend-beállítást, a webböngésző vezérlő letiltja az ActiveX-vezérlő telepítésének automatikus megadását minden folyamat esetében. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a webböngésző vezérlő nem blokkolja az ActiveX-vezérlő telepítésének automatikus megadását az összes folyamat esetében.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067250)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer internetes zóna Szkriptletek**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználó futtathatja a Szkriptletek. Ha ez a szabályzatbeállítás engedélyezi, akkor a felhasználó Szkriptletek futtathatja. Ha letiltja ezt a beállítást, a felhasználó Szkriptletek nem futtatható. Ha nem konfigurálja ezt a beállítást, a felhasználó engedélyezheti vagy letilthatja a Szkriptletek.  
+- **Internet Explorer Internet Zone Szkriptletek**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználó futtathat-e Szkriptletek. Ha engedélyezi ezt a házirend-beállítást, akkor a felhasználó futtathat Szkriptletek. Ha letiltja ezt a házirend-beállítást, a felhasználó nem tudja futtatni a Szkriptletek. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó engedélyezheti vagy letilthatja a Szkriptletek.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067176)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna húzza és dobja el, vagy másolja és illessze be a fájlokat**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók húzással vagy másolással illessze be a zónán belüli forrásból származó fájlokat. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók vagy másolással húzza át és illessze be a zóna fájlok automatikusan. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, hogy e húzással, vagy a fájlok másolása a zóna. Ha letiltja ezt a beállítást, a rendszer megakadályozza a felhasználókat a fájlok húzással másolással és beillesztéssel fájlokat ebben a zónában. Ha nem konfigurálja ezt a beállítást, a rendszer megkérdezi a felhasználókat, hogy e húzással, vagy a fájlok másolása a zónában.  
+- **Internet Explorer – korlátozott zóna – fájlok húzása vagy másolása és beillesztése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók beilleszthetnek-e fájlokat, vagy másolhatnak és beilleszthetnek fájlokat a zónán belüli forrásokból. Ha engedélyezi ezt a házirend-beállítást, a felhasználók áthelyezhetik a fájlokat, vagy automatikusan másolhatják és beilleszthetik a fájlokat a zónából. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy eldöntse, hogy a zónából kíván-e fájlokat áthúzni vagy másolni. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tudnak fájlokat húzni, vagy fájlokat másolni és beilleszteni a zónából. Ha nem konfigurálja ezt a házirend-beállítást, a rendszer lekérdezi a felhasználókat, hogy eldöntse, hogy a zónából kíván-e fájlokat húzni vagy másolni.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067096)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Ha az aláírás érvénytelen az Internet Explorer szoftver**  
-  Ez a házirend-beállítással kezelheti, hogy a szoftverek, például az ActiveX-vezérlők és letöltéseket, telepítve van, vagy a felhasználó által futtatott, annak ellenére, hogy az aláírás érvénytelen. Az érvénytelen aláírása jelezheti, hogy valaki módosította a fájlt. Ha ez a szabályzatbeállítás engedélyezi, a gép telepítéséhez, vagy az érvénytelen aláírással rendelkező fájlok futtatásának felkéri a felhasználókat. Ha letiltja ezt a beállítást, a felhasználók nem futtatásához vagy az érvénytelen aláírással rendelkező fájlok telepítése. Ha nem konfigurálja a házirendet, felhasználók eldönthetik, vagy az érvénytelen aláírással rendelkező fájlok telepítése.  
+- **Internet Explorer szoftver, ha az aláírás érvénytelen**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználó telepíthet-e vagy futtathat-e szoftvert, például az ActiveX-vezérlőket és a fájlokat, még akkor is, ha az aláírás érvénytelen. Egy érvénytelen aláírás azt jelezheti, hogy valaki módosította a fájlt. Ha engedélyezi ezt a házirend-beállítást, a rendszer a felhasználókat az érvénytelen aláírással rendelkező fájlok telepítésére és futtatására kéri. Ha letiltja ezt a házirend-beállítást, a felhasználók nem futtathatnak és nem telepíthetnek érvénytelen aláírással rendelkező fájlokat. Ha nem konfigurálja ezt a házirendet, a felhasználók dönthetnek úgy, hogy érvénytelen aláírással futtatják vagy telepítik a fájlokat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067201)
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna másolja be a parancsfájl-n keresztül**  
-  Ez a házirend-beállítással kezelheti-e parancsfájlokat egy vágólapi műveletet (például a kivágási, másolási és beillesztési) hajthat végre egy meghatározott régióban. Ha ez a szabályzatbeállítás engedélyezi, akkor a parancsfájl egy vágólapra művelet hajtható végre. Ha a parancssorban a legördülő mezőben válassza ki, a rendszer megkérdezi a felhasználókat, hogy a vágólap műveletek végrehajtásához. Ha letiltja ezt a beállítást, akkor a parancsfájl egy vágólapra operaci nelze provést. Ha nem konfigurálja ezt a beállítást, akkor a parancsfájl egy vágólapra operaci nelze provést.  
+- **Az Internet Explorer korlátozott zónájának másolása és beillesztése parancsfájl használatával**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a parancsfájlok végezhetnek-e vágólap-műveletet (például Kivágás, másolás és beillesztés) egy adott régióban. Ha engedélyezi ezt a házirend-beállítást, a parancsfájlok elvégezhetik a vágólap műveletet. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy a vágólapon végez-e műveleteket. Ha letiltja ezt a házirend-beállítást, a parancsfájlok nem hajthatnak végre vágólap-műveletet. Ha nem konfigurálja ezt a házirend-beállítást, a parancsfájlok nem hajthatnak végre vágólap-műveletet.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067165)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna húzza tartalmat más tartományokból keresztül windows**  
-  A házirend-beállítás lehetővé teszi a húzással tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows beállításainak megadása. Ha engedélyezi ezt a házirend-beállítást, és kattintson az engedélyezés, felhasználók húzza tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és kattintson a Letiltás elemre, felhasználók nem húzható tartalom egyik tartományból egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást. Az Internet Explorer 10 Ha ezt a beállítást letiltja vagy nem konfigurálja, felhasználók nem húzható tartalom egyik tartományából egy másik tartományba Ha a forrás- és a különböző windows. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelt. Az Internet Explorer 9 és korábbi verzióiban Ha ez a szabályzat letiltja vagy nem konfigurálja, felhasználók húzhatja tartalom egyik tartományából egy másik tartományba Ha a forrás- és a különböző windows. Felhasználók nem módosíthatják ezt a beállítást.  
+- **Az Internet Explorer korlátozott zónája különböző tartományokból származó tartalmat húzhat át a Windowsban**  
+  Ezzel a házirend-beállítással beállíthatja, hogy a rendszer hogyan húzza át a tartalmat az egyik tartományból egy másik tartományba, ha a forrás és a cél különböző Windows-környezetben található. Ha engedélyezi ezt a házirend-beállítást, és az Engedélyezés gombra kattint, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél különböző Windows-környezetben található. A felhasználók nem változtathatják meg ezt a beállítást. Ha engedélyezi ezt a házirend-beállítást, és a Letiltás gombra kattint, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél is különböző Windows-környezetben található. A felhasználók nem változtathatják meg ezt a beállítást. Ha az Internet Explorer 10 böngészőben letiltja ezt a házirend-beállítást, vagy nem konfigurálja, a felhasználók nem húzhatja a tartalmat egy tartományból egy másik tartományba, ha a forrás és a cél különböző Windows-környezetben található. A felhasználók módosíthatják ezt a beállítást az Internetbeállítások párbeszédpanelen. Ha letiltja vagy nem konfigurálja ezt a házirendet az Internet Explorer 9 és a korábbi verzióiban, a felhasználók az egyik tartományból egy másik tartományba húzhatja a tartalmat, ha a forrás és a cél különböző Windows-alapú. A felhasználók nem változtathatják meg ezt a beállítást.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067166)   
 
   **Alapértelmezett**: Letiltva  
   
-- **Webhelyek hozzáadása az Internet Explorer-felhasználók**  
-  Megakadályozza, hogy a felhasználók hozzáadásának vagy eltávolításának a helyek biztonsági zónából. A biztonsági zóna egy azonos biztonsági szintű webhelyek csoportja. Ha engedélyezi ezt a házirendet, a biztonsági zónák a hely felügyeleti beállítások le vannak tiltva. (Megtekintéséhez a hely felügyeleti biztonsági zónák Internetbeállítások párbeszédpanelen beállításait a biztonság lapon, és kattintson a helyek gombra.) Ha letiltja ezt a házirendet, vagy nem konfigurálja, a felhasználók hozzáadhatnak webhelyek vagy távolíthat el azokból a megbízható helyek és a Tiltott helyek zóna, és módosítsa a beállításokat a Helyi Intranet zónához. Ez a szabályzat megakadályozza, hogy a felhasználók megváltoztassák a hely felügyeleti beállításait a rendszergazda által létrehozott biztonsági zónák. Megjegyezés: A "Tiltsa le a Biztonság lap" házirend (\User Configuration\Administrative sablonok\Windows-összetevők\Internet Explorer\Internet Vezérlőpulton található), amely eltávolítja a biztonság lapon a felhasználói felületről, elsőbbséget élvez a szabályzat. Ha engedélyezve van, a rendszer figyelmen kívül hagyja ezt a házirendet. Lásd még a "biztonsági zónák: A szabályzat csak a számítógép beállításainak használata".  
+- **Internet Explorer-felhasználók helyek hozzáadása**  
+  Megakadályozza, hogy a felhasználók a biztonsági zónákból származó helyeket adjanak hozzá vagy távolítanak el. A biztonsági zónák ugyanazon biztonsági szinttel rendelkező webhelyek csoportjai. Ha engedélyezi ezt a házirendet, a biztonsági zónák hely-felügyeleti beállításai le vannak tiltva. (A biztonsági zónák hely-felügyeleti beállításainak megtekintéséhez az Internetbeállítások párbeszédpanelen kattintson a Biztonság fülre, majd kattintson a helyek gombra.) Ha letiltja vagy nem konfigurálja ezt a házirendet, a felhasználók hozzáadhatnak webhelyeket a megbízható helyek és a Tiltott helyek zónából, és módosíthatják a helyi intranet zóna beállításait. Ez a szabályzat megakadályozza, hogy a felhasználók módosítsák a rendszergazda által létesített biztonsági zónák hely-felügyeleti beállításait. Megjegyezés: A "biztonsági oldal letiltása" házirend (a User konfigurációja \ felügyeleti sablonok \ Internet Explorer\Internet vezérlőpultján található), amely eltávolítja a biztonsági lapot a felületről, elsőbbséget élvez a szabályzattal szemben. Ha engedélyezve van, a rendszer figyelmen kívül hagyja ezt a házirendet. Továbbá tekintse meg a "biztonsági zónák: Csak a számítógép-beállítások házirend használata.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067167)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer internetes zóna parancsfájl indított windows**  
-  A házirend-beállítás lehetővé teszi, hogy korlátozásokat előugró ablakok parancsfájl által kezdeményezett, és a title és az állapot sávok tartalmazó windows kezelheti. Ha ez a szabályzatbeállítás engedélyezi, biztonsági Windows korlátozásai nem vonatkoznak a zóna. A biztonsági zónában, ez a szolgáltatás által biztosított biztonsági réteggel nélkül futtatja. Ha letiltja ezt a beállítást, a parancsfájl által kezdeményezett előugró ablakok és a title és az állapot sávok tartalmazó windows lehetséges káros műveleteket nem futtatható. Az Internet Explorer biztonsági szolgáltatása megegyezik az ebben a zónában szolgáltatásvezérlő a Windows biztonsági korlátozások parancsprogrammal létrehozva a folyamat állítja. Ha nem konfigurálja ezt a beállítást, a parancsfájl által kezdeményezett előugró ablakok és a title és az állapot sávok tartalmazó windows lehetséges káros műveleteket nem futtatható. Az Internet Explorer biztonsági szolgáltatása megegyezik az ebben a zónában szolgáltatásvezérlő a Windows biztonsági korlátozások parancsprogrammal létrehozva a folyamat állítja.  
+- **Internet Explorer Internet zóna parancsfájl kezdeményezett Windows**  
+  Ezzel a házirend-beállítással felügyelheti a parancsfájl által kezdeményezett előugró ablakokat és windowsokat, amelyek tartalmazzák a címet és az állapotjelző sávokat. Ha engedélyezi ezt a házirend-beállítást, a Windows-korlátozások biztonsága nem lesz érvényes ebben a zónában. A biztonsági zóna a szolgáltatás által biztosított hozzáadott biztonsági réteg nélkül fut. Ha letiltja ezt a házirend-beállítást, a parancsfájl által kezdeményezett előugró ablakokban és windowsokban lévő lehetséges ártalmas műveletek nem futtathatók. Az Internet Explorer biztonsági funkciója ebben a zónában található, ahogy azt a Windowsos biztonsági korlátozásokkal kapcsolatos, a folyamathoz tartozó parancsfájl-ellenőrzési beállítás diktálja. Ha nem konfigurálja ezt a házirend-beállítást, a parancsfájl által kezdeményezett előugró ablakokban és windowsokban lévő lehetséges ártalmas műveletek nem futtathatók. Az Internet Explorer biztonsági funkciója ebben a zónában található, ahogy azt a Windowsos biztonsági korlátozásokkal kapcsolatos, a folyamathoz tartozó parancsfájl-ellenőrzési beállítás diktálja.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067088)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer biztonsági zónák használata csak a gép beállításait**  
-  Információ a biztonsági zóna, az adott számítógép minden felhasználóra vonatkozik. A biztonsági zóna egy azonos biztonsági szintű webhelyek csoportja. Ha engedélyezi ezt a házirendet, a biztonsági zóna a felhasználó által végrehajtott módosítások az adott számítógép minden felhasználóra vonatkozni fog. Ha letiltja ezt a házirendet, vagy nem konfigurálja, ugyanazon a számítógépen a felhasználók a saját biztonsági zónájának beállításai is létrehozhat. Ez a szabályzat használatával győződjön meg arról, hogy biztonsági zónájának beállításai alkalmazása egységesen ugyanazon a számítógépen, és felhasználónként nem változnak. Lásd még a "biztonsági zónák: nem engedélyezi a felhasználók módosíthatják a szabályzatokat" szabályzat.  
+- **Az Internet Explorer biztonsági zónái csak a gép beállításait használják**  
+  A biztonsági zóna információit alkalmazza ugyanazon számítógép minden felhasználója számára. A biztonsági zónák ugyanazon biztonsági szinttel rendelkező webhelyek csoportjai. Ha engedélyezi ezt a házirendet, a felhasználó által a biztonsági zónában végrehajtott módosítások a számítógép összes felhasználójára érvényesek lesznek. Ha letiltja vagy nem konfigurálja ezt a házirendet, akkor az azonos számítógép felhasználói a saját biztonsági zónákra vonatkozó beállításokat hozhatnak létre. Ezzel a házirenddel biztosíthatja, hogy a biztonsági zónák beállításai egységesen legyenek alkalmazva ugyanarra a számítógépre, és ne változzon a felhasználótól. Továbbá tekintse meg a "biztonsági zónák: ne engedélyezze a felhasználók számára szabályzatok módosítását" házirendet.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067086)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer zárolja a helyi gép zóna java-engedélyek**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, a Java-alkalmazások le vannak tiltva.  
+- **Az Internet Explorer zárolta a helyi számítógép zóna Java-engedélyeit**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, a Java-kisalkalmazások le vannak tiltva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067253) 
   
-  **Alapértelmezett**: Tiltsa le a java 
+  **Alapértelmezett**: A Java letiltása 
   
-- **Az Internet Explorer korlátozott zóna nem futtatásához kártevőirtó ActiveX-vezérlők**   
-  A házirend-beállítás meghatározza, hogy az Internet Explorer fut-e kártevőirtó-programok ellen ActiveX-vezérlők annak ellenőrzéséhez, hogy azok biztonságos voltát oldalain betölteni. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha letiltja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha nem konfigurálja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Bármikor ezt a viselkedést be- vagy kikapcsolása az Internet Explorer biztonsági beállításokkal.  
+- **Az Internet Explorer korlátozott zónája nem futtat antimalware-t az aktív X vezérlőkön**   
+  Ezzel a házirend-beállítással megállapítható, hogy az Internet Explorer antimalware-programokat futtat-e az ActiveX-vezérlőkön, hogy ellenőrizze, biztonságos-e a lapok betöltése. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha letiltja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi a kártevő szoftverét, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi, hogy van-e biztonságos megoldás az ActiveX-vezérlő példányának létrehozására. A felhasználók az Internet Explorer biztonsági beállításainak használatával be-vagy kikapcsolhatják ezt a viselkedést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067089)
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna futtatása a .NET-keretrendszer authenticode aláírással rendelkező tartománybeli összetevők**  
-  Ez a házirend-beállítással kezelheti, hogy a .NET-keretrendszer összetevők, az Authenticode aláírással rendelkező hajthat végre az Internet Explorer. Ezen összetevők közé tartozik egy objektum címke és a egy hivatkozást a hivatkozott felügyelt végrehajtható fájlok a hivatkozott felügyelt szabályozza. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer végrehajtja a aláírt felügyelt összetevőket. Kérdés a legördülő mezőben válassza ki, ha az Internet Explorer kéri a felhasználó határozza meg, hogy aláírt felügyelt összetevőket végrehajtásához. Ha letiltja ezt a beállítást, az Internet Explorer aláírt felügyelt összetevőket nem hajtható végre. Ha nem konfigurálja ezt a beállítást, az Internet Explorer aláírt felügyelt összetevőket nem hajtható végre.  
+- **Az Internet Explorer korlátozott zónájának futtatása a .NET-keretrendszerre vonatkozó, Authenticode-val aláírt összetevőkkel**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Authenticode-val aláírt .NET-keretrendszer-összetevők az Internet Explorerben futtathatók-e. Ezen összetevők közé tartoznak az Object tag által hivatkozott felügyelt vezérlők, valamint a hivatkozásokból hivatkozott felügyelt végrehajtható fájlok. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer aláírt felügyelt összetevőket fog végrehajtani. Ha a legördülő listában a kérdés gombra kattint, az Internet Explorer megkéri a felhasználót, hogy döntse el, hogy végrehajtja-e az aláírt felügyelt összetevőket. Ha letiltja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláírt felügyelt összetevőket. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer nem hajtja végre az aláírt felügyelt összetevőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067169)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer korlátozott zóna hozzáférés adatforrásokhoz**  
-  Ez a házirend-beállítással kezelheti, hogy az Internet Explorer érhessék el az adatokat a Microsoft XML Parser (MSXML) vagy ActiveX Data Objects (ADO) használatával egy másik biztonsági zónából. Ha ez a szabályzatbeállítás engedélyezi, a felhasználók betölthetnek egy oldal, amely az MSXML vagy ADO használ a zóna egy másik helyről származó adatok eléréséhez a zónában. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, döntse el, hogy engedélyezi, hogy a lap betöltése a zónában, amelyek az MSXML vagy ADO segítségével érheti el adatait a zónában egy másik helyről. Ha letiltja ezt a beállítást, a felhasználók nem tudják betölteni egy oldal, amely az MSXML vagy ADO használ a zóna egy másik helyről származó adatok eléréséhez a zónában. Ha nem konfigurálja ezt a beállítást, a felhasználók nem tudják betölteni egy oldal, amely az MSXML vagy ADO használ a zóna egy másik helyről származó adatok eléréséhez a zónában.  
+- **Az Internet Explorer korlátozott zónáinak hozzáférése az adatforrásokhoz**  
+  Ezzel a házirend-beállítással felügyelheti, hogy az Internet Explorer hozzáférhet-e egy másik biztonsági zónából származó adatokhoz a Microsoft XML Parser (MSXML) vagy a ActiveX Data Objects (ADO) használatával. Ha engedélyezi ezt a házirend-beállítást, a felhasználók betölthetnek egy olyan lapot a zónába, amely az MSXML vagy az ADO használatával fér hozzá a zónában lévő másik helyről származó adatokhoz. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a lap betöltését az MSXML vagy az ADO protokollt használó zónában a zóna egy másik helyéről származó adatok eléréséhez. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tölthetnek be olyan lapot a zónában, amely az MSXML vagy az ADO használatával fér hozzá a zónában lévő másik helyről származó adatokhoz. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók nem tölthetnek be olyan lapot a zónában, amely az MSXML vagy az ADO használatával fér hozzá a zónában lévő másik helyről származó adatokhoz.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067161)  
   
   **Alapértelmezett**: Letiltás 
   
-- **Az Internet Explorer az internet zóna nem kártevőirtó futtatásához ActiveX-vezérlők**  
-  A házirend-beállítás meghatározza, hogy az Internet Explorer fut-e kártevőirtó-programok ellen ActiveX-vezérlők annak ellenőrzéséhez, hogy azok biztonságos voltát oldalain betölteni. Ha ez a szabályzatbeállítás engedélyezi, az Internet Explorer nem egyeztessen a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha letiltja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Ha nem konfigurálja ezt a beállítást, az Internet Explorer mindig ellenőrzi a kártevőirtó programot, hogy hozzon létre egy példányt az ActiveX-vezérlő való biztonságos megtekintéséhez. Bármikor ezt a viselkedést be- vagy kikapcsolása az Internet Explorer biztonsági beállításokkal.  
+- **Az Internet Explorer internetes zónája nem futtat antimalware-t az ActiveX-vezérlőkön**  
+  Ezzel a házirend-beállítással megállapítható, hogy az Internet Explorer antimalware-programokat futtat-e az ActiveX-vezérlőkön, hogy ellenőrizze, biztonságos-e a lapok betöltése. Ha engedélyezi ezt a házirend-beállítást, az Internet Explorer nem ellenőrzi, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha letiltja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi a kártevő szoftverét, hogy biztonságos-e az ActiveX-vezérlő példányának létrehozása. Ha nem konfigurálja ezt a házirend-beállítást, az Internet Explorer mindig ellenőrzi, hogy van-e biztonságos megoldás az ActiveX-vezérlő példányának létrehozására. A felhasználók az Internet Explorer biztonsági beállításainak használatával be-vagy kikapcsolhatják ezt a viselkedést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067162)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer internetes zóna másolja be a parancsfájl-n keresztül**  
-  Ez a házirend-beállítással kezelheti-e parancsfájlokat egy vágólapi műveletet (például a kivágási, másolási és beillesztési) hajthat végre egy meghatározott régióban. Ha ez a szabályzatbeállítás engedélyezi, akkor a parancsfájl egy vágólapra művelet hajtható végre. Ha a parancssorban a legördülő mezőben válassza ki, a rendszer megkérdezi a felhasználókat, hogy a vágólap műveletek végrehajtásához. Ha letiltja ezt a beállítást, akkor a parancsfájl egy vágólapra operaci nelze provést. Ha nem konfigurálja ezt a beállítást, akkor a parancsfájl egy vágólapra művelet hajtható végre.  
+- **Internet Explorer Internet zóna másolás és beillesztés parancsfájl használatával**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a parancsfájlok végezhetnek-e vágólap-műveletet (például Kivágás, másolás és beillesztés) egy adott régióban. Ha engedélyezi ezt a házirend-beállítást, a parancsfájlok elvégezhetik a vágólap műveletet. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy a vágólapon végez-e műveleteket. Ha letiltja ezt a házirend-beállítást, a parancsfájlok nem hajthatnak végre vágólap-műveletet. Ha nem konfigurálja ezt a házirend-beállítást, a parancsfájlok elvégezhetik a vágólap műveletet.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067084)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer Active X-telepítő szolgáltatás használata**  
-  A házirend-beállítás lehetővé teszi, hogy adja meg, hogyan legyenek telepítve a ActiveX-vezérlőket. Ha ez a szabályzatbeállítás engedélyezi, az ActiveX-vezérlők települnek, csak akkor, ha az ActiveX Telepítőszolgáltatás jelen, és az ActiveX-vezérlők telepítésének engedélyezésére van konfigurálva. Ha letiltja vagy nem konfigurálja ezt a beállítást, a ActiveX-vezérlők, felhasználónkénti vezérlőiket, beleértve a szabványos telepítési folyamat során lesz telepítve.  
+- **Az Internet Explorer az aktív X telepítő szolgáltatást használja**  
+  Ezzel a házirend-beállítással megadhatja, hogy az ActiveX-vezérlők hogyan legyenek telepítve. Ha engedélyezi ezt a házirend-beállítást, a rendszer csak akkor telepíti az ActiveX-vezérlőket, ha az ActiveX-telepítő szolgáltatás megtalálható, és úgy van konfigurálva, hogy engedélyezze az ActiveX-vezérlők telepítését. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszer a normál telepítési folyamaton keresztül telepíti az ActiveX-vezérlőket, beleértve a felhasználónkénti vezérlőket is.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067163)
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer dolgozza fel a zóna jogok kiterjesztése elleni védelem**  
-  Az Internet Explorer korlátozásokat minden lap nyílik meg. A korlátozások vonatkoznak (az Internet, intranetes, helyi zónán és így tovább) weblap helyétől. Például a helyi számítógépen weblapok rendelkezik korlátozásokat és a helyi számítógép zónában, ezek a helyi gép zónában egy rosszindulatú felhasználók a legkevesebb. Ha ez a szabályzatbeállítás engedélyezi, minden zónában is védeni kell az összes folyamat zóna jogosultságszint-emelési. Ha letiltja vagy nem konfigurálja ezt a beállítást, az Internet Explorer és a folyamat listán lévő folyamatok nincs ilyen védelem jelenik meg.  
+- **Az Internet Explorer feldolgozza a védelmet a zónák megemelésével**  
+  Az Internet Explorer a megnyíló weblapokon korlátozásokat helyez el. A korlátozások a weblap (Internet, intranet, helyi számítógép zóna stb.) helyétől függenek. Például a helyi számítógépen lévő weblapok a legkevesebb biztonsági korlátozással rendelkeznek, és a helyi számítógép zónában találhatók, így a helyi számítógép biztonsági zónája elsődleges cél a rosszindulatú felhasználók számára. Ha engedélyezi ezt a házirend-beállítást, az összes zóna megemelhető minden folyamat esetében. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, az Internet Explorer vagy a folyamat listában felsorolt folyamatok nem kapnak ilyen védelmet.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067160)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer az internet zóna előjel nélküli ActiveX-vezérlők letöltése**   
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók letölthetnek aláíratlan ActiveX-vezérlők a zónából. Az ilyen kódja potenciálisan káros, különösen akkor, ha egy nem megbízható zóna származik. Ha ez a szabályzatbeállítás engedélyezi, az aláírás nélküli vezérlők felhasználói beavatkozás nélkül futtathatók. Kérdés a legördülő mezőben válassza ki, ha a rendszer megkérdezi a felhasználókat, döntse el, hogy az adott vezérlőt futtatásához. Ha letiltja ezt a beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket. Ha nem konfigurálja ezt a beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket.  
+- **Internet Explorer Internet zóna aláíratlan ActiveX-vezérlők letöltése**   
+  Ezzel a házirend-beállítással felügyelheti, hogy a felhasználók le tudják-e tölteni az aláíratlan ActiveX-vezérlőket a zónából. Ez a kód potenciálisan ártalmas, különösen akkor, ha nem megbízható zónából érkeznek. Ha engedélyezi ezt a házirend-beállítást, a felhasználók felhasználói beavatkozás nélkül futtathatnak aláíratlan vezérlőket. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e az aláíratlan vezérlő futtatását. Ha letiltja ezt a házirend-beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók nem futtathatnak aláíratlan vezérlőket.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067325)
   
   **Alapértelmezett**: Letiltás  
   
-- **Keresse meg a windows és a keretek az Internet Explorer az internet zóna különböző tartományokban**   
-  A házirend-beállítás lehetővé teszi a különböző tartományokban nyithatja meg a windows és a keretek és alkalmazások kezelését. Ha ez a szabályzatbeállítás engedélyezi, felhasználó meg tudja nyitni a windows és a keretek más tartományok és más tartományokból alkalmazásokat. Ha kérdés választja a legördülő mezőben, megkérdezi a felhasználót, hogy a windows és más tartományokból alkalmazások eléréséhez keretek-e. Ha letiltja ezt a beállítást, a felhasználók nem tudják megnyitni, windows és bármely más tartományokból alkalmazások eléréséhez. Ha nem konfigurálja ezt a beállítást, felhasználó meg tudja nyitni a windows és a keretek más tartományok és más tartományokból alkalmazásokat.  
+- **Internet Explorer Internet Zone – különböző tartományokban navigáljon a Windows és a keretek között**   
+  Ezzel a házirend-beállítással kezelheti a Windows és a keretek megnyitását, valamint az alkalmazások különböző tartományokon belüli elérését. Ha engedélyezi ezt a házirend-beállítást, a felhasználók megnyithatják a Windowst és a képkockákat más tartományokból, és más tartományokból származó alkalmazásokat is elérhet. Ha a legördülő listában a kérdés lehetőséget választja, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a Windows és a keretek számára más tartományokból származó alkalmazások elérését. Ha letiltja ezt a házirend-beállítást, a felhasználók nem megnyithatják a Windowst és a képkockákat a különböző tartományokból származó alkalmazások eléréséhez. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók megnyithatja a Windowst és a képkockákat más tartományokból, és más tartományokból is elérheti az alkalmazásokat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067083)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Az Internet Explorer internetes zóna frissítések állapotsor parancsfájl használatával**  
-  Ezzel a szabályzatbeállítással kezelheti, hogy egy parancsfájl frissítheti a zónához állapotsorának teszi lehetővé. Ha ez a szabályzatbeállítás engedélyezi, a parancsfájlok frissítheti az állapotsorban. Ha letiltja vagy nem konfigurálja ezt a beállítást, parancsfájl az állapotsor frissítése nem engedélyezett.  
+- **Internet Explorer Internet zóna frissítései az állapotsoron parancsfájl használatával**  
+  Ezzel a házirend-beállítással felügyelheti, hogy egy parancsfájl frissítheti-e a zónán belüli állapotjelző sávot. Ha engedélyezi ezt a házirend-beállítást, a parancsfájlok frissíthetik az állapotjelző sávot. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a parancsfájl nem jogosult az állapotsor frissítésére.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067087)  
   
   **Alapértelmezett**: Letiltva  
   
-- **A fájlok feltöltése a kiszolgáló szerepeljen az Internet Explorer korlátozott zóna helyi elérési útja**  
-  Ez a házirend-beállítást vezérli, hogy a helyi elérési úttal kapcsolatos információkat akkor küldi a rendszer, amikor a felhasználó tölti fel egy fájlt egy HTML-űrlapot. A helyi elérési út adatokat küld, ha néhány információt előfordulhat, hogy véletlenül is megjeleníthetők a kiszolgálóhoz. Például a felhasználó asztali küldött fájlokat tartalmazhat az elérési út részeként a felhasználó nevét. Amikor a felhasználó tölti fel egy fájlt egy HTML-űrlapot, ha ez a szabályzatbeállítás engedélyezi, a rendszer elküldi az elérési út adatokat. Amikor a felhasználó egy HTML-űrlapot egy fájlt tölt, ha letiltja ezt a beállítást, a rendszer eltávolítja az elérési úttal kapcsolatos információkat. Ha nem konfigurálja ezt a beállítást, a felhasználó dönthet úgy, hogy küld-e elérési úttal kapcsolatos információkat, amikor egy fájl egy HTML-űrlaphoz keresztül töltenek. Alapértelmezés szerint az útvonal-információinak zajlik.  
+- **Az Internet Explorer korlátozott zónája helyi elérési utat tartalmaz a fájlok kiszolgálóra való feltöltésekor**  
+  Ezzel a házirend-beállítással szabályozható, hogy a rendszer mikor küldje el a helyi elérési utat, amikor a felhasználó HTML-űrlapon keresztül tölt fel fájlokat. Ha a rendszer elküldje a helyi elérési utat, előfordulhat, hogy a kiszolgáló véletlenül nem tárt fel adatokat. Előfordulhat például, hogy a felhasználó asztaláról eljuttatott fájlok tartalmazzák a felhasználónevet az elérési út részeként. Ha engedélyezi ezt a házirend-beállítást, a rendszer az elérési út adatait akkor továbbítja, amikor a felhasználó HTML-űrlapon keresztül tölt fel egy fájlt. Ha letiltja ezt a házirend-beállítást, a rendszer eltávolítja az elérésiút-információkat, amikor a felhasználó HTML-űrlapon keresztül tölt fel egy fájlt. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó kiválaszthatja, hogy a rendszer elküldje-e az elérési utat, amikor HTML-űrlapon keresztül tölt fel fájlokat. Alapértelmezés szerint a rendszer az elérésiút-információkat elküldi.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067085)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer folyamatok korlátozása fájl letöltése**   
-  A házirend-beállítás lehetővé teszi, hogy a webböngésző vezérlőt tartalmazó alkalmazás blokkolja a fájlok letöltése, amely nem a felhasználó által kezdeményezett automatikus kérő üzenet. Ha ez a szabályzatbeállítás engedélyezi, a webböngésző vezérlő blokkolja a fájlok letöltése, amely nem a felhasználó által kezdeményezett összes folyamat automatikus kérő üzenet. Ha letiltja ezt a beállítást, a webböngésző vezérlő letiltása nem letöltéseket, amelyek nem a felhasználó által kezdeményezett összes folyamat automatikus kérő üzenet.  
+- **Az Internet Explorer folyamatai korlátozzák a fájlok letöltését**   
+  Ezzel a házirend-beállítással a webböngésző vezérlőt futtató alkalmazások letilthatják a felhasználók által kezdeményezett fájlok letöltésének automatikus megadását. Ha engedélyezi ezt a házirend-beállítást, a webböngésző vezérlő letiltja azon fájlok letöltésének automatikus megadását, amelyek nem minden folyamat esetében kezdeményezték a felhasználót. Ha letiltja ezt a házirend-beállítást, a webböngésző vezérlő nem fogja blokkolni az olyan fájlok letöltésének automatikus megadását, amelyek nem minden folyamat esetében kezdeményezték a felhasználót.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067164)  
   
   **Alapértelmezett**: Enabled  
   
-- **Tiltott helyek zónához engedélyezése az Internet Explorer csak a jóváhagyott tartományok ActiveX-vezérlők használata**   
-  A házirend-beállítás szabályozza, ha kéri a felhasználót, hogy engedélyezze az ActiveX-vezérlők futtathatók a webhelyeken a webhely, amelyen telepítve van az ActiveX-vezérlő nem. Ha ez a szabályzatbeállítás engedélyezi, kéri a felhasználót, az ActiveX-vezérlők a zóna webhelyekről futtatása előtt. A felhasználó választhat, hogy a vezérlő az aktuális helyről, vagy az összes helyről. Ha letiltja ezt a beállítást, a felhasználó nem látja a webhely szerinti ActiveX használatával, és a zónában lévő összes webhely ActiveX-vezérlők futtatható.  
+- **Az Internet Explorer korlátozott zónája csak jóváhagyott tartományokat engedélyez az aktív X vezérlők használatához**   
+  Ezzel a házirend-beállítással szabályozható, hogy a rendszer a felhasználótól az ActiveX-vezérlőt telepítő webhelytől eltérő webhelyeken is fusson. Ha engedélyezi ezt a házirend-beállítást, a rendszer arra kéri a felhasználót, hogy az ActiveX-vezérlők futtathatók legyenek a zónában található webhelyekről. A felhasználó dönthet úgy, hogy engedélyezi, hogy a vezérlő az aktuális helyről vagy az összes helyről fusson. Ha letiltja ezt a házirend-beállítást, a felhasználó nem látja a helyhez tartozó ActiveX-parancssort, és az ActiveX-vezérlők a zóna összes webhelyéről futtathatók.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067233)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer korlátozott zóna inicializálása és parancsfájl Active X-vezérlők nem biztonságosként megjelölt**  
-  Ez a szabályzatbeállítás nem biztonságosként megjelölt ActiveX-vezérlők kezelését teszi lehetővé. Ha ez a szabályzatbeállítás engedélyezi, az ActiveX-vezérlők, betöltött paraméterekkel és futtatása parancsfájlalapú objektum nem megbízható adatok vagy parancsfájlok biztonságának beállítása nélkül. Ezt a beállítást nem ajánlott, kivéve a biztonságos és felügyelt zónák. A beállítás hatására nem biztonságos, és a biztonságos vezérlők inicializálása és parancsprogrammal létrehozva, a rendszer figyelmen kívül hagyja az ActiveX-vezérlők biztonságosnak lehetőséget. Ha engedélyezi ezt a házirend-beállítást, és a legördülő mezőben válassza ki a kérdés, felhasználók kérdezhető le, hogy a vezérlő betöltés paramétereket az engedélyezi-e, vagy parancsprogram. Ha letiltja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva. Ha nem konfigurálja ezt a beállítást, a ActiveX-vezérlők nem tehető nem paraméterekkel betöltése vagy parancsprogrammal létrehozva.  
+- **Az Internet Explorer korlátozott zónájának inicializálása és a parancsfájlok nem biztonságosként megjelölt aktív X-vezérlők**  
+  Ezzel a házirend-beállítással kezelheti a nem biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, a rendszer futtatja az ActiveX-vezérlőket, betölti azokat paraméterekkel, és parancsfájlt helyez el anélkül, hogy a nem megbízható adatokra vagy parancsfájlokra vonatkozó biztonsági beállításokat Ez a beállítás nem ajánlott, a biztonságos és felügyelt zónák kivételével. Ez a beállítás azt eredményezi, hogy a nem biztonságos és a biztonságos vezérlők inicializálása és parancsfájlba való helyezése megtörtént, figyelmen kívül hagyva a parancsfájlok számára biztonságosként megjelölt ActiveX-vezérlőket. Ha engedélyezi ezt a házirend-beállítást, és a legördülő listában a kérdés elemre kattint, a rendszer lekérdezi a felhasználókat, hogy engedélyezi-e a vezérlőnek a paramétereket vagy parancsfájlokkal való betöltését. Ha letiltja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal. Ha nem konfigurálja ezt a házirend-beállítást, a nem biztonságos ActiveX-vezérlők nem tölthetők be paraméterekkel vagy parancsfájlokkal.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067097)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Internet Explorer felhasználói házirendek módosítása**  
-  A felhasználók nem módosíthatják a biztonsági zóna beállításait. A biztonsági zóna egy azonos biztonsági szintű webhelyek csoportja. Ha engedélyezi ezt a házirendet, az Egyéni szint gombra, és a biztonság lapon az Internetbeállítások párbeszédpanelen biztonsági szintű csúszka le vannak tiltva. Ha letiltja ezt a házirendet, vagy nem konfigurálja, a felhasználók megváltoztathatják a beállításokat a biztonsági zónák. Ez a szabályzat megakadályozza, hogy a felhasználók a rendszergazda által létrehozott biztonsági zónájának beállításai megváltoztassa. Megjegyezés: A "Letiltás a Biztonság lap" házirend (\User Configuration\Administrative sablonok\Windows-összetevők\Internet Explorer\Internet Vezérlőpult), amely eltávolítja a biztonság lapon a Vezérlőpult Internet Explorer, elsőbbséget élvez Ez a házirend. Ha engedélyezve van, a rendszer figyelmen kívül hagyja ezt a házirendet. Lásd még a "biztonsági zónák: A szabályzat csak a számítógép beállításainak használata".  
+- **Az Internet Explorer felhasználói házirendeket módosítanak**  
+  Megakadályozza, hogy a felhasználók módosíthassák a biztonsági zónák beállításait. A biztonsági zónák ugyanazon biztonsági szinttel rendelkező webhelyek csoportjai. Ha engedélyezi ezt a házirendet, az Internetbeállítások párbeszédpanel Biztonság lapján az egyéni szint gomb és a biztonsági szint csúszkája le van tiltva. Ha letiltja vagy nem konfigurálja ezt a házirendet, a felhasználók módosíthatják a biztonsági zónák beállításait. Ez a szabályzat megakadályozza, hogy a felhasználók módosítsák a rendszergazda által létesített biztonsági zónák beállításait. Megjegyezés: A "biztonsági oldal letiltása" házirend (a User konfigurációja \ felügyeleti sablonok \ Internet Explorer\Internet vezérlőpultján található), amely eltávolítja az Internet Explorer biztonság lapját a Vezérlőpulton, elsőbbséget élvez Ez a szabályzat. Ha engedélyezve van, a rendszer figyelmen kívül hagyja ezt a házirendet. Továbbá tekintse meg a "biztonsági zónák: Csak a számítógép-beállítások házirend használata.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067155)  
     
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna a védett mód**  
-  A házirend-beállítás lehetővé teszi, hogy a védett mód bekapcsolása. A védett mód megvédi az Internet Explorer a kihasznált biztonsági réseket a helyeken, amelyek az Internet Explorer a beállításjegyzék és a fájlrendszerhez írhat csökkentésével. Ha ez a szabályzatbeállítás engedélyezi, védett üzemmód be van kapcsolva. A felhasználó nem a védett mód kikapcsolása. Ha letiltja ezt a beállítást, a védett mód ki van kapcsolva. A felhasználó nem a védett mód bekapcsolása. Ha nem konfigurálja ezt a beállítást, a felhasználó kapcsolja be, vagy kapcsolja ki a védett mód.  
+- **Internet Explorer korlátozott zóna által védett üzemmód**  
+  Ezzel a házirend-beállítással engedélyezheti a védett üzemmódot. A védett mód segít megvédeni az Internet Explorert a kihasznált biztonsági rések révén, ha csökkenti az Internet Explorer által a beállításjegyzékben és a fájlrendszerben írni kívánt helyeket. Ha engedélyezi ezt a házirend-beállítást, a védett mód be van kapcsolva. A felhasználó nem kapcsolhatja ki a védett üzemmódot. Ha letiltja ezt a házirend-beállítást, a védett mód ki van kapcsolva. A felhasználó nem kapcsolhatja be a védett üzemmódot. Ha nem konfigurálja ezt a házirend-beállítást, akkor a felhasználó be-vagy kikapcsolhatja a védett módot.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067080)  
   
   **Alapértelmezett**: Engedélyezés  
   
-- **Az Internet Explorer internetes zóna felhasználói adatmegőrzés**  
-  Ez a házirend-beállítással kezelheti az a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatok megőrzését. Amikor egy felhasználó egy megőrzött oldalhoz adja vissza, az oldal állapotát visszaállíthatók, ha megfelelően van-e konfigurálva a házirend-beállítás. Ha ez a szabályzatbeállítás engedélyezi, a felhasználó a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatokat megőrizheti. Ha letiltja ezt a beállítást, a felhasználók nem megőrzése a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatokat. Ha nem konfigurálja ezt a beállítást, a felhasználó a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatokat megőrizheti.  
+- **Az Internet Explorer Internet Zone felhasználói adatmegőrzés**  
+  Ezzel a házirend-beállítással kezelheti az információk megőrzését a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül a lemezre mentett weblapon belül. Ha a felhasználó egy megőrzött lapra tér vissza, akkor a lap állapota visszaállítható, ha a házirend-beállítás megfelelően van konfigurálva. Ha engedélyezi ezt a házirend-beállítást, a felhasználók megőrzik az információkat a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül a lemezre mentett weblapon belül. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tudják megőrizni az információkat a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül a lemezre mentett weblapon belül. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók megőrizheti az információkat a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban vagy közvetlenül a lemezre mentett weblapon belül.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067156)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer internetes zóna parancsprogramok webes böngészővezérlők**  
+- **Az Internet Explorer internetes zónájának parancsfájlkezelése a webböngésző vezérlőinek használatával**  
  
-  A házirend-beállítás meghatározza, hogy e lap szabályozhatja a beágyazott WebBrowser vezérlők parancsfájl használatával. Ha ez a szabályzatbeállítás engedélyezi, a parancsfájl hozzáférést ovládací prvek WebBrowser engedélyezett. Ha letiltja ezt a beállítást, ovládací prvek WebBrowser parancsfájlok hozzáférése nem engedélyezett. Ha nem konfigurálja ezt a beállítást, a felhasználó engedélyezheti vagy letilthatja ovládací prvek WebBrowser parancsfájl-hozzáférését. Alapértelmezés szerint csak az intranetes zónák és helyi számítógép ovládací prvek WebBrowser parancsfájl hozzáférést engedélyezett.  
+  Ezzel a házirend-beállítással megadható, hogy egy oldal képes-e a beágyazott WebBrowser vezérlők futtatására parancsfájl használatával. Ha engedélyezi ezt a házirend-beállítást, a WebBrowser vezérlőhöz való parancsfájl-hozzáférés engedélyezett. Ha letiltja ezt a házirend-beállítást, a WebBrowser vezérlőhöz való parancsfájl-hozzáférés nem engedélyezett. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználó engedélyezheti vagy letilthatja a WebBrowser vezérlőhöz tartozó parancsfájlok elérését. Alapértelmezés szerint a WebBrowser vezérlőhöz való parancsfájl-hozzáférés csak a helyi gépen és az intranet zónában engedélyezett.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067157)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna felhasználói adatok megőrzése**  
-  Ez a házirend-beállítással kezelheti az a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatok megőrzését. Amikor egy felhasználó egy megőrzött oldalhoz adja vissza, az oldal állapotát visszaállíthatók, ha megfelelően van-e konfigurálva a házirend-beállítás. Ha ez a szabályzatbeállítás engedélyezi, a felhasználó a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatokat megőrizheti. Ha letiltja ezt a beállítást, a felhasználók nem megőrzése a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatokat. Ha nem konfigurálja ezt a beállítást, a felhasználók nem megőrzése a böngészési előzményeket, a Kedvencek, XML-tárolóban, vagy közvetlenül egy weblap, lemezre menti az adatokat.  
+- **Az Internet Explorer korlátozott zónájának felhasználói adatmegőrzése**  
+  Ezzel a házirend-beállítással kezelheti az információk megőrzését a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül a lemezre mentett weblapon belül. Ha a felhasználó egy megőrzött lapra tér vissza, akkor a lap állapota visszaállítható, ha a házirend-beállítás megfelelően van konfigurálva. Ha engedélyezi ezt a házirend-beállítást, a felhasználók megőrzik az információkat a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül a lemezre mentett weblapon belül. Ha letiltja ezt a házirend-beállítást, a felhasználók nem tudják megőrizni az információkat a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül a lemezre mentett weblapon belül. Ha nem konfigurálja ezt a házirend-beállítást, a felhasználók nem tudják megőrizni az információkat a böngésző előzményeiben, a Kedvencek között, egy XML-tárolóban, vagy közvetlenül egy, a lemezre mentett weblapon belül.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067081)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer intranetes zóna java engedélyek zárolva**  
-  A házirend-beállítás lehetővé teszi a Java-alkalmazások engedélyeinek kezelése. Ha ez a szabályzatbeállítás engedélyezi, beállítások választhat a legördülő listából. Egyéni engedélyek beállításait szabályozhatja a külön-külön. Alacsony biztonsági lehetővé teszi, hogy az alkalmazások összes műveletek végrehajtásához. Közepes biztonsági plusz szolgáltatásokat, például az ideiglenes terület (egy megbízható és biztonságos tároló terület az ügyfélszámítógépen) és a felhasználó általi fájl i/o lehetővé teszi alkalmazások futtatását a védőfal (egy területen kívül, ami a program nem hívásokat a memóriában). Magas biztonsági lehetővé teszi, hogy az alkalmazások futtatását a tesztkörnyezetben. Tiltsa le a Java használatával bármilyen kisalkalmazások tiltsa le a futását. Ha letiltja ezt a beállítást, a Java-alkalmazások nem futtatható. Ha nem konfigurálja ezt a beállítást, a Java-alkalmazások le vannak tiltva.  
+- **Az Internet Explorer lezárta az intranet zóna Java-engedélyeit**  
+  Ezzel a házirend-beállítással kezelheti a Java-kisalkalmazások engedélyeit. Ha engedélyezi ezt a házirend-beállítást, a legördülő listából választhatja ki a kívánt beállításokat. Egyéni, az engedélyek beállításainak külön történő vezérléséhez. Az alacsony biztonság lehetővé teszi a kisalkalmazások számára az összes művelet elvégzését. A közepes biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak (egy olyan terület a memóriában, amelyen kívül a program nem tud hívásokat kezdeményezni), valamint olyan funkciókkal, mint például a kaparós terület (biztonságos és biztonságos tárterület az ügyfélszámítógépen) és a felhasználó által vezérelt fájl I/O. A magas biztonság lehetővé teszi, hogy a kisalkalmazások a homokozóban fussanak. A Java letiltásával megakadályozhatja, hogy bármely kisalkalmazás fusson. Ha letiltja ezt a házirend-beállítást, a Java-kisalkalmazások nem futtathatók. Ha nem konfigurálja ezt a házirend-beállítást, a Java-kisalkalmazások le vannak tiltva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067082)  
   
-  **Alapértelmezett**: Tiltsa le a java  
+  **Alapértelmezett**: A Java letiltása  
   
-- **Az Internet Explorer fokozott védett mód**  
-  Fokozottan védett üzemmód rosszindulatú webhelyekre elleni további védelmet biztosít a 64 bites Windows 64 bites folyamatokat használatával. Vagy újabb rendszert futtató számítógépek Windows 8, a fokozottan védett üzemmóddal is korlátozza a helyeken, az Internet Explorer is olvasható, és a beállításjegyzék és a fájlrendszerhez. Ha ez a szabályzatbeállítás engedélyezi, fokozottan védett üzemmód be van kapcsolva. Minden zóna, amely a védett mód engedélyezve van a fokozottan védett üzemmód fogja használni. Felhasználók nem tudják fokozottan védett üzemmód letiltása. Ha letiltja ezt a beállítást, a fokozottan védett üzemmód ki van kapcsolva. Minden zóna, amely a védett mód engedélyezve van a védett mód a Windows Vista Internet Explorer 7-ben bevezetett verzióját fogja használni. Ha nem konfigurálja a házirendet, a felhasználók kapcsolja be vagy fokozottan védett üzemmód kikapcsolása az Internetbeállítások párbeszédpanel Speciális lapján.  
+- **Internet Explorer fokozottan védett üzemmód**  
+  A továbbfejlesztett védett mód további védelmet biztosít a rosszindulatú webhelyekkel szemben, ha 64 bites folyamatokat használ a Windows 64-bites verzióiban. A Windows 8 rendszerű számítógépek esetében a fokozottan védett mód is korlátozza az Internet Explorer által a beállításjegyzékből és a fájlrendszerből beolvasott helyeket. Ha engedélyezi ezt a házirend-beállítást, a fokozottan védett mód be van kapcsolva. Minden olyan zóna, amelynél engedélyezve van a védett üzemmód, fokozottan védett módot fog használni. A felhasználók nem tudják letiltani a fokozottan védett üzemmódot. Ha letiltja ezt a házirend-beállítást, a fokozottan védett üzemmód ki van kapcsolva. Minden olyan zóna, amelynél engedélyezve van a védett üzemmód, a Windows Vista Internet Explorer 7-es verziójában bemutatott védett mód verzióját fogja használni. Ha nem konfigurálja ezt a házirendet, a felhasználók az Internetbeállítások párbeszédpanel Speciális lapján bekapcsolhatják vagy kikapcsolhatják a fokozottan védett üzemmódot.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067158)  
   
   **Alapértelmezett**: Enabled  
   
-- **Az Internet Explorer SmartScreen-figyelmeztetések mellőzése**  
-  Ez a szabályzatbeállítás határozza meg, hogy a felhasználó elkerülheti a SmartScreen szűrő figyelmeztetéseit. A SmartScreen szűrő figyelmezteti a felhasználót a végrehajtható fájlokat, az Internet Explorer-felhasználók gyakran nem letöltése az internetről. Ha ez a szabályzatbeállítás engedélyezi, a SmartScreen szűrő figyelmeztetéseit letiltása a felhasználó. Ha letiltja vagy nem konfigurálja ezt a beállítást, a felhasználó elkerülheti a SmartScreen szűrő figyelmeztetéseit.  
+- **Az Internet Explorer megkerülésének intelligens képernyő figyelmeztetései**  
+  Ezzel a házirend-beállítással adható meg, hogy a felhasználó megkerülhet-e a SmartScreen szűrőből származó figyelmeztetéseket. A SmartScreen szűrő figyelmezteti a felhasználót olyan végrehajtható fájlokra, amelyeket az Internet Explorer felhasználói általában nem töltenek le az internetről. Ha engedélyezi ezt a házirend-beállítást, a SmartScreen szűrő figyelmeztetései letiltják a felhasználót. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, akkor a felhasználó megkerülheti a SmartScreen szűrő figyelmeztetéseit.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067159)  
   
   **Alapértelmezett**: Letiltva  
   
-- **Az Internet Explorer korlátozott zóna metaadat-frissítés**  
-  Ez a házirend-beállítással kezelheti, hogy a felhasználók egy másik weblapon átirányíthatóak, ha a szerző, a weblap a metaadat-frissítési beállítást (címke) használ a böngésző átirányítja egy másik weblapon. Ha ez a szabályzatbeállítás engedélyezi, a felhasználó böngészője aktív metaadat-frissítési beállítást tartalmazó oldal betöltésekor átirányíthatóak egy másik weboldalra. Ha letiltja ezt a beállítást, a felhasználó böngészője aktív metaadat-frissítési beállítást tartalmazó oldal betöltésekor nem irányítható át egy másik weblapon. Ha nem konfigurálja ezt a beállítást, a felhasználó böngészője aktív metaadat-frissítési beállítást tartalmazó oldal betöltésekor nem irányítható át egy másik weblapon.  
+- **Internet Explorer – korlátozott zóna – metaadatok frissítése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy egy felhasználó böngészője átirányítható-e egy másik weblapra, ha a weblap szerzője a meta refresh (címke) beállítást használja a böngészők másik weblapra való átirányításához. Ha engedélyezi ezt a házirend-beállítást, egy olyan felhasználó böngészőjében, amely egy aktív meta frissítési beállítást tartalmazó oldalt tölt be, átirányítható egy másik weblapra. Ha letiltja ezt a házirend-beállítást, egy olyan felhasználó böngészője, amely egy aktív meta frissítési beállítást tartalmazó oldalt tölt be, nem lehet átirányítani egy másik weblapra. Ha nem konfigurálja ezt a házirend-beállítást, egy olyan felhasználó böngészője, amely egy aktív meta frissítési beállítást tartalmazó oldalt tölt be, nem irányítható át egy másik weblapra.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067154)  
   
   **Alapértelmezett**: Letiltva  
   
-## <a name="local-policies-security-options"></a>A helyi házirendek-biztonsági beállítások
-További információkért lásd: [házirend CSP - LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) a Windows dokumentációjában. 
+## <a name="local-policies-security-options"></a>Helyi házirendek biztonsági beállításai
+További információ: [Policy CSP-LocalPoliciesSecurityOptions](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) a Windows dokumentációjában. 
 
-- **Nevesített csövekhez és megosztások való névtelen hozzáférés korlátozása**  
-  Ha engedélyezve van, ez a beállítás korlátozza a névtelen hozzáférés-megosztásokat és -csövek beállításai: (1) a named pipe-ok, hogy el névtelenül (2) megosztások névtelenül elérhető.  
+- **Nevesített csövek és megosztások névtelen elérésének korlátozása**  
+  Ha engedélyezve van, ez a biztonsági beállítás korlátozza a megosztásokhoz és csövekhez való névtelen hozzáférést a következő beállításokra: (1) Nevesített csövek, amelyekhez névtelenül (2) hozzáférő, névtelenül elérhető megosztások érhetők el.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067212)  
   
   **Alapértelmezett**: Igen  
   
-- **Munkamenet minimális biztonság az NTLM SSP alapú kiszolgálókról**  
-  Ez a beállítás lehetővé teszi, hogy megkövetelje az 128 bites titkosítás és/vagy NTLMv2 munkamenet egy kiszolgálót. Ezeket az értékeket a LAN-kezelő hitelesítési szintje biztonsági beállítás értéke függenek. Az alábbi lehetőségek állnak rendelkezésére: NTLMv2 munkamenet megkövetelése: A kapcsolat nem jön létre, ha az üzenet sértetlenségének nem egyeztetett. 128 bites titkosítás használata. A kapcsolat nem jön létre, ha az erős titkosítás (128 bites) nem egyeztetett.  
+- **Minimális munkamenet-biztonság az NTLM SSP-alapú kiszolgálók esetében**  
+  Ez a biztonsági beállítás lehetővé teszi a kiszolgáló számára, hogy megkövetelje a 128 bites titkosítás és/vagy az NTLMv2 munkamenet-biztonság egyeztetését. Ezek az értékek a LAN Manager hitelesítési szintjének biztonsági beállításának értékétől függenek. Az alábbi lehetőségek állnak rendelkezésére: NTLMv2-munkamenet biztonságának megkövetelése: Ha az üzenet integritása nincs egyeztetve, a rendszer sikertelen lesz. 128 bites titkosítás megkövetelése. Ha az erős titkosítás (128 bites) nincs egyeztetve, a rendszer nem fogja tudni a kapcsolatokat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067246) 
   
-  **Alapértelmezett**: Az NTLM V2 és 128 bites titkosítás megkövetelése  
+  **Alapértelmezett**: NTLM v2 és 128 bites titkosítás megkövetelése  
   
-- **Percek száma zárolási képernyőn a képernyőkímélő**  
+- **A zárolási képernyő inaktivitásának percben, amíg a képernyőkímélő be nem kapcsol**  
   A Windows észleli a bejelentkezési munkamenetek tétlenségét, és ha a tétlenség ideje túllépi a tétlenségi korlátot, a rendszer futtatja a képernyőkímélőt és lezárja a munkamenetet.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067210)  
   
   **Alapértelmezett**: 15
   
-- **Szükséges ügyfél-kommunikációhoz mindig digitális aláírására** a biztonsági beállítás határozza meg, hogy a tartományi tag által kezdeményezett összes biztonságos csatorna forgalmat kell kell aláírva vagy titkosítva. Ha a számítógép tartományhoz csatlakozik, egy számítógép-fiók jön létre. Ezt követően a rendszer indításakor használ a számítógép fiók jelszavát a hozzá tartozó tartomány tartományvezérlő biztonságos csatornát létrehozni. A biztonságos csatorna műveletek végrehajtásához, például a hitelesítést, LSA SID/keresése és további továbbítása NTLM használatos. Ez a beállítás határozza meg, ha a tartományi tag által kezdeményezett összes biztonságos csatorna forgalom megfelel a minimális biztonsági követelményeknek. Konkrétan meghatározza, hogy e indítja el a tartományi tag összes biztonságos csatorna forgalmat kell legyen aláírva vagy titkosítva. Ha ez a szabályzat engedélyezve van, majd a biztonságos csatorna nem létesíthető, ha aláírást vagy az összes biztonságos csatorna forgalom titkosítása egyeztetve van-e. Ha ez a házirend le van tiltva, akkor a titkosítási és aláírási biztonságos csatorna összes forgalom egyeztetve van-e a tartományvezérlővel, amely esetben aláírás és titkosítás szintjét attól függ, a tartományvezérlő verziója és a beállításokat a következő két házirendek: Tartományi tag: (Ha lehet) biztonságos csatornák adatainak digitális titkosítása tartományi tag: (Ha ez lehetséges) digitális aláírása.  
+- **Az ügyfél minden esetben digitálisan aláírja a kommunikációt** Ez a biztonsági beállítás határozza meg, hogy a tartományi tag által kezdeményezett összes biztonságos csatorna forgalmát alá kell-e írni vagy titkosítani kell-e. Ha egy számítógép tartományhoz csatlakozik, létrejön egy számítógépfiók. Ezt követően a rendszer indításakor a számítógépfiók jelszava használatával hozzon létre egy biztonságos csatornát a tartományához tartozó tartományvezérlővel. Ez a biztonságos csatorna olyan műveletek elvégzésére szolgál, mint például az NTLM-továbbítás hitelesítés, az LSA SID/Name lookup és még sok más. Ez a beállítás határozza meg, hogy a tartomány tagja által kezdeményezett összes biztonságos csatorna-forgalom megfelel-e a minimális biztonsági követelményeknek. Pontosabban meghatározza, hogy a tartományi tag által elindított összes biztonságos csatorna forgalmát alá kell-e írni vagy titkosítani kell-e. Ha ez a szabályzat engedélyezve van, akkor a biztonságos csatorna nem lesz létrehozva, kivéve, ha az összes biztonságos csatorna-forgalom aláírásával vagy titkosításával egyeztetve van. Ha ez a szabályzat le van tiltva, akkor a rendszer az összes biztonságos csatorna forgalom titkosítását és aláírását egyezteti a tartományvezérlővel, amely esetben az aláírás és a titkosítás szintje a tartományvezérlő verziójától és a következő két beállítástól függ. szabályzatok Tartományi tag: Biztonságos csatorna adatai digitális titkosítása (ha lehetséges) tartományi tag: Biztonságos csatornák digitális aláírása (ha lehetséges).  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067187) 
   
   **Alapértelmezett**: Igen
   
 - **Hitelesítési szint**  
-  Ez a beállítás meghatározza, hogy mely kérdés-válasz hitelesítési protokollt használják a hálózati bejelentkezést. Ez a választás hatással van a hitelesítési protokoll, amelyet az ügyfelek egyeztetett munkamenet biztonsági szintjét és a következőképpen fogadja el a kiszolgálók hitelesítési szintet szintje:  
-  - *Az LM- és NTLM válaszok* -ügyfelek LM és az NTLM-hitelesítés használatára, és soha ne használja az NTLMv2 munkamenet; a tartományvezérlő, fogadja el az LM, NTLM és NTLMv2-alapú hitelesítés. 
-  - *LM és az NTLM - NTLMv2 küldése, ha az egyeztetett* -ügyfelek LM és az NTLM-hitelesítés használatára, és NTLMv2 munkamenet használja, ha a kiszolgáló támogatja; a tartományvezérlők, fogadja el az LM, NTLM és NTLMv2-alapú hitelesítés. 
-  - *Csak NTLM-válasz küldése* -ügyfelek csak NTLM-hitelesítést használ, és NTLMv2 munkamenet használja, ha a kiszolgáló támogatja; a tartományvezérlők, fogadja el az LM, NTLM és NTLMv2-alapú hitelesítést. 
-  - *Csak az NTLMv2-válasz küldése* -ügyfelek csak NTLMv2-alapú hitelesítést használ, és NTLMv2 munkamenet használja, ha a kiszolgáló támogatja; a tartományvezérlők, fogadja el az LM, NTLM és NTLMv2-alapú hitelesítést. 
-  - *Csak az NTLMv2-válasz küldése. Az LM utasítania* -ügyfelek csak NTLMv2-alapú hitelesítést használ, és NTLMv2 munkamenet használja, ha a kiszolgáló támogatja; a tartományvezérlő elutasítja az LM (Elfogadás csak NTLMv2- és NTLM-hitelesítés). 
-  - *Csak az NTLMv2-válasz küldése. LM és az NTLM utasítania* -ügyfelek csak NTLMv2-alapú hitelesítést használ, és NTLMv2 munkamenet használja, ha a kiszolgáló támogatja; a tartományvezérlők elutasítják LM és az NTLM (Elfogadás csak NTLMv2-alapú hitelesítést).  
+  Ez a biztonsági beállítás határozza meg, hogy melyik kérdés-válasz hitelesítési protokollt használja a rendszer a hálózati bejelentkezésekhez. Ez a választás hatással van az ügyfelek által használt hitelesítési protokoll szintjére, a munkamenet-biztonság megtárgyalásának szintjére, valamint a kiszolgálók által a következőképpen elfogadott hitelesítés szintjére:  
+  - *LM-és NTLM-válaszok küldése* – az ügyfelek az LM és az NTLM hitelesítést használják, és soha nem használják az NTLMv2 munkamenet-biztonságot; a tartományvezérlők elfogadják az LM-, NTLM-és NTLMv2-hitelesítést. 
+  - *LM és NTLM-NTLMv2 küldése, ha egyeztetve* van – az ügyfelek az LM és az NTLM hitelesítést használják, és ha a kiszolgáló támogatja az NTLMv2-munkamenetek biztonságát, a tartományvezérlők elfogadják az LM-, NTLM-és NTLMv2-hitelesítést. 
+  - *Csak NTLM-válasz küldése* – az ügyfelek csak az NTLM-hitelesítést használják, és ha a kiszolgáló támogatja azt, akkor az NTLMv2-munkamenetek biztonságát használják. a tartományvezérlők elfogadják az LM-, NTLM-és NTLMv2-hitelesítést. 
+  - *Csak NTLMv2-válaszok küldése* – az ügyfelek csak az NTLMv2-hitelesítést használják, és ha a kiszolgáló támogatja, az NTLMv2-munkamenetek biztonságát használják. a tartományvezérlők elfogadják az LM-, NTLM-és NTLMv2-hitelesítést. 
+  - *Csak NTLMv2-válasz küldése. LM* -azonosítók elutasítása – az ügyfelek csak az NTLMv2-hitelesítést használják, és ha a kiszolgáló támogatja azt, akkor a tartományvezérlők megtagadják az LM-t (csak NTLM és NTLMv2 hitelesítést fogadnak el). 
+  - *Csak NTLMv2-válasz küldése. Az LM és az NTLM* -ügyfelek elutasítása csak az NTLMv2-hitelesítést használja, és ha a kiszolgáló támogatja azt, akkor a tartományvezérlők visszautasítja az LM és az NTLM protokollt (csak NTLMv2-hitelesítést fogad el).  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067189)   
     
-  **Alapértelmezett**: Csak az NTLMv2-válasz küldése. Az LM- és NTLM utasítania
+  **Alapértelmezett**: Csak NTLMv2-válasz küldése. Az LM és az NTLM elutasítása
   
-- **Megakadályozza a titkosítatlan jelszavak küldése külső SMB-kiszolgálóknak**  
-  Ha ez a beállítás engedélyezve van, a Server Message Block (SMB) átirányító egyszerű szöveges jelszavakat küldhet nem Microsoft SMB-kiszolgálókra, amelyek nem támogatják a titkosítási jelszó a hitelesítés során. Titkosítatlan jelszavak küldése biztonsági kockázatot jelent.  
+- **Titkosítatlan jelszavak küldésének megakadályozása az ügyfelektől harmadik féltől származó SMB-kiszolgálókra**  
+  Ha ez a biztonsági beállítás engedélyezve van, a kiszolgálói üzenetblokk (SMB) átirányító képes szöveges jelszavakat küldeni a nem Microsoft SMB-kiszolgálókra, amelyek nem támogatják a jelszó-titkosítást a hitelesítés során. A Titkosítatlan jelszavak küldése biztonsági kockázat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067235)  
   
   **Alapértelmezett**: Igen
   
-- **Digitális aláírás mindig kommunikációs server verziójának megkövetelése**  
-  Ez a beállítás határozza meg, hogy az SMB-ügyfél megpróbálja-e egyeztetni az SMB-csomagaláírást. A server message block (SMB) protokoll a Microsoft-fájl- és nyomtatómegosztás alapját, és számos más hálózati műveletek, például a távoli Windows-felügyelet biztosít. SMB-csomagok továbbításához módosító man-in-the-middle támadások megelőzése érdekében az SMB protokoll támogatja az SMB-csomagokat digitális aláírását. A házirend-beállítás határozza meg, hogy az SMB-ügyfél összetevő megpróbál-e egyeztetni az SMB-csomagaláírás, amikor csatlakozik a SMB-kiszolgálón. Ha ez a beállítás engedélyezve van, a Microsoft hálózati ügyfél kéri a kiszolgálót az SMB-csomagaláírás munkamenet telepítés végrehajtásához. Ha a csomagaláírás engedélyezve van a kiszolgálón, a csomagaláírás egyeztetése megkezdődik. Ez a házirend le van tiltva, ha az SMB-ügyfél a soha nem egyezteti az SMB-csomagaláírást.  
+- **A kiszolgáló digitális aláírásával való kommunikáció megkövetelése mindig**  
+  Ez a biztonsági beállítás határozza meg, hogy az SMB-ügyfél megkísérelje-e az SMB-csomagok aláírásának egyeztetését. A Server Message Block (SMB) protokoll a Microsoft fájl-és nyomtatómegosztás, valamint számos egyéb hálózati művelet, például a távoli Windows-felügyelet alapját képezi. Ha meg szeretné akadályozni, hogy az SMB-csomagokat az átvitel során módosító, nem a közepes támadásokkal szemben, az SMB protokoll támogatja az SMB-csomagok digitális aláírását. Ezzel a házirend-beállítással megadható, hogy az SMB-ügyfél-összetevő megkísérelje-e az SMB-csomagok aláírását az SMB-kiszolgálóhoz való csatlakozáskor. Ha ez a beállítás engedélyezve van, a Microsoft hálózati ügyfél arra kéri a kiszolgálót, hogy az SMB-csomagok aláírását végrehajtsa a munkamenet beállításakor. Ha a csomagaláírás engedélyezve van a kiszolgálón, a csomagaláírás egyeztetése megkezdődik. Ha a szabályzat le van tiltva, az SMB-ügyfél soha nem fogja egyeztetni az SMB-csomagok aláírását.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067319)  
   
   **Alapértelmezett**: Igen
   
-- **Rendszergazda jogosultságszint-emelési kérés működése**  
-  Ez a szabályzatbeállítás a jogosultságszint-emelési kérés rendszergazdák számára viselkedését szabályozza. Az alábbi lehetőségek állnak rendelkezésére: 
-    - *Jogosultságszint-emelés rákérdezés nélkül* – lehetővé teszi a kiemelt jogosultságú fiókok jogosultságszint-emelési anélkül, hogy a hozzájárulási vagy hitelesítő adatokat igénylő művelet végrehajtásához. Megjegyezés: Használja ezt a beállítást csak a legnagyobb mértékben korlátozott környezetben. 
-    - *A biztonsági asztal hitelesítő adatok kérése az* – Ha egy művelet megköveteli a jogok kiterjesztése, a felhasználó a biztonsági asztalon kéri, adja meg egy rendszergazdai engedéllyel rendelkező felhasználó nevét és jelszavát. Ha a felhasználó sikeresen Megadja, hogy érvényes hitelesítő adatokat, a művelet a felhasználó a elérhető legmagasabb szintű jogosultsággal rendelkező továbbra is. 
-    - *A biztonsági asztalon jóváhagyás kérése* – Ha egy művelet megköveteli a jogok kiterjesztése, a felhasználó a biztonsági asztalon kéri, válassza ki, vagy engedélyezze. Ha a felhasználó engedélyt választja, a művelet a felhasználó a elérhető legmagasabb szintű jogosultsággal rendelkező továbbra is. 
-    - *Hitelesítő adatok kérése az* – Ha egy művelethez megszerzését, kéri a felhasználót, hogy adjon meg egy rendszergazdai felhasználónevet és jelszót. Ha a felhasználó sikeresen Megadja, hogy érvényes hitelesítő adatokat, a megfelelő jogosultságokkal a művelet továbbra is. 
-    - *Beleegyezés kérése* – Ha egy művelethez megszerzését, kéri a felhasználót, hogy válassza ki, vagy engedélyezze. Ha a felhasználó engedélyt választja, a művelet a felhasználó a elérhető legmagasabb szintű jogosultsággal rendelkező továbbra is.  
-    - *Beleegyezés kérése nem Windows bináris fájlok azonnali* – Ha egy művelet egy nem Microsoft-alkalmazás szükséges jogok kiterjesztése, a felhasználó van a kiválasztásához, vagy engedélyezze a biztonsági asztalon kéri. Ha a felhasználó engedélyt választja, a művelet a felhasználó a elérhető legmagasabb szintű jogosultsággal rendelkező továbbra is. 
+- **Rendszergazdai jogosultságszint-emelési kérések viselkedése**  
+  Ezzel a házirend-beállítással szabályozható a rendszergazdák jogosultságszint-emelési kérésének viselkedése. Az alábbi lehetőségek állnak rendelkezésére: 
+  - *Jogosultságszint-emelés kérés nélkül* – lehetővé teszi az emelt szintű fiókok számára a jogosultságszint-emelést a beleegyezés vagy a hitelesítő adatok megkövetelése nélkül. Megjegyezés: Ezt a lehetőséget csak a legszigorúbban korlátozott környezetekben használhatja. 
+  - *Hitelesítő adatok kérése a biztonságos asztalon* – ha egy művelethez jogosultságszint-emelési jogosultságra van szükség, a rendszer felszólítja a felhasználót a biztonságos asztalra, hogy adjon meg egy kiemelt felhasználónevet és jelszót. Ha a felhasználó érvényes hitelesítő adatokat ír be, a művelet a felhasználó legmagasabb rendelkezésre állási jogosultságával folytatódik. 
+  - *Beleegyezés kérése a biztonságos asztalon* – ha egy művelethez jogosultságszint-emelésre van szükség, a felhasználónak meg kell adnia a biztonságos asztalt az engedélyezés vagy a Megtagadás lehetőség kiválasztásához. Ha a felhasználó az Engedélyezés lehetőséget választja, a művelet a felhasználó legmagasabb rendelkezésre állási jogosultságával folytatódik. 
+  - *Hitelesítő adatok kérése* – ha egy művelethez jogosultságszint-emelési jogosultságra van szükség, a rendszer kéri a felhasználótól, hogy adjon meg egy rendszergazdai felhasználónevet és jelszót. Ha a felhasználó érvényes hitelesítő adatokat ad meg, a művelet folytatódik a megfelelő jogosultsággal. 
+  - *Beleegyezés kérése* – ha egy művelethez jogosultságszint-emelési jogosultságra van szükség, a rendszer a felhasználónak engedélyt vagy megtagadást kell választania. Ha a felhasználó az Engedélyezés lehetőséget választja, a művelet a felhasználó legmagasabb rendelkezésre állási jogosultságával folytatódik.  
+  - A *nem Windows rendszerű bináris fájlok jóváhagyásának kérése* – ha egy nem Microsoft-alkalmazásra vonatkozó művelethez jogosultságszint-emelésre van szükség, a felhasználónak meg kell adnia a biztonságos asztalt az engedélyezés vagy a Megtagadás lehetőség kiválasztásához. Ha a felhasználó az Engedélyezés lehetőséget választja, a művelet a felhasználó legmagasabb rendelkezésre állási jogosultságával folytatódik. 
   
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067215)   
   
-  **Alapértelmezett**: Beleegyezés a biztonsági asztalon
+  **Alapértelmezett**: Beleegyezés kérése a biztonságos asztalon
   
-- **Munkamenet minimális biztonság az NTLM SSP alapú ügyfelek**  
-  Ez a beállítás lehetővé teszi, hogy az ügyfelek számára a 128 bites titkosítás és/vagy NTLMv2 munkamenet az egyeztetés. Ezeket az értékeket a LAN-kezelő hitelesítési szintje biztonsági beállítás értéke függenek. Az alábbi lehetőségek állnak rendelkezésére:
-  - *Szükséges NTLMv2 munkamenet* – a kapcsolat nem jön létre, ha NTLMv2 protokoll egyeztetése nem. 
-  - *128 bites titkosítás használata* – a kapcsolat nem jön létre, ha erős titkosítást (128 bites) nem egyeztetett.
-  - *Az NTLMv2 és 128 bites titkosítás megkövetelése*.  
+- **Minimális munkamenet-biztonság az NTLM SSP-alapú ügyfelek számára**  
+  Ez a biztonsági beállítás lehetővé teszi az ügyfél számára, hogy megkövetelje a 128 bites titkosítás és/vagy az NTLMv2 munkamenet-biztonság egyeztetését. Ezek az értékek a LAN Manager hitelesítési szintjének biztonsági beállításának értékétől függenek. Az alábbi lehetőségek állnak rendelkezésére:
+  - *NTLMv2-munkamenet biztonságának* megkövetelése – a kapcsolat sikertelen lesz, ha az NTLMv2 protokoll nincs egyeztetve. 
+  - *128 bites titkosítás* megkövetelése – ha erős titkosítás (128 bites) nincs egyeztetve, a rendszer nem fogja tudni a kapcsolatokat.
+  - *NTLMv2 és 128 bites titkosítás*megkövetelése.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067324)  
 
-  **Alapértelmezett**: Az NTLM V2 128-titkosítás megkövetelése
+  **Alapértelmezett**: NTLM v2 128 titkosítás megkövetelése
   
-- **Viselkedés az intelligens kártya eltávolításakor**  
-    Ez a beállítás határozza meg, mi történik, ha a bejelentkezett felhasználó intelligens kártyáját eltávolítják az intelligenskártya-olvasó. Az alábbi lehetőségek állnak rendelkezésére:
-     - *Nincs művelet*. 
-     - *Munkaállomás zárolása* – a munkaállomás zárolva van, az intelligens kártya eltávolítása, így a felhasználók a területen hagyja, az intelligens kártya velük, illetve egy védett munkamenet fenntartásához.
-     - *Kijelentkezés kényszerítése* – a felhasználó automatikusan ki van jelentkezve az intelligens kártya eltávolításakor.
-     - *Távoli asztali munkamenet leválasztása* – az intelligens kártya eltávolítása nélkül a felhasználó kijelentkeztetése leválasztja a munkamenetet. Ez lehetővé teszi a felhasználó az intelligens kártya Beszúrás, és folytatni a munkamenetet később, vagy egy másik intelligens kártyát olvasó felszerelt számítógép, anélkül, hogy jelentkezzen be újra kellene. Helyi munkamenet esetén ez a szabályzat pontosan úgy működik, mint a Munkaállomás zárolása.
+- **Intelligens kártya eltávolításának viselkedése**  
+  Ez a biztonsági beállítás határozza meg, hogy mi történjen, ha a bejelentkezett felhasználó intelligens kártyáját eltávolítja az intelligenskártya-olvasóból. Az alábbi lehetőségek állnak rendelkezésére:
+  - *Nincs művelet*. 
+  - *Munkaállomás zárolása* – a munkaállomás az intelligens kártya eltávolításakor zárolva van, így a felhasználók elhagyhatják a területeket, saját intelligens kártyájuk is megtarthatják őket, és továbbra is fenntartják a védett munkamenetet.
+  - *Kijelentkezés kényszerítése* – a rendszer automatikusan kijelentkezik a felhasználót az intelligens kártya eltávolításakor.
+  - *Távoli asztal kapcsolat bontása* – az intelligens kártya eltávolítása leválasztja a munkamenetet anélkül, hogy a felhasználót be kellene jelentkeznie. Ez lehetővé teszi a felhasználó számára, hogy beszúrja az intelligens kártyát, és később, vagy egy másik intelligenskártya-olvasóval felszerelt számítógépen folytassa a bejelentkezést anélkül, hogy újra be kellene jelentkeznie. Helyi munkamenet esetén ez a szabályzat pontosan úgy működik, mint a Munkaállomás zárolása.
   
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067331) 
     
   **Alapértelmezett**: Munkaállomás zárolása
   
-- **SAM-fiókok és -megosztások névtelen felsorolása letiltása**  
-  A biztonsági beállítás határozza meg, hogy a fiókok és -megosztások névtelen felsorolása a SAM engedélyezett-e. Windows lehetővé teszi a névtelen felhasználók számára bizonyos műveletek végrehajtását, például a tartományi fiókok és a hálózati megosztások nevének felsorolását. Ez akkor hasznos, például, ha a rendszergazda szeretne hozzáférést biztosítani a felhasználók számára, melyek fenntartják a kölcsönös megbízhatósági kapcsolat nem megbízható tartományban. Ha nem szeretné, hogy névtelen felsorolása a SAM-fiókok és a megosztások, majd állítsa be ezt a házirendet *Igen*.  
+- **SAM-fiókok és-megosztások névtelen enumerálásának letiltása**  
+  Ez a biztonsági beállítás határozza meg, hogy engedélyezi-e a SAM-fiókok és-megosztások névtelen enumerálását. A Windows lehetővé teszi a névtelen felhasználók számára bizonyos tevékenységek végrehajtását, például a tartományi fiókok és hálózati megosztások nevének számbavételét. Ez akkor lehet hasznos, ha egy rendszergazda olyan megbízható tartományban kíván hozzáférést biztosítani a felhasználóknak, amely nem tart fenn kölcsönös bizalmi kapcsolatot. Ha nem szeretné engedélyezni a SAM-fiókok és-megosztások névtelen enumerálását, állítsa ezt a házirendet *Igen*értékre.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067191)  
   
   **Alapértelmezett**: Igen
   
-- **Távoli bejelentkezés blokkolása üres jelszót**  
-  Ez a beállítás határozza meg, hogy használható-e a helyi fiókok, amelyek nem jelszóval védett, jelentkezzen be a fizikai számítógép-konzolt eltérő helyekről. Ha engedélyezve van, helyi felhasználói fiókok, jelszóval védett nem kell használnia a számítógép jelentkezzen be. 
+- **Üres jelszóval rendelkező távoli bejelentkezés letiltása**  
+  Ez a biztonsági beállítás határozza meg, hogy a jelszóval védett helyi fiókok a fizikai számítógép konzolján kívül más helyekről is bejelentkezhetnek-e. Ha engedélyezve van, a jelszóval védett helyi fiókoknak a számítógép billentyűzetén kell használniuk a bejelentkezést. 
 
-  *Figyelmeztetés*: Számítógépek, amelyek fizikailag biztonságos helyen nem kell mindig erős jelszót szabályzatok érvényesítését a minden helyi felhasználói fiókokhoz. Ellenkező esetben a számítógéphez fizikai hozzáféréssel rendelkező felhasználók jelentkezhetnek be a felhasználói fiókkal, amely nem rendelkezik a jelszó. Ez különösen fontos a hordozható számítógépekhez. 
+  *Figyelmeztetés*: Azok a számítógépek, amelyek nem a fizikailag biztonságos helyen találhatók, mindig erős jelszavas házirendeket kényszerítenek az összes helyi felhasználói fiókhoz. Ellenkező esetben a számítógéphez való fizikai hozzáféréssel rendelkező bárki bejelentkezhet egy olyan felhasználói fiókkal, amely nem rendelkezik jelszóval. Ez különösen fontos a hordozható számítógépekhez. 
 
-  Ha a biztonsági házirendet alkalmaz a Mindenki csoportnak, nem jelentkezhetnek be a távoli asztali szolgáltatások használatával. Ez a beállítás nincs hatással a bejelentkezések, amelyek tartományi fiókokat használ. Ezzel a beállítással megkerülésére távoli interaktív bejelentkezést használó alkalmazások számára lehetőség.  
+  Ha ezt a biztonsági házirendet a Mindenki csoportra alkalmazza, a Távoli asztali szolgáltatások nem tud bejelentkezni. Ez a beállítás nem érinti a tartományi fiókokat használó bejelentkezéseket. Távoli interaktív bejelentkezéseket használó alkalmazások esetén a beállítás megkerülése lehetséges.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067219)  
   
   **Alapértelmezett**: Igen
   
-- **Jogosultságszint-emelési kérés működése általános jogú felhasználó**  
-  Ez a szabályzatbeállítás a jogosultságszint-emelési kérés működése általános jogú felhasználók esetében viselkedését szabályozza. 
-  - *Jogosultságszint-emelési kérések automatikus megtagadása* – Ha egy művelet megköveteli a jogok kiterjesztése, a konfigurálható hozzáférés megtagadva hiba jelenik meg. Vállalati futtató asztali számítógépek, az általános jogú felhasználó dönthet ezzel a beállítással csökkentheti a segélyszolgálatra beérkező hívások. 
-  - *A biztonsági asztal hitelesítő adatok kérése az* – Ha egy művelet megköveteli a jogok kiterjesztése, a felhasználó a biztonsági asztalon kéri, adja meg egy másik felhasználónevet és jelszót. Ha a felhasználó sikeresen Megadja, hogy érvényes hitelesítő adatokat, a megfelelő jogosultságokkal a művelet továbbra is. 
-  - *Hitelesítő adatok kérése az* – Ha egy művelethez megszerzését, kéri a felhasználót, hogy adjon meg egy rendszergazdai felhasználónevet és jelszót. Ha a felhasználó sikeresen Megadja, hogy érvényes hitelesítő adatokat, a megfelelő jogosultságokkal a művelet továbbra is.  
+- **Normál felhasználói jogosultságszint-emelési kérések viselkedése**  
+  Ezzel a házirend-beállítással szabályozható az általános jogú felhasználók jogosultságszint-emelési kérésének viselkedése. 
+  - *Jogosultságszint* -emelési kérések automatikus megtagadása – ha egy művelethez emelt szintű jogosultságra van szükség, egy konfigurálható hozzáférés-megtagadási hibaüzenet jelenik meg. Az asztali gépeket futtató vállalatok az általános jogú felhasználók ezt a beállítást választva csökkenthetik az ügyfélszolgálati hívásokat. 
+  - *Hitelesítő adatok kérése a biztonságos asztalon* – ha egy művelethez jogosultságszint-emelési jogosultságra van szükség, a felhasználónak a biztonságos asztalon kell megadnia egy másik felhasználónevet és jelszót. Ha a felhasználó érvényes hitelesítő adatokat ad meg, a művelet folytatódik a megfelelő jogosultsággal. 
+  - *Hitelesítő adatok kérése* – ha egy művelethez jogosultságszint-emelési jogosultságra van szükség, a rendszer kéri a felhasználótól, hogy adjon meg egy rendszergazdai felhasználónevet és jelszót. Ha a felhasználó érvényes hitelesítő adatokat ad meg, a művelet folytatódik a megfelelő jogosultsággal.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067183)  
   
   **Alapértelmezett**: Jogosultságszint-emelési kérések automatikus megtagadása
   
-- **A rendszergazdák rendszergazdai engedélyezéses mód megkövetelése**  
-  A házirend-beállítás a felhasználói fiókok felügyelete (UAC) szabályzatok minden beállítását, a számítógép viselkedését szabályozza. Ha módosítja ezt a beállítást, újra kell indítani a számítógépet. Az alábbi lehetőségek állnak rendelkezésére:   
-  - *Nincs konfigurálva* -rendszergazdai engedélyezéses mód és az összes kapcsolódó felhasználói fiókok Felügyeletének házirend-beállítások le vannak tiltva. Megjegyezés: Ha a házirend-beállítás le van tiltva, a Security Center értesíti, hogy a teljes biztonsági az operációs rendszer e-mailjeiket. 
-  - *Igen* -rendszergazdai engedélyezéses mód engedélyezve van. Ez a szabályzat engedélyezve kell lennie, és a kapcsolódó felhasználói fiókok Felügyeletének házirend beállításainak megfelelően kell állítani, hogy a beépített Rendszergazda fiók és minden egyéb felhasználó rendszergazdai engedélyezéses módban futtatásához a Rendszergazdák csoport tagjai.  
+- **Rendszergazdai engedélyezési mód szükséges a rendszergazdák számára**  
+  Ezzel a házirend-beállítással szabályozható a számítógépen a felhasználói fiókok felügyelete (UAC) összes házirend-beállításának viselkedése. Ha módosítja ezt a házirend-beállítást, újra kell indítania a számítógépet. Az alábbi lehetőségek állnak rendelkezésére:   
+  - *Nincs konfigurálva* – a rendszergazdai engedélyezési mód és az összes kapcsolódó UAC-házirend-beállítás le van tiltva. Megjegyezés: Ha a házirend-beállítás le van tiltva, a Security Center értesíti arról, hogy az operációs rendszer általános biztonsága csökkent. 
+  - *Igen* – a rendszergazdai jóváhagyási mód engedélyezve van. Ezt a házirendet engedélyezni kell, és a kapcsolódó UAC-házirend beállításait megfelelően be kell állítani ahhoz, hogy a beépített rendszergazdai fiók és az összes többi olyan felhasználó, aki tagja a rendszergazdák csoportnak, rendszergazdai engedélyezéses módban fusson.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067184)  
   
   **Alapértelmezett**: Igen
   
-- **Megakadályozza a SAM-fiókok névtelen felsorolása**  
-  Ez a beállítás határozza meg, milyen további engedélyekkel a névtelen kapcsolódást a számítógéphez. Windows lehetővé teszi a névtelen felhasználók számára bizonyos műveletek végrehajtását, például a tartományi fiókok és a hálózati megosztások nevének felsorolását. Ez akkor hasznos, például, ha a rendszergazda szeretne hozzáférést biztosítani a felhasználók számára, melyek fenntartják a kölcsönös megbízhatósági kapcsolat nem megbízható tartományban. Ez a beállítás lehetővé teszi, hogy a névtelen kapcsolatok a következőképpen elhelyezését további korlátozások: 
-  - *Igen* -nem SAM-fiókok felsorolása engedélyezett. Ez a beállítás lecseréli mindenki hitelesített felhasználók a biztonsági engedélyek az erőforrások.
-  - *Nincs konfigurálva* – nincs további korlátozásokat. Alapértelmezett engedélyek támaszkodnak.  
+- **SAM-fiókok névtelen számbavételének megakadályozása**  
+  Ez a biztonsági beállítás határozza meg, hogy a rendszer milyen további engedélyeket kap a névtelen kapcsolatok számára a számítógéphez. A Windows lehetővé teszi a névtelen felhasználók számára bizonyos tevékenységek végrehajtását, például a tartományi fiókok és hálózati megosztások nevének számbavételét. Ez akkor lehet hasznos, ha egy rendszergazda olyan megbízható tartományban kíván hozzáférést biztosítani a felhasználóknak, amely nem tart fenn kölcsönös bizalmi kapcsolatot. Ez a biztonsági beállítás lehetővé teszi, hogy további korlátozások kerüljenek a névtelen kapcsolatokra a következőképpen: 
+  - *Igen* – nem engedélyezi a SAM-fiókok enumerálását. Ez a beállítás a hitelesített felhasználókkal rendelkező mindenkit lecseréli az erőforrásokra vonatkozó biztonsági engedélyekben.
+  - *Nincs konfigurálva* – nincs további korlátozás. Használja az alapértelmezett engedélyeket.  
   
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067318)  
 
   **Alapértelmezett**: Igen
   
-- **Lehetővé teszi a biztonsági fiókkezelő távoli hívások**  
-  Ez a házirend-beállítással korlátozhatja a távoli rpc-kapcsolatok Sándornak. Ha nincs bejelölve, az alapértelmezett biztonsági leíró szolgál.  
+- **Távoli hívások engedélyezése a biztonsági fiókok kezelőjének**  
+  Ezzel a házirend-beállítással korlátozhatja a távoli RPC-kapcsolatokat a SAM-ra. Ha nincs bejelölve, a rendszer az alapértelmezett biztonsági leírót használja.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067209)  
   
-  **Alapértelmezett**: *O:BAG:BAD:(A;; RC;; BA)*
+  **Alapértelmezett**: *O:BAG: HELYTELEN: (A;; RC;;; BA*
 
-- **Rendszergazdai engedélyezéses mód használata**  
-  A házirend-beállítás szabályozza a rendszergazdai engedélyezéses mód a beépített rendszergazdai fiók viselkedését. Az alábbi lehetőségek állnak rendelkezésére: 
-  - *Igen* – a beépített Rendszergazda fiók rendszergazdai engedélyezéses módban használja. Alapértelmezés szerint minden művelet, amely megköveteli a jogok kiterjesztése fogja kérni a felhasználót, hogy hagyja jóvá a műveletet. 
-  - *Nincs konfigurálva* – a beépített rendszergazdai fiók teljes körű rendszergazdai jogosultságokkal rendelkező összes alkalmazások futnak. 
+- **Rendszergazdai jóváhagyási mód használata**  
+  Ezzel a házirend-beállítással szabályozható a rendszergazdai engedélyezési mód működése a beépített rendszergazda fiókhoz. Az alábbi lehetőségek állnak rendelkezésére: 
+  - *Igen* – a beépített rendszergazdai fiók rendszergazdai jóváhagyási módot használ. Alapértelmezés szerint a jogosultságszint-emelést igénylő műveletek megkérik a felhasználót, hogy hagyja jóvá a műveletet. 
+  - *Nincs konfigurálva* – a beépített rendszergazdai fiók minden olyan alkalmazást futtat, amely teljes körű rendszergazdai jogosultságokkal rendelkezik. 
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067186)  
 
   **Alapértelmezett**: Igen
   
-- **Felhasználói felület alkalmazásokat biztonságos hely engedélyezése**  
-  Ez a házirend-beállítással megadható, hogy a felhasználói felület kisegítő (UIAccess vagy UIA) programok automatikusan letilthatják a jogosultságszint-emelési általános jogú felhasználók által használt biztonsági asztalt. 
-  - *Igen* -UIA-programoknak, beleértve a Windows Távsegítség, automatikusan letilthatják a jogosultságszint-emelési kérések asztalt. Ha letiltja a nem a "felhasználói fiókok felügyelete: Jogosultságszint-emelési kérés során átváltás biztonsági asztalra"házirend-beállítás, a kérések a biztonsági asztal helyett az interaktív felhasználó asztalán jelennek meg. 
-  - *Nincs konfigurálva*: – a biztonsági asztalt csak az interaktív asztal felhasználója vagy letiltásával tiltható a "felhasználói fiókok felügyelete: Jogosultságszint-emelési kérés során átváltás biztonsági asztalra"házirend-beállítást.  
+- **Felhasználói felületi hozzáférési alkalmazások engedélyezése biztonságos helyszíneken**  
+  Ezzel a házirend-beállítással szabályozható, hogy a felhasználói felület kisegítő lehetőségei (UIAccess vagy UIA) automatikusan le tudják-e tiltani a biztonságos asztalt az általános jogú felhasználók általi jogosultságszint-emelési kérésekhez. 
+  - *Igen* – a UIA programok, például a Windows Távsegítség, automatikusan letiltják a jogosultságszint-emelési kérések biztonságos asztalát. Ha nem tiltja le a "felhasználói fiókok felügyelete: A jogosultságszint-emelésre való rákérdezéskor váltson a biztonságos asztalra, és a kérések a biztonságos asztal helyett az interaktív felhasználó asztalán jelennek meg. 
+  - *Nincs konfigurálva*: – a biztonságos asztalt csak az interaktív asztal felhasználója tilthatja le, vagy letilthatja a felhasználói fiókok felügyeletét: Jogosultságszint-emelési kérés esetén váltson a biztonságos asztalra.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067185)  
 
   **Alapértelmezett**: Igen
 
-- **Észlelheti és figyelmeztetés a jogosultságszint-emeléshez**  
-  Ezzel a szabályzatbeállítással az alkalmazások telepítésének észlelése a számítógép viselkedését szabályozza. Az alábbi lehetőségek állnak rendelkezésére: 
-  - *Engedélyezett* – az alkalmazás telepítési csomagot észlelt, amely megköveteli, hogy megszerzését, kéri a felhasználót, hogy adjon meg egy rendszergazdai felhasználónevet és jelszót. Ha a felhasználó sikeresen Megadja, hogy érvényes hitelesítő adatokat, a megfelelő jogosultságokkal a művelet továbbra is. 
-  - *Letiltott* -alkalmazáscsomagok telepítési nem észlelt, és kéri a jogosultságszint-emeléshez. Olyan vállalatok, amelyek általános jogú felhasználók futnak, és használja a telepítési technológiák, például a csoportházirend szoftvertelepítési meghatalmazott, vagy a Systems Management Server (SMS) tiltsa le a házirend-beállítás. Ebben az esetben a telepítő észlelése nem szükséges.  
+- **Alkalmazások telepítésének észlelése és Jogosultságszint-emelés kérése**  
+  Ezzel a házirend-beállítással szabályozható a számítógép alkalmazás-telepítési észlelésének viselkedése. Az alábbi lehetőségek állnak rendelkezésére: 
+  - *Engedélyezve* – ha olyan alkalmazás-telepítési csomagot észlel, amely jogosultságszint-emelést igényel, a rendszer megkéri a felhasználót, hogy adjon meg egy rendszergazdai felhasználónevet és jelszót. Ha a felhasználó érvényes hitelesítő adatokat ad meg, a művelet folytatódik a megfelelő jogosultsággal. 
+  - *Letiltott* – az alkalmazás telepítési csomagjai nem észlelhetők, és a rendszer kéri a jogosultságszint-emelést. Az általános jogú felhasználói asztalokat futtató és a delegált telepítési technológiákat (például Csoportházirend-alapú szoftvertelepítés vagy System Management Server (SMS)) használó vállalatoknak le kell tiltaniuk ezt a házirend-beállítást. Ebben az esetben a telepítő észlelése szükségtelen.  
   
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067208)  
 
   **Alapértelmezett**: Igen
   
-- **A következő jelszómódosításkor tárolja a LAN-kezelő üzenetkivonatát megakadályozása**  
-  Ez a beállítás határozza meg, ha jelenleg a következő jelszómódosításkor az új jelszó LAN Manager-(LM-) ujjlenyomat értékét tárolja. Az LM-kivonat viszonylag gyenge, és a titkosítási szempontból erősebb Windows NT-kivonat szemben a hibalehetőség. Mivel az LM-kivonat a biztonsági adatbázisban a helyi számítógépen tárolt jelszavak is sérülhet, ha a biztonsági adatbázis megtámadott.  
+- **A LAN Manager kivonatoló értékének a következő jelszó módosításakor való tárolásának megakadályozása**  
+  Ez a biztonsági beállítás határozza meg, hogy a következő jelszó megváltozásakor az új jelszóhoz tartozó LAN Manager (LM) kivonatoló értéket tárolja-e a rendszer. Az LM-kivonat viszonylag gyenge és hajlamos a támadásokra, mint a kriptográfiailag erősebb Windows NT-kivonathoz képest. Mivel az LM-kivonat a biztonsági adatbázisban a helyi számítógépen van tárolva, a rendszer a jelszavakat a biztonsági adatbázis megtámadása esetén is veszélyeztetheti.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067213)  
   
   **Alapértelmezett**: Igen
 
-- **Fájl- és beállításjegyzék-írási hibák száma a felhasználó tartózkodási helye virtualizálása**  
-  Ez a házirend-beállítással megadható, hogy az alkalmazás-írási hibák a rendszer átirányítja megadott beállításjegyzékbeli és fájlrendszerbeli helyekre. Ezzel a szabályzatbeállítással csökkenti az alkalmazásokat, amelyek a Futtatás rendszergazdaként, és a futásidejű alkalmazások adatainak írása *% ProgramFiles %* , *% Windir %* , *%Windir%\system32*, vagy *HKLM\Software*.  
+- **A fájl-és beállításjegyzék-írási hibák virtualizálása felhasználónkénti helyen**  
+  Ezzel a házirend-beállítással szabályozható, hogy a rendszer az alkalmazások írási hibáit átirányítsa-e a megadott beállításjegyzék-és fájlrendszerbeli helyeire Ezzel a házirend-beállítással csökkenthetők a rendszergazdaként futtatott alkalmazások és a futásidejű alkalmazásadatok írása a következőre: *% ProgramFiles%* , *% windir%* , *%windir%\System32*vagy *HKLM\Software*.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067321)  
   
   **Alapértelmezett**: Igen
 
 ## <a name="ms-security-guide"></a>MS biztonsági útmutató  
-További információkért lásd: [házirend CSP - MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) a Windows dokumentációjában.  
+További információ: [Policy CSP-MSSecurityGuide](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-mssecurityguide) a Windows dokumentációjában.  
 
-- **A felhasználói fiókok Felügyeletének korlátozásokat lehessen alkalmazni a hálózati bejelentkezés helyi fiókhoz**  
+- **UAC-korlátozások alkalmazása helyi fiókokra hálózati bejelentkezéskor**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067188)  
 
   **Alapértelmezett**: Enabled
   
-- **SMB v1 ügyfél illesztőprogram kezdő konfigurálása**  
+- **SMB v1 – ügyfél-illesztőprogram indítási konfigurációja**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067214) 
  
   **Alapértelmezett**: Letiltott illesztőprogram
   
-- **SMB-kiszolgáló v1**  
+- **SMB v1-kiszolgáló**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067190)  
 
   **Alapértelmezett**: Letiltva
@@ -1330,574 +1330,574 @@ További információkért lásd: [házirend CSP - MSSecurityGuide](https://docs
  
   **Alapértelmezett**: Letiltva
   
-- **Strukturált kivételkezelés védelmi felülírása**  
+- **Strukturált kivétel kezelésére vonatkozó felülírási védelem**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067217)  
 
   **Alapértelmezett**: Enabled
   
 ## <a name="mss-legacy"></a>MSS örökölt  
-További információkért lásd: [házirend CSP - MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) a Windows dokumentációjában.  
+További információ: [Policy CSP-MSSLegacy](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-msslegacy) a Windows dokumentációjában.  
 
-- **Hálózati IP-forrás védelmi szint Útválasztás**  
+- **Hálózati IP-forrás útválasztási védelmi szintje**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067220)  
   
-  **Alapértelmezett**: Legmagasabb szintű védelme  
+  **Alapértelmezett**: Legmagasabb szintű védelem  
   
-- **Hálózati figyelmen kívül hagyja a NetBIOS név kiadás kivételével érkező kérelmeket a WINS-kiszolgálók**  
+- **A hálózat figyelmen kívül hagyja a NetBIOS-névfeloldási kérelmeket a WINS-kiszolgálók kivételével**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067218)  
  
   **Alapértelmezett**: Enabled
   
-- **Hálózati IPv6 forrás útválasztási védelmi szint**  
+- **Hálózati IPv6-forrás útválasztási védelmi szintje**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067216)  
 
-  **Alapértelmezett**: Legmagasabb szintű védelme
+  **Alapértelmezett**: Legmagasabb szintű védelem
 
-- **Hálózati ICMP átirányítások generált OSPF felülbírálása**  
+- **Hálózati ICMP-átirányítás felülbírálja az OSPF által generált**  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067326)  
 
   **Alapértelmezett**: Letiltva
   
-## <a name="power"></a>Energiagazdálkodási  
-További információkért lásd: [házirend CSP - Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) a Windows dokumentációjában.  
+## <a name="power"></a>Power  
+További információ: [házirend CSP-Power](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-power) a Windows dokumentációjában.  
 
-- **Az ébresztési áramforráshoz jelszó kérése**  
-  A házirend-beállítással megadható, ha a felhasználó kéri a jelszót, amikor a rendszer visszatér az alvó állapotból. Engedélyezi, vagy nem konfigurálja ezt a beállítást, ha a felhasználó értesítése a jelszót a rendszer visszatér az alvó állapotból. Ha letiltja ezt a beállítást, a felhasználónak nem kell megadnia egy jelszót, amikor a rendszer visszatér az alvó állapotból.  
+- **Jelszó megkövetelése ébresztéskor a csatlakoztatáskor**  
+  Ezzel a házirend-beállítással adható meg, hogy a rendszer kéri-e a felhasználótól a jelszót, amikor a rendszer visszatér az alvó állapotból. Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, a rendszer a felhasználónak jelszót kér, amikor az alvó állapotból folytatódik. Ha letiltja ezt a házirend-beállítást, a felhasználó nem kér jelszót, amikor a rendszer visszatér az alvó állapotból.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067221)  
   
   **Alapértelmezett**: Enabled
   
-- **Az akkumulátor alvó állapotba helyezésekor készenléti állapotok**  
-  Ezt a beállítást, ha a Windows készenléti állapotok használata a számítógép alvó állapotba helyezésekor kezeli. Engedélyezi, vagy nem konfigurálja ezt a beállítást, ha a Windows készenléti állapotok használ a számítógép alvó állapotba helyezni. Ha letiltja ezt a beállítást, készenléti állapotok (S1-S3) nem engedélyezett.  
+- **Készenléti állapot, ha akkumulátorról alszik**  
+  Ez a házirend-beállítás azt szabályozza, hogy a Windows használhat-e készenléti állapotokat a számítógép alvó állapotba helyezésekor. Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, a Windows készenléti állapotot használ a számítógép alvó állapotba helyezéséhez. Ha letiltja ezt a házirend-beállítást, a készenléti állapotok (S1-S3) nem engedélyezettek.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067195)  
   
   **Alapértelmezett**: Letiltva
   
-- **Készenléti állapotok áramforráshoz alvó állapotba helyezésekor**  
-  Ezt a beállítást, ha a Windows készenléti állapotok használata a számítógép alvó állapotba helyezésekor kezeli. Engedélyezi, vagy nem konfigurálja ezt a beállítást, ha a Windows készenléti állapotok használ a számítógép alvó állapotba helyezni. Ha letiltja ezt a beállítást, készenléti állapotok (S1-S3) nem engedélyezett.  
+- **Készenléti állapotok a csatlakoztatáskor**  
+  Ez a házirend-beállítás azt szabályozza, hogy a Windows használhat-e készenléti állapotokat a számítógép alvó állapotba helyezésekor. Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, a Windows készenléti állapotot használ a számítógép alvó állapotba helyezéséhez. Ha letiltja ezt a házirend-beállítást, a készenléti állapotok (S1-S3) nem engedélyezettek.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067196)  
   
   **Alapértelmezett**: Letiltva
   
-- **Az akkumulátor jelszót igényel**  
-  A házirend-beállítással megadható, ha a felhasználó kéri a jelszót, amikor a rendszer visszatér az alvó állapotból. Engedélyezi, vagy nem konfigurálja ezt a beállítást, ha a felhasználó értesítése a jelszót a rendszer visszatér az alvó állapotból. Ha letiltja ezt a beállítást, a felhasználónak nem kell megadnia egy jelszót, amikor a rendszer visszatér az alvó állapotból.  
+- **Jelszó megkövetelése ébresztéskor az akkumulátoron**  
+  Ezzel a házirend-beállítással adható meg, hogy a rendszer kéri-e a felhasználótól a jelszót, amikor a rendszer visszatér az alvó állapotból. Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, a rendszer a felhasználónak jelszót kér, amikor az alvó állapotból folytatódik. Ha letiltja ezt a házirend-beállítást, a felhasználó nem kér jelszót, amikor a rendszer visszatér az alvó állapotból.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067322)  
   
   **Alapértelmezett**: Enabled
 
 ## <a name="remote-assistance"></a>Távsegítség
-- **A kért Távsegítség**  
-  A házirend-beállítás lehetővé teszi, hogy kapcsolja be, vagy kapcsolja ki a Távsegítség Solicited (kérése) ezen a számítógépen. 
-  - *Ha ez a szabályzatbeállítás engedélyezi*, ezen a számítógépen a felhasználók e-mailt vagy fájlt átviteli segítségével kérjen segítséget. Ezenkívül felhasználók csevegőprogramokon segítségével engedélyezze a kapcsolatokat ezen a számítógépen, és konfigurálhatja a további távsegítségre vonatkozó beállítások. 
-  - *Ha letiltja ezt a beállítást*, a számítógép felhasználói e-mailek vagy fájlok átvitele nem használható kérjen segítséget. Ezenkívül az felhasználók nem használhatják az csevegőprogramokon számítógéphez való engedélyezéséhez. 
-  - *Ha nem konfigurálja a házirend-beállítás*, felhasználók be- és kikapcsolása Solicited (kérése) Távsegítség magukat a Vezérlőpult Rendszer tulajdonságai. Felhasználók is konfigurálhatja a távsegítségre vonatkozó beállítások. 
+- **Távsegítség kérése**  
+  Ezzel a házirend-beállítással engedélyezheti vagy kikapcsolhatja a Távsegítség kérését a számítógépen. 
+  - *Ha engedélyezi ezt a házirend-beállítást*, akkor a számítógépen lévő felhasználók e-mailben vagy fájlátvitel használatával kérhetnek segítséget. Emellett a felhasználók csevegési programokat is használhatnak a számítógéphez való csatlakozás engedélyezéséhez, és további Távsegítség-beállításokat is konfigurálhat. 
+  - *Ha letiltja ezt a házirend-beállítást*, a számítógépen lévő felhasználók nem használhatnak e-mailt vagy fájlátvitelt, hogy kérjen segítséget. Emellett a felhasználók nem használhatják az azonnali üzenetküldési programokat, hogy engedélyezzék a kapcsolódást a számítógéphez. 
+  - *Ha nem konfigurálja ezt a házirend-beállítást*, a felhasználók bekapcsolhatják vagy kikapcsolhatják a (z) Távsegítség szolgáltatást a Vezérlőpult Rendszer tulajdonságai párbeszédpanelén. A felhasználók a Távsegítség beállításait is megadhatják. 
 
-  Ha ez a szabályzatbeállítás engedélyezi, akkor két módon lehet távsegítséget nyújtani a segítők: "A számítógép csak megtekinteni segítők" vagy "Segítők vezérelhetik a számítógépet." A "jegy maximális ideje" házirend-beállítás korlát beállítása idő, amely e-mailt vagy fájlt átvitellel létrehozott távsegítségkérést nyitva maradhat. A "kiválasztás a metódus az e-mailben meghívást" beállítás használatával Távsegítség meghívók küldése e-mailek szabványos határozza meg. Az e-mail program függően standard Mailto (az internetes kapcsolaton keresztül csatlakozik a meghívó a címzett) vagy a SMAPI-t (egyszerű MAPI) standard (a meghívót csatolva van az e-mail-üzenetet) is használhatja. A házirend-beállítás nem érhető a Windows Vista mivel a SMAPI-t az egyetlen módszer támogatott. Ha ez a szabályzatbeállítás engedélyezi, hogy a Távsegítség-kommunikáció megfelelő tűzfalkivételeket is engedélyeznie kell.  
+  Ha engedélyezi ezt a házirend-beállítást, kétféleképpen engedélyezheti a segítőket a Távsegítség biztosításához: "A segítők csak a számítógép megtekintésére" vagy "a segítők a számítógép távvezérlésének engedélyezése". A "maximális jegy ideje" házirend-beállítás azt a korlátot állítja be, ameddig a Távsegítség e-mailben vagy fájlátvitel útján létrehozott meghívása nyitva maradhat. Az "e-mail-meghívások küldésére szolgáló módszer kiválasztása" beállítás megadja, hogy melyik e-mail-szabványt kell használni a Távsegítség meghívásához. Az e-mail-programtól függően használhatja a mailto standard (a meghívót egy internetes kapcsolaton keresztül) vagy a SMAPI (egyszerű MAPI) szabványt (a meghívót az e-mail-üzenethez csatolva). Ez a házirend-beállítás nem érhető el a Windows Vista rendszerben, mert a SMAPI az egyetlen támogatott módszer. Ha engedélyezi ezt a házirend-beállítást, akkor a megfelelő tűzfal-kivételeket is engedélyeznie kell a Távsegítség kommunikációjának engedélyezéséhez.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-  **Alapértelmezett**: Tiltsa le a távoli segítségnyújtás
+  **Alapértelmezett**: Távsegítség letiltása
 
-  Ha a beállítása *engedélyezése Távsegítség*, adja meg a következő további beállításokat:  
-  - **A kért Távsegítség engedély**  
+  Ha a *Távsegítség engedélyezésére*van beállítva, konfigurálja a következő további beállításokat:  
+  - **Távsegítség által kért engedély**  
     **Alapértelmezett**: Nézet  
 
-  - **Jegy maximális idő érték**  
+  - **Jegy maximális élettartama**  
     **Alapértelmezett**: *Nincs konfigurálva*  
 
-  - **Jegy maximális időtartam**  
+  - **Jegyek maximális időtartama**  
     **Alapértelmezett**: perc    
 
-  - **E-mailben meghívást metódus**  
-    **Alapértelmezett**: Simple MAPI
+  - **E-Mail Meghívási módszere**  
+    **Alapértelmezett**: Egyszerű MAPI
 
   
 ## <a name="remote-desktop-services"></a>Távoli asztali szolgáltatások  
-További információkért lásd: [házirend CSP - RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) a Windows dokumentációjában.  
+További információ: [Policy CSP-RemoteDesktopServices](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices) a Windows dokumentációjában.  
 
-- **Jelszó mentésének letiltása**  
-  Azt szabályozza, hogy jelszavakat menthetők-e ezen a számítógépen a távoli asztali kapcsolat. Ha engedélyezi ezt a beállítást a jelszó mentése jelölőnégyzetet a távoli asztali kapcsolat le van tiltva, és a felhasználók nem tudják menteni a jelszavakat. Ha egy felhasználó megnyitja a távoli asztali kapcsolattal egy RDP-fájlt, és menti a beállításokat, minden jelszót, amely korábban már létezett az RDP-fájlt az törlődnek. Ha letiltja ezt a beállítást, vagy hagyja üresen a nincs konfigurálva, a felhasználó menthetik jelszavaikat a távoli asztali kapcsolattal.  
+- **Jelszó mentésének tiltása**  
+  Meghatározza, hogy a jelszavak menthetők-e a számítógépen Távoli asztali kapcsolatról. Ha engedélyezi ezt a beállítást, a Távoli asztali kapcsolat letiltotta a jelszó-mentés jelölőnégyzetet, és a felhasználók nem tudják menteni a jelszavakat. Amikor egy felhasználó megnyit egy RDP-fájlt a Távoli asztali kapcsolat használatával, és menti a beállításokat, az RDP-fájlban korábban létezett jelszavak törlődnek. Ha letiltja ezt a beállítást, vagy hagyja meg, hogy nincs konfigurálva, a felhasználó Távoli asztali kapcsolat használatával mentheti a jelszavakat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067301)  
   
    **Alapértelmezett**: Enabled
   
-- **Biztonságos RPC-kommunikációhoz**  
-  Itt adhatja meg, hogy egy távoli asztali munkamenetgazda-kiszolgáló összes ügyfél a biztonságos RPC-kommunikáció vagy lehetővé teszi a biztonságos kommunikációt. Ez a beállítás segítségével RPC-kommunikáció az ügyfelek biztonságának fokozását azáltal, hogy csak hitelesített és titkosított kérelmeket. Ha a beállítás engedélyezve van, a távoli asztali szolgáltatások, amelyek támogatják a biztonságos kérelmek RPC-ügyfelektől érkező kéréseket fogad, és nem biztonságos kommunikáció engedélyezése az ügyfelek nem megbízható. Ha a beállítás le van tiltva, a távoli asztali szolgáltatások mindig kérelmek biztonsági minden RPC-forgalom. Azonban nem biztonságos kommunikáció engedélyezett RPC-ügyfelek, amelyek nem válaszol a kérelemre. Ha a beállítás nincs konfigurálva, nem biztonságos kommunikáció engedélyezve van. Megjegyezés: Az RPC felület felügyelete és konfigurálása a távoli asztali szolgáltatások szolgál.  
+- **Biztonságos RPC-kommunikáció**  
+  Meghatározza, hogy egy Távoli asztal munkamenet-kiszolgáló biztonságos RPC-kommunikációt igényel-e az összes ügyféllel, vagy engedélyezi a nem biztonságos kommunikációt. Ezzel a beállítással megerősítheti az ügyfelekkel folytatott RPC-kommunikáció biztonságát úgy, hogy csak a hitelesített és titkosított kérelmeket engedélyezi. Ha az állapot engedélyezve értékre van állítva, Távoli asztali szolgáltatások fogadja a biztonságos kéréseket támogató RPC-ügyfelektől érkező kérelmeket, és nem engedélyezi a nem biztonságos kommunikációt a nem megbízható ügyfelekkel. Ha az állapot letiltva értékre van állítva, Távoli asztali szolgáltatások mindig minden RPC-forgalomhoz kér biztonságot. A nem biztonságos kommunikáció azonban olyan RPC-ügyfelek számára engedélyezett, amelyek nem válaszolnak a kérelemre. Ha az állapot nincs konfigurálva értékre van állítva, akkor a nem biztonságos kommunikáció engedélyezett. Megjegyezés: Az RPC interfész Távoli asztali szolgáltatások felügyeletére és konfigurálására szolgál.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067248)  
   
   **Alapértelmezett**: Enabled
   
-- **Meghajtó blokkátirányítás**  
-  A házirend-beállítás megadja, hogy a leképezés egy távoli asztali szolgáltatások munkamenet (meghajtón átirányítást) ügyfélmeghajtók elkerülése érdekében. Alapértelmezés szerint egy távoli asztali munkamenetgazda-kiszolgálóhoz kapcsolódáskor automatikusan ügyfélmeghajtók képezi le. Csatlakoztatott meghajtók munkamenet ebben a mappafában levő a fájlkezelő vagy a számítógép a következő formátumban jelenik meg  *\<meghajtóbetűjel >* a  *\<számítógép_neve >* . A házirend-beállítás használatával bírálja felül ezt a viselkedést. Ha ez a szabályzatbeállítás engedélyezi, átirányítása a távoli asztali szolgáltatások munkamenetei nem engedélyezett, és a vágólapra másolás-átirányítási fájlt a Windows Server 2003, Windows 8 és Windows XP rendszert futtató számítógépeken nem engedélyezett. Ha letiltja ezt a beállítást, az ügyfél meghajtón átirányítást mindig engedélyezve van. Vágólapra másolás-átirányítási fájlt is, ha átirányítása a vágólap engedélyezett mindig engedélyezett. Ha nem konfigurálja ezt a beállítást, ügyfél meghajtón átirányítást és vágólapra másolás-átirányítási fájlt nem meg a csoportházirend szintjén.  
+- **Meghajtó átirányításának tiltása**  
+  Ezzel a házirend-beállítással megadható, hogy meg kell-e akadályozni az ügyfélmeghajtók hozzárendelését egy Távoli asztali szolgáltatások-munkamenetben (meghajtó-átirányítás). Alapértelmezés szerint a távoli asztali munkamenetgazda-kiszolgáló automatikusan leképezi az ügyféloldali meghajtókat a kapcsolaton keresztül. A csatlakoztatott meghajtók a Fájlkezelőben vagy a számítógépen a következő formátumban  *\<* jelennek meg: meghajtóbetűjel > a  *\<számítógépnév >* . Ezt a házirend-beállítást használhatja a viselkedés felülbírálásához. Ha engedélyezi ezt a házirend-beállítást, az ügyfélmeghajtók átirányítása Távoli asztali szolgáltatások munkamenetekben nem engedélyezett, és a vágólap-fájlmásolás átirányítása nem engedélyezett a Windows Server 2003, Windows 8 és Windows XP rendszerű számítógépeken. Ha letiltja ezt a házirend-beállítást, a rendszer mindig engedélyezi az ügyfél-meghajtó átirányítását. A vágólap-másolási átirányítás is mindig engedélyezett, ha a vágólap átirányítása engedélyezve van. Ha nem konfigurálja ezt a házirend-beállítást, az ügyfél-meghajtó átirányítása és a vágólap-fájlmásolás átirányítása nincs megadva a Csoportházirend szinten.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067197)  
   
   **Alapértelmezett**: Enabled
   
-- **Jelszó kérése**  
-  A házirend-beállítás megadja-e a távoli asztali szolgáltatások mindig kérni fogja az ügyfél egy a jelszót. Ezzel a beállítással használhatja a kényszerítéséhez a felhasználók a távoli asztali szolgáltatásokhoz, a bejelentkezés jelszó megadására, akkor is, ha már megadta a jelszót a távoli asztali kapcsolat-ügyfél. Alapértelmezés szerint a távoli asztali szolgáltatások lehetővé teszi a felhasználóknak a jelszó beírásával a távoli asztali kapcsolat-ügyfél automatikus bejelentkezésre. Ha ez a szabályzatbeállítás engedélyezi, felhasználók nem lehet automatikusan jelentkezzen be a távoli asztali szolgáltatások a távoli asztali kapcsolat ügyfél jelszavuk megadásával. Ezek kéri, jelentkezzen be a jelszót. Ha letiltja ezt a beállítást, felhasználók is mindig jelentkezzen be a távoli asztali szolgáltatások automatikusan a távoli asztali kapcsolat ügyfél jelszavuk megadásával. Ha nem konfigurálja ezt a beállítást, az automatikus bejelentkezés nincs megadva, a csoportházirend szintjén.  
+- **Jelszó kérése a csatlakozáskor**  
+  Ezzel a házirend-beállítással megadható, hogy a Távoli asztali szolgáltatások mindig kéri-e az ügyfelet a jelszó kérésére a csatlakozáskor. Ezzel a beállítással megadhatja, hogy a felhasználók milyen jelszóval jelentkezzenek be Távoli asztali szolgáltatásokba, még akkor is, ha már megadták a jelszót a Távoli asztali kapcsolat-ügyfélben. Alapértelmezés szerint a Távoli asztali szolgáltatások lehetővé teszi, hogy a felhasználók automatikusan bejelentkeznek a Távoli asztali kapcsolat-ügyfélben lévő jelszó megadásával. Ha engedélyezi ezt a házirend-beállítást, a felhasználók nem tudnak automatikusan bejelentkezni a Távoli asztali szolgáltatásokba, ha a Távoli asztali kapcsolat-ügyfélben megadják a jelszavukat. a rendszer jelszót kér a bejelentkezéshez. Ha letiltja ezt a házirend-beállítást, a felhasználók bármikor bejelentkezhetnek a Távoli asztali szolgáltatások automatikusan, ha megadják a jelszavukat a Távoli asztali kapcsolat ügyfélen. Ha nem konfigurálja ezt a házirend-beállítást, az automatikus bejelentkezés nincs megadva a Csoportházirend szinten.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067328)  
   
   **Alapértelmezett**: Enabled
   
-- **A távoli asztali szolgáltatások ügyfél kapcsolat titkosítási szint**  
-  Megadja, hogy az ügyfélszámítógépek és a távoli asztali munkamenetgazda-kiszolgálók közötti kommunikáció biztonságossá tételéhez a távoli asztal protokoll (RDP) kapcsolatokat során egy adott titkosítási szint használata szükséges. Ez a szabályzat csak akkor érvényes, ha natív RDP-titkosítást használ. Natív RDP-titkosítást (nem SSL-titkosítást) azonban nem ajánlott. Ez a szabályzat nem vonatkozik a SSL-titkosítást. Ha ez a szabályzatbeállítás engedélyezi, távoli kapcsolatok során az ügyfelek és távoli asztali munkamenetgazda-kiszolgálók közötti minden kommunikáció ebben a beállításban megadott titkosítási módszert kell használnia. Alapértelmezés szerint a magas titkosítási szint van beállítva. Az alábbi titkosítási módszerek érhetők el:  
-  - *Magas* – a magas beállítást titkosítja az adatokat, az ügyfél és a kiszolgáló és a kiszolgáló az ügyfélnek küldött erős 128 bites titkosítás segítségével. A titkosítási szint csak 128 bites ügyfeleket (például futtató ügyfelek távoli asztali kapcsolat) környezetekben használható. Ügyfelek, amelyek nem támogatják a titkosítási szint nem tud kapcsolódni a távoli asztali munkamenetgazda-kiszolgálók.  
-  - *Az ügyfél kompatibilis* – az ügyfél-kompatibilis beállítás titkosítja az ügyfél és a kiszolgáló, az ügyfél által támogatott legerősebb között küldött adatokat. A titkosítási szint környezetekben, beleértve az ügyfelek, amelyek nem támogatják a 128 bites titkosítás használata.  
-  - *Alacsony* – az alacsony beállítással csak az ügyfél által küldött a kiszolgálónak 56-bites titkosítás segítségével adatokat titkosítja.  
+- **Távoli asztali szolgáltatások ügyfélkapcsolatának titkosítási szintje**  
+  Meghatározza, hogy szükség van-e egy adott titkosítási szint használatára az ügyfélszámítógépek és a távoli asztali munkamenetgazda-kiszolgálók közötti kommunikáció biztonságossá tételéhez RDP protokoll (RDP) kapcsolatok során. Ez a szabályzat csak akkor érvényes, ha natív RDP-titkosítást használ. Azonban a natív RDP-titkosítás (az SSL-titkosítás helyett) nem ajánlott. Ez a szabályzat nem vonatkozik az SSL-titkosításra. Ha engedélyezi ezt a házirend-beállítást, a távoli kapcsolatok során az ügyfelek és a távoli asztali munkamenetgazda-kiszolgálók közötti összes kommunikációnak az ebben a beállításban megadott titkosítási módszert kell használnia. Alapértelmezés szerint a titkosítási szint magas értékre van állítva. A következő titkosítási módszerek érhetők el:  
+  - *Magas* – a magas beállítás a-ügyfélről a kiszolgálóra és a kiszolgálóról az ügyfélre érkező, erős 128 bites titkosítást használó adatok titkosítását végzi. Használja ezt a titkosítási szintet olyan környezetekben, amelyek csak 128 bites ügyfeleket tartalmaznak (például Távoli asztali kapcsolatt futtató ügyfeleket). Azok az ügyfelek, amelyek nem támogatják ezt a titkosítási szintet, nem csatlakozhatnak a távoli asztali munkamenetgazda-kiszolgálókhoz.  
+  - *Ügyfél-kompatibilis* – az ügyfél-kompatibilis beállítás titkosítja az ügyfél és a kiszolgáló között továbbított, az ügyfél által támogatott maximális kulcs erősségét. Használja ezt a titkosítási szintet olyan környezetekben, amelyek olyan ügyfeleket tartalmaznak, amelyek nem támogatják a 128 bites titkosítást.  
+  - *Alacsony* – az alacsony beállítás a 56 bites titkosítás használatával csak az ügyfélről a kiszolgálóra továbbított adatok titkosítását végzi.  
   
-  Ha letiltja vagy nem konfigurálja ezt a beállítást, a távoli asztali munkamenetgazda-kiszolgálók távoli kapcsolatokhoz használt titkosítási szint csoportházirend nincs kényszerítve. A FIPS fontos a rendszer-kriptográfia keresztül konfigurálhatók. A FIPS előírásainak megfelelő algoritmusok használata titkosításhoz, kivonatoláshoz és aláíráshoz (a Számítógép konfigurációja\A Windows beállításai\Biztonsági beállítások\Helyi házirend\Biztonsági beállítások.) a csoportházirend beállításai A FIPS előírásainak megfelelő beállítás titkosítja, és mindig visszafejti az adatokat az ügyfél és a kiszolgáló és a kiszolgáló az ügyfélnek a Federal Information Processing Standard (FIPS) 140 titkosítási algoritmussal küldött Microsoft titkosítási modulok használatával. Ügyfelek és a távoli asztali munkamenetgazda-kiszolgálók közötti kommunikációhoz szükséges a legmagasabb szintű titkosítást használni a titkosítási szint.  
+  Ha letiltja vagy nem konfigurálja ezt a beállítást, a távoli kapcsolatokhoz használni kívánt titkosítási szint nem kényszeríthető Csoportházirendon keresztül. A fontos FIPS-megfelelőség a rendszerkriptográfiai szolgáltatáson keresztül konfigurálható. A FIPS szabványnak megfelelő algoritmusok használata titkosításhoz, kivonatoláshoz és aláírási beállításokhoz Csoportházirendban (a számítógép konfigurációja \ Windows beállításai \ helyi házirend \ házirend beállítások menüpontban) A FIPS-kompatibilis beállítás titkosítja és visszafejti az ügyfél és a kiszolgáló között továbbított adatokat a kiszolgálóról az ügyfélre, a Federal Information Processing standard (FIPS) 140 titkosítási algoritmusokkal a Microsoft titkosítási moduljainak használatával. Akkor használja ezt a titkosítási szintet, ha az ügyfelek és a távoli asztali munkamenetgazda-kiszolgálók közötti kommunikációhoz a legmagasabb szintű titkosítás szükséges.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067222)  
   
   **Alapértelmezett**: Magas
   
 ## <a name="remote-management"></a>Távfelügyelet  
-További információkért lásd: [házirend CSP - RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) a Windows dokumentációjában.  
+További információ: [Policy CSP-RemoteManagement](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotemanagement) a Windows dokumentációjában.  
 
-- **A Blokkblob tárolás futtató tartozó hitelesítő adatok**  
-  Ügyfél-hitelesítés alapszintű.  
+- **Futtató hitelesítő adatok tárolásának tiltása**  
+  Ügyfél alapszintű hitelesítése.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067300)  
   
   **Alapértelmezett**: Enabled
   
 - **Alapszintű hitelesítés**  
-  A házirend-beállítás lehetővé teszi, hogy kezelheti-e a Windows Rendszerfelügyeleti (webszolgáltatások WinRM) szolgáltatás fogad el az alapszintű hitelesítés, a távoli ügyfélhez. Ha ez a szabályzatbeállítás engedélyezi, a WinRM szolgáltatás alapszintű hitelesítés, a távoli ügyfélhez fogad el. Ha letiltja vagy nem konfigurálja ezt a beállítást, a WinRM szolgáltatás nem fogadja el a távoli ügyfélhez egyszerű hitelesítést.  
+  Ezzel a házirend-beállítással felügyelheti, hogy a Rendszerfelügyeleti webszolgáltatások (WinRM) szolgáltatás fogadja-e az egyszerű hitelesítést egy távoli ügyfélről. Ha engedélyezi ezt a házirend-beállítást, a WinRM szolgáltatás fogadja az egyszerű hitelesítést egy távoli ügyfélről. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a WinRM szolgáltatás nem fogadja el az egyszerű hitelesítést egy távoli ügyféltől.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067223)  
   
   **Alapértelmezett**: Letiltva
   
 - **Ügyfél-kivonatoló hitelesítés letiltása**  
-  Ez a házirend-beállítással kezelheti, hogy a Windows Rendszerfelügyeleti (webszolgáltatások WinRM) ügyfél használja a kivonatoló hitelesítés. Ha ez a szabályzatbeállítás engedélyezi, a WinRM-ügyfél a kivonatoló hitelesítés nem használ. Ha letiltja vagy nem konfigurálja ezt a beállítást, a WinRM-ügyfél használja a kivonatoló hitelesítés.  
+  Ezzel a házirend-beállítással felügyelheti, hogy a Rendszerfelügyeleti webszolgáltatások (WinRM) ügyfele kivonatoló hitelesítést használ-e. Ha engedélyezi ezt a házirend-beállítást, a WinRM-ügyfél nem használ kivonatoló hitelesítést. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a WinRM-ügyfél kivonatoló hitelesítést használ.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067302)  
   
   **Alapértelmezett**: Enabled
   
-- **Nem titkosított forgalmat**  
-  A házirend-beállítás lehetővé teszi, hogy szabályozhatja, hogy a Windows Rendszerfelügyeleti (webszolgáltatások WinRM) szolgáltatás elküldi a hálózaton keresztül nem titkosított üzeneteket fogad. Ha ez a szabályzatbeállítás engedélyezi, a WinRM-ügyfél küld, és nem titkosított üzeneteket fogad a hálózaton keresztül. Ha letiltja vagy nem konfigurálja ezt a beállítást, a WinRM-ügyfél üzeneteket küldő vagy fogadó csak titkosított a hálózaton keresztül.  
+- **Titkosítatlan forgalom**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a Rendszerfelügyeleti webszolgáltatások (WinRM) szolgáltatás küld-e és fogad-e titkosítatlan üzeneteket a hálózaton keresztül. Ha engedélyezi ezt a házirend-beállítást, a Rendszerfelügyeleti webszolgáltatások ügyfele titkosítatlan üzeneteket küld és fogad a hálózaton keresztül. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a WinRM-ügyfél csak a titkosított üzeneteket küldi vagy fogadja a hálózaton keresztül.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067226)  
   
   **Alapértelmezett**: Letiltva
   
-- **Titkosítatlan ügyfél forgalmát**  
-  Ez a házirend-beállítással kezelheti, hogy a Windows Rendszerfelügyeleti (webszolgáltatások WinRM) ügyfél küld, és nem titkosított üzeneteket fogad a hálózaton keresztül. Ha ez a szabályzatbeállítás engedélyezi, a WinRM-ügyfél küld, és nem titkosított üzeneteket fogad a hálózaton keresztül. Ha letiltja vagy nem konfigurálja ezt a beállítást, a WinRM-ügyfél üzeneteket küldő vagy fogadó csak titkosított a hálózaton keresztül.  
+- **Ügyfél titkosítatlan forgalma**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a Rendszerfelügyeleti webszolgáltatások (WinRM) ügyfél küld-e és fogad-e titkosítatlan üzeneteket a hálózaton keresztül. Ha engedélyezi ezt a házirend-beállítást, a Rendszerfelügyeleti webszolgáltatások ügyfele titkosítatlan üzeneteket küld és fogad a hálózaton keresztül. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a WinRM-ügyfél csak a titkosított üzeneteket küldi vagy fogadja a hálózaton keresztül.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067304)  
   
   **Alapértelmezett**: Letiltva
   
-- **Ügyfél alapszintű hitelesítés**  
-  A házirend-beállítás lehetővé teszi, hogy kezelheti-e a Windows Rendszerfelügyeleti (webszolgáltatások WinRM) ügyfél egyszerű hitelesítést használ. Ha ez a szabályzatbeállítás engedélyezi, a WinRM-ügyfél alapszintű hitelesítést használ. Ha a Rendszerfelügyeleti webszolgáltatások HTTP protokollon használatára van konfigurálva, a felhasználónév és jelszó érkeznek a hálózaton egyszerű szövegként. Ha letiltja vagy nem konfigurálja ezt a beállítást, a WinRM-ügyfél az alapszintű hitelesítés nem használ.  
+- **Ügyfél alapszintű hitelesítése**  
+  Ezzel a házirend-beállítással felügyelheti, hogy a Rendszerfelügyeleti webszolgáltatások (WinRM) ügyfél alapszintű hitelesítést használ-e. Ha engedélyezi ezt a házirend-beállítást, a WinRM-ügyfél alapszintű hitelesítést használ. Ha a WinRM a HTTP-átvitel használatára van konfigurálva, a Felhasználónév és a jelszó küldése a hálózaton keresztül egyszerű szövegként történik. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a WinRM-ügyfél nem használ alapszintű hitelesítést.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067252)  
   
   **Alapértelmezett**: Letiltva
   
-## <a name="remote-procedure-call"></a>A távoli eljáráshívás  
-További információkért lásd: [házirend CSP - RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) a Windows dokumentációjában.  
+## <a name="remote-procedure-call"></a>Távoli eljárás hívása  
+További információ: [Policy CSP-RemoteProcedureCall](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remoteprocedurecall) a Windows dokumentációjában.  
 
 - **Nem hitelesített RPC-ügyfél beállításai**  
-  A házirend-beállítás határozza meg, hogyan kezeli az RPC-kiszolgáló modul a nem hitelesített RPC-ügyfelekhez RPC-kiszolgálók. A házirend-beállítás hatással van minden RPC-alkalmazást. Tartományi környezetben használja a házirend-beállítás körültekintően, mert hatással lehet számos különféle funkcióit, többek között a Csoportházirend általi feldolgozás magát. Visszaállítás a házirend-beállítás módosítása az összes érintett manuális beavatkozásra lehet szükség. A házirend-beállítás egy olyan tartományvezérlőre, amely soha nem kell alkalmazni. Ha letiltja ezt a beállítást, az RPC-kiszolgáló modul a Windows ügyfél és az értéke "None", amely támogatja a házirend-beállítás a Windows Server-verziók a "Hitelesített" értékét használja. Ha nem konfigurálja ezt a beállítást, azt letiltva marad. A kiszolgáló távoli Eljáráshívás futásideje viselkedik, mintha a következő értékkel: "Hitelesített" Windows ügyfél és az értéke "None" használt kiszolgáló SKU-k, amelyek támogatják a házirend-beállítás engedélyezve lett. Ha ez a szabályzatbeállítás engedélyezi, a távoli Eljáráshívás kiszolgálói futásideje korlátozása a nem hitelesített RPC-ügyfelekhez gépen futó RPC-kiszolgálók irányítja. Egy ügyfél egy hitelesített ügyfél számít, ha egy nevesített csövet a kiszolgálóval való kommunikációra használ, vagy ha eljáráshívást használ. Lehet, hogy kifejezetten kérte nem hitelesített ügyfelek számára érhető el RPC-interfészek kiválasztott házirend-beállítás értékétől függően ez a korlátozás alól.  
-  - *Nincs* lehetővé teszi, hogy az összes RPC-ügyfelek, amelyeken a házirend-beállítást alkalmazza, a gépen futó RPC-kiszolgálókhoz való kapcsolódáshoz. 
-  - *Hitelesített* lehetővé teszi, hogy csak hitelesített RPC-ügyfelek száma (a fenti definíció) RPC-kiszolgálóhoz csatlakozzon, amelyen a házirend-beállítást alkalmazza, a gépen futó. Kivételek megadott felületek, amelyek a kért őket. 
-  - *Kivételek nélkül hitelesített* lehetővé teszi, hogy csak hitelesített RPC-ügyfelek száma (a fenti definíció) RPC-kiszolgálóhoz csatlakozzon, amelyen a házirend-beállítást alkalmazza, a gépen futó. Nincsenek kivételek engedélyezettek. Megjegyezés: A házirend-beállítás alkalmazza a rendszer újraindításáig.  
+  Ezzel a házirend-beállítással szabályozható, hogy az RPC-kiszolgáló futtatókörnyezete hogyan kezelje az RPC-kiszolgálókhoz csatlakozó nem hitelesített RPC-ügyfeleket Ezzel a házirend-beállítással az összes RPC-alkalmazás hatással van. Tartományi környezetben ezt a házirend-beállítást körültekintően kell használni, mivel ez a funkció számos funkciót érint, beleértve a csoportházirend feldolgozását is. A házirend-beállítás módosításának visszaállításához manuális beavatkozásra van szükség az egyes érintett gépeken. Ez a házirend-beállítás soha nem alkalmazható tartományvezérlőre. Ha letiltja ezt a házirend-beállítást, az RPC-kiszolgáló futtatókörnyezete a "hitelesített" értéket használja a Windows-ügyfélen, és a "None" értéket a Windows Server azon verzióiban, amelyek támogatják ezt a házirend-beállítást. Ha nem konfigurálja ezt a házirend-beállítást, az továbbra is le lesz tiltva. Az RPC-kiszolgáló futtatókörnyezete úgy viselkedik, mintha engedélyezve volt a Windows-ügyfélhez használt "hitelesített" értékkel, valamint a "nincs" értékkel, amelyet ez a házirend-beállítás támogat. Ha engedélyezi ezt a házirend-beállítást, a rendszer az RPC-kiszolgáló futtatókörnyezetét arra utasítja, hogy korlátozza a gépen futó RPC-kiszolgálókhoz csatlakozó nem hitelesített RPC-ügyfeleket. Az ügyfél akkor tekinthető hitelesített ügyfélnek, ha nevesített csövet használ a kiszolgálóval való kommunikációhoz, vagy ha RPC-biztonságot használ. A nem hitelesített ügyfelek által elérhetővé tett RPC-felületek mentesülnek ettől a korlátozástól attól függően, hogy a házirend-beállítás kiválasztott értéke milyen.  
+  - A *none* értékkel az összes RPC-ügyfél csatlakozhat a házirend-beállítást alkalmazó számítógépen futó RPC-kiszolgálókhoz. 
+  - A hitelesítéssel csak a hitelesített RPC-ügyfelek (a fenti definíció alapján) csatlakozhatnak azon a számítógépen futó RPC-kiszolgálókhoz, amelyen a házirend-beállítás alkalmazva van. A rendszer kivételeket biztosít azokhoz az interfészekhez, amelyek kérték azokat. 
+  - A *kivételek nélküli hitelesítés* lehetővé teszi, hogy csak a fenti definíción alapuló hitelesített RPC-ügyfelek csatlakozzanak a házirend-beállítást alkalmazó számítógépen futó RPC-kiszolgálókhoz. A kivételek nem engedélyezettek. Megjegyezés: Ez a házirend-beállítás csak a rendszer újraindítása után lesz alkalmazva.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067225)  
 
   **Alapértelmezett**: Hitelesített
 
 ## <a name="search"></a>Keresés 
-További információkért lásd: [házirend CSP - keresés](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) a Windows dokumentációjában.  
+További információ: [házirend-CSP – keresés](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-search) a Windows dokumentációjában.  
 
-- **Titkosított elemek-indexelés letiltása**  
-  Engedélyezi vagy tiltja az elemek indexelését. Ez a kapcsoló aktiválva van a Windows Search indexelő, amely meghatározza, hogy az indexeli a Windows Information Protection (WIP) által védett fájlok például olyan titkosított elemeket. A szabályzat engedélyezésekor a WIP által védett elemek indexelve lesznek, a velük kapcsolatos metaadatok pedig titkosítatlan helyen lesznek tárolva. A metaadatok között szerepel egyebek között a fájl elérési útja és módosításának dátuma. Ha a házirend le van tiltva, a WIP által védett elemek nem indexelt, és nem jelennek meg a Cortana vagy a fájlkezelő eredményez. A Fényképek és a Groove alkalmazás teljesítménye csökkenhet, ha nagy mennyiségű WIP-védelemmel ellátott médiafájl található az eszközön.  
+- **Titkosított elemek indexelésének letiltása**  
+  Engedélyezi vagy tiltja az elemek indexelését. Ez a kapcsoló a Windows Search indexelő szolgáltatáshoz használható, amely azt szabályozza, hogy a rendszer indexeli-e a titkosított elemeket (például a Windows Information Protection (folyamatban lévő) védett fájlokat. A szabályzat engedélyezésekor a WIP által védett elemek indexelve lesznek, a velük kapcsolatos metaadatok pedig titkosítatlan helyen lesznek tárolva. A metaadatok között szerepel egyebek között a fájl elérési útja és módosításának dátuma. Ha a házirend le van tiltva, a rendszer nem indexeli a nem indexelt, és nem jeleníti meg az eredményeket a Cortana vagy a fájlkezelőben. A Fényképek és a Groove alkalmazás teljesítménye csökkenhet, ha nagy mennyiségű WIP-védelemmel ellátott médiafájl található az eszközön.  
   [További információ]( https://go.microsoft.com/fwlink/?linkid=2067303)  
   
   **Alapértelmezett**: Igen
   
-## <a name="smart-screen"></a>SmartScreen  
-További információkért lásd: [házirend CSP - SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) a Windows dokumentációjában.  
+## <a name="smart-screen"></a>Intelligens képernyő  
+További információ: [Policy CSP-SmartScreen](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-smartscreen) a Windows dokumentációjában.  
 
-- **Nem ellenőrzött fájlok futtatásának letiltása**  
-  A felhasználó nem futtathat ellenőrizetlen fájlokat. 
-  - *Nincs konfigurálva* -alkalmazottak figyelmen kívül hagyja a SmartScreen-figyelmeztetéseket, és a kártevő fájlokat futtathat. 
-  - *Igen* – alkalmazottak nem SmartScreen vonatkozó figyelmeztetések mellőzése és a kártevő fájlokat futtathat.
+- **Nem ellenőrzött fájlok végrehajtásának letiltása**  
+  Nem ellenőrzött fájlok futtatásának letiltása a felhasználó számára. 
+  - *Nincs konfigurálva* – az alkalmazottak figyelmen kívül hagyhatják a SmartScreen-figyelmeztetéseket, és kártékony fájlokat futtathatnak. 
+  - *Igen* – az alkalmazottak nem hagyhatják figyelmen kívül a SmartScreen-figyelmeztetéseket, és nem futtathatnak rosszindulatú fájlokat.
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067228)  
   
   **Alapértelmezett**: Igen
 
-- **SmartScreen-üzenetek szükséges alkalmazások és fájlok**  
-  Lehetővé teszi a rendszergazdáknak, hogy a Windows SmartScreen konfigurálása.  
+- **SmartScreen megkövetelése alkalmazások és fájlok esetén**  
+  Lehetővé teszi a rendszergazdáknak a SmartScreen konfigurálását Windows rendszeren.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067168)  
 
   **Alapértelmezett**: Igen
   
 ## <a name="system"></a>Rendszer  
-További információkért lásd: [házirend CSP - rendszer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) a Windows dokumentációjában.  
+További információ: [Policy CSP – rendszer](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-system) a Windows dokumentációjában.  
 
-- **A rendszer rendszerindító kezdő illesztőprogram inicializációja**  
-  A házirend-beállítás lehetővé teszi, hogy adja meg, milyen rendszerindítás illesztőprogramok inicializálása alapján határozza meg a rendszerindítás korai indítsa el a kártevőirtó vezető besorolást. A rendszerindítás korai indítsa el a kártevőirtó illesztőprogram adhat vissza minden egyes rendszerindítás illesztőprogram a következő besorolásokkal: 
-  - *Jó* – az illesztőprogram aláírással rendelkezik, és nem módosították illetéktelenül.  
-  - *Hibás* – az illesztőprogramot, kártevő szoftverek lett azonosítva. Azt javasoljuk, hogy ahhoz, hogy nem ismert hibás illesztőprogramok inicializálása. 
-  - *Hibás, de a rendszerindításhoz szükséges* – az illesztőprogram kártevő néven azonosított, de a számítógép nem tudja sikeresen rendszerindítást anélkül, hogy az illesztőprogram betöltése. 
-  - *Ismeretlen* – Ez az illesztőprogram még nem lett intézményében a kártevő-észlelési alkalmazását, és a rendszerindítás korai indítsa el a kártevőirtó illesztőprogram által még nem sorolták.  
+- **Rendszerindítási indítási illesztőprogram inicializálása**  
+  Ezzel a házirend-beállítással megadhatja, hogy mely rendszerindítási illesztőprogramok legyenek inicializálva egy korai indítási antimalware rendszerindítási illesztőprogram által meghatározott besorolás alapján. A korai indítású antimalware rendszerindítási illesztőprogram a következő besorolásokat adhatja vissza minden rendszerindítási illesztőprogramhoz: 
+  - *Jó* – az illesztőprogram aláírása megtörtént, és a nem lett illetéktelenül módosítva.  
+  - *Rossz* – az illesztőprogram kártevőként lett azonosítva. Azt javasoljuk, hogy ne engedélyezze az ismert hibás illesztőprogramok inicializálását. 
+  - *Rossz, de szükséges a* rendszerindításhoz – az illesztőprogram kártevőként van azonosítva, de a számítógép nem tud sikeresen elindulni az illesztőprogram betöltése nélkül. 
+  - *Ismeretlen* – ezt az illesztőprogramot a kártevő-észlelési alkalmazás nem tanúsította, és a korai indítású antimalware rendszerindítási illesztőprogram nem sorolta be.  
 
-  Ha ez a szabályzatbeállítás engedélyezi, választhat, mely rendszerindítás illesztőprogramok inicializálása a számítógép következő indításakor. Ha letiltja vagy nem konfigurálja ezt a házirendet beállítást, a rendszerindító kezdő illesztőprogramokkal minősül jó, ismeretlen vagy hibás, de rendszerindító kritikus inicializálva és minősül hibás illesztőprogramok inicializálása a rendszer kihagyta. Ha a kártevő-észlelési alkalmazását egy rendszerindítás korai indítsa el a kártevőirtó illesztőprogram nem tartalmaz, vagy ha a korai indítási kártevőirtó rendszerindítás illesztőprogram le van tiltva, ez a beállítás nem befolyásolja, és minden rendszerindítás illesztőprogramok inicializálása.  
+  Ha engedélyezi ezt a házirend-beállítást, kiválaszthatja, hogy mely rendszerindítási illesztőprogramokat szeretné inicializálni a számítógép következő indításakor. Ha letiltja vagy nem konfigurálja ezt a házirend-beállítást, a rendszerindítási illesztőprogramok helyesnek, ismeretlennek vagy hibásnak, de a rendszerindítási kritikusnak megfelelően vannak inicializálva, és a helytelenül meghatározott illesztőprogramok inicializálását a rendszer kihagyja. Ha a kártevő-észlelési alkalmazás nem tartalmaz korai indítású antimalware rendszerindítási illesztőprogramot, vagy ha a korai indítású kártevő-indítási illesztőprogram le van tiltva, akkor ez a beállítás nem lép érvénybe, és az összes rendszerindítási illesztőprogram inicializálva van.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067307)   
   
-  **Alapértelmezett**: Jó ismeretlen és a kritikus fontosságú hibás
+  **Alapértelmezett**: Jól ismert és rossz kritikus
 
 
 ## <a name="wi-fi"></a>Wi-Fi  
-További információkért lásd: [házirend CSP - Wi-Fi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) a Windows dokumentációjában.  
+További információ: [Policy CSP-WiFi](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-wifi) a Windows-dokumentációban.  
 
-- **Az internetmegosztás letiltása**  
-  Megadja, hogy internetmegosztást az eszközön.   
+- **Internetes megosztás letiltása**  
+  Megadja, hogy lehetséges-e az internetes megosztás az eszközön.   
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067327)   
 
   **Alapértelmezett**: Igen  
 
-- **Blokk automatikus csatlakozás Wi-Fi elérési pontokhoz**  
-  Engedélyezése vagy letiltása az eszközön való automatikus csatlakozás Wi-Fi elérési pontokhoz.  
+- **A Wi-Fi elérési pontokhoz való automatikus csatlakozás letiltása**  
+  A Wi-Fi elérési pontokhoz való automatikus csatlakozás engedélyezése vagy letiltása az eszközön.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067320)   
 
   **Alapértelmezett**: Igen  
   
-## <a name="windows-connection-manager"></a>Windows Connection Manager  
-További információkért lásd: [házirend CSP - WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) a Windows dokumentációjában.  
+## <a name="windows-connection-manager"></a>Windows Csatlakozáskezelő  
+További információ: [Policy CSP-WindowsConnectionManager](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsconnectionmanager) a Windows dokumentációjában.  
 
-- **Kapcsolat blokkolása, nem tartományi hálózatokon**  
-  A házirend-beállítás megakadályozza, hogy a számítógép csatlakozik egy tartományalapú hálózattal és a egy tartományon kívüli alapú hálózati egyszerre. Ha a házirend-beállítás engedélyezve van, a számítógép válaszoljon a következő esetekben alapján automatikus és manuális hálózati csatlakozási kísérletek: 
-  - Ha a számítógép tartományi hálózathoz, minden automatikus kapcsolódási kísérletek nem tartományi hálózathoz már csatlakoztatva van az automatikus csatlakozási kísérletek le vannak tiltva. Amikor a számítógép már csatlakozik egy tartományon kívüli alapú hálózati, tartományi hálózatokhoz automatikus csatlakozási kísérletek le lesznek tiltva. 
-  - Manuális csatlakozási kísérletek, amikor a számítógép már csatlakozik vagy egy tartományhoz nem hálózati vagy a tartományi hálózaton keresztül media eltérő Ethernet és a egy felhasználó megpróbál egy további hálózathoz való manuális kapcsolat létrehozása ezen a jelen szabályzat megsértése beállítás, a meglévő hálózati kapcsolat megszakad, és a manuális kapcsolódás engedélyezett. Amikor a számítógép már csatlakozik vagy egy nem tartományi alapú hálózati vagy a tartományi hálózaton over Ethernet, és a egy felhasználó megpróbál egy további hálózathoz való manuális kapcsolat létrehozása szabályzatsértéséről, a házirend-beállítás, a meglévő Ethernet-kapcsolat szigorúan betartja, és a manuális csatlakozási kísérlet le van tiltva.  
+- **Nem tartományi hálózatokhoz való kapcsolódás letiltása**  
+  Ezzel a házirend-beállítással megakadályozható, hogy a számítógépek egyszerre egy tartományalapú hálózathoz és egy nem tartományon alapuló hálózathoz csatlakozzanak. Ha ez a házirend-beállítás engedélyezve van, a számítógép a következő esetekben válaszol az automatikus és a manuális hálózati csatlakozási kísérletekre: 
+  - Ha a számítógép már csatlakozik egy tartományalapú hálózathoz, az automatikus kapcsolódási kísérleteket a rendszer letiltja a nem tartományi hálózatokra irányuló összes automatikus kapcsolódási kísérletet. Ha a számítógép már csatlakozik egy nem tartomány alapú hálózathoz, a rendszer letiltja a tartományalapú hálózatokra irányuló automatikus kapcsolódási kísérleteket. 
+  - A manuális kapcsolódási kísérlet akkor fordul elő, ha a számítógép már csatlakoztatva van egy nem tartomány alapú hálózathoz vagy egy, az Etherneten kívüli, más adathordozón található tartományalapú hálózathoz, és egy felhasználó egy további, a szabályzat megsértése miatti hálózathoz való csatlakozást kísérel meg létrehozni. beállítás, a meglévő hálózati kapcsolat megszakad, és a manuális kapcsolat engedélyezett. Ha a számítógép már csatlakoztatva van egy nem tartomány alapú hálózathoz vagy egy tartományalapú hálózathoz Ethernet-kapcsolaton keresztül, és egy felhasználó egy további, a házirend-beállítás megsértése miatti hálózatra irányuló manuális kapcsolatot próbál létrehozni, a meglévő Ethernet-kapcsolat karbantartva, és a manuális kapcsolódási kísérlet le van tiltva.  
 
-  Ha a házirend-beállítás nincs konfigurálva, vagy le van tiltva, a számítógépek csatlakozni egyszerre a tartomány és a nem tartományi hálózatokon is engedélyezettek.  
+  Ha a házirend-beállítás nincs konfigurálva vagy le van tiltva, a számítógépek egyszerre csatlakozhatnak a tartományhoz és a tartományhoz nem tartozó hálózatokhoz is.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067323)  
 
   **Alapértelmezett**: Enabled
   
 ## <a name="windows-defender"></a>Windows Defender  
-További információkért lásd: [házirend CSP - Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) a Windows dokumentációjában.  
+További információ: [Policy CSP-Defender](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender) a Windows dokumentációjában.  
 
-- **A bejövő e-mailek vizsgálata**  
-  Engedélyezi vagy letiltja az e-mailek vizsgálata.  
+- **Bejövő üzenetek ellenőrzése**  
+  Engedélyezi vagy engedélyezi az e-mailek vizsgálatát.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067116)  
   
   **Alapértelmezett**: Igen  
 
-- **Office-alkalmazások indítsa el a gyermek-folyamat típusa**  
-  Office-alkalmazások nem engedélyezett az gyermekobjektum folyamatok létrehozása. Ez magában foglalja a Word, Excel, PowerPoint, a OneNote és a hozzáférés. Ez az egy tipikus kártevő szoftverek, különösen a makró-alapú támadásokkal szemben, amelyek az Office-alkalmazások elindításához, vagy letöltheti a rosszindulatú végrehajtható fájlok.  
+- **Az Office-alkalmazások alárendelt folyamatának indítása**  
+  Az Office-alkalmazások nem hozhatnak létre alárendelt folyamatokat. Ide tartozik a Word, az Excel, a PowerPoint, a OneNote és a hozzáférés. Ez egy tipikus kártevő-viselkedés, különösen olyan makró-alapú támadások esetében, amelyek az Office-alkalmazások használatával próbálnak meg rosszindulatú végrehajtható fájlokat elindítani vagy letölteni.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067121)  
   
   **Alapértelmezett**: Letiltás
   
-- **Defender minta küldésének jóváhagyás típusa**  
-  A felhasználó hozzájárul a szint a Windows Defender adatküldéshez. Ha már rendelkezik a szükséges feltételeket, a Windows Defender küldi el őket. Ha nem, (és ha a felhasználó soha nem szeretne feltenni által megadott), a felhasználói felület a felhasználó hozzájárulását (amikor a Defender/AllowCloudProtection engedélyezett) az adatok küldésének kérjen indul el.  
+- **Defender-minta küldésének beleegyező típusa**  
+  A Windows Defender felhasználói beleegyezési szintjét ellenőrzi az adatküldés során. Ha a szükséges engedély már meg lett adva, a Windows Defender elküldi azokat. Ha nem, (és ha a felhasználónak soha nem kell megadnia a kérdést), a felhasználói felület megadását kéri (ha a Defender/AllowCloudProtection engedélyezett) az adatok elküldése előtt.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067131)  
   
   **Alapértelmezett**: Biztonságos minták automatikus küldése 
   
 - **Aláírás-frissítési időköz (óra)**  
-  Defender aláírás-frissítési időköz (óra)
+  Defender-aláírás frissítési időköze (óra)
   
   **Alapértelmezett**: 4
   
-- **Parancsfájl letöltött tartalom végrehajtási típusa**  
-  Defender parancsfájl letöltött tartalom végrehajtási típusa
+- **Parancsfájl letöltött adattartalom-végrehajtási típusa**  
+  Defender-parancsfájl letöltött adattartalom-végrehajtási típusa
   
   **Alapértelmezett**: Letiltás
   
-- **Hitelesítő adatok lopásának megjelölése típus megakadályozása**  
-  Windows Defender Credential Guard virtualizálás-alapú biztonsági használatával elkülöníteni a titkos kódok, hogy csak a kiemelt jogosultságú rendszerszoftverek férhessenek hozzá őket. A titkos kódokhoz való illetéktelen hozzáférés a hitelesítési adatok ellopását okozó (például pass-the-hash vagy pass-the-ticket típusú) támadásokhoz vezethetnek. Windows Defender Credential Guard megakadályozza, hogy ezeket a támadásokat NTLM-jelszókivonatok, a Kerberos jegymegadási jegyek és a tartományi hitelesítő adatok, alkalmazások által tárolt hitelesítő adatok ellenőrzését.  
+- **Hitelesítő adatok ellopási típusának tiltása**  
+  A Windows Defender hitelesítőadat-őr virtualizálás-alapú biztonságot használ a titkok elkülönítésére, így csak a rendszerjogosultságú rendszerszoftverek férhetnek hozzájuk. A titkos kódokhoz való illetéktelen hozzáférés a hitelesítési adatok ellopását okozó (például pass-the-hash vagy pass-the-ticket típusú) támadásokhoz vezethetnek. A Windows Defender hitelesítőadat-őr megakadályozza ezeket a támadásokat az NTLM jelszó-kivonatok, a Kerberos-jegyek és az alkalmazások tartományi hitelesítő adatokként tárolt hitelesítő adatainak védelmével.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067065)  
   
   **Alapértelmezett**: Engedélyezés
 
-- **E-mailek tartalmának végrehajtási típus**  
-  Ez a szabály letiltja a legyenek a következő fájltípusokat, futtatása vagy a Microsoft Outlook vagy a webes levelezésben (például Gmail.com vagy Outlook.com) látható e-mailt indított: Végrehajtható fájl (például .exe, .dll vagy .scr) fájlok, parancsfájlok (például egy PowerShell .ps, Basic .vbs vagy .js JavaScript-fájl) parancsfájl archív fájlokban.  
+- **E-mail tartalom végrehajtásának típusa**  
+  Ez a szabály blokkolja a következő fájltípusokat a Futtatás vagy a Microsoft Outlook vagy webmail szolgáltatásban (például Gmail.com vagy Outlook.com) látott e-mailből való indításkor: Végrehajtható fájlok (például. exe,. dll vagy. scr) parancsfájlok (például PowerShell. ps, VisualBasic. vbs vagy JavaScript. js fájl).  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067063)  
   
   **Alapértelmezett**: Letiltás
 
-- **Az Adobe Reader indítsa el a gyermek folyamatban**  
+- **Adobe Reader indítása alárendelt folyamatban**  
 
   **Alapértelmezett**: Engedélyezés
 
 - **Hálózati védelem típusa**  
-  Ez a szabályzat lehetővé teszi a hálózatvédelem (blokk vagy naplózási) kapcsolja be vagy ki a Windows Defender Exploit Guard. Hálózatvédelem funkciója a Windows Defender Exploit Guard, amely védelmet biztosít az alkalmazottak az Internet elérésére folytathatnak, a biztonsági rés kiaknázása elleni futtató helyek és a rosszindulatú bármilyen alkalmazást használja. Ez magában foglalja, megakadályozza, hogy a külső böngészők veszélyes helyekre csatlakozzanak. Értéktípus: egész szám. Ha engedélyezi ezt a beállítást, hálózati védelem be van kapcsolva, és az alkalmazottak nem kapcsolhatja ki. A következő beállítások szabályozhatók működését: Blokk- és naplózási. Ha engedélyezi ezt a házirendet, a "Letiltása" beállítással, felhasználók vagy alkalmazások le lesznek tiltva veszélyes tartományokhoz csatlakozzon. Ezt a tevékenységet, a Windows Defender biztonsági központban tekintheti meg. Ha engedélyezi ezt a házirendet, a "Naplózási" beállítással, felhasználók vagy alkalmazások veszélyes tartományok csatlakozzanak nem tiltható le. Azonban továbbra is látni fogja ezt a tevékenységet, a Windows Defender biztonsági központban. Ha letiltja ezt a házirendet, felhasználók vagy alkalmazások veszélyes tartományok csatlakozzanak nem tiltható le. Nem láthatja minden olyan hálózati aktivitás a Windows Defender biztonsági központban. Ha nem konfigurálja a házirendet, blokkolja a hálózat le van tiltva alapértelmezés szerint.  
+  Ez a szabályzat lehetővé teszi a hálózati védelem (Letiltás/naplózás) bekapcsolását a Windows Defender Exploit Guardben. A hálózatvédelem a Windows Defender Exploit Guard egyik funkciója, amely megvédi az alkalmazottakat az adathalászat-csalások, a biztonsági rések és az interneten található kártékony tartalmak elérésére alkalmas bármely alkalmazás használatával. Ez magában foglalja a harmadik féltől származó böngészőknek a veszélyes helyekhez való csatlakozásának megakadályozását. Az érték típusa egész szám. Ha engedélyezi ezt a beállítást, a hálózati védelem be van kapcsolva, és az alkalmazottak nem kapcsolhatják ki. A viselkedését a következő beállítások szabályozzák: Blokkolás és naplózás. Ha engedélyezi ezt a házirendet a "letiltás" beállítással, a felhasználók és az alkalmazások le vannak tiltva a veszélyes tartományokhoz való csatlakozáskor. Ezt a tevékenységet a Windows Defender Security Centerban tekintheti meg. Ha engedélyezi ezt a házirendet a "naplózás" beállítással, a felhasználók/alkalmazások nem lesznek letiltva a veszélyes tartományokhoz való csatlakozáskor. Ezt a tevékenységet azonban továbbra is láthatja a Windows Defender Security Centerban. Ha letiltja ezt a házirendet, a felhasználók/alkalmazások nem lesznek letiltva a veszélyes tartományokhoz való csatlakozáskor. A Windows Defender Security Centerban semmilyen hálózati tevékenység nem jelenik meg. Ha nem konfigurálja ezt a házirendet, a hálózati blokkolás alapértelmezés szerint le van tiltva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067102)  
   
   **Alapértelmezett**: Engedélyezés
   
-- **Defender vizsgálat napjának ütemezése**  
-  Defender a vizsgálat napjának ütemezése.
+- **Defender-ütemterv vizsgálatának napja**  
+  Defender-ütemterv vizsgálatának napja.
   
-  **Alapértelmezett**: mindennap
+  **Alapértelmezett**: Mindennap
   
-- **Felhőalapú védelem**  
-  Legmagasabb szintű védelme érdekében a számítógépen, a Windows Defender küld adatokat a Microsoft kapcsolatos esetleges problémákról talál. A Microsoft elemzi ezt az információt, többet megtudhat, illetve más ügyfelek számára, és továbbfejlesztett megoldásokat kínálnak.  
+- **Felhőbe szállított védelem**  
+  A számítógép legjobb védelméhez a Windows Defender adatokat küld a Microsoftnak a talált problémákról. A Microsoft elemezni fogja ezeket az információkat, többet tudhat meg az Ön és más ügyfelek problémáit érintő problémákról, és továbbfejlesztett megoldásokat kínál.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067039)
   
   **Alapértelmezett**:  Igen  
 
-- **Defender potenciálisan nemkívánatos alkalmazás**  
-  A Windows Defender víruskereső vélhetően nemkívánatos alkalmazások (elleni) védelmi szolgáltatása is azonosíthatja és letiltása végpontjaira való letöltését és telepítését a hálózaton. Ezek az alkalmazások nem tekinthető a vírusok, kártevők vagy egyéb fenyegetések típusú, de előfordulhat, hogy műveleteket hajthat végre, amelyek hátrányosan érintik a teljesítményük, vagy használjon végpontok. ELLENI is tekintse meg az alkalmazásokat, amelyek gyenge, hogy tekintendő. Tipikus elleni működés tartalmazza: Különböző típusú Ad injektálás illesztőprogram webböngészők és a beállításjegyzék optimalizálókat a kötegelés szoftverek, amely észleli a problémákat, javítsa ki a hibákat, de továbbra is a végponton, és nincs módosítása vagy optimalizálása (más néven "engedélytelen víruskereső" programok) kérelem fizetési. Ezek az alkalmazások növelheti a kockázat kártevő szoftverrel fertőzött folyamatban van a hálózati vezethetnek kártevőszoftver-fertőzések kell nehezebben azonosításához, és is éveim informatikai erőforrásokat az alkalmazások karbantartása.  
+- **A Defender vélhetően nemkívánatos alkalmazásának művelete**  
+  A Windows Defender víruskereső vélhetően nemkívánatos alkalmazás-(PUA-) védelmi funkciója képes azonosítani és letiltani a PUAs a hálózaton lévő végpontokon való letöltés és telepítés során. Ezek az alkalmazások nem tekintendők vírusok, kártevők vagy más típusú fenyegetéseknek, de olyan végpontokon is végezhetnek műveleteket, amelyek hátrányosan befolyásolják a teljesítményüket vagy a használatukat. A PUA olyan alkalmazásokra is hivatkozhat, amelyeknek a megítélése szerint rossz hírnevük van. A tipikus PUA-viselkedés a következőket tartalmazza: Különböző típusú szoftver-árukapcsolás ad-befecskendezés a webböngészőkbe és a beállításjegyzék-optimalizálók a problémák észlelésére, a hibák kijavítására, de továbbra is a végponton maradnak, és nem tesznek módosítást vagy optimalizálást (más néven "gazember víruskereső" programokat). Ezek az alkalmazások növelhetik a kártevő szoftverrel fertőzött hálózat kockázatát, így a rosszindulatú fertőzések nehezebben azonosíthatók, és az informatikai erőforrások az alkalmazások tisztításával is felhasználhatók.  
   [További információ](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)    
   
   **Alapértelmezett**: Letiltás  
 
-- **Parancsfájl rejtjelezett makró kód típusa**  
-  Kártevők és más fenyegetések ellen megkísérelheti rejtse, és a rosszindulatú kódot az egyes parancsfájl fájlok elrejtése. Ez a szabály megakadályozza a parancsfájlok, amelyek futtatását úgy tűnik, hogy rejtjelezett lehet.  
+- **Parancsfájl által eltorzított kód típusa**  
+  A kártevők és egyéb fenyegetések megpróbálják eltorzítani vagy elrejteni a kártékony kódokat bizonyos parancsfájlokban. Ez a szabály akadályozza meg, hogy a rendszer ne futtasson olyan parancsfájlokat, amelyek nem futtathatók.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067026)  
   
   **Alapértelmezett**: Letiltás
   
-- **Cserélhető adathordozók vizsgálata teljes vizsgálat során**  
-  Lehetővé teszi, hogy a Windows Defender egy teljes vizsgálatok során a cserélhető meghajtókon (például flash meghajtók) rosszindulatú vagy nemkívánatos szoftverek vizsgálata. A Windows Defender víruskereső USB-eszközök végrehajtása előtt az összes fájlt megvizsgálja.  
+- **Cserélhető meghajtók vizsgálata teljes vizsgálat során**  
+  Lehetővé teszi a Windows Defender számára a kártékony és nemkívánatos szoftverek keresését a cserélhető meghajtókon (például flash meghajtókon) a teljes vizsgálat során. A Windows Defender víruskereső a végrehajtás előtt megkeresi az USB-eszközökön található összes fájlt.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067036)  
   
   **Alapértelmezett**: Igen  
   
 - **Archív fájlok ellenőrzése**  
-  Defender vizsgálat archív fájlokban.
+  Defender-vizsgálat archív fájljai.
   
   **Alapértelmezett**: Igen
   
-- **Viselkedésfigyelés engedélyezése**  
-  Engedélyezi vagy tiltja a funkciót a Windows Defender Viselkedésfigyelés engedélyezése. Beágyazott Windows 10, érzékelőktől gyűjtése és az operációs rendszer viselkedési jelek feldolgozásához és az érzékelő adatokat küld a Microsoft Defender ATP, elkülönített, privát felhő példányát.  
+- **Viselkedés figyelése**  
+  Engedélyezi vagy engedélyezi a Windows Defender viselkedésének figyelését. A Windows 10 rendszerbe ágyazott érzékelők begyűjtik és feldolgozzák az operációs rendszer viselkedési jeleit, és elküldik az érzékelő adatait a Microsoft Defender ATP privát, elkülönített, Felhőbeli példányának.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067111)  
   
   **Alapértelmezett**: Igen
 
 - **Hálózati mappákból megnyitott fájlok vizsgálata**  
-  Ha a fájlok írásvédettek, felhasználó nem fog tudni eltávolítani az észlelt kártevőket.
+  Ha a fájlok csak olvashatók, a felhasználó nem tudja eltávolítani az észlelt kártevőket.
   
   **Alapértelmezett**: Igen
 
 - **Nem megbízható USB-folyamat típusa**  
-  Erről a szabályról a rendszergazdák megakadályozhatják nem aláírt vagy nem megbízható végrehajtható fájlok USB cserélhető meghajtók, például SD-kártyán futtatja.  
+  Ezzel a szabállyal a rendszergazdák megakadályozhatják az aláíratlan vagy nem megbízható végrehajtható fájlok futtatását USB cserélhető meghajtókról, beleértve az SD-kártyákat is.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067100)  
   
   **Alapértelmezett**: Letiltás
   
-- **Egyéb Office-alkalmazások feldolgozásához injektálási típusa**  
-  Office-alkalmazásokban, beleértve a Word, Excel, PowerPoint és OneNote-ban, nem tudják injektovat kód más folyamatokba. Ez általában kártevő futtatására szolgál rosszindulatú kódot próbál a víruskereső vizsgálati motorokból tevékenység elrejtéséhez.  
+- **Office-alkalmazások egyéb folyamat-injektálási típusa**  
+  Az Office-alkalmazások, például a Word, az Excel, a PowerPoint és a OneNote, nem tudnak kódot beszúrni más folyamatokra. Ezt általában a kártevők használják rosszindulatú kód futtatására arra az kísérletre, hogy el lehessen rejteni a tevékenységet a víruskereső keresőmotorokból.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067019)  
   
   **Alapértelmezett**:  Letiltás
   
-- **Office-makrók letiltására szolgáló kód engedélyezése Win32 importálás típusa**  
-  Kártevő használatával makró kódot az Office-fájlok importálása és a Win32 dll-fájlok, amelyek ezután felhasználhatók az API-hívásokat, hogy további fertőzéstől során a rendszer betöltése. Ez a szabály megpróbálja letiltása az Office-fájlokat tartalmaz, amely képes Win32 dll-fájlok importálása a makró-kódot. Ez magában foglalja a Word, Excel, PowerPoint és OneNote-ban.  
+- **Office-makróvédelmi kód engedélyezése Win32 importálási típus**  
+  A kártevők a Win32 DLL-fájlok importálásához és betöltéséhez használhatnak makróvírus-kódot az Office-fájlokban, amelyek ezután API-hívások készítésére használhatók a rendszeren belüli további fertőzés engedélyezéséhez. Ez a szabály megkísérli letiltani a Win32 DLL-ek importálására képes makrót tartalmazó Office-fájlokat. Ide tartozik a Word, az Excel, a PowerPoint és a OneNote.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067130)  
   
   **Alapértelmezett**: Letiltás  
   
-- **Defender felhőalapú blokkblob szintje**  
-  Defender felhőalapú blokkblob szintje.
+- **Defender Cloud Block-szint**  
+  A Defender Cloud Block szintje.
   
   **Alapértelmezett**: Nincs konfigurálva
 
 - **Valós idejű figyelés**  
-  Defender valós idejű figyelést igényel.
+  A Defender valós idejű figyelést igényel.
   
   **Alapértelmezett**: Igen
  
-- **Az Office kommunikációs alkalmazások indítása egy gyermek folyamatban**  
+- **Office kommunikációs alkalmazások indítása alárendelt folyamatban**  
 
   **Alapértelmezett**:  Engedélyezés
 
-- **Office alkalmazások végrehajtható tartalom létrehozása vagy az indítási típusa**  
-  Ez a szabály a gyanús és kártékony bővítményeket és parancsfájlokat (bővítmények), hogy hozzon létre, vagy indítsa el a végrehajtható fájlok által használt jellemző viselkedés célozza. Ez a jellemző kártevő technika. Bővítmények az Office-alkalmazások által használt le lesznek tiltva. Általában ezek használja a Windows Scripting Host (.wsh fájlok), amely bizonyos feladatok automatizálására, vagy adja meg a felhasználó által létrehozott bővítmény szolgáltatásai parancsfájlok futtatása.  
+- **Office-alkalmazások végrehajtható tartalom létrehozási vagy indítási típusa**  
+  Ez a szabály a végrehajtható fájlokat létrehozó vagy indító gyanús és kártékony bővítmények és parancsfájlok (bővítmények) által használt jellemző viselkedéseket célozza meg. Ez egy tipikus kártevő-módszer. Az Office-alkalmazások nem használják a bővítményeket. Ezek a bővítmények általában a Windows Scripting Host (. wsh fájlok) használatával futtatnak bizonyos feladatokat automatizáló vagy felhasználó által létrehozott kiegészítő funkciókat biztosító parancsfájlokat.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067108)  
   
   **Alapértelmezett**: Letiltás
 
 ## <a name="windows-defender-firewall"></a>Windows Defender-tűzfal  
-További információkért lásd: [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) a a Windows Protocols dokumentáció.  
+További információ: [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/openspecs/windows_protocols/ms-fasp/7704e238-174d-4a5e-b809-5f3787dd8acc) a Windows-protokollok dokumentációjában.  
 
-- **Tűzfal profil tartomány**  
-  Megadja a profilok, amelyhez a szabály tartozik: Magánjellegű és nyilvános tartományokban. Ezt az értéket a profil-tartományokhoz csatlakozó hálózatok jelöli.  
+- **Tűzfal-profil tartománya**  
+  Meghatározza azokat a profilokat, amelyekre a szabály tartozik: Tartomány, magán, nyilvános. Ez az érték a tartományokhoz csatlakozó hálózatok profilját jelöli.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2066796)  
 
-  - **Blokkolja a bejövő kapcsolatok**  
+  - **Bejövő kapcsolatok blokkolva**  
     **Alapértelmezett**: Igen
 
-  - **Szükséges kimenő kapcsolatok**  
+  - **Kimenő kapcsolatok szükségesek**  
     **Alapértelmezett**: Igen 
 
-  - **Bejövő értesítések letiltva**  
+  - **Bejövő értesítések blokkolva**  
     **Alapértelmezett**: Igen
 
-  - **Tűzfal engedélyezve van**  
+  - **Tűzfal engedélyezve**  
     **Alapértelmezett**: Engedélyezett
 
-- **Nyilvános tűzfalprofil**  
-  Megadja a profilok, amelyhez a szabály tartozik: Magánjellegű és nyilvános tartományokban. Ez az érték a profilt a nyilvános hálózatok jelöli. Ezek a hálózatok besorolt nyilvános által a rendszergazdák a fogadó kiszolgálón. A besorolás akkor történik meg az első alkalommal a gazdagép csatlakozik a hálózathoz. Általában ezek a hálózatok megegyeznek, kávézóban – üzemelő hálózathoz, és más nyilvános helyeken, ha nem állnak megbízható hálózati vagy a rendszergazda a társaknak.  
+- **Nyilvános tűzfal-profil**  
+  Meghatározza azokat a profilokat, amelyekre a szabály tartozik: Tartomány, magán, nyilvános. Ez az érték a nyilvános hálózatok profilját jelöli. Ezek a hálózatok a kiszolgáló gazdagépének rendszergazdái. A besorolás akkor történik meg, amikor a gazdagép először csatlakozik a hálózathoz. Ezek a hálózatok általában olyan repülőtereken, kávézókban és más nyilvános helyeken találhatók, ahol a hálózatban vagy a hálózati rendszergazdában található társai nem megbízhatók.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067143)  
 
-  - **Blokkolja a bejövő kapcsolatok**  
+  - **Bejövő kapcsolatok blokkolva**  
     **Alapértelmezett**: Igen
 
-  - **Szükséges kimenő kapcsolatok**  
+  - **Kimenő kapcsolatok szükségesek**  
     **Alapértelmezett**: Igen 
 
-  - **Bejövő értesítések letiltva**  
+  - **Bejövő értesítések blokkolva**  
     **Alapértelmezett**: Igen
 
-  - **Tűzfal engedélyezve van**  
+  - **Tűzfal engedélyezve**  
     **Alapértelmezett**: Engedélyezett
 
-  - **A csoportházirend nem egyesített kapcsolatbiztonsági szabályok**  
+  - **Nincs egyesítve a csoportházirendből származó kapcsolatbiztonsági szabályok**  
     **Alapértelmezett**: Igen
 
-  - **A csoportházirend nem egyesített házirend szabályai**  
+  - **A csoportházirend házirend-szabályai nem lettek egyesítve**  
     **Alapértelmezett**: Igen
 
-- **Privát tűzfalprofil**  
-  Megadja a profilok, amelyhez a szabály tartozik: Magánjellegű és nyilvános tartományokban. Ezt az értéket a profil magánhálózatok jelöli.  
+- **Saját tűzfal-profil**  
+  Meghatározza azokat a profilokat, amelyekre a szabály tartozik: Tartomány, magán, nyilvános. Ez az érték a magánhálózatok profilját jelöli.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067041)  
 
-   - **Blokkolja a bejövő kapcsolatok**  
+  - **Bejövő kapcsolatok blokkolva**  
     **Alapértelmezett**: Igen
 
-  - **Szükséges kimenő kapcsolatok**  
+  - **Kimenő kapcsolatok szükségesek**  
     **Alapértelmezett**: Igen 
 
-  - **Bejövő értesítések letiltva**  
+  - **Bejövő értesítések blokkolva**  
     **Alapértelmezett**: Igen
 
-  - **Tűzfal engedélyezve van**  
+  - **Tűzfal engedélyezve**  
     **Alapértelmezett**: Engedélyezett
 
 ## <a name="windows-hello-for-business"></a>Vállalati Windows Hello  
-- **Szükséges a kibővített hamisításszűrés, ha elérhető**  
-  Ha igen, a eszközök fogja használni a hamisítások kibővített szűrését, ha elérhető. Ha nem, a hamisításszűrés tiltva lesz. Nincs konfigurálva lesz az ügyfél konfigurációja az irányadó.  
+- **Fokozott hamisítás szükséges, ha elérhető**  
+  Ha igen, akkor az eszközök fokozott hamisítást alkalmaznak, ha elérhető. Ha nem, a rendszer letiltja a hamisítás elleni hamisítást. Nincs konfigurálva, az ügyfélen végzett konfigurációk tiszteletben tartása.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067192)
 
   **Alapértelmezett**: Igen
 
 - **A vállalati Windows Hello konfigurálása**   
-  Windows Hello for Business egy alternatív módszer a azáltal, hogy a jelszavak, intelligens kártyák és a virtuális intelligens kártyák a Windows-ba történő bejelentkezéskor. Ha engedélyezi, vagy nem konfigurálja ezt a beállítást, az eszköz kiépítése Windows Hello for Business. Ha letiltja ezt a beállítást, az eszköz nem építhet ki Windows Hello for Business bármely felhasználó számára.
+  A vállalati Windows Hello egy alternatív módszer a Windowsba való bejelentkezéshez jelszavak, intelligens kártyák és virtuális intelligens kártyák helyett. Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, az eszköz kiépíti a vállalati Windows Hello-t. Ha letiltja ezt a házirend-beállítást, az eszköz nem helyezi üzembe a Windows Hello for businesst bármely felhasználó számára.
 
   **Alapértelmezett**: Igen
 
-- **Kisbetűk használatának megkövetelése a PIN-kód**  
-  Ha szükséges, a felhasználók PIN-kód tartalmaznia kell legalább egy kisbetű.
+- **Kisbetűk megkövetelése a PIN-kódban**  
+  Ha szükséges, a felhasználói PIN-kódnak tartalmaznia kell legalább egy kisbetűt.
 
   **Alapértelmezett**: Engedélyezett
 
-- **Speciális karakterek megkövetelése a PIN-kód**  
-  Ha szükséges, a felhasználó PIN-kód legalább egy speciális karaktert használniuk kell.
+- **Speciális karakterek megkövetelése a PIN-kódban**  
+  Ha szükséges, a felhasználói PIN-kódnak tartalmaznia kell legalább egy speciális karaktert.
 
   **Alapértelmezett**: Engedélyezett
 
 - **PIN-kód minimális hossza**  
-  PIN kód minimális hosszának 4 és 127 karakter között kell lennie.
+  A PIN-kód minimális hosszának 4 és 127 között kell lennie.
 
   **Alapértelmezett**: 6
 
-- **Nagybetűk használatának megkövetelése a PIN-kód**  
-  Ha szükséges, a felhasználók PIN-kód tartalmaznia kell legalább egy nagybetű.
+- **Nagybetűk megkövetelése a PIN-kódban**  
+  Ha szükséges, a felhasználó PIN-kódjának legalább egy nagybetűt tartalmaznia kell.
 
   **Alapértelmezett**: Engedélyezett
 
 ## <a name="windows-ink-workspace"></a>Windows Ink-munkaterület  
-További információkért lásd: [házirend CSP - WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) a Windows dokumentációjában.  
+További információ: [Policy CSP-WindowsInkWorkspace](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowsinkworkspace) a Windows dokumentációjában.  
 
-- **Ink-munkaterület**  
-  Itt adhatja meg, hogy a felhasználó számára az ink-munkaterület elérését engedélyezi-e. 
-  - *Le van tiltva* -ink-munkaterületen való hozzáférés le van tiltva. A funkció ki van kapcsolva.
-  - *Engedélyezett* – az Ink-munkaterületen a funkció be van kapcsolva, de a zárolási képernyőn a felhasználó nem tudja elérni.
-  - *Nincs konfigurálva* – az Ink-munkaterületen a funkció be van kapcsolva, és a felhasználó használhatja a zárolási képernyője felett.  
+- **Szabadkézi munkaterület**  
+  Megadja, hogy engedélyezi-e a felhasználó számára a szabadkézi munkaterület elérését. 
+  - Letiltva – a szabadkézi munkaterület hozzáférése le van tiltva. A szolgáltatás ki van kapcsolva.
+  - *Engedélyezve* – a tinta munkaterület funkció be van kapcsolva, de a felhasználó nem férhet hozzá a zárolási képernyő felett.
+  - *Nincs konfigurálva* – a tinta munkaterület funkció be van kapcsolva, és a felhasználó a zárolási képernyő felett is használhatja.  
 
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067241)  
 
   **Alapértelmezett**: Enabled
  
 ## <a name="windows-powershell"></a>Windows PowerShell  
-További információkért lásd: [házirend CSP - WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) a Windows dokumentációjában.  
+További információ: [Policy CSP-WindowsPowerShell](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-windowspowershell) a Windows dokumentációjában.  
 
-- **A Power shell héjparancsfájlt naplózás letiltása**  
-  A házirend-beállítás lehetővé teszi, hogy az összes PowerShell-parancsfájl bemenetében a Microsoft-Windows-PowerShell/műveleti eseménynaplóba naplózását. Ha ez a szabályzatbeállítás engedélyezi, Windows PowerShell parancsok, parancsfájl-blokkokban, funkciók és - szkriptek feldolgozása projekttárolóba interaktív módon vagy az automatizálás hív-e. Ha letiltja ezt a beállítást, a PowerShell parancsfájl bemenetében naplózása le van tiltva. A parancsfájl blokk meghívása a naplózás engedélyezése, a PowerShell emellett naplók eseményeket egy parancs, parancsfájl-blokkon, függvény vagy parancsfájl meghívását elindul vagy leáll. Eseménynaplók nagy mennyiségű meghívási naplózásának engedélyezéséről állít elő. Megjegyezés: A házirend-beállítás létezik, a számítógép konfigurációja és a felhasználói beállítást a csoportházirend-szerkesztőben. A számítógép-konfigurációs házirend-beállítás élvez a felhasználó-konfigurációs házirend-beállítást.  
+- **Rendszerhéj-rendszerhéj parancsfájl-blokkolási naplózása**  
+  Ezzel a házirend-beállítással engedélyezhető a PowerShell-parancsfájl összes bemenetének naplózása a Microsoft-Windows-PowerShell/operatív eseménynaplóba. Ha engedélyezi ezt a házirend-beállítást, a Windows PowerShell naplózza a parancsok, parancsfájl-blokkok, függvények és parancsfájlok feldolgozását – akár interaktív módon, akár automatizálás útján. Ha letiltja ezt a házirend-beállítást, a PowerShell-parancsfájl bemenetének naplózása le van tiltva. Ha engedélyezi a parancsfájl-blokkoló naplózását, a PowerShell emellett naplózza az eseményeket, amikor egy parancs, parancsfájl-blokk, függvény vagy parancsfájl meghívása elindul vagy leáll. A meghívásos naplózás engedélyezése nagy mennyiségű eseménynaplót generál. Megjegyezés: Ez a házirend-beállítás a számítógép konfigurációja és a felhasználó konfigurációja területen található a Csoportházirend szerkesztőben. A számítógép-konfigurációs házirend beállítása elsőbbséget élvez a felhasználói konfigurációs házirend beállításával szemben.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067330)  
 
   **Alapértelmezett**: Enabled
 
-## <a name="whats-changed-in-the-new-template"></a>Az új sablon változásai
-A *Spring 2019 frissítés (19 órával 1) a mobileszköz-kezelési biztonsági alapterv* van a következő változásokat a sablonhoz a *előzetes* sablon.
+## <a name="whats-changed-in-the-new-template"></a>Az új sablon módosítása
+A *Spring 2019 Update (19H1) sablon Mdm biztonsági* alapterve a következő változásokkal rendelkezik  az előnézeti sablonban.
 
-### <a name="changes-to-the-baseline-settings"></a>Az alapkonfiguráció beállításainak módosítása
-A következő beállításokat a következők egyikét:
-- *Új* ezt az alaptervet legújabb verziójában.
-- *Eltávolított* a a legújabb alapkonfigurációt, de jelen volt a korábbi verzióban.
-- *Módosítás dátuma* valamilyen módon, hogyan a korábbi verzióban jelent meg a beállításokat. 
+### <a name="changes-to-the-baseline-settings"></a>Az alapkonfiguráció beállításainak módosításai
+A következő beállítások egyike:
+- *Új* az alapkonfiguráció ezen legújabb verziójában.
+- A rendszer *eltávolítja* a legújabb alapverzióról, de az előző verzióban szerepelt.
+- A beállítások a korábbi verziókban való megjelenésének valamilyen módon módosultak. 
 
-*[Új]*  [ **Fent zárolási**](#above-lock):
-- **Hangvezérelt alkalmazások zárolt képernyőn aktiválása**    
+*[Új]* [**Zárolás felett**](#above-lock):
+- **Alkalmazások hang aktiválása zárolt képernyőről**    
 
-*[Új]*  [ **Alkalmazáskezelés**](#application-management): 
-- **Telepítések letiltása felhasználói vezérlése**  
-- **Emelt szintű jogosultságokkal letiltása az MSI-alkalmazások telepítésére**  
+*[Új]* [**Alkalmazás-kezelés**](#application-management): 
+- **Felhasználók felügyeletének tiltása a telepítéseken**  
+- **MSI-alkalmazások telepítésének letiltása emelt szintű jogosultságokkal**  
 
-*[Eltávolított]*  [ **Bitlocker**](#bitlocker):  
-- Bit Széfjét a cserélhető meghajtót házirend > **titkosítási módszer**
-- **Rögzített meghajtó házirend bit széfjének** *(összes beállítás)*
-- **Tároló meghajtó Rendszerházirend bites** *(összes beállítás)*
+*[Eltávolítva]* [**BitLocker**](#bitlocker):  
+- Bites zárolás cserélhető meghajtó házirendje > **titkosítási módszer**
+- **Bit Locker rögzített meghajtó szabályzata** *(minden beállítás)*
+- **Bites zárolás rendszermeghajtó** -házirendje *(minden beállítás)*
 
-*[Új]*  [ **Kapcsolat**](#connectivity):
-- **Biztonságos hozzáférés az UNC elérési útvonalainak konfigurálása**
+*[Új]* [**Kapcsolat**](#connectivity):
+- **Az UNC elérési utak biztonságos elérésének konfigurálása**
 
-*[Új]*  [ **Device Guard**](#device-guard):
-- **A virtualizálás-alapú biztonság**
-
-
-*[Új]*  [ **DMA Guard**](#dma-guard):
-- **A külső eszközök nem kompatibilisek a Kernel DMA védelmet enumerálási**  
-
-*[Új]*  [ **Az Internet Explorer**](#internet-explorer):
-- **Explorer az internet zóna frissítések állapotsor parancsfájl használatával**
-- **Az Internet Explorer az internet zóna húzza és dobja el, vagy másolja és illessze be a fájlokat**  
-- **Az Internet Explorer korlátozott zóna .NET-keretrendszer tartománybeli összetevők**  
-- **Az Internet Explorer helyi zónán nem futtathatnak kártevőirtó ActiveX-vezérlők**
-- **Az Internet Explorer titkosítás támogatása**  
-
-*[Változat]*  [ **Az Internet Explorer**](#internet-explorer):
-- **Az Internet Explorer internetes zóna automatikus kérése fájlletöltések** > az alapértelmezett értéke mostantól **letiltott**. Előzetes verzióban érhető el ez lett beállítva engedélyezve.
-
-*[Új]*  [ **Távsegítség**](#remote-assistance):  
-- **A kért Távsegítség** 
-  - **A kért Távsegítség engedély**
-  - **Jegy maximális idő érték**  
-  - **Jegy maximális időtartam**  
-  - **E-mailben meghívást metódus**
+*[Új]* [**Device Guard**](#device-guard):
+- **Virtualizálás-alapú biztonság**
 
 
-*[Új]*  [ **A WIndows Defender**](#windows-defender):
-- **Az Adobe Reader indítsa el a gyermek folyamatban**  
-- **Az Office kommunikációs alkalmazások indítása egy gyermek folyamatban** 
+*[Új]* [**DMA-őr**](#dma-guard):
+- **A kernel DMA-védelemmel nem kompatibilis külső eszközök enumerálása**  
 
-*[Új]*  [ **Windows Defender-tűzfal**](#windows-defender-firewall)
-- **Tűzfal profil tartomány**  
-  - **Blokkolja a bejövő kapcsolatok**  
-  - **Szükséges kimenő kapcsolatok**  
-  - **Bejövő értesítések letiltva**  
-  - **Tűzfal engedélyezve van**  
-- **Nyilvános tűzfalprofil**  
-  - **Blokkolja a bejövő kapcsolatok**  
-  - **Szükséges kimenő kapcsolatok**  
-  - **Bejövő értesítések letiltva**  
-  - **Tűzfal engedélyezve van** 
-  - **A csoportházirend nem egyesített kapcsolatbiztonsági szabályok**   
-  - **A csoportházirend nem egyesített házirend szabályai**  
-- **Privát tűzfalprofil**  
-  - **Blokkolja a bejövő kapcsolatok**  
-  - **Szükséges kimenő kapcsolatok**  
-  - **Bejövő értesítések letiltva**  
-  - **Tűzfal engedélyezve van**  
+*[Új]* [**Internet Explorer**](#internet-explorer):
+- **Explorer Internet zóna frissítései az állapotsoron parancsfájl használatával**
+- **Internet Explorer Internet Zone húz és eldobása, illetve fájlok másolása és beillesztése**  
+- **Az Internet Explorer korlátozott zóna .NET-keretrendszerének függő összetevői**  
+- **Az Internet Explorer helyi számítógép zónája ne futtasson antimalware-t az aktív X vezérlőkön**
+- **Az Internet Explorer titkosításának támogatása**  
 
-*[Új]*  [ **Windows Hello for Business**](#windows-hello-for-business):  
-- **Szükséges a kibővített hamisításszűrés, ha elérhető**  
+*[Módosítva]* [**Internet Explorer**](#internet-explorer):
+- **Internet Explorer Internet Zone automatikus** Rákérdezés a fájlok letöltésére > az alapértelmezett érték most **le van tiltva**. Az előzetes verzióban ez engedélyezve értékre van állítva.
+
+*[Új]* [**Távsegítség**](#remote-assistance):  
+- **Távsegítség kérése** 
+  - **Távsegítség által kért engedély**
+  - **Jegy maximális élettartama**  
+  - **Jegyek maximális időtartama**  
+  - **E-Mail Meghívási módszere**
+
+
+*[Új]* [**WIndows Defender**](#windows-defender):
+- **Adobe Reader indítása alárendelt folyamatban**  
+- **Office kommunikációs alkalmazások indítása alárendelt folyamatban** 
+
+*[Új]* [ **Windows Defender-tűzfal**](#windows-defender-firewall)
+- **Tűzfal-profil tartománya**  
+  - **Bejövő kapcsolatok blokkolva**  
+  - **Kimenő kapcsolatok szükségesek**  
+  - **Bejövő értesítések blokkolva**  
+  - **Tűzfal engedélyezve**  
+- **Nyilvános tűzfal-profil**  
+  - **Bejövő kapcsolatok blokkolva**  
+  - **Kimenő kapcsolatok szükségesek**  
+  - **Bejövő értesítések blokkolva**  
+  - **Tűzfal engedélyezve** 
+  - **Nincs egyesítve a csoportházirendből származó kapcsolatbiztonsági szabályok**   
+  - **A csoportházirend házirend-szabályai nem lettek egyesítve**  
+- **Saját tűzfal-profil**  
+  - **Bejövő kapcsolatok blokkolva**  
+  - **Kimenő kapcsolatok szükségesek**  
+  - **Bejövő értesítések blokkolva**  
+  - **Tűzfal engedélyezve**  
+
+*[Új]* [**Vállalati Windows Hello**](#windows-hello-for-business):  
+- **Fokozott hamisítás szükséges, ha elérhető**  
 - **A vállalati Windows Hello konfigurálása**  
-- **Kisbetűk használatának megkövetelése a PIN-kód** 
-- **Speciális karakterek megkövetelése a PIN-kód** 
+- **Kisbetűk megkövetelése a PIN-kódban** 
+- **Speciális karakterek megkövetelése a PIN-kódban** 
 - **PIN-kód minimális hossza**  
-- **Nagybetűk használatának megkövetelése a PIN-kód** 
+- **Nagybetűk megkövetelése a PIN-kódban** 
 
 
 
