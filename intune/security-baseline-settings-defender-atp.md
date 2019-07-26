@@ -5,7 +5,7 @@ description: Az Intune által támogatott biztonsági alapbeállítások a Micro
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/29/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 722a19d94dc902cba8856b072dbef2279183ca88
-ms.sourcegitcommit: 614c4c36cfe544569db998e17e29feeaefbb7a2e
-ms.translationtype: HT
+ms.openlocfilehash: eee3d4187dd513cd3945e86aff478fe96b341660
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427357"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491918"
 ---
 # <a name="microsoft-defender-advanced-threat-protection-baseline-settings-for-intune"></a>A Microsoft Defender komplex veszélyforrások elleni védelem alapkonfigurációjának beállításai az Intune-ban
 
@@ -209,7 +209,7 @@ További információ a [BitLocker csoportházirend beállítások](https://docs
 
   A lehetőségek a következők: 
   - *Alapértelmezett eszköz* – a bejelentkezés vagy a képernyő zárolásának feloldása után az eszközök a DMA újramegfeleltetésével kompatibilis illesztőprogramokat bármikor fel lehet sorolni. A nem kompatibilis illesztőprogramok DMA-újramegfeleltetésével rendelkező eszközök enumerálása csak azt követően történik meg, hogy a felhasználó feloldja a képernyőt.
-  - Minden, az összes külső DMA-kompatibilis PCIe eszköz enumerálása bármikor megtörténik
+  - Minden, az összes külső *DMA-kompatibilis* PCIe eszköz enumerálása bármikor megtörténik
   - A DMA-újramegfeleltetéssel kompatibilis illesztőprogramokat tartalmazó *összes* eszköz letiltását bármikor megadhatja. A nem kompatibilis illesztőprogramokat a DMA-újramegfeleltetéssel rendelkező eszközök soha nem fogják tudni elindítani és végrehajtani a DMA-t bármikor.
 
   **Alapértelmezett**: Eszköz alapértelmezése
@@ -600,6 +600,13 @@ További információ: [PASSPORTFORWORK CSP](https://docs.microsoft.com/windows/
 
 - **Vállalati Windows Hello***TenantId/házirendek/UsePassportForWork konfigurálása*  -     
   A vállalati Windows Hello egy alternatív módszer a Windowsba való bejelentkezéshez jelszavak, intelligens kártyák és virtuális intelligens kártyák helyett.  
+
+  - Ha az *Igen*értékre van állítva, akkor engedélyezi ezt a házirendet, és az eszköz kiépíti a vállalati Windows Hello-t.  
+  - Ha a *nincs konfigurálva*értékre van állítva, az alapterv nem befolyásolja az eszköz házirend-beállítását. Ez azt jelenti, hogy ha a vállalati Windows Hello le van tiltva egy eszközön, az továbbra is le lesz tiltva. Ha engedélyezve van, az továbbra is engedélyezett marad. 
+
+  A vállalati Windows Hello nem tiltható le ezen alapterven keresztül. A Windows Hello for Business letiltható a [Windows-regisztráció](windows-hello.md)konfigurálásakor, vagy az [Identity Protection](identity-protection-configure.md)eszköz konfigurációs profiljának részeként.  
+
+A vállalati Windows Hello egy alternatív módszer a Windowsba való bejelentkezéshez jelszavak, intelligens kártyák és virtuális intelligens kártyák helyett.  
 
   Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, az eszköz kiépíti a vállalati Windows Hello-t. Ha letiltja ezt a házirend-beállítást, az eszköz semmilyen felhasználó számára nem helyezi üzembe a vállalati Windows Hello-t.
 
