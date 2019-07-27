@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/22/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 1827375dc1905b5c881f743777a73340f0215e0c
-ms.sourcegitcommit: 8023ba7d42e61bd37305c69f52a649cf83bf72e2
+ms.openlocfilehash: 53555a01899cfec15c319e790620b2bfeaa302bc
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387814"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590902"
 ---
 # <a name="intune-discovered-apps"></a>Intune által felderített alkalmazások
 
@@ -30,13 +30,22 @@ Az Intune által felderített **alkalmazások** az észlelt alkalmazások listá
 
 ## <a name="monitor-discovered-apps-with-intune"></a>Észlelt alkalmazások figyelése az Intune-nal
 
-Az Intune az észlelt alkalmazások listáját tartalmazza az Intune-ban regisztrált eszközökön a bérlőben.
+Az Intune az észlelt alkalmazások összesített listáját jeleníti meg az Intune-ban regisztrált eszközökön a bérlőben.
 
 1. Jelentkezzen be az [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)-ba.
 2. Az **Intune** panelen válassza az  > ügyfélalkalmazások felderített**alkalmazások**elemet.
 
 >[!NOTE]
 >Exportálhatja a felderített alkalmazások listáját egy. csv-fájlba, ha kiválasztja az **Exportálás** lehetőséget a felderített **alkalmazások** panelen.
+>
+>A felderített Win32-alkalmazások esetében jelenleg nincsenek összesített darabszámok. Az ilyen típusú adattípusokat csak eszközönként lehet megtekinteni.
+
+Az Intune a bérlőben lévő egyes eszközök felderített alkalmazásainak listáját is megjeleníti. 
+
+1. Jelentkezzen be az [Intune](https://go.microsoft.com/fwlink/?linkid=2090973)-ba.
+2. Az Intune panelen válassza az **eszközök** > **minden eszköz**lehetőséget.
+3. Válassza ki az eszközt.
+4. Ha meg szeretné tekinteni az eszköz észlelt alkalmazásait, válassza a **figyelő** szakaszban a felderített **alkalmazások** elemet. 
 
 ## <a name="details-of-discovered-apps"></a>Felderített alkalmazások részletei
 

@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-classic
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7e595ee2353a1554d97e49af666d20642a631596
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: d05d9dd896321e48c3d1d9dec22cd0d1192dc0b6
+ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67549299"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533181"
 ---
 # <a name="implement-your-microsoft-intune-plan"></a>A Microsoft Intune-terv megvalósítása
 
@@ -42,7 +42,7 @@ Az önálló Intune-ra vonatkozó követelmények az alábbiak:
 
 - Azure AD Connect (címtár-szinkronizáláshoz)
 
-- Az Intune helyszíni összekötő az Exchange-hez (a feltételes hozzáférés a helyszíni Exchange-, ha szükséges)
+- Helyszíni Intune-összekötő Exchange-hez (a helyszíni Exchange-hez való feltételes hozzáféréshez, ha szükséges)
 
 - Intune Certificate Connector (SCEP-tanúsítvány telepítéséhez, ha szükséges)
 
@@ -53,7 +53,7 @@ Az önálló Intune-ra vonatkozó követelmények az alábbiak:
 
 13 különböző feladatot azonosítottunk az Intune üzembe helyezéséhez. Az üzleti követelményektől, a meglévő infrastruktúrától és az eszközkezelési stratégiától függően előfordulhat, hogy az alábbi feladatok közül néhányat már elvégzett. A terv másokra nem alkalmazható.
 
-### <a name="task-1-get-an-intune-subscription"></a>1\. feladat: Intune-előfizetés vásárlása
+### <a name="task-1-get-an-intune-subscription"></a>1\. feladat: Intune-előfizetés beszerzése
 
 Ahogyan azt a fenti Intune-követelmények szakaszban jeleztük, EMS- vagy Intune-előfizetésre van szüksége. Ha a szervezete még nem rendelkezik ezzel, vegye fel a kapcsolatot a Microsofttal vagy a Microsoft-fiók ügyfélszolgálatával az Enterprise Mobility + Security (EMS) vagy az Intune megvásárlásával kapcsolatban.
 
@@ -65,7 +65,7 @@ Ez a lépés nem kötelező. Office 365-előfizetésre akkor van szüksége, ha 
 
 - További információk az [Office 365 megvásárlásával](https://products.office.com/business/compare-office-365-for-business-plans) kapcsolatban.
 
-### <a name="task-3-add-users-groups-in-azure-ad"></a>3\. feladat: Felhasználói csoportok hozzáadása az Azure ad-ben
+### <a name="task-3-add-users-groups-in-azure-ad"></a>3\. feladat: Felhasználói csoportok hozzáadása az Azure AD-ben
 
 Az Intune üzembe helyezésének használatieset-forgatókönyvei és a követelmények függvényében szükség lehet felhasználók vagy biztonsági csoportok hozzáadására az Active Directoryban vagy az Azure Active Directoryban. Tekintse át az Active Directory vagy az Azure Active Directory jelenlegi felhasználóit és biztonsági csoportjait, és ellenőrizze, hogy mindenben megfelelnek-e a szükségleteknek. Új felhasználók és biztonsági csoportok hozzáadásakor javasoljuk, hogy az Active Directoryban adja őket hozzá, majd az Azure Active Directory Azure AD Connect szolgáltatásával szinkronizálja őket.
 
@@ -75,9 +75,9 @@ Az Intune üzembe helyezésének használatieset-forgatókönyvei és a követel
 
 
 
-### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>4\. feladat: Az Intune és az Office 365 felhasználói licencek hozzárendelése
+### <a name="task-4-assign-intune-and-office-365-user-licenses"></a>4\. feladat: Intune és Office 365 felhasználói licencek kiosztása
 
-Az EMS/Intune és az Office 365 bevezetésével érintett minden felhasználónak rendelkeznie kell egy hozzá rendelt licenccel. Az EMS/Intune és Office 365-licencek, a Microsoft 365 felügyeleti központban rendelhet.
+Az EMS/Intune és az Office 365 bevezetésével érintett minden felhasználónak rendelkeznie kell egy hozzá rendelt licenccel. Az EMS/Intune és az Office 365-licencek hozzárendelését a Microsoft 365 felügyeleti központban végezheti el.
 
 - További információ: [Intune-licencek hozzárendelése](licenses-assign.md).
 
@@ -87,7 +87,7 @@ Mielőtt elkezdené az eszközök beállítását, konfigurálását, felügyele
 
 - További információ: [a mobileszköz-kezelő szolgáltató beállítása](mdm-authority-set.md).
 
-### <a name="task-6-enable-device-platforms"></a>6\. feladat: Eszközplatformok engedélyezése
+### <a name="task-6-enable-device-platforms"></a>6\. feladat: Az eszközök platformjának engedélyezése
 
 Alapértelmezés szerint a legtöbb eszközplatform engedélyezve van, kivéve az Apple-eszközöket (iOS és Mac). Az iOS-eszközök Intune-beli regisztrálása és felügyelete előtt az eszközplatformot engedélyezni kell. Ehhez létre kell hoznia egy MDM leküldéses tanúsítványt, amelyet az Intune-hoz kell adnia.
 
@@ -105,7 +105,7 @@ Az Intune kétféle konfigurációs szabályzatot támogat: általános és egy�
 
 - További információk: [konfigurációs szabályzatok hozzáadása és telepítése](device-profiles.md).
 
-### <a name="task-9-add-and-deploy-resource-profiles"></a>9\. feladat: Adja hozzá, és erőforrás-profilok központi telepítése
+### <a name="task-9-add-and-deploy-resource-profiles"></a>9\. feladat: Erőforrás-profilok hozzáadása és telepítése
 
 Az Intune E-mail-, Wi-Fi- és VPN-profilokat támogat. A profilokat szükség szerint adja hozzá, és az Intune üzembe helyezésének használatieset-forgatókönyveit és a követelményeket figyelembe véve telepítse őket a célcsoportoknál.
 
@@ -123,9 +123,9 @@ Az Intune támogatja a megfelelőségi szabályzatok használatát. A megfelelő
 
 - További információ: [megfelelőségi szabályzatok](device-compliance.md).
 
-### <a name="task-12-enable-conditional-access-policies"></a>12. feladat: Feltételes hozzáférési szabályzat engedélyezése
+### <a name="task-12-enable-conditional-access-policies"></a>12. feladat: Feltételes hozzáférési szabályzatok engedélyezése
 
-Az Intune támogatja a feltételes hozzáférést az Exchange online-hoz, a helyszíni Exchange, SharePoint online-hoz, a Skype vállalati Online verzió és a Dynamics CRM Online. Engedélyezze és konfigurálja a feltételes hozzáférés megfelelő módon az Intune üzembe helyezési használati esetek és követelményeik alapján.
+Az Intune támogatja a feltételes hozzáférést az Exchange Online-hoz, a helyszíni Exchange-hez, a SharePoint Online-hoz, a Skype vállalati online verzióhoz és a Dynamics CRM Online-hoz. A feltételes hozzáférést az Intune üzembe helyezési használati eseteinek és követelményeinek megfelelően engedélyezheti és konfigurálhatja.
 
 - További tudnivalók [a feltételes hozzáférésről](conditional-access.md)
 
@@ -137,8 +137,4 @@ Az Intune az iOS, Mac OS, Android, Windows asztali és Windows Mobile eszközpla
 
 
 ## <a name="next-steps"></a>További lépések
-
-Az Intune bevezetési folyamatáról további információkat talál a [Microsoft Virtual Academy Intune-ról szóló részében](https://mva.microsoft.com/en-US/training-courses/deploying-microsoft-enterprise-mobility-suite-16408).
-
-
 Útmutató az [Intune üzembe helyezésének teszteléséről és ellenőrzéséről](planning-guide-test-validation.md).

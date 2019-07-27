@@ -6,7 +6,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/08/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 804c6485252883672de13bf13729b28a4d7d2f94
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: d76e170627d7e08cc3da6fe4a48eb14ee839de98
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67883837"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68590926"
 ---
 # <a name="windows-10-app-deployment-using-microsoft-intune"></a>Windows 10-es alkalmazások telepítése a Microsoft Intune-nal 
 
@@ -41,7 +41,7 @@ A Windows 10-es üzletági alkalmazások alá vannak írva és fel vannak töltv
 
 ## <a name="microsoft-store-for-business-apps"></a>Vállalati Microsoft Áruházbeli alkalmazások
 
-A Vállalati Microsoft Áruház felügyeleti portálján megvásárolt modern Vállalati Microsoft Áruházbeli alkalmazások a felügyelethez a Microsoft Intune-ra lesznek szinkronizálva. Az alkalmazások lehetnek **online licencelésűek** vagy **offline licencelésűek**. A Vállalati Microsoft Áruházbeli alkalmazások frissítéseit közvetlenül a Microsoft Áruház felügyeli, és nem kívánnak további rendszergazdai beavatkozást. A rendszergazda meg is akadályozhatja bizonyos alkalmazások frissítését egyéni egységes erőforrás-azonosító (Uniform Resource Identifier, URI) használatával. További információ: [Vállalati alkalmazásfelügyelet – Alkalmazás automatikus frissítésének megakadályozása](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Az eszközön a végfelhasználó is letilthatja az eszközön lévő összes Vállalati Microsoft Áruházbeli alkalmazás frissítéseit. 
+Az üzleti alkalmazások Microsoft Store a Microsoft Store for Business felügyeleti portálon vásárolt modern alkalmazások, amelyek ezután szinkronizálva lesznek a felügyelethez Microsoft Intune. Az alkalmazások lehetnek **online licencelésűek** vagy **offline licencelésűek**. A Microsoft Store for Business alkalmazások frissítéseit közvetlenül a Microsoft Store kezeli, és nincs szükség további beavatkozásra, a rendszergazdára. Egy egyéni Uniform Resource Identifier (URI) használatával megakadályozhatja, hogy bizonyos alkalmazások frissítései is meglegyenek. További információ: [Vállalati alkalmazásfelügyelet – Alkalmazás automatikus frissítésének megakadályozása](https://docs.microsoft.com/windows/client-management/mdm/enterprise-app-management#prevent-app-from-automatic-updates). Az eszközön a végfelhasználó is letilthatja az eszközön lévő összes Vállalati Microsoft Áruházbeli alkalmazás frissítéseit. 
 
 ## <a name="installing-apps-on-windows-10-devices"></a>Alkalmazások telepítése Windows 10-es eszközökön
 Az alkalmazás típusától függően az alkalmazás két módszer egyikével telepíthető Windows 10-es eszközre:

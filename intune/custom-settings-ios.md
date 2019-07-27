@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 37db7b6dcee7721f9d46af032be995029a20e2be
-ms.sourcegitcommit: c3a4fefbac8ff7badc42b1711b7ed2da81d1ad67
+ms.openlocfilehash: f75317678034a488e689461982550bbb0a8afad8
+ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375205"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68533149"
 ---
 # <a name="use-custom-settings-for-ios-devices-in-microsoft-intune"></a>Egyéni beállítások használata iOS-eszközökhöz a Microsoft Intune-ban
 
@@ -58,7 +58,7 @@ Ez a cikk útmutatást nyújt az Apple konfigurátor és az Apple-profil kezelő
 - **Egyéni konfigurációs profil neve**: Adja meg a szabályzat nevét. Ez a név megjelenik az eszközön, valamint az Intune állapotában.
 - **Konfigurációs profil fájlja**: Keresse meg a létrehozott konfigurációs profilt az Apple konfigurátor vagy az Apple Profile Manager használatával. Az importált fájl megjelenik a **Fájl tartalma** területen.
 
-  Az eszközök jogkivonatait is hozzáadhatja a `.mobileconfig` fájlokhoz. Az eszköz-jogkivonatok az eszközre vonatkozó információk hozzáadására szolgálnak. A sorozatszám megjelenítéséhez például írja be `{{serialnumber}}`a következőt:. Az eszközön a szöveg hasonló `123456789ABC` módon jelenik meg, amely minden eszköz esetében egyedi. A változók beírásakor ügyeljen arra, hogy kapcsos zárójeleket `{{ }}`használjon. Az [alkalmazás-konfigurációs tokenek](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) tartalmazzák a használható változók listáját. Használhatja a `deviceid` vagy bármely más eszközre jellemző értéket is.
+  Az egyéni konfigurációs fájlokhoz is hozzáadhat eszköz-jogkivonatokat. Az eszköz-jogkivonatok az eszközre vonatkozó információk hozzáadására szolgálnak. A sorozatszám megjelenítéséhez például írja be `{{serialnumber}}`a következőt:. Az eszközön a szöveg hasonló `123456789ABC` módon jelenik meg, amely minden eszköz esetében egyedi. A változók beírásakor ügyeljen arra, hogy kapcsos zárójeleket `{{ }}`használjon. Az [alkalmazás-konfigurációs tokenek](app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) tartalmazzák a használható változók listáját. Használhatja a `deviceid` vagy bármely más eszközre jellemző értéket is.
 
   > [!NOTE]
   > A rendszer nem érvényesíti a változókat a felhasználói felületen, és megkülönbözteti a kis-és nagybetűket. Ennek eredményeképpen előfordulhat, hogy a profilok helytelen bevitelsel lettek mentve. Ha például a `{{deviceid}}`helyett a értéket `{{DeviceID}}` adja meg, akkor az eszköz egyedi azonosítója helyett a literál sztring jelenik meg. Ügyeljen arra, hogy a helyes adatokat adja meg.
