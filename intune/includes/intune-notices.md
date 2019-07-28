@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: d907c5256469e86410c9916d117d3e322d43cfc3
-ms.sourcegitcommit: 2614d1b08b8a78cd792aebd2ca9848f391df8550
+ms.openlocfilehash: eec9a275a87b3e1bcfc42e197d95b4a4b315d018
+ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67812473"
+ms.lasthandoff: 07/27/2019
+ms.locfileid: "68591066"
 ---
 Ezek a hirdetmények olyan fontos információkat tartalmaznak, amelyek segíthetnek a jövőbeli Intune-változások és-funkciók előkészítésében. 
 
@@ -51,13 +51,13 @@ Ha a O365 Mobile apps iOS 11,0-es és újabb verziókban is támogatott, akkor e
 - iPhone 5c
 - iPad (4. generáció)
 
-A júliustól kezdődően az iOS 10-es MDM regisztrált eszközök, a Céges portál pedig az operációs rendszer vagy az eszköz frissítésére vonatkozó kérést kapnak. Ha alkalmazás-védelmi házirendeket (alkalmazást) használ, beállíthatja az "iOS minimálisan szükséges operációs rendszer (csak figyelmeztetés)" hozzáférési beállítást is.
+A júliustól kezdődően az iOS 10-es MDM regisztrált eszközök, a Céges portál pedig az operációs rendszer vagy az eszköz frissítésére vonatkozó kérést kapnak. Ha alkalmazás-védelmi házirendeket (alkalmazást) használ, a "minimális iOS operációs rendszer megkövetelése (csak figyelmeztetés)" hozzáférési beállítást is beállíthatja.
 
 #### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
 Tekintse meg az Intune-jelentéskészítést, hogy megtekintse, milyen eszközökre vagy felhasználókra lehet hatással. Válassza az **eszközök** > **minden eszköz** lehetőséget, és szűrje az operációs rendszer alapján. További oszlopokat is hozzáadhat, amelyekkel azonosítható, hogy a szervezeten belül kik rendelkeznek iOS 10 rendszerű eszközökkel. Kérje meg, hogy a végfelhasználók szeptember előtt frissítsenek eszközeiket egy támogatott operációsrendszer-verzióra.
 
 ### <a name="plan-for-change-support-for-version-811-and-higher-of-intune-app-sdk-for-ios----3586942--"></a>Tervezze meg a változást: Az iOS-hez készült Intune app SDK 8.1.1 és újabb verziójának támogatása <!-- 3586942-->
-Az Intune 2019-től kezdve az iOS-alkalmazások támogatásához az Intune app SDK 8.1.1 és újabb verzióit fogja támogatni. A 8.1.1-nál kisebb SDK-verziókkal létrehozott alkalmazások már nem támogatottak. Ez a módosítás hatályba lép az Apple iOS 13 kiadásával, amely várhatóan szeptemberben érkezik, és a MC181399-ben jelent meg.
+Az Intune 2019-től kezdve az iOS-alkalmazások támogatásához az Intune app SDK 8.1.1 és újabb verzióit fogja támogatni. A 8.1.1-nál kisebb SDK-verziókkal létrehozott alkalmazások már nem támogatottak. Ez a változás az Apple iOS 13 kiadásával lép érvénybe, amely várhatóan szeptembertől kezdődően, illetve a MC181399-ben is jelent meg.
 
 #### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
 Az Intune app SDK-val vagy az alkalmazások csomagolásának integrálásával az adatok titkosításával biztosíthatja a nem jóváhagyott alkalmazásokból és felhasználóktól származó vállalati adatok védelmet. Az iOS-hez készült Intune app SDK a 256 bites titkosítási kulcsokat alapértelmezés szerint a Intune App Protection szabályzatok (alkalmazás) általi titkosítás engedélyezésekor fogja használni. Ennek a változásnak a megkezdése után minden, a 128 bites titkosítási kulcsokat használó SDK-verzióhoz tartozó iOS-alkalmazás a továbbiakban nem fogja tudni megosztani az SDK-8.1.1 integrált és a 256 bites kulcsokat használó alkalmazásokkal rendelkező 8.1.1. A védett adatmegosztás engedélyezéséhez minden iOS-alkalmazáshoz 8.1.1 vagy újabb SDK-verzió szükséges.
@@ -74,7 +74,7 @@ A dokumentációt és a fejlesztői útmutatót is frissítenie kell, ha ez a m�
 https://docs.microsoft.com/intune/apps-prepare-mobile-application-management
 
 ### <a name="plan-for-change-new-windows-updates-settings-in-intune----4464404---"></a>Tervezze meg a változást: Új Windows Update-beállítások az Intune-ban <!-- 4464404 -->
-Az Intune szolgáltatásra vagy a 1908-re vonatkozó augusztusi kiadástól kezdődően új "határidő-beállításokat" adunk hozzá, amelyek a "felhasználó újraindításának engedélyezése (lefoglalt újraindítás)" beállítások helyett konfigurálhatók. Azt tervezzük, hogy letiltjuk a bekapcsolt újraindítási beállításokat a felhasználói felületen a 1909-as vagy a szeptemberi frissítés után, majd a konzolról teljesen el kell távolítani őket a konzolról október végére. 
+Az Intune szolgáltatás vagy a 1908 új "határidő-beállítások" részének megadásával kezdődően a "felhasználó újraindításának engedélyezése (lefoglalt újraindításkor)" beállítások helyett a következő beállításokat vesszük igénybe. Azt tervezzük, hogy letiltjuk a bekapcsolt újraindítási beállításokat a felhasználói felületen a 1909-as vagy a szeptemberi frissítés után, majd a konzolról teljesen el kell távolítani őket a konzolról október végére. 
 
 #### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
 Ha Windows 10-es eszközöket kezel a környezetben: 
@@ -83,8 +83,27 @@ Ha Windows 10-es eszközöket kezel a környezetben:
 - A határidő beállításai lecserélik a "felhasználó újraindításának engedélyezése (a művelet újraindítása)" beállítást a konzolon a 1910-es frissítésben.
 
 #### <a name="what-can-i-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
-Az 1908-as határidő-beállítások használatával kezdje meg a kívánt értékeket beállítani. Ha ezt megtörtént, beállíthatja a bekapcsolt újraindítási beállítást a "nincs konfigurálva" értékre, hogy előkészítse ezeket az eltávolítást a konzolról októberben.
+Az 1908-as határidő-beállítások használatával kezdje meg a kívánt értékeket beállítani. Ha ezt megtörtént, beállíthatja, hogy a kapcsolódó újraindítási beállítás "nincs konfigurálva" értékűre készüljön, hogy előkészítse ezeket a beállításokat a konzolról októberben.
 
 Szükség esetén frissítse a dokumentációt és az Automation-parancsfájlokat. 
 
 Folyamatosan frissítjük, és egy emlékeztetőt teszünk közzé az üzenetközpont előtt, mielőtt eltávolítjuk a befoglalt újraindítási beállításokat.
+
+### <a name="plan-for-change-intune-app-sdk-and-app-protection-policies-for-android-moving-to-support-android-50-and-higher-in-october---4911065---"></a>Tervezze meg a változást: Az Android 5,0-es és újabb verzióinak támogatásához az Intune app SDK és az alkalmazás-védelmi szabályzatok október <!--4911065 -->
+Az Intune az Android 5. x (nyalóka) és újabb verzióinak támogatására lesz áthelyezve. Frissítheti az összes burkolt alkalmazást a legújabb Intune app SDK-val, és frissítheti az eszközeit.
+
+#### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
+Ha nem használja az SDK-t vagy az alkalmazást az Androidhoz, akkor ez a változás nem érinti Önt. Ha az Intune app SDK-t használja, frissítsen a legújabb verzióra, és frissítse az eszközeit az Android 5. x vagy újabb verziójára. Ha nem frissíti, az alkalmazások nem kapják meg a frissítéseket, és a tapasztalatok minősége idővel csökken. 
+
+Az alábbi listában megtalálhatja az Intune-ban regisztrált általános eszközök listáját, amelyek az Android 4. x verzióját futtatják. Ha rendelkezik ezekkel az eszközökkel, hajtsa végre a megfelelő lépéseket annak biztosításához, hogy az eszköz támogassa az Android 5,0-es vagy újabb verzióját, vagy hogy a rendszer az Android 5,0-es vagy újabb verzióját támogató eszközre cserélje. Ez a lista nem teljes körű a kiértékeléshez szükséges összes eszközről:
+- Samsung SM – T561  
+- Samsung SM – T365 
+- Samsung GT – I9195 
+- Samsung SM – G800F
+- Samsung SM – G357FZ
+- Motorola XT1080
+- Samsung GT – I9305
+- Samsung SM – T231
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
+Alkalmazások becsomagolása a legújabb Intune app SDK-val. Az "a minimális operációsrendszer-verzió megkövetelése (csak figyelmeztetés)" beállítást is beállíthatja a feltételes indítási beállítással, hogy a végfelhasználók tájékoztassák a felhasználókat a személyes eszközökről.
