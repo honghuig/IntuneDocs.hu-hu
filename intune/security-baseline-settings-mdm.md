@@ -5,7 +5,7 @@ description: Az Intune biztonsági alapbeállításai a Windows 10 felügyeleté
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/20/2019
+ms.date: 07/25/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 7f70d54404dc20d6d6aabd5974dff9c5102b759f
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
-ms.translationtype: HT
+ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
+ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882300"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68491911"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>MDM biztonsági alapkonfigurációjának beállításai az Intune-ban  
 
@@ -1773,7 +1773,12 @@ További információ: [2.2.2 FW_PROFILE_TYPOE]( https://docs.microsoft.com/open
   **Alapértelmezett**: Igen
 
 - **A vállalati Windows Hello konfigurálása**   
-  A vállalati Windows Hello egy alternatív módszer a Windowsba való bejelentkezéshez jelszavak, intelligens kártyák és virtuális intelligens kártyák helyett. Ha engedélyezi vagy nem konfigurálja ezt a házirend-beállítást, az eszköz kiépíti a vállalati Windows Hello-t. Ha letiltja ezt a házirend-beállítást, az eszköz nem helyezi üzembe a Windows Hello for businesst bármely felhasználó számára.
+    A vállalati Windows Hello egy alternatív módszer a Windowsba való bejelentkezéshez jelszavak, intelligens kártyák és virtuális intelligens kártyák helyett.  
+
+  - Ha az *Igen*értékre van állítva, akkor engedélyezi ezt a házirendet, és az eszköz kiépíti a vállalati Windows Hello-t.  
+  - Ha a *nincs konfigurálva*értékre van állítva, az alapterv nem befolyásolja az eszköz házirend-beállítását. Ez azt jelenti, hogy ha a vállalati Windows Hello le van tiltva egy eszközön, az továbbra is le lesz tiltva. Ha engedélyezve van, az továbbra is engedélyezett marad. 
+
+  A vállalati Windows Hello nem tiltható le ezen alapterven keresztül. A Windows Hello for Business letiltható a [Windows-regisztráció](windows-hello.md)konfigurálásakor, vagy az [Identity Protection](identity-protection-configure.md)eszköz konfigurációs profiljának részeként.  
 
   **Alapértelmezett**: Igen
 
