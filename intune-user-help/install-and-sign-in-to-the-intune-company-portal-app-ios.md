@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2018
+ms.date: 07/26/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,22 +18,22 @@ ms.reviewer: esmich
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 494269b82840331041ac2607ea853dbfb1d979de
-ms.sourcegitcommit: bccfbf1e3bdc31382189fc4489d337d1a554e6a1
+ms.openlocfilehash: 3c764d0bf5cccecef692b8efe1e45af383584cd2
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67546321"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625061"
 ---
 # <a name="install-and-sign-in-to-the-company-portal-app"></a>A Céges portál alkalmazás telepítése, majd bejelentkezés a portálra
 
 A Céges portál alkalmazás iOS rendszerű eszközére történő telepítésével hozzáférhet munkahelyi és iskolai alkalmazásaihoz, e-mailjeihez és hálózatához. Az alkalmazással regisztrálhatja az eszközét a Microsoft Intune-ba, és biztonságossá teheti a munkahelyi és iskolai erőforrásokhoz való hozzáférését. További információkat a [Mi történik a Vállalati portál alkalmazás telepítésekor és az eszköz Intune-beli regisztrálásakor?](what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md) című részben talál.
 
-1. Nyissa meg az **App Store-t**, és keressen rá az **intune céges portál** kifejezésre.
+1. Nyissa meg az **App Store-t**, és keressen rá az **Intune céges portál** kifejezésre.
 
 2. Töltse le a **Intune Vállalati portál** alkalmazást.
 
-    ![Képernyőkép az Intune Vállalati portál alkalmazás megjelenéséről az App Store-ban.](./media/CP_iosRedesign_after_1803_04.PNG)
+    ![Képernyőkép az Intune Vállalati portál alkalmazás megjelenéséről az App Store-ban.](./media/cp-ios-redesign-after-1904.PNG)  
 
 3. Nyissa meg a Vállalati portál alkalmazást, és írja be a munkahelyi vagy az iskolai e-mail címét és jelszavát, majd koppintson a **Bejelentkezés** elemre.
 

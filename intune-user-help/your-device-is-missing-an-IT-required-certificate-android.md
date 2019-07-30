@@ -5,7 +5,7 @@ keywords: ''
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/04/2017
+ms.date: 07/29/2019
 ms.topic: article
 ms.prod: ''
 ms.service: microsoft-intune
@@ -18,25 +18,36 @@ ms.reviewer: arnab
 ms.suite: ems
 ms.custom: intune-enduser
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6bdf97e6a36a49bc6df5a182af7676c357440f3e
-ms.sourcegitcommit: 7315fe72b7e55c5dcffc6d87f185f3c2cded9028
+ms.openlocfilehash: d44af8f40243596bda58d610b369db6f54be6d1e
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67529326"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625119"
 ---
-# <a name="your-android-device-is-missing-a-certificate-required-by-your-company-support"></a>Az androidos eszközhöz hiányzik egy, a cég informatikai támogató szolgálata által kért tanúsítvány
+# <a name="install-missing-certificate-required-by-your-organization"></a>A szervezet által igényelt hiányzó tanúsítvány telepítése  
 
 Ha az eszköz nincs regisztrálva az Intune-ban, és hiányzik róla egy, a cég informatikai támogatási szolgálata által kért tanúsítvány, nem fog tudni bejelentkezni a Céges portál alkalmazásba. Amikor megpróbál bejelentkezni, a következő üzenet jelenik meg:
 
 ![képernyőfelvétel-hibaüzenet-hiányzó-tanúsítványról](./media/andr-cert_install-1-cert_missing.png)
 
-A probléma megoldásához és a szükséges tanúsítvány beszerzéséhez hajtsa végre a következő két fő lépést:
+Két lehetőség közül választhat, ha le szeretné tölteni a szükséges tanúsítványt, és az eszköz regisztrálva lesz. 
 
-- Azonosítsa a hiányzó tanúsítványt azáltal, hogy megtekinti egy vállalati vagy iskolai számítógépen.
-- Használja az eszközt a hiányzó tanúsítvány letöltéséhez az internetről.
+- Böngésző-hozzáférés engedélyezése Céges portál alkalmazásban.
+- Azonosítsa a hiányzó tanúsítványt a vállalat vagy az iskola SZÁMÍTÓGÉPén. Ezután keressen rá az interneten a hiányzó tanúsítvány letöltéséhez. 
 
-## <a name="identify-the-missing-certificate-by-looking-on-a-company-or-school-pc"></a>Azonosítsa a hiányzó tanúsítványt azáltal, hogy megtekinti egy vállalati vagy iskolai számítógépen
+Végezze el a böngészőalapú hozzáférés engedélyezésének lépéseit. Ezt követően, ha továbbra sem tudja regisztrálni az eszközt, kövesse az interneten található tanúsítvány megkereséséhez szükséges lépéseket. 
+
+## <a name="enable-browser-access"></a>Böngészőalapú hozzáférés engedélyezése
+A böngésző elérésének engedélyezéséhez hajtsa végre a következő lépéseket. A hozzáférés engedélyezése után Céges portál telepíti a megfelelő tanúsítványt, és folytatja a regisztrálást.    
+
+1. A Céges portál alkalmazásban lépjen a jobb oldali sarokba, és válassza ki a menüt.  
+2. Válassza ki **beállítások**.  
+3. A **böngésző-hozzáférés engedélyezése lehetőség** mellett válassza az **Engedélyezés**lehetőséget.  
+4. Az eszköz rendszergazdája képernyőn válassza az **aktiválás**lehetőséget. 
+
+## <a name="identify-and-download-the-missing-certificate-through-web-search"></a>A hiányzó tanúsítvány azonosítása és letöltése webes kereséssel
+A következő lépések végrehajtásával manuálisan azonosíthatja és telepítheti a tanúsítványt az eszközön.  
 
 1. Nyissa meg egy számítógépen az Internet Explorert. Ha nincs erre a célra használható számítógépe, forduljon a cég informatikai támogató szolgálatához. A cég informatikai támogató szolgálatának elérhetőségét a [Céges portál webhelyén](https://go.microsoft.com/fwlink/?linkid=2010980) találja.
 
@@ -52,15 +63,13 @@ A probléma megoldásához és a szükséges tanúsítvány beszerzéséhez hajt
 
     ![képernyőfelvétel-internet-explorer-tanúsítvány-megtekeintése-gomb-webhely-azonosítási-párbeszédpanelén](./media/andr-missg-cert-ie-view-cert-button.png)
 
-5. A **Tanúsítvány** párbeszédpanelen válassza a **Tanúsítványlánc** elemet, majd azonosítsa a tanúsítványt, amelyet le kell töltenie az internetről. A szükséges tanúsítvány neve ugyanazon a helyen lesz, mint az előbbi képernyőfelvételen kiemelt tanúsítványé.
+5. Válassza a **tanúsítvány elérési útja** fület, majd azonosítsa a tanúsítványt, amelyet az internetről kell lekérnie. A szükséges tanúsítvány neve ugyanazon a helyen lesz, mint az előbbi képernyőfelvételen kiemelt tanúsítványé.
 
-## <a name="download-and-install-the-missing-certificate-on-your-android-mobile-device"></a>Töltse le és telepítse a hiányzó tanúsítványt Android-mobileszközére
+6. Ha keresőmotort, például Binget vagy Google-t használ, keressen rá az előző szakaszban azonosított hiányzó tanúsítvány nevére. A tanúsítvány különböző „kiterjesztésekkel” rendelkezhet, például „.crt”, „.pem” stb.
 
-1. Ha keresőmotort, például Binget vagy Google-t használ, keressen rá az előző szakaszban azonosított hiányzó tanúsítvány nevére. A tanúsítvány különböző „kiterjesztésekkel” rendelkezhet, például „.crt”, „.pem” stb.
+7. Töltse le a főtanúsítványt a webhelyről.
 
-2. Töltse le a főtanúsítványt a webhelyről.
-
-3. Miután a tanúsítvány letöltése befejeződött, húzza le az értesítéseket fentről, és koppintson a tanúsítvány nevére az értesítések listájában.
+8. Miután a tanúsítvány letöltése befejeződött, húzza le az értesítéseket fentről, és koppintson a tanúsítvány nevére az értesítések listájában.
 
 4. Az alábbi képernyőképen látható **Name the Certificate** (A tanúsítvány elnevezése) párbeszédpanelben fogadja el az alapértelmezett tanúsítványnevet.
 

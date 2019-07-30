@@ -5,7 +5,7 @@ keywords: ''
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/10/2019
+ms.date: 07/29/2019
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: ''
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 673dd0cb751fcdd2a7036dc2bf52dd731a4b04ff
-ms.sourcegitcommit: 8d12ab22e23552f9addaef4c28b732fb211945a2
+ms.openlocfilehash: e8f5f67661dbf33f2b0d6b44e32302a874c3f4de
+ms.sourcegitcommit: 3baa9965095bb874d9b8c7a3cbb4aa925ed52cae
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68306754"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68625087"
 ---
 # <a name="microsoft-intune-app-sdk-for-ios-developer-guide"></a>A Microsoft Intune App SDK iOS rendszeren – fejlesztői útmutató
 
@@ -65,22 +65,22 @@ A következő fájlok tartoznak az összes alkalmazáshoz/egységhez:
 
 Az alábbi fejlécfájlok tartalmazzák azokat az API-kat, adattípusokat és protokollokat, melyek az Intune APP SDK-val elérhetővé válnak a fejlesztők számára:
 
-    * IntuneMAMAppConfig.h
-    * IntuneMAMAppConfigManager.h
-    * IntuneMAMDataProtectionInfo.h
-    * IntuneMAMDataProtectionManager.h
-    * IntuneMAMDefs.h
-    * IntuneMAMDiagnosticConsole. h
-    * IntuneMAMEnrollmentDelegate.h
-    * IntuneMAMEnrollmentManager.h
-    * IntuneMAMEnrollmentStatus.h
-    * IntuneMAMFileProtectionInfo.h
-    * IntuneMAMFileProtectionManager.h
-    * IntuneMAMLogger.h
-    * IntuneMAMPolicy.h
-    * IntuneMAMPolicyDelegate.h
-    * IntuneMAMPolicyManager.h
-    * IntuneMAMVersionInfo.h
+-  IntuneMAMAppConfig.h
+-  IntuneMAMAppConfigManager.h
+-  IntuneMAMDataProtectionInfo.h
+-  IntuneMAMDataProtectionManager.h
+-  IntuneMAMDefs.h
+-  IntuneMAMDiagnosticConsole. h
+-  IntuneMAMEnrollmentDelegate.h
+-  IntuneMAMEnrollmentManager.h
+-  IntuneMAMEnrollmentStatus.h
+-  IntuneMAMFileProtectionInfo.h
+-  IntuneMAMFileProtectionManager.h
+-  IntuneMAMLogger.h
+-  IntuneMAMPolicy.h
+-  IntuneMAMPolicyDelegate.h
+-  IntuneMAMPolicyManager.h
+-  IntuneMAMVersionInfo.h
 
 A fejlesztők a IntuneMAM. h fájl importálásával is elérhetővé tehetik az összes korábbi fejléc tartalmát.
 
@@ -130,17 +130,17 @@ Az Intune App SKD engedélyezéséhez kövesse az alábbi lépéseket:
     > * Az Intune SDK API-k Swift-ben elérhetővé tétele egy modul-importálási utasítással (pl.: import IntuneMAMSwift) jelenleg nem támogatott. Az ajánlott módszer a Objective-C áthidaló fejléc használata.
     
 3. Vegye fel a következő iOS-keretrendszereket a projektbe:  
-    * MessageUI.framework  
-    * Security.framework  
-    * MobileCoreServices.framework  
-    * SystemConfiguration.framework  
-    * libsqlite3.tbd  
-    * libc++.tbd  
-    * ImageIO.framework  
-    * LocalAuthentication.framework  
-    * AudioToolbox.framework  
-    * QuartzCore.framework  
-    * WebKit.framework
+-  MessageUI.framework  
+-  Security.framework  
+-  MobileCoreServices.framework  
+-  SystemConfiguration.framework  
+-  libsqlite3.tbd  
+-  libc++.tbd  
+-  ImageIO.framework  
+-  LocalAuthentication.framework  
+-  AudioToolbox.framework  
+-  QuartzCore.framework  
+-  WebKit.framework
 
 4. Engedélyezze a kulcsláncmegosztást (ha még nincs engedélyezve) a projekthez használni kívánt elemeken a **Capabilities** (Képességek) lehetőségre kattintva, majd kapcsolja be a **Keychain Sharing** (Kulcsláncmegosztás) kapcsolót. A következő lépéshez szükséges a kulcsláncmegosztás.
 
@@ -249,16 +249,16 @@ Egy részükről már volt szó korábbi szakaszokban, más részük pedig nem v
 
 Beállítás  | Type  | Meghatározás | Kötelező?
 --       |  --   |   --       |  --
-ADALClientId  | Karakterlánc  | Az alkalmazás Azure AD ügyfél-azonosítója. | Kötelező, ha az alkalmazás használja az ADAL-t. |
+ADALClientId  | Sztring  | Az alkalmazás Azure AD ügyfél-azonosítója. | Kötelező, ha az alkalmazás használja az ADAL-t. |
 ADALAuthority | Sztring | Az alkalmazás használatban lévő Azure AD-szolgáltatója. Használja azt a saját környezetet, ahol az AAD-fiókok konfigurálása megtörtént. | Kötelező, ha az alkalmazás használja az ADAL-t. Ha ez az érték hiányzik, a rendszer egy Intune-beli alapértelmezett értéket használ.|
-ADALRedirectUri  | Karakterlánc  | Az alkalmazás Azure AD átirányítási URI-ja. | Az ADALRedirectUri vagy az ADALRedirectScheme kötelező, ha az alkalmazás használja az ADAL-t.  |
+ADALRedirectUri  | Sztring  | Az alkalmazás Azure AD átirányítási URI-ja. | Az ADALRedirectUri vagy az ADALRedirectScheme kötelező, ha az alkalmazás használja az ADAL-t.  |
 ADALRedirectScheme  | Sztring  | Az alkalmazás Azure AD átirányítási sémája. Használható az ADALRedirectUri helyett, ha az alkalmazás átirányítási URI-ja `scheme://bundle_id` formátumú. | Az ADALRedirectUri vagy az ADALRedirectScheme kötelező, ha az alkalmazás használja az ADAL-t. |
 ADALLogOverrideDisabled | Logikai  | Megadásával az SDK átirányítja az összes ADAL-naplófájlt (beleértve az esetleges ADAL-hívásokat az alkalmazásból) a saját naplófájljába. Az alapértelmezett érték a Nem. Állítsa be a YES értéket, ha az alkalmazás visszahívja a saját ADAL-naplóját. | Választható. |
 ADALCacheKeychainGroupOverride | Sztring  | Az ADAL-gyorsítótárhoz a „com.microsoft.adalcache” helyett használandó kulcslánccsoportot adja meg. Vegye figyelembe, hogy ez nem tartalmazza az app-id előtagot. Ezt az előtagot futás közben fogja megkapni a sztring. | Választható. |
 AppGroupIdentifiers | Sztringtömb  | Az alkalmazáscsoportok tömbje az alkalmazás jogosultságainak com.apple.security.application-groups szakaszában. | Szükséges, ha az alkalmazás alkalmazáscsoportokat használ. |
 ContainingAppBundleId | Sztring | Megadja a bővítményt tartalmazó alkalmazás csomagazonosítóját. | IOS-bővítményekhez szükséges. |
 DebugSettingsEnabled| Logikai | Ha YES értékű, használhatók a Settings csomagban található tesztszabályzatok. Az alkalmazásokat *tilos* úgy szállítani, hogy engedélyezve van bennük ez a beállítás. | Választható. Az alapértelmezett érték a nem.|
-MainNibFile <br> MainNibFile~ipad  | Karakterlánc  | Ennek a beállításnak tartalmaznia kell az alkalmazás fő Nib-fájljának nevét.  | Kötelező, ha az alkalmazás a MainNibFile-t az Info.plist fájlban definiálja. |
+MainNibFile <br> MainNibFile~ipad  | Sztring  | Ennek a beállításnak tartalmaznia kell az alkalmazás fő Nib-fájljának nevét.  | Kötelező, ha az alkalmazás a MainNibFile-t az Info.plist fájlban definiálja. |
 MainStoryboardFile <br> MainStoryboardFile~ipad  | Sztring  | Ennek a beállításnak tartalmaznia kell az alkalmazás fő storyboard-fájljának nevét. | Kötelező, ha az alkalmazás a UIMainStoryboardFile-t az Info.plist fájlban definiálja. |
 MAMPolicyRequired| Logikai| Azt adja meg, hogy megakadályozza-e a rendszer az alkalmazás elindítását, ha az alkalmazásnak nincs Intune APP-szabályzata. Az alapértelmezett érték a Nem. <br><br> Megjegyezés: Az alkalmazás nem küldhető el az App Store-ba az MAMPolicyRequired beállítás Igen értékre állításával. | Választható. Az alapértelmezett érték a nem.|
 MAMPolicyWarnAbsent | Logikai| Azt adja meg, hogy figyelmeztesse-e az alkalmazás a felhasználót indítás közben, ha az alkalmazásnak nincs Intune APP-szabályzata. <br><br> Megjegyezés: A felhasználók továbbra is használhatják az alkalmazást házirend nélkül, miután elutasította a figyelmeztetést. | Választható. Az alapértelmezett érték a nem. |
@@ -266,11 +266,11 @@ MultiIdentity | Logikai| Azt adja meg, hogy az alkalmazás képes-e kezelni a t�
 SplashIconFile <br> SplashIconFile ~ ipad | Sztring  | Az Intune-kezdőképet (indítóképernyőt) tartalmazó ikonfájlt határozza meg. | Választható. |
 SplashDuration | Szám | Az Intune-kezdőképernyő megjelenésének minimális időtartama (másodpercben) az alkalmazás indításakor. Az alapértelmezett érték 1.5. | Választható. |
 BackgroundColor| Sztring| A kezdő- és a PIN-kód bevitelére szolgáló képernyő háttérszínét adja meg. Hexadecimális RGB-sztringet fogad el „#XXXXXX” alakban, amelyben az X-ek helyén számjegy (0–9), illetve és A és F közötti nagybetű állhat. A kettőskereszt jel kihagyható.   | Választható. Alapértelmezése a világosszürke szín. |
-ForegroundColor| Sztring| Megadja az indítási és a PIN-kód (például a szöveg színe) képernyő előtéri színét. Hexadecimális RGB-sztringet fogad el „#XXXXXX” alakban, amelyben az X-ek helyén számjegy (0–9), illetve és A és F közötti nagybetű állhat. A kettőskereszt jel kihagyható.  | Választható. Alapértelmezett értéke a fekete. |
-AccentColor | Karakterlánc| Meghatározza a PIN-kód képernyő ékezetes színét, például a gomb szövegének színét és a mező kiemelésének színét. Hexadecimális RGB-sztringet fogad el „#XXXXXX” alakban, amelyben az X-ek helyén számjegy (0–9), illetve és A és F közötti nagybetű állhat. A kettőskereszt jel kihagyható.| Választható. Alapértéke a rendszer kék színe. |
+ForegroundColor| Karakterlánc| Megadja az indítási és a PIN-kód (például a szöveg színe) képernyő előtéri színét. Hexadecimális RGB-sztringet fogad el „#XXXXXX” alakban, amelyben az X-ek helyén számjegy (0–9), illetve és A és F közötti nagybetű állhat. A kettőskereszt jel kihagyható.  | Választható. Alapértelmezett értéke a fekete. |
+AccentColor | Sztring| Meghatározza a PIN-kód képernyő ékezetes színét, például a gomb szövegének színét és a mező kiemelésének színét. Hexadecimális RGB-sztringet fogad el „#XXXXXX” alakban, amelyben az X-ek helyén számjegy (0–9), illetve és A és F közötti nagybetű állhat. A kettőskereszt jel kihagyható.| Választható. Alapértéke a rendszer kék színe. |
 MAMTelemetryDisabled| Logikai| Az határozható meg vele, hogy az SDK ne küldjön telemetriai adatokat a háttérrendszerének.| Választható. Az alapértelmezett érték a nem. |
 MAMTelemetryUsePPE | Logikai | Itt adhatja meg, hogy a MAM SDK-t küldjön-e adatokat a PPE telemetriai háttérrendszernek. Akkor használja ezt a beállítást, ha teszteli az alkalmazásokat az Intune szabályzatával. Megakadályozhatja vele, hogy a teszt telemetriai adatai keveredjenek az ügyfelek adataival. | Választható. Az alapértelmezett érték a nem. |
-MaxFileProtectionLevel | Karakterlánc | Választható. Itt engedélyezheti az alkalmazásnak az által támogatott maximális `NSFileProtectionType` szintnek a meghatározását. Ez az érték felülbírálja a szolgáltatás által küldött szabályzatot, ha a szint magasabb, mint amit az alkalmazás támogatni képes. A lehetséges értékek: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
+MaxFileProtectionLevel | Sztring | Választható. Itt engedélyezheti az alkalmazásnak az által támogatott maximális `NSFileProtectionType` szintnek a meghatározását. Ez az érték felülbírálja a szolgáltatás által küldött szabályzatot, ha a szint magasabb, mint amit az alkalmazás támogatni képes. A lehetséges értékek: `NSFileProtectionComplete`, `NSFileProtectionCompleteUnlessOpen`, `NSFileProtectionCompleteUntilFirstUserAuthentication`, `NSFileProtectionNone`.|
 OpenInActionExtension | Logikai | A beállítása YES a műveleti bővítményekben való megnyitáshoz. További információért lásd az Adatok megosztása az UIActivityViewController használatával szakaszt. |
 WebViewHandledURLSchemes | Sztringek tömbje | Az alkalmazás WebView-ja által kezelt URL-sémát határozza meg. | Kötelező, ha az alkalmazás olyan WebView-t használ, amely az URL-címeket hivatkozásokkal és/vagy javascripttel kezeli. |
 
