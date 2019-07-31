@@ -1,6 +1,6 @@
 ---
 title: Hálózati hozzáférés-vezérlés integrálása a Microsoft Intune-nal – Azure | Microsoft Docs
-description: A hálózati hozzáférés-vezérlési (NAC) megoldások az Intune-beli eszközök regisztrációját és megfelelőségét ellenőrzik. A NAC bizonyos viselkedéseinek tartalmazza, és a feltételes hozzáféréssel működik. Tekintse meg az előkészítés lépéseit, valamint a partneri megoldásokat.
+description: A hálózati hozzáférés-vezérlési (NAC) megoldások az Intune-beli eszközök regisztrációját és megfelelőségét ellenőrzik. A NAC bizonyos viselkedéseket tartalmaz, és feltételes hozzáféréssel működik. Tekintse meg az előkészítés lépéseit, valamint a partneri megoldásokat.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 926d31e226bd25890afe5214b9e8c9247f7316a2
-ms.sourcegitcommit: ede86a3cb094c12e3e218b956abb9935bec76902
+ms.openlocfilehash: d0f155a9a4900ed10b2030af3c80c13def0bb82e
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67572186"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660913"
 ---
 # <a name="network-access-control-nac-integration-with-intune"></a>Hálózati hozzáférés-vezérlés (NAC) integrálása az Intune-nal
 
@@ -43,13 +43,13 @@ Azon eszközök esetében, melyek erőforrásokhoz való hozzáférése le van t
 
 ## <a name="nac-and-conditional-access"></a>NAC és feltételes hozzáférés
 
-A NAC feltételes hozzáférés használatával hoz hozzáférés-vezérlési döntéseket. További információkért lásd: [az Intune-nal feltételes hozzáférés használatának szokásos módjai](conditional-access-intune-common-ways-use.md).
+A NAC feltételes hozzáféréssel működik a hozzáférés-vezérlési döntések biztosításához. További információ: a [feltételes hozzáférés használatának gyakori módjai az Intune](conditional-access-intune-common-ways-use.md)-ban.
 
 ## <a name="how-the-nac-integration-works"></a>Az integrált hálózati hozzáférés-vezérlés működése
 
 A követező listában megtalálhatja annak áttekintését, hogyan működik az integrált hálózati hozzáférés-vezérlés az Intune-nal való integráció esetén. Az első három (1-3.) lépés az előkészítési folyamatot mutatja be. A NAC-megoldás Intune-nal való integrálása után a 4.–9. lépés a folyamatos működést ismerteti.
 
-![A NAC és az Intune-ban fogalmi képe](./media/ca-intune-common-ways-2.png)
+![A NAC és az Intune közötti együttműködés fogalmi képe](./media/ca-intune-common-ways-2.png)
 
 1. Partnertől származó NAC-megoldás regisztrációja az Azure Active Directoryban (AAD), és delegált engedélyek megadása az Intune NAC API számára.
 2. Partnertől származó NAC-megoldás konfigurálása a megfelelő beállításokkal, beleértve az Intune-felderítési URL-címet.
@@ -61,40 +61,40 @@ A követező listában megtalálhatja annak áttekintését, hogyan működik az
 8. Ha az eszköz már regisztrálva van és megfelel, a NAC-partnermegoldás megkapja az állapotát az Intune-tól.
 9. Sikeresen létrejön a kapcsolat, amelyen keresztül az eszköz hozzáfér a vállalati erőforrásokhoz.
 
-## <a name="use-nac-for-vpn-on-your-ios-devices"></a>NAC. használja az IOS-es eszközök VPN-hez  
+## <a name="use-nac-for-vpn-on-your-ios-devices"></a>Az iOS-eszközökön használt NAC használata a VPN-hez  
 
-- NAC érhető el a következő VPN-eket a VPN-profil a NAC engedélyezése nélkül:
+- A NAC a következő VPN-kiszolgálókon érhető el anélkül, hogy engedélyezze a NAC-t a VPN-profilban:
 
-  - A Cisco Legacy AnyConnect NAC
+  - NAC a Cisco örökölt AnyConnect
   - F5 Access Legacy
   - Citrix VPN
 
-- NAC Citrix egyszeri Bejelentkezéssel és F5 hozzáférést is érhető el. A NAC Citrix SSO engedélyezése:
+- A NAC Citrix SSO és F5 hozzáférés esetén is elérhető. A NAC engedélyezése Citrix SSO esetén:
 
-  - A Citrix átjáróval 12.0.59 vagy újabb verziója.  
-  - Felhasználók kell Citrix SSO 1.1.6 vagy újabb verziója szükséges.
-  - [A NetScaler integrálása az Intune-nal a NAC](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) a Citrix termékdokumentációját leírtak szerint.
-  - Válassza ki a VPN-profil **alapvető beállítások** > **engedélyezése hálózati hozzáférést vezérlő (NAC)** > Válasszon **elfogadom**.
+  - A Citrix Gateway 12.0.59 vagy újabb verzióját használja.  
+  - A felhasználóknak Citrix SSO 1.1.6 vagy újabb verzióval kell rendelkezniük.
+  - Integrálja a NetScaler-t a [NAC Intune](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html) -nal a Citrix termék dokumentációjában leírtak szerint.
+  - A VPN-profilban válassza > az alapbeállítások**engedélyezése hálózati Access Control (NAC)** > válassza az Elfogadom **lehetőséget.**
 
-  A VPN-kapcsolat le van választva biztonsági okokból 24 óránként. Azonnal is újra létrehozza a VPN-t.
+  Biztonsági okokból a VPN-kapcsolat 24 óránként le van választva. A VPN-t azonnal újra lehet kapcsolni.
 
-- A NAC F5 hozzáférés engedélyezése:
+- A NAC engedélyezése F5-hozzáféréshez:
 
-  - Use F5 BIG-IP 13.1.1.5. BIG-IP-14 nem támogatott.
-  - BIG-IP integrálása az Intune-nal a NAC. A [áttekintése: APM konfigurálása az eszköz állapotát ellenőrzi a végpont felügyeleti rendszerekkel](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) F5 Útmutató lépéseit sorolja fel.
-  - Válassza ki a VPN-profil **alapvető beállítások** > **engedélyezése hálózati hozzáférést vezérlő (NAC)** > Válasszon **elfogadom**.
+  - Használja az F5 BIG-IP 13.1.1.5. A BIG-IP 14 nem támogatott.
+  - A BIG-IP integrálása az Intune-nal a NAC-hoz. Az [Áttekintés: Az APM konfigurálása eszköz-testhelyzeti ellenőrzésekhez végpont-](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-7-1-6/6.html#guid-0bd12e12-8107-40ec-979d-c44779a8cc89) felügyeleti rendszerekkel az F5 útmutató felsorolja a lépéseket.
+  - A VPN-profilban válassza > az alapbeállítások**engedélyezése hálózati Access Control (NAC)** > válassza az Elfogadom **lehetőséget.**
 
-  A VPN-kapcsolat le van választva biztonsági okokból 24 óránként. Azonnal is újra létrehozza a VPN-t.
+  Biztonsági okokból a VPN-kapcsolat 24 óránként le van választva. A VPN-t azonnal újra lehet kapcsolni.
 
-- Hálózati hozzáférés-vezérlés a következő VPN-ügyfél IOS-eszközökön nem támogatott:
+- A hálózati hozzáférés-vezérlés nem támogatott a következő VPN-ügyfél esetében iOS rendszeren:
   - Cisco AnyConnect
 
-Ezen újabb ügyfelek számára a NAC-megoldás felszabadítása partnereinkkel együttműködve dolgozunk. Amikor készen áll a megoldásokat, ez a cikk további információkat tartalmazó frissül.
+Partnereinkkel dolgozunk, hogy kiszabadítson egy NAC-megoldást ezekre az újabb ügyfelekre. Ha a megoldások készen állnak, a cikk további információkkal fog frissülni.
 
 ## <a name="next-steps"></a>További lépések
 
-- [A Cisco ISE integrálása az Intune-nal](http://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
-- [A Citrix NetScaler integrálása az Intune-nal](http://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
-- [F5 BIG-IP-hozzáférési házirend Manager integrálása az Intune-nal](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
+- [A Cisco ISE integrálása az Intune-nal](https://www.cisco.com/c/en/us/td/docs/security/ise/2-1/admin_guide/b_ise_admin_guide_21/b_ise_admin_guide_20_chapter_01000.html)
+- [A Citrix NetScaler integrálása az Intune-nal](https://docs.citrix.com/en-us/netscaler-gateway/12/microsoft-intune-integration/configuring-network-access-control-device-check-for-netscaler-gateway-virtual-server-for-single-factor-authentication-deployment.html)
+- [Az F5 BIG-IP Access Policy Manager integrálása az Intune-nal](https://support.f5.com/kb/en-us/products/big-ip_apm/manuals/product/apm-client-configuration-13-0-0/6.html)
 - [A HP Aruba ClearPass integrálása az Intune-nal](https://support.arubanetworks.com/Documentation/tabid/77/DMXModule/512/Command/Core_Download/Default.aspx?EntryId=31271)
-- [Squadra Security Removable Media Manager integrálása az Intune-nal](http://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)
+- [Squadra Security Removable Media Manager integrálása az Intune-nal](https://www.squadratechnologies.com/StaticContent/ProductDownload/secRMM/9.9.0.0/secRMMIntuneAccessControlSetupGuide.pdf)

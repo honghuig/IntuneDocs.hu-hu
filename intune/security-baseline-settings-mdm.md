@@ -1,7 +1,7 @@
 ---
 title: Az Intune biztonsági alapkonfigurációinak beállításai a Windows 10 rendszerhez
 titleSuffix: Microsoft Intune
-description: Az Intune biztonsági alapbeállításai a Windows 10 felügyeletéhez
+description: Tekintse át az Intune-nal felügyelt Windows 10-es eszközök Windows MDM biztonsági alapkonfigurációjában található alapértelmezéseket és elérhető beállításokat.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -16,12 +16,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 2ff902530b6f7001e23300b01f6576f0a7fc2637
-ms.sourcegitcommit: 1d4aec7b79c70d35ec3fc29df6ff9c6a1403412e
+ms.openlocfilehash: 0c307c7baaef77c697b486adb63a2cee089e1007
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68491911"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671030"
 ---
 # <a name="mdm-security-baseline-settings-for-intune"></a>MDM biztonsági alapkonfigurációjának beállításai az Intune-ban  
 
@@ -89,7 +89,7 @@ További információ: [Policy CSP-ApplicationManagement](https://docs.microsoft
 További információ: [Policy CSP-Robotpilota](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-autoplay) a Windows dokumentációjában.  
 
 - **Automatikus lejátszás alapértelmezett automatikus futtatási viselkedése**  
-  Ez a beállítás hatással van az automatikus futtatási parancsok alapértelmezett viselkedésére. Az automatikus futtatási parancsok az Autorun. inf fájlban tárolódnak, és a telepítőprogramokat vagy más rutinokat indíthatnak el. Ha ez a *beállítás engedélyezve van*, a rendszergazdák megváltoztathatják a Windows Vista vagy újabb rendszert futtató eszközök alapértelmezett automatikus futtatási viselkedését. A viselkedés beállítható a következőre: a) teljesen letilthatja az automatikus futtatási parancsokat, vagy b) visszatérhet a Windows Vista előtti működésre, amely automatikusan végrehajtja az Autorun parancs futtatását. Ha a beállítás  letiltva vagy *nincs konfigurálva*értékre van állítva, akkor a Windows Vista vagy újabb rendszerű eszközök megkérik a felhasználót, hogy az Autorun parancs fusson.  
+  Ez a beállítás hatással van az automatikus futtatási parancsok alapértelmezett viselkedésére. Az automatikus futtatási parancsok az Autorun. inf fájlban tárolódnak, és a telepítőprogramokat vagy más rutinokat indíthatnak el. Ha ez a *beállítás engedélyezve van*, a rendszergazdák megváltoztathatják a Windows Vista vagy újabb rendszert futtató eszközök alapértelmezett automatikus futtatási viselkedését. A viselkedés beállítható a következőre: a) teljesen letilthatja az automatikus futtatási parancsokat, vagy b) visszatérhet a Windows Vista előtti működésre, amely automatikusan végrehajtja az Autorun parancs futtatását. Ha a beállítás letiltva vagy *nincs konfigurálva*értékre van állítva, akkor a Windows Vista vagy újabb rendszerű eszközök megkérik a felhasználót, hogy az Autorun parancs fusson.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067133)       
   
   **Alapértelmezett**: Végrehajtás mellőzése  
@@ -612,7 +612,7 @@ További információ: [Policy CSP-InternetExplorer](https://docs.microsoft.com/
   - *Automatikus bejelentkezés csak az intranet zónában* – ezzel a beállítással lekérdezheti a felhasználókat a többi zónában lévő felhasználói azonosítók és jelszavak számára. A felhasználó lekérdezése után ezek az értékek csendesen használhatók a munkamenet hátralevő részében. 
   - *Automatikus bejelentkezés a jelenlegi felhasználónévvel és jelszóval*– ezzel a beállítással megpróbálhatja bejelentkezni a Windows NT kérdéses válasz (más néven NTLM-hitelesítés) használatával. Ha a kiszolgáló támogatja a Windows NT kérdéses választ, a bejelentkezés a felhasználó hálózati felhasználónevét és jelszavát használja a bejelentkezéshez. Ha a kiszolgáló nem támogatja a Windows NT kérdéses választ, a rendszer lekérdezi a felhasználót, hogy megadja a felhasználónevet és a jelszót. 
 
-  Ha letiltja ezt a házirend-beállítást, a bejelentkezés *csak az intranet zónában automatikus bejelentkezésre*van beállítva. Ha nem konfigurálja ezt a házirend-beállítást, a bejelentkezés a Felhasználónév és  a jelszó megadására van beállítva.  
+  Ha letiltja ezt a házirend-beállítást, a bejelentkezés *csak az intranet zónában automatikus bejelentkezésre*van beállítva. Ha nem konfigurálja ezt a házirend-beállítást, a bejelentkezés a Felhasználónév és a jelszó megadására van beállítva.  
   [További információ](https://go.microsoft.com/fwlink/?linkid=2067110)  
   
   **Alapértelmezett**: Névtelen  
@@ -1825,7 +1825,7 @@ További információ: [Policy CSP-WindowsPowerShell](https://docs.microsoft.com
   **Alapértelmezett**: Enabled
 
 ## <a name="whats-changed-in-the-new-template"></a>Az új sablon módosítása
-A *Spring 2019 Update (19H1) sablon Mdm biztonsági* alapterve a következő változásokkal rendelkezik  az előnézeti sablonban.
+A *Spring 2019 Update (19H1) sablon Mdm biztonsági* alapterve a következő változásokkal rendelkezik az előnézeti sablonban.
 
 ### <a name="changes-to-the-baseline-settings"></a>Az alapkonfiguráció beállításainak módosításai
 A következő beállítások egyike:

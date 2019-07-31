@@ -7,14 +7,35 @@ ms.topic: include
 ms.date: 03/28/2019
 ms.author: erikje
 ms.custom: include file
-ms.openlocfilehash: eec9a275a87b3e1bcfc42e197d95b4a4b315d018
-ms.sourcegitcommit: 948ff8f56639e6dc7091134a0efd8d44efca63f2
+ms.openlocfilehash: 4423e731bc1538cd2454de32f0d50f2d08eedc69
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/27/2019
-ms.locfileid: "68591066"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670934"
 ---
 Ezek a hirdetmények olyan fontos információkat tartalmaznak, amelyek segíthetnek a jövőbeli Intune-változások és-funkciók előkészítésében. 
+
+
+### <a name="decreasing-support-for-android-device-administrator"></a>Az Android-eszközök rendszergazdai támogatásának csökkentése 
+Android-eszköz rendszergazdája (más néven a "régi" Android-kezelés és az Android 2,2 kiadásban megjelent) az androidos eszközök felügyeletének módja. A továbbfejlesztett felügyeleti funkciók azonban mostantól elérhetők az [Android Enterprise]( https://docs.microsoft.com/intune/connect-intune-android-enterprise) (Android 5,0) verzióban. A modern, gazdagabb és biztonságosabb eszközkezelés érdekében a Google az új Android-kiadásokban csökkenti az eszköz-rendszergazda támogatását.
+
+#### <a name="how-does-this-affect-me"></a>Hogyan érint ez engem?
+A Google által végzett módosítások miatt az Intune-felhasználók a következő módokon lesznek hatással: 
+- Az Intune csak az Android 10 vagy újabb rendszerű (más néven Android Q) eszköz-rendszergazda által felügyelt Android-eszközök támogatását teszi lehetővé a 2020-as nyári időszakban. Ezt a dátumot kell megadnia, ha az Android következő fő verziója várhatóan kiadásra kerül.  
+- Az Android 10 vagy újabb rendszert futtató, az 2020-as nyári időszakban nem felügyelt eszközökön a továbbiakban nem lesz teljes felügyelet.    
+- Az Android 10 alatti Android-verziókban továbbra is az eszköz rendszergazdája által felügyelt Android-eszközök nem lesznek hatással, és továbbra is teljes mértékben kezelhetők az eszköz rendszergazdájával.  
+- A Google minden Android 10 és újabb rendszerű eszközön korlátozta az eszköz-rendszergazdai felügyeleti ügynökök, például a Céges portál számára az eszköz-azonosító információk elérését. Ez hatással van az Intune alábbi szolgáltatásaira az Android 10 vagy újabb rendszerű eszközök frissítése után: 
+    - A VPN hálózati hozzáférés-vezérlése már nem fog működni.  
+    - Az eszközök vállalati tulajdonú IMEI-ként vagy sorozatszámmal való azonosítása nem fogja automatikusan megjelölni az eszközöket vállalati tulajdonban. 
+    - Az IMEI-azonosító és a sorozatszám többé nem lesz látható a rendszergazdák számára az Intune-ban. 
+        > [!Note]
+        > Ez csak az eszköz rendszergazdája által felügyelt Android 10-es és újabb rendszerű eszközökre van hatással, és nem érinti az Android Enterprise-ként kezelt eszközöket. 
+
+#### <a name="what-do-i-need-to-do-to-prepare-for-this-change"></a>Hogyan készüljek fel a változásra?
+A 2020-as nyári időszakban elérhető funkciók csökkenésének elkerüléséhez a következőket javasoljuk:
+- Ne helyezze be az új eszközöket az eszköz-rendszergazda felügyeletbe.
+- Ha egy eszköznek az Android 10-es verzióra kell frissítenie az eszközt, telepítse azt az eszköz rendszergazdai felügyelete alól az Android Enterprise Management és/vagy az App Protection szabályzatok segítségével.
 
 ### <a name="update-your-android-company-portal-app-to-the-latest-version---4536963--"></a>Android Céges portál-alkalmazás frissítése a legújabb verzióra <!--4536963-->
 Az Intune rendszeres időközönként frissítéseket szabadít fel az Android Céges portál alkalmazásban. November 2018-én közzétettünk egy vállalati portál frissítést, amely tartalmaz egy back-end kapcsolót, amely felkészíti a Google-t a meglévő értesítési platformról a Google Firebase Cloud Messaging (FCM) szolgáltatásba való váltásra. Ha a Google kihasználja a meglévő értesítési platformot, és áthelyezi az FCM-re, a végfelhasználóknak legalább november 2018 kiadásban frissíteniük kell a vállalati portál alkalmazást, hogy továbbra is kommunikáljanak a Google Play áruházral.

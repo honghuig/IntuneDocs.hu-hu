@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 0a2ebf91efb35ecd46607baffc47abbe73c5fc5c
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 5cf6299f46ed8db4fdca02947ce15a920816d110
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467483"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660943"
 ---
 # <a name="set-up-the-intune-on-premises-exchange-connector-in-microsoft-intune"></a>A helyszíni Intune Exchange Connector beállítása Microsoft Intune
 A cikkben található információk segítségével telepítheti és figyelheti a Exchange Active Sync helyszíni összekötőt az Intune-hoz.  Az Intune helyszíni Exchange Connector és a [feltételes hozzáférési szabályzatok segítségével engedélyezheti vagy letilthatja a helyszíni Exchange-postaládák elérését](conditional-access-exchange-create.md). 
@@ -121,7 +121,7 @@ A helyszíni Intune Exchange-összekötő telepítéséhez hajtsa végre az alá
 
 5. Adja meg azokat a hitelesítő adatokat, amelyek szükségesek ahhoz, hogy az értesítéseket egy felhasználó Exchange Server-postaládájába küldhesse a rendszer. Ezt a felhasználót dedikálhatja kizárólag az értékesítésekre. Az értesítések felhasználónak Exchange-postaládára van szüksége az értesítések e-mailben való elküldéséhez. Ezeket az értesítéseket a feltételes hozzáférési szabályzatokon keresztül konfigurálhatja az Intune-ban.  
 
-       Ensure that the Autodiscover service and Exchange Web Services are configured on the Exchange Client Access Server. For more information, see [Client Access server](https://technet.microsoft.com/library/dd298114.aspx).
+   Győződjön meg arról, hogy az Automatikus észlelés szolgáltatás és az Exchange-webszolgáltatások konfigurálva vannak az Exchange ügyfélelérési kiszolgálón. Az ezzel kapcsolatos további információkért lásd: [Ügyfélelérési kiszolgáló](https://technet.microsoft.com/library/dd298114.aspx).
 
 6. A **Jelszó** mezőben adja meg a fiók jelszavát, hogy az Intune hozzáférhessen az Exchange-kiszolgálóhoz.
 

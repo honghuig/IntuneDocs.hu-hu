@@ -16,14 +16,14 @@ ms.reviewer: shpate
 ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
-ms.openlocfilehash: 3294959e6b11bb8982afa088acdd7262246c3923
-ms.sourcegitcommit: 2bce5e43956b6a5244a518caa618f97f93b4f727
+ms.openlocfilehash: 64bdc59e08a2b17c82e1798d454f0a0403e61b13
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68467426"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68671057"
 ---
-# <a name="monitor-device-encryption"></a>Mobileszköz titkosításának figyelése  
+# <a name="monitor-device-encryption-with-intune"></a>Az eszközök titkosításának figyelése az Intune-nal   
 
 A Microsoft Intune titkosítási jelentés központi hely a felügyelt eszközök titkosítási állapotának részleteinek megtekintéséhez. Megtekintheti az eszköz titkosítási állapotának részleteit, és megkeresheti az eszköz helyreállítási kulcsainak kezeléséhez szükséges beállításokat. A rendelkezésre álló helyreállítási kulcs beállításai a megtekintett eszköz típusától függenek.  
 
@@ -54,12 +54,12 @@ A titkosítási jelentés panel megjeleníti az eszközök magas szintű részle
     - MacOS 10,13 vagy újabb verzió  
     
     **Windows 10-es eszközök esetén**:  
-    - Az 1703-es vagy újabb verzió, az *üzleti*, a *vállalati*, az *oktatási*vagy a  1809-es vagy újabb verziójának verziója  
+    - Az 1703-es vagy újabb verzió, az *üzleti*, a *vállalati*, az *oktatási*vagy a 1809-es vagy újabb verziójának verziója  
     - Az eszközön TPM-lapka szükséges  
     
     További információ: a Windows dokumentációjában található [BitLocker konfigurációs szolgáltató (CSP)](https://docs.microsoft.com/windows/client-management/mdm/bitlocker-csp) .  
 
-  - **Nem áll készen**: Az eszköz nem rendelkezik teljes titkosítási képességekkel, de továbbra is támogatja a titkosítást. Előfordulhat például, hogy egy Windows-eszközt manuálisan, egy felhasználó vagy egy olyan Csoportházirend használatával titkosít, amely lehetővé teszi a titkosítást a TMP nélkül.
+  - **Nem áll készen**: Az eszköz nem rendelkezik teljes titkosítási képességekkel, de továbbra is támogatja a titkosítást. Előfordulhat például, hogy egy Windows-eszközt manuálisan, egy felhasználó vagy egy olyan Csoportházirend használatával titkosít, amely lehetővé teszi a titkosítást TPM nélkül.
   - **Nem alkalmazható**: Nincs elegendő információ az eszköz besorolásához.  
 
 - **Titkosítási állapot** – azt határozza meg, hogy az operációsrendszer-meghajtó titkosítva van-e.  

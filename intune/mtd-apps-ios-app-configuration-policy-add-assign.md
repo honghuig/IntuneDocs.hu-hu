@@ -17,12 +17,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d27cd977909bb7aa237441102110a7abc27ad301
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: fef4b6969680101e2e4f045bc83a8974536eaf2a
+ms.sourcegitcommit: c715c93bb242f4fe44bbdf2fd585909854ed72b6
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67884996"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68660957"
 ---
 # <a name="add-and-assign-mobile-threat-defense-mtd-apps-with-intune"></a>Mobile Threat Defense- (MTD) alkalmazások felvétele és hozzárendelése az Intune-nal  
 
@@ -164,26 +164,23 @@ Válassza ki az MTD-szolgáltatójának megfelelő szakaszt:
 - A Check Point SandBlast Mobile iOS-es alkalmazáskonfigurációs szabályzat felvételéhez tekintse át a következő útmutatót: [A Microsoft Intune alkalmazáskonfigurációs szabályzatának használata iOS-hez](app-configuration-policies-use-ios.md).
   - A**8. lépésnél** válassza az **XML adatok megadása** lehetőséget, majd másolja be az alábbi tartalmat a konfigurációs szabályzat törzsébe.
 
-```
-<dict><key>MDM</key><string>INTUNE</string></dict>
-```
+        <dict><key>MDM</key><string>INTUNE</string></dict>
+
 
 ### <a name="zimperium-app-configuration-policy"></a>Zimperium-alkalmazások konfigurációs szabályzata  
 - A Zimperium iOS-es alkalmazáskonfigurációs szabályzat felvételéhez kövesse [A Microsoft Intune alkalmazáskonfigurációs szabályzatának használata iOS-hez](app-configuration-policies-use-ios.md) című útmutatót.
   - A**8. lépésnél** válassza az **XML adatok megadása** lehetőséget, majd másolja be az alábbi tartalmat a konfigurációs szabályzat törzsébe.
-
-```
-<dict>
-<key>provider</key><string>Intune</string>
-<key>userprincipalname</key><string>{{userprincipalname}}</string>
-<key>deviceid</key>
-<string>{{deviceid}}</string>
-<key>serialnumber</key>
-<string>{{serialnumber}}</string>
-<key>udidlast4digits</key>
-<string>{{udidlast4digits}}</string>
-</dict>
-```
+ 
+        <dict>
+        <key>provider</key><string>Intune</string>
+        <key>userprincipalname</key><string>{{userprincipalname}}</string>
+        <key>deviceid</key>
+        <string>{{deviceid}}</string>
+        <key>serialnumber</key>
+        <string>{{serialnumber}}</string>
+        <key>udidlast4digits</key>
+        <string>{{udidlast4digits}}</string>
+        </dict>
 
 ### <a name="pradeo-app-configuration-policy"></a>Pradeo-alkalmazás konfigurációs szabályzata  
 A Pradeo nem támogatja az alkalmazás-konfigurációs szabályzatot iOS rendszeren.  Ehelyett egy konfigurált alkalmazás beszerzéséhez a Pradeo együtt kell működnie a kívánt beállításokkal előre konfigurált egyéni IPA-vagy APK-fájlok megvalósításához.
@@ -192,40 +189,37 @@ A Pradeo nem támogatja az alkalmazás-konfigurációs szabályzatot iOS rendsze
 - A Better Mobile iOS-es alkalmazáskonfigurációs szabályzat megadásához lásd [a Microsoft Intune alkalmazáskonfigurációs szabályzatainak iOS-hez történő használatával](app-configuration-policies-use-ios.md) foglalkozó útmutatót.
   - A**8. lépésnél** válassza az **XML adatok megadása** lehetőséget, majd másolja be az alábbi tartalmat a konfigurációs szabályzat törzsébe. Cserélje le a `https://client.bmobi.net` URL-címet a konzol URL-címére.
 
-```
-<dict>
-<key>better_server_url</key>
-<string>https://client.bmobi.net</string>
-<key>better_udid</key>
-<string>{{aaddeviceid}}</string>
-<key>better_user</key>
-<string>{{userprincipalname}}</string>
-</dict>
-```
+        <dict>
+        <key>better_server_url</key>
+        <string>https://client.bmobi.net</string>
+        <key>better_udid</key>
+        <string>{{aaddeviceid}}</string>
+        <key>better_user</key>
+        <string>{{userprincipalname}}</string>
+        </dict>
+
 
 ### <a name="sophos-mobile-app-configuration-policy"></a>A Sophos Mobile App konfigurációs szabályzata  
 Hozza létre az iOS-alkalmazás konfigurációs szabályzatát az [iOS-alkalmazás konfigurációs házirendjének használata](app-configuration-policies-use-ios.md) című cikkben leírtak szerint.
 
 ### <a name="wandera-app-configuration-policy"></a>A Wanda alkalmazás konfigurációs házirendje  
 Tekintse meg az [iOS rendszerhez készült Microsoft Intune alkalmazás-konfigurációs szabályzatok használatának](app-configuration-policies-use-ios.md) utasításait a Wanda iOS-alkalmazás konfigurációs házirendjének hozzáadásához.
-- A **8**. lépésnél használja az **XML-adatbevitel**lehetőséget. Jelentkezzen be a radar Wanda-portálra,  > és keresse meg a Settings, a következőt: az alkalmazásnév**Integration** > **app push** Válassza az **Intune**lehetőséget, majd másolja az alábbi tartalmat, és illessze be a konfigurációs szabályzat törzsébe.  
+- A **8**. lépésnél használja az **XML-adatbevitel**lehetőséget. Jelentkezzen be a radar Wanda-portálra, > és keresse meg a Settings, a következőt: az alkalmazásnév**Integration** > **app push** Válassza az **Intune**lehetőséget, majd másolja az alábbi tartalmat, és illessze be a konfigurációs szabályzat törzsébe.  
 
-  ```
-  <dict><key>secretKey</key>
-  <string>SeeRADAR</string>
-  <key>apiKey</key>
-  <string> SeeRADAR </string>
-  <key>customerId</key>
-  <string> SeeRADAR </string>
-  <key>email</key>
-  <string>{{mail}}</string>
-  <key>firstName</key>
-  <string>{{username}}</string>
-  <key>lastName</key>
-  <string></string>
-  <key>activationType</key>
-  <string>PROVISION_THEN_AWP</string></dict>  
-  ```
+      <dict><key>secretKey</key>
+       <string>SeeRADAR</string>
+       <key>apiKey</key>
+       <string> SeeRADAR </string>
+       <key>customerId</key>
+       <string> SeeRADAR </string>
+       <key>email</key>
+       <string>{{mail}}</string>
+       <key>firstName</key>
+       <string>{{username}}</string>
+       <key>lastName</key>
+       <string></string>
+       <key>activationType</key>
+       <string>PROVISION_THEN_AWP</string></dict>  
 
 ## <a name="assign-apps-to-groups"></a>Alkalmazások hozzárendelése csoportokhoz  
 - Ez a lépés minden MTD-partnerre vonatkozik. Lásd a következő útmutatót: [Alkalmazások csoportokhoz rendelése az Intune-nal](apps-deploy.md).

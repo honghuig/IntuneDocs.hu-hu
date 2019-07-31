@@ -1,6 +1,6 @@
 ---
 title: A Microsoft Defender ATP használata a Microsoft Intune-Azure-ban | Microsoft Docs
-description: Megtudhatja, hogyan engedélyezheti a Microsoft Defender komplex veszélyforrások elleni védelmet (Microsoft Defender ATP) egy teljes körű forgatókönyvben, beleértve a Microsoft Defender ATP bekapcsolását az Intune-ban és a Microsoft Defender Security Center, a Microsoft Defender ATP-t használó eszközöket. konfigurációs profil, Intune-eszköz megfelelőségi szabályzat létrehozása, Azure AD feltételes hozzáférési szabályzat létrehozása és az eszközök megfelelőségének figyelése.
+description: A Microsoft Defender komplex veszélyforrások elleni védelem (Microsoft Defender ATP) használata az Intune-nal, beleértve az Intune-eszközök előkészítését és konfigurálását, az ATP-vel való előkészítést, majd az Intune-beli megfelelőségi felmérést használó eszközök és a feltételes hozzáférési szabályzatok a hálózati erőforrások megóvásához.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -15,12 +15,12 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 6ebde15eb39a61bbbafbe40020d90d9bebdce8cf
-ms.sourcegitcommit: 7273100afc51fd808558dc05c651358145d4fa6b
+ms.openlocfilehash: 8508915f0b4711b2aa65465dd7ac79f575a8d008
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68533165"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670965"
 ---
 # <a name="enforce-compliance-for-microsoft-defender-atp-with-conditional-access-in-intune"></a>A Microsoft Defender ATP megfelelőségének betartatása feltételes hozzáféréssel az Intune-ban  
 

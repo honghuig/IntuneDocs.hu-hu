@@ -5,7 +5,7 @@ services: microsoft-intune
 author: ErikRe
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2019
+ms.date: 07/30/2019
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.localizationpriority: high
@@ -16,16 +16,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: d3c14d55201f88f5090f404ca9a79dd902c8da5e
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: efd4e8d013f0205541f6fcc37bb0bb8b5ea75bac
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66041325"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670849"
 ---
-# <a name="quickstart-enroll-your-windows-10-device"></a>Gyors útmutató: Windows 10 rendszerű eszköz regisztrálása
+# <a name="quickstart-enroll-your-windows-10-device"></a>QuickStart Windows 10 rendszerű eszköz regisztrálása
 
-Ebben a rövid útmutatóban először Intune-felhasználói szerepkörben fog tevékenykedni, és regisztrálja a Windows 10 rendszerű eszközét a Microsoft Intune-ban. Ezután fogja térjen vissza az Intune-hoz, és erősítse meg az eszköz regisztrálva.
+Ebben a rövid útmutatóban először Intune-felhasználói szerepkörben fog tevékenykedni, és regisztrálja a Windows 10 rendszerű eszközét a Microsoft Intune-ban. Ezután térjen vissza az Intune-hoz, és erősítse meg az eszköz regisztrálását.
 
 A vállalati eszközök Microsoft Intune-beli regisztrálása lehetővé teszi, hogy a Windows 10 rendszerű eszközök hozzáférjenek a szervezet védett adataihoz, beleértve az e-maileket, a fájlokat és az egyéb erőforrásokat. Ez a Windows 10 rendszerű asztali számítógépekre és a Windows 10 Mobile rendszerű eszközökre egyaránt vonatkozik. Az eszközök regisztrálásával biztonságossá tehető ez a hozzáférés Ön és a szervezet számára, és elkülöníthetők a munkahelyi adatok a személyes adatoktól.
 
@@ -71,7 +71,7 @@ A Windows 10 asztali verzió regisztrációja előtt erősítse meg a Windows te
 
     ![Válassza a Hozzáférés munkahelyi vagy iskolai fiókhoz lehetőséget](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-04.png)
 
-3. Jelentkezzen be az Intune-ba munkahelyi vagy iskolai fiókjával, majd válassza a **Tovább** lehetőséget. Ha követte a [hozzon létre egy felhasználót, és a egy licenc hozzárendelése](quickstart-create-user.md) a rövid útmutatóban bejelentkezhet a felhasználói fiókot, amelyet Ön hozott létre.
+3. Jelentkezzen be az Intune-ba munkahelyi vagy iskolai fiókjával, majd válassza a **Tovább** lehetőséget. Ha követte a [felhasználó létrehozása és](quickstart-create-user.md) a licencek kiosztása című útmutatót, akkor bejelentkezhet a létrehozott felhasználói fiókkal.
 
     > [!NOTE]
     > Ha az „.onmicrosoft.com” címet álltja be, a felhasználói fiókban az **.onmicrosoft.com** a fiók címének része lesz. 
@@ -91,7 +91,7 @@ A Windows 10 asztali verzió regisztrációja előtt erősítse meg a Windows te
 ## <a name="confirm-your-device-enrollment-in-intune"></a>Eszközök regisztrációjának megerősítése az Intune-ban
 
 1. Jelentkezzen be az [Intune-ba](https://aka.ms/intuneportal) globális rendszergazdaként vagy Intune-beli szolgáltatásadminisztrátorként.
-2. Válassza az **Eszközök** lehetőséget a regisztrált eszközök megtekintéséhez az Intune-ban.
+2. Válassza az **eszközök** > **minden eszköz** lehetőséget a regisztrált eszközök Intune-ban való megtekintéséhez.
 3. Ellenőrizze, hogy rendelkezik-e további regisztrált eszközökkel az Intune-ban.
 
    ![Képernyőkép az Intune-ban regisztrált eszközökről](media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-07.png)
@@ -107,4 +107,4 @@ Ebből a rövid útmutatóból elsajátíthatta, hogyan regisztrálhat Windows 1
 Kövesse az Intune rövid útmutatóinak sorozatát a következő rövid útmutatóval.
 
 > [!div class="nextstepaction"]
-> [Gyors útmutató: Állítsa be a szükséges jelszóhosszt, Android-eszközökhöz](quickstart-set-password-length-android.md)
+> [QuickStart Adja meg a jelszó kötelező hosszát Android-eszközökhöz](quickstart-set-password-length-android.md)

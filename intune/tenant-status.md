@@ -14,14 +14,14 @@ ms.technology: ''
 ms.suite: ems
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 946d46baf17a5ffdd4b567adca32b651cacb72bb
-ms.sourcegitcommit: 7c251948811b8b817e9fe590b77f23aed95b2d4e
+ms.openlocfilehash: c744878c49dfa5adb1b4f64587abfe06151a69a0
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67882223"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670989"
 ---
-# <a name="intune-tenant-status-page"></a>Intune-bérlő állapota lap
+# <a name="use-the-intune-tenant-status-page"></a>Az Intune-bérlő állapotának használata lap
 A bérlő állapota lap egy központi központ, ahol megtekintheti a bérlő aktuális és fontos adatait. A részletek tartalmazzák a licencek rendelkezésre állását és használatát, az összekötő állapotát, valamint az Intune szolgáltatással kapcsolatos fontos kommunikációt.  
 
 Az irányítópult megtekintéséhez a Azure Portal lépjen az **Intune > a bérlő állapota**elemre.  A bérlő állapota a **Súgó és támogatás csoportban**jelenik meg.  
@@ -73,6 +73,6 @@ Tekintse meg az Intune szolgáltatás csapatának tájékoztató jellegű kommun
 
 Alapértelmezés szerint az utolsó 10 aktív üzenet látható. A régebbi üzenetek megtekintéséhez kattintson a **korábbi üzenetek** megjelenítése elemre az *üzenetközpont* megnyitásához a Microsoft 365 felügyeleti központban.  
 
-Az Intune-Hírek információinak megtekintéséhez a fióknak a Azure Active Directory  vagy az üzenetsor  - **olvasó** szerepkörrel kell rendelkeznie a Microsoft 365 felügyeleti központban.  Az engedély hozzárendeléséhez jelentkezzen be a [Microsoft 365 felügyeleti](https://admin.microsoft.com) központba rendszergazdai engedélyekkel. Válassza a **felhasználók > az aktív felhasználók**lehetőséget, majd válassza ki azt a fiókot, amelyhez hozzáférés szükséges. Válassza a *szerepkörök* **szerkesztése** lehetőséget, válassza a *csapatok kommunikációs rendszergazdája*lehetőséget, majd **mentse** a szerkesztést az engedélyek hozzárendeléséhez.  
+Az Intune-Hírek információinak megtekintéséhez a fióknak a Azure Active Directory vagy az üzenetsor - **olvasó** szerepkörrel kell rendelkeznie a Microsoft 365 felügyeleti központban.  Az engedély hozzárendeléséhez jelentkezzen be a [Microsoft 365 felügyeleti](https://admin.microsoft.com) központba rendszergazdai engedélyekkel. Válassza a **felhasználók > az aktív felhasználók**lehetőséget, majd válassza ki azt a fiókot, amelyhez hozzáférés szükséges. Válassza a *szerepkörök* **szerkesztése** lehetőséget, válassza a *csapatok kommunikációs rendszergazdája*lehetőséget, majd **mentse** a szerkesztést az engedélyek hozzárendeléséhez.  
 
 A Microsoft 365 felügyeleti központban csak az Intune-Hírek kommunikációs beállításait állíthatja be.

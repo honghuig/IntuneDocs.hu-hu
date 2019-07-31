@@ -1,7 +1,7 @@
 ---
-title: Az Intune-nak küld adatokat a JAMF Pro
+title: A JAMF Pro által küldött adatokat az Intune-nak küldi
 titleSuffix: Microsoft Intune
-description: A Microsoft Intune-bA küldi a Jamf Pro által adatok listája
+description: Tekintse át azokat az adatokat, amelyeket a JAMF Pro küld Microsoft Intunenek, amikor a JAMF Pro-t integrálja a Mac-et az Intune-nal.
 keywords: ''
 author: brenduns
 ms.author: brenduns
@@ -17,16 +17,16 @@ ms.suite: ems
 search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.openlocfilehash: 287ed06ddab0b98117aa4a75942087f360e4656d
-ms.sourcegitcommit: 916fed64f3d173498a2905c7ed8d2d6416e34061
+ms.openlocfilehash: 86f2f47322e668815d1ff37ce6c2de1e4d6cdc16
+ms.sourcegitcommit: 99b74d7849fbfc8f5cf99cba33e858eeb9f537aa
 ms.translationtype: MT
 ms.contentlocale: hu-HU
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66048548"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670896"
 ---
 # <a name="data-jamf-pro-sends-to-intune"></a>A Jamf Pro által az Intune-ba küldött adatok
 
-Ha használ [a Jamf Pro](https://www.jamf.com) kezelheti a végfelhasználók Mac számítógépek az Intune-nal, a Jamf Pro rögzíti a felügyelt macOS-eszközök eszközkészletadatait. A Jamf Pro a következő információkat továbbítja az Intune-nak:
+Ha a [JAMF Pro](https://www.jamf.com) használatával felügyeli a végfelhasználók Mac számítógépét az Intune-nal, a JAMF Pro rögzíti a felügyelt MacOS-eszközök leltározási adatait. A Jamf Pro a következő információkat továbbítja az Intune-nak:
 
 * Azure AD-eszközazonosító
 * JAMF eszközkészlet-állapot (a Jamf Pro szolgáltatásba az elmúlt 24 órán belül bejelentkezett számítógép eszközkészlet-állapota)
@@ -58,14 +58,14 @@ Ha használ [a Jamf Pro](https://www.jamf.com) kezelheti a végfelhasználók Ma
 * Hálózati adapter sebessége
 * Magok száma
 * Processzorok száma
-* Operációs rendszer
+* OS
 * Platform
 * Processzor sebessége
 * Processzor típusa
 * Másodlagos MAC-cím
 * Sorozatszám
 * SMC verziója
-* Teljes memória
+* RAM összesen
 * UDID
 * Felhasználó e-mail-címe
 
